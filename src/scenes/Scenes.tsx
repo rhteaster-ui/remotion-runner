@@ -3,6 +3,7 @@ import {AbsoluteFill, Img, staticFile, useCurrentFrame, useVideoConfig} from 're
 import {Background, Header, Headline} from '../components/Chrome';
 import {Atom} from '../components/Atom';
 import {Bar, Chip, ElementTile, StatCard} from '../components/Cards';
+import {ModelCoreIcon} from '../components/ModelIcons';
 import {ACCENT, CW, FONT, M, MODELS, Mode, ModelKey, pal} from '../lib/theme';
 import {clamp01, pop} from '../lib/anim';
 import {anchor} from '../lib/anchors';
@@ -46,9 +47,9 @@ export const S1Hook: React.FC = () => {
   const {fps} = useVideoConfig();
   const p = pal('dark');
   const items: {m: ModelKey; at: number; date: string}[] = [
-    {m: 'argon', at: anchor(id, 'Argon,', 0, 2.0), date: '13 OKT'},
-    {m: 'carbon', at: anchor(id, 'Carbon,', 0, 3.0), date: '10 NOV'},
-    {m: 'hydrogen', at: anchor(id, 'Hydrogen.', 0, 4.0), date: '12 NOV'},
+    {m: 'argon', at: anchor(id, 'Argon,', 0, 2.93), date: '13 OKT'},
+    {m: 'carbon', at: anchor(id, 'Carbon,', 0, 3.96), date: '10 NOV'},
+    {m: 'hydrogen', at: anchor(id, 'Hydrogen.', 0, 5.02), date: '12 NOV'},
   ];
   return (
     <Frame mode="dark" accent={LIME} index={1} label="MODEL BARU">
@@ -78,12 +79,23 @@ export const S1Hook: React.FC = () => {
 const MiniTile: React.FC<{m: ModelKey; size: number}> = ({m, size}) => {
   const model = MODELS[m];
   return (
-    <div style={{width: size, height: size, borderRadius: 26, backgroundColor: '#10161e', border: `2px solid ${model.accent}66`, position: 'relative', flexShrink: 0, boxShadow: `0 8px 24px rgba(0,0,0,0.3)`}}>
-      <div style={{position: 'absolute', left: 14, top: 10, fontFamily: FONT.mono, fontWeight: 700, fontSize: 20, color: '#a9b1be'}}>{model.num}</div>
-      <Img src={staticFile('assets/gemini.svg')} style={{position: 'absolute', right: 12, top: 10, width: 20, height: 20, opacity: 0.85}} />
-      <div style={{position: 'absolute', left: 0, right: 0, top: size * 0.3, textAlign: 'center', fontFamily: FONT.space, fontWeight: 700, fontSize: 76, lineHeight: 1, color: model.accent}}>
-        {model.sym}
-      </div>
+    <div
+      style={{
+        width: size,
+        height: size,
+        borderRadius: 26,
+        backgroundColor: '#0f172a',
+        border: `2px solid ${model.accent}77`,
+        position: 'relative',
+        flexShrink: 0,
+        boxShadow: `0 8px 24px rgba(0,0,0,0.35)`,
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+      }}
+    >
+      <Img src={staticFile('assets/gemini.svg')} style={{position: 'absolute', right: 12, top: 12, width: 20, height: 20, opacity: 0.9}} />
+      <ModelCoreIcon m={m} size={size * 0.48} color={model.accent} />
     </div>
   );
 };
@@ -94,9 +106,9 @@ export const S2Peran: React.FC = () => {
   const {fps} = useVideoConfig();
   const p = pal('light');
   const rows: {m: ModelKey; at: number; title: string; sub: string}[] = [
-    {m: 'argon', at: anchor(id, 'Argon', 0, 1.0), title: 'Kode & analisis', sub: 'Argon · frontier · AI Pro & Ultra'},
-    {m: 'carbon', at: anchor(id, 'Carbon', 0, 3.0), title: 'Pekerjaan paling kompleks', sub: 'Carbon · terkuat · AI Ultra'},
-    {m: 'hydrogen', at: anchor(id, 'Hydrogen', 0, 5.0), title: 'Kerja harian yang cepat', sub: 'Hydrogen · untuk semua pengguna'},
+    {m: 'argon', at: anchor(id, 'Argon', 0, 0.26), title: 'Kode & analisis', sub: 'Argon · frontier · AI Pro & Ultra'},
+    {m: 'carbon', at: anchor(id, 'Carbon', 0, 2.96), title: 'Pekerjaan paling kompleks', sub: 'Carbon · terkuat · AI Ultra'},
+    {m: 'hydrogen', at: anchor(id, 'Hydrogen', 0, 6.12), title: 'Kerja harian yang cepat', sub: 'Hydrogen · untuk semua pengguna'},
   ];
   return (
     <Frame mode="light" accent={ACCENT.carbon} index={2} label="PERAN">

@@ -6,1252 +6,973 @@
    "scene": "s1-hook",
    "bg": "dark",
    "lines": [
-    "Gemini 4 kini",
-    "punya tiga model:"
+    "Gemini 4 kini punya tiga model:",
+    "Argon,"
    ],
    "words": [
     {
      "text": "Gemini",
-     "start": 0.8,
-     "end": 2.917
+     "start": 1.06,
+     "end": 1.549
     },
     {
      "text": "4",
-     "start": 2.917,
-     "end": 3.166
+     "start": 1.549,
+     "end": 1.631
     },
     {
      "text": "kini",
-     "start": 3.166,
-     "end": 4.225
+     "start": 1.631,
+     "end": 1.957
     },
     {
      "text": "punya",
-     "start": 4.225,
-     "end": 5.804
+     "start": 1.957,
+     "end": 2.365
     },
     {
      "text": "tiga",
-     "start": 5.804,
-     "end": 6.913
+     "start": 2.365,
+     "end": 2.691
     },
     {
      "text": "model:",
-     "start": 6.913,
-     "end": 9.104
-    }
-   ],
-   "start": 0.938,
-   "end": 2.385,
-   "id": 1
-  },
-  {
-   "scene": "s1-hook",
-   "bg": "dark",
-   "lines": [
-    "Argon, Carbon,",
-    "dan Hydrogen."
-   ],
-   "words": [
+     "start": 2.691,
+     "end": 3.18
+    },
     {
      "text": "Argon,",
-     "start": 0.8,
-     "end": 3.08
+     "start": 3.73,
+     "end": 4.27
     },
     {
      "text": "Carbon,",
-     "start": 3.08,
-     "end": 5.59
+     "start": 4.76,
+     "end": 5.27
     },
     {
      "text": "dan",
-     "start": 5.59,
-     "end": 7.016
+     "start": 5.82,
+     "end": 6.037
     },
     {
      "text": "Hydrogen.",
-     "start": 7.016,
-     "end": 9.104
+     "start": 6.037,
+     "end": 6.69
     }
-   ],
-   "start": 2.405,
-   "end": 5.244,
-   "id": 2
+   ]
   },
   {
    "scene": "s1-hook",
    "bg": "dark",
    "lines": [
+    "Carbon,",
+    "dan Hydrogen.",
     "Satu keluarga,",
     "tiga peran."
    ],
    "words": [
     {
      "text": "Satu",
-     "start": 0.8,
-     "end": 4.101
+     "start": 7.18,
+     "end": 7.451
     },
     {
      "text": "keluarga,",
-     "start": 4.101,
-     "end": 6.126
+     "start": 7.451,
+     "end": 8.06
     },
     {
      "text": "tiga",
-     "start": 6.126,
-     "end": 7.707
+     "start": 8.36,
+     "end": 8.648
     },
     {
      "text": "peran.",
-     "start": 7.707,
-     "end": 9.104
+     "start": 8.648,
+     "end": 9.08
     }
-   ],
-   "start": 5.264,
-   "end": 8.404,
-   "id": 3
+   ]
   },
   {
    "scene": "s2-peran",
    "bg": "light",
    "lines": [
-    "Argon untuk kode",
-    "dan analisis."
+    "Argon untuk kode dan analisis.",
+    "Carbon untuk pekerjaan paling kompleks."
    ],
    "words": [
     {
      "text": "Argon",
-     "start": 10.504,
-     "end": 12.628
+     "start": 10.764,
+     "end": 11.174
     },
     {
      "text": "untuk",
-     "start": 12.628,
-     "end": 13.688
+     "start": 11.174,
+     "end": 11.583
     },
     {
      "text": "kode",
-     "start": 13.688,
-     "end": 14.987
+     "start": 11.583,
+     "end": 11.911
     },
     {
      "text": "dan",
-     "start": 14.987,
-     "end": 15.868
+     "start": 11.911,
+     "end": 12.157
     },
     {
      "text": "analisis.",
-     "start": 15.868,
-     "end": 19.408
-    }
-   ],
-   "start": 10.255,
-   "end": 11.983,
-   "id": 4
-  },
-  {
-   "scene": "s2-peran",
-   "bg": "light",
-   "lines": [
-    "Carbon untuk pekerjaan",
-    "paling kompleks."
-   ],
-   "words": [
+     "start": 12.157,
+     "end": 12.894
+    },
     {
      "text": "Carbon",
-     "start": 10.504,
-     "end": 14.347
+     "start": 13.464,
+     "end": 13.893
     },
     {
      "text": "untuk",
-     "start": 14.347,
-     "end": 15.024
+     "start": 13.893,
+     "end": 14.25
     },
     {
      "text": "pekerjaan",
-     "start": 15.024,
-     "end": 16.747
+     "start": 14.25,
+     "end": 14.893
     },
     {
      "text": "paling",
-     "start": 16.747,
-     "end": 17.459
+     "start": 14.893,
+     "end": 15.321
     },
     {
      "text": "kompleks.",
-     "start": 17.459,
-     "end": 19.408
+     "start": 15.321,
+     "end": 15.964
     }
-   ],
-   "start": 12.003,
-   "end": 14.733,
-   "id": 5
+   ]
   },
   {
    "scene": "s2-peran",
    "bg": "light",
    "lines": [
-    "Hydrogen untuk kerja",
-    "harian yang cepat."
+    "Hydrogen untuk kerja harian yang cepat."
    ],
    "words": [
     {
      "text": "Hydrogen",
-     "start": 10.504,
-     "end": 14.974
+     "start": 16.624,
+     "end": 17.175
     },
     {
      "text": "untuk",
-     "start": 14.974,
-     "end": 15.591
+     "start": 17.175,
+     "end": 17.519
     },
     {
      "text": "kerja",
-     "start": 15.591,
-     "end": 16.48
+     "start": 17.519,
+     "end": 17.863
     },
     {
      "text": "harian",
-     "start": 16.48,
-     "end": 17.483
+     "start": 17.863,
+     "end": 18.276
     },
     {
      "text": "yang",
-     "start": 17.483,
-     "end": 17.982
+     "start": 18.276,
+     "end": 18.551
     },
     {
      "text": "cepat.",
-     "start": 17.982,
-     "end": 19.408
+     "start": 18.551,
+     "end": 18.964
     }
-   ],
-   "start": 14.753,
-   "end": 17.766,
-   "id": 6
+   ]
   },
   {
    "scene": "s3-argon",
    "bg": "dark",
    "lines": [
-    "Argon rilis 13 Oktober."
+    "Argon rilis 13 Oktober.",
+    "Skornya 76 persen di RiemannBench,"
    ],
    "words": [
     {
      "text": "Argon",
-     "start": 20.808,
-     "end": 24.956
+     "start": 21.088,
+     "end": 21.638
     },
     {
      "text": "rilis",
-     "start": 24.956,
-     "end": 28.231
+     "start": 21.638,
+     "end": 22.188
     },
     {
      "text": "13",
-     "start": 28.231,
-     "end": 29.494
+     "start": 22.188,
+     "end": 22.408
     },
     {
      "text": "Oktober.",
-     "start": 29.494,
-     "end": 34.032
-    }
-   ],
-   "start": 19.618,
-   "end": 20.886,
-   "id": 7
-  },
-  {
-   "scene": "s3-argon",
-   "bg": "dark",
-   "lines": [
-    "Skornya 76 persen",
-    "di RiemannBench,"
-   ],
-   "words": [
+     "start": 22.408,
+     "end": 23.288
+    },
     {
      "text": "Skornya",
-     "start": 20.808,
-     "end": 28.198
+     "start": 23.838,
+     "end": 24.517
     },
     {
      "text": "76",
-     "start": 28.198,
-     "end": 28.856
+     "start": 24.517,
+     "end": 24.711
     },
     {
      "text": "persen",
-     "start": 28.856,
-     "end": 30.683
+     "start": 24.711,
+     "end": 25.293
     },
     {
      "text": "di",
-     "start": 30.683,
-     "end": 31.03
+     "start": 25.293,
+     "end": 25.487
     },
     {
      "text": "RiemannBench,",
-     "start": 31.03,
-     "end": 34.032
+     "start": 25.487,
+     "end": 26.748
     }
-   ],
-   "start": 20.906,
-   "end": 23.318,
-   "id": 8
+   ]
   },
   {
    "scene": "s3-argon",
    "bg": "dark",
    "lines": [
-    "tertinggi di",
-    "tabel Google."
+    "tertinggi di tabel Google.",
+    "Disebut paling tahan prompt injection,",
+    "untuk pelanggan AI Pro dan Ultra."
    ],
    "words": [
     {
      "text": "tertinggi",
-     "start": 20.808,
-     "end": 25.924
+     "start": 27.058,
+     "end": 27.594
     },
     {
      "text": "di",
-     "start": 25.924,
-     "end": 28.875
+     "start": 27.594,
+     "end": 27.713
     },
     {
      "text": "tabel",
-     "start": 28.875,
-     "end": 31.146
+     "start": 27.713,
+     "end": 28.011
     },
     {
      "text": "Google.",
-     "start": 31.146,
-     "end": 34.032
-    }
-   ],
-   "start": 23.338,
-   "end": 24.949,
-   "id": 9
-  },
-  {
-   "scene": "s3-argon",
-   "bg": "dark",
-   "lines": [
-    "Disebut paling tahan",
-    "prompt injection,"
-   ],
-   "words": [
+     "start": 28.011,
+     "end": 28.428
+    },
     {
      "text": "Disebut",
-     "start": 20.808,
-     "end": 27.223
+     "start": 29.058,
+     "end": 29.501
     },
     {
      "text": "paling",
-     "start": 27.223,
-     "end": 28.914
+     "start": 29.501,
+     "end": 29.88
     },
     {
      "text": "tahan",
-     "start": 28.914,
-     "end": 29.8
+     "start": 29.88,
+     "end": 30.196
     },
     {
      "text": "prompt",
-     "start": 29.8,
-     "end": 31.089
+     "start": 30.196,
+     "end": 30.576
     },
     {
      "text": "injection,",
-     "start": 31.089,
-     "end": 34.032
-    }
-   ],
-   "start": 24.969,
-   "end": 27.874,
-   "id": 10
-  },
-  {
-   "scene": "s3-argon",
-   "bg": "dark",
-   "lines": [
-    "untuk pelanggan",
-    "AI Pro dan Ultra."
-   ],
-   "words": [
+     "start": 30.576,
+     "end": 31.208
+    },
     {
      "text": "untuk",
-     "start": 20.808,
-     "end": 23.9
+     "start": 31.578,
+     "end": 32.003
     },
     {
      "text": "pelanggan",
-     "start": 23.9,
-     "end": 26.421
+     "start": 32.003,
+     "end": 32.768
     },
     {
      "text": "AI",
-     "start": 26.421,
-     "end": 27.804
+     "start": 32.768,
+     "end": 32.938
     },
     {
      "text": "Pro",
-     "start": 27.804,
-     "end": 29.626
+     "start": 32.938,
+     "end": 33.193
     },
     {
      "text": "dan",
-     "start": 29.626,
-     "end": 30.89
+     "start": 33.193,
+     "end": 33.448
     },
     {
      "text": "Ultra.",
-     "start": 30.89,
-     "end": 34.032
+     "start": 33.448,
+     "end": 33.958
     }
-   ],
-   "start": 27.894,
-   "end": 30.578,
-   "id": 11
+   ]
   },
   {
    "scene": "s4-carbon",
    "bg": "light",
    "lines": [
-    "Carbon rilis",
-    "umum 10 November."
+    "Carbon rilis umum 10 November.",
+    "Skornya 59 di AA Index dan 65,2",
+    "persen di Terminal-Bench 4.0."
    ],
    "words": [
     {
      "text": "Carbon",
-     "start": 35.432,
-     "end": 38.202
+     "start": 35.722,
+     "end": 36.19
     },
     {
      "text": "rilis",
-     "start": 38.202,
-     "end": 40.948
+     "start": 36.19,
+     "end": 36.581
     },
     {
      "text": "umum",
-     "start": 40.948,
-     "end": 42.471
+     "start": 36.581,
+     "end": 36.893
     },
     {
      "text": "10",
-     "start": 42.471,
-     "end": 43.442
+     "start": 36.893,
+     "end": 37.049
     },
     {
      "text": "November.",
-     "start": 43.442,
-     "end": 52.856
-    }
-   ],
-   "start": 32.415,
-   "end": 35.175,
-   "id": 12
-  },
-  {
-   "scene": "s4-carbon",
-   "bg": "light",
-   "lines": [
-    "Skornya 59 di AA",
-    "Index dan 65,2"
-   ],
-   "words": [
+     "start": 37.049,
+     "end": 37.752
+    },
     {
      "text": "Skornya",
-     "start": 35.432,
-     "end": 39.213
+     "start": 38.212,
+     "end": 38.92
     },
     {
      "text": "59",
-     "start": 39.213,
-     "end": 40.048
+     "start": 38.92,
+     "end": 39.123
     },
     {
      "text": "di",
-     "start": 40.048,
-     "end": 41.21
+     "start": 39.123,
+     "end": 39.325
     },
     {
      "text": "AA",
-     "start": 41.21,
-     "end": 42.364
+     "start": 39.325,
+     "end": 39.528
     },
     {
      "text": "Index",
-     "start": 42.364,
-     "end": 47.388
+     "start": 39.528,
+     "end": 40.034
     },
     {
      "text": "dan",
-     "start": 47.388,
-     "end": 50.14
+     "start": 40.034,
+     "end": 40.337
     },
     {
      "text": "65,2",
-     "start": 50.14,
-     "end": 52.856
-    }
-   ],
-   "start": 35.195,
-   "end": 37.138,
-   "id": 13
-  },
-  {
-   "scene": "s4-carbon",
-   "bg": "light",
-   "lines": [
-    "persen di",
-    "Terminal-Bench 4.0."
-   ],
-   "words": [
+     "start": 40.337,
+     "end": 40.742
+    },
     {
      "text": "persen",
-     "start": 35.432,
-     "end": 39.691
+     "start": 41.082,
+     "end": 41.89
     },
     {
      "text": "di",
-     "start": 39.691,
-     "end": 40.753
+     "start": 41.89,
+     "end": 42.159
     },
     {
      "text": "Terminal-Bench",
-     "start": 40.753,
-     "end": 51.432
+     "start": 42.159,
+     "end": 44.044
     },
     {
      "text": "4.0.",
-     "start": 51.432,
-     "end": 52.856
+     "start": 44.044,
+     "end": 44.582
     }
-   ],
-   "start": 37.158,
-   "end": 38.582,
-   "id": 14
+   ]
   },
   {
    "scene": "s4-carbon",
    "bg": "light",
    "lines": [
-    "API-nya dua dolar",
-    "input dan sepuluh dolar"
+    "API-nya dua dolar input dan sepuluh dolar",
+    "output per sejuta token sampai 30 November,",
+    "lalu naik dua kali lipat."
    ],
    "words": [
     {
      "text": "API-nya",
-     "start": 35.432,
-     "end": 37.458
+     "start": 45.072,
+     "end": 45.868
     },
     {
      "text": "dua",
-     "start": 37.458,
-     "end": 38.794
+     "start": 45.868,
+     "end": 46.209
     },
     {
      "text": "dolar",
-     "start": 38.794,
-     "end": 40.48
+     "start": 46.209,
+     "end": 46.778
     },
     {
      "text": "input",
-     "start": 40.48,
-     "end": 47.473
+     "start": 46.778,
+     "end": 47.346
     },
     {
      "text": "dan",
-     "start": 47.473,
-     "end": 48.771
+     "start": 47.346,
+     "end": 47.687
     },
     {
      "text": "sepuluh",
-     "start": 48.771,
-     "end": 50.959
+     "start": 47.687,
+     "end": 48.483
     },
     {
      "text": "dolar",
-     "start": 50.959,
-     "end": 52.856
-    }
-   ],
-   "start": 38.602,
-   "end": 42.22,
-   "id": 15
-  },
-  {
-   "scene": "s4-carbon",
-   "bg": "light",
-   "lines": [
-    "output per sejuta token",
-    "sampai 30 November,"
-   ],
-   "words": [
+     "start": 48.483,
+     "end": 49.052
+    },
     {
      "text": "output",
-     "start": 35.432,
-     "end": 37.864
+     "start": 49.422,
+     "end": 49.643
     },
     {
      "text": "per",
-     "start": 37.864,
-     "end": 39.144
+     "start": 49.643,
+     "end": 49.753
     },
     {
      "text": "sejuta",
-     "start": 39.144,
-     "end": 42.382
+     "start": 49.753,
+     "end": 49.973
     },
     {
      "text": "token",
-     "start": 42.382,
-     "end": 44.807
+     "start": 49.973,
+     "end": 50.157
     },
     {
      "text": "sampai",
-     "start": 44.807,
-     "end": 48.316
+     "start": 50.157,
+     "end": 50.378
     },
     {
      "text": "30",
-     "start": 48.316,
-     "end": 49.272
+     "start": 50.378,
+     "end": 50.451
     },
     {
      "text": "November,",
-     "start": 49.272,
-     "end": 52.856
-    }
-   ],
-   "start": 42.24,
-   "end": 44.534,
-   "id": 16
-  },
-  {
-   "scene": "s4-carbon",
-   "bg": "light",
-   "lines": [
-    "lalu naik dua",
-    "kali lipat."
-   ],
-   "words": [
+     "start": 50.451,
+     "end": 50.782
+    },
     {
      "text": "lalu",
-     "start": 35.432,
-     "end": 38.806
+     "start": 51.162,
+     "end": 51.474
     },
     {
      "text": "naik",
-     "start": 38.806,
-     "end": 44.001
+     "start": 51.474,
+     "end": 51.787
     },
     {
      "text": "dua",
-     "start": 44.001,
-     "end": 46.197
+     "start": 51.787,
+     "end": 52.021
     },
     {
      "text": "kali",
-     "start": 46.197,
-     "end": 48.741
+     "start": 52.021,
+     "end": 52.333
     },
     {
      "text": "lipat.",
-     "start": 48.741,
-     "end": 52.856
+     "start": 52.333,
+     "end": 52.802
     }
-   ],
-   "start": 44.554,
-   "end": 46.846,
-   "id": 17
+   ]
   },
   {
    "scene": "s5-hydrogen",
    "bg": "dark",
    "lines": [
-    "Hydrogen rilis",
-    "12 November."
+    "Hydrogen rilis 12 November.",
+    "2,5 kali lebih cepat dari Gemini 3.8"
    ],
    "words": [
     {
      "text": "Hydrogen",
-     "start": 54.256,
-     "end": 58.462
+     "start": 54.516,
+     "end": 55.143
     },
     {
      "text": "rilis",
-     "start": 58.462,
-     "end": 60.697
+     "start": 55.143,
+     "end": 55.534
     },
     {
      "text": "12",
-     "start": 60.697,
-     "end": 61.46
+     "start": 55.534,
+     "end": 55.691
     },
     {
      "text": "November.",
-     "start": 61.46,
-     "end": 70.96
-    }
-   ],
-   "start": 48.69,
-   "end": 51.45,
-   "id": 18
-  },
-  {
-   "scene": "s5-hydrogen",
-   "bg": "dark",
-   "lines": [
-    "2,5 kali lebih cepat",
-    "dari Gemini 3.8"
-   ],
-   "words": [
+     "start": 55.691,
+     "end": 56.396
+    },
     {
      "text": "2,5",
-     "start": 54.256,
-     "end": 55.402
+     "start": 56.876,
+     "end": 57.212
     },
     {
      "text": "kali",
-     "start": 55.402,
-     "end": 57.288
+     "start": 57.212,
+     "end": 57.66
     },
     {
      "text": "lebih",
-     "start": 57.288,
-     "end": 59.848
+     "start": 57.66,
+     "end": 58.22
     },
     {
      "text": "cepat",
-     "start": 59.848,
-     "end": 62.888
+     "start": 58.22,
+     "end": 58.78
     },
     {
      "text": "dari",
-     "start": 62.888,
-     "end": 65.042
+     "start": 58.78,
+     "end": 59.228
     },
     {
      "text": "Gemini",
-     "start": 65.042,
-     "end": 69.57
+     "start": 59.228,
+     "end": 59.9
     },
     {
      "text": "3.8",
-     "start": 69.57,
-     "end": 70.96
+     "start": 59.9,
+     "end": 60.236
     }
-   ],
-   "start": 51.47,
-   "end": 53.505,
-   "id": 19
+   ]
   },
   {
    "scene": "s5-hydrogen",
    "bg": "dark",
    "lines": [
-    "Flash. Skor 57 persen",
-    "di Terminal-Bench 4.1,"
+    "Flash. Skor 57 persen di Terminal-Bench 4.1,",
+    "versus 18,2 persen milik Flash.",
+    "Empat level berpikir, ada di aplikasi Gemini dan Google Search."
    ],
    "words": [
     {
      "text": "Flash.",
-     "start": 54.256,
-     "end": 55.969
+     "start": 60.816,
+     "end": 61.302
     },
     {
      "text": "Skor",
-     "start": 55.969,
-     "end": 58.563
+     "start": 61.302,
+     "end": 61.627
     },
     {
      "text": "57",
-     "start": 58.563,
-     "end": 63.646
+     "start": 61.627,
+     "end": 61.789
     },
     {
      "text": "persen",
-     "start": 63.646,
-     "end": 65.494
+     "start": 61.789,
+     "end": 62.275
     },
     {
      "text": "di",
-     "start": 65.494,
-     "end": 65.949
+     "start": 62.275,
+     "end": 62.437
     },
     {
      "text": "Terminal-Bench",
-     "start": 65.949,
-     "end": 70.303
+     "start": 62.437,
+     "end": 63.572
     },
     {
      "text": "4.1,",
-     "start": 70.303,
-     "end": 70.96
-    }
-   ],
-   "start": 53.525,
-   "end": 56.732,
-   "id": 20
-  },
-  {
-   "scene": "s5-hydrogen",
-   "bg": "dark",
-   "lines": [
-    "versus 18,2 persen",
-    "milik Flash."
-   ],
-   "words": [
+     "start": 63.572,
+     "end": 63.896
+    },
     {
      "text": "versus",
-     "start": 54.256,
-     "end": 57.572
+     "start": 64.346,
+     "end": 64.855
     },
     {
      "text": "18,2",
-     "start": 57.572,
-     "end": 58.814
+     "start": 64.855,
+     "end": 65.194
     },
     {
      "text": "persen",
-     "start": 58.814,
-     "end": 66.38
+     "start": 65.194,
+     "end": 65.703
     },
     {
      "text": "milik",
-     "start": 66.38,
-     "end": 68.696
+     "start": 65.703,
+     "end": 66.127
     },
     {
      "text": "Flash.",
-     "start": 68.696,
-     "end": 70.96
-    }
-   ],
-   "start": 56.752,
-   "end": 59.019,
-   "id": 21
-  },
-  {
-   "scene": "s5-hydrogen",
-   "bg": "dark",
-   "lines": [
-    "Empat level berpikir,"
-   ],
-   "words": [
+     "start": 66.127,
+     "end": 66.636
+    },
     {
      "text": "Empat",
-     "start": 54.256,
-     "end": 56.954
+     "start": 67.266,
+     "end": 67.603
     },
     {
      "text": "level",
-     "start": 56.954,
-     "end": 59.477
+     "start": 67.603,
+     "end": 67.94
     },
     {
      "text": "berpikir,",
-     "start": 59.477,
-     "end": 70.96
-    }
-   ],
-   "start": 59.039,
-   "end": 61.316,
-   "id": 22
-  },
-  {
-   "scene": "s5-hydrogen",
-   "bg": "dark",
-   "lines": [
-    "ada di aplikasi Gemini",
-    "dan Google Search."
-   ],
-   "words": [
+     "start": 67.94,
+     "end": 68.547
+    },
     {
      "text": "ada",
-     "start": 54.256,
-     "end": 55.329
+     "start": 68.547,
+     "end": 68.749
     },
     {
      "text": "di",
-     "start": 55.329,
-     "end": 55.974
+     "start": 68.749,
+     "end": 68.884
     },
     {
      "text": "aplikasi",
-     "start": 55.974,
-     "end": 61.53
+     "start": 68.884,
+     "end": 69.423
     },
     {
      "text": "Gemini",
-     "start": 61.53,
-     "end": 63.63
+     "start": 69.423,
+     "end": 69.827
     },
     {
      "text": "dan",
-     "start": 63.63,
-     "end": 64.835
+     "start": 69.827,
+     "end": 70.03
     },
     {
      "text": "Google",
-     "start": 64.835,
-     "end": 67.707
+     "start": 70.03,
+     "end": 70.434
     },
     {
      "text": "Search.",
-     "start": 67.707,
-     "end": 70.96
+     "start": 70.434,
+     "end": 70.906
     }
-   ],
-   "start": 61.336,
-   "end": 64.962,
-   "id": 23
+   ]
   },
   {
    "scene": "s6-duet",
    "bg": "light",
    "lines": [
-    "Modelnya bisa",
-    "bekerja sama."
+    "Modelnya bisa bekerja sama.",
+    "Di Antigravity, Carbon menyusun rencana,"
    ],
    "words": [
     {
      "text": "Modelnya",
-     "start": 72.36,
-     "end": 75.23
+     "start": 72.6,
+     "end": 73.147
     },
     {
      "text": "bisa",
-     "start": 75.23,
-     "end": 76.459
+     "start": 73.147,
+     "end": 73.42
     },
     {
      "text": "bekerja",
-     "start": 76.459,
-     "end": 78.953
+     "start": 73.42,
+     "end": 73.898
     },
     {
      "text": "sama.",
-     "start": 78.953,
-     "end": 85.44
-    }
-   ],
-   "start": 66.816,
-   "end": 69.266,
-   "id": 24
-  },
-  {
-   "scene": "s6-duet",
-   "bg": "light",
-   "lines": [
-    "Di Antigravity, Carbon",
-    "menyusun rencana,"
-   ],
-   "words": [
+     "start": 73.898,
+     "end": 74.24
+    },
     {
      "text": "Di",
-     "start": 72.36,
-     "end": 73.132
+     "start": 74.72,
+     "end": 74.869
     },
     {
      "text": "Antigravity,",
-     "start": 73.132,
-     "end": 78.36
+     "start": 74.869,
+     "end": 75.766
     },
     {
      "text": "Carbon",
-     "start": 78.36,
-     "end": 79.777
+     "start": 75.766,
+     "end": 76.214
     },
     {
      "text": "menyusun",
-     "start": 79.777,
-     "end": 82.161
+     "start": 76.214,
+     "end": 76.812
     },
     {
      "text": "rencana,",
-     "start": 82.161,
-     "end": 85.44
+     "start": 76.812,
+     "end": 77.41
     }
-   ],
-   "start": 69.286,
-   "end": 72.146,
-   "id": 25
+   ]
   },
   {
    "scene": "s6-duet",
    "bg": "light",
    "lines": [
-    "Hydrogen menulis",
-    "dan menguji kode."
+    "Hydrogen menulis dan menguji kode.",
+    "Hasilnya mendekati Carbon sendirian,",
+    "dengan kuota 24 persen lebih hemat."
    ],
    "words": [
     {
      "text": "Hydrogen",
-     "start": 72.36,
-     "end": 74.805
+     "start": 77.78,
+     "end": 78.308
     },
     {
      "text": "menulis",
-     "start": 74.805,
-     "end": 76.883
+     "start": 78.308,
+     "end": 78.77
     },
     {
      "text": "dan",
-     "start": 76.883,
-     "end": 77.603
+     "start": 78.77,
+     "end": 78.968
     },
     {
      "text": "menguji",
-     "start": 77.603,
-     "end": 84.329
+     "start": 78.968,
+     "end": 79.43
     },
     {
      "text": "kode.",
-     "start": 84.329,
-     "end": 85.44
-    }
-   ],
-   "start": 72.166,
-   "end": 74.853,
-   "id": 26
-  },
-  {
-   "scene": "s6-duet",
-   "bg": "light",
-   "lines": [
-    "Hasilnya mendekati",
-    "Carbon sendirian,"
-   ],
-   "words": [
+     "start": 79.43,
+     "end": 79.76
+    },
     {
      "text": "Hasilnya",
-     "start": 72.36,
-     "end": 74.72
+     "start": 80.27,
+     "end": 80.735
     },
     {
      "text": "mendekati",
-     "start": 74.72,
-     "end": 77.765
+     "start": 80.735,
+     "end": 81.259
     },
     {
      "text": "Carbon",
-     "start": 77.765,
-     "end": 80.61
+     "start": 81.259,
+     "end": 81.608
     },
     {
      "text": "sendirian,",
-     "start": 80.61,
-     "end": 85.44
-    }
-   ],
-   "start": 74.873,
-   "end": 76.876,
-   "id": 27
-  },
-  {
-   "scene": "s6-duet",
-   "bg": "light",
-   "lines": [
-    "dengan kuota 24",
-    "persen lebih hemat."
-   ],
-   "words": [
+     "start": 81.608,
+     "end": 82.19
+    },
     {
      "text": "dengan",
-     "start": 72.36,
-     "end": 75.045
+     "start": 82.59,
+     "end": 83.098
     },
     {
      "text": "kuota",
-     "start": 75.045,
-     "end": 76.579
+     "start": 83.098,
+     "end": 83.521
     },
     {
      "text": "24",
-     "start": 76.579,
-     "end": 77.315
+     "start": 83.521,
+     "end": 83.691
     },
     {
      "text": "persen",
-     "start": 77.315,
-     "end": 80.0
+     "start": 83.691,
+     "end": 84.199
     },
     {
      "text": "lebih",
-     "start": 80.0,
-     "end": 81.897
+     "start": 84.199,
+     "end": 84.622
     },
     {
      "text": "hemat.",
-     "start": 81.897,
-     "end": 85.44
+     "start": 84.622,
+     "end": 85.13
     }
-   ],
-   "start": 76.896,
-   "end": 78.746,
-   "id": 28
+   ]
   },
   {
    "scene": "s7-penutup",
    "bg": "dark",
    "lines": [
-    "Jadi, pilih",
-    "sesuai kebutuhan."
-   ],
-   "words": [
-    {
-     "text": "Jadi,",
-     "start": 86.84,
-     "end": 89.864
-    },
-    {
-     "text": "pilih",
-     "start": 89.864,
-     "end": 92.536
-    },
-    {
-     "text": "sesuai",
-     "start": 92.536,
-     "end": 94.048
-    },
-    {
-     "text": "kebutuhan.",
-     "start": 94.048,
-     "end": 97.424
-    }
-   ],
-   "start": 80.594,
-   "end": 82.681,
-   "id": 29
-  },
-  {
-   "scene": "s7-penutup",
-   "bg": "dark",
-   "lines": [
+    "Jadi, pilih sesuai kebutuhan.",
     "Argon untuk analisis,"
    ],
    "words": [
     {
+     "text": "Jadi,",
+     "start": 87.1,
+     "end": 87.413
+    },
+    {
+     "text": "pilih",
+     "start": 87.413,
+     "end": 87.727
+    },
+    {
+     "text": "sesuai",
+     "start": 87.727,
+     "end": 88.103
+    },
+    {
+     "text": "kebutuhan.",
+     "start": 88.103,
+     "end": 88.73
+    },
+    {
      "text": "Argon",
-     "start": 86.84,
-     "end": 92.891
+     "start": 89.39,
+     "end": 89.745
     },
     {
      "text": "untuk",
-     "start": 92.891,
-     "end": 94.012
+     "start": 89.745,
+     "end": 90.101
     },
     {
      "text": "analisis,",
-     "start": 94.012,
-     "end": 97.424
+     "start": 90.101,
+     "end": 90.74
     }
-   ],
-   "start": 82.701,
-   "end": 84.654,
-   "id": 30
+   ]
   },
   {
    "scene": "s7-penutup",
    "bg": "dark",
    "lines": [
-    "Carbon untuk",
-    "masalah tersulit,"
+    "Carbon untuk masalah tersulit,",
+    "Hydrogen untuk kerja cepat.",
+    "Tiga unsur, satu keluarga."
    ],
    "words": [
     {
      "text": "Carbon",
-     "start": 86.84,
-     "end": 90.8
+     "start": 91.21,
+     "end": 91.519
     },
     {
      "text": "untuk",
-     "start": 90.8,
-     "end": 91.945
+     "start": 91.519,
+     "end": 91.776
     },
     {
      "text": "masalah",
-     "start": 91.945,
-     "end": 93.925
+     "start": 91.776,
+     "end": 92.137
     },
     {
      "text": "tersulit,",
-     "start": 93.925,
-     "end": 97.424
-    }
-   ],
-   "start": 84.674,
-   "end": 86.263,
-   "id": 31
-  },
-  {
-   "scene": "s7-penutup",
-   "bg": "dark",
-   "lines": [
-    "Hydrogen untuk",
-    "kerja cepat."
-   ],
-   "words": [
+     "start": 92.137,
+     "end": 92.6
+    },
     {
      "text": "Hydrogen",
-     "start": 86.84,
-     "end": 91.73
+     "start": 93.31,
+     "end": 93.74
     },
     {
      "text": "untuk",
-     "start": 91.73,
-     "end": 93.095
+     "start": 93.74,
+     "end": 94.009
     },
     {
      "text": "kerja",
-     "start": 93.095,
-     "end": 94.854
+     "start": 94.009,
+     "end": 94.278
     },
     {
      "text": "cepat.",
-     "start": 94.854,
-     "end": 97.424
-    }
-   ],
-   "start": 86.283,
-   "end": 87.791,
-   "id": 32
-  },
-  {
-   "scene": "s7-penutup",
-   "bg": "dark",
-   "lines": [
-    "Tiga unsur,",
-    "satu keluarga."
-   ],
-   "words": [
+     "start": 94.278,
+     "end": 94.6
+    },
     {
      "text": "Tiga",
-     "start": 86.84,
-     "end": 90.888
+     "start": 95.47,
+     "end": 95.76
     },
     {
      "text": "unsur,",
-     "start": 90.888,
-     "end": 92.838
+     "start": 95.76,
+     "end": 96.196
     },
     {
      "text": "satu",
-     "start": 92.838,
-     "end": 94.972
+     "start": 96.196,
+     "end": 96.487
     },
     {
      "text": "keluarga.",
-     "start": 94.972,
-     "end": 97.424
+     "start": 96.487,
+     "end": 97.14
     }
-   ],
-   "start": 87.811,
-   "end": 90.849,
-   "id": 33
+   ]
   }
  ]
 }

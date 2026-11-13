@@ -2,8 +2,15 @@ import React from 'react';
 import {Img, interpolate, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
 import {FONT, MODELS, ModelKey, Mode, pal} from '../lib/theme';
 import {clamp01, pop} from '../lib/anim';
+import {ModelCoreIcon} from './ModelIcons';
 
-const DARK_TILE = '#10161e';
+const DARK_TILE = '#0f172a';
+
+const TIER_META: Record<ModelKey, {tier: string; tag: string}> = {
+  argon: {tier: 'PRO TIER', tag: 'CODE & LOGIC'},
+  carbon: {tier: 'ULTRA TIER', tag: 'DEEP REASONING'},
+  hydrogen: {tier: 'FLASH TIER', tag: 'HYPERSPEED'},
+};
 
 export const ElementTile: React.FC<{
   m: ModelKey;
@@ -12,12 +19,14 @@ export const ElementTile: React.FC<{
   start: number;
   symSize?: number;
   nameSize?: number;
-}> = ({m, w, h, start, symSize = 120, nameSize = 30}) => {
+}> = ({m, w, h, start, nameSize = 28}) => {
   const frame = useCurrentFrame();
   const {fps} = useVideoConfig();
   const model = MODELS[m];
+  const meta = TIER_META[m];
   const p = pop(frame, start, fps);
   const o = clamp01(p);
+  const iconSize = h > 300 ? 88 : h > 220 ? 68 : 52;
   return (
     <div
       style={{
@@ -26,45 +35,54 @@ export const ElementTile: React.FC<{
         position: 'relative',
         borderRadius: 30,
         backgroundColor: DARK_TILE,
-        border: `2px solid ${model.accent}66`,
-        boxShadow: `0 18px 40px rgba(0,0,0,0.35), inset 0 -60px 80px -50px ${model.accent}44`,
+        border: `2px solid ${model.accent}77`,
+        boxShadow: `0 18px 40px rgba(0,0,0,0.45), inset 0 0 50px -15px ${model.accent}33`,
         opacity: o,
         transform: `translateY(${(1 - p) * 40}px) scale(${0.92 + 0.08 * Math.min(1.05, p)})`,
         overflow: 'hidden',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        padding: '20px 18px',
+        boxSizing: 'border-box',
       }}
     >
-      <div style={{position: 'absolute', left: 24, top: 20, fontFamily: FONT.mono, fontWeight: 700, fontSize: 28, color: '#a9b1be'}}>{model.num}</div>
-      <Img src={staticFile('assets/gemini.svg')} style={{position: 'absolute', right: 22, top: 20, width: 28, height: 28, opacity: 0.85}} />
-      <div
-        style={{
-          position: 'absolute',
-          left: 0,
-          right: 0,
-          top: h * 0.2,
-          textAlign: 'center',
-          fontFamily: FONT.space,
-          fontWeight: 700,
-          fontSize: symSize,
-          lineHeight: 1,
-          color: model.accent,
-        }}
-      >
-        {model.sym}
+      <div style={{width: '100%', display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
+        <div style={{fontFamily: FONT.mono, fontWeight: 700, fontSize: 18, color: model.accent, letterSpacing: '0.06em'}}>
+          {meta.tier}
+        </div>
+        <Img src={staticFile('assets/gemini.svg')} style={{width: 24, height: 24, opacity: 0.9}} />
       </div>
-      <div
-        style={{
-          position: 'absolute',
-          left: 0,
-          right: 0,
-          bottom: 22,
-          textAlign: 'center',
-          fontFamily: FONT.sans,
-          fontWeight: 800,
-          fontSize: nameSize,
-          color: '#f1f3f6',
-        }}
-      >
-        {model.name}
+
+      <div style={{position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+        <div
+          style={{
+            position: 'absolute',
+            width: iconSize * 1.5,
+            height: iconSize * 1.5,
+            borderRadius: '50%',
+            background: `radial-gradient(circle, ${model.accent}33 0%, rgba(0,0,0,0) 70%)`,
+          }}
+        />
+        <ModelCoreIcon m={m} size={iconSize} color={model.accent} />
+      </div>
+
+      <div style={{textAlign: 'center', width: '100%'}}>
+        <div
+          style={{
+            fontFamily: FONT.sans,
+            fontWeight: 800,
+            fontSize: nameSize,
+            color: '#f8fafc',
+            letterSpacing: '0.02em',
+          }}
+        >
+          {model.name.toUpperCase()}
+        </div>
+        <div style={{fontFamily: FONT.mono, fontWeight: 600, fontSize: 16, color: '#94a3b8', marginTop: 4, letterSpacing: '0.04em'}}>
+          {meta.tag}
+        </div>
       </div>
     </div>
   );
