@@ -78,8 +78,9 @@ export const S1Hook: React.FC = () => {
 const MiniTile: React.FC<{m: ModelKey; size: number}> = ({m, size}) => {
   const model = MODELS[m];
   return (
-    <div style={{width: size, height: size, borderRadius: 26, backgroundColor: '#10161e', border: `2px solid ${model.accent}66`, position: 'relative', flexShrink: 0}}>
+    <div style={{width: size, height: size, borderRadius: 26, backgroundColor: '#10161e', border: `2px solid ${model.accent}66`, position: 'relative', flexShrink: 0, boxShadow: `0 8px 24px rgba(0,0,0,0.3)`}}>
       <div style={{position: 'absolute', left: 14, top: 10, fontFamily: FONT.mono, fontWeight: 700, fontSize: 20, color: '#a9b1be'}}>{model.num}</div>
+      <Img src={staticFile('assets/gemini.svg')} style={{position: 'absolute', right: 12, top: 10, width: 20, height: 20, opacity: 0.85}} />
       <div style={{position: 'absolute', left: 0, right: 0, top: size * 0.3, textAlign: 'center', fontFamily: FONT.space, fontWeight: 700, fontSize: 76, lineHeight: 1, color: model.accent}}>
         {model.sym}
       </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import {interpolate, useCurrentFrame, useVideoConfig} from 'remotion';
+import {Img, interpolate, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
 import {FONT, MODELS, ModelKey, Mode, pal} from '../lib/theme';
 import {clamp01, pop} from '../lib/anim';
 
@@ -34,6 +34,7 @@ export const ElementTile: React.FC<{
       }}
     >
       <div style={{position: 'absolute', left: 24, top: 20, fontFamily: FONT.mono, fontWeight: 700, fontSize: 28, color: '#a9b1be'}}>{model.num}</div>
+      <Img src={staticFile('assets/gemini.svg')} style={{position: 'absolute', right: 22, top: 20, width: 28, height: 28, opacity: 0.85}} />
       <div
         style={{
           position: 'absolute',

@@ -40,16 +40,33 @@ export const Header: React.FC<{index: number; total: number; label: string; mode
   return (
     <>
       {icon ? (
-        <Img
-          src={staticFile('assets/agent-icon.png')}
-          style={{position: 'absolute', left: M, top: 96, width: 114, height: 120, opacity: o, transform: `scale(${0.85 + 0.15 * o})`}}
-        />
+        <div style={{position: 'absolute', left: M, top: 96, display: 'flex', alignItems: 'center', gap: 14, opacity: o, transform: `scale(${0.85 + 0.15 * o})`}}>
+          <Img
+            src={staticFile('assets/agent-icon.png')}
+            style={{
+              width: 80,
+              height: 84,
+              borderRadius: 20,
+              backgroundColor: mode === 'dark' ? 'rgba(255,255,255,0.06)' : 'rgba(0,0,0,0.04)',
+              border: `1.5px solid ${p.line}`,
+              boxShadow: `0 8px 20px ${p.shadow}`,
+              padding: 4,
+              boxSizing: 'border-box',
+            }}
+          />
+          <div style={{display: 'flex', alignItems: 'center', gap: 8, padding: '8px 14px', borderRadius: 20, backgroundColor: mode === 'dark' ? 'rgba(255,255,255,0.05)' : 'rgba(255,255,255,0.85)', border: `1px solid ${p.line}`}}>
+            <Img src={staticFile('assets/gemini.svg')} style={{width: 24, height: 24}} />
+            <span style={{fontFamily: FONT.mono, fontWeight: 700, fontSize: 18, color: p.ink, letterSpacing: '0.04em'}}>GOOGLE AI</span>
+          </div>
+        </div>
       ) : null}
-      <div style={{position: 'absolute', right: M, top: 112, textAlign: 'right', opacity: o}}>
+      <div style={{position: 'absolute', right: M, top: 104, textAlign: 'right', opacity: o}}>
         <div style={{fontFamily: FONT.mono, fontWeight: 700, fontSize: 26, color: p.muted, letterSpacing: '0.04em'}}>
           GEMINI 4 · {String(index).padStart(2, '0')}/{String(total).padStart(2, '0')}
         </div>
-        <div style={{fontFamily: FONT.mono, fontWeight: 400, fontSize: 24, color: p.muted, marginTop: 8}}>{label}</div>
+        <div style={{fontFamily: FONT.mono, fontWeight: 600, fontSize: 22, color: mode === 'dark' ? '#38bdf8' : '#0284c7', marginTop: 6, letterSpacing: '0.05em'}}>
+          rhmt ofc
+        </div>
       </div>
     </>
   );

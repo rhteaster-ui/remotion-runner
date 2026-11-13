@@ -10,26 +10,26 @@ export const FONT = {
 
 export const COLOR_PALETTE = {
   dark: {
-    bg: '#080b10',
-    surface: '#10161e',
-    surface2: '#161d27',
-    ink: '#f1f3f6',
-    muted: '#a9b1be',
-    line: 'rgba(175, 191, 218, 0.20)',
-    shadow: 'rgba(0, 0, 0, 0.65)',
+    bg: '#080b14',
+    surface: '#0f172a',
+    surface2: '#1e293b',
+    ink: '#f8fafc',
+    muted: '#94a3b8',
+    line: 'rgba(148, 163, 184, 0.18)',
+    shadow: 'rgba(0, 0, 0, 0.70)',
   },
   light: {
-    bg: '#eef0f2',
-    surface: '#fafbfc',
-    surface2: '#e4e8ed',
-    ink: '#181e28',
-    muted: '#4d5868',
-    line: 'rgba(65, 83, 109, 0.16)',
-    shadow: 'rgba(51, 75, 107, 0.20)',
+    bg: '#f8fafd',
+    surface: '#ffffff',
+    surface2: '#f1f5f9',
+    ink: '#0f172a',
+    muted: '#64748b',
+    line: 'rgba(148, 163, 184, 0.22)',
+    shadow: 'rgba(15, 23, 42, 0.08)',
   },
   spark: {
-    lime: '#d4ff3f',
-    periwinkle: '#6f86ff',
-    coral: '#ff7a59',
+    lime: '#00e676',
+    periwinkle: '#4285f4',
+    coral: '#ff9800',
   }
 };

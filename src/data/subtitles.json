@@ -12,33 +12,33 @@
    "words": [
     {
      "text": "Gemini",
-     "start": 0.998,
-     "end": 1.372
+     "start": 0.8,
+     "end": 2.917
     },
     {
      "text": "4",
-     "start": 1.372,
-     "end": 1.416
+     "start": 2.917,
+     "end": 3.166
     },
     {
      "text": "kini",
-     "start": 1.416,
-     "end": 1.603
+     "start": 3.166,
+     "end": 4.225
     },
     {
      "text": "punya",
-     "start": 1.603,
-     "end": 1.882
+     "start": 4.225,
+     "end": 5.804
     },
     {
      "text": "tiga",
-     "start": 1.882,
-     "end": 2.078
+     "start": 5.804,
+     "end": 6.913
     },
     {
      "text": "model:",
-     "start": 2.078,
-     "end": 2.465
+     "start": 6.913,
+     "end": 9.104
     }
    ],
    "start": 0.938,
@@ -55,23 +55,23 @@
    "words": [
     {
      "text": "Argon,",
-     "start": 2.465,
-     "end": 3.25
+     "start": 0.8,
+     "end": 3.08
     },
     {
      "text": "Carbon,",
-     "start": 3.25,
-     "end": 4.114
+     "start": 3.08,
+     "end": 5.59
     },
     {
      "text": "dan",
-     "start": 4.114,
-     "end": 4.605
+     "start": 5.59,
+     "end": 7.016
     },
     {
      "text": "Hydrogen.",
-     "start": 4.605,
-     "end": 5.324
+     "start": 7.016,
+     "end": 9.104
     }
    ],
    "start": 2.405,
@@ -88,23 +88,23 @@
    "words": [
     {
      "text": "Satu",
-     "start": 5.324,
-     "end": 6.437
+     "start": 0.8,
+     "end": 4.101
     },
     {
      "text": "keluarga,",
-     "start": 6.437,
-     "end": 7.12
+     "start": 4.101,
+     "end": 6.126
     },
     {
      "text": "tiga",
-     "start": 7.12,
-     "end": 7.653
+     "start": 6.126,
+     "end": 7.707
     },
     {
      "text": "peran.",
-     "start": 7.653,
-     "end": 8.124
+     "start": 7.707,
+     "end": 9.104
     }
    ],
    "start": 5.264,
@@ -121,28 +121,28 @@
    "words": [
     {
      "text": "Argon",
-     "start": 10.315,
-     "end": 10.732
+     "start": 10.504,
+     "end": 12.628
     },
     {
      "text": "untuk",
-     "start": 10.732,
-     "end": 10.94
+     "start": 12.628,
+     "end": 13.688
     },
     {
      "text": "kode",
-     "start": 10.94,
-     "end": 11.195
+     "start": 13.688,
+     "end": 14.987
     },
     {
      "text": "dan",
-     "start": 11.195,
-     "end": 11.368
+     "start": 14.987,
+     "end": 15.868
     },
     {
      "text": "analisis.",
-     "start": 11.368,
-     "end": 12.063
+     "start": 15.868,
+     "end": 19.408
     }
    ],
    "start": 10.255,
@@ -159,28 +159,28 @@
    "words": [
     {
      "text": "Carbon",
-     "start": 12.063,
-     "end": 13.25
+     "start": 10.504,
+     "end": 14.347
     },
     {
      "text": "untuk",
-     "start": 13.25,
-     "end": 13.459
+     "start": 14.347,
+     "end": 15.024
     },
     {
      "text": "pekerjaan",
-     "start": 13.459,
-     "end": 13.991
+     "start": 15.024,
+     "end": 16.747
     },
     {
      "text": "paling",
-     "start": 13.991,
-     "end": 14.211
+     "start": 16.747,
+     "end": 17.459
     },
     {
      "text": "kompleks.",
-     "start": 14.211,
-     "end": 14.813
+     "start": 17.459,
+     "end": 19.408
     }
    ],
    "start": 12.003,
@@ -197,33 +197,33 @@
    "words": [
     {
      "text": "Hydrogen",
-     "start": 14.813,
-     "end": 16.155
+     "start": 10.504,
+     "end": 14.974
     },
     {
      "text": "untuk",
-     "start": 16.155,
-     "end": 16.34
+     "start": 14.974,
+     "end": 15.591
     },
     {
      "text": "kerja",
-     "start": 16.34,
-     "end": 16.607
+     "start": 15.591,
+     "end": 16.48
     },
     {
      "text": "harian",
-     "start": 16.607,
-     "end": 16.908
+     "start": 16.48,
+     "end": 17.483
     },
     {
      "text": "yang",
-     "start": 16.908,
-     "end": 17.058
+     "start": 17.483,
+     "end": 17.982
     },
     {
      "text": "cepat.",
-     "start": 17.058,
-     "end": 17.486
+     "start": 17.982,
+     "end": 19.408
     }
    ],
    "start": 14.753,
@@ -239,23 +239,23 @@
    "words": [
     {
      "text": "Argon",
-     "start": 19.678,
-     "end": 20.082
+     "start": 20.808,
+     "end": 24.956
     },
     {
      "text": "rilis",
-     "start": 20.082,
-     "end": 20.401
+     "start": 24.956,
+     "end": 28.231
     },
     {
      "text": "13",
-     "start": 20.401,
-     "end": 20.524
+     "start": 28.231,
+     "end": 29.494
     },
     {
      "text": "Oktober.",
-     "start": 20.524,
-     "end": 20.966
+     "start": 29.494,
+     "end": 34.032
     }
    ],
    "start": 19.618,
@@ -272,28 +272,28 @@
    "words": [
     {
      "text": "Skornya",
-     "start": 20.966,
-     "end": 22.325
+     "start": 20.808,
+     "end": 28.198
     },
     {
      "text": "76",
-     "start": 22.325,
-     "end": 22.446
+     "start": 28.198,
+     "end": 28.856
     },
     {
      "text": "persen",
-     "start": 22.446,
-     "end": 22.782
+     "start": 28.856,
+     "end": 30.683
     },
     {
      "text": "di",
-     "start": 22.782,
-     "end": 22.846
+     "start": 30.683,
+     "end": 31.03
     },
     {
      "text": "RiemannBench,",
-     "start": 22.846,
-     "end": 23.398
+     "start": 31.03,
+     "end": 34.032
     }
    ],
    "start": 20.906,
@@ -310,23 +310,23 @@
    "words": [
     {
      "text": "tertinggi",
-     "start": 23.398,
-     "end": 24.029
+     "start": 20.808,
+     "end": 25.924
     },
     {
      "text": "di",
-     "start": 24.029,
-     "end": 24.393
+     "start": 25.924,
+     "end": 28.875
     },
     {
      "text": "tabel",
-     "start": 24.393,
-     "end": 24.673
+     "start": 28.875,
+     "end": 31.146
     },
     {
      "text": "Google.",
-     "start": 24.673,
-     "end": 25.029
+     "start": 31.146,
+     "end": 34.032
     }
    ],
    "start": 23.338,
@@ -343,28 +343,28 @@
    "words": [
     {
      "text": "Disebut",
-     "start": 25.029,
-     "end": 26.448
+     "start": 20.808,
+     "end": 27.223
     },
     {
      "text": "paling",
-     "start": 26.448,
-     "end": 26.822
+     "start": 27.223,
+     "end": 28.914
     },
     {
      "text": "tahan",
-     "start": 26.822,
-     "end": 27.018
+     "start": 28.914,
+     "end": 29.8
     },
     {
      "text": "prompt",
-     "start": 27.018,
-     "end": 27.303
+     "start": 29.8,
+     "end": 31.089
     },
     {
      "text": "injection,",
-     "start": 27.303,
-     "end": 27.954
+     "start": 31.089,
+     "end": 34.032
     }
    ],
    "start": 24.969,
@@ -381,33 +381,33 @@
    "words": [
     {
      "text": "untuk",
-     "start": 27.954,
-     "end": 28.502
+     "start": 20.808,
+     "end": 23.9
     },
     {
      "text": "pelanggan",
-     "start": 28.502,
-     "end": 28.949
+     "start": 23.9,
+     "end": 26.421
     },
     {
      "text": "AI",
-     "start": 28.949,
-     "end": 29.194
+     "start": 26.421,
+     "end": 27.804
     },
     {
      "text": "Pro",
-     "start": 29.194,
-     "end": 29.517
+     "start": 27.804,
+     "end": 29.626
     },
     {
      "text": "dan",
-     "start": 29.517,
-     "end": 29.741
+     "start": 29.626,
+     "end": 30.89
     },
     {
      "text": "Ultra.",
-     "start": 29.741,
-     "end": 30.298
+     "start": 30.89,
+     "end": 34.032
     }
    ],
    "start": 27.894,
@@ -424,28 +424,28 @@
    "words": [
     {
      "text": "Carbon",
-     "start": 32.475,
-     "end": 32.917
+     "start": 35.432,
+     "end": 38.202
     },
     {
      "text": "rilis",
-     "start": 32.917,
-     "end": 33.355
+     "start": 38.202,
+     "end": 40.948
     },
     {
      "text": "umum",
-     "start": 33.355,
-     "end": 33.598
+     "start": 40.948,
+     "end": 42.471
     },
     {
      "text": "10",
-     "start": 33.598,
-     "end": 33.753
+     "start": 42.471,
+     "end": 43.442
     },
     {
      "text": "November.",
-     "start": 33.753,
-     "end": 35.255
+     "start": 43.442,
+     "end": 52.856
     }
    ],
    "start": 32.415,
@@ -462,38 +462,38 @@
    "words": [
     {
      "text": "Skornya",
-     "start": 35.255,
-     "end": 35.681
+     "start": 35.432,
+     "end": 39.213
     },
     {
      "text": "59",
-     "start": 35.681,
-     "end": 35.775
+     "start": 39.213,
+     "end": 40.048
     },
     {
      "text": "di",
-     "start": 35.775,
-     "end": 35.906
+     "start": 40.048,
+     "end": 41.21
     },
     {
      "text": "AA",
-     "start": 35.906,
-     "end": 36.036
+     "start": 41.21,
+     "end": 42.364
     },
     {
      "text": "Index",
-     "start": 36.036,
-     "end": 36.602
+     "start": 42.364,
+     "end": 47.388
     },
     {
      "text": "dan",
-     "start": 36.602,
-     "end": 36.912
+     "start": 47.388,
+     "end": 50.14
     },
     {
      "text": "65,2",
-     "start": 36.912,
-     "end": 37.218
+     "start": 50.14,
+     "end": 52.856
     }
    ],
    "start": 35.195,
@@ -510,23 +510,23 @@
    "words": [
     {
      "text": "persen",
-     "start": 37.218,
-     "end": 37.571
+     "start": 35.432,
+     "end": 39.691
     },
     {
      "text": "di",
-     "start": 37.571,
-     "end": 37.659
+     "start": 39.691,
+     "end": 40.753
     },
     {
      "text": "Terminal-Bench",
-     "start": 37.659,
-     "end": 38.544
+     "start": 40.753,
+     "end": 51.432
     },
     {
      "text": "4.0.",
-     "start": 38.544,
-     "end": 38.662
+     "start": 51.432,
+     "end": 52.856
     }
    ],
    "start": 37.158,
@@ -543,38 +543,38 @@
    "words": [
     {
      "text": "API-nya",
-     "start": 38.662,
-     "end": 39.085
+     "start": 35.432,
+     "end": 37.458
     },
     {
      "text": "dua",
-     "start": 39.085,
-     "end": 39.364
+     "start": 37.458,
+     "end": 38.794
     },
     {
      "text": "dolar",
-     "start": 39.364,
-     "end": 39.716
+     "start": 38.794,
+     "end": 40.48
     },
     {
      "text": "input",
-     "start": 39.716,
-     "end": 41.176
+     "start": 40.48,
+     "end": 47.473
     },
     {
      "text": "dan",
-     "start": 41.176,
-     "end": 41.447
+     "start": 47.473,
+     "end": 48.771
     },
     {
      "text": "sepuluh",
-     "start": 41.447,
-     "end": 41.904
+     "start": 48.771,
+     "end": 50.959
     },
     {
      "text": "dolar",
-     "start": 41.904,
-     "end": 42.3
+     "start": 50.959,
+     "end": 52.856
     }
    ],
    "start": 38.602,
@@ -591,38 +591,38 @@
    "words": [
     {
      "text": "output",
-     "start": 42.3,
-     "end": 42.623
+     "start": 35.432,
+     "end": 37.864
     },
     {
      "text": "per",
-     "start": 42.623,
-     "end": 42.793
+     "start": 37.864,
+     "end": 39.144
     },
     {
      "text": "sejuta",
-     "start": 42.793,
-     "end": 43.223
+     "start": 39.144,
+     "end": 42.382
     },
     {
      "text": "token",
-     "start": 43.223,
-     "end": 43.545
+     "start": 42.382,
+     "end": 44.807
     },
     {
      "text": "sampai",
-     "start": 43.545,
-     "end": 44.011
+     "start": 44.807,
+     "end": 48.316
     },
     {
      "text": "30",
-     "start": 44.011,
-     "end": 44.138
+     "start": 48.316,
+     "end": 49.272
     },
     {
      "text": "November,",
-     "start": 44.138,
-     "end": 44.614
+     "start": 49.272,
+     "end": 52.856
     }
    ],
    "start": 42.24,
@@ -639,28 +639,28 @@
    "words": [
     {
      "text": "lalu",
-     "start": 44.614,
-     "end": 44.992
+     "start": 35.432,
+     "end": 38.806
     },
     {
      "text": "naik",
-     "start": 44.992,
-     "end": 45.574
+     "start": 38.806,
+     "end": 44.001
     },
     {
      "text": "dua",
-     "start": 45.574,
-     "end": 45.82
+     "start": 44.001,
+     "end": 46.197
     },
     {
      "text": "kali",
-     "start": 45.82,
-     "end": 46.105
+     "start": 46.197,
+     "end": 48.741
     },
     {
      "text": "lipat.",
-     "start": 46.105,
-     "end": 46.566
+     "start": 48.741,
+     "end": 52.856
     }
    ],
    "start": 44.554,
@@ -677,23 +677,23 @@
    "words": [
     {
      "text": "Hydrogen",
-     "start": 48.75,
-     "end": 49.45
+     "start": 54.256,
+     "end": 58.462
     },
     {
      "text": "rilis",
-     "start": 49.45,
-     "end": 49.822
+     "start": 58.462,
+     "end": 60.697
     },
     {
      "text": "12",
-     "start": 49.822,
-     "end": 49.949
+     "start": 60.697,
+     "end": 61.46
     },
     {
      "text": "November.",
-     "start": 49.949,
-     "end": 51.53
+     "start": 61.46,
+     "end": 70.96
     }
    ],
    "start": 48.69,
@@ -710,38 +710,38 @@
    "words": [
     {
      "text": "2,5",
-     "start": 51.53,
-     "end": 51.671
+     "start": 54.256,
+     "end": 55.402
     },
     {
      "text": "kali",
-     "start": 51.671,
-     "end": 51.903
+     "start": 55.402,
+     "end": 57.288
     },
     {
      "text": "lebih",
-     "start": 51.903,
-     "end": 52.218
+     "start": 57.288,
+     "end": 59.848
     },
     {
      "text": "cepat",
-     "start": 52.218,
-     "end": 52.592
+     "start": 59.848,
+     "end": 62.888
     },
     {
      "text": "dari",
-     "start": 52.592,
-     "end": 52.857
+     "start": 62.888,
+     "end": 65.042
     },
     {
      "text": "Gemini",
-     "start": 52.857,
-     "end": 53.414
+     "start": 65.042,
+     "end": 69.57
     },
     {
      "text": "3.8",
-     "start": 53.414,
-     "end": 53.585
+     "start": 69.57,
+     "end": 70.96
     }
    ],
    "start": 51.47,
@@ -758,38 +758,38 @@
    "words": [
     {
      "text": "Flash.",
-     "start": 53.585,
-     "end": 53.916
+     "start": 54.256,
+     "end": 55.969
     },
     {
      "text": "Skor",
-     "start": 53.916,
-     "end": 54.417
+     "start": 55.969,
+     "end": 58.563
     },
     {
      "text": "57",
-     "start": 54.417,
-     "end": 55.399
+     "start": 58.563,
+     "end": 63.646
     },
     {
      "text": "persen",
-     "start": 55.399,
-     "end": 55.756
+     "start": 63.646,
+     "end": 65.494
     },
     {
      "text": "di",
-     "start": 55.756,
-     "end": 55.844
+     "start": 65.494,
+     "end": 65.949
     },
     {
      "text": "Terminal-Bench",
-     "start": 55.844,
-     "end": 56.685
+     "start": 65.949,
+     "end": 70.303
     },
     {
      "text": "4.1,",
-     "start": 56.685,
-     "end": 56.812
+     "start": 70.303,
+     "end": 70.96
     }
    ],
    "start": 53.525,
@@ -806,28 +806,28 @@
    "words": [
     {
      "text": "versus",
-     "start": 56.812,
-     "end": 57.266
+     "start": 54.256,
+     "end": 57.572
     },
     {
      "text": "18,2",
-     "start": 57.266,
-     "end": 57.436
+     "start": 57.572,
+     "end": 58.814
     },
     {
      "text": "persen",
-     "start": 57.436,
-     "end": 58.472
+     "start": 58.814,
+     "end": 66.38
     },
     {
      "text": "milik",
-     "start": 58.472,
-     "end": 58.789
+     "start": 66.38,
+     "end": 68.696
     },
     {
      "text": "Flash.",
-     "start": 58.789,
-     "end": 59.099
+     "start": 68.696,
+     "end": 70.96
     }
    ],
    "start": 56.752,
@@ -843,18 +843,18 @@
    "words": [
     {
      "text": "Empat",
-     "start": 59.099,
-     "end": 59.47
+     "start": 54.256,
+     "end": 56.954
     },
     {
      "text": "level",
-     "start": 59.47,
-     "end": 59.817
+     "start": 56.954,
+     "end": 59.477
     },
     {
      "text": "berpikir,",
-     "start": 59.817,
-     "end": 61.396
+     "start": 59.477,
+     "end": 70.96
     }
    ],
    "start": 59.039,
@@ -871,38 +871,38 @@
    "words": [
     {
      "text": "ada",
-     "start": 61.396,
-     "end": 61.607
+     "start": 54.256,
+     "end": 55.329
     },
     {
      "text": "di",
-     "start": 61.607,
-     "end": 61.734
+     "start": 55.329,
+     "end": 55.974
     },
     {
      "text": "aplikasi",
-     "start": 61.734,
-     "end": 62.827
+     "start": 55.974,
+     "end": 61.53
     },
     {
      "text": "Gemini",
-     "start": 62.827,
-     "end": 63.24
+     "start": 61.53,
+     "end": 63.63
     },
     {
      "text": "dan",
-     "start": 63.24,
-     "end": 63.477
+     "start": 63.63,
+     "end": 64.835
     },
     {
      "text": "Google",
-     "start": 63.477,
-     "end": 64.042
+     "start": 64.835,
+     "end": 67.707
     },
     {
      "text": "Search.",
-     "start": 64.042,
-     "end": 64.682
+     "start": 67.707,
+     "end": 70.96
     }
    ],
    "start": 61.336,
@@ -919,23 +919,23 @@
    "words": [
     {
      "text": "Modelnya",
-     "start": 66.876,
-     "end": 67.418
+     "start": 72.36,
+     "end": 75.23
     },
     {
      "text": "bisa",
-     "start": 67.418,
-     "end": 67.65
+     "start": 75.23,
+     "end": 76.459
     },
     {
      "text": "bekerja",
-     "start": 67.65,
-     "end": 68.121
+     "start": 76.459,
+     "end": 78.953
     },
     {
      "text": "sama.",
-     "start": 68.121,
-     "end": 69.346
+     "start": 78.953,
+     "end": 85.44
     }
    ],
    "start": 66.816,
@@ -952,28 +952,28 @@
    "words": [
     {
      "text": "Di",
-     "start": 69.346,
-     "end": 69.516
+     "start": 72.36,
+     "end": 73.132
     },
     {
      "text": "Antigravity,",
-     "start": 69.516,
-     "end": 70.667
+     "start": 73.132,
+     "end": 78.36
     },
     {
      "text": "Carbon",
-     "start": 70.667,
-     "end": 70.979
+     "start": 78.36,
+     "end": 79.777
     },
     {
      "text": "menyusun",
-     "start": 70.979,
-     "end": 71.504
+     "start": 79.777,
+     "end": 82.161
     },
     {
      "text": "rencana,",
-     "start": 71.504,
-     "end": 72.226
+     "start": 82.161,
+     "end": 85.44
     }
    ],
    "start": 69.286,
@@ -990,28 +990,28 @@
    "words": [
     {
      "text": "Hydrogen",
-     "start": 72.226,
-     "end": 72.732
+     "start": 72.36,
+     "end": 74.805
     },
     {
      "text": "menulis",
-     "start": 72.732,
-     "end": 73.162
+     "start": 74.805,
+     "end": 76.883
     },
     {
      "text": "dan",
-     "start": 73.162,
-     "end": 73.311
+     "start": 76.883,
+     "end": 77.603
     },
     {
      "text": "menguji",
-     "start": 73.311,
-     "end": 74.703
+     "start": 77.603,
+     "end": 84.329
     },
     {
      "text": "kode.",
-     "start": 74.703,
-     "end": 74.933
+     "start": 84.329,
+     "end": 85.44
     }
    ],
    "start": 72.166,
@@ -1028,23 +1028,23 @@
    "words": [
     {
      "text": "Hasilnya",
-     "start": 74.933,
-     "end": 75.298
+     "start": 72.36,
+     "end": 74.72
     },
     {
      "text": "mendekati",
-     "start": 75.298,
-     "end": 75.769
+     "start": 74.72,
+     "end": 77.765
     },
     {
      "text": "Carbon",
-     "start": 75.769,
-     "end": 76.209
+     "start": 77.765,
+     "end": 80.61
     },
     {
      "text": "sendirian,",
-     "start": 76.209,
-     "end": 76.956
+     "start": 80.61,
+     "end": 85.44
     }
    ],
    "start": 74.873,
@@ -1061,33 +1061,33 @@
    "words": [
     {
      "text": "dengan",
-     "start": 76.956,
-     "end": 77.266
+     "start": 72.36,
+     "end": 75.045
     },
     {
      "text": "kuota",
-     "start": 77.266,
-     "end": 77.443
+     "start": 75.045,
+     "end": 76.579
     },
     {
      "text": "24",
-     "start": 77.443,
-     "end": 77.528
+     "start": 76.579,
+     "end": 77.315
     },
     {
      "text": "persen",
-     "start": 77.528,
-     "end": 77.838
+     "start": 77.315,
+     "end": 80.0
     },
     {
      "text": "lebih",
-     "start": 77.838,
-     "end": 78.057
+     "start": 80.0,
+     "end": 81.897
     },
     {
      "text": "hemat.",
-     "start": 78.057,
-     "end": 78.466
+     "start": 81.897,
+     "end": 85.44
     }
    ],
    "start": 76.896,
@@ -1104,23 +1104,23 @@
    "words": [
     {
      "text": "Jadi,",
-     "start": 80.654,
-     "end": 81.256
+     "start": 86.84,
+     "end": 89.864
     },
     {
      "text": "pilih",
-     "start": 81.256,
-     "end": 81.788
+     "start": 89.864,
+     "end": 92.536
     },
     {
      "text": "sesuai",
-     "start": 81.788,
-     "end": 82.089
+     "start": 92.536,
+     "end": 94.048
     },
     {
      "text": "kebutuhan.",
-     "start": 82.089,
-     "end": 82.761
+     "start": 94.048,
+     "end": 97.424
     }
    ],
    "start": 80.594,
@@ -1136,18 +1136,18 @@
    "words": [
     {
      "text": "Argon",
-     "start": 82.761,
-     "end": 83.889
+     "start": 86.84,
+     "end": 92.891
     },
     {
      "text": "untuk",
-     "start": 83.889,
-     "end": 84.098
+     "start": 92.891,
+     "end": 94.012
     },
     {
      "text": "analisis,",
-     "start": 84.098,
-     "end": 84.734
+     "start": 94.012,
+     "end": 97.424
     }
    ],
    "start": 82.701,
@@ -1164,23 +1164,23 @@
    "words": [
     {
      "text": "Carbon",
-     "start": 84.734,
-     "end": 85.336
+     "start": 86.84,
+     "end": 90.8
     },
     {
      "text": "untuk",
-     "start": 85.336,
-     "end": 85.51
+     "start": 90.8,
+     "end": 91.945
     },
     {
      "text": "masalah",
-     "start": 85.51,
-     "end": 85.811
+     "start": 91.945,
+     "end": 93.925
     },
     {
      "text": "tersulit,",
-     "start": 85.811,
-     "end": 86.343
+     "start": 93.925,
+     "end": 97.424
     }
    ],
    "start": 84.674,
@@ -1197,23 +1197,23 @@
    "words": [
     {
      "text": "Hydrogen",
-     "start": 86.343,
-     "end": 87.049
+     "start": 86.84,
+     "end": 91.73
     },
     {
      "text": "untuk",
-     "start": 87.049,
-     "end": 87.246
+     "start": 91.73,
+     "end": 93.095
     },
     {
      "text": "kerja",
-     "start": 87.246,
-     "end": 87.5
+     "start": 93.095,
+     "end": 94.854
     },
     {
      "text": "cepat.",
-     "start": 87.5,
-     "end": 87.871
+     "start": 94.854,
+     "end": 97.424
     }
    ],
    "start": 86.283,
@@ -1230,23 +1230,23 @@
    "words": [
     {
      "text": "Tiga",
-     "start": 87.871,
-     "end": 88.903
+     "start": 86.84,
+     "end": 90.888
     },
     {
      "text": "unsur,",
-     "start": 88.903,
-     "end": 89.4
+     "start": 90.888,
+     "end": 92.838
     },
     {
      "text": "satu",
-     "start": 89.4,
-     "end": 89.944
+     "start": 92.838,
+     "end": 94.972
     },
     {
      "text": "keluarga.",
-     "start": 89.944,
-     "end": 90.569
+     "start": 94.972,
+     "end": 97.424
     }
    ],
    "start": 87.811,
