@@ -1,0 +1,70 @@
+{
+ "fps": 30,
+ "estimated": false,
+ "total": 93.556,
+ "scenes": [
+  {
+   "id": "s1-hook",
+   "title": "Tiga Model Baru",
+   "bg": "dark",
+   "start": 0.0,
+   "vo_start": 0.9,
+   "vo_end": 8.916,
+   "end": 9.616
+  },
+  {
+   "id": "s2-peran",
+   "title": "Tiga Peran",
+   "bg": "light",
+   "start": 9.616,
+   "vo_start": 10.216,
+   "vo_end": 18.28,
+   "end": 18.98
+  },
+  {
+   "id": "s3-argon",
+   "title": "Argon",
+   "bg": "dark",
+   "start": 18.98,
+   "vo_start": 19.58,
+   "vo_end": 31.076,
+   "end": 31.776
+  },
+  {
+   "id": "s4-carbon",
+   "title": "Carbon",
+   "bg": "light",
+   "start": 31.776,
+   "vo_start": 32.376,
+   "vo_end": 47.352,
+   "end": 48.052
+  },
+  {
+   "id": "s5-hydrogen",
+   "title": "Hydrogen",
+   "bg": "dark",
+   "start": 48.052,
+   "vo_start": 48.652,
+   "vo_end": 65.476,
+   "end": 66.176
+  },
+  {
+   "id": "s6-duet",
+   "title": "Kerja Sama",
+   "bg": "light",
+   "start": 66.176,
+   "vo_start": 66.776,
+   "vo_end": 79.256,
+   "end": 79.956
+  },
+  {
+   "id": "s7-penutup",
+   "title": "Penutup",
+   "bg": "dark",
+   "start": 79.956,
+   "vo_start": 80.556,
+   "vo_end": 91.356,
+   "end": 93.556
+  }
+ ]
+}
