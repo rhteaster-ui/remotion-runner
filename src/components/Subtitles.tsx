@@ -22,7 +22,7 @@ const STYLE = {
   },
 };
 
-export const Subtitles: React.FC<{bottom?: number; fontSize?: number}> = ({bottom = 360, fontSize = 46}) => {
+export const Subtitles: React.FC<{bottom?: number; fontSize?: number}> = ({bottom = 88, fontSize = 30}) => {
   const frame = useCurrentFrame();
   const {fps} = useVideoConfig();
   const t = frame / fps;
@@ -45,19 +45,20 @@ export const Subtitles: React.FC<{bottom?: number; fontSize?: number}> = ({botto
     <div
       style={{
         position: 'absolute',
-        left: 72,
-        right: 72,
+        left: 64,
+        right: 64,
         bottom,
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
         opacity: Math.min(inP, outP),
-        transform: `translateY(${(1 - inP) * 8}px)`,
+        transform: `translateY(${(1 - inP) * 6}px)`,
         pointerEvents: 'none',
+        zIndex: 50,
       }}
     >
       {lines.map((ws, li) => (
-        <div key={li} style={{display: 'flex', justifyContent: 'center', gap: `0 ${Math.round(fontSize * 0.28)}px`, whiteSpace: 'nowrap'}}>
+        <div key={li} style={{display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: `6px 12px`}}>
           {ws.map((w, wi) => {
             const active = t >= w.start && t < w.end;
             const spoken = t >= w.end;
@@ -66,12 +67,28 @@ export const Subtitles: React.FC<{bottom?: number; fontSize?: number}> = ({botto
                 key={wi}
                 style={{
                   fontFamily: FONT.sans,
-                  fontWeight: 800,
+                  fontWeight: active ? 700 : 500,
                   fontSize,
-                  lineHeight: 1.3,
-                  letterSpacing: '-0.005em',
-                  color: active ? s.active : spoken ? s.ink : s.future,
-                  textShadow: s.shadow,
+                  lineHeight: 1.35,
+                  letterSpacing: '0.015em',
+                  color: active ? '#ffffff' : spoken ? s.ink : s.future,
+                  backgroundColor: active
+                    ? cap.bg === 'dark'
+                      ? 'rgba(56, 189, 248, 0.28)'
+                      : 'rgba(58, 79, 224, 0.2)'
+                    : 'transparent',
+                  padding: active ? '3px 8px' : '3px 3px',
+                  borderRadius: 6,
+                  border: active
+                    ? cap.bg === 'dark'
+                      ? '1px solid rgba(56, 189, 248, 0.55)'
+                      : '1px solid rgba(58, 79, 224, 0.45)'
+                    : '1px solid transparent',
+                  textShadow: active
+                    ? cap.bg === 'dark'
+                      ? '0 0 10px rgba(56, 189, 248, 0.7)'
+                      : '0 0 8px rgba(58, 79, 224, 0.5)'
+                    : s.shadow,
                 }}
               >
                 {w.text}
