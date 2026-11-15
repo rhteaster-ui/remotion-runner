@@ -1,0 +1,61 @@
+{
+ "fps": 30,
+ "estimated": false,
+ "total": 98.796,
+ "scenes": [
+  {
+   "id": "s1-hook",
+   "title": "Hook & Recap",
+   "bg": "dark",
+   "start": 0.0,
+   "vo_start": 0.7,
+   "vo_end": 15.652,
+   "end": 16.302
+  },
+  {
+   "id": "s2-recap",
+   "title": "Peta Tiga Model Resmi",
+   "bg": "light",
+   "start": 16.302,
+   "vo_start": 16.852,
+   "vo_end": 34.612,
+   "end": 35.262
+  },
+  {
+   "id": "s3-krypton",
+   "title": "Munculnya Isu Krypton-A",
+   "bg": "dark",
+   "start": 35.262,
+   "vo_start": 35.812,
+   "vo_end": 50.044,
+   "end": 50.694
+  },
+  {
+   "id": "s4-klaim",
+   "title": "Klaim Kemampuan Krypton",
+   "bg": "light",
+   "start": 50.694,
+   "vo_start": 51.244,
+   "vo_end": 70.564,
+   "end": 71.214
+  },
+  {
+   "id": "s5-status",
+   "title": "Fact-Check & Status Resmi",
+   "bg": "dark",
+   "start": 71.214,
+   "vo_start": 71.764,
+   "vo_end": 84.316,
+   "end": 84.966
+  },
+  {
+   "id": "s6-outro",
+   "title": "Diskusi & Outro",
+   "bg": "light",
+   "start": 84.966,
+   "vo_start": 85.516,
+   "vo_end": 97.396,
+   "end": 98.796
+  }
+ ]
+}
