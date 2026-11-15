@@ -295,26 +295,14 @@ export const OpsHook: React.FC<{
           position: 'relative',
           display: 'inline-block',
           marginTop: 10,
-          padding: '10px 24px',
+          padding: '8px 24px',
           backgroundColor: mode === 'dark' ? t.surfaceRaised : '#FFFFFF',
-          border: `2.5px solid ${ac}`,
-          borderRadius: 16,
-          boxShadow: t.shadowSm,
+          border: `1.5px solid ${ac}`,
+          borderRadius: 14,
           opacity: p2,
           transform: `translateY(${(1 - p2) * 18}px) scale(${0.94 + 0.06 * p2})`,
         }}
       >
-        <span
-          style={{
-            position: 'absolute',
-            left: -2,
-            top: 12,
-            bottom: 12,
-            width: 6,
-            borderRadius: 4,
-            backgroundColor: ac,
-          }}
-        />
         <span
           style={{
             fontFamily: FONT.space,
@@ -323,7 +311,6 @@ export const OpsHook: React.FC<{
             lineHeight: 1.1,
             letterSpacing: '-0.03em',
             color: t.ink,
-            paddingLeft: 10,
           }}
         >
           {highlight}
@@ -334,7 +321,7 @@ export const OpsHook: React.FC<{
             left: 18,
             right: 18,
             bottom: -2,
-            height: 4,
+            height: 3,
             backgroundColor: ac,
             transformOrigin: 'left',
             transform: `scaleX(${barW})`,
