@@ -44,13 +44,13 @@ export const AgencyPresenterAnchor: React.FC<AgencyPresenterAnchorProps> = ({
   const isJumpSpin = gesture === 'jump_spin';
   const isPeek3D = gesture === 'peek_3d';
 
-  // Base physics parameters
-  let floatY = Math.sin(frame / 14) * 8;
+  // Base physics parameters (Natural multi-harmonic breathing float)
+  let floatY = Math.sin(frame / 15) * 7 + Math.sin(frame / 24) * 2;
   let floatRotateZ = Math.sin(frame / 20) * 2;
   let floatRotateY = 0;
-  let floatRotateX = 0;
-  let squashX = 1 + Math.sin(frame / 14) * 0.02;
-  let squashY = 1 - Math.sin(frame / 14) * 0.02;
+  let floatRotateX = Math.cos(frame / 25) * 1.5;
+  let squashX = 1 + Math.sin(frame / 15) * 0.02;
+  let squashY = 1 - Math.sin(frame / 15) * 0.02;
 
   // 1. STATE: IDEA (Lampu Ide Muncul + Perk Up)
   let bulbProgress = 0;
@@ -67,35 +67,38 @@ export const AgencyPresenterAnchor: React.FC<AgencyPresenterAnchorProps> = ({
     });
   }
 
-  // 2. STATE: JUMP & SPIN (Lompat Tinggi + Putaran 360° Akrobatik)
+  // 2. STATE: JUMP & SPIN (Lompat Tinggi + Akrobatik Roll Natural Tanpa Gepeng)
   if (isJumpSpin) {
     const cycle = frame % 60; // 2 seconds loop at 30fps
     if (cycle < 10) {
       // Crouch / Anticipation
       const p = cycle / 10;
-      floatY = 22 * p;
-      squashX = 1 + 0.22 * p;
-      squashY = 1 - 0.22 * p;
+      floatY = 20 * p;
+      squashX = 1 + 0.18 * p;
+      squashY = 1 - 0.18 * p;
       floatRotateZ = 0;
       floatRotateY = 0;
+      floatRotateX = 5 * p;
     } else if (cycle < 42) {
       // Jump Arc (frames 10 to 42, 32 frames flight)
       const p = (cycle - 10) / 32;
       const jumpHeight = Math.sin(p * Math.PI) * 110;
       floatY = -jumpHeight;
-      // 360 Full 3D Barrel Roll / Spin
-      floatRotateY = p * 360;
-      floatRotateZ = Math.sin(p * Math.PI * 2) * 8;
-      // Stretched during takeoff/flight
-      squashX = 0.88;
-      squashY = 1.16;
+      // Natural 360 Aerobatic Z-Roll with organic banking (Zero-flattening)
+      floatRotateZ = p * 360;
+      floatRotateY = Math.sin(p * Math.PI) * 14;
+      floatRotateX = -Math.sin(p * Math.PI) * 10;
+      // Stretched during flight
+      squashX = 0.90;
+      squashY = 1.14;
     } else if (cycle < 52) {
       // Landing Impact Squash
       const p = (cycle - 42) / 10;
-      floatY = 16 * (1 - p);
-      squashX = 1 + 0.18 * (1 - p);
-      squashY = 1 - 0.18 * (1 - p);
-      floatRotateY = 360;
+      floatY = 15 * (1 - p);
+      squashX = 1 + 0.16 * (1 - p);
+      squashY = 1 - 0.16 * (1 - p);
+      floatRotateY = 0;
+      floatRotateX = 0;
       floatRotateZ = 0;
     } else {
       // Recovery to neutral
@@ -103,16 +106,18 @@ export const AgencyPresenterAnchor: React.FC<AgencyPresenterAnchorProps> = ({
       squashX = 1;
       squashY = 1;
       floatRotateY = 0;
+      floatRotateX = 0;
+      floatRotateZ = 0;
     }
   }
 
-  // 3. STATE: PEEK 3D (Menoleh Kiri-Kanan Bolak-Balik dengan Perspektif 3D)
+  // 3. STATE: PEEK 3D (Menoleh Kiri-Kanan Alami dengan Kedalaman Paralaks)
   if (isPeek3D) {
-    // Oscillates smoothly left and right in 3D yaw (-32deg to +32deg)
-    floatRotateY = Math.sin(frame / 18) * 32;
-    floatRotateX = Math.cos(frame / 22) * 5;
-    floatRotateZ = Math.sin(frame / 20) * 3;
-    floatY = -6 + Math.sin(frame / 14) * 6;
+    // Oscillates smoothly with natural head-turn yaw (-14deg to +14deg) and organic tilt
+    floatRotateY = Math.sin(frame / 22) * 14;
+    floatRotateX = Math.cos(frame / 25) * 4;
+    floatRotateZ = Math.sin(frame / 22) * 3;
+    floatY = -6 + Math.sin(frame / 16) * 5;
   }
 
   // 4. STATE: ALERT (Shockwave + Tremor)
@@ -358,7 +363,7 @@ export const AgencyPresenterAnchor: React.FC<AgencyPresenterAnchorProps> = ({
               /* Normal Pill Eyes with Natural Blinking & 3D Parallax Shift */
               <g
                 filter="url(#eyeGlow)"
-                transform={`translate(${floatRotateY * 0.4}, ${floatRotateX * 0.3})`}
+                transform={`translate(${floatRotateY * 0.75}, ${floatRotateX * 0.5})`}
               >
                 <g transform={`translate(293, 182) scale(1, ${eyeScaleY}) translate(-293, -182)`}>
                   <rect x="276" y="135" width="33" height="94" rx="16.5" ry="16.5" fill="#ffffff" />
