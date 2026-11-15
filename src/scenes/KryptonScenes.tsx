@@ -462,7 +462,7 @@ export const K3Krypton: React.FC = () => {
       </div>
 
       <AgencyPresenterAnchor
-        gesture="point_up"
+        gesture="thinking"
         size={190}
         bottomOffset={220}
         side="center"
