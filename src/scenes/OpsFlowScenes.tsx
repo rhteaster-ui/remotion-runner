@@ -489,22 +489,73 @@ export const OpsAgentScene: React.FC = () => {
   const t = OPS_THEME.dark;
 
   const pMain = pop(frame, 4, fps, 150);
-  const activeToolIdx = Math.floor(interpolate(frame, [40, 290], [0, 3.99], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'}));
-  const subPop = pop(frame, 48, fps, 140);
   const haloRot = frame * 1.6;
-  const acctIdx = Math.floor(frame / 58) % 2;
+  const acctIdx = Math.floor(frame / 46) % 2;
+
+  // Exact voiceover sync for s3-agent:
+  // frame 0 - 150 (0.00s - 5.04s): "Di dalam worker, agen AI langsung mengeksekusi tugas nyata..." (Ready / Plan)
+  // frame 151 - 189 (5.04s - 6.32s): "mengedit kode," -> Tool 0 (Code / Files)
+  // frame 190 - 222 (6.32s - 7.42s): "riset web," -> Tool 1 (Web Search)
+  // frame 223 - 282 (7.42s - 9.42s): "menjalankan perintah bash," -> Tool 2 (Bash / VPS-2)
+  // frame >= 283 (9.42s - 13.98s): "sampai memanggil sub-agen paralel dengan rotasi akun AI Pro dan Free." -> Tool 3 (Subagent)
+  let activeToolIdx = 0;
+  let isExecuting = false;
+
+  if (frame < 151) {
+    activeToolIdx = 0;
+    isExecuting = false;
+  } else if (frame < 190) {
+    activeToolIdx = 0;
+    isExecuting = true;
+  } else if (frame < 223) {
+    activeToolIdx = 1;
+    isExecuting = true;
+  } else if (frame < 283) {
+    activeToolIdx = 2;
+    isExecuting = true;
+  } else {
+    activeToolIdx = 3;
+    isExecuting = true;
+  }
 
   const tools = [
-    {title: 'Code / Files', sub: 'Edit & baca repo', icon: <CodeSvg color={t.emerald} />, color: t.emerald},
-    {title: 'Web Search', sub: 'Riset & verifikasi', icon: <SearchSvg color={t.cyan} />, color: t.cyan},
-    {title: 'Bash / VPS-2', sub: 'Build, PM2 & test', icon: <TerminalSvg color={t.amber} />, color: t.amber},
-    {title: 'Subagent', sub: 'Tugas paralel', icon: <GitBranchSvg color={t.emerald} />, color: t.emerald},
+    {
+      title: 'Code / Files',
+      sub: 'Edit & baca repo',
+      icon: <CodeSvg color={t.emerald} />,
+      color: t.emerald,
+      codeSnippet: 'edit_file(OpsFlowScenes.tsx)',
+    },
+    {
+      title: 'Web Search',
+      sub: 'Riset & verifikasi',
+      icon: <SearchSvg color={t.cyan} />,
+      color: t.cyan,
+      codeSnippet: 'search_web("remotion api")',
+    },
+    {
+      title: 'Bash / VPS-2',
+      sub: 'Build, PM2 & test',
+      icon: <TerminalSvg color={t.amber} />,
+      color: t.amber,
+      codeSnippet: 'vps-2:~$ bash build.sh (OK)',
+    },
+    {
+      title: 'Subagent',
+      sub: 'Tugas paralel',
+      icon: <GitBranchSvg color={t.emerald} />,
+      color: t.emerald,
+      codeSnippet: 'spawn worker [AI Pro / Free]',
+    },
   ];
+
+  const isLeftActive = isExecuting && (activeToolIdx === 0 || activeToolIdx === 2);
+  const isRightActive = isExecuting && (activeToolIdx === 1 || activeToolIdx === 3);
 
   return (
     <AbsoluteFill>
       <OpsCanvas mode="dark" />
-      <OpsHeader mode="dark" index={3} total={5} statusText="WORKING" accent={t.amber} />
+      <OpsHeader mode="dark" index={3} total={5} statusText={isExecuting ? 'EXECUTING' : 'PLANNING'} accent={t.amber} />
 
       <OpsHook
         mode="dark"
@@ -516,30 +567,31 @@ export const OpsAgentScene: React.FC = () => {
 
       <OpsPipelineRail mode="dark" activeIdx={2} accent={t.amber} />
 
+      {/* Main Tactical Card — Spacious, Uncluttered, Anti-Slop */}
       <div
         style={{
           position: 'absolute',
           top: 472,
           left: 68,
           right: 68,
-          height: 1094,
+          height: 870,
           backgroundColor: t.surface,
           border: `2px solid ${t.borderStrong}`,
-          borderRadius: 26,
+          borderRadius: 28,
           boxShadow: t.shadow,
-          padding: 26,
+          padding: '28px 26px',
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'space-between',
         }}
       >
-        {/* Hero AGY Agent Card */}
+        {/* Hero AGY Orchestrator Card */}
         <div
           style={{
             backgroundColor: t.surfaceRaised,
             border: `2.5px solid ${t.amber}`,
             borderRadius: 22,
-            padding: '24px 26px',
+            padding: '22px 24px',
             display: 'flex',
             alignItems: 'center',
             gap: 22,
@@ -547,55 +599,161 @@ export const OpsAgentScene: React.FC = () => {
             transform: `translateY(${(1 - pMain) * 16}px)`,
           }}
         >
-          <div style={{position: 'relative', width: 96, height: 96, flexShrink: 0, display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-            <svg width="96" height="96" viewBox="0 0 96 96" style={{position: 'absolute', inset: 0, transform: `rotate(${haloRot}deg)`}}>
-              <circle cx="48" cy="48" r="44" fill="none" stroke={t.amber} strokeWidth="3" strokeDasharray="14 10" strokeOpacity="0.85" />
+          <div style={{position: 'relative', width: 92, height: 92, flexShrink: 0, display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+            <svg width="92" height="92" viewBox="0 0 92 92" style={{position: 'absolute', inset: 0, transform: `rotate(${haloRot}deg)`}}>
+              <circle cx="46" cy="46" r="42" fill="none" stroke={t.amber} strokeWidth="3" strokeDasharray="14 10" strokeOpacity="0.85" />
             </svg>
-            <div style={{width: 74, height: 74, borderRadius: 18, backgroundColor: t.well, border: `2px solid ${t.amber}`, display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-              <Img src={staticFile('assets/ops/agy-official.png')} style={{width: 52, height: 52, objectFit: 'contain'}} />
+            <div style={{width: 72, height: 72, borderRadius: 18, backgroundColor: t.well, border: `2px solid ${t.amber}`, display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+              <Img src={staticFile('assets/ops/agy-official.png')} style={{width: 50, height: 50, objectFit: 'contain'}} />
             </div>
           </div>
 
           <div style={{flex: 1, minWidth: 0}}>
             <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12}}>
-              <span style={{fontFamily: FONT.space, fontWeight: 800, fontSize: 36, color: t.ink}}>
+              <span style={{fontFamily: FONT.space, fontWeight: 800, fontSize: 34, color: t.ink}}>
                 AGY Orchestrator
               </span>
-              <span style={{fontFamily: FONT.mono, fontWeight: 800, fontSize: 16, color: t.amber, padding: '6px 14px', borderRadius: 999, backgroundColor: t.amberSoft, border: `1.5px solid ${t.amber}`}}>
-                WORKING
+              <span style={{fontFamily: FONT.mono, fontWeight: 800, fontSize: 16, color: t.amber, padding: '5px 14px', borderRadius: 999, backgroundColor: t.amberSoft, border: `1.5px solid ${t.amber}`}}>
+                {isExecuting ? 'WORKING' : 'STANDBY'}
               </span>
             </div>
-            <div style={{fontFamily: FONT.mono, fontSize: 22, color: t.ink2, marginTop: 8}}>
-              Sedang jalan: <span style={{color: tools[activeToolIdx].color, fontWeight: 800}}>{tools[activeToolIdx].title}</span>
+            <div style={{fontFamily: FONT.mono, fontSize: 21, color: t.ink2, marginTop: 6}}>
+              {isExecuting ? (
+                <>Sedang jalan: <span style={{color: tools[activeToolIdx].color, fontWeight: 800}}>{tools[activeToolIdx].title}</span></>
+              ) : (
+                <>Alur: <span style={{color: t.amber, fontWeight: 700}}>Menyiapkan alur eksekusi</span></>
+              )}
+            </div>
+            {/* Integrated Model & Account Pool Metadata Badges (No messy extra cards) */}
+            <div style={{display: 'flex', alignItems: 'center', gap: 10, marginTop: 12}}>
+              <span
+                style={{
+                  fontFamily: FONT.mono,
+                  fontWeight: 800,
+                  fontSize: 15,
+                  color: t.cyan,
+                  padding: '4px 12px',
+                  borderRadius: 8,
+                  backgroundColor: t.cyanSoft,
+                  border: `1.5px solid ${t.cyan}`,
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: 6,
+                }}
+              >
+                <GeminiSparkSvg size={15} color={t.cyan} />
+                Gemini 3.8 / 4
+              </span>
+              <span
+                style={{
+                  fontFamily: FONT.mono,
+                  fontWeight: 800,
+                  fontSize: 15,
+                  color: acctIdx === 0 ? t.amber : t.emerald,
+                  padding: '4px 12px',
+                  borderRadius: 8,
+                  backgroundColor: acctIdx === 0 ? t.amberSoft : t.emeraldSoft,
+                  border: `1.5px solid ${acctIdx === 0 ? t.amber : t.emerald}`,
+                }}
+              >
+                {acctIdx === 0 ? '4 Akun AI Pro' : '1 Akun Free'}
+              </span>
+              <span
+                style={{
+                  fontFamily: FONT.mono,
+                  fontWeight: 700,
+                  fontSize: 15,
+                  color: t.ink2,
+                  padding: '4px 12px',
+                  borderRadius: 8,
+                  backgroundColor: t.well,
+                  border: `1.5px solid ${t.borderStrong}`,
+                }}
+              >
+                VPS-2 Worker
+              </span>
             </div>
           </div>
         </div>
 
-        {/* Connector Fan SVG */}
-        <svg width="892" height="82" viewBox="0 0 892 82">
-          {[218, 674].map((tx, idx) => (
-            <OpsBezierWire
-              key={idx}
-              p0={[446, 4]}
-              p1={[446, 46]}
-              p2={[tx, 34]}
-              p3={[tx, 78]}
-              color={idx === 0 ? t.amber : t.cyan}
-              active
-              speed={0.032}
-              phaseOffset={idx * 0.35}
+        {/* Precision Orthogonal Bus / Circuit Conduit */}
+        <div style={{position: 'relative', width: '100%', height: 56}}>
+          <svg width="892" height="56" viewBox="0 0 892 56" style={{position: 'absolute', inset: 0}}>
+            {/* Bus Traces */}
+            <path
+              d="M 446 0 L 446 28 L 218 28 L 218 56"
+              fill="none"
+              stroke={isLeftActive ? (activeToolIdx === 2 ? t.amber : t.emerald) : t.border}
+              strokeWidth={isLeftActive ? 3 : 2}
+              strokeDasharray={isLeftActive ? 'none' : '4 4'}
+              opacity={isLeftActive ? 1 : 0.55}
             />
-          ))}
-        </svg>
+            <path
+              d="M 446 0 L 446 28 L 674 28 L 674 56"
+              fill="none"
+              stroke={isRightActive ? (activeToolIdx === 3 ? t.emerald : t.cyan) : t.border}
+              strokeWidth={isRightActive ? 3 : 2}
+              strokeDasharray={isRightActive ? 'none' : '4 4'}
+              opacity={isRightActive ? 1 : 0.55}
+            />
 
-        {/* 4 Tool Nodes (Spacious 2x2 Grid with Large Readable Fonts) */}
-        <div style={{display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 22}}>
+            {/* Traveling Data Pulse on Active Line */}
+            {isLeftActive && (() => {
+              const u = (frame * 0.045) % 1;
+              const totalL = 28 + (446 - 218) + 28; // 284px
+              const dist = u * totalL;
+              let px = 446;
+              let py = 0;
+              if (dist <= 28) {
+                px = 446;
+                py = dist;
+              } else if (dist <= 28 + (446 - 218)) {
+                px = 446 - (dist - 28);
+                py = 28;
+              } else {
+                px = 218;
+                py = 28 + (dist - 28 - (446 - 218));
+              }
+              const col = activeToolIdx === 2 ? t.amber : t.emerald;
+              return <circle cx={px} cy={py} r={5} fill={col} />;
+            })()}
+
+            {isRightActive && (() => {
+              const u = (frame * 0.045) % 1;
+              const totalL = 28 + (674 - 446) + 28; // 284px
+              const dist = u * totalL;
+              let px = 446;
+              let py = 0;
+              if (dist <= 28) {
+                px = 446;
+                py = dist;
+              } else if (dist <= 28 + (674 - 446)) {
+                px = 446 + (dist - 28);
+                py = 28;
+              } else {
+                px = 674;
+                py = 28 + (dist - 28 - (674 - 446));
+              }
+              const col = activeToolIdx === 3 ? t.emerald : t.cyan;
+              return <circle cx={px} cy={py} r={5} fill={col} />;
+            })()}
+
+            {/* Junction & Terminal Pins */}
+            <circle cx="446" cy="2" r="5" fill={t.amber} />
+            <circle cx="446" cy="28" r="4" fill={isExecuting ? t.amber : t.borderStrong} />
+            <circle cx="218" cy="54" r="5" fill={isLeftActive ? (activeToolIdx === 2 ? t.amber : t.emerald) : t.borderStrong} />
+            <circle cx="674" cy="54" r="5" fill={isRightActive ? (activeToolIdx === 3 ? t.emerald : t.cyan) : t.borderStrong} />
+          </svg>
+        </div>
+
+        {/* 4 Tool Workstation Nodes (Spacious 2x2 Grid with Big Readable Fonts & Code Snippets) */}
+        <div style={{display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 20}}>
           {tools.map((tool, idx) => {
-            const isAct = idx === activeToolIdx;
-            const isDone = idx < activeToolIdx;
+            const isAct = isExecuting && idx === activeToolIdx;
+            const isDone = isExecuting ? idx < activeToolIdx : false;
             const stText = isAct ? 'LIVE' : isDone ? 'DONE' : 'READY';
             const stCol = isAct ? t.amber : isDone ? t.emerald : t.muted;
-            const cardPop = pop(frame, 18 + idx * 8, fps, 150);
+            const cardPop = pop(frame, 12 + idx * 8, fps, 150);
             return (
               <OpsNodeBox
                 key={tool.title}
@@ -607,93 +765,59 @@ export const OpsAgentScene: React.FC = () => {
                 accent={tool.color}
                 active={isAct}
                 iconSvg={tool.icon}
-                style={{padding: '26px 24px', opacity: cardPop, transform: `translateY(${(1 - cardPop) * 16}px)`}}
-              />
-            );
-          })}
-        </div>
-
-        {/* Sub-nodes Fan SVG */}
-        <svg width="892" height="72" viewBox="0 0 892 72">
-          {[148, 446, 744].map((tx, idx) => (
-            <OpsBezierWire
-              key={idx}
-              p0={[446, 4]}
-              p1={[446, 36]}
-              p2={[tx, 30]}
-              p3={[tx, 68]}
-              color={idx === 0 ? t.cyan : idx === 1 ? t.amber : t.emerald}
-              active
-              speed={0.03}
-              phaseOffset={idx * 0.25}
-            />
-          ))}
-        </svg>
-
-        {/* Bottom Trio: Model, Account Pool (AI Pro / Free), Context */}
-        <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: '1fr 1.15fr 0.95fr',
-            gap: 16,
-            opacity: subPop,
-            transform: `translateY(${(1 - subPop) * 16}px)`,
-          }}
-        >
-          <div style={{backgroundColor: t.well, border: `2px solid ${t.cyan}`, borderRadius: 18, padding: '20px 20px'}}>
-            <div style={{display: 'flex', alignItems: 'center', gap: 8}}>
-              <GeminiSparkSvg size={20} color={t.cyan} rotate={frame * 1.5} />
-              <span style={{fontFamily: FONT.mono, fontWeight: 800, fontSize: 16, color: t.cyan}}>MODEL</span>
-            </div>
-            <div style={{fontFamily: FONT.space, fontWeight: 800, fontSize: 27, color: t.ink, marginTop: 10}}>
-              Gemini 3.8 / 4
-            </div>
-            <div style={{fontFamily: FONT.mono, fontSize: 18, color: t.muted, marginTop: 6}}>
-              Flash & Hydrogen
-            </div>
-          </div>
-
-          <div style={{backgroundColor: t.well, border: `2px solid ${t.amber}`, borderRadius: 18, padding: '20px 20px'}}>
-            <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between'}}>
-              <span style={{fontFamily: FONT.mono, fontWeight: 800, fontSize: 16, color: t.amber}}>POOL AKUN</span>
-              <span
                 style={{
-                  fontFamily: FONT.mono,
-                  fontWeight: 800,
-                  fontSize: 15,
-                  padding: '3px 10px',
-                  borderRadius: 999,
-                  backgroundColor: acctIdx === 0 ? t.cyanSoft : t.surfaceRaised,
-                  color: acctIdx === 0 ? t.cyan : t.ink2,
+                  padding: '24px 22px',
+                  opacity: cardPop,
+                  transform: `translateY(${(1 - cardPop) * 16}px)`,
                 }}
               >
-                {acctIdx === 0 ? 'AI PRO' : 'FREE'}
-              </span>
-            </div>
-            <div style={{fontFamily: FONT.space, fontWeight: 800, fontSize: 27, color: t.ink, marginTop: 10}}>
-              {acctIdx === 0 ? '4 Akun AI Pro' : '1 Akun Free'}
-            </div>
-            <div style={{fontFamily: FONT.mono, fontSize: 18, color: t.muted, marginTop: 6}}>
-              Auto-rotasi kuota
-            </div>
-          </div>
-
-          <div style={{backgroundColor: t.well, border: `2px solid ${t.emerald}`, borderRadius: 18, padding: '20px 20px'}}>
-            <div style={{fontFamily: FONT.mono, fontWeight: 800, fontSize: 16, color: t.emerald}}>KONTEKS</div>
-            <div style={{fontFamily: FONT.space, fontWeight: 800, fontSize: 27, color: t.ink, marginTop: 10}}>
-              {Math.min(12, 4 + Math.floor(frame / 28))} Step Live
-            </div>
-            <div style={{fontFamily: FONT.mono, fontSize: 18, color: t.muted, marginTop: 6}}>
-              Stream JSONL
-            </div>
-          </div>
+                {/* Embedded Execution Trace Box */}
+                <div
+                  style={{
+                    marginTop: 14,
+                    padding: '10px 14px',
+                    borderRadius: 12,
+                    backgroundColor: t.well,
+                    border: `1.5px solid ${isAct ? tool.color : t.border}`,
+                    fontFamily: FONT.mono,
+                    fontSize: 16,
+                    fontWeight: 700,
+                    color: isAct ? tool.color : t.muted,
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: 8,
+                    overflow: 'hidden',
+                    whiteSpace: 'nowrap',
+                    textOverflow: 'ellipsis',
+                  }}
+                >
+                  <span
+                    style={{
+                      width: 8,
+                      height: 8,
+                      borderRadius: 999,
+                      backgroundColor: isAct ? tool.color : isDone ? t.emerald : t.muted,
+                      flexShrink: 0,
+                    }}
+                  />
+                  <span style={{overflow: 'hidden', textOverflow: 'ellipsis'}}>
+                    {tool.codeSnippet}
+                  </span>
+                </div>
+              </OpsNodeBox>
+            );
+          })}
         </div>
       </div>
 
       <OpsBottomTelemetryStrip
         mode="dark"
-        command={`tool -> ${tools[activeToolIdx].title.toLowerCase()} (auto-verify)`}
-        accent={t.amber}
+        command={
+          !isExecuting
+            ? 'orchestrator -> standby (vps-2 worker ready)'
+            : `tool -> ${tools[activeToolIdx].title.toLowerCase()} (${tools[activeToolIdx].codeSnippet})`
+        }
+        accent={isExecuting ? tools[activeToolIdx].color : t.amber}
       />
     </AbsoluteFill>
   );
