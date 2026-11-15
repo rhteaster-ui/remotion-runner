@@ -218,7 +218,8 @@ export const BendaStepper: React.FC<{
   counterTop?: string;
   counterSub?: string;
   accent?: string;
-}> = ({mode, nodes, counterTop, counterSub, accent = '#22c55e'}) => {
+  top?: number;
+}> = ({mode, nodes, counterTop, counterSub, accent = '#22c55e', top = 372}) => {
   const frame = useCurrentFrame();
   const isDark = mode === 'dark';
   const trackCol = isDark ? 'rgba(255,255,255,0.16)' : 'rgba(15,23,42,0.16)';
@@ -233,7 +234,7 @@ export const BendaStepper: React.FC<{
     <div
       style={{
         position: 'absolute',
-        top: 348,
+        top,
         left: 72,
         right: 72,
         display: 'flex',

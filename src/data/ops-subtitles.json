@@ -1,0 +1,970 @@
+{
+ "captions": [
+  {
+   "id": 1,
+   "scene": "s1-hook",
+   "bg": "dark",
+   "lines": [
+    "Kebanyakan orang pakai AI",
+    "cuma buat chat satu arah."
+   ],
+   "words": [
+    {
+     "text": "Kebanyakan",
+     "start": 0.814,
+     "end": 1.411
+    },
+    {
+     "text": "orang",
+     "start": 1.411,
+     "end": 1.709
+    },
+    {
+     "text": "pakai",
+     "start": 1.709,
+     "end": 2.007
+    },
+    {
+     "text": "AI",
+     "start": 2.007,
+     "end": 2.127
+    },
+    {
+     "text": "cuma",
+     "start": 2.127,
+     "end": 2.365
+    },
+    {
+     "text": "buat",
+     "start": 2.365,
+     "end": 2.604
+    },
+    {
+     "text": "chat",
+     "start": 2.604,
+     "end": 2.843
+    },
+    {
+     "text": "satu",
+     "start": 2.843,
+     "end": 3.082
+    },
+    {
+     "text": "arah.",
+     "start": 3.082,
+     "end": 3.499
+    }
+   ],
+   "start": 0.814,
+   "end": 3.499
+  },
+  {
+   "id": 2,
+   "scene": "s1-hook",
+   "bg": "dark",
+   "lines": [
+    "Beda sama sistem agentic",
+    "yang saya bangun. Cukup"
+   ],
+   "words": [
+    {
+     "text": "Beda",
+     "start": 3.499,
+     "end": 4.092
+    },
+    {
+     "text": "sama",
+     "start": 4.092,
+     "end": 4.331
+    },
+    {
+     "text": "sistem",
+     "start": 4.331,
+     "end": 4.689
+    },
+    {
+     "text": "agentic",
+     "start": 4.689,
+     "end": 5.106
+    },
+    {
+     "text": "yang",
+     "start": 5.106,
+     "end": 5.345
+    },
+    {
+     "text": "saya",
+     "start": 5.345,
+     "end": 5.584
+    },
+    {
+     "text": "bangun.",
+     "start": 5.584,
+     "end": 6.121
+    },
+    {
+     "text": "Cukup",
+     "start": 6.121,
+     "end": 6.852
+    }
+   ],
+   "start": 3.499,
+   "end": 6.852
+  },
+  {
+   "id": 3,
+   "scene": "s1-hook",
+   "bg": "dark",
+   "lines": [
+    "kirim satu perintah,",
+    "seluruh server langsung"
+   ],
+   "words": [
+    {
+     "text": "kirim",
+     "start": 6.852,
+     "end": 7.15
+    },
+    {
+     "text": "satu",
+     "start": 7.15,
+     "end": 7.389
+    },
+    {
+     "text": "perintah,",
+     "start": 7.389,
+     "end": 8.302
+    },
+    {
+     "text": "seluruh",
+     "start": 8.302,
+     "end": 8.72
+    },
+    {
+     "text": "server",
+     "start": 8.72,
+     "end": 9.078
+    },
+    {
+     "text": "langsung",
+     "start": 9.078,
+     "end": 9.556
+    }
+   ],
+   "start": 6.852,
+   "end": 9.556
+  },
+  {
+   "id": 4,
+   "scene": "s1-hook",
+   "bg": "dark",
+   "lines": [
+    "bekerja otomatis."
+   ],
+   "words": [
+    {
+     "text": "bekerja",
+     "start": 9.556,
+     "end": 9.974
+    },
+    {
+     "text": "otomatis.",
+     "start": 9.974,
+     "end": 10.63
+    }
+   ],
+   "start": 9.556,
+   "end": 10.63
+  },
+  {
+   "id": 5,
+   "scene": "s2-bridge",
+   "bg": "light",
+   "lines": [
+    "Alurnya dimulai dari bot",
+    "Telegram atau WhatsApp di"
+   ],
+   "words": [
+    {
+     "text": "Alurnya",
+     "start": 11.907,
+     "end": 12.388
+    },
+    {
+     "text": "dimulai",
+     "start": 12.388,
+     "end": 12.868
+    },
+    {
+     "text": "dari",
+     "start": 12.868,
+     "end": 13.143
+    },
+    {
+     "text": "bot",
+     "start": 13.143,
+     "end": 13.349
+    },
+    {
+     "text": "Telegram",
+     "start": 13.349,
+     "end": 13.898
+    },
+    {
+     "text": "atau",
+     "start": 13.898,
+     "end": 14.173
+    },
+    {
+     "text": "WhatsApp",
+     "start": 14.173,
+     "end": 14.722
+    },
+    {
+     "text": "di",
+     "start": 14.722,
+     "end": 14.859
+    }
+   ],
+   "start": 11.907,
+   "end": 14.859
+  },
+  {
+   "id": 6,
+   "scene": "s2-bridge",
+   "bg": "light",
+   "lines": [
+    "HP. Prompt langsung masuk",
+    "ke terminal, bercabang"
+   ],
+   "words": [
+    {
+     "text": "HP.",
+     "start": 14.859,
+     "end": 15.202
+    },
+    {
+     "text": "Prompt",
+     "start": 15.202,
+     "end": 16.076
+    },
+    {
+     "text": "langsung",
+     "start": 16.076,
+     "end": 16.625
+    },
+    {
+     "text": "masuk",
+     "start": 16.625,
+     "end": 16.968
+    },
+    {
+     "text": "ke",
+     "start": 16.968,
+     "end": 17.105
+    },
+    {
+     "text": "terminal,",
+     "start": 17.105,
+     "end": 18.176
+    },
+    {
+     "text": "bercabang",
+     "start": 18.176,
+     "end": 18.794
+    }
+   ],
+   "start": 14.859,
+   "end": 18.794
+  },
+  {
+   "id": 7,
+   "scene": "s2-bridge",
+   "bg": "light",
+   "lines": [
+    "lewat jembatan SSH antara",
+    "VPS satu gateway dan VPS"
+   ],
+   "words": [
+    {
+     "text": "lewat",
+     "start": 18.794,
+     "end": 19.137
+    },
+    {
+     "text": "jembatan",
+     "start": 19.137,
+     "end": 19.686
+    },
+    {
+     "text": "SSH",
+     "start": 19.686,
+     "end": 19.892
+    },
+    {
+     "text": "antara",
+     "start": 19.892,
+     "end": 20.304
+    },
+    {
+     "text": "VPS",
+     "start": 20.304,
+     "end": 20.51
+    },
+    {
+     "text": "satu",
+     "start": 20.51,
+     "end": 20.785
+    },
+    {
+     "text": "gateway",
+     "start": 20.785,
+     "end": 21.265
+    },
+    {
+     "text": "dan",
+     "start": 21.265,
+     "end": 21.471
+    },
+    {
+     "text": "VPS",
+     "start": 21.471,
+     "end": 21.677
+    }
+   ],
+   "start": 18.794,
+   "end": 21.677
+  },
+  {
+   "id": 8,
+   "scene": "s2-bridge",
+   "bg": "light",
+   "lines": [
+    "dua worker secara",
+    "real-time."
+   ],
+   "words": [
+    {
+     "text": "dua",
+     "start": 21.677,
+     "end": 21.883
+    },
+    {
+     "text": "worker",
+     "start": 21.883,
+     "end": 22.295
+    },
+    {
+     "text": "secara",
+     "start": 22.295,
+     "end": 22.707
+    },
+    {
+     "text": "real-time.",
+     "start": 22.707,
+     "end": 23.462
+    }
+   ],
+   "start": 21.677,
+   "end": 23.462
+  },
+  {
+   "id": 9,
+   "scene": "s3-agent",
+   "bg": "dark",
+   "lines": [
+    "Di dalam worker, agen AI",
+    "langsung mengeksekusi"
+   ],
+   "words": [
+    {
+     "text": "Di",
+     "start": 24.775,
+     "end": 24.901
+    },
+    {
+     "text": "dalam",
+     "start": 24.901,
+     "end": 25.216
+    },
+    {
+     "text": "worker,",
+     "start": 25.216,
+     "end": 26.149
+    },
+    {
+     "text": "agen",
+     "start": 26.149,
+     "end": 26.401
+    },
+    {
+     "text": "AI",
+     "start": 26.401,
+     "end": 26.527
+    },
+    {
+     "text": "langsung",
+     "start": 26.527,
+     "end": 27.031
+    },
+    {
+     "text": "mengeksekusi",
+     "start": 27.031,
+     "end": 27.788
+    }
+   ],
+   "start": 24.775,
+   "end": 27.788
+  },
+  {
+   "id": 10,
+   "scene": "s3-agent",
+   "bg": "dark",
+   "lines": [
+    "tugas nyata: mengedit",
+    "kode, riset web,"
+   ],
+   "words": [
+    {
+     "text": "tugas",
+     "start": 27.788,
+     "end": 28.103
+    },
+    {
+     "text": "nyata:",
+     "start": 28.103,
+     "end": 29.051
+    },
+    {
+     "text": "mengedit",
+     "start": 29.051,
+     "end": 29.555
+    },
+    {
+     "text": "kode,",
+     "start": 29.555,
+     "end": 30.33
+    },
+    {
+     "text": "riset",
+     "start": 30.33,
+     "end": 30.645
+    },
+    {
+     "text": "web,",
+     "start": 30.645,
+     "end": 31.438
+    }
+   ],
+   "start": 27.788,
+   "end": 31.438
+  },
+  {
+   "id": 11,
+   "scene": "s3-agent",
+   "bg": "dark",
+   "lines": [
+    "menjalankan perintah bash,",
+    "sampai memanggil sub-agen"
+   ],
+   "words": [
+    {
+     "text": "menjalankan",
+     "start": 31.438,
+     "end": 32.132
+    },
+    {
+     "text": "perintah",
+     "start": 32.132,
+     "end": 32.991
+    },
+    {
+     "text": "bash,",
+     "start": 32.991,
+     "end": 33.432
+    },
+    {
+     "text": "sampai",
+     "start": 33.432,
+     "end": 33.811
+    },
+    {
+     "text": "memanggil",
+     "start": 33.811,
+     "end": 34.378
+    },
+    {
+     "text": "sub-agen",
+     "start": 34.378,
+     "end": 34.819
+    }
+   ],
+   "start": 31.438,
+   "end": 34.819
+  },
+  {
+   "id": 12,
+   "scene": "s3-agent",
+   "bg": "dark",
+   "lines": [
+    "paralel dengan rotasi akun",
+    "AI Pro dan Free."
+   ],
+   "words": [
+    {
+     "text": "paralel",
+     "start": 34.819,
+     "end": 35.261
+    },
+    {
+     "text": "dengan",
+     "start": 35.261,
+     "end": 35.639
+    },
+    {
+     "text": "rotasi",
+     "start": 35.639,
+     "end": 36.017
+    },
+    {
+     "text": "akun",
+     "start": 36.017,
+     "end": 36.269
+    },
+    {
+     "text": "AI",
+     "start": 36.269,
+     "end": 36.395
+    },
+    {
+     "text": "Pro",
+     "start": 36.395,
+     "end": 36.816
+    },
+    {
+     "text": "dan",
+     "start": 36.816,
+     "end": 37.005
+    },
+    {
+     "text": "Free.",
+     "start": 37.005,
+     "end": 37.446
+    }
+   ],
+   "start": 34.819,
+   "end": 37.446
+  },
+  {
+   "id": 13,
+   "scene": "s4-web",
+   "bg": "light",
+   "lines": [
+    "Semua aktivitas tadi",
+    "terpantau langsung di web"
+   ],
+   "words": [
+    {
+     "text": "Semua",
+     "start": 38.673,
+     "end": 38.994
+    },
+    {
+     "text": "aktivitas",
+     "start": 38.994,
+     "end": 39.571
+    },
+    {
+     "text": "tadi",
+     "start": 39.571,
+     "end": 39.827
+    },
+    {
+     "text": "terpantau",
+     "start": 39.827,
+     "end": 40.404
+    },
+    {
+     "text": "langsung",
+     "start": 40.404,
+     "end": 40.916
+    },
+    {
+     "text": "di",
+     "start": 40.916,
+     "end": 41.045
+    },
+    {
+     "text": "web",
+     "start": 41.045,
+     "end": 41.237
+    }
+   ],
+   "start": 38.673,
+   "end": 41.237
+  },
+  {
+   "id": 14,
+   "scene": "s4-web",
+   "bg": "light",
+   "lines": [
+    "Ops Deck dan Task Map",
+    "bergaya workflow. Mulai"
+   ],
+   "words": [
+    {
+     "text": "Ops",
+     "start": 41.237,
+     "end": 41.429
+    },
+    {
+     "text": "Deck",
+     "start": 41.429,
+     "end": 41.685
+    },
+    {
+     "text": "dan",
+     "start": 41.685,
+     "end": 41.878
+    },
+    {
+     "text": "Task",
+     "start": 41.878,
+     "end": 42.134
+    },
+    {
+     "text": "Map",
+     "start": 42.134,
+     "end": 42.326
+    },
+    {
+     "text": "bergaya",
+     "start": 42.326,
+     "end": 42.775
+    },
+    {
+     "text": "workflow.",
+     "start": 42.775,
+     "end": 43.48
+    },
+    {
+     "text": "Mulai",
+     "start": 43.48,
+     "end": 44.209
+    }
+   ],
+   "start": 41.237,
+   "end": 44.209
+  },
+  {
+   "id": 15,
+   "scene": "s4-web",
+   "bg": "light",
+   "lines": [
+    "dari alur panah agen yang",
+    "menyala, grafik CPU,"
+   ],
+   "words": [
+    {
+     "text": "dari",
+     "start": 44.209,
+     "end": 44.465
+    },
+    {
+     "text": "alur",
+     "start": 44.465,
+     "end": 44.722
+    },
+    {
+     "text": "panah",
+     "start": 44.722,
+     "end": 45.042
+    },
+    {
+     "text": "agen",
+     "start": 45.042,
+     "end": 45.299
+    },
+    {
+     "text": "yang",
+     "start": 45.299,
+     "end": 45.555
+    },
+    {
+     "text": "menyala,",
+     "start": 45.555,
+     "end": 46.529
+    },
+    {
+     "text": "grafik",
+     "start": 46.529,
+     "end": 46.913
+    },
+    {
+     "text": "CPU,",
+     "start": 46.913,
+     "end": 47.298
+    }
+   ],
+   "start": 44.209,
+   "end": 47.298
+  },
+  {
+   "id": 16,
+   "scene": "s4-web",
+   "bg": "light",
+   "lines": [
+    "sampai status kuota tiap",
+    "akun."
+   ],
+   "words": [
+    {
+     "text": "sampai",
+     "start": 47.298,
+     "end": 47.683
+    },
+    {
+     "text": "status",
+     "start": 47.683,
+     "end": 48.067
+    },
+    {
+     "text": "kuota",
+     "start": 48.067,
+     "end": 48.387
+    },
+    {
+     "text": "tiap",
+     "start": 48.387,
+     "end": 48.644
+    },
+    {
+     "text": "akun.",
+     "start": 48.644,
+     "end": 49.366
+    }
+   ],
+   "start": 47.298,
+   "end": 49.366
+  },
+  {
+   "id": 17,
+   "scene": "s5-brand",
+   "bg": "dark",
+   "lines": [
+    "Semua ekosistem ini",
+    "diracik mandiri oleh saya,"
+   ],
+   "words": [
+    {
+     "text": "Semua",
+     "start": 50.366,
+     "end": 50.762
+    },
+    {
+     "text": "ekosistem",
+     "start": 50.762,
+     "end": 51.476
+    },
+    {
+     "text": "ini",
+     "start": 51.476,
+     "end": 51.714
+    },
+    {
+     "text": "diracik",
+     "start": 51.714,
+     "end": 52.268
+    },
+    {
+     "text": "mandiri",
+     "start": 52.268,
+     "end": 52.823
+    },
+    {
+     "text": "oleh",
+     "start": 52.823,
+     "end": 53.14
+    },
+    {
+     "text": "saya,",
+     "start": 53.14,
+     "end": 54.012
+    }
+   ],
+   "start": 50.366,
+   "end": 54.012
+  },
+  {
+   "id": 18,
+   "scene": "s5-brand",
+   "bg": "dark",
+   "lines": [
+    "Rohmatulloh atau RHMT OFC,",
+    "pelajar yang ngulik"
+   ],
+   "words": [
+    {
+     "text": "Rohmatulloh",
+     "start": 54.012,
+     "end": 54.884
+    },
+    {
+     "text": "atau",
+     "start": 54.884,
+     "end": 55.201
+    },
+    {
+     "text": "RHMT",
+     "start": 55.201,
+     "end": 55.518
+    },
+    {
+     "text": "OFC,",
+     "start": 55.518,
+     "end": 55.993
+    },
+    {
+     "text": "pelajar",
+     "start": 55.993,
+     "end": 57.017
+    },
+    {
+     "text": "yang",
+     "start": 57.017,
+     "end": 57.334
+    },
+    {
+     "text": "ngulik",
+     "start": 57.334,
+     "end": 57.81
+    }
+   ],
+   "start": 54.012,
+   "end": 57.81
+  },
+  {
+   "id": 19,
+   "scene": "s5-brand",
+   "bg": "dark",
+   "lines": [
+    "fullstack, DevOps Linux,",
+    "dan otomasi AI. Cek"
+   ],
+   "words": [
+    {
+     "text": "fullstack,",
+     "start": 57.81,
+     "end": 59.026
+    },
+    {
+     "text": "DevOps",
+     "start": 59.026,
+     "end": 59.502
+    },
+    {
+     "text": "Linux,",
+     "start": 59.502,
+     "end": 60.136
+    },
+    {
+     "text": "dan",
+     "start": 60.136,
+     "end": 60.374
+    },
+    {
+     "text": "otomasi",
+     "start": 60.374,
+     "end": 60.929
+    },
+    {
+     "text": "AI.",
+     "start": 60.929,
+     "end": 62.015
+    },
+    {
+     "text": "Cek",
+     "start": 62.015,
+     "end": 62.253
+    }
+   ],
+   "start": 57.81,
+   "end": 62.253
+  },
+  {
+   "id": 20,
+   "scene": "s5-brand",
+   "bg": "dark",
+   "lines": [
+    "portofolio rhmt.biz.id dan",
+    "follow akun ini buat bedah"
+   ],
+   "words": [
+    {
+     "text": "portofolio",
+     "start": 62.253,
+     "end": 63.046
+    },
+    {
+     "text": "rhmt.biz.id",
+     "start": 63.046,
+     "end": 63.759
+    },
+    {
+     "text": "dan",
+     "start": 63.759,
+     "end": 63.997
+    },
+    {
+     "text": "follow",
+     "start": 63.997,
+     "end": 64.472
+    },
+    {
+     "text": "akun",
+     "start": 64.472,
+     "end": 65.136
+    },
+    {
+     "text": "ini",
+     "start": 65.136,
+     "end": 65.373
+    },
+    {
+     "text": "buat",
+     "start": 65.373,
+     "end": 65.69
+    },
+    {
+     "text": "bedah",
+     "start": 65.69,
+     "end": 66.087
+    }
+   ],
+   "start": 62.253,
+   "end": 66.087
+  },
+  {
+   "id": 21,
+   "scene": "s5-brand",
+   "bg": "dark",
+   "lines": [
+    "arsitektur berikutnya."
+   ],
+   "words": [
+    {
+     "text": "arsitektur",
+     "start": 66.087,
+     "end": 66.879
+    },
+    {
+     "text": "berikutnya.",
+     "start": 66.879,
+     "end": 67.91
+    }
+   ],
+   "start": 66.087,
+   "end": 67.91
+  }
+ ]
+}

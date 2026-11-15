@@ -1,0 +1,989 @@
+{
+  "captions": [
+    {
+      "id": 1,
+      "scene": "hook",
+      "bg": "dark",
+      "lines": [
+        "Kebanyakan orang pakai AI cuma",
+        "buat tanya jawab di chat."
+      ],
+      "words": [
+        {
+          "text": "Kebanyakan",
+          "start": 0.0,
+          "end": 0.722
+        },
+        {
+          "text": "orang",
+          "start": 0.722,
+          "end": 1.116
+        },
+        {
+          "text": "pakai",
+          "start": 1.116,
+          "end": 1.51
+        },
+        {
+          "text": "AI",
+          "start": 1.51,
+          "end": 1.707
+        },
+        {
+          "text": "cuma",
+          "start": 1.707,
+          "end": 2.035
+        },
+        {
+          "text": "buat",
+          "start": 2.035,
+          "end": 2.364
+        },
+        {
+          "text": "tanya",
+          "start": 2.364,
+          "end": 2.758
+        },
+        {
+          "text": "jawab",
+          "start": 2.758,
+          "end": 3.473
+        },
+        {
+          "text": "di",
+          "start": 3.473,
+          "end": 3.67
+        },
+        {
+          "text": "chat.",
+          "start": 3.67,
+          "end": 3.999
+        }
+      ],
+      "start": 0.0,
+      "end": 4.119
+    },
+    {
+      "id": 2,
+      "scene": "hook",
+      "bg": "dark",
+      "lines": [
+        "Padahal, kalau dirakit jadi sistem",
+        "agentic,"
+      ],
+      "words": [
+        {
+          "text": "Padahal,",
+          "start": 3.999,
+          "end": 4.524
+        },
+        {
+          "text": "kalau",
+          "start": 4.524,
+          "end": 4.918
+        },
+        {
+          "text": "dirakit",
+          "start": 4.918,
+          "end": 5.443
+        },
+        {
+          "text": "jadi",
+          "start": 5.443,
+          "end": 5.771
+        },
+        {
+          "text": "sistem",
+          "start": 5.771,
+          "end": 6.231
+        },
+        {
+          "text": "agentic,",
+          "start": 6.231,
+          "end": 6.756
+        }
+      ],
+      "start": 3.999,
+      "end": 6.876
+    },
+    {
+      "id": 3,
+      "scene": "hook",
+      "bg": "dark",
+      "lines": [
+        "AI bisa kerja otonom 24 jam",
+        "non-stop!"
+      ],
+      "words": [
+        {
+          "text": "AI",
+          "start": 6.756,
+          "end": 6.953
+        },
+        {
+          "text": "bisa",
+          "start": 6.953,
+          "end": 7.282
+        },
+        {
+          "text": "kerja",
+          "start": 7.282,
+          "end": 7.675
+        },
+        {
+          "text": "otonom",
+          "start": 7.675,
+          "end": 8.135
+        },
+        {
+          "text": "24",
+          "start": 8.135,
+          "end": 8.332
+        },
+        {
+          "text": "jam",
+          "start": 8.332,
+          "end": 8.595
+        },
+        {
+          "text": "non-stop!",
+          "start": 8.595,
+          "end": 9.12
+        }
+      ],
+      "start": 6.756,
+      "end": 9.24
+    },
+    {
+      "id": 4,
+      "scene": "origin",
+      "bg": "light",
+      "lines": [
+        "Kenalin, gua RHMT OFC."
+      ],
+      "words": [
+        {
+          "text": "Kenalin,",
+          "start": 9.815,
+          "end": 10.573
+        },
+        {
+          "text": "gua",
+          "start": 10.573,
+          "end": 10.846
+        },
+        {
+          "text": "RHMT",
+          "start": 10.846,
+          "end": 11.186
+        },
+        {
+          "text": "OFC.",
+          "start": 11.186,
+          "end": 11.458
+        }
+      ],
+      "start": 9.815,
+      "end": 11.578
+    },
+    {
+      "id": 5,
+      "scene": "origin",
+      "bg": "light",
+      "lines": [
+        "Perjalanan ngoding gua mulai dari",
+        "tugas sekolah P5,"
+      ],
+      "words": [
+        {
+          "text": "Perjalanan",
+          "start": 11.458,
+          "end": 12.697
+        },
+        {
+          "text": "ngoding",
+          "start": 12.697,
+          "end": 13.241
+        },
+        {
+          "text": "gua",
+          "start": 13.241,
+          "end": 13.514
+        },
+        {
+          "text": "mulai",
+          "start": 13.514,
+          "end": 13.922
+        },
+        {
+          "text": "dari",
+          "start": 13.922,
+          "end": 14.263
+        },
+        {
+          "text": "tugas",
+          "start": 14.263,
+          "end": 14.671
+        },
+        {
+          "text": "sekolah",
+          "start": 14.671,
+          "end": 15.56
+        },
+        {
+          "text": "P5,",
+          "start": 15.56,
+          "end": 15.764
+        }
+      ],
+      "start": 11.458,
+      "end": 15.884
+    },
+    {
+      "id": 6,
+      "scene": "origin",
+      "bg": "light",
+      "lines": [
+        "cuma modal HP Oppo A3s tanpa",
+        "laptop."
+      ],
+      "words": [
+        {
+          "text": "cuma",
+          "start": 15.764,
+          "end": 16.104
+        },
+        {
+          "text": "modal",
+          "start": 16.104,
+          "end": 16.513
+        },
+        {
+          "text": "HP",
+          "start": 16.513,
+          "end": 16.717
+        },
+        {
+          "text": "Oppo",
+          "start": 16.717,
+          "end": 17.058
+        },
+        {
+          "text": "A3s",
+          "start": 17.058,
+          "end": 17.33
+        },
+        {
+          "text": "tanpa",
+          "start": 17.33,
+          "end": 17.739
+        },
+        {
+          "text": "laptop.",
+          "start": 17.739,
+          "end": 18.793
+        }
+      ],
+      "start": 15.764,
+      "end": 18.913
+    },
+    {
+      "id": 7,
+      "scene": "origin",
+      "bg": "light",
+      "lines": [
+        "Dari eksperimen kecil, sekarang",
+        "fokus bangun"
+      ],
+      "words": [
+        {
+          "text": "Dari",
+          "start": 18.793,
+          "end": 19.133
+        },
+        {
+          "text": "eksperimen",
+          "start": 19.133,
+          "end": 19.882
+        },
+        {
+          "text": "kecil,",
+          "start": 19.882,
+          "end": 20.291
+        },
+        {
+          "text": "sekarang",
+          "start": 20.291,
+          "end": 20.903
+        },
+        {
+          "text": "fokus",
+          "start": 20.903,
+          "end": 21.312
+        },
+        {
+          "text": "bangun",
+          "start": 21.312,
+          "end": 21.788
+        }
+      ],
+      "start": 18.793,
+      "end": 21.908
+    },
+    {
+      "id": 8,
+      "scene": "origin",
+      "bg": "light",
+      "lines": [
+        "web modern dan sistem AI di",
+        "rhmt.biz.id."
+      ],
+      "words": [
+        {
+          "text": "web",
+          "start": 21.788,
+          "end": 22.061
+        },
+        {
+          "text": "modern",
+          "start": 22.061,
+          "end": 22.537
+        },
+        {
+          "text": "dan",
+          "start": 22.537,
+          "end": 22.81
+        },
+        {
+          "text": "sistem",
+          "start": 22.81,
+          "end": 23.286
+        },
+        {
+          "text": "AI",
+          "start": 23.286,
+          "end": 23.491
+        },
+        {
+          "text": "di",
+          "start": 23.491,
+          "end": 23.695
+        },
+        {
+          "text": "rhmt.biz.id.",
+          "start": 23.695,
+          "end": 24.59
+        }
+      ],
+      "start": 21.788,
+      "end": 24.71
+    },
+    {
+      "id": 9,
+      "scene": "architecture",
+      "bg": "dark",
+      "lines": [
+        "Gimana sistem agentic gua bekerja?"
+      ],
+      "words": [
+        {
+          "text": "Gimana",
+          "start": 24.94,
+          "end": 25.326
+        },
+        {
+          "text": "sistem",
+          "start": 25.326,
+          "end": 25.711
+        },
+        {
+          "text": "agentic",
+          "start": 25.711,
+          "end": 26.152
+        },
+        {
+          "text": "gua",
+          "start": 26.152,
+          "end": 26.372
+        },
+        {
+          "text": "bekerja?",
+          "start": 26.372,
+          "end": 27.109
+        }
+      ],
+      "start": 24.94,
+      "end": 27.229
+    },
+    {
+      "id": 10,
+      "scene": "architecture",
+      "bg": "dark",
+      "lines": [
+        "Gua pakai arsitektur dua VPS!"
+      ],
+      "words": [
+        {
+          "text": "Gua",
+          "start": 27.109,
+          "end": 27.329
+        },
+        {
+          "text": "pakai",
+          "start": 27.329,
+          "end": 27.659
+        },
+        {
+          "text": "arsitektur",
+          "start": 27.659,
+          "end": 28.265
+        },
+        {
+          "text": "dua",
+          "start": 28.265,
+          "end": 28.485
+        },
+        {
+          "text": "VPS!",
+          "start": 28.485,
+          "end": 28.706
+        }
+      ],
+      "start": 27.109,
+      "end": 28.826
+    },
+    {
+      "id": 11,
+      "scene": "architecture",
+      "bg": "dark",
+      "lines": [
+        "Server pertama jadi otak gateway",
+        "lewat Telegram dan WhatsApp."
+      ],
+      "words": [
+        {
+          "text": "Server",
+          "start": 28.706,
+          "end": 29.406
+        },
+        {
+          "text": "pertama",
+          "start": 29.406,
+          "end": 29.846
+        },
+        {
+          "text": "jadi",
+          "start": 29.846,
+          "end": 30.122
+        },
+        {
+          "text": "otak",
+          "start": 30.122,
+          "end": 30.397
+        },
+        {
+          "text": "gateway",
+          "start": 30.397,
+          "end": 30.838
+        },
+        {
+          "text": "lewat",
+          "start": 30.838,
+          "end": 31.468
+        },
+        {
+          "text": "Telegram",
+          "start": 31.468,
+          "end": 31.964
+        },
+        {
+          "text": "dan",
+          "start": 31.964,
+          "end": 32.184
+        },
+        {
+          "text": "WhatsApp.",
+          "start": 32.184,
+          "end": 33.174
+        }
+      ],
+      "start": 28.706,
+      "end": 33.294
+    },
+    {
+      "id": 12,
+      "scene": "architecture",
+      "bg": "dark",
+      "lines": [
+        "Begitu ada tugas berat, perintah",
+        "langsung dilempar"
+      ],
+      "words": [
+        {
+          "text": "Begitu",
+          "start": 33.174,
+          "end": 33.559
+        },
+        {
+          "text": "ada",
+          "start": 33.559,
+          "end": 33.779
+        },
+        {
+          "text": "tugas",
+          "start": 33.779,
+          "end": 34.11
+        },
+        {
+          "text": "berat,",
+          "start": 34.11,
+          "end": 34.44
+        },
+        {
+          "text": "perintah",
+          "start": 34.44,
+          "end": 34.936
+        },
+        {
+          "text": "langsung",
+          "start": 34.936,
+          "end": 35.432
+        },
+        {
+          "text": "dilempar",
+          "start": 35.432,
+          "end": 35.927
+        }
+      ],
+      "start": 33.174,
+      "end": 36.047
+    },
+    {
+      "id": 13,
+      "scene": "architecture",
+      "bg": "dark",
+      "lines": [
+        "ke server kedua 8GB RAM buat",
+        "eksekusi!"
+      ],
+      "words": [
+        {
+          "text": "ke",
+          "start": 35.927,
+          "end": 36.092
+        },
+        {
+          "text": "server",
+          "start": 36.092,
+          "end": 36.478
+        },
+        {
+          "text": "kedua",
+          "start": 36.478,
+          "end": 36.808
+        },
+        {
+          "text": "8GB",
+          "start": 36.808,
+          "end": 37.029
+        },
+        {
+          "text": "RAM",
+          "start": 37.029,
+          "end": 37.249
+        },
+        {
+          "text": "buat",
+          "start": 37.249,
+          "end": 37.524
+        },
+        {
+          "text": "eksekusi!",
+          "start": 37.524,
+          "end": 38.02
+        }
+      ],
+      "start": 35.927,
+      "end": 38.14
+    },
+    {
+      "id": 14,
+      "scene": "execution",
+      "bg": "light",
+      "lines": [
+        "Di dalamnya bukan cuma satu model,",
+        "tapi orkestrasi AI"
+      ],
+      "words": [
+        {
+          "text": "Di",
+          "start": 38.37,
+          "end": 38.532
+        },
+        {
+          "text": "dalamnya",
+          "start": 38.532,
+          "end": 39.02
+        },
+        {
+          "text": "bukan",
+          "start": 39.02,
+          "end": 39.345
+        },
+        {
+          "text": "cuma",
+          "start": 39.345,
+          "end": 39.616
+        },
+        {
+          "text": "satu",
+          "start": 39.616,
+          "end": 39.887
+        },
+        {
+          "text": "model,",
+          "start": 39.887,
+          "end": 40.212
+        },
+        {
+          "text": "tapi",
+          "start": 40.212,
+          "end": 40.686
+        },
+        {
+          "text": "orkestrasi",
+          "start": 40.686,
+          "end": 41.282
+        },
+        {
+          "text": "AI",
+          "start": 41.282,
+          "end": 41.444
+        }
+      ],
+      "start": 38.37,
+      "end": 41.564
+    },
+    {
+      "id": 15,
+      "scene": "execution",
+      "bg": "light",
+      "lines": [
+        "yang bisa baca file, nulis kode,",
+        "kontrol browser headless,"
+      ],
+      "words": [
+        {
+          "text": "yang",
+          "start": 41.444,
+          "end": 41.715
+        },
+        {
+          "text": "bisa",
+          "start": 41.715,
+          "end": 41.986
+        },
+        {
+          "text": "baca",
+          "start": 41.986,
+          "end": 42.257
+        },
+        {
+          "text": "file,",
+          "start": 42.257,
+          "end": 42.527
+        },
+        {
+          "text": "nulis",
+          "start": 42.527,
+          "end": 42.852
+        },
+        {
+          "text": "kode,",
+          "start": 42.852,
+          "end": 43.123
+        },
+        {
+          "text": "kontrol",
+          "start": 43.123,
+          "end": 43.858
+        },
+        {
+          "text": "browser",
+          "start": 43.858,
+          "end": 44.587
+        },
+        {
+          "text": "headless,",
+          "start": 44.587,
+          "end": 45.075
+        }
+      ],
+      "start": 41.444,
+      "end": 45.195
+    },
+    {
+      "id": 16,
+      "scene": "execution",
+      "bg": "light",
+      "lines": [
+        "sampai render video motion graphic",
+        "otomatis"
+      ],
+      "words": [
+        {
+          "text": "sampai",
+          "start": 45.075,
+          "end": 45.454
+        },
+        {
+          "text": "render",
+          "start": 45.454,
+          "end": 46.068
+        },
+        {
+          "text": "video",
+          "start": 46.068,
+          "end": 46.393
+        },
+        {
+          "text": "motion",
+          "start": 46.393,
+          "end": 46.772
+        },
+        {
+          "text": "graphic",
+          "start": 46.772,
+          "end": 47.205
+        },
+        {
+          "text": "otomatis",
+          "start": 47.205,
+          "end": 47.693
+        }
+      ],
+      "start": 45.075,
+      "end": 47.813
+    },
+    {
+      "id": 17,
+      "scene": "execution",
+      "bg": "light",
+      "lines": [
+        "kayak video yang lagi kalian",
+        "tonton sekarang!"
+      ],
+      "words": [
+        {
+          "text": "kayak",
+          "start": 47.693,
+          "end": 48.018
+        },
+        {
+          "text": "video",
+          "start": 48.018,
+          "end": 48.343
+        },
+        {
+          "text": "yang",
+          "start": 48.343,
+          "end": 48.613
+        },
+        {
+          "text": "lagi",
+          "start": 48.613,
+          "end": 48.884
+        },
+        {
+          "text": "kalian",
+          "start": 48.884,
+          "end": 49.263
+        },
+        {
+          "text": "tonton",
+          "start": 49.263,
+          "end": 49.643
+        },
+        {
+          "text": "sekarang!",
+          "start": 49.643,
+          "end": 50.13
+        }
+      ],
+      "start": 47.693,
+      "end": 50.25
+    },
+    {
+      "id": 18,
+      "scene": "outro",
+      "bg": "dark",
+      "lines": [
+        "Semua ini bukti kalau keterbatasan",
+        "alat"
+      ],
+      "words": [
+        {
+          "text": "Semua",
+          "start": 50.48,
+          "end": 50.835
+        },
+        {
+          "text": "ini",
+          "start": 50.835,
+          "end": 51.072
+        },
+        {
+          "text": "bukti",
+          "start": 51.072,
+          "end": 51.427
+        },
+        {
+          "text": "kalau",
+          "start": 51.427,
+          "end": 51.782
+        },
+        {
+          "text": "keterbatasan",
+          "start": 51.782,
+          "end": 52.551
+        },
+        {
+          "text": "alat",
+          "start": 52.551,
+          "end": 52.847
+        }
+      ],
+      "start": 50.48,
+      "end": 52.967
+    },
+    {
+      "id": 19,
+      "scene": "outro",
+      "bg": "dark",
+      "lines": [
+        "bukan alasan buat berhenti",
+        "eksplor."
+      ],
+      "words": [
+        {
+          "text": "bukan",
+          "start": 52.847,
+          "end": 53.203
+        },
+        {
+          "text": "alasan",
+          "start": 53.203,
+          "end": 53.617
+        },
+        {
+          "text": "buat",
+          "start": 53.617,
+          "end": 53.913
+        },
+        {
+          "text": "berhenti",
+          "start": 53.913,
+          "end": 54.445
+        },
+        {
+          "text": "eksplor.",
+          "start": 54.445,
+          "end": 55.269
+        }
+      ],
+      "start": 52.847,
+      "end": 55.389
+    },
+    {
+      "id": 20,
+      "scene": "outro",
+      "bg": "dark",
+      "lines": [
+        "Cek portofolio lengkap gua di",
+        "rhmt.biz.id,"
+      ],
+      "words": [
+        {
+          "text": "Cek",
+          "start": 55.269,
+          "end": 55.506
+        },
+        {
+          "text": "portofolio",
+          "start": 55.506,
+          "end": 56.157
+        },
+        {
+          "text": "lengkap",
+          "start": 56.157,
+          "end": 56.63
+        },
+        {
+          "text": "gua",
+          "start": 56.63,
+          "end": 56.867
+        },
+        {
+          "text": "di",
+          "start": 56.867,
+          "end": 57.045
+        },
+        {
+          "text": "rhmt.biz.id,",
+          "start": 57.045,
+          "end": 57.637
+        }
+      ],
+      "start": 55.269,
+      "end": 57.757
+    },
+    {
+      "id": 21,
+      "scene": "outro",
+      "bg": "dark",
+      "lines": [
+        "dan follow buat bahas sistem AI",
+        "lainnya!"
+      ],
+      "words": [
+        {
+          "text": "dan",
+          "start": 57.637,
+          "end": 57.873
+        },
+        {
+          "text": "follow",
+          "start": 57.873,
+          "end": 58.628
+        },
+        {
+          "text": "buat",
+          "start": 58.628,
+          "end": 58.924
+        },
+        {
+          "text": "bahas",
+          "start": 58.924,
+          "end": 59.279
+        },
+        {
+          "text": "sistem",
+          "start": 59.279,
+          "end": 59.693
+        },
+        {
+          "text": "AI",
+          "start": 59.693,
+          "end": 59.871
+        },
+        {
+          "text": "lainnya!",
+          "start": 59.871,
+          "end": 60.344
+        }
+      ],
+      "start": 57.637,
+      "end": 60.464
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "fps": 30,
+  "total": 60.694,
+  "scenes": [
+    {
+      "id": "hook",
+      "bg": "dark",
+      "audio": "audio/vo-agentic/hook.mp3",
+      "audioDuration": 9.12,
+      "start": 0.0,
+      "end": 9.47,
+      "duration": 9.47
+    },
+    {
+      "id": "origin",
+      "bg": "light",
+      "audio": "audio/vo-agentic/origin.mp3",
+      "audioDuration": 15.12,
+      "start": 9.47,
+      "end": 24.94,
+      "duration": 15.47
+    },
+    {
+      "id": "architecture",
+      "bg": "dark",
+      "audio": "audio/vo-agentic/architecture.mp3",
+      "audioDuration": 13.08,
+      "start": 24.94,
+      "end": 38.37,
+      "duration": 13.43
+    },
+    {
+      "id": "execution",
+      "bg": "light",
+      "audio": "audio/vo-agentic/execution.mp3",
+      "audioDuration": 11.76,
+      "start": 38.37,
+      "end": 50.48,
+      "duration": 12.11
+    },
+    {
+      "id": "outro",
+      "bg": "dark",
+      "audio": "audio/vo-agentic/outro.mp3",
+      "audioDuration": 9.864,
+      "start": 50.48,
+      "end": 60.694,
+      "duration": 10.214
+    }
+  ]
+}
