@@ -21,6 +21,7 @@ interface AgencyPresenterAnchorProps {
   side?: 'center' | 'left' | 'right';
   theme?: 'dark' | 'light';
   positionMode?: 'bottom_fixed' | 'centered';
+  gestureFrame?: number;
 }
 
 export const AgencyPresenterAnchor: React.FC<AgencyPresenterAnchorProps> = ({
@@ -31,6 +32,7 @@ export const AgencyPresenterAnchor: React.FC<AgencyPresenterAnchorProps> = ({
   side = 'center',
   theme = 'dark',
   positionMode = 'bottom_fixed',
+  gestureFrame,
 }) => {
   const frame = useCurrentFrame();
   const {fps} = useVideoConfig();
@@ -44,133 +46,182 @@ export const AgencyPresenterAnchor: React.FC<AgencyPresenterAnchorProps> = ({
   const isJumpSpin = gesture === 'jump_spin';
   const isPeek3D = gesture === 'peek_3d';
 
-  // Base physics parameters (Natural multi-harmonic breathing float)
-  let floatY = Math.sin(frame / 15) * 7 + Math.sin(frame / 24) * 2;
-  let floatRotateZ = Math.sin(frame / 20) * 2;
-  let floatRotateY = 0;
-  let floatRotateX = Math.cos(frame / 25) * 1.5;
-  let squashX = 1 + Math.sin(frame / 15) * 0.02;
-  let squashY = 1 - Math.sin(frame / 15) * 0.02;
+  // Local frame progress within current gesture cycle (smooth 75-frame / 2.5s window)
+  const gf = gestureFrame !== undefined ? gestureFrame : (frame % 75);
 
-  // 1. STATE: IDEA (Lampu Ide Muncul + Perk Up)
+  // --------------------------------------------------------------------------
+  // NATURAL DYNAMIC PHYSICS & KINETICS
+  // --------------------------------------------------------------------------
+  let floatY = 0;
+  let floatRotateZ = 0;
+  let floatRotateY = 0;
+  let floatRotateX = 0;
+  let squashX = 1;
+  let squashY = 1;
+
+  // 1. STATE: IDLE & NATURAL BREATHING FLOAT
+  if (gesture === 'idle') {
+    // Multi-harmonic gentle organic respiration
+    floatY = Math.sin(frame / 20) * 8 + Math.cos(frame / 32) * 2;
+    floatRotateZ = Math.sin(frame / 24) * 1.6;
+    floatRotateY = Math.sin(frame / 28) * 2.2;
+    floatRotateX = Math.cos(frame / 22) * 1.2;
+    squashX = 1 + Math.sin(frame / 20) * 0.02;
+    squashY = 1 - Math.sin(frame / 20) * 0.02;
+  }
+
+  // 2. STATE: IDEA (Anticipation Squat -> AHA! Perk-Up -> Floating Glow)
   let bulbProgress = 0;
   if (isIdea) {
-    const perk = Math.sin(Math.min(frame, 20) / 20 * Math.PI * 0.5);
-    floatY = -18 * perk + Math.sin(frame / 12) * 5;
-    floatRotateZ = Math.sin(frame / 15) * 2;
-    squashX = 0.96;
-    squashY = 1.05;
+    if (gf < 10) {
+      // Anticipation curiosity crouch
+      const p = gf / 10;
+      floatY = 8 * p;
+      squashX = 1 + 0.06 * p;
+      squashY = 1 - 0.06 * p;
+      floatRotateX = 4 * p;
+      floatRotateZ = 0;
+    } else if (gf < 24) {
+      // Perk up ("AHA!")
+      const p = (gf - 10) / 14;
+      const perkCurve = Math.sin(p * Math.PI * 0.5);
+      floatY = 8 - 26 * perkCurve;
+      squashX = 1.06 - 0.12 * perkCurve;
+      squashY = 0.94 + 0.14 * perkCurve;
+      floatRotateX = 4 - 8 * perkCurve;
+      floatRotateZ = Math.sin(p * Math.PI) * 2;
+    } else {
+      // Sustained vibrant ideation float
+      const t = gf - 24;
+      floatY = -18 + Math.sin(t / 12) * 4;
+      squashX = 0.98 + Math.sin(t / 12) * 0.015;
+      squashY = 1.02 - Math.sin(t / 12) * 0.015;
+      floatRotateZ = Math.sin(t / 14) * 1.8;
+      floatRotateX = -4 + Math.sin(t / 18) * 1.5;
+    }
+
+    // Spring entrance for bulb starting at frame 12
     bulbProgress = spring({
       fps,
-      frame,
-      config: {damping: 10, mass: 0.6, stiffness: 140},
+      frame: Math.max(0, gf - 12),
+      config: {damping: 9, mass: 0.5, stiffness: 160},
     });
   }
 
-  // 2. STATE: JUMP & SPIN (Lompat Tinggi + Akrobatik Roll Natural Tanpa Gepeng)
+  // 3. STATE: PEEK 3D (Fluid Continuous 3D Yaw & Visor Parallax)
+  let eyeParallaxX = 0;
+  let eyeParallaxY = 0;
+  let visorSpecularShift = 0;
+
+  if (isPeek3D) {
+    // Continuous sinusoidal 3D head turn: left (-16deg) -> pause/inspect -> right (+16deg) -> center
+    const angle = Math.sin((gf / 75) * Math.PI * 2) * 16;
+    floatRotateY = angle;
+    floatRotateZ = angle * 0.12; // Organic head tilt into the turn
+    floatRotateX = Math.cos((gf / 75) * Math.PI * 2) * 2.2;
+    floatY = -6 + Math.sin(gf / 16) * 4;
+    squashX = 1 + Math.abs(angle) * 0.003;
+    squashY = 1 - Math.abs(angle) * 0.003;
+
+    // Eyeball horizontal shift inside curved visor
+    eyeParallaxX = angle * 1.05;
+    eyeParallaxY = floatRotateX * 0.8;
+    // Specular glass highlight counter-translates to reinforce volumetric 3D spherical visor
+    visorSpecularShift = -angle * 1.25;
+  }
+
+  // 4. STATE: JUMP & SPIN (Weighted Anticipation, Kinetic 360 Spin Arc, Landing Cushion)
   if (isJumpSpin) {
-    const cycle = frame % 60; // 2 seconds loop at 30fps
-    if (cycle < 10) {
-      // Crouch / Anticipation
-      const p = cycle / 10;
-      floatY = 20 * p;
+    if (gf < 10) {
+      // Deep Anticipation Crouch
+      const p = gf / 10;
+      floatY = 22 * p;
       squashX = 1 + 0.18 * p;
       squashY = 1 - 0.18 * p;
+      floatRotateX = 6 * p;
       floatRotateZ = 0;
       floatRotateY = 0;
-      floatRotateX = 5 * p;
-    } else if (cycle < 42) {
-      // Jump Arc (frames 10 to 42, 32 frames flight)
-      const p = (cycle - 10) / 32;
-      const jumpHeight = Math.sin(p * Math.PI) * 110;
+    } else if (gf < 44) {
+      // Flight Arc (34 frames)
+      const p = (gf - 10) / 34;
+      const jumpHeight = Math.sin(p * Math.PI) * 125;
       floatY = -jumpHeight;
-      // Natural 360 Aerobatic Z-Roll with organic banking (Zero-flattening)
-      floatRotateZ = p * 360;
-      floatRotateY = Math.sin(p * Math.PI) * 14;
+
+      // Kinetic ease-in-out spin curve
+      const spinCurve = p < 0.5 ? 2 * p * p : 1 - Math.pow(-2 * p + 2, 2) / 2;
+      floatRotateZ = spinCurve * 360;
+      floatRotateY = Math.sin(p * Math.PI) * 15;
       floatRotateX = -Math.sin(p * Math.PI) * 10;
-      // Stretched during flight
-      squashX = 0.90;
-      squashY = 1.14;
-    } else if (cycle < 52) {
-      // Landing Impact Squash
-      const p = (cycle - 42) / 10;
-      floatY = 15 * (1 - p);
+      squashX = 0.88 + Math.sin(p * Math.PI) * 0.04;
+      squashY = 1.15 - Math.sin(p * Math.PI) * 0.04;
+    } else if (gf < 56) {
+      // Heavy Landing Impact Cushion
+      const p = (gf - 44) / 12;
+      floatY = 16 * (1 - p);
       squashX = 1 + 0.16 * (1 - p);
       squashY = 1 - 0.16 * (1 - p);
+      floatRotateZ = 0;
       floatRotateY = 0;
       floatRotateX = 0;
-      floatRotateZ = 0;
     } else {
-      // Recovery to neutral
-      floatY = 0;
-      squashX = 1;
-      squashY = 1;
+      // Elastic Rebound back to neutral float
+      const p = (gf - 56) / 19;
+      floatY = -Math.sin(p * Math.PI) * 5;
+      squashX = 1 - Math.sin(p * Math.PI) * 0.03;
+      squashY = 1 + Math.sin(p * Math.PI) * 0.03;
+      floatRotateZ = 0;
       floatRotateY = 0;
       floatRotateX = 0;
-      floatRotateZ = 0;
     }
   }
 
-  // 3. STATE: PEEK 3D (Menoleh Kiri-Kanan Alami dengan Kedalaman Paralaks)
-  if (isPeek3D) {
-    // Oscillates smoothly with natural head-turn yaw (-14deg to +14deg) and organic tilt
-    floatRotateY = Math.sin(frame / 22) * 14;
-    floatRotateX = Math.cos(frame / 25) * 4;
-    floatRotateZ = Math.sin(frame / 22) * 3;
-    floatY = -6 + Math.sin(frame / 16) * 5;
+  // 5. STATE: BUOYANT SMILE ^^ (Joyful Bobbing Bounce & Victory)
+  if (isHappy) {
+    const bounce = Math.abs(Math.sin(gf / 6)) * 14;
+    floatY = -bounce;
+    squashX = 1 + (bounce / 14) * 0.08;
+    squashY = 1 - (bounce / 14) * 0.08;
+    floatRotateZ = Math.sin(gf / 9) * 3.5;
+    floatRotateX = -3 + Math.sin(gf / 12) * 1.5;
   }
 
-  // 4. STATE: ALERT (Shockwave + Tremor)
+  // 6. STATE: ALERT (Clean Seismic Shockwave)
   if (isAlert) {
-    const shake = Math.sin(frame * 1.8) * 3.5;
-    floatY = -14 + shake;
-    floatRotateZ = Math.cos(frame * 1.5) * 3;
-    squashX = 1.06;
+    const shake = Math.sin(gf * 1.8) * 3;
+    floatY = -12 + shake;
+    floatRotateZ = Math.cos(gf * 1.5) * 2.5;
+    squashX = 1.05;
     squashY = 0.95;
   }
 
-  // 5. STATE: THINKING (Miring Santai)
+  // 7. STATE: THINKING (Gentle Inquisitive Tilt)
   if (isThinking) {
-    floatRotateZ = -8 + Math.sin(frame / 18) * 1.5;
-    floatY = -6 + Math.sin(frame / 16) * 5;
+    floatRotateZ = -7 + Math.sin(gf / 18) * 1.4;
+    floatY = -6 + Math.sin(gf / 16) * 4;
     squashX = 0.98;
-    squashY = 1.03;
+    squashY = 1.02;
   }
 
-  // 6. STATE: HAPPY (Buoyant Bounce)
-  if (isHappy) {
-    const bounce = Math.abs(Math.sin(frame / 5)) * 14;
-    floatY = -bounce;
-    floatRotateZ = Math.sin(frame / 8) * 4;
-    squashX = 1 + (bounce / 14) * 0.08;
-    squashY = 1 - (bounce / 14) * 0.08;
-  }
-
-  // 7. STATE: POINT UP
+  // 8. STATE: POINT UP
   if (isPointUp) {
-    floatY = -12 + Math.sin(frame / 14) * 6;
-    floatRotateZ = -4 + Math.sin(frame / 22) * 1.5;
+    floatY = -12 + Math.sin(gf / 14) * 5;
+    floatRotateZ = -4 + Math.sin(gf / 22) * 1.5;
   }
 
-  // Pop-in spring
+  // Natural organic blinking cycle
+  const blinkCycle = frame % 85;
+  const isBlinking = !isAlert && !isHappy && !isIdea && blinkCycle < 6;
+  let eyeScaleY = 1;
+  if (isBlinking) {
+    eyeScaleY = blinkCycle < 3 ? 0.1 : 0.5;
+  }
+
+  // Pop-in spring for overall presence
   const scale = spring({
     fps,
     frame,
     config: {damping: 12, mass: 0.8},
   });
-
-  // Natural blinking cycle (blinks every ~75 frames, lasting 6 frames)
-  const blinkCycle = frame % 80;
-  const isBlinking = !isAlert && !isHappy && !isIdea && blinkCycle < 6;
-  let eyeScaleY = 1;
-  if (isBlinking) {
-    eyeScaleY = blinkCycle < 3 ? 0.12 : 0.55;
-  }
-
-  // Alert shockwave ripple
-  const rippleProgress = (frame % 28) / 28;
-  const rippleScale = 1 + rippleProgress * 0.7;
-  const rippleOpacity = (1 - rippleProgress) * 0.75;
 
   const isDark = theme === 'dark';
   const bubbleBg = isDark ? '#141d2e' : '#ffffff';
@@ -233,7 +284,7 @@ export const AgencyPresenterAnchor: React.FC<AgencyPresenterAnchorProps> = ({
         </div>
       )}
 
-      {/* 3D Transform Container (Supports Perspective, 3D Yaw Rotation & Spin) */}
+      {/* 3D Transform Container (Supports Perspective, 3D Yaw Rotation & Aerobatic Roll) */}
       <div
         style={{
           width: size,
@@ -253,29 +304,9 @@ export const AgencyPresenterAnchor: React.FC<AgencyPresenterAnchorProps> = ({
             position: 'relative',
             transformStyle: 'preserve-3d',
             transform: `scale(${scale * squashX}, ${scale * squashY}) translateY(${floatY}px) rotateY(${floatRotateY}deg) rotateX(${floatRotateX}deg) rotateZ(${floatRotateZ}deg)`,
-            filter: 'drop-shadow(0 18px 36px rgba(0,0,0,0.7))',
-            transition: 'transform 0.05s linear',
+            filter: 'drop-shadow(0 20px 40px rgba(0,0,0,0.75))',
           }}
         >
-          {/* Neon Shockwave Ripple (Active on Alert) */}
-          {isAlert && (
-            <div
-              style={{
-                position: 'absolute',
-                top: '15%',
-                left: '15%',
-                width: '70%',
-                height: '70%',
-                borderRadius: '50%',
-                border: '3.5px solid #ef4444',
-                transform: `scale(${rippleScale})`,
-                opacity: rippleOpacity,
-                boxShadow: '0 0 24px rgba(239, 68, 68, 0.9)',
-                pointerEvents: 'none',
-              }}
-            />
-          )}
-
           {/* 1. Base Mascot (Authentic Cocoon Blanket Wrap with Blank Smooth Visor) */}
           <Img
             src={staticFile('assets/agent-mascot-blank-visor.png')}
@@ -288,6 +319,43 @@ export const AgencyPresenterAnchor: React.FC<AgencyPresenterAnchorProps> = ({
               left: 0,
             }}
           />
+
+          {/* Dynamic Golden Ambient Illumination on Head when IDEA is active */}
+          {isIdea && (
+            <div
+              style={{
+                position: 'absolute',
+                top: '6%',
+                left: '28%',
+                width: '44%',
+                height: '35%',
+                borderRadius: '50%',
+                background: 'radial-gradient(circle, rgba(250, 204, 21, 0.45) 0%, rgba(250, 204, 21, 0.12) 50%, transparent 80%)',
+                opacity: bulbProgress,
+                filter: 'blur(8px)',
+                pointerEvents: 'none',
+                mixBlendMode: 'screen',
+              }}
+            />
+          )}
+
+          {/* Dynamic Visor Specular Glass Highlight during 3D Yaw Turn */}
+          {isPeek3D && (
+            <div
+              style={{
+                position: 'absolute',
+                top: '24%',
+                left: '35%',
+                width: '30%',
+                height: '25%',
+                borderRadius: '50%',
+                background: 'radial-gradient(ellipse at 45% 35%, rgba(255, 255, 255, 0.28) 0%, transparent 70%)',
+                transform: `translateX(${visorSpecularShift}px)`,
+                pointerEvents: 'none',
+                mixBlendMode: 'overlay',
+              }}
+            />
+          )}
 
           {/* 2. Procedural Reactive Eyes SVG Overlay (ViewBox 456 x 444) */}
           <svg
@@ -315,25 +383,41 @@ export const AgencyPresenterAnchor: React.FC<AgencyPresenterAnchorProps> = ({
                 <feDropShadow dx="0" dy="0" stdDeviation="7" floodColor="#ffffff" floodOpacity="1" />
                 <feDropShadow dx="0" dy="0" stdDeviation="12" floodColor="#facc15" floodOpacity="0.8" />
               </filter>
+              <filter id="smileGlow" x="-50%" y="-50%" width="200%" height="200%">
+                <feDropShadow dx="0" dy="0" stdDeviation="6" floodColor="#ffffff" floodOpacity="0.9" />
+                <feDropShadow dx="0" dy="0" stdDeviation="12" floodColor="#84cc16" floodOpacity="0.85" />
+              </filter>
             </defs>
 
             {/* EYE RENDERING MODES */}
             {isHappy ? (
-              /* Smiling Crescent Eyes ^^ */
-              <g filter="url(#eyeGlow)">
+              /* Smiling Crescent Eyes ^^ with Joyful Radiance */
+              <g filter="url(#smileGlow)">
                 <path
-                  d="M 276 195 Q 293 162 310 195"
+                  d="M 274 195 Q 293 158 312 195"
                   fill="none"
                   stroke="#ffffff"
-                  strokeWidth="6"
+                  strokeWidth="7"
                   strokeLinecap="round"
                 />
                 <path
-                  d="M 342 190 Q 359 157 376 190"
+                  d="M 340 190 Q 359 153 378 190"
                   fill="none"
                   stroke="#ffffff"
-                  strokeWidth="6"
+                  strokeWidth="7"
                   strokeLinecap="round"
+                />
+                {/* Twinkling sparkle star on left cheek */}
+                <path
+                  d="M 252 205 Q 256 205 256 200 Q 256 205 260 205 Q 256 205 256 210 Q 256 205 252 205"
+                  fill="#facc15"
+                  opacity={0.85 + Math.sin(gf / 4) * 0.15}
+                />
+                {/* Twinkling sparkle star on right cheek */}
+                <path
+                  d="M 395 198 Q 399 198 399 193 Q 399 198 403 198 Q 399 198 399 203 Q 399 198 395 198"
+                  fill="#facc15"
+                  opacity={0.85 + Math.cos(gf / 4) * 0.15}
                 />
               </g>
             ) : isAlert ? (
@@ -345,13 +429,12 @@ export const AgencyPresenterAnchor: React.FC<AgencyPresenterAnchorProps> = ({
                 <circle cx="359" cy="178" r="7" fill="#0f172a" />
               </g>
             ) : isIdea ? (
-              /* Excited Idea Eyes (Bright Golden Attentive Glow) */
+              /* Excited Idea Eyes (Bright Golden Attentive Glow + Sparkle) */
               <g filter="url(#ideaEyeGlow)">
-                <ellipse cx="293" cy="182" rx="19" ry="25" fill="#ffffff" />
-                <ellipse cx="359" cy="178" rx="19" ry="25" fill="#ffffff" />
-                {/* Tiny sparkle highlight */}
-                <circle cx="297" cy="176" r="4" fill="#facc15" />
-                <circle cx="363" cy="172" r="4" fill="#facc15" />
+                <ellipse cx="293" cy="182" rx="20" ry="26" fill="#ffffff" />
+                <ellipse cx="359" cy="178" rx="20" ry="26" fill="#ffffff" />
+                <circle cx="297" cy="176" r="4.5" fill="#facc15" />
+                <circle cx="363" cy="172" r="4.5" fill="#facc15" />
               </g>
             ) : isThinking ? (
               /* Thinking Inquisitive Eyes (Gazing Up-Right) */
@@ -359,12 +442,18 @@ export const AgencyPresenterAnchor: React.FC<AgencyPresenterAnchorProps> = ({
                 <rect x="276" y="142" width="32" height="80" rx="16" ry="16" fill="#ffffff" />
                 <rect x="342" y="132" width="32" height="88" rx="16" ry="16" fill="#ffffff" />
               </g>
-            ) : (
-              /* Normal Pill Eyes with Natural Blinking & 3D Parallax Shift */
+            ) : isPeek3D ? (
+              /* 3D Peek Parallax Eyes shifting inside visor */
               <g
                 filter="url(#eyeGlow)"
-                transform={`translate(${floatRotateY * 0.75}, ${floatRotateX * 0.5})`}
+                transform={`translate(${eyeParallaxX}, ${eyeParallaxY})`}
               >
+                <rect x="276" y="135" width="33" height="94" rx="16.5" ry="16.5" fill="#ffffff" />
+                <rect x="342" y="125" width="34" height="106" rx="17" ry="17" fill="#ffffff" />
+              </g>
+            ) : (
+              /* Normal Pill Eyes with Natural Blinking */
+              <g filter="url(#eyeGlow)">
                 <g transform={`translate(293, 182) scale(1, ${eyeScaleY}) translate(-293, -182)`}>
                   <rect x="276" y="135" width="33" height="94" rx="16.5" ry="16.5" fill="#ffffff" />
                 </g>
@@ -375,31 +464,58 @@ export const AgencyPresenterAnchor: React.FC<AgencyPresenterAnchorProps> = ({
             )}
           </svg>
 
-          {/* 3. BESPOKE VECTOR LIGHTBULB (Appears on IDEA state) */}
+          {/* 3. ELEVATED HOLOGRAPHIC LIGHTBULB (Centered & Cleanly Integrated) */}
           {isIdea && (
             <div
               style={{
                 position: 'absolute',
-                top: '-18%',
-                left: '42%',
+                top: '-24%',
+                left: '50%',
                 transform: `translateX(-50%) scale(${bulbProgress})`,
-                filter: 'drop-shadow(0 0 24px rgba(250, 204, 21, 0.95))',
                 zIndex: 60,
                 display: 'flex',
                 flexDirection: 'column',
                 alignItems: 'center',
+                pointerEvents: 'none',
               }}
             >
-              <svg width="72" height="72" viewBox="0 0 24 24" fill="none">
-                {/* Radiating Light Rays */}
-                <g stroke="#facc15" strokeWidth="2" strokeLinecap="round" opacity={0.9}>
-                  <line x1="12" y1="1" x2="12" y2="3" />
-                  <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
-                  <line x1="1" y1="12" x2="3" y2="12" />
-                  <line x1="21" y1="12" x2="23" y2="12" />
-                  <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+              {/* Radial Energy Pulse Wave Rings */}
+              <div
+                style={{
+                  position: 'absolute',
+                  top: '50%',
+                  left: '50%',
+                  transform: 'translate(-50%, -50%)',
+                  width: 140,
+                  height: 140,
+                  borderRadius: '50%',
+                  border: '1.5px solid rgba(250, 204, 21, 0.45)',
+                  boxShadow: '0 0 32px rgba(250, 204, 21, 0.55)',
+                  opacity: 0.6 + Math.sin(gf / 4) * 0.35,
+                  pointerEvents: 'none',
+                }}
+              />
+
+              {/* Glowing Vector Holographic Bulb */}
+              <svg
+                width="84"
+                height="84"
+                viewBox="0 0 24 24"
+                fill="none"
+                style={{
+                  filter: 'drop-shadow(0 0 20px rgba(250, 204, 21, 0.95))',
+                }}
+              >
+                {/* Ambient Soft Rays */}
+                <g stroke="#facc15" strokeWidth="2.2" strokeLinecap="round" opacity={0.92}>
+                  <line x1="12" y1="1" x2="12" y2="3.5" />
+                  <line x1="4.22" y1="4.22" x2="6" y2="6" />
+                  <line x1="1" y1="12" x2="3.5" y2="12" />
+                  <line x1="20.5" y1="12" x2="23" y2="12" />
+                  <line x1="18" y1="6" x2="19.78" y2="4.22" />
                 </g>
-                {/* Glowing Bulb Body */}
+
+                {/* Bulb Body */}
                 <path
                   d="M9 18h6m-4 3h2m-5-8.5c-.83-.83-2-2.17-2-4.5a6 6 0 1 1 12 0c0 2.33-1.17 3.67-2 4.5V17H9v-2.5z"
                   fill="#fef08a"
@@ -408,188 +524,26 @@ export const AgencyPresenterAnchor: React.FC<AgencyPresenterAnchorProps> = ({
                   strokeLinecap="round"
                   strokeLinejoin="round"
                 />
-                {/* Inner Glowing Filament */}
+
+                {/* Glowing Core Filament */}
                 <path
                   d="M10 10a2 2 0 0 1 4 0"
                   stroke="#ca8a04"
-                  strokeWidth="1.6"
+                  strokeWidth="1.8"
                   strokeLinecap="round"
                 />
               </svg>
-            </div>
-          )}
 
-          {/* 4. SLEEK VECTOR BADGES */}
-          {isIdea && (
-            <div
-              style={{
-                position: 'absolute',
-                top: '4%',
-                right: '2%',
-                backgroundColor: '#facc15',
-                color: '#713f12',
-                borderRadius: 14,
-                padding: '4px 12px',
-                display: 'flex',
-                alignItems: 'center',
-                gap: 6,
-                fontWeight: 800,
-                fontSize: 16,
-                fontFamily: FONT.space,
-                boxShadow: '0 0 24px rgba(250, 204, 21, 0.95), 0 4px 12px rgba(0,0,0,0.5)',
-                border: '1.5px solid rgba(255,255,255,0.8)',
-                transform: `scale(${1 + Math.sin(frame / 4) * 0.08})`,
-              }}
-            >
-              IDEA !
-            </div>
-          )}
-
-          {isJumpSpin && (
-            <div
-              style={{
-                position: 'absolute',
-                top: '4%',
-                right: '2%',
-                backgroundColor: '#ec4899',
-                color: '#ffffff',
-                borderRadius: 14,
-                padding: '4px 12px',
-                display: 'flex',
-                alignItems: 'center',
-                gap: 6,
-                fontWeight: 800,
-                fontSize: 16,
-                fontFamily: FONT.space,
-                boxShadow: '0 0 24px rgba(236, 72, 153, 0.95), 0 4px 12px rgba(0,0,0,0.5)',
-                border: '1.5px solid rgba(255,255,255,0.7)',
-              }}
-            >
-              360° SPIN !
-            </div>
-          )}
-
-          {isPeek3D && (
-            <div
-              style={{
-                position: 'absolute',
-                top: '4%',
-                right: '2%',
-                backgroundColor: '#06b6d4',
-                color: '#ffffff',
-                borderRadius: 14,
-                padding: '4px 12px',
-                display: 'flex',
-                alignItems: 'center',
-                gap: 6,
-                fontWeight: 800,
-                fontSize: 16,
-                fontFamily: FONT.space,
-                boxShadow: '0 0 24px rgba(6, 182, 212, 0.95), 0 4px 12px rgba(0,0,0,0.5)',
-                border: '1.5px solid rgba(255,255,255,0.7)',
-              }}
-            >
-              3D PEEK ⟷
-            </div>
-          )}
-
-          {isAlert && (
-            <div
-              style={{
-                position: 'absolute',
-                top: '4%',
-                right: '2%',
-                backgroundColor: '#ef4444',
-                color: '#ffffff',
-                borderRadius: 14,
-                padding: '4px 12px',
-                display: 'flex',
-                alignItems: 'center',
-                gap: 4,
-                fontWeight: 800,
-                fontSize: 16,
-                fontFamily: FONT.space,
-                boxShadow: '0 0 24px rgba(239, 68, 68, 0.95), 0 4px 12px rgba(0,0,0,0.5)',
-                border: '1.5px solid rgba(255,255,255,0.6)',
-                transform: `scale(${1 + Math.sin(frame / 4) * 0.08})`,
-              }}
-            >
-              ALERT !
-            </div>
-          )}
-
-          {isHappy && (
-            <div
-              style={{
-                position: 'absolute',
-                top: '4%',
-                right: '2%',
-                backgroundColor: '#84cc16',
-                color: '#0f172a',
-                borderRadius: 14,
-                padding: '4px 12px',
-                display: 'flex',
-                alignItems: 'center',
-                gap: 4,
-                fontWeight: 800,
-                fontSize: 16,
-                fontFamily: FONT.space,
-                boxShadow: '0 0 24px rgba(132, 204, 22, 0.95), 0 4px 12px rgba(0,0,0,0.5)',
-                border: '1.5px solid rgba(255,255,255,0.7)',
-                transform: `scale(${1 + Math.sin(frame / 4) * 0.08})`,
-              }}
-            >
-              GREAT ✓
-            </div>
-          )}
-
-          {isThinking && (
-            <div
-              style={{
-                position: 'absolute',
-                top: '4%',
-                right: '2%',
-                backgroundColor: '#3b82f6',
-                color: '#ffffff',
-                borderRadius: 14,
-                padding: '4px 12px',
-                display: 'flex',
-                alignItems: 'center',
-                gap: 4,
-                fontWeight: 800,
-                fontSize: 16,
-                fontFamily: FONT.space,
-                boxShadow: '0 0 24px rgba(59, 130, 246, 0.95), 0 4px 12px rgba(0,0,0,0.5)',
-                border: '1.5px solid rgba(255,255,255,0.6)',
-                transform: `scale(${1 + Math.sin(frame / 5) * 0.06})`,
-              }}
-            >
-              ANALYZING ?
-            </div>
-          )}
-
-          {isPointUp && (
-            <div
-              style={{
-                position: 'absolute',
-                top: '4%',
-                right: '2%',
-                backgroundColor: '#10b981',
-                color: '#ffffff',
-                borderRadius: 14,
-                padding: '4px 12px',
-                display: 'flex',
-                alignItems: 'center',
-                gap: 4,
-                fontWeight: 800,
-                fontSize: 16,
-                fontFamily: FONT.space,
-                boxShadow: '0 0 24px rgba(16, 185, 129, 0.95), 0 4px 12px rgba(0,0,0,0.5)',
-                border: '1.5px solid rgba(255,255,255,0.6)',
-                transform: `scale(${1 + Math.sin(frame / 5) * 0.06})`,
-              }}
-            >
-              FOCUS ▲
+              {/* Holographic Magnetic Stem connecting bulb to cocoon head */}
+              <div
+                style={{
+                  width: 2.5,
+                  height: 18,
+                  background: 'linear-gradient(to bottom, #facc15, transparent)',
+                  boxShadow: '0 0 10px #facc15',
+                  marginTop: -2,
+                }}
+              />
             </div>
           )}
         </div>

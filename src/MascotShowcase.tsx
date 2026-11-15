@@ -1,42 +1,44 @@
 import React from 'react';
 import {AbsoluteFill, useCurrentFrame, useVideoConfig} from 'remotion';
 import {AgencyPresenterAnchor, MascotGesture} from './components/AgencyPresenterAnchor';
-import {COLOR, FONT} from './theme-tokens';
+import {FONT} from './theme-tokens';
 
 export const MascotShowcase: React.FC = () => {
   const frame = useCurrentFrame();
   const {fps} = useVideoConfig();
 
   // 5 Stages, 75 frames (2.5 seconds) each = 375 frames total (12.5s)
-  // 1. 0 - 75: Idle & Natural Blinking
-  // 2. 75 - 150: Idea Lightbulb (Lampu Ide Menyala Tegas)
-  // 3. 150 - 225: 3D Peek / Bolak-balik Menoleh 3D
-  // 4. 225 - 300: 360° Jump & Spin (Lompat & Berputar Akrobatik)
-  // 5. 300 - 375: Buoyant Smile & Victory (^^)
+  // 1. 0 - 75: Idle & Natural Blinking (Melayang halus & kedip natural)
+  // 2. 75 - 150: Ide Baru & Lampu Menyala (Lampu neon kuning terintegrasi & pancaran energi)
+  // 3. 150 - 225: Perspektif 3D Bolak-balik (Menoleh kiri-kanan dengan yaw 3D & paralaks mata)
+  // 4. 225 - 300: 360° Jump & Spin (Lompat kinetik akrobatik tinggi + putaran 360°)
+  // 5. 300 - 375: Buoyant Smile & Victory (^^) (Pantulan gembira & mata bulan sabit)
   let gesture: MascotGesture = 'idle';
   let stateTitle = '1. IDLE & NATURAL BLINKING';
-  let stateDesc = 'Melayang halus dengan siklus kedip mata natural & breathing float.';
+  let stateDesc = 'Melayang halus dengan pernapasan multi-harmonic & kedip mata natural.';
   let stateColor = '#a3e635';
+
+  const gestureFrame = frame % 75;
 
   if (frame >= 75 && frame < 150) {
     gesture = 'idea';
     stateTitle = '2. IDE BARU & LAMPU MENYALA';
-    stateDesc = 'Ikon lampu neon menyala tegas di atas kepala dengan pancaran energi radial saat ide muncul.';
+    stateDesc = 'Anticipation tersentak AHA! dengan lampu neon keemasan terintegrasi & pendaran cahaya alami.';
     stateColor = '#facc15';
   } else if (frame >= 150 && frame < 225) {
     gesture = 'peek_3d';
     stateTitle = '3. PERSPEKTIF 3D BOLAK-BALIK';
-    stateDesc = 'Menoleh ke kiri dan kanan dengan perspektif 3D yaw realistis & paralaks mata.';
+    stateDesc = 'Menoleh ke kiri dan kanan dengan yaw 3D halus, paralaks mata di dalam visor, & kilap cahaya cembung.';
     stateColor = '#06b6d4';
   } else if (frame >= 225 && frame < 300) {
     gesture = 'jump_spin';
     stateTitle = '4. LOMPAT & BERPUTAR 360°';
-    stateDesc = 'Lompatan akrobatik tinggi dengan putaran 360 derajat di udara & pendaratan squash-and-stretch.';
+    stateDesc = 'Lompatan akrobatik berbobot: ancang-ancang menekan, melesat berputar 360°, & pendaratan empuk.';
     stateColor = '#ec4899';
   } else if (frame >= 300) {
     gesture = 'thumbs_up';
     stateTitle = '5. BUOYANT SMILE (^^)';
-    stateDesc = 'Mata melengkung tersenyum ^^ dengan pantulan gembira & kilau bintang.';
+    stateDesc = 'Pantulan riang gembira dengan mata tersenyum bulan sabit glowing & kilau bintang halus.';
     stateColor = '#84cc16';
   }
 
@@ -59,10 +61,10 @@ export const MascotShowcase: React.FC = () => {
         style={{
           position: 'absolute',
           inset: 0,
-          backgroundImage: `radial-gradient(circle at 50% 48%, ${stateColor}18 0%, transparent 65%), linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px)`,
+          backgroundImage: `radial-gradient(circle at 50% 48%, ${stateColor}15 0%, transparent 65%), linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px)`,
           backgroundSize: '100% 100%, 48px 48px, 48px 48px',
           pointerEvents: 'none',
-          transition: 'background-image 0.3s ease',
+          transition: 'background-image 0.4s ease',
         }}
       />
 
@@ -106,7 +108,7 @@ export const MascotShowcase: React.FC = () => {
               color: '#f8fafc',
             }}
           >
-            RHMT OFC · MASCOT 3D MOTION ENGINE
+            RHMT OFC · MASCOT 3D MOTION ENGINE V2
           </span>
         </div>
 
@@ -140,6 +142,7 @@ export const MascotShowcase: React.FC = () => {
       >
         <AgencyPresenterAnchor
           gesture={gesture}
+          gestureFrame={gestureFrame}
           size={500}
           positionMode="centered"
           theme="dark"
