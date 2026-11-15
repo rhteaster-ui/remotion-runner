@@ -676,74 +676,62 @@ export const OpsAgentScene: React.FC = () => {
           </div>
         </div>
 
-        {/* Precision Orthogonal Bus / Circuit Conduit */}
-        <div style={{position: 'relative', width: '100%', height: 56}}>
-          <svg width="892" height="56" viewBox="0 0 892 56" style={{position: 'absolute', inset: 0}}>
-            {/* Bus Traces */}
-            <path
-              d="M 446 0 L 446 28 L 218 28 L 218 56"
-              fill="none"
-              stroke={isLeftActive ? (activeToolIdx === 2 ? t.amber : t.emerald) : t.border}
-              strokeWidth={isLeftActive ? 3 : 2}
-              strokeDasharray={isLeftActive ? 'none' : '4 4'}
-              opacity={isLeftActive ? 1 : 0.55}
+        {/* Active Node Dispatch Strip — Clean, Structured, Anti-Slop (Zero Stray Lines) */}
+        <div
+          style={{
+            height: 48,
+            backgroundColor: t.well,
+            border: `1.5px solid ${isExecuting ? tools[activeToolIdx].color : t.borderStrong}`,
+            borderRadius: 14,
+            padding: '0 20px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            boxShadow: t.shadowSm,
+          }}
+        >
+          <div style={{display: 'flex', alignItems: 'center', gap: 12}}>
+            <span
+              style={{
+                width: 10,
+                height: 10,
+                borderRadius: '50%',
+                backgroundColor: isExecuting ? tools[activeToolIdx].color : t.amber,
+                boxShadow: isExecuting ? `0 0 10px ${tools[activeToolIdx].color}` : 'none',
+              }}
             />
-            <path
-              d="M 446 0 L 446 28 L 674 28 L 674 56"
-              fill="none"
-              stroke={isRightActive ? (activeToolIdx === 3 ? t.emerald : t.cyan) : t.border}
-              strokeWidth={isRightActive ? 3 : 2}
-              strokeDasharray={isRightActive ? 'none' : '4 4'}
-              opacity={isRightActive ? 1 : 0.55}
-            />
+            <span
+              style={{
+                fontFamily: FONT.mono,
+                fontSize: 16,
+                fontWeight: 800,
+                color: t.ink,
+                letterSpacing: '0.06em',
+              }}
+            >
+              PARALLEL DISPATCH ENGINE
+            </span>
+          </div>
 
-            {/* Traveling Data Pulse on Active Line */}
-            {isLeftActive && (() => {
-              const u = (frame * 0.045) % 1;
-              const totalL = 28 + (446 - 218) + 28; // 284px
-              const dist = u * totalL;
-              let px = 446;
-              let py = 0;
-              if (dist <= 28) {
-                px = 446;
-                py = dist;
-              } else if (dist <= 28 + (446 - 218)) {
-                px = 446 - (dist - 28);
-                py = 28;
-              } else {
-                px = 218;
-                py = 28 + (dist - 28 - (446 - 218));
-              }
-              const col = activeToolIdx === 2 ? t.amber : t.emerald;
-              return <circle cx={px} cy={py} r={5} fill={col} />;
-            })()}
-
-            {isRightActive && (() => {
-              const u = (frame * 0.045) % 1;
-              const totalL = 28 + (674 - 446) + 28; // 284px
-              const dist = u * totalL;
-              let px = 446;
-              let py = 0;
-              if (dist <= 28) {
-                px = 446;
-                py = dist;
-              } else if (dist <= 28 + (674 - 446)) {
-                px = 446 + (dist - 28);
-                py = 28;
-              } else {
-                px = 674;
-                py = 28 + (dist - 28 - (674 - 446));
-              }
-              const col = activeToolIdx === 3 ? t.emerald : t.cyan;
-              return <circle cx={px} cy={py} r={5} fill={col} />;
-            })()}
-
-            {/* Junction & Terminal Pins */}
-            <circle cx="446" cy="2" r="5" fill={t.amber} />
-            <circle cx="446" cy="28" r="4" fill={isExecuting ? t.amber : t.borderStrong} />
-            <circle cx="218" cy="54" r="5" fill={isLeftActive ? (activeToolIdx === 2 ? t.amber : t.emerald) : t.borderStrong} />
-            <circle cx="674" cy="54" r="5" fill={isRightActive ? (activeToolIdx === 3 ? t.emerald : t.cyan) : t.borderStrong} />
-          </svg>
+          <div style={{display: 'flex', alignItems: 'center', gap: 10}}>
+            <span style={{fontFamily: FONT.mono, fontSize: 14, fontWeight: 700, color: t.muted}}>
+              TARGET:
+            </span>
+            <span
+              style={{
+                fontFamily: FONT.mono,
+                fontSize: 15,
+                fontWeight: 800,
+                color: isExecuting ? tools[activeToolIdx].color : t.amber,
+                padding: '3px 10px',
+                borderRadius: 8,
+                backgroundColor: t.surface,
+                border: `1px solid ${isExecuting ? tools[activeToolIdx].color : t.border}`,
+              }}
+            >
+              {isExecuting ? tools[activeToolIdx].title.toUpperCase() : 'STANDBY'}
+            </span>
+          </div>
         </div>
 
         {/* 4 Tool Workstation Nodes (Spacious 2x2 Grid with Big Readable Fonts & Code Snippets) */}

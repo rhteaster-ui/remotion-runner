@@ -40,7 +40,7 @@ SCENES = [
         "bg": "dark",
         "text": (
             "Kebanyakan orang pakai AI cuma buat chat satu arah. "
-            "Beda sama sistem agentic yang saya bangun. "
+            "Beda sama sistem agentic yang dibangun Tuan Rahmat. "
             "Cukup kirim satu perintah, seluruh server langsung bekerja otomatis."
         ),
     },
@@ -78,7 +78,7 @@ SCENES = [
         "title": "Personal Branding RHMT OFC",
         "bg": "dark",
         "text": (
-            "Semua ekosistem ini diracik mandiri oleh saya, Rahmat atau RHMT OFC, "
+            "Semua ekosistem ini diracik mandiri oleh Tuan Rahmat, atau RHMT OFC, "
             "pelajar yang ngulik fullstack, DevOps Linux, dan otomasi AI. "
             "Cek portofolio rhmt.biz.id dan follow akun ini buat bedah arsitektur berikutnya."
         ),
