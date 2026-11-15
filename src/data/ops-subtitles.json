@@ -758,90 +758,90 @@
    "words": [
     {
      "text": "Semua",
-     "start": 50.366,
-     "end": 50.762
+     "start": 50.663,
+     "end": 51.01
     },
     {
      "text": "ekosistem",
-     "start": 50.762,
-     "end": 51.476
+     "start": 51.01,
+     "end": 51.634
     },
     {
      "text": "ini",
-     "start": 51.476,
-     "end": 51.714
+     "start": 51.634,
+     "end": 51.843
     },
     {
      "text": "diracik",
-     "start": 51.714,
-     "end": 52.268
+     "start": 51.843,
+     "end": 52.328
     },
     {
      "text": "mandiri",
-     "start": 52.268,
-     "end": 52.823
+     "start": 52.328,
+     "end": 52.814
     },
     {
      "text": "oleh",
-     "start": 52.823,
-     "end": 53.14
+     "start": 52.814,
+     "end": 53.091
     },
     {
      "text": "saya,",
-     "start": 53.14,
-     "end": 54.012
+     "start": 53.091,
+     "end": 53.818
     }
    ],
-   "start": 50.366,
-   "end": 54.012
+   "start": 50.663,
+   "end": 53.818
   },
   {
    "id": 18,
    "scene": "s5-brand",
    "bg": "dark",
    "lines": [
-    "Rohmatulloh atau RHMT OFC,",
+    "Rahmat atau RHMT OFC,",
     "pelajar yang ngulik"
    ],
    "words": [
     {
-     "text": "Rohmatulloh",
-     "start": 54.012,
-     "end": 54.884
+     "text": "Rahmat",
+     "start": 53.818,
+     "end": 54.235
     },
     {
      "text": "atau",
-     "start": 54.884,
-     "end": 55.201
+     "start": 54.235,
+     "end": 54.512
     },
     {
      "text": "RHMT",
-     "start": 55.201,
-     "end": 55.518
+     "start": 54.512,
+     "end": 54.79
     },
     {
      "text": "OFC,",
-     "start": 55.518,
-     "end": 55.993
+     "start": 54.79,
+     "end": 55.206
     },
     {
      "text": "pelajar",
-     "start": 55.993,
-     "end": 57.017
+     "start": 55.206,
+     "end": 56.104
     },
     {
      "text": "yang",
-     "start": 57.017,
-     "end": 57.334
+     "start": 56.104,
+     "end": 56.381
     },
     {
      "text": "ngulik",
-     "start": 57.334,
-     "end": 57.81
+     "start": 56.381,
+     "end": 56.798
     }
    ],
-   "start": 54.012,
-   "end": 57.81
+   "start": 53.818,
+   "end": 56.798
   },
   {
    "id": 19,
@@ -854,42 +854,42 @@
    "words": [
     {
      "text": "fullstack,",
-     "start": 57.81,
-     "end": 59.026
+     "start": 56.798,
+     "end": 57.857
     },
     {
      "text": "DevOps",
-     "start": 59.026,
-     "end": 59.502
+     "start": 57.857,
+     "end": 58.274
     },
     {
      "text": "Linux,",
-     "start": 59.502,
-     "end": 60.136
+     "start": 58.274,
+     "end": 58.829
     },
     {
      "text": "dan",
-     "start": 60.136,
-     "end": 60.374
+     "start": 58.829,
+     "end": 59.037
     },
     {
      "text": "otomasi",
-     "start": 60.374,
-     "end": 60.929
+     "start": 59.037,
+     "end": 59.522
     },
     {
      "text": "AI.",
-     "start": 60.929,
-     "end": 62.015
+     "start": 59.522,
+     "end": 60.574
     },
     {
      "text": "Cek",
-     "start": 62.015,
-     "end": 62.253
+     "start": 60.574,
+     "end": 60.782
     }
    ],
-   "start": 57.81,
-   "end": 62.253
+   "start": 56.798,
+   "end": 60.782
   },
   {
    "id": 20,
@@ -902,47 +902,47 @@
    "words": [
     {
      "text": "portofolio",
-     "start": 62.253,
-     "end": 63.046
+     "start": 60.782,
+     "end": 61.476
     },
     {
      "text": "rhmt.biz.id",
-     "start": 63.046,
-     "end": 63.759
+     "start": 61.476,
+     "end": 62.1
     },
     {
      "text": "dan",
-     "start": 63.759,
-     "end": 63.997
+     "start": 62.1,
+     "end": 62.308
     },
     {
      "text": "follow",
-     "start": 63.997,
-     "end": 64.472
+     "start": 62.308,
+     "end": 62.725
     },
     {
      "text": "akun",
-     "start": 64.472,
-     "end": 65.136
+     "start": 62.725,
+     "end": 63.292
     },
     {
      "text": "ini",
-     "start": 65.136,
-     "end": 65.373
+     "start": 63.292,
+     "end": 63.5
     },
     {
      "text": "buat",
-     "start": 65.373,
-     "end": 65.69
+     "start": 63.5,
+     "end": 63.777
     },
     {
      "text": "bedah",
-     "start": 65.69,
-     "end": 66.087
+     "start": 63.777,
+     "end": 64.124
     }
    ],
-   "start": 62.253,
-   "end": 66.087
+   "start": 60.782,
+   "end": 64.124
   },
   {
    "id": 21,
@@ -954,17 +954,17 @@
    "words": [
     {
      "text": "arsitektur",
-     "start": 66.087,
-     "end": 66.879
+     "start": 64.124,
+     "end": 64.818
     },
     {
      "text": "berikutnya.",
-     "start": 66.879,
-     "end": 67.91
+     "start": 64.818,
+     "end": 65.966
     }
    ],
-   "start": 66.087,
-   "end": 67.91
+   "start": 64.124,
+   "end": 65.966
   }
  ]
 }

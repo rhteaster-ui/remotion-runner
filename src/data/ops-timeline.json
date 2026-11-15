@@ -1,7 +1,7 @@
 {
  "fps": 30,
  "estimated": false,
- "total": 69.26,
+ "total": 67.316,
  "scenes": [
   {
    "id": "s1-hook",
@@ -53,10 +53,10 @@
    "bg": "dark",
    "audio": "audio/vo-ops/s5-brand.mp3",
    "start": 49.916,
-   "duration": 19.344,
+   "duration": 17.4,
    "vo_start": 50.366,
-   "vo_end": 67.91,
-   "end": 69.26
+   "vo_end": 65.966,
+   "end": 67.316
   }
  ]
 }

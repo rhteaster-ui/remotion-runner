@@ -78,7 +78,7 @@ SCENES = [
         "title": "Personal Branding RHMT OFC",
         "bg": "dark",
         "text": (
-            "Semua ekosistem ini diracik mandiri oleh saya, Rohmatulloh atau RHMT OFC, "
+            "Semua ekosistem ini diracik mandiri oleh saya, Rahmat atau RHMT OFC, "
             "pelajar yang ngulik fullstack, DevOps Linux, dan otomasi AI. "
             "Cek portofolio rhmt.biz.id dan follow akun ini buat bedah arsitektur berikutnya."
         ),

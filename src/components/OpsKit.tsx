@@ -17,20 +17,20 @@ export const OPS_THEME = {
     surface: '#12151B',
     surfaceRaised: '#191D26',
     well: '#0E1117',
-    border: '#262C39',
-    borderStrong: '#384152',
+    border: '#2A3140',
+    borderStrong: '#3C4659',
     dot: 'rgba(255, 255, 255, 0.08)',
     ink: '#F4F6FA',
-    ink2: '#B5BECA',
-    muted: '#7D8799',
+    ink2: '#CBD3DF',
+    muted: '#8D97AA',
     amber: '#F59E0B',
-    amberSoft: 'rgba(245, 158, 11, 0.16)',
+    amberSoft: 'rgba(245, 158, 11, 0.18)',
     emerald: '#10B981',
-    emeraldSoft: 'rgba(16, 185, 129, 0.16)',
+    emeraldSoft: 'rgba(16, 185, 129, 0.18)',
     cyan: '#38BDF8',
-    cyanSoft: 'rgba(56, 189, 248, 0.16)',
+    cyanSoft: 'rgba(56, 189, 248, 0.18)',
     shadow: '0 10px 0 rgba(0, 0, 0, 0.45)',
-    shadowSm: '0 5px 0 rgba(0, 0, 0, 0.42)',
+    shadowSm: '0 6px 0 rgba(0, 0, 0, 0.40)',
   },
   light: {
     bg: '#F6F5F0',
@@ -41,16 +41,16 @@ export const OPS_THEME = {
     borderStrong: '#B7B09E',
     dot: 'rgba(17, 19, 24, 0.10)',
     ink: '#111318',
-    ink2: '#3D4451',
-    muted: '#666D7A',
+    ink2: '#373E4B',
+    muted: '#5D6472',
     amber: '#D97706',
-    amberSoft: 'rgba(217, 119, 6, 0.14)',
+    amberSoft: 'rgba(217, 119, 6, 0.15)',
     emerald: '#059669',
-    emeraldSoft: 'rgba(5, 150, 105, 0.14)',
+    emeraldSoft: 'rgba(5, 150, 105, 0.15)',
     cyan: '#0284C7',
-    cyanSoft: 'rgba(2, 132, 199, 0.13)',
+    cyanSoft: 'rgba(2, 132, 199, 0.15)',
     shadow: '0 10px 0 rgba(17, 19, 24, 0.10)',
-    shadowSm: '0 5px 0 rgba(17, 19, 24, 0.09)',
+    shadowSm: '0 6px 0 rgba(17, 19, 24, 0.09)',
   },
 } as const;
 
@@ -92,16 +92,15 @@ export const OpsCanvas: React.FC<{mode: Mode}> = ({mode}) => {
           backgroundSize: '36px 36px',
         }}
       />
-      {/* Crisp architectural frame lines at margins */}
       <div
         style={{
           position: 'absolute',
-          left: 48,
-          right: 48,
-          top: 40,
-          bottom: 40,
-          border: `1px solid ${t.border}`,
-          borderRadius: 24,
+          left: 44,
+          right: 44,
+          top: 38,
+          bottom: 38,
+          border: `1.5px solid ${t.border}`,
+          borderRadius: 28,
           opacity: 0.45,
           pointerEvents: 'none',
         }}
@@ -110,13 +109,14 @@ export const OpsCanvas: React.FC<{mode: Mode}> = ({mode}) => {
   );
 };
 
+/* Crisp Top Bar with PP Dev Profile Avatar (Large, Mobile-Readable) */
 export const OpsHeader: React.FC<{
   mode: Mode;
   index: number;
   total: number;
   statusText?: string;
   accent?: string;
-}> = ({mode, index, total, statusText = 'SSE LIVE', accent}) => {
+}> = ({mode, index, total, statusText = 'LIVE', accent}) => {
   const frame = useCurrentFrame();
   const t = OPS_THEME[mode];
   const pulse = 0.55 + 0.45 * Math.sin(frame * 0.22);
@@ -127,8 +127,8 @@ export const OpsHeader: React.FC<{
       style={{
         position: 'absolute',
         top: 62,
-        left: 72,
-        right: 72,
+        left: 68,
+        right: 68,
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
@@ -139,52 +139,33 @@ export const OpsHeader: React.FC<{
         style={{
           display: 'flex',
           alignItems: 'center',
-          gap: 12,
-          padding: '8px 16px',
-          borderRadius: 12,
+          gap: 14,
+          padding: '8px 18px 8px 10px',
+          borderRadius: 999,
           backgroundColor: t.surface,
-          border: `1.5px solid ${t.border}`,
+          border: `1.5px solid ${t.borderStrong}`,
         }}
       >
-        <div
+        <Img
+          src={staticFile('assets/ops/pp-dev.png')}
           style={{
-            width: 28,
-            height: 28,
-            borderRadius: 7,
-            backgroundColor: t.amber,
-            color: '#090B0E',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            fontFamily: FONT.mono,
-            fontWeight: 800,
-            fontSize: 13,
+            width: 44,
+            height: 44,
+            borderRadius: '50%',
+            objectFit: 'cover',
+            border: `2px solid ${t.amber}`,
           }}
-        >
-          RH
-        </div>
+        />
         <span
           style={{
             fontFamily: FONT.mono,
-            fontWeight: 700,
-            fontSize: 16,
+            fontWeight: 800,
+            fontSize: 21,
             color: t.ink,
-            letterSpacing: '0.06em',
+            letterSpacing: '0.03em',
           }}
         >
           rhmt ofc
-        </span>
-        <span style={{color: t.muted, fontFamily: FONT.mono, fontSize: 15}}>/</span>
-        <span
-          style={{
-            fontFamily: FONT.mono,
-            fontWeight: 600,
-            fontSize: 14,
-            color: t.muted,
-            letterSpacing: '0.04em',
-          }}
-        >
-          AGENTIC OPS
         </span>
       </div>
 
@@ -193,17 +174,17 @@ export const OpsHeader: React.FC<{
           style={{
             display: 'flex',
             alignItems: 'center',
-            gap: 8,
-            padding: '8px 14px',
+            gap: 10,
+            padding: '10px 18px',
             borderRadius: 999,
             backgroundColor: t.surface,
-            border: `1.5px solid ${t.border}`,
+            border: `1.5px solid ${t.borderStrong}`,
           }}
         >
           <span
             style={{
-              width: 9,
-              height: 9,
+              width: 11,
+              height: 11,
               borderRadius: '50%',
               backgroundColor: dotColor,
               opacity: pulse,
@@ -213,10 +194,10 @@ export const OpsHeader: React.FC<{
           <span
             style={{
               fontFamily: FONT.mono,
-              fontWeight: 700,
-              fontSize: 14,
+              fontWeight: 800,
+              fontSize: 18,
               color: t.ink,
-              letterSpacing: '0.05em',
+              letterSpacing: '0.04em',
             }}
           >
             {statusText}
@@ -225,14 +206,14 @@ export const OpsHeader: React.FC<{
 
         <div
           style={{
-            padding: '8px 14px',
-            borderRadius: 10,
+            padding: '10px 16px',
+            borderRadius: 14,
             backgroundColor: t.surface,
-            border: `1.5px solid ${t.border}`,
+            border: `1.5px solid ${t.borderStrong}`,
             fontFamily: FONT.mono,
-            fontWeight: 700,
-            fontSize: 15,
-            color: t.ink2,
+            fontWeight: 800,
+            fontSize: 19,
+            color: t.ink,
           }}
         >
           0{index}/0{total}
@@ -242,7 +223,7 @@ export const OpsHeader: React.FC<{
   );
 };
 
-/* Zona 1: Kinetic Headline with Precision Bracket Markers */
+/* Zona 1: Bold Kinetic Headline (Large TikTok-Scale Typography) */
 export const OpsHook: React.FC<{
   mode: Mode;
   kicker: string;
@@ -263,9 +244,9 @@ export const OpsHook: React.FC<{
     <div
       style={{
         position: 'absolute',
-        top: 138,
-        left: 72,
-        right: 72,
+        top: 144,
+        left: 68,
+        right: 68,
         zIndex: 25,
       }}
     >
@@ -276,17 +257,17 @@ export const OpsHook: React.FC<{
           gap: 10,
           opacity: p1,
           transform: `translateY(${(1 - p1) * 14}px)`,
-          marginBottom: 12,
+          marginBottom: 10,
         }}
       >
-        <GeminiSparkSvg size={18} color={ac} rotate={frame * 1.4} />
+        <GeminiSparkSvg size={22} color={ac} rotate={frame * 1.4} />
         <span
           style={{
             fontFamily: FONT.mono,
-            fontWeight: 700,
-            fontSize: 17,
+            fontWeight: 800,
+            fontSize: 20,
             color: ac,
-            letterSpacing: '0.1em',
+            letterSpacing: '0.09em',
             textTransform: 'uppercase',
           }}
         >
@@ -298,8 +279,8 @@ export const OpsHook: React.FC<{
         style={{
           fontFamily: FONT.space,
           fontWeight: 700,
-          fontSize: 44,
-          lineHeight: 1.15,
+          fontSize: 48,
+          lineHeight: 1.12,
           letterSpacing: '-0.025em',
           color: t.ink2,
           opacity: p1,
@@ -313,24 +294,23 @@ export const OpsHook: React.FC<{
         style={{
           position: 'relative',
           display: 'inline-block',
-          marginTop: 8,
-          padding: '8px 20px',
+          marginTop: 10,
+          padding: '10px 24px',
           backgroundColor: mode === 'dark' ? t.surfaceRaised : '#FFFFFF',
-          border: `2px solid ${ac}`,
-          borderRadius: 14,
+          border: `2.5px solid ${ac}`,
+          borderRadius: 16,
           boxShadow: t.shadowSm,
           opacity: p2,
           transform: `translateY(${(1 - p2) * 18}px) scale(${0.94 + 0.06 * p2})`,
         }}
       >
-        {/* Corner precision ticks */}
         <span
           style={{
             position: 'absolute',
             left: -2,
-            top: 10,
-            bottom: 10,
-            width: 5,
+            top: 12,
+            bottom: 12,
+            width: 6,
             borderRadius: 4,
             backgroundColor: ac,
           }}
@@ -339,11 +319,11 @@ export const OpsHook: React.FC<{
           style={{
             fontFamily: FONT.space,
             fontWeight: 800,
-            fontSize: 50,
+            fontSize: 54,
             lineHeight: 1.1,
             letterSpacing: '-0.03em',
             color: t.ink,
-            paddingLeft: 8,
+            paddingLeft: 10,
           }}
         >
           {highlight}
@@ -351,10 +331,10 @@ export const OpsHook: React.FC<{
         <div
           style={{
             position: 'absolute',
-            left: 16,
-            right: 16,
+            left: 18,
+            right: 18,
             bottom: -2,
-            height: 3,
+            height: 4,
             backgroundColor: ac,
             transformOrigin: 'left',
             transform: `scaleX(${barW})`,
@@ -366,7 +346,7 @@ export const OpsHook: React.FC<{
   );
 };
 
-/* Zona 2: Segmented Pipeline Progress Rail */
+/* Zona 2: Sleek Clean Pipeline Rail (Uncluttered & Readable) */
 export const OpsPipelineRail: React.FC<{
   mode: Mode;
   activeIdx: number;
@@ -382,9 +362,9 @@ export const OpsPipelineRail: React.FC<{
     <div
       style={{
         position: 'absolute',
-        top: 382,
-        left: 72,
-        right: 72,
+        top: 398,
+        left: 68,
+        right: 68,
         display: 'grid',
         gridTemplateColumns: 'repeat(5, 1fr)',
         gap: 10,
@@ -397,7 +377,6 @@ export const OpsPipelineRail: React.FC<{
         const done = idx < activeIdx;
         const active = idx === activeIdx;
         const borderColor = active ? ac : done ? t.emerald : t.border;
-        const fillColor = active ? ac : done ? t.emerald : 'transparent';
         const textColor = active ? t.ink : done ? t.emerald : t.muted;
 
         return (
@@ -405,49 +384,36 @@ export const OpsPipelineRail: React.FC<{
             key={st.code}
             style={{
               backgroundColor: active ? t.surfaceRaised : t.surface,
-              border: `1.5px solid ${borderColor}`,
-              borderRadius: 10,
-              padding: '8px 10px',
+              border: `2px solid ${borderColor}`,
+              borderRadius: 12,
+              padding: '10px 12px',
               display: 'flex',
-              flexDirection: 'column',
+              alignItems: 'center',
+              justifyContent: 'space-between',
               gap: 6,
             }}
           >
-            <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between'}}>
-              <span
-                style={{
-                  fontFamily: FONT.mono,
-                  fontWeight: 700,
-                  fontSize: 12,
-                  color: textColor,
-                  letterSpacing: '0.04em',
-                }}
-              >
-                {st.code}
-              </span>
-              <span
-                style={{
-                  width: 8,
-                  height: 8,
-                  borderRadius: '50%',
-                  backgroundColor: fillColor,
-                  border: active || done ? 'none' : `1.5px solid ${t.muted}`,
-                }}
-              />
-            </div>
             <span
               style={{
                 fontFamily: FONT.mono,
-                fontWeight: active ? 800 : 600,
-                fontSize: 13,
+                fontWeight: active ? 800 : 700,
+                fontSize: 16,
                 color: textColor,
                 whiteSpace: 'nowrap',
-                overflow: 'hidden',
-                textOverflow: 'ellipsis',
               }}
             >
               {st.label}
             </span>
+            <span
+              style={{
+                width: 9,
+                height: 9,
+                borderRadius: '50%',
+                backgroundColor: active ? ac : done ? t.emerald : 'transparent',
+                border: active || done ? 'none' : `2px solid ${t.muted}`,
+                flexShrink: 0,
+              }}
+            />
           </div>
         );
       })}
@@ -455,7 +421,6 @@ export const OpsPipelineRail: React.FC<{
   );
 };
 
-/* Cubic Bezier Point Helper + Animated Flow Connector */
 export const cubicPoint = (
   p0: [number, number],
   p1: [number, number],
@@ -519,7 +484,7 @@ export const OpsBezierWire: React.FC<{
         d={d}
         fill="none"
         stroke={color}
-        strokeWidth={active ? 3.5 : 2.2}
+        strokeWidth={active ? 4.5 : 2.5}
         strokeOpacity={active ? 0.35 : 0.25}
       />
       {active && (
@@ -527,46 +492,46 @@ export const OpsBezierWire: React.FC<{
           d={d}
           fill="none"
           stroke={color}
-          strokeWidth={3.5}
-          strokeDasharray="10 10"
-          strokeDashoffset={-frame * 3.2}
+          strokeWidth={4.5}
+          strokeDasharray="12 12"
+          strokeDashoffset={-frame * 3.6}
           strokeLinecap="round"
         />
       )}
-      <circle cx={p0[0]} cy={p0[1]} r={5} fill={color} />
-      <circle cx={p3[0]} cy={p3[1]} r={5} fill={color} />
+      <circle cx={p0[0]} cy={p0[1]} r={6} fill={color} />
+      <circle cx={p3[0]} cy={p3[1]} r={6} fill={color} />
       {active && (
         <>
-          <circle cx={px} cy={py} r={8.5} fill={color} fillOpacity={0.28} />
-          <circle cx={px} cy={py} r={5} fill={color} />
+          <circle cx={px} cy={py} r={11} fill={color} fillOpacity={0.28} />
+          <circle cx={px} cy={py} r={6.5} fill={color} />
         </>
       )}
       {active && bidirectional && (
         <>
-          <circle cx={rx} cy={ry} r={8} fill={color} fillOpacity={0.28} />
-          <circle cx={rx} cy={ry} r={4.5} fill={color} />
+          <circle cx={rx} cy={ry} r={10} fill={color} fillOpacity={0.28} />
+          <circle cx={rx} cy={ry} r={5.5} fill={color} />
         </>
       )}
       {label && (
         <g transform={`translate(${mx}, ${my})`}>
           <rect
-            x={-48}
-            y={-15}
-            width={96}
-            height={30}
-            rx={8}
+            x={-62}
+            y={-20}
+            width={124}
+            height={40}
+            rx={11}
             fill={labelBg}
             stroke={color}
-            strokeWidth={1.6}
+            strokeWidth={2}
           />
           <text
             x={0}
-            y={5}
+            y={6}
             textAnchor="middle"
             fill={labelColor}
             fontFamily="JetBrains Mono, monospace"
-            fontWeight="700"
-            fontSize="13"
+            fontWeight="800"
+            fontSize="17"
           >
             {label}
           </text>
@@ -576,7 +541,7 @@ export const OpsBezierWire: React.FC<{
   );
 };
 
-/* Tactile n8n / Ops Node Box */
+/* Tactile Large Mobile-First Node Card */
 export const OpsNodeBox: React.FC<{
   mode: Mode;
   title: string;
@@ -610,10 +575,10 @@ export const OpsNodeBox: React.FC<{
     <div
       style={{
         backgroundColor: active ? t.surfaceRaised : t.surface,
-        border: `2px solid ${active ? ac : t.border}`,
-        borderRadius: 18,
-        padding: '16px 18px',
-        boxShadow: active ? `0 8px 0 ${mode === 'dark' ? 'rgba(0,0,0,0.55)' : 'rgba(17,19,24,0.12)'}` : t.shadowSm,
+        border: `2.5px solid ${active ? ac : t.border}`,
+        borderRadius: 22,
+        padding: '20px 22px',
+        boxShadow: active ? t.shadow : t.shadowSm,
         position: 'relative',
         ...style,
       }}
@@ -622,31 +587,31 @@ export const OpsNodeBox: React.FC<{
         <div
           style={{
             position: 'absolute',
-            top: -13,
-            right: 16,
-            padding: '3px 11px',
+            top: -16,
+            right: 20,
+            padding: '4px 14px',
             borderRadius: 999,
             backgroundColor: mode === 'dark' ? '#090B0E' : '#FFFFFF',
-            border: `1.5px solid ${bColor}`,
+            border: `2px solid ${bColor}`,
             fontFamily: FONT.mono,
             fontWeight: 800,
-            fontSize: 12,
+            fontSize: 16,
             color: bColor,
-            letterSpacing: '0.06em',
+            letterSpacing: '0.05em',
           }}
         >
           {badge}
         </div>
       )}
 
-      <div style={{display: 'flex', alignItems: 'center', gap: 14}}>
+      <div style={{display: 'flex', alignItems: 'center', gap: 18}}>
         <div
           style={{
-            width: 52,
-            height: 52,
-            borderRadius: 14,
+            width: 72,
+            height: 72,
+            borderRadius: 18,
             backgroundColor: t.well,
-            border: `1.5px solid ${active ? ac : t.border}`,
+            border: `2px solid ${active ? ac : t.borderStrong}`,
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
@@ -657,7 +622,7 @@ export const OpsNodeBox: React.FC<{
           {iconImg ? (
             <Img
               src={staticFile(iconImg)}
-              style={{width: 36, height: 36, objectFit: 'contain', borderRadius: 8}}
+              style={{width: 50, height: 50, objectFit: 'contain', borderRadius: 10}}
             />
           ) : (
             iconSvg
@@ -667,10 +632,10 @@ export const OpsNodeBox: React.FC<{
           <div
             style={{
               fontFamily: FONT.space,
-              fontWeight: 700,
-              fontSize: 22,
+              fontWeight: 800,
+              fontSize: 30,
               color: t.ink,
-              lineHeight: 1.2,
+              lineHeight: 1.15,
               whiteSpace: 'nowrap',
               overflow: 'hidden',
               textOverflow: 'ellipsis',
@@ -681,10 +646,10 @@ export const OpsNodeBox: React.FC<{
           <div
             style={{
               fontFamily: FONT.mono,
-              fontWeight: 500,
-              fontSize: 15,
+              fontWeight: 600,
+              fontSize: 20,
               color: t.muted,
-              marginTop: 4,
+              marginTop: 6,
               whiteSpace: 'nowrap',
               overflow: 'hidden',
               textOverflow: 'ellipsis',
@@ -699,29 +664,27 @@ export const OpsNodeBox: React.FC<{
   );
 };
 
-/* Zona 4 Companion: Expressive Telemetry Ticker Strip above Subtitles (prevents dead space) */
+/* Zona 4 Companion: Crisp Large-Font Status Bar above Subtitles */
 export const OpsBottomTelemetryStrip: React.FC<{
   mode: Mode;
   command: string;
-  status: string;
   accent?: string;
-}> = ({mode, command, status, accent}) => {
+}> = ({mode, command, accent}) => {
   const frame = useCurrentFrame();
   const t = OPS_THEME[mode];
   const ac = accent || t.amber;
-  const barPulse = 0.35 + 0.65 * Math.abs(Math.sin(frame * 0.14));
 
   return (
     <div
       style={{
         position: 'absolute',
-        left: 72,
-        right: 72,
+        left: 68,
+        right: 68,
         bottom: 248,
-        padding: '14px 20px',
-        borderRadius: 16,
+        padding: '16px 22px',
+        borderRadius: 18,
         backgroundColor: t.surface,
-        border: `1.5px solid ${t.border}`,
+        border: `1.5px solid ${t.borderStrong}`,
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
@@ -730,65 +693,36 @@ export const OpsBottomTelemetryStrip: React.FC<{
       }}
     >
       <div style={{display: 'flex', alignItems: 'center', gap: 14, minWidth: 0}}>
-        <div
+        <Img
+          src={staticFile('assets/ops/agy-official.png')}
+          style={{width: 34, height: 34, objectFit: 'contain', flexShrink: 0}}
+        />
+        <span
           style={{
-            width: 36,
-            height: 36,
-            borderRadius: 10,
-            backgroundColor: mode === 'dark' ? t.amberSoft : t.well,
-            border: `1.5px solid ${ac}`,
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            flexShrink: 0,
+            fontFamily: FONT.mono,
+            fontWeight: 700,
+            fontSize: 21,
+            color: t.ink,
+            whiteSpace: 'nowrap',
+            overflow: 'hidden',
+            textOverflow: 'ellipsis',
           }}
         >
-          <Img
-            src={staticFile('assets/ops/agy-official.png')}
-            style={{width: 24, height: 24, objectFit: 'contain'}}
-          />
-        </div>
-        <div style={{minWidth: 0}}>
-          <div
-            style={{
-              fontFamily: FONT.mono,
-              fontWeight: 700,
-              fontSize: 15,
-              color: t.ink,
-              whiteSpace: 'nowrap',
-              overflow: 'hidden',
-              textOverflow: 'ellipsis',
-            }}
-          >
-            {command}
-          </div>
-          <div
-            style={{
-              fontFamily: FONT.mono,
-              fontWeight: 500,
-              fontSize: 13,
-              color: t.muted,
-              marginTop: 2,
-            }}
-          >
-            {status}
-          </div>
-        </div>
+          {command}
+        </span>
       </div>
 
-      {/* Animated waveform bars */}
-      <div style={{display: 'flex', alignItems: 'flex-end', gap: 4, height: 22, flexShrink: 0}}>
-        {[0.5, 0.9, 0.65, 1, 0.7].map((h, i) => {
+      <div style={{display: 'flex', alignItems: 'flex-end', gap: 5, height: 26, flexShrink: 0}}>
+        {[0.55, 0.95, 0.7, 1, 0.75].map((h, i) => {
           const val = 0.35 + 0.65 * Math.abs(Math.sin(frame * 0.18 + i * 1.1));
           return (
             <div
               key={i}
               style={{
-                width: 4,
-                height: Math.round(22 * h * val),
+                width: 5,
+                height: Math.round(26 * h * val),
                 borderRadius: 3,
                 backgroundColor: ac,
-                opacity: i === 2 ? barPulse : 0.85,
               }}
             />
           );

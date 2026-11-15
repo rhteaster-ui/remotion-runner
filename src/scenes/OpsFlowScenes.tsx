@@ -23,39 +23,39 @@ import {FONT} from '../lib/theme';
 import {pop} from '../lib/anim';
 
 /* Crisp inline SVG icons (zero emoji) */
-const CodeSvg: React.FC<{color: string; size?: number}> = ({color, size = 26}) => (
-  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2.1" strokeLinecap="round" strokeLinejoin="round">
+const CodeSvg: React.FC<{color: string; size?: number}> = ({color, size = 34}) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
     <polyline points="16 18 22 12 16 6" />
     <polyline points="8 6 2 12 8 18" />
   </svg>
 );
 
-const SearchSvg: React.FC<{color: string; size?: number}> = ({color, size = 26}) => (
-  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2.1" strokeLinecap="round" strokeLinejoin="round">
+const SearchSvg: React.FC<{color: string; size?: number}> = ({color, size = 34}) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
     <circle cx="11" cy="11" r="7" />
     <line x1="20" y1="20" x2="16.2" y2="16.2" />
   </svg>
 );
 
-const ServerSvg: React.FC<{color: string; size?: number}> = ({color, size = 26}) => (
-  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2.1" strokeLinecap="round" strokeLinejoin="round">
+const ServerSvg: React.FC<{color: string; size?: number}> = ({color, size = 34}) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
     <rect x="3" y="4" width="18" height="6" rx="2" />
     <rect x="3" y="14" width="18" height="6" rx="2" />
-    <circle cx="7" cy="7" r="1" fill={color} />
-    <circle cx="7" cy="17" r="1" fill={color} />
+    <circle cx="7" cy="7" r="1.1" fill={color} />
+    <circle cx="7" cy="17" r="1.1" fill={color} />
   </svg>
 );
 
-const PromptSvg: React.FC<{color: string; size?: number}> = ({color, size = 26}) => (
-  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2.1" strokeLinecap="round" strokeLinejoin="round">
+const PromptSvg: React.FC<{color: string; size?: number}> = ({color, size = 34}) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
     <path d="M4 5h16a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H9l-5 4v-4H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z" />
     <line x1="7" y1="10" x2="17" y2="10" />
     <line x1="7" y1="13" x2="13" y2="13" />
   </svg>
 );
 
-const GitBranchSvg: React.FC<{color: string; size?: number}> = ({color, size = 26}) => (
-  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2.1" strokeLinecap="round" strokeLinejoin="round">
+const GitBranchSvg: React.FC<{color: string; size?: number}> = ({color, size = 34}) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
     <circle cx="6" cy="6" r="2.5" />
     <circle cx="18" cy="6" r="2.5" />
     <circle cx="6" cy="18" r="2.5" />
@@ -64,23 +64,23 @@ const GitBranchSvg: React.FC<{color: string; size?: number}> = ({color, size = 2
   </svg>
 );
 
-const GlobeSvg: React.FC<{color: string; size?: number}> = ({color, size = 24}) => (
-  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+const GlobeSvg: React.FC<{color: string; size?: number}> = ({color, size = 30}) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2.1" strokeLinecap="round" strokeLinejoin="round">
     <circle cx="12" cy="12" r="9" />
     <line x1="3" y1="12" x2="21" y2="12" />
     <path d="M12 3a14 14 0 0 1 0 18a14 14 0 0 1 0-18z" />
   </svg>
 );
 
-const TerminalSvg: React.FC<{color: string; size?: number}> = ({color, size = 24}) => (
-  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2.1" strokeLinecap="round" strokeLinejoin="round">
+const TerminalSvg: React.FC<{color: string; size?: number}> = ({color, size = 34}) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
     <polyline points="4 17 10 11 4 5" />
     <line x1="12" y1="19" x2="20" y2="19" />
   </svg>
 );
 
-const CheckSvg: React.FC<{color: string; size?: number}> = ({color, size = 24}) => (
-  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2.3" strokeLinecap="round" strokeLinejoin="round">
+const CheckSvg: React.FC<{color: string; size?: number}> = ({color, size = 34}) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
     <polyline points="20 6 9 17 4 12" />
   </svg>
 );
@@ -95,171 +95,172 @@ export const OpsHookScene: React.FC = () => {
 
   const pLeft = pop(frame, 8, fps, 150);
   const pRight = pop(frame, 20, fps, 150);
-  const stagePop = pop(frame, 30, fps, 130);
-  const node1 = pop(frame, 42, fps, 150);
-  const node2 = pop(frame, 58, fps, 150);
-  const node3 = pop(frame, 74, fps, 150);
-  const logStep = Math.floor(interpolate(frame, [60, 260], [0, 3.99], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'}));
+  const stagePop = pop(frame, 28, fps, 130);
+  const node1 = pop(frame, 36, fps, 150);
+  const node2 = pop(frame, 52, fps, 150);
+  const node3 = pop(frame, 68, fps, 150);
+  const stepIdx = Math.floor(interpolate(frame, [45, 250], [0, 3.99], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'}));
 
-  const logs = [
-    '[INGRESS] telegram -> prompt verified (owner #8343466107)',
-    '[TUNNEL]  vps1 (rdev) --ssh--> vps2 (rhmtdev) active',
-    '[AGENT]   agy executing: edit code + check pm2 status',
-    '[SSE]     task-map updated -> delivering output 200 OK',
+  const liveSteps = [
+    '01 · Prompt masuk dari Bot Telegram',
+    '02 · Tunnel SSH VPS-1 → VPS-2 aktif',
+    '03 · AGY Agent eksekusi bash & kode',
+    '04 · Task Map live update 200 OK',
   ];
 
   return (
     <AbsoluteFill>
       <OpsCanvas mode="dark" />
-      <OpsHeader mode="dark" index={1} total={5} statusText="WORKFLOW READY" accent={t.amber} />
+      <OpsHeader mode="dark" index={1} total={5} statusText="READY" accent={t.amber} />
 
       <OpsHook
         mode="dark"
         kicker="01 // PARADIGM SHIFT"
         headlineTop="Bukan AI chat biasa,"
-        highlight="Server Bekerja Otomatis"
+        highlight="Server Kerja Otomatis"
         accent={t.amber}
       />
 
       <OpsPipelineRail mode="dark" activeIdx={0} accent={t.amber} />
 
-      {/* Main Stage (Y: 476..1560) */}
+      {/* Main Stage (Y: 472..1566) */}
       <div
         style={{
           position: 'absolute',
-          top: 476,
-          left: 72,
-          right: 72,
-          height: 1084,
+          top: 472,
+          left: 68,
+          right: 68,
+          height: 1094,
           display: 'flex',
           flexDirection: 'column',
-          gap: 24,
+          gap: 22,
         }}
       >
-        {/* Top Contrast Cards */}
+        {/* Top Contrast Cards (Big Bold Mobile Fonts) */}
         <div style={{display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 18}}>
           <div
             style={{
               backgroundColor: t.surface,
-              border: `1.5px solid ${t.border}`,
-              borderRadius: 18,
-              padding: '22px 22px',
-              opacity: pLeft * 0.72,
+              border: `2px solid ${t.border}`,
+              borderRadius: 22,
+              padding: '24px 26px',
+              opacity: pLeft * 0.78,
               transform: `translateY(${(1 - pLeft) * 20}px)`,
             }}
           >
-            <div style={{fontFamily: FONT.mono, fontSize: 13, fontWeight: 700, color: t.muted, letterSpacing: '0.08em'}}>
+            <div style={{fontFamily: FONT.mono, fontSize: 16, fontWeight: 800, color: t.muted, letterSpacing: '0.07em'}}>
               MODE PASIF
             </div>
-            <div style={{fontFamily: FONT.space, fontSize: 28, fontWeight: 700, color: t.ink2, marginTop: 8}}>
+            <div style={{fontFamily: FONT.space, fontSize: 34, fontWeight: 800, color: t.ink2, marginTop: 8}}>
               Chat 1 Arah
             </div>
-            <div style={{fontFamily: FONT.sans, fontSize: 18, color: t.muted, marginTop: 10, lineHeight: 1.4}}>
-              Tanya, copy-paste manual, eksekusi sendiri.
+            <div style={{fontFamily: FONT.sans, fontSize: 22, color: t.muted, marginTop: 10, lineHeight: 1.35}}>
+              Cuma tanya jawab, lalu eksekusi manual.
             </div>
           </div>
 
           <div
             style={{
               backgroundColor: t.surfaceRaised,
-              border: `2px solid ${t.amber}`,
-              borderRadius: 18,
-              padding: '22px 22px',
+              border: `2.5px solid ${t.amber}`,
+              borderRadius: 22,
+              padding: '24px 26px',
               boxShadow: t.shadowSm,
               opacity: pRight,
               transform: `translateY(${(1 - pRight) * 20}px) scale(${0.96 + 0.04 * pRight})`,
             }}
           >
             <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between'}}>
-              <span style={{fontFamily: FONT.mono, fontSize: 13, fontWeight: 800, color: t.amber, letterSpacing: '0.08em'}}>
+              <span style={{fontFamily: FONT.mono, fontSize: 16, fontWeight: 800, color: t.amber, letterSpacing: '0.07em'}}>
                 AGENTIC OPS
               </span>
-              <span style={{width: 10, height: 10, borderRadius: '50%', backgroundColor: t.emerald}} />
+              <span style={{width: 12, height: 12, borderRadius: '50%', backgroundColor: t.emerald}} />
             </div>
-            <div style={{fontFamily: FONT.space, fontSize: 28, fontWeight: 800, color: t.ink, marginTop: 8}}>
+            <div style={{fontFamily: FONT.space, fontSize: 34, fontWeight: 800, color: t.ink, marginTop: 8}}>
               1 Prompt → Jalan
             </div>
-            <div style={{fontFamily: FONT.sans, fontSize: 18, color: t.ink2, marginTop: 10, lineHeight: 1.4}}>
-              Baca file, jalankan bash, pantau live di web.
+            <div style={{fontFamily: FONT.sans, fontSize: 22, color: t.ink2, marginTop: 10, lineHeight: 1.35}}>
+              Edit kode, bash, dan pantau web live.
             </div>
           </div>
         </div>
 
-        {/* Live Trigger Pipeline Preview */}
+        {/* Live Trigger Pipeline Card */}
         <div
           style={{
             flex: 1,
             backgroundColor: t.surface,
-            border: `1.5px solid ${t.border}`,
-            borderRadius: 22,
+            border: `2px solid ${t.borderStrong}`,
+            borderRadius: 24,
             padding: 26,
             boxShadow: t.shadow,
-            position: 'relative',
-            overflow: 'hidden',
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'space-between',
             opacity: stagePop,
-            transform: `translateY(${(1 - stagePop) * 24}px)`,
+            transform: `translateY(${(1 - stagePop) * 22}px)`,
           }}
         >
-          <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 14}}>
-            <span style={{fontFamily: FONT.mono, fontSize: 15, fontWeight: 700, color: t.ink2}}>
-              PIPELINE EKSEKUSI LANGSUNG
+          <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between'}}>
+            <span style={{fontFamily: FONT.mono, fontSize: 19, fontWeight: 800, color: t.ink2, letterSpacing: '0.04em'}}>
+              ALUR EKSEKUSI LANGSUNG
             </span>
             <span
               style={{
                 fontFamily: FONT.mono,
-                fontSize: 13,
-                fontWeight: 700,
+                fontSize: 16,
+                fontWeight: 800,
                 color: t.emerald,
-                padding: '4px 10px',
+                padding: '6px 14px',
                 borderRadius: 999,
                 backgroundColor: t.emeraldSoft,
               }}
             >
-              ACTIVE STREAM
+              ● STREAMING
             </span>
           </div>
 
-          <div style={{position: 'relative', height: 590}}>
-            <svg width="884" height="590" viewBox="0 0 884 590" style={{position: 'absolute', inset: 0}}>
-              <OpsBezierWire p0={[290, 95]} p1={[385, 95]} p2={[385, 240]} p3={[470, 240]} color={t.amber} active speed={0.025} />
-              <OpsBezierWire p0={[665, 294]} p1={[665, 368]} p2={[310, 355]} p3={[310, 425]} color={t.cyan} active speed={0.025} phaseOffset={0.35} />
-              <OpsBezierWire p0={[520, 480]} p1={[570, 480]} p2={[570, 480]} p3={[620, 480]} color={t.emerald} active speed={0.028} phaseOffset={0.6} />
+          <div style={{position: 'relative', width: 892, height: 615}}>
+            <svg width="892" height="615" viewBox="0 0 892 615" style={{position: 'absolute', inset: 0}}>
+              <OpsBezierWire p0={[215, 168]} p1={[215, 290]} p2={[350, 290]} p3={[452, 290]} color={t.amber} active speed={0.025} />
+              <OpsBezierWire p0={[668, 355]} p1={[668, 415]} p2={[245, 375]} p3={[245, 445]} color={t.cyan} active speed={0.025} phaseOffset={0.35} />
+              <OpsBezierWire p0={[486, 512]} p1={[525, 512]} p2={[540, 512]} p3={[572, 512]} color={t.emerald} active speed={0.03} phaseOffset={0.6} />
             </svg>
 
             <OpsNodeBox
               mode="dark"
               title="Bot Telegram"
-              subtitle="Perintah Tuan Masuk"
+              subtitle="Perintah Masuk"
               badge="ONLINE"
               badgeColor={t.emerald}
               accent={t.emerald}
               active
               iconImg="assets/ops/tg-official.svg"
-              style={{position: 'absolute', left: 10, top: 38, width: 280, opacity: node1, transform: `scale(${0.92 + 0.08 * node1})`}}
+              style={{position: 'absolute', left: 8, top: 42, width: 414, opacity: node1, transform: `scale(${0.93 + 0.07 * node1})`}}
             />
 
             <OpsNodeBox
               mode="dark"
               title="Terminal SSH"
-              subtitle="Dispatch VPS-1 → VPS-2"
+              subtitle="VPS-1 → VPS-2"
               badge="1 TTY"
               badgeColor={t.amber}
               accent={t.amber}
               active
               iconImg="assets/ops/termux-official.svg"
-              style={{position: 'absolute', left: 470, top: 185, width: 390, opacity: node2, transform: `scale(${0.92 + 0.08 * node2})`}}
+              style={{position: 'absolute', left: 452, top: 226, width: 432, opacity: node2, transform: `scale(${0.93 + 0.07 * node2})`}}
             />
 
             <OpsNodeBox
               mode="dark"
               title="AGY Agent"
-              subtitle="Code · Bash · Search"
+              subtitle="Code · Bash · Web"
               badge="WORKING"
               badgeColor={t.amber}
               accent={t.amber}
               active
               iconImg="assets/ops/agy-official.png"
-              style={{position: 'absolute', left: 20, top: 425, width: 500, opacity: node3, transform: `scale(${0.92 + 0.08 * node3})`}}
+              style={{position: 'absolute', left: 8, top: 445, width: 478, opacity: node3, transform: `scale(${0.93 + 0.07 * node3})`}}
             />
 
             <OpsNodeBox
@@ -270,44 +271,30 @@ export const OpsHookScene: React.FC = () => {
               badgeColor={t.emerald}
               accent={t.emerald}
               active
-              iconSvg={<CheckSvg color={t.emerald} size={28} />}
-              style={{position: 'absolute', left: 620, top: 425, width: 254, opacity: node3}}
+              iconSvg={<CheckSvg color={t.emerald} size={36} />}
+              style={{position: 'absolute', left: 572, top: 445, width: 312, opacity: node3}}
             />
           </div>
 
-          {/* Live Console Strip */}
+          {/* Crisp Single-Row Live Action Pill (No Tiny Wall of Logs) */}
           <div
             style={{
-              marginTop: 10,
               backgroundColor: t.well,
-              border: `1.5px solid ${t.border}`,
-              borderRadius: 14,
-              padding: '16px 18px',
+              border: `2px solid ${t.amber}`,
+              borderRadius: 16,
+              padding: '18px 22px',
               display: 'flex',
-              flexDirection: 'column',
-              gap: 8,
+              alignItems: 'center',
+              justifyContent: 'space-between',
+              gap: 14,
             }}
           >
-            {logs.map((line, i) => {
-              const shown = i <= logStep;
-              const current = i === logStep;
-              return (
-                <div
-                  key={i}
-                  style={{
-                    fontFamily: FONT.mono,
-                    fontSize: 15,
-                    fontWeight: current ? 700 : 500,
-                    color: !shown ? 'rgba(125,135,153,0.28)' : current ? t.amber : t.emerald,
-                    whiteSpace: 'nowrap',
-                    overflow: 'hidden',
-                    textOverflow: 'ellipsis',
-                  }}
-                >
-                  {shown ? `› ${line}` : `  ${line}`}
-                </div>
-              );
-            })}
+            <span style={{fontFamily: FONT.mono, fontSize: 22, fontWeight: 700, color: t.ink, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis'}}>
+              › {liveSteps[stepIdx]}
+            </span>
+            <span style={{fontFamily: FONT.mono, fontSize: 17, fontWeight: 800, color: t.amber, flexShrink: 0}}>
+              LIVE
+            </span>
           </div>
         </div>
       </div>
@@ -315,7 +302,6 @@ export const OpsHookScene: React.FC = () => {
       <OpsBottomTelemetryStrip
         mode="dark"
         command="$ tg-bot -> ssh vps2 agy --autonomous"
-        status="Menghubungkan prompt ke mesin eksekusi..."
         accent={t.amber}
       />
     </AbsoluteFill>
@@ -339,11 +325,11 @@ export const OpsBridgeScene: React.FC = () => {
   return (
     <AbsoluteFill>
       <OpsCanvas mode="light" />
-      <OpsHeader mode="light" index={2} total={5} statusText="SSH BRIDGE OK" accent={t.cyan} />
+      <OpsHeader mode="light" index={2} total={5} statusText="SSH LIVE" accent={t.cyan} />
 
       <OpsHook
         mode="light"
-        kicker="02 // MULTI-VPS INGRESS"
+        kicker="02 // DUAL-VPS BRIDGE"
         headlineTop="Dari chat HP, tembus"
         highlight="Dua Server Sekaligus"
         accent={t.cyan}
@@ -354,145 +340,140 @@ export const OpsBridgeScene: React.FC = () => {
       <div
         style={{
           position: 'absolute',
-          top: 476,
-          left: 72,
-          right: 72,
-          height: 1084,
+          top: 472,
+          left: 68,
+          right: 68,
+          height: 1094,
           backgroundColor: t.surface,
-          border: `1.5px solid ${t.border}`,
-          borderRadius: 24,
+          border: `2px solid ${t.borderStrong}`,
+          borderRadius: 26,
           boxShadow: t.shadow,
-          padding: 26,
-          overflow: 'hidden',
+          padding: 24,
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'space-between',
         }}
       >
-        <div style={{position: 'relative', width: '100%', height: 890}}>
-          <svg width="884" height="890" viewBox="0 0 884 890" style={{position: 'absolute', inset: 0}}>
+        <div style={{position: 'relative', width: 896, height: 928}}>
+          <svg width="896" height="928" viewBox="0 0 896 928" style={{position: 'absolute', inset: 0}}>
             {/* TG + WA -> Prompt */}
-            <OpsBezierWire p0={[215, 130]} p1={[215, 210]} p2={[380, 185]} p3={[380, 240]} color={t.amber} active speed={0.025} />
-            <OpsBezierWire p0={[665, 130]} p1={[665, 210]} p2={[500, 185]} p3={[500, 240]} color={t.emerald} active={waPulse} speed={0.02} phaseOffset={0.4} />
+            <OpsBezierWire p0={[218, 154]} p1={[218, 224]} p2={[380, 198]} p3={[380, 260]} color={t.amber} active speed={0.025} />
+            <OpsBezierWire p0={[678, 154]} p1={[678, 224]} p2={[516, 198]} p3={[516, 260]} color={t.emerald} active={waPulse} speed={0.02} phaseOffset={0.4} />
             {/* Prompt -> Terminal */}
-            <OpsBezierWire p0={[442, 345]} p1={[442, 395]} p2={[442, 395]} p3={[442, 440]} color={t.amber} active speed={0.03} phaseOffset={0.2} />
+            <OpsBezierWire p0={[448, 386]} p1={[448, 434]} p2={[448, 434]} p3={[448, 480]} color={t.amber} active speed={0.03} phaseOffset={0.2} />
             {/* Terminal -> VPS-1 & VPS-2 */}
-            <OpsBezierWire p0={[340, 545]} p1={[215, 575]} p2={[215, 620]} p3={[215, 665]} color={t.cyan} active speed={0.026} phaseOffset={0.15} />
-            <OpsBezierWire p0={[544, 545]} p1={[665, 575]} p2={[665, 620]} p3={[665, 665]} color={t.amber} active speed={0.026} phaseOffset={0.5} />
+            <OpsBezierWire p0={[340, 606]} p1={[194, 636]} p2={[194, 676]} p3={[194, 728]} color={t.cyan} active speed={0.026} phaseOffset={0.15} />
+            <OpsBezierWire p0={[556, 606]} p1={[702, 636]} p2={[702, 676]} p3={[702, 728]} color={t.amber} active speed={0.026} phaseOffset={0.5} />
             {/* Bidirectional SSH Tunnel between VPS-1 <-> VPS-2 */}
             <OpsBezierWire
-              p0={[395, 735]}
-              p1={[430, 735]}
-              p2={[454, 735]}
-              p3={[488, 735]}
+              p0={[382, 794]}
+              p1={[420, 794]}
+              p2={[476, 794]}
+              p3={[514, 794]}
               color={t.emerald}
               active
               bidirectional
               speed={0.035}
-              label="SSH LIVE"
+              label="SSH"
               labelBg="#FFFFFF"
               labelColor="#059669"
             />
           </svg>
 
-          {/* Row 1: Dual Ingress Bots */}
           <OpsNodeBox
             mode="light"
             title="Bot Telegram"
-            subtitle="tg-bot · @agency"
+            subtitle="tg-bot · rdev"
             badge="ONLINE"
             badgeColor={t.emerald}
             accent={t.amber}
             active
             iconImg="assets/ops/tg-official.svg"
-            style={{position: 'absolute', left: 20, top: 20, width: 390, opacity: pIng, transform: `translateY(${(1 - pIng) * 16}px)`}}
+            style={{position: 'absolute', left: 8, top: 28, width: 420, opacity: pIng, transform: `translateY(${(1 - pIng) * 16}px)`}}
           />
           <OpsNodeBox
             mode="light"
             title="Bot WhatsApp"
-            subtitle={waPulse ? 'wa-bot · ready' : 'wa-bot · standby'}
+            subtitle={waPulse ? 'wa-bot · sync' : 'wa-bot · standby'}
             badge={waPulse ? 'SYNC' : 'IDLE'}
             badgeColor={waPulse ? t.emerald : t.muted}
             accent={t.emerald}
             active={waPulse}
             iconImg="assets/ops/wa-official.svg"
-            style={{position: 'absolute', right: 20, top: 20, width: 390, opacity: pIng, transform: `translateY(${(1 - pIng) * 16}px)`}}
+            style={{position: 'absolute', right: 8, top: 28, width: 420, opacity: pIng, transform: `translateY(${(1 - pIng) * 16}px)`}}
           />
 
-          {/* Row 2: Prompt */}
           <OpsNodeBox
             mode="light"
             title="Unified Prompt"
-            subtitle="Instruksi Owner + Lampiran"
+            subtitle="Instruksi Owner + Media"
             badge="VIA TG"
             badgeColor={t.amber}
             accent={t.amber}
             active
             iconSvg={<PromptSvg color={t.amber} />}
-            style={{position: 'absolute', left: 212, top: 240, width: 460, opacity: pProm, transform: `scale(${0.94 + 0.06 * pProm})`}}
+            style={{position: 'absolute', left: 178, top: 260, width: 540, opacity: pProm, transform: `scale(${0.94 + 0.06 * pProm})`}}
           />
 
-          {/* Row 3: Terminal (Termux official) */}
           <OpsNodeBox
             mode="light"
             title="Terminal Bridge"
-            subtitle="Termux / Shell · Auto-Dispatch"
+            subtitle="Termux / Auto-Dispatch"
             badge="ACTIVE"
             badgeColor={t.amber}
             accent={t.amber}
             active
             iconImg="assets/ops/termux-official.svg"
-            style={{position: 'absolute', left: 192, top: 440, width: 500, opacity: pTerm, transform: `scale(${0.94 + 0.06 * pTerm})`}}
+            style={{position: 'absolute', left: 158, top: 480, width: 580, opacity: pTerm, transform: `scale(${0.94 + 0.06 * pTerm})`}}
           />
 
-          {/* Row 4: VPS-1 <-> VPS-2 */}
           <OpsNodeBox
             mode="light"
-            title="VPS-1 · Gateway"
-            subtitle="rdev · 2 vCPU · Bot Host"
-            badge="PORT 2000"
+            title="VPS-1 Gateway"
+            subtitle="rdev · 2 vCPU"
+            badge="GATEWAY"
             badgeColor={t.cyan}
             accent={t.cyan}
             active
             iconSvg={<ServerSvg color={t.cyan} />}
-            style={{position: 'absolute', left: 10, top: 665, width: 385, opacity: pVps, transform: `translateY(${(1 - pVps) * 18}px)`}}
+            style={{position: 'absolute', left: 8, top: 728, width: 374, opacity: pVps, transform: `translateY(${(1 - pVps) * 18}px)`}}
           />
           <OpsNodeBox
             mode="light"
-            title="VPS-2 · Worker"
-            subtitle="rhmtdev · 4 vCPU · 8GB RAM"
-            badge="AGY ENGINE"
+            title="VPS-2 Worker"
+            subtitle="rhmtdev · 4 vCPU"
+            badge="WORKER"
             badgeColor={t.amber}
             accent={t.amber}
             active
             iconSvg={<ServerSvg color={t.amber} />}
-            style={{position: 'absolute', right: 10, top: 665, width: 385, opacity: pVps, transform: `translateY(${(1 - pVps) * 18}px)`}}
+            style={{position: 'absolute', right: 8, top: 728, width: 374, opacity: pVps, transform: `translateY(${(1 - pVps) * 18}px)`}}
           />
         </div>
 
-        {/* Bottom Architectural Fact Pill inside Stage */}
         <div
           style={{
-            marginTop: 18,
-            padding: '18px 22px',
+            padding: '18px 24px',
             borderRadius: 16,
             backgroundColor: t.well,
-            border: `1.5px solid ${t.border}`,
+            border: `1.5px solid ${t.borderStrong}`,
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'space-between',
           }}
         >
-          <span style={{fontFamily: FONT.mono, fontWeight: 700, fontSize: 16, color: t.ink}}>
-            DUAL-NODE SYNC · REAL-TIME TUNNEL
+          <span style={{fontFamily: FONT.mono, fontWeight: 800, fontSize: 20, color: t.ink}}>
+            DUAL-VPS TUNNEL TERHUBUNG
           </span>
-          <span style={{fontFamily: FONT.mono, fontWeight: 700, fontSize: 15, color: t.emerald}}>
-            ZERO DATA DRIFT
+          <span style={{fontFamily: FONT.mono, fontWeight: 800, fontSize: 19, color: t.emerald}}>
+            SSH 2-ARAH
           </span>
         </div>
       </div>
 
       <OpsBottomTelemetryStrip
         mode="light"
-        command="ssh -o BatchMode=yes vps2 'agy run'"
-        status="VPS-1 Gateway tersinkron penuh ke VPS-2 Worker"
+        command="ssh vps1 <-> vps2 'dual-cluster sync'"
         accent={t.cyan}
       />
     </AbsoluteFill>
@@ -500,7 +481,7 @@ export const OpsBridgeScene: React.FC = () => {
 };
 
 /* ============================================================================
-   SCENE 3: AGENT (Dark Graphite) — AGY Agent + Tools + Multi-Account Pool
+   SCENE 3: AGENT (Dark Graphite) — AGY Agent + 4 Tools + Sub-nodes (Clean & Big)
    ============================================================================ */
 export const OpsAgentScene: React.FC = () => {
   const frame = useCurrentFrame();
@@ -508,22 +489,22 @@ export const OpsAgentScene: React.FC = () => {
   const t = OPS_THEME.dark;
 
   const pMain = pop(frame, 4, fps, 150);
-  const activeToolIdx = Math.floor(interpolate(frame, [45, 270], [0, 3.99], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'}));
-  const subPop = pop(frame, 55, fps, 140);
+  const activeToolIdx = Math.floor(interpolate(frame, [40, 290], [0, 3.99], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'}));
+  const subPop = pop(frame, 48, fps, 140);
   const haloRot = frame * 1.6;
-  const acctIdx = Math.floor(frame / 55) % 2;
+  const acctIdx = Math.floor(frame / 58) % 2;
 
   const tools = [
     {title: 'Code / Files', sub: 'Edit & baca repo', icon: <CodeSvg color={t.emerald} />, color: t.emerald},
-    {title: 'Web Search', sub: 'Riset & cek docs', icon: <SearchSvg color={t.cyan} />, color: t.cyan},
+    {title: 'Web Search', sub: 'Riset & verifikasi', icon: <SearchSvg color={t.cyan} />, color: t.cyan},
     {title: 'Bash / VPS-2', sub: 'Build, PM2 & test', icon: <TerminalSvg color={t.amber} />, color: t.amber},
-    {title: 'Subagent', sub: 'Delegasi paralel', icon: <GitBranchSvg color={t.emerald} />, color: t.emerald},
+    {title: 'Subagent', sub: 'Tugas paralel', icon: <GitBranchSvg color={t.emerald} />, color: t.emerald},
   ];
 
   return (
     <AbsoluteFill>
       <OpsCanvas mode="dark" />
-      <OpsHeader mode="dark" index={3} total={5} statusText="AGY WORKING" accent={t.amber} />
+      <OpsHeader mode="dark" index={3} total={5} statusText="WORKING" accent={t.amber} />
 
       <OpsHook
         mode="dark"
@@ -538,87 +519,83 @@ export const OpsAgentScene: React.FC = () => {
       <div
         style={{
           position: 'absolute',
-          top: 476,
-          left: 72,
-          right: 72,
-          height: 1084,
+          top: 472,
+          left: 68,
+          right: 68,
+          height: 1094,
           backgroundColor: t.surface,
-          border: `1.5px solid ${t.border}`,
-          borderRadius: 24,
+          border: `2px solid ${t.borderStrong}`,
+          borderRadius: 26,
           boxShadow: t.shadow,
           padding: 26,
           display: 'flex',
           flexDirection: 'column',
-          gap: 16,
+          justifyContent: 'space-between',
         }}
       >
-        {/* Hero AGY Agent Wide Card */}
+        {/* Hero AGY Agent Card */}
         <div
           style={{
             backgroundColor: t.surfaceRaised,
-            border: `2px solid ${t.amber}`,
-            borderRadius: 20,
-            padding: '22px 24px',
+            border: `2.5px solid ${t.amber}`,
+            borderRadius: 22,
+            padding: '24px 26px',
             display: 'flex',
             alignItems: 'center',
-            gap: 20,
+            gap: 22,
             opacity: pMain,
             transform: `translateY(${(1 - pMain) * 16}px)`,
           }}
         >
-          <div style={{position: 'relative', width: 84, height: 84, flexShrink: 0, display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-            <svg width="84" height="84" viewBox="0 0 84 84" style={{position: 'absolute', inset: 0, transform: `rotate(${haloRot}deg)`}}>
-              <circle cx="42" cy="42" r="38" fill="none" stroke={t.amber} strokeWidth="2.5" strokeDasharray="12 10" strokeOpacity="0.8" />
+          <div style={{position: 'relative', width: 96, height: 96, flexShrink: 0, display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+            <svg width="96" height="96" viewBox="0 0 96 96" style={{position: 'absolute', inset: 0, transform: `rotate(${haloRot}deg)`}}>
+              <circle cx="48" cy="48" r="44" fill="none" stroke={t.amber} strokeWidth="3" strokeDasharray="14 10" strokeOpacity="0.85" />
             </svg>
-            <div style={{width: 64, height: 64, borderRadius: 16, backgroundColor: t.well, border: `1.5px solid ${t.amber}`, display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-              <Img src={staticFile('assets/ops/agy-official.png')} style={{width: 44, height: 44, objectFit: 'contain'}} />
+            <div style={{width: 74, height: 74, borderRadius: 18, backgroundColor: t.well, border: `2px solid ${t.amber}`, display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+              <Img src={staticFile('assets/ops/agy-official.png')} style={{width: 52, height: 52, objectFit: 'contain'}} />
             </div>
           </div>
 
           <div style={{flex: 1, minWidth: 0}}>
             <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12}}>
-              <span style={{fontFamily: FONT.space, fontWeight: 800, fontSize: 30, color: t.ink}}>
+              <span style={{fontFamily: FONT.space, fontWeight: 800, fontSize: 36, color: t.ink}}>
                 AGY Orchestrator
               </span>
-              <span style={{fontFamily: FONT.mono, fontWeight: 800, fontSize: 13, color: t.amber, padding: '5px 12px', borderRadius: 999, backgroundColor: t.amberSoft, border: `1.5px solid ${t.amber}`}}>
+              <span style={{fontFamily: FONT.mono, fontWeight: 800, fontSize: 16, color: t.amber, padding: '6px 14px', borderRadius: 999, backgroundColor: t.amberSoft, border: `1.5px solid ${t.amber}`}}>
                 WORKING
               </span>
             </div>
-            <div style={{fontFamily: FONT.mono, fontSize: 16, color: t.ink2, marginTop: 8}}>
-              Tool aktif: <span style={{color: tools[activeToolIdx].color, fontWeight: 700}}>{tools[activeToolIdx].title}</span>
+            <div style={{fontFamily: FONT.mono, fontSize: 22, color: t.ink2, marginTop: 8}}>
+              Sedang jalan: <span style={{color: tools[activeToolIdx].color, fontWeight: 800}}>{tools[activeToolIdx].title}</span>
             </div>
           </div>
         </div>
 
         {/* Connector Fan SVG */}
-        <svg width="884" height="74" viewBox="0 0 884 74">
-          {[108, 330, 554, 776].map((tx, idx) => {
-            const isAct = idx === activeToolIdx;
-            const col = tools[idx].color;
-            return (
-              <OpsBezierWire
-                key={idx}
-                p0={[442, 4]}
-                p1={[442, 40]}
-                p2={[tx, 30]}
-                p3={[tx, 70]}
-                color={col}
-                active={isAct || idx < activeToolIdx}
-                speed={0.035}
-                phaseOffset={idx * 0.22}
-              />
-            );
-          })}
+        <svg width="892" height="82" viewBox="0 0 892 82">
+          {[218, 674].map((tx, idx) => (
+            <OpsBezierWire
+              key={idx}
+              p0={[446, 4]}
+              p1={[446, 46]}
+              p2={[tx, 34]}
+              p3={[tx, 78]}
+              color={idx === 0 ? t.amber : t.cyan}
+              active
+              speed={0.032}
+              phaseOffset={idx * 0.35}
+            />
+          ))}
         </svg>
 
-        {/* 4 Tool Nodes (2x2 clean grid) */}
-        <div style={{display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16}}>
+        {/* 4 Tool Nodes (Spacious 2x2 Grid with Large Readable Fonts) */}
+        <div style={{display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 22}}>
           {tools.map((tool, idx) => {
             const isAct = idx === activeToolIdx;
             const isDone = idx < activeToolIdx;
             const stText = isAct ? 'LIVE' : isDone ? 'DONE' : 'READY';
             const stCol = isAct ? t.amber : isDone ? t.emerald : t.muted;
-            const cardPop = pop(frame, 18 + idx * 9, fps, 150);
+            const cardPop = pop(frame, 18 + idx * 8, fps, 150);
             return (
               <OpsNodeBox
                 key={tool.title}
@@ -630,115 +607,61 @@ export const OpsAgentScene: React.FC = () => {
                 accent={tool.color}
                 active={isAct}
                 iconSvg={tool.icon}
-                style={{opacity: cardPop, transform: `translateY(${(1 - cardPop) * 16}px)`}}
+                style={{padding: '26px 24px', opacity: cardPop, transform: `translateY(${(1 - cardPop) * 16}px)`}}
               />
             );
           })}
         </div>
 
-        {/* Live Execution Trace Strip + Downward Feed Wires */}
-        <div
-          style={{
-            marginTop: 6,
-            backgroundColor: t.well,
-            border: `1.5px solid ${t.borderStrong}`,
-            borderRadius: 16,
-            padding: '18px 20px',
-            display: 'flex',
-            flexDirection: 'column',
-            gap: 12,
-          }}
-        >
-          <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between'}}>
-            <span style={{fontFamily: FONT.mono, fontWeight: 700, fontSize: 13, color: t.amber, letterSpacing: '0.08em'}}>
-              LIVE AGENT EXECUTION TRACE
-            </span>
-            <span style={{fontFamily: FONT.mono, fontWeight: 700, fontSize: 13, color: t.emerald}}>
-              STEP {activeToolIdx + 1} / 4
-            </span>
-          </div>
-          <div style={{display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10}}>
-            {[
-              {k: 'read_file / edit_file', v: 'Update kode & UI dashboard', ok: activeToolIdx >= 0},
-              {k: 'search_web', v: 'Verifikasi referensi teknis', ok: activeToolIdx >= 1},
-              {k: 'run_command (bash)', v: 'Test Playwright & PM2 check', ok: activeToolIdx >= 2},
-              {k: 'invoke_subagent', v: 'Paralel worker tanpa blokir', ok: activeToolIdx >= 3},
-            ].map((row, rIdx) => {
-              const cur = rIdx === activeToolIdx;
-              return (
-                <div
-                  key={row.k}
-                  style={{
-                    padding: '10px 14px',
-                    borderRadius: 12,
-                    backgroundColor: cur ? t.surfaceRaised : t.surface,
-                    border: `1.5px solid ${cur ? t.amber : row.ok ? t.emerald : t.border}`,
-                  }}
-                >
-                  <div style={{fontFamily: FONT.mono, fontWeight: 700, fontSize: 14, color: cur ? t.amber : row.ok ? t.emerald : t.muted}}>
-                    {cur ? '▶ ' : row.ok ? '✓ ' : '· '}
-                    {row.k}
-                  </div>
-                  <div style={{fontFamily: FONT.sans, fontSize: 15, color: t.ink2, marginTop: 4}}>
-                    {row.v}
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-
-        {/* Sub-nodes Connector SVG */}
-        <svg width="884" height="44" viewBox="0 0 884 44">
-          {[148, 442, 736].map((tx, idx) => (
+        {/* Sub-nodes Fan SVG */}
+        <svg width="892" height="72" viewBox="0 0 892 72">
+          {[148, 446, 744].map((tx, idx) => (
             <OpsBezierWire
               key={idx}
-              p0={[442, 4]}
-              p1={[442, 22]}
-              p2={[tx, 18]}
-              p3={[tx, 40]}
+              p0={[446, 4]}
+              p1={[446, 36]}
+              p2={[tx, 30]}
+              p3={[tx, 68]}
               color={idx === 0 ? t.cyan : idx === 1 ? t.amber : t.emerald}
               active
               speed={0.03}
-              phaseOffset={idx * 0.3}
+              phaseOffset={idx * 0.25}
             />
           ))}
         </svg>
 
-        {/* Sub-nodes Row: Model, Account Pool (AI Pro / Free), Context */}
+        {/* Bottom Trio: Model, Account Pool (AI Pro / Free), Context */}
         <div
           style={{
-            borderTop: `1.5px dashed ${t.borderStrong}`,
-            paddingTop: 18,
             display: 'grid',
             gridTemplateColumns: '1fr 1.15fr 0.95fr',
-            gap: 14,
+            gap: 16,
             opacity: subPop,
             transform: `translateY(${(1 - subPop) * 16}px)`,
           }}
         >
-          <div style={{backgroundColor: t.well, border: `1.5px solid ${t.cyan}`, borderRadius: 16, padding: '16px 18px'}}>
+          <div style={{backgroundColor: t.well, border: `2px solid ${t.cyan}`, borderRadius: 18, padding: '20px 20px'}}>
             <div style={{display: 'flex', alignItems: 'center', gap: 8}}>
-              <GeminiSparkSvg size={18} color={t.cyan} rotate={frame * 1.5} />
-              <span style={{fontFamily: FONT.mono, fontWeight: 700, fontSize: 13, color: t.cyan}}>MODEL</span>
+              <GeminiSparkSvg size={20} color={t.cyan} rotate={frame * 1.5} />
+              <span style={{fontFamily: FONT.mono, fontWeight: 800, fontSize: 16, color: t.cyan}}>MODEL</span>
             </div>
-            <div style={{fontFamily: FONT.space, fontWeight: 700, fontSize: 20, color: t.ink, marginTop: 8}}>
+            <div style={{fontFamily: FONT.space, fontWeight: 800, fontSize: 27, color: t.ink, marginTop: 10}}>
               Gemini 3.8 / 4
             </div>
-            <div style={{fontFamily: FONT.mono, fontSize: 14, color: t.muted, marginTop: 4}}>
-              Hydrogen & Flash
+            <div style={{fontFamily: FONT.mono, fontSize: 18, color: t.muted, marginTop: 6}}>
+              Flash & Hydrogen
             </div>
           </div>
 
-          <div style={{backgroundColor: t.well, border: `1.5px solid ${t.amber}`, borderRadius: 16, padding: '16px 18px'}}>
+          <div style={{backgroundColor: t.well, border: `2px solid ${t.amber}`, borderRadius: 18, padding: '20px 20px'}}>
             <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between'}}>
-              <span style={{fontFamily: FONT.mono, fontWeight: 700, fontSize: 13, color: t.amber}}>MULTI-AKUN</span>
+              <span style={{fontFamily: FONT.mono, fontWeight: 800, fontSize: 16, color: t.amber}}>POOL AKUN</span>
               <span
                 style={{
                   fontFamily: FONT.mono,
                   fontWeight: 800,
-                  fontSize: 11,
-                  padding: '2px 8px',
+                  fontSize: 15,
+                  padding: '3px 10px',
                   borderRadius: 999,
                   backgroundColor: acctIdx === 0 ? t.cyanSoft : t.surfaceRaised,
                   color: acctIdx === 0 ? t.cyan : t.ink2,
@@ -747,20 +670,20 @@ export const OpsAgentScene: React.FC = () => {
                 {acctIdx === 0 ? 'AI PRO' : 'FREE'}
               </span>
             </div>
-            <div style={{fontFamily: FONT.space, fontWeight: 700, fontSize: 20, color: t.ink, marginTop: 8}}>
-              {acctIdx === 0 ? 'rai · akun2 · rhmt' : 'anuadlh · 100%'}
+            <div style={{fontFamily: FONT.space, fontWeight: 800, fontSize: 27, color: t.ink, marginTop: 10}}>
+              {acctIdx === 0 ? '4 Akun AI Pro' : '1 Akun Free'}
             </div>
-            <div style={{fontFamily: FONT.mono, fontSize: 14, color: t.muted, marginTop: 4}}>
+            <div style={{fontFamily: FONT.mono, fontSize: 18, color: t.muted, marginTop: 6}}>
               Auto-rotasi kuota
             </div>
           </div>
 
-          <div style={{backgroundColor: t.well, border: `1.5px solid ${t.emerald}`, borderRadius: 16, padding: '16px 18px'}}>
-            <div style={{fontFamily: FONT.mono, fontWeight: 700, fontSize: 13, color: t.emerald}}>KONTEKS</div>
-            <div style={{fontFamily: FONT.space, fontWeight: 700, fontSize: 20, color: t.ink, marginTop: 8}}>
-              {Math.min(12, 3 + Math.floor(frame / 28))} Step Live
+          <div style={{backgroundColor: t.well, border: `2px solid ${t.emerald}`, borderRadius: 18, padding: '20px 20px'}}>
+            <div style={{fontFamily: FONT.mono, fontWeight: 800, fontSize: 16, color: t.emerald}}>KONTEKS</div>
+            <div style={{fontFamily: FONT.space, fontWeight: 800, fontSize: 27, color: t.ink, marginTop: 10}}>
+              {Math.min(12, 4 + Math.floor(frame / 28))} Step Live
             </div>
-            <div style={{fontFamily: FONT.mono, fontSize: 14, color: t.muted, marginTop: 4}}>
+            <div style={{fontFamily: FONT.mono, fontSize: 18, color: t.muted, marginTop: 6}}>
               Stream JSONL
             </div>
           </div>
@@ -770,7 +693,6 @@ export const OpsAgentScene: React.FC = () => {
       <OpsBottomTelemetryStrip
         mode="dark"
         command={`tool -> ${tools[activeToolIdx].title.toLowerCase()} (auto-verify)`}
-        status="Pool: 4 akun AI Pro + 1 Free tersinkron"
         accent={t.amber}
       />
     </AbsoluteFill>
@@ -778,7 +700,7 @@ export const OpsAgentScene: React.FC = () => {
 };
 
 /* ============================================================================
-   SCENE 4: WEB DASHBOARD (Warm Paper) — Ops Deck + Task Map Live UI
+   SCENE 4: WEB DASHBOARD (Warm Paper) — Ops Deck + Task Map Live UI (Readable!)
    ============================================================================ */
 export const OpsWebDashboardScene: React.FC = () => {
   const frame = useCurrentFrame();
@@ -791,15 +713,15 @@ export const OpsWebDashboardScene: React.FC = () => {
   const barProg = spring({frame: frame - 18, fps, config: {damping: 16, stiffness: 90}});
 
   const quotas = [
-    {alias: 'rai', plan: 'AI Pro', pct: 86, status: 'gemini siap', col: t.amber},
-    {alias: 'akun2', plan: 'AI Pro', pct: 93, status: 'siap', col: t.emerald},
-    {alias: 'anuadlh', plan: 'Free', pct: 100, status: 'siap', col: t.emerald},
+    {alias: 'rai', plan: 'AI Pro', pct: 86, col: t.amber},
+    {alias: 'akun2', plan: 'AI Pro', pct: 93, col: t.emerald},
+    {alias: 'anuadlh', plan: 'Free', pct: 100, col: t.emerald},
   ];
 
   return (
     <AbsoluteFill>
       <OpsCanvas mode="light" />
-      <OpsHeader mode="light" index={4} total={5} statusText="DASHBOARD LIVE" accent={t.emerald} />
+      <OpsHeader mode="light" index={4} total={5} statusText="WEB LIVE" accent={t.emerald} />
 
       <OpsHook
         mode="light"
@@ -814,65 +736,63 @@ export const OpsWebDashboardScene: React.FC = () => {
       <div
         style={{
           position: 'absolute',
-          top: 476,
-          left: 72,
-          right: 72,
-          height: 1084,
+          top: 472,
+          left: 68,
+          right: 68,
+          height: 1094,
           display: 'flex',
           flexDirection: 'column',
-          gap: 20,
+          gap: 22,
         }}
       >
         {/* Top Mock Panel: Ops Deck Telemetry + Quota Matrix */}
         <div
           style={{
             backgroundColor: t.surface,
-            border: `1.5px solid ${t.border}`,
-            borderRadius: 22,
-            padding: 24,
+            border: `2px solid ${t.borderStrong}`,
+            borderRadius: 24,
+            padding: 26,
             boxShadow: t.shadow,
             opacity: p1,
             transform: `translateY(${(1 - p1) * 18}px)`,
           }}
         >
-          <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 16}}>
-            <div style={{display: 'flex', alignItems: 'center', gap: 10}}>
-              <GlobeSvg color={t.ink} />
-              <span style={{fontFamily: FONT.space, fontWeight: 800, fontSize: 24, color: t.ink}}>
-                Ops Deck · Cluster Control
+          <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 18}}>
+            <div style={{display: 'flex', alignItems: 'center', gap: 12}}>
+              <GlobeSvg color={t.ink} size={34} />
+              <span style={{fontFamily: FONT.space, fontWeight: 800, fontSize: 32, color: t.ink}}>
+                Ops Deck
               </span>
             </div>
-            <span style={{fontFamily: FONT.mono, fontWeight: 700, fontSize: 13, color: t.emerald, backgroundColor: t.emeraldSoft, padding: '5px 12px', borderRadius: 999}}>
+            <span style={{fontFamily: FONT.mono, fontWeight: 800, fontSize: 17, color: t.emerald, backgroundColor: t.emeraldSoft, padding: '6px 14px', borderRadius: 999}}>
               KLUSTER SEHAT
             </span>
           </div>
 
           {/* Animated SVG CPU / RAM Chart */}
-          <div style={{backgroundColor: t.well, border: `1.5px solid ${t.border}`, borderRadius: 16, padding: '14px 16px', marginBottom: 18}}>
-            <div style={{display: 'flex', justifyContent: 'space-between', fontFamily: FONT.mono, fontSize: 14, color: t.ink2, marginBottom: 8}}>
-              <span>Telemetri VPS-2 (CPU + RAM)</span>
-              <span style={{fontWeight: 700, color: t.amber}}>CPU {Math.round(8 + 9 * chartProg)}% · RAM 13%</span>
+          <div style={{backgroundColor: t.well, border: `1.5px solid ${t.borderStrong}`, borderRadius: 18, padding: '16px 18px', marginBottom: 18}}>
+            <div style={{display: 'flex', justifyContent: 'space-between', fontFamily: FONT.mono, fontSize: 19, color: t.ink2, marginBottom: 10}}>
+              <span style={{fontWeight: 700}}>Telemetri VPS-2</span>
+              <span style={{fontWeight: 800, color: t.amber}}>CPU {Math.round(8 + 9 * chartProg)}% · RAM 13%</span>
             </div>
-            <svg width="852" height="120" viewBox="0 0 852 120">
-              {[25, 60, 95].map((y) => (
-                <line key={y} x1="0" y1={y} x2="852" y2={y} stroke={t.border} strokeWidth="1" />
+            <svg width="852" height="125" viewBox="0 0 852 125">
+              {[25, 62, 100].map((y) => (
+                <line key={y} x1="0" y1={y} x2="852" y2={y} stroke={t.borderStrong} strokeWidth="1" strokeOpacity="0.45" />
               ))}
-              {/* RAM Line */}
               <path
-                d="M 0 88 L 140 86 L 280 87 L 420 84 L 560 85 L 700 82 L 852 80"
+                d="M 0 92 L 140 90 L 280 91 L 420 88 L 560 89 L 700 85 L 852 84"
                 fill="none"
                 stroke={t.cyan}
-                strokeWidth="3.5"
+                strokeWidth="4.5"
                 strokeDasharray="920"
                 strokeDashoffset={920 * (1 - chartProg)}
                 strokeLinecap="round"
               />
-              {/* CPU Line */}
               <path
-                d="M 0 100 L 120 96 L 240 102 L 360 72 L 480 82 L 600 58 L 720 74 L 852 64"
+                d="M 0 105 L 120 100 L 240 108 L 360 72 L 480 84 L 600 54 L 720 74 L 852 62"
                 fill="none"
                 stroke={t.amber}
-                strokeWidth="4"
+                strokeWidth="5"
                 strokeDasharray="960"
                 strokeDashoffset={960 * (1 - chartProg)}
                 strokeLinecap="round"
@@ -880,47 +800,47 @@ export const OpsWebDashboardScene: React.FC = () => {
             </svg>
           </div>
 
-          {/* Quota Rows */}
-          <div style={{display: 'flex', flexDirection: 'column', gap: 10}}>
+          {/* Thick Readable Quota Rows */}
+          <div style={{display: 'flex', flexDirection: 'column', gap: 12}}>
             {quotas.map((q) => (
               <div
                 key={q.alias}
                 style={{
                   display: 'grid',
-                  gridTemplateColumns: '190px 1fr 135px',
+                  gridTemplateColumns: '240px 1fr 90px',
                   alignItems: 'center',
-                  gap: 14,
-                  padding: '10px 14px',
+                  gap: 16,
+                  padding: '12px 18px',
                   backgroundColor: t.well,
-                  borderRadius: 12,
-                  border: `1px solid ${t.border}`,
+                  borderRadius: 14,
+                  border: `1.5px solid ${t.border}`,
                 }}
               >
-                <div style={{display: 'flex', alignItems: 'center', gap: 8}}>
-                  <span style={{fontFamily: FONT.mono, fontWeight: 800, fontSize: 16, color: t.ink}}>{q.alias}</span>
-                  <span style={{fontFamily: FONT.mono, fontWeight: 700, fontSize: 12, padding: '2px 8px', borderRadius: 999, backgroundColor: q.plan === 'AI Pro' ? t.cyanSoft : '#FFFFFF', color: q.plan === 'AI Pro' ? t.cyan : t.muted, border: `1px solid ${t.border}`}}>
+                <div style={{display: 'flex', alignItems: 'center', gap: 10}}>
+                  <span style={{fontFamily: FONT.mono, fontWeight: 800, fontSize: 22, color: t.ink}}>{q.alias}</span>
+                  <span style={{fontFamily: FONT.mono, fontWeight: 800, fontSize: 16, padding: '3px 10px', borderRadius: 999, backgroundColor: q.plan === 'AI Pro' ? t.cyanSoft : '#FFFFFF', color: q.plan === 'AI Pro' ? t.cyan : t.muted, border: `1px solid ${t.border}`}}>
                     {q.plan}
                   </span>
                 </div>
-                <div style={{height: 10, borderRadius: 999, backgroundColor: '#DED9CC', overflow: 'hidden'}}>
+                <div style={{height: 14, borderRadius: 999, backgroundColor: '#DAD4C6', overflow: 'hidden'}}>
                   <div style={{height: '100%', width: `${q.pct * barProg}%`, backgroundColor: q.col, borderRadius: 999}} />
                 </div>
-                <span style={{fontFamily: FONT.mono, fontWeight: 700, fontSize: 13, color: q.col, textAlign: 'right'}}>
-                  {q.pct}% · {q.status}
+                <span style={{fontFamily: FONT.mono, fontWeight: 800, fontSize: 22, color: q.col, textAlign: 'right'}}>
+                  {q.pct}%
                 </span>
               </div>
             ))}
           </div>
         </div>
 
-        {/* Bottom Mock Panel: Task Map n8n Real-Time Stream */}
+        {/* Bottom Mock Panel: Task Map Real-Time Stream */}
         <div
           style={{
             flex: 1,
             backgroundColor: '#0E1117',
-            border: `2px solid #262C39`,
-            borderRadius: 22,
-            padding: 24,
+            border: `2.5px solid #2A3140`,
+            borderRadius: 24,
+            padding: 26,
             boxShadow: t.shadowSm,
             opacity: p2,
             transform: `translateY(${(1 - p2) * 18}px)`,
@@ -930,58 +850,58 @@ export const OpsWebDashboardScene: React.FC = () => {
           }}
         >
           <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between'}}>
-            <span style={{fontFamily: FONT.space, fontWeight: 700, fontSize: 24, color: '#F4F6FA'}}>
-              Task Map · Workflow Aliran Agen
+            <span style={{fontFamily: FONT.space, fontWeight: 800, fontSize: 30, color: '#F4F6FA'}}>
+              Task Map · Workflow
             </span>
-            <span style={{fontFamily: FONT.mono, fontWeight: 700, fontSize: 13, color: '#10B981', backgroundColor: 'rgba(16,185,129,0.16)', padding: '5px 12px', borderRadius: 999}}>
+            <span style={{fontFamily: FONT.mono, fontWeight: 800, fontSize: 16, color: '#10B981', backgroundColor: 'rgba(16,185,129,0.16)', padding: '6px 14px', borderRadius: 999}}>
               ● SSE STREAM
             </span>
           </div>
 
-          <div style={{position: 'relative', height: 220}}>
-            <svg width="888" height="220" viewBox="0 0 888 220" style={{position: 'absolute', inset: 0}}>
-              <OpsBezierWire p0={[150, 110]} p1={[185, 110]} p2={[195, 110]} p3={[230, 110]} color="#F59E0B" active speed={0.032} />
-              <OpsBezierWire p0={[375, 110]} p1={[410, 110]} p2={[420, 110]} p3={[455, 110]} color="#38BDF8" active speed={0.032} phaseOffset={0.33} />
-              <OpsBezierWire p0={[650, 110]} p1={[685, 110]} p2={[695, 110]} p3={[730, 110]} color="#10B981" active speed={0.032} phaseOffset={0.66} />
+          <div style={{position: 'relative', width: 892, height: 220}}>
+            <svg width="892" height="220" viewBox="0 0 892 220" style={{position: 'absolute', inset: 0}}>
+              <OpsBezierWire p0={[178, 110]} p1={[202, 110]} p2={[208, 110]} p3={[234, 110]} color="#F59E0B" active speed={0.032} />
+              <OpsBezierWire p0={[410, 110]} p1={[432, 110]} p2={[438, 110]} p3={[464, 110]} color="#38BDF8" active speed={0.032} phaseOffset={0.33} />
+              <OpsBezierWire p0={[654, 110]} p1={[678, 110]} p2={[684, 110]} p3={[710, 110]} color="#10B981" active speed={0.032} phaseOffset={0.66} />
             </svg>
 
             {[
-              {x: 10, w: 145, img: 'assets/ops/tg-official.svg', label: 'Bot TG', col: '#10B981'},
-              {x: 230, w: 145, img: 'assets/ops/termux-official.svg', label: 'Termux', col: '#F59E0B'},
-              {x: 455, w: 195, img: 'assets/ops/agy-official.png', label: 'AGY Agent', col: '#38BDF8'},
-              {x: 730, w: 148, img: '', label: 'Output', col: '#10B981'},
+              {x: 4, w: 174, img: 'assets/ops/tg-official.svg', label: 'Bot TG', col: '#10B981'},
+              {x: 234, w: 176, img: 'assets/ops/termux-official.svg', label: 'Termux', col: '#F59E0B'},
+              {x: 464, w: 190, img: 'assets/ops/agy-official.png', label: 'AGY', col: '#38BDF8'},
+              {x: 710, w: 176, img: '', label: 'Output', col: '#10B981'},
             ].map((n) => (
               <div
                 key={n.label}
                 style={{
                   position: 'absolute',
                   left: n.x,
-                  top: 52,
+                  top: 34,
                   width: n.w,
-                  height: 116,
-                  borderRadius: 16,
+                  height: 152,
+                  borderRadius: 18,
                   backgroundColor: '#161A23',
-                  border: `2px solid ${n.col}`,
+                  border: `2.5px solid ${n.col}`,
                   display: 'flex',
                   flexDirection: 'column',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  gap: 10,
+                  gap: 12,
                 }}
               >
                 {n.img ? (
-                  <Img src={staticFile(n.img)} style={{width: 40, height: 40, objectFit: 'contain', borderRadius: 8}} />
+                  <Img src={staticFile(n.img)} style={{width: 54, height: 54, objectFit: 'contain', borderRadius: 10}} />
                 ) : (
-                  <CheckSvg color="#10B981" size={38} />
+                  <CheckSvg color="#10B981" size={48} />
                 )}
-                <span style={{fontFamily: FONT.mono, fontWeight: 700, fontSize: 15, color: '#F4F6FA'}}>{n.label}</span>
+                <span style={{fontFamily: FONT.mono, fontWeight: 800, fontSize: 21, color: '#F4F6FA'}}>{n.label}</span>
               </div>
             ))}
           </div>
 
-          <div style={{fontFamily: FONT.mono, fontSize: 15, color: '#B5BECA', display: 'flex', justifyContent: 'space-between'}}>
-            <span>Panah menyala otomatis sesuai node yang aktif</span>
-            <span style={{color: '#F59E0B', fontWeight: 700}}>168.144.101.145</span>
+          <div style={{fontFamily: FONT.mono, fontSize: 19, color: '#CBD3DF', display: 'flex', justifyContent: 'space-between'}}>
+            <span>Panah menyala real-time</span>
+            <span style={{color: '#F59E0B', fontWeight: 800}}>rhmt-dashboard</span>
           </div>
         </div>
       </div>
@@ -989,7 +909,6 @@ export const OpsWebDashboardScene: React.FC = () => {
       <OpsBottomTelemetryStrip
         mode="light"
         command="GET /api/task-map/stream -> 200 OK"
-        status="Monitoring CPU, RAM, Kuota AI Pro/Free & SSE Workflow"
         accent={t.emerald}
       />
     </AbsoluteFill>
@@ -997,7 +916,7 @@ export const OpsWebDashboardScene: React.FC = () => {
 };
 
 /* ============================================================================
-   SCENE 5: BRANDING (Dark Graphite) — Rohmatulloh / rhmt ofc / rhmt.biz.id
+   SCENE 5: BRANDING (Dark Graphite) — Rahmat / rhmt ofc + PP Dev Profile
    ============================================================================ */
 export const OpsBrandScene: React.FC = () => {
   const frame = useCurrentFrame();
@@ -1005,20 +924,21 @@ export const OpsBrandScene: React.FC = () => {
   const t = OPS_THEME.dark;
 
   const pHero = pop(frame, 4, fps, 145);
-  const pStack = pop(frame, 20, fps, 145);
-  const pLinks = pop(frame, 36, fps, 140);
+  const pStack = pop(frame, 18, fps, 145);
+  const pLinks = pop(frame, 32, fps, 140);
   const ctaPulse = 1 + 0.03 * Math.sin(frame * 0.16);
   const sparkRot = frame * 1.3;
+  const ringRot = frame * 0.9;
 
   const pillars = [
-    {k: 'FULLSTACK', v: 'Web & UI Anti-Slop', col: t.amber, icon: <CodeSvg color={t.amber} />},
-    {k: 'DEVOPS LINUX', v: 'Dual-VPS & PM2', col: t.cyan, icon: <ServerSvg color={t.cyan} />},
-    {k: 'AGENTIC AI', v: 'Bot & Remotion Auto', col: t.emerald, icon: <GeminiSparkSvg size={24} color={t.emerald} rotate={sparkRot} />},
+    {k: 'FULLSTACK', v: 'Web Anti-Slop', col: t.amber, icon: <CodeSvg color={t.amber} size={30} />},
+    {k: 'DEVOPS', v: 'Dual-VPS & PM2', col: t.cyan, icon: <ServerSvg color={t.cyan} size={30} />},
+    {k: 'AGENTIC AI', v: 'Bot & Remotion', col: t.emerald, icon: <GeminiSparkSvg size={28} color={t.emerald} rotate={sparkRot} />},
   ];
 
   const channels = [
     {label: 'PORTOFOLIO', value: 'rhmt.biz.id', accent: t.amber},
-    {label: 'GITHUB', value: 'github.com/rhmt-ofc', accent: t.cyan},
+    {label: 'GITHUB', value: 'rhmt-ofc', accent: t.cyan},
     {label: 'TIKTOK', value: '@rhmtofc', accent: t.emerald},
     {label: 'KOMUNITAS', value: 'RHMT OFC', accent: t.amber},
   ];
@@ -1032,7 +952,7 @@ export const OpsBrandScene: React.FC = () => {
         mode="dark"
         kicker="05 // SYSTEM ARCHITECT"
         headlineTop="Diracik mandiri oleh"
-        highlight="Rohmatulloh · rhmt ofc"
+        highlight="Rahmat · rhmt ofc"
         accent={t.amber}
       />
 
@@ -1041,65 +961,58 @@ export const OpsBrandScene: React.FC = () => {
       <div
         style={{
           position: 'absolute',
-          top: 476,
-          left: 72,
-          right: 72,
-          height: 1084,
+          top: 472,
+          left: 68,
+          right: 68,
+          height: 1094,
           display: 'flex',
           flexDirection: 'column',
-          gap: 20,
+          gap: 22,
         }}
       >
-        {/* Identity Dossier Card */}
+        {/* Identity Hero Card with Official PP Dev Portrait */}
         <div
           style={{
             backgroundColor: t.surface,
-            border: `2px solid ${t.amber}`,
-            borderRadius: 24,
+            border: `2.5px solid ${t.amber}`,
+            borderRadius: 26,
             padding: 28,
             boxShadow: t.shadow,
             opacity: pHero,
             transform: `translateY(${(1 - pHero) * 20}px)`,
           }}
         >
-          <div style={{display: 'flex', alignItems: 'center', gap: 22}}>
-            <div
-              style={{
-                width: 108,
-                height: 108,
-                borderRadius: 24,
-                backgroundColor: t.amber,
-                color: '#090B0E',
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-                justifyContent: 'center',
-                flexShrink: 0,
-                boxShadow: '0 8px 0 rgba(0,0,0,0.45)',
-              }}
-            >
-              <span style={{fontFamily: FONT.mono, fontWeight: 800, fontSize: 38, lineHeight: 1}}>
-                RH
-              </span>
-              <span style={{fontFamily: FONT.mono, fontWeight: 700, fontSize: 13, marginTop: 4, letterSpacing: '0.08em'}}>
-                OFC
-              </span>
+          <div style={{display: 'flex', alignItems: 'center', gap: 26}}>
+            <div style={{position: 'relative', width: 176, height: 176, flexShrink: 0, display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+              <svg width="176" height="176" viewBox="0 0 176 176" style={{position: 'absolute', inset: 0, transform: `rotate(${ringRot}deg)`}}>
+                <circle cx="88" cy="88" r="84" fill="none" stroke={t.amber} strokeWidth="3.5" strokeDasharray="18 12" />
+              </svg>
+              <Img
+                src={staticFile('assets/ops/pp-dev.png')}
+                style={{
+                  width: 156,
+                  height: 156,
+                  borderRadius: '50%',
+                  objectFit: 'cover',
+                  border: `3px solid ${t.ink}`,
+                }}
+              />
             </div>
 
             <div style={{flex: 1}}>
-              <div style={{fontFamily: FONT.mono, fontWeight: 700, fontSize: 14, color: t.amber, letterSpacing: '0.1em'}}>
-                PELAJAR MA · INDEPENDENT BUILDER
+              <div style={{fontFamily: FONT.mono, fontWeight: 800, fontSize: 18, color: t.amber, letterSpacing: '0.07em'}}>
+                PELAJAR MA · BUILDER
               </div>
-              <div style={{fontFamily: FONT.space, fontWeight: 800, fontSize: 38, color: t.ink, marginTop: 6, lineHeight: 1.1}}>
-                R_HMT OFC
+              <div style={{fontFamily: FONT.space, fontWeight: 800, fontSize: 44, color: t.ink, marginTop: 6, lineHeight: 1.08}}>
+                Rahmat · R_HMT
               </div>
-              <div style={{fontFamily: FONT.sans, fontSize: 20, color: t.ink2, marginTop: 10, lineHeight: 1.35}}>
-                Eksplorasi mandiri web engineering, infrastruktur server Linux, dan sistem AI agentic.
+              <div style={{fontFamily: FONT.sans, fontSize: 23, color: t.ink2, marginTop: 10, lineHeight: 1.35}}>
+                Ngulik fullstack web, DevOps Linux, dan ekosistem AI agentic mandiri.
               </div>
             </div>
           </div>
 
-          {/* 3 Capability Pillars */}
+          {/* 3 Clean Pillar Cards */}
           <div
             style={{
               marginTop: 26,
@@ -1115,19 +1028,19 @@ export const OpsBrandScene: React.FC = () => {
                 key={pil.k}
                 style={{
                   backgroundColor: t.well,
-                  border: `1.5px solid ${t.border}`,
-                  borderRadius: 16,
-                  padding: '16px 16px',
+                  border: `1.5px solid ${t.borderStrong}`,
+                  borderRadius: 18,
+                  padding: '18px 18px',
                 }}
               >
                 <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 10}}>
                   {pil.icon}
-                  <span style={{width: 8, height: 8, borderRadius: '50%', backgroundColor: pil.col}} />
+                  <span style={{width: 10, height: 10, borderRadius: '50%', backgroundColor: pil.col}} />
                 </div>
-                <div style={{fontFamily: FONT.mono, fontWeight: 800, fontSize: 13, color: pil.col, letterSpacing: '0.06em'}}>
+                <div style={{fontFamily: FONT.mono, fontWeight: 800, fontSize: 15, color: pil.col, letterSpacing: '0.05em'}}>
                   {pil.k}
                 </div>
-                <div style={{fontFamily: FONT.space, fontWeight: 700, fontSize: 19, color: t.ink, marginTop: 6}}>
+                <div style={{fontFamily: FONT.space, fontWeight: 800, fontSize: 24, color: t.ink, marginTop: 6}}>
                   {pil.v}
                 </div>
               </div>
@@ -1140,8 +1053,8 @@ export const OpsBrandScene: React.FC = () => {
           style={{
             flex: 1,
             backgroundColor: t.surface,
-            border: `1.5px solid ${t.border}`,
-            borderRadius: 24,
+            border: `2px solid ${t.borderStrong}`,
+            borderRadius: 26,
             padding: 28,
             boxShadow: t.shadowSm,
             opacity: pLinks,
@@ -1151,66 +1064,34 @@ export const OpsBrandScene: React.FC = () => {
             justifyContent: 'space-between',
           }}
         >
-          <div>
-            <div style={{fontFamily: FONT.mono, fontWeight: 700, fontSize: 15, color: t.muted, letterSpacing: '0.08em', marginBottom: 16}}>
-              EKOSISTEM & KANAL RESMI
-            </div>
-
-            <div style={{display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16}}>
-              {channels.map((ch) => (
-                <div
-                  key={ch.label}
-                  style={{
-                    backgroundColor: t.surfaceRaised,
-                    border: `1.5px solid ${t.borderStrong}`,
-                    borderRadius: 16,
-                    padding: '18px 20px',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    gap: 6,
-                  }}
-                >
-                  <span style={{fontFamily: FONT.mono, fontWeight: 700, fontSize: 13, color: ch.accent, letterSpacing: '0.08em'}}>
-                    {ch.label}
-                  </span>
-                  <span style={{fontFamily: FONT.space, fontWeight: 800, fontSize: 25, color: t.ink}}>
-                    {ch.value}
-                  </span>
-                </div>
-              ))}
-            </div>
-
-            {/* Architectural Philosophy Strip (balances middle space cleanly) */}
-            <div
-              style={{
-                marginTop: 18,
-                padding: '18px 20px',
-                borderRadius: 16,
-                backgroundColor: t.well,
-                border: `1.5px dashed ${t.borderStrong}`,
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'space-between',
-                gap: 14,
-              }}
-            >
-              <div>
-                <div style={{fontFamily: FONT.mono, fontWeight: 700, fontSize: 13, color: t.emerald, letterSpacing: '0.08em'}}>
-                  DESIGN & OPS PRINCIPLE
-                </div>
-                <div style={{fontFamily: FONT.sans, fontWeight: 600, fontSize: 19, color: t.ink, marginTop: 4}}>
-                  Dari chat di HP, orkestrasi 2 VPS real-time tanpa template pasaran.
-                </div>
+          <div style={{display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16}}>
+            {channels.map((ch) => (
+              <div
+                key={ch.label}
+                style={{
+                  backgroundColor: t.surfaceRaised,
+                  border: `1.5px solid ${t.borderStrong}`,
+                  borderRadius: 18,
+                  padding: '22px 22px',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: 6,
+                }}
+              >
+                <span style={{fontFamily: FONT.mono, fontWeight: 800, fontSize: 16, color: ch.accent, letterSpacing: '0.07em'}}>
+                  {ch.label}
+                </span>
+                <span style={{fontFamily: FONT.space, fontWeight: 800, fontSize: 32, color: t.ink}}>
+                  {ch.value}
+                </span>
               </div>
-              <GeminiSparkSvg size={32} color={t.amber} rotate={sparkRot} />
-            </div>
+            ))}
           </div>
 
           <div
             style={{
-              marginTop: 18,
-              padding: '22px 26px',
-              borderRadius: 18,
+              padding: '24px 28px',
+              borderRadius: 20,
               backgroundColor: t.amber,
               color: '#090B0E',
               display: 'flex',
@@ -1220,18 +1101,18 @@ export const OpsBrandScene: React.FC = () => {
             }}
           >
             <div>
-              <div style={{fontFamily: FONT.space, fontWeight: 800, fontSize: 30, lineHeight: 1.1}}>
+              <div style={{fontFamily: FONT.space, fontWeight: 800, fontSize: 36, lineHeight: 1.1}}>
                 Follow @rhmtofc
               </div>
-              <div style={{fontFamily: FONT.mono, fontWeight: 700, fontSize: 16, marginTop: 4}}>
-                Kunjungi rhmt.biz.id · Bedah Arsitektur Berikutnya
+              <div style={{fontFamily: FONT.mono, fontWeight: 800, fontSize: 20, marginTop: 6}}>
+                Cek rhmt.biz.id · Bedah Arsitektur Lainnya
               </div>
             </div>
             <div
               style={{
-                width: 54,
-                height: 54,
-                borderRadius: 14,
+                width: 62,
+                height: 62,
+                borderRadius: 16,
                 backgroundColor: '#090B0E',
                 color: t.amber,
                 display: 'flex',
@@ -1239,7 +1120,7 @@ export const OpsBrandScene: React.FC = () => {
                 justifyContent: 'center',
                 fontFamily: FONT.mono,
                 fontWeight: 800,
-                fontSize: 28,
+                fontSize: 32,
               }}
             >
               →
@@ -1251,7 +1132,6 @@ export const OpsBrandScene: React.FC = () => {
       <OpsBottomTelemetryStrip
         mode="dark"
         command="open https://rhmt.biz.id · github.com/rhmt-ofc"
-        status="RHMT OFC · Build in Public, Zero AI Slop"
         accent={t.amber}
       />
     </AbsoluteFill>
