@@ -712,85 +712,80 @@
    "words": [
     {
      "text": "E-Rekap,",
-     "start": 53.008,
-     "end": 54.04
+     "start": 53.052,
+     "end": 54.121
     },
     {
      "text": "solusi",
-     "start": 54.04,
-     "end": 54.561
+     "start": 54.121,
+     "end": 54.548
     },
     {
      "text": "absensi",
-     "start": 54.561,
-     "end": 55.168
+     "start": 54.548,
+     "end": 55.047
     },
     {
      "text": "modern",
-     "start": 55.168,
-     "end": 55.689
+     "start": 55.047,
+     "end": 55.474
     },
     {
      "text": "berstandar",
-     "start": 55.689,
-     "end": 57.075
+     "start": 55.474,
+     "end": 56.186
     },
     {
      "text": "sekolah.",
-     "start": 57.075,
-     "end": 57.942
+     "start": 56.186,
+     "end": 57.522
     }
    ],
-   "start": 53.008,
-   "end": 57.942
+   "start": 53.052,
+   "end": 57.522
   },
   {
    "id": 18,
    "scene": "s5-brand",
    "bg": "dark",
    "lines": [
-    "Dikembangkan oleh rhmt",
-    "ofc, cek detailnya di"
+    "Dikembangkan oleh Rahmat,",
+    "cek detailnya di"
    ],
    "words": [
     {
      "text": "Dikembangkan",
-     "start": 57.942,
-     "end": 58.983
+     "start": 57.522,
+     "end": 58.933
     },
     {
      "text": "oleh",
-     "start": 58.983,
-     "end": 59.331
+     "start": 58.933,
+     "end": 59.218
     },
     {
-     "text": "rhmt",
-     "start": 59.331,
-     "end": 60.152
-    },
-    {
-     "text": "ofc,",
-     "start": 60.152,
-     "end": 60.672
+     "text": "Rahmat,",
+     "start": 59.218,
+     "end": 59.858
     },
     {
      "text": "cek",
-     "start": 60.672,
-     "end": 60.932
+     "start": 59.858,
+     "end": 60.072
     },
     {
      "text": "detailnya",
-     "start": 60.932,
-     "end": 61.713
+     "start": 60.072,
+     "end": 60.948
     },
     {
      "text": "di",
-     "start": 61.713,
-     "end": 61.887
+     "start": 60.948,
+     "end": 61.09
     }
    ],
-   "start": 57.942,
-   "end": 61.887
+   "start": 57.522,
+   "end": 61.09
   },
   {
    "id": 19,
@@ -802,12 +797,12 @@
    "words": [
     {
      "text": "rhmt.biz.id.",
-     "start": 61.887,
-     "end": 63.134
+     "start": 61.09,
+     "end": 62.174
     }
    ],
-   "start": 61.887,
-   "end": 63.134
+   "start": 61.09,
+   "end": 62.174
   }
  ]
 }

@@ -79,11 +79,11 @@ SCENES = [
         "bg": "dark",
         "text": (
             "E-Rekap, solusi absensi modern berstandar sekolah. "
-            "Dikembangkan oleh rhmt ofc, cek detailnya di rhmt.biz.id."
+            "Dikembangkan oleh Rahmat, cek detailnya di rhmt.biz.id."
         ),
         "tts_text": (
             "E-Rekap, solusi absensi modern berstandar sekolah. "
-            "Dikembangkan oleh R H M T O F C, cek detailnya di r h m t dot biz dot id."
+            "Dikembangkan oleh Rahmat, cek detailnya di r h m t dot biz dot id."
         ),
     },
 ]
