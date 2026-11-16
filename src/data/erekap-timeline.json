@@ -1,0 +1,62 @@
+{
+ "fps": 30,
+ "estimated": false,
+ "total": 64.584,
+ "scenes": [
+  {
+   "id": "s1-hook",
+   "title": "Hook & Identitas E-Rekap",
+   "bg": "dark",
+   "audio": "audio/vo-erekap/s1-hook.mp3",
+   "start": 0.0,
+   "duration": 12.164,
+   "vo_start": 0.55,
+   "vo_end": 11.614,
+   "end": 12.164
+  },
+  {
+   "id": "s2-dashboard",
+   "title": "Dashboard & Review Publik",
+   "bg": "light",
+   "audio": "audio/vo-erekap/s2-dashboard.mp3",
+   "start": 12.164,
+   "duration": 15.784,
+   "vo_start": 12.614,
+   "vo_end": 27.398,
+   "end": 27.948
+  },
+  {
+   "id": "s3-rekap-admin",
+   "title": "Pencarian Cepat & Panel Admin",
+   "bg": "light",
+   "audio": "audio/vo-erekap/s3-rekap-admin.mp3",
+   "start": 27.948,
+   "duration": 13.672,
+   "vo_start": 28.398,
+   "vo_end": 41.07,
+   "end": 41.62
+  },
+  {
+   "id": "s4-export-print",
+   "title": "Ekspor Excel & Cetak A4 Landscape",
+   "bg": "light",
+   "audio": "audio/vo-erekap/s4-export-print.mp3",
+   "start": 41.62,
+   "duration": 10.672,
+   "vo_start": 42.07,
+   "vo_end": 51.742,
+   "end": 52.292
+  },
+  {
+   "id": "s5-brand",
+   "title": "Outro & Personal Branding RHMT OFC",
+   "bg": "dark",
+   "audio": "audio/vo-erekap/s5-brand.mp3",
+   "start": 52.292,
+   "duration": 12.292,
+   "vo_start": 52.742,
+   "vo_end": 63.134,
+   "end": 64.584
+  }
+ ]
+}

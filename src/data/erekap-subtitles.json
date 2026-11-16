@@ -1,0 +1,813 @@
+{
+ "captions": [
+  {
+   "id": 1,
+   "scene": "s1-hook",
+   "bg": "dark",
+   "lines": [
+    "Masih rekap absen manual",
+    "dan rawan selisih data?"
+   ],
+   "words": [
+    {
+     "text": "Masih",
+     "start": 0.856,
+     "end": 1.179
+    },
+    {
+     "text": "rekap",
+     "start": 1.179,
+     "end": 1.502
+    },
+    {
+     "text": "absen",
+     "start": 1.502,
+     "end": 1.825
+    },
+    {
+     "text": "manual",
+     "start": 1.825,
+     "end": 2.212
+    },
+    {
+     "text": "dan",
+     "start": 2.212,
+     "end": 2.406
+    },
+    {
+     "text": "rawan",
+     "start": 2.406,
+     "end": 2.729
+    },
+    {
+     "text": "selisih",
+     "start": 2.729,
+     "end": 3.181
+    },
+    {
+     "text": "data?",
+     "start": 3.181,
+     "end": 3.633
+    }
+   ],
+   "start": 0.856,
+   "end": 3.633
+  },
+  {
+   "id": 2,
+   "scene": "s1-hook",
+   "bg": "dark",
+   "lines": [
+    "Kenalin E-Rekap, sistem",
+    "rekapitulasi kehadiran"
+   ],
+   "words": [
+    {
+     "text": "Kenalin",
+     "start": 3.633,
+     "end": 4.595
+    },
+    {
+     "text": "E-Rekap,",
+     "start": 4.595,
+     "end": 5.177
+    },
+    {
+     "text": "sistem",
+     "start": 5.177,
+     "end": 6.0
+    },
+    {
+     "text": "rekapitulasi",
+     "start": 6.0,
+     "end": 6.774
+    },
+    {
+     "text": "kehadiran",
+     "start": 6.774,
+     "end": 7.356
+    }
+   ],
+   "start": 3.633,
+   "end": 7.356
+  },
+  {
+   "id": 3,
+   "scene": "s1-hook",
+   "bg": "dark",
+   "lines": [
+    "siswa berbasis web yang",
+    "rapi, cepat, dan siap"
+   ],
+   "words": [
+    {
+     "text": "siswa",
+     "start": 7.356,
+     "end": 7.679
+    },
+    {
+     "text": "berbasis",
+     "start": 7.679,
+     "end": 8.195
+    },
+    {
+     "text": "web",
+     "start": 8.195,
+     "end": 8.389
+    },
+    {
+     "text": "yang",
+     "start": 8.389,
+     "end": 8.647
+    },
+    {
+     "text": "rapi,",
+     "start": 8.647,
+     "end": 9.099
+    },
+    {
+     "text": "cepat,",
+     "start": 9.099,
+     "end": 9.919
+    },
+    {
+     "text": "dan",
+     "start": 9.919,
+     "end": 10.356
+    },
+    {
+     "text": "siap",
+     "start": 10.356,
+     "end": 10.614
+    }
+   ],
+   "start": 7.356,
+   "end": 10.614
+  },
+  {
+   "id": 4,
+   "scene": "s1-hook",
+   "bg": "dark",
+   "lines": [
+    "cetak."
+   ],
+   "words": [
+    {
+     "text": "cetak.",
+     "start": 10.614,
+     "end": 11.131
+    }
+   ],
+   "start": 10.614,
+   "end": 11.131
+  },
+  {
+   "id": 5,
+   "scene": "s2-dashboard",
+   "bg": "light",
+   "lines": [
+    "Dari halaman utama, guru",
+    "maupun siswa bisa langsung"
+   ],
+   "words": [
+    {
+     "text": "Dari",
+     "start": 12.938,
+     "end": 13.226
+    },
+    {
+     "text": "halaman",
+     "start": 13.226,
+     "end": 13.73
+    },
+    {
+     "text": "utama,",
+     "start": 13.73,
+     "end": 14.516
+    },
+    {
+     "text": "guru",
+     "start": 14.516,
+     "end": 14.804
+    },
+    {
+     "text": "maupun",
+     "start": 14.804,
+     "end": 15.236
+    },
+    {
+     "text": "siswa",
+     "start": 15.236,
+     "end": 15.596
+    },
+    {
+     "text": "bisa",
+     "start": 15.596,
+     "end": 15.884
+    },
+    {
+     "text": "langsung",
+     "start": 15.884,
+     "end": 16.461
+    }
+   ],
+   "start": 12.938,
+   "end": 16.461
+  },
+  {
+   "id": 6,
+   "scene": "s2-dashboard",
+   "bg": "light",
+   "lines": [
+    "meninjau persentase",
+    "kehadiran per kelas secara"
+   ],
+   "words": [
+    {
+     "text": "meninjau",
+     "start": 16.461,
+     "end": 17.037
+    },
+    {
+     "text": "persentase",
+     "start": 17.037,
+     "end": 17.757
+    },
+    {
+     "text": "kehadiran",
+     "start": 17.757,
+     "end": 18.405
+    },
+    {
+     "text": "per",
+     "start": 18.405,
+     "end": 18.621
+    },
+    {
+     "text": "kelas",
+     "start": 18.621,
+     "end": 18.982
+    },
+    {
+     "text": "secara",
+     "start": 18.982,
+     "end": 19.414
+    }
+   ],
+   "start": 16.461,
+   "end": 19.414
+  },
+  {
+   "id": 7,
+   "scene": "s2-dashboard",
+   "bg": "light",
+   "lines": [
+    "transparan. Status hadir,",
+    "sakit, izin, sampai alpha"
+   ],
+   "words": [
+    {
+     "text": "transparan.",
+     "start": 19.414,
+     "end": 21.008
+    },
+    {
+     "text": "Status",
+     "start": 21.008,
+     "end": 21.44
+    },
+    {
+     "text": "hadir,",
+     "start": 21.44,
+     "end": 22.324
+    },
+    {
+     "text": "sakit,",
+     "start": 22.324,
+     "end": 23.336
+    },
+    {
+     "text": "izin,",
+     "start": 23.336,
+     "end": 23.84
+    },
+    {
+     "text": "sampai",
+     "start": 23.84,
+     "end": 24.272
+    },
+    {
+     "text": "alpha",
+     "start": 24.272,
+     "end": 24.949
+    }
+   ],
+   "start": 19.414,
+   "end": 24.949
+  },
+  {
+   "id": 8,
+   "scene": "s2-dashboard",
+   "bg": "light",
+   "lines": [
+    "tampil jelas dan terhitung",
+    "otomatis."
+   ],
+   "words": [
+    {
+     "text": "tampil",
+     "start": 24.949,
+     "end": 25.381
+    },
+    {
+     "text": "jelas",
+     "start": 25.381,
+     "end": 25.741
+    },
+    {
+     "text": "dan",
+     "start": 25.741,
+     "end": 25.957
+    },
+    {
+     "text": "terhitung",
+     "start": 25.957,
+     "end": 26.606
+    },
+    {
+     "text": "otomatis.",
+     "start": 26.606,
+     "end": 27.398
+    }
+   ],
+   "start": 24.949,
+   "end": 27.398
+  },
+  {
+   "id": 9,
+   "scene": "s3-rekap-admin",
+   "bg": "light",
+   "lines": [
+    "Cari nama siswa atau nomor",
+    "absen tinggal ketik. Dan"
+   ],
+   "words": [
+    {
+     "text": "Cari",
+     "start": 28.649,
+     "end": 28.904
+    },
+    {
+     "text": "nama",
+     "start": 28.904,
+     "end": 29.159
+    },
+    {
+     "text": "siswa",
+     "start": 29.159,
+     "end": 29.477
+    },
+    {
+     "text": "atau",
+     "start": 29.477,
+     "end": 29.732
+    },
+    {
+     "text": "nomor",
+     "start": 29.732,
+     "end": 30.051
+    },
+    {
+     "text": "absen",
+     "start": 30.051,
+     "end": 30.369
+    },
+    {
+     "text": "tinggal",
+     "start": 30.369,
+     "end": 30.815
+    },
+    {
+     "text": "ketik.",
+     "start": 30.815,
+     "end": 31.324
+    },
+    {
+     "text": "Dan",
+     "start": 31.324,
+     "end": 31.515
+    }
+   ],
+   "start": 28.649,
+   "end": 31.515
+  },
+  {
+   "id": 10,
+   "scene": "s3-rekap-admin",
+   "bg": "light",
+   "lines": [
+    "tenang, perubahan data",
+    "tetap aman karena hanya"
+   ],
+   "words": [
+    {
+     "text": "tenang,",
+     "start": 31.515,
+     "end": 32.517
+    },
+    {
+     "text": "perubahan",
+     "start": 32.517,
+     "end": 33.362
+    },
+    {
+     "text": "data",
+     "start": 33.362,
+     "end": 33.617
+    },
+    {
+     "text": "tetap",
+     "start": 33.617,
+     "end": 33.936
+    },
+    {
+     "text": "aman",
+     "start": 33.936,
+     "end": 34.19
+    },
+    {
+     "text": "karena",
+     "start": 34.19,
+     "end": 34.883
+    },
+    {
+     "text": "hanya",
+     "start": 34.883,
+     "end": 35.202
+    }
+   ],
+   "start": 31.515,
+   "end": 35.202
+  },
+  {
+   "id": 11,
+   "scene": "s3-rekap-admin",
+   "bg": "light",
+   "lines": [
+    "bisa dilakukan lewat Panel",
+    "Admin yang terproteksi,"
+   ],
+   "words": [
+    {
+     "text": "bisa",
+     "start": 35.202,
+     "end": 35.457
+    },
+    {
+     "text": "dilakukan",
+     "start": 35.457,
+     "end": 36.03
+    },
+    {
+     "text": "lewat",
+     "start": 36.03,
+     "end": 36.348
+    },
+    {
+     "text": "Panel",
+     "start": 36.348,
+     "end": 36.667
+    },
+    {
+     "text": "Admin",
+     "start": 36.667,
+     "end": 36.985
+    },
+    {
+     "text": "yang",
+     "start": 36.985,
+     "end": 37.24
+    },
+    {
+     "text": "terproteksi,",
+     "start": 37.24,
+     "end": 38.445
+    }
+   ],
+   "start": 35.202,
+   "end": 38.445
+  },
+  {
+   "id": 12,
+   "scene": "s3-rekap-admin",
+   "bg": "light",
+   "lines": [
+    "tersimpan persisten di",
+    "database SQLite."
+   ],
+   "words": [
+    {
+     "text": "tersimpan",
+     "start": 38.445,
+     "end": 39.019
+    },
+    {
+     "text": "persisten",
+     "start": 39.019,
+     "end": 39.592
+    },
+    {
+     "text": "di",
+     "start": 39.592,
+     "end": 39.719
+    },
+    {
+     "text": "database",
+     "start": 39.719,
+     "end": 40.229
+    },
+    {
+     "text": "SQLite.",
+     "start": 40.229,
+     "end": 41.07
+    }
+   ],
+   "start": 38.445,
+   "end": 41.07
+  },
+  {
+   "id": 13,
+   "scene": "s4-export-print",
+   "bg": "light",
+   "lines": [
+    "Butuh arsip atau laporan",
+    "fisik? Tinggal ekspor atau"
+   ],
+   "words": [
+    {
+     "text": "Butuh",
+     "start": 42.315,
+     "end": 42.613
+    },
+    {
+     "text": "arsip",
+     "start": 42.613,
+     "end": 42.911
+    },
+    {
+     "text": "atau",
+     "start": 42.911,
+     "end": 43.149
+    },
+    {
+     "text": "laporan",
+     "start": 43.149,
+     "end": 43.565
+    },
+    {
+     "text": "fisik?",
+     "start": 43.565,
+     "end": 44.041
+    },
+    {
+     "text": "Tinggal",
+     "start": 44.041,
+     "end": 44.91
+    },
+    {
+     "text": "ekspor",
+     "start": 44.91,
+     "end": 45.268
+    },
+    {
+     "text": "atau",
+     "start": 45.268,
+     "end": 45.506
+    }
+   ],
+   "start": 42.315,
+   "end": 45.506
+  },
+  {
+   "id": 14,
+   "scene": "s4-export-print",
+   "bg": "light",
+   "lines": [
+    "impor spreadsheet Excel,",
+    "atau langsung cetak format"
+   ],
+   "words": [
+    {
+     "text": "impor",
+     "start": 45.506,
+     "end": 45.803
+    },
+    {
+     "text": "spreadsheet",
+     "start": 45.803,
+     "end": 46.458
+    },
+    {
+     "text": "Excel,",
+     "start": 46.458,
+     "end": 47.264
+    },
+    {
+     "text": "atau",
+     "start": 47.264,
+     "end": 47.502
+    },
+    {
+     "text": "langsung",
+     "start": 47.502,
+     "end": 47.978
+    },
+    {
+     "text": "cetak",
+     "start": 47.978,
+     "end": 48.275
+    },
+    {
+     "text": "format",
+     "start": 48.275,
+     "end": 48.632
+    }
+   ],
+   "start": 45.506,
+   "end": 48.632
+  },
+  {
+   "id": 15,
+   "scene": "s4-export-print",
+   "bg": "light",
+   "lines": [
+    "A4 Landscape lengkap",
+    "dengan kop surat resmi"
+   ],
+   "words": [
+    {
+     "text": "A4",
+     "start": 48.632,
+     "end": 48.751
+    },
+    {
+     "text": "Landscape",
+     "start": 48.751,
+     "end": 49.287
+    },
+    {
+     "text": "lengkap",
+     "start": 49.287,
+     "end": 50.016
+    },
+    {
+     "text": "dengan",
+     "start": 50.016,
+     "end": 50.373
+    },
+    {
+     "text": "kop",
+     "start": 50.373,
+     "end": 50.552
+    },
+    {
+     "text": "surat",
+     "start": 50.552,
+     "end": 50.849
+    },
+    {
+     "text": "resmi",
+     "start": 50.849,
+     "end": 51.147
+    }
+   ],
+   "start": 48.632,
+   "end": 51.147
+  },
+  {
+   "id": 16,
+   "scene": "s4-export-print",
+   "bg": "light",
+   "lines": [
+    "sekolah."
+   ],
+   "words": [
+    {
+     "text": "sekolah.",
+     "start": 51.147,
+     "end": 51.742
+    }
+   ],
+   "start": 51.147,
+   "end": 51.742
+  },
+  {
+   "id": 17,
+   "scene": "s5-brand",
+   "bg": "dark",
+   "lines": [
+    "E-Rekap, solusi absensi",
+    "modern berstandar sekolah."
+   ],
+   "words": [
+    {
+     "text": "E-Rekap,",
+     "start": 53.008,
+     "end": 54.04
+    },
+    {
+     "text": "solusi",
+     "start": 54.04,
+     "end": 54.561
+    },
+    {
+     "text": "absensi",
+     "start": 54.561,
+     "end": 55.168
+    },
+    {
+     "text": "modern",
+     "start": 55.168,
+     "end": 55.689
+    },
+    {
+     "text": "berstandar",
+     "start": 55.689,
+     "end": 57.075
+    },
+    {
+     "text": "sekolah.",
+     "start": 57.075,
+     "end": 57.942
+    }
+   ],
+   "start": 53.008,
+   "end": 57.942
+  },
+  {
+   "id": 18,
+   "scene": "s5-brand",
+   "bg": "dark",
+   "lines": [
+    "Dikembangkan oleh rhmt",
+    "ofc, cek detailnya di"
+   ],
+   "words": [
+    {
+     "text": "Dikembangkan",
+     "start": 57.942,
+     "end": 58.983
+    },
+    {
+     "text": "oleh",
+     "start": 58.983,
+     "end": 59.331
+    },
+    {
+     "text": "rhmt",
+     "start": 59.331,
+     "end": 60.152
+    },
+    {
+     "text": "ofc,",
+     "start": 60.152,
+     "end": 60.672
+    },
+    {
+     "text": "cek",
+     "start": 60.672,
+     "end": 60.932
+    },
+    {
+     "text": "detailnya",
+     "start": 60.932,
+     "end": 61.713
+    },
+    {
+     "text": "di",
+     "start": 61.713,
+     "end": 61.887
+    }
+   ],
+   "start": 57.942,
+   "end": 61.887
+  },
+  {
+   "id": 19,
+   "scene": "s5-brand",
+   "bg": "dark",
+   "lines": [
+    "rhmt.biz.id."
+   ],
+   "words": [
+    {
+     "text": "rhmt.biz.id.",
+     "start": 61.887,
+     "end": 63.134
+    }
+   ],
+   "start": 61.887,
+   "end": 63.134
+  }
+ ]
+}
