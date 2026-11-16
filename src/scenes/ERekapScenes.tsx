@@ -13,7 +13,7 @@ import {pop} from '../lib/anim';
 type NavTab = 'dashboard' | 'rekap' | 'admin' | 'info';
 
 /* ── Crisp Vector Icons matching Phosphor style used in E-Rekap ── */
-const IconSquares: React.FC<{size?: number; color?: string}> = ({size = 24, color = 'currentColor'}) => (
+export const IconSquares: React.FC<{size?: number; color?: string}> = ({size = 24, color = 'currentColor'}) => (
   <svg width={size} height={size} viewBox="0 0 256 256" fill={color}>
     <rect x="40" y="40" width="76" height="76" rx="14" />
     <rect x="140" y="40" width="76" height="76" rx="14" />
@@ -22,7 +22,7 @@ const IconSquares: React.FC<{size?: number; color?: string}> = ({size = 24, colo
   </svg>
 );
 
-const IconTable: React.FC<{size?: number; color?: string}> = ({size = 24, color = 'currentColor'}) => (
+export const IconTable: React.FC<{size?: number; color?: string}> = ({size = 24, color = 'currentColor'}) => (
   <svg width={size} height={size} viewBox="0 0 256 256" fill="none" stroke={color} strokeWidth="20" strokeLinecap="round" strokeLinejoin="round">
     <rect x="32" y="48" width="192" height="160" rx="14" />
     <line x1="32" y1="104" x2="224" y2="104" />
@@ -31,7 +31,7 @@ const IconTable: React.FC<{size?: number; color?: string}> = ({size = 24, color 
   </svg>
 );
 
-const IconSliders: React.FC<{size?: number; color?: string}> = ({size = 24, color = 'currentColor'}) => (
+export const IconSliders: React.FC<{size?: number; color?: string}> = ({size = 24, color = 'currentColor'}) => (
   <svg width={size} height={size} viewBox="0 0 256 256" fill="none" stroke={color} strokeWidth="20" strokeLinecap="round" strokeLinejoin="round">
     <line x1="40" y1="84" x2="216" y2="84" />
     <circle cx="156" cy="84" r="20" fill={color} />
@@ -40,7 +40,7 @@ const IconSliders: React.FC<{size?: number; color?: string}> = ({size = 24, colo
   </svg>
 );
 
-const IconInfo: React.FC<{size?: number; color?: string}> = ({size = 24, color = 'currentColor'}) => (
+export const IconInfo: React.FC<{size?: number; color?: string}> = ({size = 24, color = 'currentColor'}) => (
   <svg width={size} height={size} viewBox="0 0 256 256" fill="none" stroke={color} strokeWidth="20" strokeLinecap="round" strokeLinejoin="round">
     <circle cx="128" cy="128" r="96" />
     <line x1="128" y1="120" x2="128" y2="176" />
@@ -48,13 +48,13 @@ const IconInfo: React.FC<{size?: number; color?: string}> = ({size = 24, color =
   </svg>
 );
 
-const IconShield: React.FC<{size?: number; color?: string}> = ({size = 22, color = 'currentColor'}) => (
+export const IconShield: React.FC<{size?: number; color?: string}> = ({size = 22, color = 'currentColor'}) => (
   <svg width={size} height={size} viewBox="0 0 256 256" fill={color}>
     <path d="M208,40H48A16,16,0,0,0,32,56v58.77c0,89.61,75.82,119.34,91,124.39a15.53,15.53,0,0,0,10,0c15.2-5.05,91-34.78,91-124.39V56A16,16,0,0,0,208,40Zm-34.34,69.66-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32Z" />
   </svg>
 );
 
-const IconDatabase: React.FC<{size?: number; color?: string}> = ({size = 22, color = 'currentColor'}) => (
+export const IconDatabase: React.FC<{size?: number; color?: string}> = ({size = 22, color = 'currentColor'}) => (
   <svg width={size} height={size} viewBox="0 0 256 256" fill={color}>
     <ellipse cx="128" cy="64" rx="88" ry="32" />
     <path d="M40,86v38c0,17.67,39.4,32,88,32s88-14.33,88-32V86c-17.6,15.32-50.37,24-88,24S57.6,101.32,40,86Z" />
@@ -62,7 +62,7 @@ const IconDatabase: React.FC<{size?: number; color?: string}> = ({size = 22, col
   </svg>
 );
 
-const IconExcel: React.FC<{size?: number; color?: string}> = ({size = 22, color = 'currentColor'}) => (
+export const IconExcel: React.FC<{size?: number; color?: string}> = ({size = 22, color = 'currentColor'}) => (
   <svg width={size} height={size} viewBox="0 0 256 256" fill="none" stroke={color} strokeWidth="20" strokeLinecap="round" strokeLinejoin="round">
     <path d="M200,224H56a8,8,0,0,1-8-8V40a8,8,0,0,1,8-8h96l56,56V216A8,8,0,0,1,200,224Z" />
     <polyline points="152 32 152 88 208 88" />
@@ -71,7 +71,7 @@ const IconExcel: React.FC<{size?: number; color?: string}> = ({size = 22, color 
   </svg>
 );
 
-const IconPrinter: React.FC<{size?: number; color?: string}> = ({size = 22, color = 'currentColor'}) => (
+export const IconPrinter: React.FC<{size?: number; color?: string}> = ({size = 22, color = 'currentColor'}) => (
   <svg width={size} height={size} viewBox="0 0 256 256" fill="none" stroke={color} strokeWidth="20" strokeLinecap="round" strokeLinejoin="round">
     <polyline points="64 80 64 40 192 40 192 80" />
     <rect x="64" y="152" width="128" height="64" />
@@ -79,20 +79,20 @@ const IconPrinter: React.FC<{size?: number; color?: string}> = ({size = 22, colo
   </svg>
 );
 
-const IconSearch: React.FC<{size?: number; color?: string}> = ({size = 22, color = 'currentColor'}) => (
+export const IconSearch: React.FC<{size?: number; color?: string}> = ({size = 22, color = 'currentColor'}) => (
   <svg width={size} height={size} viewBox="0 0 256 256" fill="none" stroke={color} strokeWidth="22" strokeLinecap="round" strokeLinejoin="round">
     <circle cx="112" cy="112" r="76" />
     <line x1="166" y1="166" x2="220" y2="220" />
   </svg>
 );
 
-const IconBuildings: React.FC<{size?: number; color?: string}> = ({size = 24, color = 'currentColor'}) => (
+export const IconBuildings: React.FC<{size?: number; color?: string}> = ({size = 24, color = 'currentColor'}) => (
   <svg width={size} height={size} viewBox="0 0 256 256" fill={color}>
     <path d="M240,208H224V96a16,16,0,0,0-16-16H144V32a16,16,0,0,0-16-16H48A16,16,0,0,0,32,32V208H16a8,8,0,0,0,0,16H240a8,8,0,0,0,0-16ZM80,144H64a8,8,0,0,1,0-16H80a8,8,0,0,1,0,16Zm0-48H64a8,8,0,0,1,0-16H80a8,8,0,0,1,0,16Zm48,48H112a8,8,0,0,1,0-16h16a8,8,0,0,1,0,16Zm0-48H112a8,8,0,0,1,0-16h16a8,8,0,0,1,0,16Zm64,48H176a8,8,0,0,1,0-16h16a8,8,0,0,1,0,16Z" />
   </svg>
 );
 
-const IconArrowUpRight: React.FC<{size?: number; color?: string}> = ({size = 20, color = 'currentColor'}) => (
+export const IconArrowUpRight: React.FC<{size?: number; color?: string}> = ({size = 20, color = 'currentColor'}) => (
   <svg width={size} height={size} viewBox="0 0 256 256" fill="none" stroke={color} strokeWidth="24" strokeLinecap="round" strokeLinejoin="round">
     <line x1="64" y1="192" x2="192" y2="64" />
     <polyline points="88 64 192 64 192 168" />

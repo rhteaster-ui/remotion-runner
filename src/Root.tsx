@@ -6,6 +6,7 @@ import {MascotShowcase} from './MascotShowcase';
 import {StorytellingVideo} from './StorytellingVideo';
 import {OpsFlowVideo} from './OpsFlowVideo';
 import {ERekapVideo} from './ERekapVideo';
+import {ERekapPremiumVideo} from './ERekapPremiumVideo';
 import timeline from './data/timeline.json';
 import kryptonTimeline from './data/krypton-timeline.json';
 import agenticTimeline from './data/agentic-timeline.json';
@@ -14,6 +15,14 @@ import erekapTimeline from './data/erekap-timeline.json';
 
 export const Root: React.FC = () => (
   <>
+    <Composition
+      id="ERekapPremium"
+      component={ERekapPremiumVideo}
+      width={1080}
+      height={1920}
+      fps={erekapTimeline.fps}
+      durationInFrames={Math.ceil(erekapTimeline.total * erekapTimeline.fps)}
+    />
     <Composition
       id="ERekapTikTok"
       component={ERekapVideo}
