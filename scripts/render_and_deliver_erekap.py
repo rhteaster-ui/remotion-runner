@@ -7,6 +7,7 @@ import subprocess
 import urllib.request
 import urllib.parse
 import urllib.error
+import requests
 
 GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN") or (open("/root/.runner_token").read().strip() if os.path.exists("/root/.runner_token") else (open("/root/gh.txt").read().strip() if os.path.exists("/root/gh.txt") else ""))
 REPO = "rhteaster-ui/remotion-runner"
@@ -105,28 +106,29 @@ def download_artifact(art_id, target_zip):
     subprocess.run(cmd, check=True)
 
 
-def send_telegram_video(video_path, thumb_path, caption):
-    url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendVideo"
-    cmd = [
-        "curl", "-s",
-        "-F", f"chat_id={TELEGRAM_OWNER_ID}",
-        "-F", f"video=@{video_path}",
-        "-F", f"caption={caption}",
-        "-F", "parse_mode=HTML"
-    ]
-    if thumb_path and os.path.exists(thumb_path):
-        cmd.extend(["-F", f"thumb=@{thumb_path}"])
+def send_telegram_document(video_path, thumb_path, caption):
+    url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendDocument"
+    with open(video_path, "rb") as f_doc:
+        files = {
+            "document": ("ERekap-Premium-Final.mp4", f_doc, "video/mp4"),
+        }
+        if thumb_path and os.path.exists(thumb_path):
+            files["thumbnail"] = ("thumb.jpg", open(thumb_path, "rb"), "image/jpeg")
 
-    res = subprocess.run(cmd, capture_output=True, text=True)
-    try:
-        data = json.loads(res.stdout)
-        return data
-    except Exception:
-        return {"ok": False, "raw": res.stdout}
+        data = {
+            "chat_id": TELEGRAM_OWNER_ID,
+            "caption": caption,
+            "parse_mode": "HTML"
+        }
+        r = requests.post(url, data=data, files=files, timeout=300)
+        try:
+            return r.json()
+        except Exception:
+            return {"ok": False, "raw": r.text}
 
 
 def main():
-    print("[*] Dispatching GitHub Actions Cloud Runner for ERekapPremium...")
+    print("[*] Dispatching GitHub Actions Cloud Runner for ERekapPremium (Revised Cursor)...")
     dispatch_workflow(composition="ERekapPremium", scale="1", crf="22")
 
     time.sleep(6)
@@ -153,8 +155,8 @@ def main():
         sys.exit(1)
     print(f"[+] Artifact ditemukan: ID={art_id}, Ukuran={size / (1024 * 1024):.2f} MB")
 
-    zip_path = os.path.join(OUT_DIR, "erekap_premium_v3_artifact.zip")
-    extract_dir = os.path.join(OUT_DIR, "erekap_premium_v3_rendered")
+    zip_path = os.path.join(OUT_DIR, "erekap_premium_revised_artifact.zip")
+    extract_dir = os.path.join(OUT_DIR, "erekap_premium_revised_rendered")
     os.makedirs(extract_dir, exist_ok=True)
 
     print("[*] Mengunduh artifact video dari GitHub Actions...")
@@ -197,27 +199,25 @@ def main():
     print(f"    - Ukuran: {fsize:.2f} MB")
 
     caption = (
-        f"<b>REMOTION VIDEO DELIVERY · E-REKAP PREMIUM</b>\n"
+        f"<b>REMOTION VIDEO DELIVERY · E-REKAP PREMIUM (REVISI CURSOR)</b>\n"
         f"━━━━━━━━━━━━━━━━━━━━━━━━━━\n"
         f"<b>Kreator:</b> rhmt ofc (rhmt.biz.id)\n"
         f"<b>Komposisi:</b> <code>ERekapPremium</code> (Authentic Screenshot Edition)\n"
+        f"<b>Format Pengiriman:</b> Dokumen Asli (Tanpa Kompresi Telegram)\n"
         f"<b>Resolusi:</b> {w}x{h} vertikal (9:16 Shorts/Reels/TikTok)\n"
-        f"<b>Durasi:</b> {dur:.1f} detik | <b>Ukuran:</b> {fsize:.2f} MB\n"
-        f"<b>Engine:</b> GitHub Actions Cloud Runner + Remotion\n\n"
-        f"<b>Fitur Produksi:</b>\n"
-        f"• Screenshot Asli Web: Menampilkan UI nyata Next.js 16 (Dashboard Publik, Tabel Rekap, Panel Admin, & DB Turso)\n"
-        f"• Modern Studio Mockup: StudioBrowser & StudioMobile dengan kinetic pan/zoom camera\n"
-        f"• Voiceover Gemini Puck: Narasi jernih & lincah dengan timing presisi\n"
-        f"• Subtitle Dinamis 42px: Posisi zona bawah layar, word-level highlight tanpa dead space\n"
-        f"• Personal Branding: rhmt ofc • Portofolio rhmt.biz.id\n"
+        f"<b>Durasi:</b> {dur:.1f} detik | <b>Ukuran:</b> {fsize:.2f} MB\n\n"
+        f"<b>Perbaikan Sesuai Arahan Tuan Rahmat:</b>\n"
+        f"• <b>Animasi Cursor Presisi:</b> Menghapus cursor nyasar di viewport browser. Cursor kini mengklik langsung tepat di atas tombol filter kelas (X IPA 1, XI IPA 1, XII IPS 1, Semua Kelas) dan tuntas sebelum detik 21.\n"
+        f"• <b>Transisi Detik 21 Bersih:</b> Kartu status Hadir, Sakit, Izin, Alpha muncul rapi tanpa ada cursor macet atau salah posisi.\n"
+        f"• <b>Kualitas Dokumen Utuh:</b> Dikirim via <code>sendDocument</code> sehingga bit-rate dan ketajaman teks/screenshot tetap 100% jernih.\n"
         f"━━━━━━━━━━━━━━━━━━━━━━━━━━\n"
         f"<i>Dikirim otomatis via Agency AI Super-Admin &amp; DevOps VPS</i>"
     )
 
-    print("\n[*] Mengirim video final ke Telegram Tuan Rahmat...")
-    res = send_telegram_video(final_video, final_thumb, caption)
+    print("\n[*] Mengirim dokumen video final ke Telegram Tuan Rahmat...")
+    res = send_telegram_document(final_video, final_thumb, caption)
     if res.get("ok"):
-        print("[+] Video BERHASIL dikirimkan ke Telegram Tuan Rahmat!")
+        print("[+] Dokumen Video BERHASIL dikirimkan ke Telegram Tuan Rahmat!")
     else:
         print(f"[!] Gagal mengirim ke Telegram: {res}")
 

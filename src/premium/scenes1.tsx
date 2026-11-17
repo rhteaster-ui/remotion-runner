@@ -311,9 +311,6 @@ export const PremiumDashboardScene: React.FC = () => {
                 <div style={{fontFamily: mono, fontSize: 22, fontWeight: 800}}>95.2% Terhitung</div>
               </div>
             </div>
-
-            {/* Interactive Tap & Click Animations */}
-            {activeIdx > 0 && <Tap at={tapAt[activeIdx]} from={{x: 40, y: 40}} approach={0.4} />}
           </StudioBrowser>
 
           {/* Floating Mobile Device Mockup for Mobile-First Evidence */}
@@ -378,6 +375,7 @@ export const PremiumDashboardScene: React.FC = () => {
                 <div
                   key={cls}
                   style={{
+                    position: 'relative',
                     textAlign: 'center',
                     padding: '11px 6px',
                     borderRadius: 14,
@@ -391,6 +389,10 @@ export const PremiumDashboardScene: React.FC = () => {
                   }}
                 >
                   {cls}
+                  {idx === 1 && <Tap at={4.9} from={{x: -70, y: 50}} approach={0.4} stay={0.25} />}
+                  {idx === 2 && <Tap at={5.7} from={{x: -50, y: 15}} approach={0.3} stay={0.25} />}
+                  {idx === 3 && <Tap at={6.5} from={{x: -50, y: 15}} approach={0.3} stay={0.25} />}
+                  {idx === 0 && <Tap at={7.4} from={{x: 160, y: 20}} approach={0.35} stay={0.25} />}
                 </div>
               );
             })}
