@@ -8,12 +8,15 @@ export type ElainaGesture =
   | 'smug'
   | 'thinking'
   | 'point_up'
+  | 'wink_point'
   | 'alert'
   | 'thumbs_up';
 
 export interface ElainaPresenterAnchorProps {
   gesture?: ElainaGesture;
   speechText?: string;
+  hideBubble?: boolean;
+  glowColor?: string;
   size?: number;
   bottomOffset?: number;
   side?: 'left' | 'right' | 'center';
@@ -32,13 +35,14 @@ export interface ElainaPresenterAnchorProps {
 // ELAINA ASSET MAP — Gesture-aware image switching
 // ---------------------------------------------------------------------------
 const ELAINA_ASSETS: Record<string, {bust: string; full: string}> = {
-  idle:      {bust: 'assets/elaina/elaina-bust.png',      full: 'assets/elaina/elaina-default.png'},
-  smug:      {bust: 'assets/elaina/elaina-generated-smug.png', full: 'assets/elaina/elaina-generated-smug.png'},
-  thinking:  {bust: 'assets/elaina/elaina-bust.png',      full: 'assets/elaina/elaina-default.png'},
-  idea:      {bust: 'assets/elaina/elaina-bust.png',      full: 'assets/elaina/elaina-default.png'},
-  point_up:  {bust: 'assets/elaina/elaina-pointing.png',  full: 'assets/elaina/elaina-pointing.png'},
-  alert:     {bust: 'assets/elaina/elaina-alert.png',     full: 'assets/elaina/elaina-alert.png'},
-  thumbs_up: {bust: 'assets/elaina/elaina-bust.png',      full: 'assets/elaina/elaina-default.png'},
+  idle:       {bust: 'assets/elaina/elaina-bust.png',          full: 'assets/elaina/elaina-default.png'},
+  smug:       {bust: 'assets/elaina/elaina-wink-point.png',    full: 'assets/elaina/elaina-wink-point.png'},
+  wink_point: {bust: 'assets/elaina/elaina-wink-point.png',    full: 'assets/elaina/elaina-wink-point.png'},
+  thinking:   {bust: 'assets/elaina/elaina-bust.png',          full: 'assets/elaina/elaina-default.png'},
+  idea:       {bust: 'assets/elaina/elaina-wink-point.png',    full: 'assets/elaina/elaina-wink-point.png'},
+  point_up:   {bust: 'assets/elaina/elaina-pointing.png',      full: 'assets/elaina/elaina-pointing.png'},
+  alert:      {bust: 'assets/elaina/elaina-alert.png',         full: 'assets/elaina/elaina-alert.png'},
+  thumbs_up:  {bust: 'assets/elaina/elaina-wink-point.png',    full: 'assets/elaina/elaina-wink-point.png'},
 };
 
 // ---------------------------------------------------------------------------
@@ -99,6 +103,8 @@ const BURST_PARTICLES: Particle[] = [
 export const ElainaPresenterAnchor: React.FC<ElainaPresenterAnchorProps> = ({
   gesture = 'idle',
   speechText,
+  hideBubble = false,
+  glowColor = 'rgba(192, 132, 252, 0.28)',
   size = 320,
   bottomOffset = 84,
   side = 'right',
@@ -114,7 +120,7 @@ export const ElainaPresenterAnchor: React.FC<ElainaPresenterAnchorProps> = ({
   const {fps} = useVideoConfig();
 
   // Gesture state flags
-  const isSmug = gesture === 'smug';
+  const isSmug = gesture === 'smug' || gesture === 'wink_point';
   const isIdea = gesture === 'idea';
   const isThinking = gesture === 'thinking';
   const isPointUp = gesture === 'point_up';
@@ -270,7 +276,7 @@ export const ElainaPresenterAnchor: React.FC<ElainaPresenterAnchorProps> = ({
       }
     >
       {/* Speech / Dialog Balloon */}
-      {speechText && (
+      {speechText && !hideBubble && (
         <div
           style={{
             maxWidth: 380,
@@ -313,8 +319,8 @@ export const ElainaPresenterAnchor: React.FC<ElainaPresenterAnchorProps> = ({
           transformStyle: 'preserve-3d' as const,
           transform: `scale(${entryScale * squashX}, ${entryScale * squashY}) translateY(${floatY}px) rotateY(${floatRotateY}deg) rotateX(${floatRotateX}deg) rotateZ(${floatRotateZ + hatTilt}deg)`,
           filter: isDark
-            ? 'drop-shadow(0 18px 36px rgba(0,0,0,0.85)) drop-shadow(0 0 22px rgba(192, 132, 252, 0.22))'
-            : 'drop-shadow(0 14px 28px rgba(0,0,0,0.18))',
+            ? `drop-shadow(0 18px 36px rgba(0,0,0,0.85)) drop-shadow(0 0 22px ${glowColor})`
+            : `drop-shadow(0 14px 28px rgba(0,0,0,0.20)) drop-shadow(0 0 16px ${glowColor})`,
           transformOrigin: 'bottom center',
         }}
       >

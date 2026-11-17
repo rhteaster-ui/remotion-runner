@@ -4,6 +4,7 @@ import {GeminiVideo} from './GeminiVideo';
 import {KryptonVideo} from './KryptonVideo';
 import {MascotShowcase} from './MascotShowcase';
 import {ElainaShowcase} from './ElainaShowcase';
+import {PlatypusElainaVideo} from './PlatypusElainaVideo';
 import {StorytellingVideo} from './StorytellingVideo';
 import {OpsFlowVideo} from './OpsFlowVideo';
 import {OpsFlowPremiumVideo} from './OpsFlowPremiumVideo';
@@ -19,9 +20,18 @@ import opsTimeline from './data/ops-timeline.json';
 import n8nTimeline from './data/n8n-timeline.json';
 import repoflowTimeline from './data/repoflow-timeline.json';
 import erekapTimeline from './data/erekap-timeline.json';
+import platypusTimeline from './data/platypus-timeline.json';
 
 export const Root: React.FC = () => (
   <>
+    <Composition
+      id="PlatypusElaina"
+      component={PlatypusElainaVideo}
+      width={1080}
+      height={1920}
+      fps={platypusTimeline.fps}
+      durationInFrames={Math.ceil(platypusTimeline.total * platypusTimeline.fps)}
+    />
     <Composition
       id="OpsFlowN8N"
       component={N8nOpsVideo}

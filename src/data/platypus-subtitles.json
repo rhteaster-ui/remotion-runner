@@ -1,0 +1,1661 @@
+{
+ "captions": [
+  {
+   "id": 1,
+   "scene": "p1-hook",
+   "bg": "dark",
+   "lines": [
+    "Binatang paling janggal",
+    "sedunia itu bukan buaya"
+   ],
+   "words": [
+    {
+     "text": "Binatang",
+     "start": 0.45,
+     "end": 0.951
+    },
+    {
+     "text": "paling",
+     "start": 0.951,
+     "end": 1.326
+    },
+    {
+     "text": "janggal",
+     "start": 1.326,
+     "end": 1.764
+    },
+    {
+     "text": "sedunia",
+     "start": 1.764,
+     "end": 2.203
+    },
+    {
+     "text": "itu",
+     "start": 2.203,
+     "end": 2.39
+    },
+    {
+     "text": "bukan",
+     "start": 2.39,
+     "end": 2.703
+    },
+    {
+     "text": "buaya",
+     "start": 2.703,
+     "end": 3.016
+    }
+   ],
+   "start": 0.45,
+   "end": 3.016
+  },
+  {
+   "id": 2,
+   "scene": "p1-hook",
+   "bg": "dark",
+   "lines": [
+    "atau komodo, tapi",
+    "Platypus. Karena hewan"
+   ],
+   "words": [
+    {
+     "text": "atau",
+     "start": 3.016,
+     "end": 3.267
+    },
+    {
+     "text": "komodo,",
+     "start": 3.267,
+     "end": 3.83
+    },
+    {
+     "text": "tapi",
+     "start": 3.83,
+     "end": 4.353
+    },
+    {
+     "text": "Platypus.",
+     "start": 4.353,
+     "end": 5.041
+    },
+    {
+     "text": "Karena",
+     "start": 5.041,
+     "end": 5.417
+    },
+    {
+     "text": "hewan",
+     "start": 5.417,
+     "end": 6.015
+    }
+   ],
+   "start": 3.016,
+   "end": 6.015
+  },
+  {
+   "id": 3,
+   "scene": "p1-hook",
+   "bg": "dark",
+   "lines": [
+    "ini kayaknya dibikin",
+    "pakai sisaan sparepart"
+   ],
+   "words": [
+    {
+     "text": "ini",
+     "start": 6.015,
+     "end": 6.203
+    },
+    {
+     "text": "kayaknya",
+     "start": 6.203,
+     "end": 6.704
+    },
+    {
+     "text": "dibikin",
+     "start": 6.704,
+     "end": 7.142
+    },
+    {
+     "text": "pakai",
+     "start": 7.142,
+     "end": 7.455
+    },
+    {
+     "text": "sisaan",
+     "start": 7.455,
+     "end": 7.83
+    },
+    {
+     "text": "sparepart",
+     "start": 7.83,
+     "end": 8.393
+    }
+   ],
+   "start": 6.015,
+   "end": 8.393
+  },
+  {
+   "id": 4,
+   "scene": "p1-hook",
+   "bg": "dark",
+   "lines": [
+    "binatang lain yang gak",
+    "kepake."
+   ],
+   "words": [
+    {
+     "text": "binatang",
+     "start": 8.393,
+     "end": 8.894
+    },
+    {
+     "text": "lain",
+     "start": 8.894,
+     "end": 9.145
+    },
+    {
+     "text": "yang",
+     "start": 9.145,
+     "end": 9.395
+    },
+    {
+     "text": "gak",
+     "start": 9.395,
+     "end": 9.583
+    },
+    {
+     "text": "kepake.",
+     "start": 9.583,
+     "end": 10.146
+    }
+   ],
+   "start": 8.393,
+   "end": 10.146
+  },
+  {
+   "id": 5,
+   "scene": "p2-sparepart",
+   "bg": "light",
+   "lines": [
+    "Pertama, dia ini mamalia,",
+    "berbulu kayak"
+   ],
+   "words": [
+    {
+     "text": "Pertama,",
+     "start": 11.046,
+     "end": 11.662
+    },
+    {
+     "text": "dia",
+     "start": 11.662,
+     "end": 12.102
+    },
+    {
+     "text": "ini",
+     "start": 12.102,
+     "end": 12.286
+    },
+    {
+     "text": "mamalia,",
+     "start": 12.286,
+     "end": 12.903
+    },
+    {
+     "text": "berbulu",
+     "start": 12.903,
+     "end": 13.573
+    },
+    {
+     "text": "kayak",
+     "start": 13.573,
+     "end": 13.881
+    }
+   ],
+   "start": 11.046,
+   "end": 13.881
+  },
+  {
+   "id": 6,
+   "scene": "p2-sparepart",
+   "bg": "light",
+   "lines": [
+    "berang-berang. Tapi",
+    "moncongnya bebek, ekornya"
+   ],
+   "words": [
+    {
+     "text": "berang-berang.",
+     "start": 13.881,
+     "end": 15.107
+    },
+    {
+     "text": "Tapi",
+     "start": 15.107,
+     "end": 15.354
+    },
+    {
+     "text": "moncongnya",
+     "start": 15.354,
+     "end": 16.151
+    },
+    {
+     "text": "bebek,",
+     "start": 16.151,
+     "end": 16.644
+    },
+    {
+     "text": "ekornya",
+     "start": 16.644,
+     "end": 17.431
+    }
+   ],
+   "start": 13.881,
+   "end": 17.431
+  },
+  {
+   "id": 7,
+   "scene": "p2-sparepart",
+   "bg": "light",
+   "lines": [
+    "berang-berang, terus",
+    "kakinya katak. Waktu"
+   ],
+   "words": [
+    {
+     "text": "berang-berang,",
+     "start": 17.431,
+     "end": 18.634
+    },
+    {
+     "text": "terus",
+     "start": 18.634,
+     "end": 18.942
+    },
+    {
+     "text": "kakinya",
+     "start": 18.942,
+     "end": 19.373
+    },
+    {
+     "text": "katak.",
+     "start": 19.373,
+     "end": 19.866
+    },
+    {
+     "text": "Waktu",
+     "start": 19.866,
+     "end": 20.61
+    }
+   ],
+   "start": 17.431,
+   "end": 20.61
+  },
+  {
+   "id": 8,
+   "scene": "p2-sparepart",
+   "bg": "light",
+   "lines": [
+    "pertama kali ilmuwan nemu",
+    "Platypus di Australia,"
+   ],
+   "words": [
+    {
+     "text": "pertama",
+     "start": 20.61,
+     "end": 21.042
+    },
+    {
+     "text": "kali",
+     "start": 21.042,
+     "end": 21.288
+    },
+    {
+     "text": "ilmuwan",
+     "start": 21.288,
+     "end": 21.719
+    },
+    {
+     "text": "nemu",
+     "start": 21.719,
+     "end": 21.966
+    },
+    {
+     "text": "Platypus",
+     "start": 21.966,
+     "end": 22.459
+    },
+    {
+     "text": "di",
+     "start": 22.459,
+     "end": 22.582
+    },
+    {
+     "text": "Australia,",
+     "start": 22.582,
+     "end": 23.668
+    }
+   ],
+   "start": 20.61,
+   "end": 23.668
+  },
+  {
+   "id": 9,
+   "scene": "p2-sparepart",
+   "bg": "light",
+   "lines": [
+    "mereka kira ini boneka",
+    "mainan yang dijait iseng"
+   ],
+   "words": [
+    {
+     "text": "mereka",
+     "start": 23.668,
+     "end": 24.037
+    },
+    {
+     "text": "kira",
+     "start": 24.037,
+     "end": 24.284
+    },
+    {
+     "text": "ini",
+     "start": 24.284,
+     "end": 24.469
+    },
+    {
+     "text": "boneka",
+     "start": 24.469,
+     "end": 24.838
+    },
+    {
+     "text": "mainan",
+     "start": 24.838,
+     "end": 25.208
+    },
+    {
+     "text": "yang",
+     "start": 25.208,
+     "end": 25.455
+    },
+    {
+     "text": "dijait",
+     "start": 25.455,
+     "end": 25.824
+    },
+    {
+     "text": "iseng",
+     "start": 25.824,
+     "end": 26.132
+    }
+   ],
+   "start": 23.668,
+   "end": 26.132
+  },
+  {
+   "id": 10,
+   "scene": "p2-sparepart",
+   "bg": "light",
+   "lines": [
+    "sama anak SD. Ditarik",
+    "paruhnya, eh asli."
+   ],
+   "words": [
+    {
+     "text": "sama",
+     "start": 26.132,
+     "end": 26.379
+    },
+    {
+     "text": "anak",
+     "start": 26.379,
+     "end": 26.965
+    },
+    {
+     "text": "SD.",
+     "start": 26.965,
+     "end": 27.273
+    },
+    {
+     "text": "Ditarik",
+     "start": 27.273,
+     "end": 27.704
+    },
+    {
+     "text": "paruhnya,",
+     "start": 27.704,
+     "end": 28.596
+    },
+    {
+     "text": "eh",
+     "start": 28.596,
+     "end": 28.719
+    },
+    {
+     "text": "asli.",
+     "start": 28.719,
+     "end": 29.374
+    }
+   ],
+   "start": 26.132,
+   "end": 29.374
+  },
+  {
+   "id": 11,
+   "scene": "p2-sparepart",
+   "bg": "light",
+   "lines": [
+    "Janggal banget."
+   ],
+   "words": [
+    {
+     "text": "Janggal",
+     "start": 29.374,
+     "end": 29.805
+    },
+    {
+     "text": "banget.",
+     "start": 29.805,
+     "end": 30.702
+    }
+   ],
+   "start": 29.374,
+   "end": 30.702
+  },
+  {
+   "id": 12,
+   "scene": "p3-telur-keringat",
+   "bg": "dark",
+   "lines": [
+    "Kedua, kalau mamalia lain",
+    "melahirkan terus menyusui"
+   ],
+   "words": [
+    {
+     "text": "Kedua,",
+     "start": 31.602,
+     "end": 32.079
+    },
+    {
+     "text": "kalau",
+     "start": 32.079,
+     "end": 32.607
+    },
+    {
+     "text": "mamalia",
+     "start": 32.607,
+     "end": 33.024
+    },
+    {
+     "text": "lain",
+     "start": 33.024,
+     "end": 33.262
+    },
+    {
+     "text": "melahirkan",
+     "start": 33.262,
+     "end": 33.858
+    },
+    {
+     "text": "terus",
+     "start": 33.858,
+     "end": 34.156
+    },
+    {
+     "text": "menyusui",
+     "start": 34.156,
+     "end": 34.633
+    }
+   ],
+   "start": 31.602,
+   "end": 34.633
+  },
+  {
+   "id": 13,
+   "scene": "p3-telur-keringat",
+   "bg": "dark",
+   "lines": [
+    "dengan normal, Platypus",
+    "bertelur. Mamalia tapi"
+   ],
+   "words": [
+    {
+     "text": "dengan",
+     "start": 34.633,
+     "end": 34.99
+    },
+    {
+     "text": "normal,",
+     "start": 34.99,
+     "end": 35.526
+    },
+    {
+     "text": "Platypus",
+     "start": 35.526,
+     "end": 36.194
+    },
+    {
+     "text": "bertelur.",
+     "start": 36.194,
+     "end": 36.85
+    },
+    {
+     "text": "Mamalia",
+     "start": 36.85,
+     "end": 37.623
+    },
+    {
+     "text": "tapi",
+     "start": 37.623,
+     "end": 37.861
+    }
+   ],
+   "start": 34.633,
+   "end": 37.861
+  },
+  {
+   "id": 14,
+   "scene": "p3-telur-keringat",
+   "bg": "dark",
+   "lines": [
+    "nelor. Dan yang lebih",
+    "absurd lagi: dia gak"
+   ],
+   "words": [
+    {
+     "text": "nelor.",
+     "start": 37.861,
+     "end": 38.338
+    },
+    {
+     "text": "Dan",
+     "start": 38.338,
+     "end": 38.517
+    },
+    {
+     "text": "yang",
+     "start": 38.517,
+     "end": 39.176
+    },
+    {
+     "text": "lebih",
+     "start": 39.176,
+     "end": 39.474
+    },
+    {
+     "text": "absurd",
+     "start": 39.474,
+     "end": 39.831
+    },
+    {
+     "text": "lagi:",
+     "start": 39.831,
+     "end": 40.248
+    },
+    {
+     "text": "dia",
+     "start": 40.248,
+     "end": 40.427
+    },
+    {
+     "text": "gak",
+     "start": 40.427,
+     "end": 40.606
+    }
+   ],
+   "start": 37.861,
+   "end": 40.606
+  },
+  {
+   "id": 15,
+   "scene": "p3-telur-keringat",
+   "bg": "dark",
+   "lines": [
+    "punya puting susu. Terus",
+    "nyusuin anaknya gimana?"
+   ],
+   "words": [
+    {
+     "text": "punya",
+     "start": 40.606,
+     "end": 40.904
+    },
+    {
+     "text": "puting",
+     "start": 40.904,
+     "end": 41.261
+    },
+    {
+     "text": "susu.",
+     "start": 41.261,
+     "end": 41.678
+    },
+    {
+     "text": "Terus",
+     "start": 41.678,
+     "end": 42.422
+    },
+    {
+     "text": "nyusuin",
+     "start": 42.422,
+     "end": 42.84
+    },
+    {
+     "text": "anaknya",
+     "start": 42.84,
+     "end": 43.257
+    },
+    {
+     "text": "gimana?",
+     "start": 43.257,
+     "end": 43.793
+    }
+   ],
+   "start": 40.606,
+   "end": 43.793
+  },
+  {
+   "id": 16,
+   "scene": "p3-telur-keringat",
+   "bg": "dark",
+   "lines": [
+    "Keringat. Susunya keluar",
+    "lewat pori-pori keringat"
+   ],
+   "words": [
+    {
+     "text": "Keringat.",
+     "start": 43.793,
+     "end": 45.171
+    },
+    {
+     "text": "Susunya",
+     "start": 45.171,
+     "end": 45.588
+    },
+    {
+     "text": "keluar",
+     "start": 45.588,
+     "end": 45.945
+    },
+    {
+     "text": "lewat",
+     "start": 45.945,
+     "end": 46.243
+    },
+    {
+     "text": "pori-pori",
+     "start": 46.243,
+     "end": 46.72
+    },
+    {
+     "text": "keringat",
+     "start": 46.72,
+     "end": 47.197
+    }
+   ],
+   "start": 43.793,
+   "end": 47.197
+  },
+  {
+   "id": 17,
+   "scene": "p3-telur-keringat",
+   "bg": "dark",
+   "lines": [
+    "di perutnya. Lu bayangin",
+    "kalau manusia begitu: Eh"
+   ],
+   "words": [
+    {
+     "text": "di",
+     "start": 47.197,
+     "end": 47.316
+    },
+    {
+     "text": "perutnya.",
+     "start": 47.316,
+     "end": 48.406
+    },
+    {
+     "text": "Lu",
+     "start": 48.406,
+     "end": 48.525
+    },
+    {
+     "text": "bayangin",
+     "start": 48.525,
+     "end": 49.001
+    },
+    {
+     "text": "kalau",
+     "start": 49.001,
+     "end": 49.299
+    },
+    {
+     "text": "manusia",
+     "start": 49.299,
+     "end": 49.716
+    },
+    {
+     "text": "begitu:",
+     "start": 49.716,
+     "end": 50.649
+    },
+    {
+     "text": "Eh",
+     "start": 50.649,
+     "end": 50.768
+    }
+   ],
+   "start": 47.197,
+   "end": 50.768
+  },
+  {
+   "id": 18,
+   "scene": "p3-telur-keringat",
+   "bg": "dark",
+   "lines": [
+    "Dek, haus ya? Sini jilat",
+    "ketek Mama. Janggal"
+   ],
+   "words": [
+    {
+     "text": "Dek,",
+     "start": 50.768,
+     "end": 51.126
+    },
+    {
+     "text": "haus",
+     "start": 51.126,
+     "end": 51.364
+    },
+    {
+     "text": "ya?",
+     "start": 51.364,
+     "end": 51.662
+    },
+    {
+     "text": "Sini",
+     "start": 51.662,
+     "end": 51.901
+    },
+    {
+     "text": "jilat",
+     "start": 51.901,
+     "end": 52.198
+    },
+    {
+     "text": "ketek",
+     "start": 52.198,
+     "end": 52.496
+    },
+    {
+     "text": "Mama.",
+     "start": 52.496,
+     "end": 52.913
+    },
+    {
+     "text": "Janggal",
+     "start": 52.913,
+     "end": 53.695
+    }
+   ],
+   "start": 50.768,
+   "end": 53.695
+  },
+  {
+   "id": 19,
+   "scene": "p3-telur-keringat",
+   "bg": "dark",
+   "lines": [
+    "banget, stres anaknya",
+    "dari bayi."
+   ],
+   "words": [
+    {
+     "text": "banget,",
+     "start": 53.695,
+     "end": 54.232
+    },
+    {
+     "text": "stres",
+     "start": 54.232,
+     "end": 54.529
+    },
+    {
+     "text": "anaknya",
+     "start": 54.529,
+     "end": 54.947
+    },
+    {
+     "text": "dari",
+     "start": 54.947,
+     "end": 55.185
+    },
+    {
+     "text": "bayi.",
+     "start": 55.185,
+     "end": 55.602
+    }
+   ],
+   "start": 53.695,
+   "end": 55.602
+  },
+  {
+   "id": 20,
+   "scene": "p4-tanpa-lambung",
+   "bg": "light",
+   "lines": [
+    "Terus kita ke",
+    "pencernaannya. Platypus"
+   ],
+   "words": [
+    {
+     "text": "Terus",
+     "start": 56.502,
+     "end": 56.836
+    },
+    {
+     "text": "kita",
+     "start": 56.836,
+     "end": 57.103
+    },
+    {
+     "text": "ke",
+     "start": 57.103,
+     "end": 57.423
+    },
+    {
+     "text": "pencernaannya.",
+     "start": 57.423,
+     "end": 58.676
+    },
+    {
+     "text": "Platypus",
+     "start": 58.676,
+     "end": 59.211
+    }
+   ],
+   "start": 56.502,
+   "end": 59.211
+  },
+  {
+   "id": 21,
+   "scene": "p4-tanpa-lambung",
+   "bg": "light",
+   "lines": [
+    "itu gak punya lambung.",
+    "Makanan dari tenggorokan"
+   ],
+   "words": [
+    {
+     "text": "itu",
+     "start": 59.211,
+     "end": 59.411
+    },
+    {
+     "text": "gak",
+     "start": 59.411,
+     "end": 59.612
+    },
+    {
+     "text": "punya",
+     "start": 59.612,
+     "end": 60.328
+    },
+    {
+     "text": "lambung.",
+     "start": 60.328,
+     "end": 60.996
+    },
+    {
+     "text": "Makanan",
+     "start": 60.996,
+     "end": 61.464
+    },
+    {
+     "text": "dari",
+     "start": 61.464,
+     "end": 62.06
+    },
+    {
+     "text": "tenggorokan",
+     "start": 62.06,
+     "end": 62.795
+    }
+   ],
+   "start": 59.211,
+   "end": 62.795
+  },
+  {
+   "id": 22,
+   "scene": "p4-tanpa-lambung",
+   "bg": "light",
+   "lines": [
+    "langsung nyelonong masuk",
+    "usus. Gak ada proses"
+   ],
+   "words": [
+    {
+     "text": "langsung",
+     "start": 62.795,
+     "end": 63.33
+    },
+    {
+     "text": "nyelonong",
+     "start": 63.33,
+     "end": 64.162
+    },
+    {
+     "text": "masuk",
+     "start": 64.162,
+     "end": 64.496
+    },
+    {
+     "text": "usus.",
+     "start": 64.496,
+     "end": 65.172
+    },
+    {
+     "text": "Gak",
+     "start": 65.172,
+     "end": 65.373
+    },
+    {
+     "text": "ada",
+     "start": 65.373,
+     "end": 65.573
+    },
+    {
+     "text": "proses",
+     "start": 65.573,
+     "end": 65.974
+    }
+   ],
+   "start": 62.795,
+   "end": 65.974
+  },
+  {
+   "id": 23,
+   "scene": "p4-tanpa-lambung",
+   "bg": "light",
+   "lines": [
+    "mikir, gak ada proses",
+    "asam lambung. Jadi"
+   ],
+   "words": [
+    {
+     "text": "mikir,",
+     "start": 65.974,
+     "end": 66.768
+    },
+    {
+     "text": "gak",
+     "start": 66.768,
+     "end": 66.969
+    },
+    {
+     "text": "ada",
+     "start": 66.969,
+     "end": 67.169
+    },
+    {
+     "text": "proses",
+     "start": 67.169,
+     "end": 67.57
+    },
+    {
+     "text": "asam",
+     "start": 67.57,
+     "end": 68.122
+    },
+    {
+     "text": "lambung.",
+     "start": 68.122,
+     "end": 68.79
+    },
+    {
+     "text": "Jadi",
+     "start": 68.79,
+     "end": 69.057
+    }
+   ],
+   "start": 65.974,
+   "end": 69.057
+  },
+  {
+   "id": 24,
+   "scene": "p4-tanpa-lambung",
+   "bg": "light",
+   "lines": [
+    "Platypus gak bakal bisa",
+    "tuh izin kerja: Bos, izin"
+   ],
+   "words": [
+    {
+     "text": "Platypus",
+     "start": 69.057,
+     "end": 69.897
+    },
+    {
+     "text": "gak",
+     "start": 69.897,
+     "end": 70.097
+    },
+    {
+     "text": "bakal",
+     "start": 70.097,
+     "end": 70.676
+    },
+    {
+     "text": "bisa",
+     "start": 70.676,
+     "end": 70.943
+    },
+    {
+     "text": "tuh",
+     "start": 70.943,
+     "end": 71.144
+    },
+    {
+     "text": "izin",
+     "start": 71.144,
+     "end": 71.411
+    },
+    {
+     "text": "kerja:",
+     "start": 71.411,
+     "end": 71.945
+    },
+    {
+     "text": "Bos,",
+     "start": 71.945,
+     "end": 72.346
+    },
+    {
+     "text": "izin",
+     "start": 72.346,
+     "end": 72.613
+    }
+   ],
+   "start": 69.057,
+   "end": 72.613
+  },
+  {
+   "id": 25,
+   "scene": "p4-tanpa-lambung",
+   "bg": "light",
+   "lines": [
+    "ya, GERD saya lagi",
+    "kambuh. Pasti bohong dia,"
+   ],
+   "words": [
+    {
+     "text": "ya,",
+     "start": 72.613,
+     "end": 73.283
+    },
+    {
+     "text": "GERD",
+     "start": 73.283,
+     "end": 73.55
+    },
+    {
+     "text": "saya",
+     "start": 73.55,
+     "end": 73.817
+    },
+    {
+     "text": "lagi",
+     "start": 73.817,
+     "end": 74.084
+    },
+    {
+     "text": "kambuh.",
+     "start": 74.084,
+     "end": 74.685
+    },
+    {
+     "text": "Pasti",
+     "start": 74.685,
+     "end": 75.02
+    },
+    {
+     "text": "bohong",
+     "start": 75.02,
+     "end": 75.747
+    },
+    {
+     "text": "dia,",
+     "start": 75.747,
+     "end": 76.148
+    }
+   ],
+   "start": 72.613,
+   "end": 76.148
+  },
+  {
+   "id": 26,
+   "scene": "p4-tanpa-lambung",
+   "bg": "light",
+   "lines": [
+    "orang lambung aja gak",
+    "punya."
+   ],
+   "words": [
+    {
+     "text": "orang",
+     "start": 76.148,
+     "end": 76.482
+    },
+    {
+     "text": "lambung",
+     "start": 76.482,
+     "end": 77.191
+    },
+    {
+     "text": "aja",
+     "start": 77.191,
+     "end": 77.391
+    },
+    {
+     "text": "gak",
+     "start": 77.391,
+     "end": 77.592
+    },
+    {
+     "text": "punya.",
+     "start": 77.592,
+     "end": 78.126
+    }
+   ],
+   "start": 76.148,
+   "end": 78.126
+  },
+  {
+   "id": 27,
+   "scene": "p5-taji-beracun",
+   "bg": "dark",
+   "lines": [
+    "Dan yang paling curang...",
+    "Kaki belakang pejantannya"
+   ],
+   "words": [
+    {
+     "text": "Dan",
+     "start": 79.026,
+     "end": 79.21
+    },
+    {
+     "text": "yang",
+     "start": 79.21,
+     "end": 79.454
+    },
+    {
+     "text": "paling",
+     "start": 79.454,
+     "end": 79.821
+    },
+    {
+     "text": "curang...",
+     "start": 79.821,
+     "end": 80.372
+    },
+    {
+     "text": "Kaki",
+     "start": 80.372,
+     "end": 80.617
+    },
+    {
+     "text": "belakang",
+     "start": 80.617,
+     "end": 81.455
+    },
+    {
+     "text": "pejantannya",
+     "start": 81.455,
+     "end": 82.128
+    }
+   ],
+   "start": 79.026,
+   "end": 82.128
+  },
+  {
+   "id": 28,
+   "scene": "p5-taji-beracun",
+   "bg": "dark",
+   "lines": [
+    "punya taji beracun yang",
+    "sakitnya bisa bikin"
+   ],
+   "words": [
+    {
+     "text": "punya",
+     "start": 82.128,
+     "end": 82.434
+    },
+    {
+     "text": "taji",
+     "start": 82.434,
+     "end": 82.678
+    },
+    {
+     "text": "beracun",
+     "start": 82.678,
+     "end": 83.106
+    },
+    {
+     "text": "yang",
+     "start": 83.106,
+     "end": 83.351
+    },
+    {
+     "text": "sakitnya",
+     "start": 83.351,
+     "end": 84.175
+    },
+    {
+     "text": "bisa",
+     "start": 84.175,
+     "end": 84.42
+    },
+    {
+     "text": "bikin",
+     "start": 84.42,
+     "end": 84.725
+    }
+   ],
+   "start": 82.128,
+   "end": 84.725
+  },
+  {
+   "id": 29,
+   "scene": "p5-taji-beracun",
+   "bg": "dark",
+   "lines": [
+    "pingsan berbulan-bulan.",
+    "Udah mukanya lucu kayak"
+   ],
+   "words": [
+    {
+     "text": "pingsan",
+     "start": 84.725,
+     "end": 85.154
+    },
+    {
+     "text": "berbulan-bulan.",
+     "start": 85.154,
+     "end": 86.133
+    },
+    {
+     "text": "Udah",
+     "start": 86.133,
+     "end": 86.948
+    },
+    {
+     "text": "mukanya",
+     "start": 86.948,
+     "end": 87.376
+    },
+    {
+     "text": "lucu",
+     "start": 87.376,
+     "end": 87.621
+    },
+    {
+     "text": "kayak",
+     "start": 87.621,
+     "end": 87.927
+    }
+   ],
+   "start": 84.725,
+   "end": 87.927
+  },
+  {
+   "id": 30,
+   "scene": "p5-taji-beracun",
+   "bg": "dark",
+   "lines": [
+    "kartun bebek, badannya",
+    "empuk, eh punya jarum"
+   ],
+   "words": [
+    {
+     "text": "kartun",
+     "start": 87.927,
+     "end": 88.294
+    },
+    {
+     "text": "bebek,",
+     "start": 88.294,
+     "end": 88.783
+    },
+    {
+     "text": "badannya",
+     "start": 88.783,
+     "end": 89.479
+    },
+    {
+     "text": "empuk,",
+     "start": 89.479,
+     "end": 90.287
+    },
+    {
+     "text": "eh",
+     "start": 90.287,
+     "end": 90.682
+    },
+    {
+     "text": "punya",
+     "start": 90.682,
+     "end": 90.988
+    },
+    {
+     "text": "jarum",
+     "start": 90.988,
+     "end": 91.294
+    }
+   ],
+   "start": 87.927,
+   "end": 91.294
+  },
+  {
+   "id": 31,
+   "scene": "p5-taji-beracun",
+   "bg": "dark",
+   "lines": [
+    "beracun. Bete banget",
+    "lawannya."
+   ],
+   "words": [
+    {
+     "text": "beracun.",
+     "start": 91.294,
+     "end": 92.189
+    },
+    {
+     "text": "Bete",
+     "start": 92.189,
+     "end": 92.434
+    },
+    {
+     "text": "banget",
+     "start": 92.434,
+     "end": 92.801
+    },
+    {
+     "text": "lawannya.",
+     "start": 92.801,
+     "end": 93.474
+    }
+   ],
+   "start": 91.294,
+   "end": 93.474
+  },
+  {
+   "id": 32,
+   "scene": "p6-outro-seblak",
+   "bg": "light",
+   "lines": [
+    "Takut kan lu ketemu dia?",
+    "Tenang aja, Platypus cuma"
+   ],
+   "words": [
+    {
+     "text": "Takut",
+     "start": 94.374,
+     "end": 94.603
+    },
+    {
+     "text": "kan",
+     "start": 94.603,
+     "end": 94.741
+    },
+    {
+     "text": "lu",
+     "start": 94.741,
+     "end": 94.833
+    },
+    {
+     "text": "ketemu",
+     "start": 94.833,
+     "end": 95.108
+    },
+    {
+     "text": "dia?",
+     "start": 95.108,
+     "end": 96.276
+    },
+    {
+     "text": "Tenang",
+     "start": 96.276,
+     "end": 96.551
+    },
+    {
+     "text": "aja,",
+     "start": 96.551,
+     "end": 96.826
+    },
+    {
+     "text": "Platypus",
+     "start": 96.826,
+     "end": 97.193
+    },
+    {
+     "text": "cuma",
+     "start": 97.193,
+     "end": 97.692
+    }
+   ],
+   "start": 94.374,
+   "end": 97.692
+  },
+  {
+   "id": 33,
+   "scene": "p6-outro-seblak",
+   "bg": "light",
+   "lines": [
+    "ada di Australia kok.",
+    "Aman dong, Bang? Iya"
+   ],
+   "words": [
+    {
+     "text": "ada",
+     "start": 97.692,
+     "end": 97.83
+    },
+    {
+     "text": "di",
+     "start": 97.83,
+     "end": 97.922
+    },
+    {
+     "text": "Australia",
+     "start": 97.922,
+     "end": 98.335
+    },
+    {
+     "text": "kok.",
+     "start": 98.335,
+     "end": 98.61
+    },
+    {
+     "text": "Aman",
+     "start": 98.61,
+     "end": 98.793
+    },
+    {
+     "text": "dong,",
+     "start": 98.793,
+     "end": 99.115
+    },
+    {
+     "text": "Bang?",
+     "start": 99.115,
+     "end": 99.436
+    },
+    {
+     "text": "Iya",
+     "start": 99.436,
+     "end": 99.573
+    }
+   ],
+   "start": 97.692,
+   "end": 99.573
+  },
+  {
+   "id": 34,
+   "scene": "p6-outro-seblak",
+   "bg": "light",
+   "lines": [
+    "aman, kalau lu gak apes",
+    "ketemu dia lagi jajan"
+   ],
+   "words": [
+    {
+     "text": "aman,",
+     "start": 99.573,
+     "end": 99.895
+    },
+    {
+     "text": "kalau",
+     "start": 99.895,
+     "end": 100.124
+    },
+    {
+     "text": "lu",
+     "start": 100.124,
+     "end": 100.955
+    },
+    {
+     "text": "gak",
+     "start": 100.955,
+     "end": 101.093
+    },
+    {
+     "text": "apes",
+     "start": 101.093,
+     "end": 101.276
+    },
+    {
+     "text": "ketemu",
+     "start": 101.276,
+     "end": 101.552
+    },
+    {
+     "text": "dia",
+     "start": 101.552,
+     "end": 101.689
+    },
+    {
+     "text": "lagi",
+     "start": 101.689,
+     "end": 101.873
+    },
+    {
+     "text": "jajan",
+     "start": 101.873,
+     "end": 102.102
+    }
+   ],
+   "start": 99.573,
+   "end": 102.102
+  },
+  {
+   "id": 35,
+   "scene": "p6-outro-seblak",
+   "bg": "light",
+   "lines": [
+    "seblak di pengkolan.",
+    "Fakta absurd lainnya"
+   ],
+   "words": [
+    {
+     "text": "seblak",
+     "start": 102.102,
+     "end": 102.377
+    },
+    {
+     "text": "di",
+     "start": 102.377,
+     "end": 102.469
+    },
+    {
+     "text": "pengkolan.",
+     "start": 102.469,
+     "end": 103.426
+    },
+    {
+     "text": "Fakta",
+     "start": 103.426,
+     "end": 103.655
+    },
+    {
+     "text": "absurd",
+     "start": 103.655,
+     "end": 103.931
+    },
+    {
+     "text": "lainnya",
+     "start": 103.931,
+     "end": 104.662
+    }
+   ],
+   "start": 102.102,
+   "end": 104.662
+  },
+  {
+   "id": 36,
+   "scene": "p6-outro-seblak",
+   "bg": "light",
+   "lines": [
+    "bareng Elaina, cek di",
+    "rhmt ofc \u2014 rhmt.biz.id."
+   ],
+   "words": [
+    {
+     "text": "bareng",
+     "start": 104.662,
+     "end": 104.937
+    },
+    {
+     "text": "Elaina,",
+     "start": 104.937,
+     "end": 105.35
+    },
+    {
+     "text": "cek",
+     "start": 105.35,
+     "end": 105.737
+    },
+    {
+     "text": "di",
+     "start": 105.737,
+     "end": 105.828
+    },
+    {
+     "text": "rhmt",
+     "start": 105.828,
+     "end": 106.012
+    },
+    {
+     "text": "ofc",
+     "start": 106.012,
+     "end": 106.15
+    },
+    {
+     "text": "\u2014",
+     "start": 106.15,
+     "end": 106.241
+    },
+    {
+     "text": "rhmt.biz.id.",
+     "start": 106.241,
+     "end": 107.094
+    }
+   ],
+   "start": 104.662,
+   "end": 107.094
+  }
+ ]
+}
