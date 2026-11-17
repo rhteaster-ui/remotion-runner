@@ -10,15 +10,25 @@ import {RepoFlowVideo} from './RepoFlowVideo';
 import {RepoFlowPremiumVideo} from './RepoFlowPremiumVideo';
 import {ERekapVideo} from './ERekapVideo';
 import {ERekapPremiumVideo} from './ERekapPremiumVideo';
+import {N8nOpsVideo} from './N8nOpsVideo';
 import timeline from './data/timeline.json';
 import kryptonTimeline from './data/krypton-timeline.json';
 import agenticTimeline from './data/agentic-timeline.json';
 import opsTimeline from './data/ops-timeline.json';
+import n8nTimeline from './data/n8n-timeline.json';
 import repoflowTimeline from './data/repoflow-timeline.json';
 import erekapTimeline from './data/erekap-timeline.json';
 
 export const Root: React.FC = () => (
   <>
+    <Composition
+      id="OpsFlowN8N"
+      component={N8nOpsVideo}
+      width={1080}
+      height={1920}
+      fps={n8nTimeline.fps}
+      durationInFrames={Math.ceil(n8nTimeline.total * n8nTimeline.fps)}
+    />
     <Composition
       id="ERekapPremium"
       component={ERekapPremiumVideo}

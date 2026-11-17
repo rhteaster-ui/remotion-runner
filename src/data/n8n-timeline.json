@@ -1,0 +1,62 @@
+{
+ "fps": 30,
+ "estimated": false,
+ "total": 70.1,
+ "scenes": [
+  {
+   "id": "s1-hook",
+   "title": "Prompt ke Aksi Nyata",
+   "bg": "dark",
+   "audio": "audio/vo-n8n/s1-hook.mp3",
+   "start": 0.0,
+   "duration": 12.38,
+   "vo_start": 0.55,
+   "vo_end": 11.83,
+   "end": 12.38
+  },
+  {
+   "id": "s2-bridge",
+   "title": "Alur Dual-VPS Bridge",
+   "bg": "light",
+   "audio": "audio/vo-n8n/s2-bridge.mp3",
+   "start": 12.38,
+   "duration": 12.832,
+   "vo_start": 12.83,
+   "vo_end": 24.662,
+   "end": 25.212
+  },
+  {
+   "id": "s3-agent",
+   "title": "Eksekusi Agen & Multi-Akun",
+   "bg": "dark",
+   "audio": "audio/vo-n8n/s3-agent.mp3",
+   "start": 25.212,
+   "duration": 13.984,
+   "vo_start": 25.662,
+   "vo_end": 38.646,
+   "end": 39.196
+  },
+  {
+   "id": "s4-web",
+   "title": "Web Ops Deck & Task Map",
+   "bg": "light",
+   "audio": "audio/vo-n8n/s4-web.mp3",
+   "start": 39.196,
+   "duration": 11.92,
+   "vo_start": 39.646,
+   "vo_end": 50.566,
+   "end": 51.116
+  },
+  {
+   "id": "s5-brand",
+   "title": "Personal Branding RHMT OFC",
+   "bg": "dark",
+   "audio": "audio/vo-n8n/s5-brand.mp3",
+   "start": 51.116,
+   "duration": 18.984,
+   "vo_start": 51.566,
+   "vo_end": 68.75,
+   "end": 70.1
+  }
+ ]
+}
