@@ -194,14 +194,13 @@ def main():
     print(f"[+] Verifikasi FFprobe: {w}x{h} ({codec}) | Durasi: {dur:.2f}s | Ukuran: {fsize:.2f} MB")
 
     caption = (
-        "🎬 *RepoFlow v2 — Production Teardown (Refined Subtitles)*\n"
-        "Karya Orisinal: *rhmt ofc* (`rhmt.biz.id`)\n\n"
-        "⚡ *Perbaikan Subtitle Tuntas Sesuai Arahan Tuan:*\n"
-        "• *Zero-Jitter Invariant Width:* Mengeliminasi lompatan teks horizontal yang membuat subtitle bergetar/kaku saat kata aktif menyala (padding dibuat konstan presisi sub-pixel).\n"
-        "• *Kinetic Spring Pop & Soft Glow:* Highlight kata aktif kini menggunakan elastic spring pop (micro-bounce) dengan ambient glow neon cyan modern tanpa wireframe kaku.\n"
-        "• *Pemenggalan Frasa Natural:* Memperbaiki chunking kalimat janggal (misal: '0' dan 'risiko gagal', 'di memori' dan 'lokal' kini menyatu utuh mengikuti ritme jeda napas VO).\n"
-        "• *Protective Backing Scrim:* Gradien halus di belakang subtitle menjaga kontras tajam di atas tema dark maupun light tanpa kotak hitam tebal.\n\n"
-        f"📊 *Metadata:* {w}x{h} (9:16) · {dur:.2f}s · {fsize:.1f} MB · Rendered via GitHub Actions Cloud Runner."
+        "🎬 <b>RepoFlow v2 — Production Teardown (Authentic Edition)</b>\n"
+        "Karya Orisinal: <b>rhmt ofc</b> (<code>rhmt.biz.id</code>)\n\n"
+        "⚡ <b>Perbaikan Tuntas Sesuai Arahan Tuan:</b>\n"
+        "• <b>Screenshot Asli Terpasang:</b> Menampilkan UI nyata RepoFlow di mobile dashboard, JSZip upload workbench, code inspector @rhmt-ofc/e-rekap, dan dialog AES-256 vault.\n"
+        "• <b>Subtitle Dinamis & Luwes:</b> Zero-jitter invariant width, kinetic spring pop highlight, pemenggalan frasa alami, dan backing scrim transparan.\n"
+        "• <b>Studio Modern & Clean:</b> Desain Kinetic Keynote Studio bebas garis blueprint grid kaku, sudut rounded 32px, dan depth shadow bertingkat.\n\n"
+        f"📊 <b>Metadata:</b> {w}x{h} (9:16) · {dur:.2f}s · {fsize:.1f} MB · Rendered via GitHub Actions Cloud Runner."
     )
 
     print("[*] Mengirimkan video ke Telegram Tuan Rahmat...")
