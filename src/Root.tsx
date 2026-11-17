@@ -3,6 +3,7 @@ import {Composition} from 'remotion';
 import {GeminiVideo} from './GeminiVideo';
 import {KryptonVideo} from './KryptonVideo';
 import {MascotShowcase} from './MascotShowcase';
+import {ElainaShowcase} from './ElainaShowcase';
 import {StorytellingVideo} from './StorytellingVideo';
 import {OpsFlowVideo} from './OpsFlowVideo';
 import {OpsFlowPremiumVideo} from './OpsFlowPremiumVideo';
@@ -84,6 +85,14 @@ export const Root: React.FC = () => (
       height={1920}
       fps={agenticTimeline.fps}
       durationInFrames={Math.ceil(agenticTimeline.total * agenticTimeline.fps)}
+    />
+    <Composition
+      id="ElainaShowcase"
+      component={ElainaShowcase}
+      width={1080}
+      height={1920}
+      fps={30}
+      durationInFrames={450}
     />
     <Composition
       id="MascotShowcase"
