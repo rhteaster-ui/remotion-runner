@@ -1,11 +1,11 @@
-import json
 import os
-import subprocess
 import sys
+import json
 import time
-import urllib.error
-import urllib.parse
+import subprocess
 import urllib.request
+import urllib.parse
+import urllib.error
 
 GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN") or (open("/root/gh.txt").read().strip() if os.path.exists("/root/gh.txt") else "")
 REPO = "rhteaster-ui/remotion-runner"
@@ -25,8 +25,8 @@ def dispatch_workflow(composition="RepoFlowPremium", scale="1", crf="22"):
         "inputs": {
             "composition": composition,
             "scale": scale,
-            "crf": crf,
-        },
+            "crf": crf
+        }
     }
     req = urllib.request.Request(
         url,
@@ -35,9 +35,9 @@ def dispatch_workflow(composition="RepoFlowPremium", scale="1", crf="22"):
             "Authorization": f"token {GITHUB_TOKEN}",
             "Accept": "application/vnd.github.v3+json",
             "Content-Type": "application/json",
-            "User-Agent": "Agency-DevOps",
+            "User-Agent": "Agency-DevOps"
         },
-        method="POST",
+        method="POST"
     )
     with urllib.request.urlopen(req) as resp:
         if resp.status in (204, 201, 200):
@@ -51,7 +51,7 @@ def get_latest_run_id():
     headers = {
         "Authorization": f"token {GITHUB_TOKEN}",
         "Accept": "application/vnd.github.v3+json",
-        "User-Agent": "Agency-DevOps",
+        "User-Agent": "Agency-DevOps"
     }
     req = urllib.request.Request(url, headers=headers)
     with urllib.request.urlopen(req) as resp:
@@ -67,7 +67,7 @@ def check_run_status(run_id):
     headers = {
         "Authorization": f"token {GITHUB_TOKEN}",
         "Accept": "application/vnd.github.v3+json",
-        "User-Agent": "Agency-DevOps",
+        "User-Agent": "Agency-DevOps"
     }
     req = urllib.request.Request(url, headers=headers)
     with urllib.request.urlopen(req) as resp:
@@ -80,7 +80,7 @@ def get_artifact_id(run_id):
     headers = {
         "Authorization": f"token {GITHUB_TOKEN}",
         "Accept": "application/vnd.github.v3+json",
-        "User-Agent": "Agency-DevOps",
+        "User-Agent": "Agency-DevOps"
     }
     req = urllib.request.Request(url, headers=headers)
     with urllib.request.urlopen(req) as resp:
@@ -95,15 +95,11 @@ def get_artifact_id(run_id):
 def download_artifact(art_id, target_zip):
     url = f"https://api.github.com/repos/{REPO}/actions/artifacts/{art_id}/zip"
     cmd = [
-        "curl",
-        "-sL",
-        "-H",
-        f"Authorization: token {GITHUB_TOKEN}",
-        "-H",
-        "Accept: application/vnd.github.v3+json",
+        "curl", "-sL",
+        "-H", f"Authorization: token {GITHUB_TOKEN}",
+        "-H", "Accept: application/vnd.github.v3+json",
         url,
-        "-o",
-        target_zip,
+        "-o", target_zip
     ]
     subprocess.run(cmd, check=True)
 
@@ -111,16 +107,11 @@ def download_artifact(art_id, target_zip):
 def send_telegram_video(video_path, thumb_path, caption):
     url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendVideo"
     cmd = [
-        "curl",
-        "-s",
-        "-F",
-        f"chat_id={TELEGRAM_OWNER_ID}",
-        "-F",
-        f"video=@{video_path}",
-        "-F",
-        f"caption={caption}",
-        "-F",
-        "parse_mode=Markdown",
+        "curl", "-s",
+        "-F", f"chat_id={TELEGRAM_OWNER_ID}",
+        "-F", f"video=@{video_path}",
+        "-F", f"caption={caption}",
+        "-F", "parse_mode=Markdown"
     ]
     if thumb_path and os.path.exists(thumb_path):
         cmd.extend(["-F", f"thumb=@{thumb_path}"])
@@ -137,12 +128,11 @@ def main():
     print("[*] Triggering GitHub Actions cloud render for RepoFlowPremium...")
     dispatch_workflow(composition="RepoFlowPremium", scale="1", crf="22")
 
-    # Tunggu beberapa detik agar run terdaftar
     time.sleep(6)
     run_id = get_latest_run_id()
     print(f"[+] Active GitHub Run ID: {run_id}")
 
-    print("[*] Menunggu runner menyelesaikan render di cloud...")
+    print("[*] Menunggu runner cloud menyelesaikan render...")
     start_time = time.time()
     while True:
         status, conclusion = check_run_status(run_id)
@@ -184,14 +174,10 @@ def main():
 
     # Verifikasi FFprobe
     probe_cmd = [
-        "ffprobe",
-        "-v",
-        "error",
-        "-show_entries",
-        "format=duration,size,bit_rate:stream=width,height,codec_name",
-        "-of",
-        "json",
-        final_video,
+        "ffprobe", "-v", "error",
+        "-show_entries", "format=duration,size,bit_rate:stream=width,height,codec_name",
+        "-of", "json",
+        final_video
     ]
     probe_res = subprocess.run(probe_cmd, capture_output=True, text=True)
     meta = json.loads(probe_res.stdout)
@@ -205,18 +191,16 @@ def main():
     h = v_stream.get("height")
     codec = v_stream.get("codec_name")
 
-    print(
-        f"[+] Verifikasi FFprobe: {w}x{h} ({codec}) | Durasi: {dur:.2f}s | Ukuran: {fsize:.2f} MB"
-    )
+    print(f"[+] Verifikasi FFprobe: {w}x{h} ({codec}) | Durasi: {dur:.2f}s | Ukuran: {fsize:.2f} MB")
 
     caption = (
         "🎬 *RepoFlow v2 — Production Teardown (Refined)*\n"
         "Karya Orisinal: *rhmt ofc* (`rhmt.biz.id`)\n\n"
         "⚡ *Pembaruan Tuntas Sesuai Arahan Tuan:*\n"
-        "• *Sinkronisasi Total Subtitle & Suara:* Audio TTS Puck (Cheeky Sidekick) di-generate ulang dari nol dan dialign per kata via Gemini Flash ke timestamp riil (0 drift, presisi vokal 100%).\n"
-        "• *UI Nyata RepoFlow:* Menghapus garis/wireframe generik AI, menggantikannya dengan screenshot otentik live `repoflow.web.id` (Hero Landing, Workspace RAM, Diagram Arsitektur, & Protokol AES-256).\n"
-        "• *SFX Cues Berbobot & Lembut:* Menghapus efek suara bising/error, menyelaraskan transisi whoosh-wipe (-0.4s), pop kartu, dan shimmer penutup dengan volume seimbang.\n"
-        "• *Branding Resmi RHMT OFC:* Foto profil Tuan Rahmat dari portofolio resmi, squircle badge RepoFlow, pelafalan voiceover 'official' vs teks 'ofc'.\n\n"
+        "• *Komponen Review & Code Preview Asli:* Menampilkan screenshot otentik dari RepoFlow menggunakan token GitHub VPS — inspeksi repo `@rhmt-ofc/e-rekap`, pohon berkas, dan syntax-highlighted code editor riil.\n"
+        "• *Sinkronisasi Total Subtitle & Suara:* Seluruh narasi TTS Puck diregenerasi ulang dan disinkronkan kata-per-kata via Gemini Audio Transcription ke timestamp milidetik nyata (0 drift, presisi 100%).\n"
+        "• *Mobile & Desktop Workspace Nyata:* Mockup interaktif responsif menampilkan workspace RepoFlow live di HP dan dashboard 24 repositori.\n"
+        "• *Branding Resmi RHMT OFC:* Avatar resmi Tuan Rahmat dari portofolio rhmt.biz.id, pelafalan voiceover 'official' vs teks 'ofc'.\n\n"
         f"📊 *Metadata:* {w}x{h} (9:16) · {dur:.2f}s · {fsize:.1f} MB · Rendered via GitHub Actions Cloud Runner."
     )
 
