@@ -111,7 +111,7 @@ def send_telegram_video(video_path, thumb_path, caption):
         "-F", f"chat_id={TELEGRAM_OWNER_ID}",
         "-F", f"video=@{video_path}",
         "-F", f"caption={caption}",
-        "-F", "parse_mode=Markdown"
+        "-F", "parse_mode=HTML"
     ]
     if thumb_path and os.path.exists(thumb_path):
         cmd.extend(["-F", f"thumb=@{thumb_path}"])
