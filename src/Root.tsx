@@ -7,6 +7,7 @@ import {StorytellingVideo} from './StorytellingVideo';
 import {OpsFlowVideo} from './OpsFlowVideo';
 import {OpsFlowPremiumVideo} from './OpsFlowPremiumVideo';
 import {RepoFlowVideo} from './RepoFlowVideo';
+import {RepoFlowPremiumVideo} from './RepoFlowPremiumVideo';
 import {ERekapVideo} from './ERekapVideo';
 import {ERekapPremiumVideo} from './ERekapPremiumVideo';
 import timeline from './data/timeline.json';
@@ -44,7 +45,7 @@ export const Root: React.FC = () => (
     />
     <Composition
       id="RepoFlowPremium"
-      component={RepoFlowVideo}
+      component={RepoFlowPremiumVideo}
       width={1080}
       height={1920}
       fps={repoflowTimeline.fps}
