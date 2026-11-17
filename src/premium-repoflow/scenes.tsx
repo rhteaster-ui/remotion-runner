@@ -200,12 +200,13 @@ export const RepoFlowHookScene: React.FC = () => {
         >
           <div style={{display: 'flex', alignItems: 'center', gap: 18}}>
             <Img
-              src={staticFile('assets/repoflow/icon_3d_centered.png')}
+              src={staticFile('assets/repoflow/icon.png')}
               style={{
                 width: 58,
                 height: 58,
                 borderRadius: 14,
-                boxShadow: '0 8px 20px rgba(56, 189, 248, 0.4)',
+                border: '1.5px solid rgba(56, 189, 248, 0.4)',
+                boxShadow: '0 8px 24px rgba(56, 189, 248, 0.35)',
               }}
             />
             <div>
@@ -1072,6 +1073,236 @@ export const RepoFlowVaultScene: React.FC = () => {
   );
 };
 
+const RepoFlowLiveAppView: React.FC = () => {
+  return (
+    <div
+      style={{
+        width: '100%',
+        backgroundColor: '#070a0f',
+        padding: '16px 20px',
+        display: 'flex',
+        flexDirection: 'column',
+        gap: 12,
+        boxSizing: 'border-box',
+      }}
+    >
+      {/* App Sub-header */}
+      <div
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+          paddingBottom: 10,
+          borderBottom: '1px solid rgba(56, 189, 248, 0.15)',
+        }}
+      >
+        <div style={{display: 'flex', alignItems: 'center', gap: 10}}>
+          <Img
+            src={staticFile('assets/repoflow/icon.png')}
+            style={{
+              width: 32,
+              height: 32,
+              borderRadius: 8,
+              border: '1px solid rgba(56, 189, 248, 0.4)',
+            }}
+          />
+          <span
+            style={{
+              fontFamily: REPO_FONT.display,
+              fontSize: 17,
+              fontWeight: 800,
+              color: '#ffffff',
+            }}
+          >
+            RepoFlow Workspace
+          </span>
+        </div>
+        <div
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: 6,
+            padding: '4px 10px',
+            borderRadius: 8,
+            backgroundColor: 'rgba(16, 185, 129, 0.12)',
+            border: '1px solid rgba(16, 185, 129, 0.3)',
+          }}
+        >
+          <div style={{width: 7, height: 7, borderRadius: '50%', backgroundColor: '#10b981'}} />
+          <span style={{fontFamily: REPO_FONT.mono, fontSize: 11, fontWeight: 700, color: '#10b981'}}>
+            @rhmt-ofc (AES-GCM)
+          </span>
+        </div>
+      </div>
+
+      {/* 3 Metric Stats */}
+      <div style={{display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 10}}>
+        <div
+          style={{
+            padding: '10px 12px',
+            borderRadius: 12,
+            backgroundColor: '#0d131f',
+            border: '1px solid rgba(255, 255, 255, 0.08)',
+          }}
+        >
+          <div style={{fontFamily: REPO_FONT.mono, fontSize: 10, color: '#94a3b8', textTransform: 'uppercase'}}>
+            Total Repo
+          </div>
+          <div style={{fontFamily: REPO_FONT.mono, fontSize: 17, fontWeight: 800, color: '#ffffff', marginTop: 2}}>
+            12 Active
+          </div>
+        </div>
+        <div
+          style={{
+            padding: '10px 12px',
+            borderRadius: 12,
+            backgroundColor: '#0d131f',
+            border: '1px solid rgba(56, 189, 248, 0.2)',
+          }}
+        >
+          <div style={{fontFamily: REPO_FONT.mono, fontSize: 10, color: '#38bdf8', textTransform: 'uppercase'}}>
+            Kontribusi
+          </div>
+          <div style={{fontFamily: REPO_FONT.mono, fontSize: 17, fontWeight: 800, color: '#38bdf8', marginTop: 2}}>
+            1.190 Sync
+          </div>
+        </div>
+        <div
+          style={{
+            padding: '10px 12px',
+            borderRadius: 12,
+            backgroundColor: '#0d131f',
+            border: '1px solid rgba(16, 185, 129, 0.2)',
+          }}
+        >
+          <div style={{fontFamily: REPO_FONT.mono, fontSize: 10, color: '#10b981', textTransform: 'uppercase'}}>
+            RAM Worker
+          </div>
+          <div style={{fontFamily: REPO_FONT.mono, fontSize: 17, fontWeight: 800, color: '#10b981', marginTop: 2}}>
+            48ms 0-Traffic
+          </div>
+        </div>
+      </div>
+
+      {/* Real Staged Tree Table */}
+      <div
+        style={{
+          borderRadius: 12,
+          backgroundColor: '#0a0e17',
+          border: '1px solid rgba(56, 189, 248, 0.2)',
+          overflow: 'hidden',
+        }}
+      >
+        <div
+          style={{
+            padding: '7px 12px',
+            backgroundColor: '#101726',
+            borderBottom: '1px solid rgba(56, 189, 248, 0.15)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+          }}
+        >
+          <span style={{fontFamily: REPO_FONT.mono, fontSize: 10, fontWeight: 700, color: '#94a3b8'}}>
+            STAGED ATOMIC MERKLE TREE (142 FILES)
+          </span>
+          <span style={{fontFamily: REPO_FONT.mono, fontSize: 10, fontWeight: 700, color: '#10b981'}}>
+            SHA-1 VERIFIED
+          </span>
+        </div>
+        <div style={{display: 'flex', flexDirection: 'column'}}>
+          {[
+            {name: 'src/App.tsx', status: 'TIMPA', color: '#38bdf8', size: '142 KB'},
+            {name: 'src/LandingPage.tsx', status: 'TIMPA', color: '#38bdf8', size: '69 KB'},
+            {name: 'src/lib/github.ts', status: 'BARU', color: '#10b981', size: '28 KB'},
+            {name: 'public/icon.png', status: 'SAMA', color: '#94a3b8', size: '155 KB'},
+          ].map((f, i) => (
+            <div
+              key={f.name}
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+                padding: '6px 12px',
+                borderBottom: i < 3 ? '1px solid rgba(255, 255, 255, 0.05)' : 'none',
+              }}
+            >
+              <div style={{display: 'flex', alignItems: 'center', gap: 8}}>
+                <span
+                  style={{
+                    fontFamily: REPO_FONT.mono,
+                    fontSize: 9,
+                    fontWeight: 800,
+                    padding: '2px 5px',
+                    borderRadius: 4,
+                    backgroundColor: `${f.color}22`,
+                    color: f.color,
+                    border: `1px solid ${f.color}55`,
+                  }}
+                >
+                  {f.status}
+                </span>
+                <span style={{fontFamily: REPO_FONT.mono, fontSize: 11, color: '#e2e8f0'}}>
+                  {f.name}
+                </span>
+              </div>
+              <span style={{fontFamily: REPO_FONT.mono, fontSize: 11, color: '#64748b'}}>
+                {f.size}
+              </span>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Atomic Push Action Bar */}
+      <div
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+          padding: '8px 12px',
+          borderRadius: 10,
+          backgroundColor: '#0d131f',
+          border: '1.5px solid rgba(16, 185, 129, 0.4)',
+        }}
+      >
+        <div style={{display: 'flex', alignItems: 'center', gap: 8}}>
+          <span
+            style={{
+              fontFamily: REPO_FONT.mono,
+              fontSize: 10,
+              fontWeight: 800,
+              padding: '2px 7px',
+              borderRadius: 6,
+              backgroundColor: 'rgba(56, 189, 248, 0.15)',
+              color: '#38bdf8',
+            }}
+          >
+            branch: main
+          </span>
+          <span style={{fontFamily: REPO_FONT.mono, fontSize: 11, color: '#94a3b8'}}>
+            feat: 1-ref atomic client deployment
+          </span>
+        </div>
+        <div
+          style={{
+            fontFamily: REPO_FONT.mono,
+            fontSize: 11,
+            fontWeight: 800,
+            padding: '4px 10px',
+            borderRadius: 6,
+            backgroundColor: '#10b981',
+            color: '#070a0f',
+            boxShadow: '0 0 12px rgba(16, 185, 129, 0.5)',
+          }}
+        >
+          COMMIT ATOMIK
+        </div>
+      </div>
+    </div>
+  );
+};
+
 /* =========================================================================
    SCENE 5: BRAND & CALL TO ACTION (DARK FINALE)
    Karya Orisinal Rahmat / RHMT OFC & Link repoflow.web.id
@@ -1187,16 +1418,7 @@ export const RepoFlowBrandScene: React.FC = () => {
             </span>
           </div>
 
-          <Img
-            src={staticFile('assets/repoflow/real_rendered_app.png')}
-            style={{
-              width: '100%',
-              height: 220,
-              objectFit: 'cover',
-              objectPosition: 'top center',
-              display: 'block',
-            }}
-          />
+          <RepoFlowLiveAppView />
         </div>
 
         {/* Creator Badges & Tech Stack */}
@@ -1205,68 +1427,125 @@ export const RepoFlowBrandScene: React.FC = () => {
             opacity: cardIn,
             transform: `translateY(${(1 - cardIn) * 18}px)`,
             width: '100%',
-            backgroundColor: 'rgba(15, 23, 42, 0.8)',
-            border: '1.5px solid rgba(148, 163, 184, 0.2)',
-            borderRadius: 16,
+            backgroundColor: 'rgba(15, 23, 42, 0.85)',
+            border: '1.5px solid rgba(56, 189, 248, 0.3)',
+            borderRadius: 18,
             padding: '16px 20px',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'space-between',
+            boxShadow: '0 12px 32px rgba(0, 0, 0, 0.5)',
           }}
         >
           <div style={{display: 'flex', alignItems: 'center', gap: 14}}>
-            <div
+            <Img
+              src={staticFile('assets/portfolio/pp-dev.png')}
               style={{
-                width: 44,
-                height: 44,
+                width: 52,
+                height: 52,
                 borderRadius: '50%',
-                backgroundColor: 'rgba(56, 189, 248, 0.2)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                color: '#38bdf8',
-                fontFamily: REPO_FONT.display,
-                fontSize: 18,
-                fontWeight: 800,
+                border: '2px solid #38bdf8',
+                boxShadow: '0 0 16px rgba(56, 189, 248, 0.45)',
+                objectFit: 'cover',
               }}
-            >
-              R
-            </div>
+            />
             <div>
-              <div
-                style={{
-                  fontFamily: REPO_FONT.display,
-                  fontSize: 18,
-                  fontWeight: 800,
-                  color: '#ffffff',
-                }}
-              >
-                Rahmat (rhmt ofc)
+              <div style={{display: 'flex', alignItems: 'center', gap: 8}}>
+                <span
+                  style={{
+                    fontFamily: REPO_FONT.display,
+                    fontSize: 20,
+                    fontWeight: 800,
+                    color: '#ffffff',
+                  }}
+                >
+                  Rahmat
+                </span>
+                <span
+                  style={{
+                    fontFamily: REPO_FONT.mono,
+                    fontSize: 11,
+                    fontWeight: 800,
+                    padding: '2px 8px',
+                    borderRadius: 6,
+                    backgroundColor: 'rgba(56, 189, 248, 0.2)',
+                    color: '#38bdf8',
+                    border: '1px solid #38bdf8',
+                  }}
+                >
+                  RHMT OFC
+                </span>
               </div>
-              <div style={{fontFamily: REPO_FONT.mono, fontSize: 13, color: '#38bdf8'}}>
-                Portfolio Resmi: rhmt.biz.id
+              <div style={{display: 'flex', alignItems: 'center', gap: 6, marginTop: 4}}>
+                <Img
+                  src={staticFile('assets/portfolio/relay.svg')}
+                  style={{width: 14, height: 14, opacity: 0.85}}
+                />
+                <span style={{fontFamily: REPO_FONT.mono, fontSize: 13, color: '#38bdf8', fontWeight: 600}}>
+                  rhmt.biz.id
+                </span>
               </div>
             </div>
           </div>
 
-          <div style={{display: 'flex', gap: 6}}>
-            {['React 19', 'TypeScript', 'Web Crypto'].map((tag) => (
-              <span
-                key={tag}
-                style={{
-                  fontFamily: REPO_FONT.mono,
-                  fontSize: 10,
-                  fontWeight: 700,
-                  padding: '3px 7px',
-                  borderRadius: 6,
-                  backgroundColor: 'rgba(56, 189, 248, 0.12)',
-                  color: '#38bdf8',
-                  border: '1px solid rgba(56, 189, 248, 0.3)',
-                }}
-              >
-                {tag}
+          <div style={{display: 'flex', alignItems: 'center', gap: 8}}>
+            <div
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: 6,
+                padding: '6px 10px',
+                borderRadius: 8,
+                backgroundColor: 'rgba(56, 189, 248, 0.12)',
+                border: '1px solid rgba(56, 189, 248, 0.28)',
+              }}
+            >
+              <Img
+                src={staticFile('assets/portfolio/tools/antigravity.svg')}
+                style={{width: 16, height: 16}}
+              />
+              <span style={{fontFamily: REPO_FONT.mono, fontSize: 11, fontWeight: 700, color: '#38bdf8'}}>
+                AGY
               </span>
-            ))}
+            </div>
+            <div
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: 6,
+                padding: '6px 10px',
+                borderRadius: 8,
+                backgroundColor: 'rgba(56, 189, 248, 0.12)',
+                border: '1px solid rgba(56, 189, 248, 0.28)',
+              }}
+            >
+              <Img
+                src={staticFile('assets/portfolio/tools/react.svg')}
+                style={{width: 16, height: 16}}
+              />
+              <span style={{fontFamily: REPO_FONT.mono, fontSize: 11, fontWeight: 700, color: '#38bdf8'}}>
+                React
+              </span>
+            </div>
+            <div
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: 6,
+                padding: '6px 10px',
+                borderRadius: 8,
+                backgroundColor: 'rgba(56, 189, 248, 0.12)',
+                border: '1px solid rgba(56, 189, 248, 0.28)',
+              }}
+            >
+              <Img
+                src={staticFile('assets/portfolio/tools/typescript.svg')}
+                style={{width: 16, height: 16}}
+              />
+              <span style={{fontFamily: REPO_FONT.mono, fontSize: 11, fontWeight: 700, color: '#38bdf8'}}>
+                TS
+              </span>
+            </div>
           </div>
         </div>
 

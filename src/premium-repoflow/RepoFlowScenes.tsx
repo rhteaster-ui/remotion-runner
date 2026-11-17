@@ -802,11 +802,11 @@ export const RepoFlowBrandScene: React.FC = () => {
                 }}
               />
               <Img
-                src={staticFile('assets/repoflow/favicon_badge_ultra_hd.png')}
+                src={staticFile('assets/repoflow/icon.png')}
                 style={{
                   width: 170,
                   height: 170,
-                  borderRadius: 42,
+                  borderRadius: 38,
                   objectFit: 'cover',
                   border: `3px solid ${t.cyan}`,
                   boxShadow: `0 0 35px ${t.cyanSoft}`,
@@ -893,7 +893,7 @@ export const RepoFlowBrandScene: React.FC = () => {
             >
               <div style={{display: 'flex', alignItems: 'center', gap: 14}}>
                 <Img
-                  src={staticFile('assets/ops/pp-dev.png')}
+                  src={staticFile('assets/portfolio/pp-dev.png')}
                   style={{
                     width: 44,
                     height: 44,

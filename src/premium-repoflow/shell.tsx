@@ -130,12 +130,13 @@ export const RepoFlowShell: React.FC<{
         >
           <div style={{display: 'flex', alignItems: 'center', gap: 14}}>
             <Img
-              src={staticFile('assets/repoflow/icon_3d_centered.png')}
+              src={staticFile('assets/repoflow/icon.png')}
               style={{
                 width: 46,
                 height: 46,
                 borderRadius: 12,
-                boxShadow: '0 6px 16px rgba(14, 165, 233, 0.35)',
+                border: `1.5px solid ${t.accentBorder}`,
+                boxShadow: `0 6px 18px ${t.accentSoft}`,
               }}
             />
             <div>
@@ -542,10 +543,13 @@ export const RepoFlowTransitionSweep: React.FC<{
           }}
         >
           <Img
-            src={staticFile('assets/repoflow/favicon_badge_ultra_hd.png')}
+            src={staticFile('assets/repoflow/icon.png')}
             style={{
-              width: 180,
-              height: 180,
+              width: 170,
+              height: 170,
+              borderRadius: 38,
+              border: '3px solid #38bdf8',
+              boxShadow: '0 24px 60px rgba(2, 132, 199, 0.6)',
               filter: 'drop-shadow(0 20px 40px rgba(0, 0, 0, 0.65))',
             }}
           />

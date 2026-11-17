@@ -155,11 +155,11 @@ export const RepoFlowHeader: React.FC<{
         }}
       >
         <Img
-          src={staticFile('assets/repoflow/favicon_badge_ultra_hd.png')}
+          src={staticFile('assets/repoflow/icon.png')}
           style={{
             width: 44,
             height: 44,
-            borderRadius: '50%',
+            borderRadius: 12,
             objectFit: 'cover',
             border: `2px solid ${ac}`,
           }}
