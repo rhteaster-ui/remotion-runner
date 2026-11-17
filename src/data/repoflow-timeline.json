@@ -1,7 +1,7 @@
 {
   "fps": 30,
   "estimated": false,
-  "total": 68.668,
+  "total": 77.156,
   "scenes": [
     {
       "id": "s1-hook",
@@ -9,54 +9,54 @@
       "bg": "dark",
       "audio": "audio/vo-repoflow/s1-hook.mp3",
       "start": 0.0,
-      "duration": 13.002,
-      "vo_start": 0.5,
-      "vo_end": 12.452,
-      "end": 13.002
+      "duration": 15.956,
+      "vo_start": 0.55,
+      "vo_end": 15.406,
+      "end": 15.956
     },
     {
       "id": "s2-unpack",
       "title": "Ekstraksi Memori Klien Instan",
       "bg": "light",
       "audio": "audio/vo-repoflow/s2-unpack.mp3",
-      "start": 13.002,
-      "duration": 13.574,
-      "vo_start": 13.402,
-      "vo_end": 26.026,
-      "end": 26.576
+      "start": 15.956,
+      "duration": 14.728,
+      "vo_start": 16.406,
+      "vo_end": 30.134,
+      "end": 30.684
     },
     {
       "id": "s3-tree",
-      "title": "Atomic Git Tree & Zero Broken State",
+      "title": "Inspeksi Repo & Atomic Git Tree",
       "bg": "dark",
       "audio": "audio/vo-repoflow/s3-tree.mp3",
-      "start": 26.576,
-      "duration": 12.254,
-      "vo_start": 26.976,
-      "vo_end": 38.28,
-      "end": 38.83
+      "start": 30.684,
+      "duration": 14.008,
+      "vo_start": 31.134,
+      "vo_end": 44.142,
+      "end": 44.692
     },
     {
       "id": "s4-vault",
       "title": "Enkripsi Token Web Crypto AES-256",
       "bg": "light",
       "audio": "audio/vo-repoflow/s4-vault.mp3",
-      "start": 38.83,
-      "duration": 15.974,
-      "vo_start": 39.23,
-      "vo_end": 54.254,
-      "end": 54.804
+      "start": 44.692,
+      "duration": 15.808,
+      "vo_start": 45.142,
+      "vo_end": 59.95,
+      "end": 60.5
     },
     {
       "id": "s5-brand",
       "title": "Karya Orisinal RHMT OFC",
       "bg": "dark",
       "audio": "audio/vo-repoflow/s5-brand.mp3",
-      "start": 54.804,
-      "duration": 13.864,
-      "vo_start": 55.204,
-      "vo_end": 67.468,
-      "end": 68.668
+      "start": 60.5,
+      "duration": 16.656,
+      "vo_start": 60.95,
+      "vo_end": 75.806,
+      "end": 77.156
     }
   ]
 }
