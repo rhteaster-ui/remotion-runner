@@ -194,13 +194,13 @@ def main():
     print(f"[+] Verifikasi FFprobe: {w}x{h} ({codec}) | Durasi: {dur:.2f}s | Ukuran: {fsize:.2f} MB")
 
     caption = (
-        "🎬 *RepoFlow v2 — Production Teardown (Refined)*\n"
+        "🎬 *RepoFlow v2 — Production Teardown (Refined Subtitles)*\n"
         "Karya Orisinal: *rhmt ofc* (`rhmt.biz.id`)\n\n"
-        "⚡ *Pembaruan Tuntas Sesuai Arahan Tuan:*\n"
-        "• *Komponen Review & Code Preview Asli:* Menampilkan screenshot otentik dari RepoFlow menggunakan token GitHub VPS — inspeksi repo `@rhmt-ofc/e-rekap`, pohon berkas, dan syntax-highlighted code editor riil.\n"
-        "• *Sinkronisasi Total Subtitle & Suara:* Seluruh narasi TTS Puck diregenerasi ulang dan disinkronkan kata-per-kata via Gemini Audio Transcription ke timestamp milidetik nyata (0 drift, presisi 100%).\n"
-        "• *Mobile & Desktop Workspace Nyata:* Mockup interaktif responsif menampilkan workspace RepoFlow live di HP dan dashboard 24 repositori.\n"
-        "• *Branding Resmi RHMT OFC:* Avatar resmi Tuan Rahmat dari portofolio rhmt.biz.id, pelafalan voiceover 'official' vs teks 'ofc'.\n\n"
+        "⚡ *Perbaikan Subtitle Tuntas Sesuai Arahan Tuan:*\n"
+        "• *Zero-Jitter Invariant Width:* Mengeliminasi lompatan teks horizontal yang membuat subtitle bergetar/kaku saat kata aktif menyala (padding dibuat konstan presisi sub-pixel).\n"
+        "• *Kinetic Spring Pop & Soft Glow:* Highlight kata aktif kini menggunakan elastic spring pop (micro-bounce) dengan ambient glow neon cyan modern tanpa wireframe kaku.\n"
+        "• *Pemenggalan Frasa Natural:* Memperbaiki chunking kalimat janggal (misal: '0' dan 'risiko gagal', 'di memori' dan 'lokal' kini menyatu utuh mengikuti ritme jeda napas VO).\n"
+        "• *Protective Backing Scrim:* Gradien halus di belakang subtitle menjaga kontras tajam di atas tema dark maupun light tanpa kotak hitam tebal.\n\n"
         f"📊 *Metadata:* {w}x{h} (9:16) · {dur:.2f}s · {fsize:.1f} MB · Rendered via GitHub Actions Cloud Runner."
     )
 
