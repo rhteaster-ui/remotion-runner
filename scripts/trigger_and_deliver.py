@@ -7,7 +7,7 @@ import urllib.request
 import urllib.parse
 import urllib.error
 
-GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN") or (open("/root/gh.txt").read().strip() if os.path.exists("/root/gh.txt") else "")
+GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN") or (open("/root/.runner_token").read().strip() if os.path.exists("/root/.runner_token") else (open("/root/gh.txt").read().strip() if os.path.exists("/root/gh.txt") else ""))
 REPO = "rhteaster-ui/remotion-runner"
 WORKFLOW_FILE = "render.yml"
 

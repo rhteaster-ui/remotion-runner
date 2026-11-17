@@ -11,11 +11,11 @@ import {
 import {REPO_FONT, REPO_TOKENS} from './tokens';
 
 const STEPS = [
-  {id: 'zip', label: 'ZIP IN'},
-  {id: 'unpack', label: 'MEM UNPACK'},
-  {id: 'tree', label: 'ATOMIC TREE'},
-  {id: 'vault', label: 'AES-256 VAULT'},
-  {id: 'commit', label: 'HEAD PUSH'},
+  'PROBLEM',
+  'UNPACK',
+  'ATOMIC TREE',
+  'AES-256 VAULT',
+  'BRAND',
 ];
 
 export const RepoFlowShell: React.FC<{
@@ -26,16 +26,16 @@ export const RepoFlowShell: React.FC<{
 }> = ({
   mode = 'dark',
   activeStep = 0,
-  subtitle = 'CLIENT-SIDE GIT AUTOMATION',
+  subtitle = 'CLIENT-SIDE GIT ENGINE',
   children,
 }) => {
   const frame = useCurrentFrame();
   const t = REPO_TOKENS[mode];
 
-  // Subtle ambient breathing
-  const pulse = Math.sin(frame * 0.08) * 0.05 + 1;
-  const glowX = Math.sin(frame * 0.03) * 60;
-  const glowY = Math.cos(frame * 0.025) * 40;
+  // Subtle ambient breathing for volumetric depth (zero blueprint grid lines!)
+  const pulse = Math.sin(frame * 0.06) * 0.06 + 1;
+  const glowX = Math.sin(frame * 0.025) * 50;
+  const glowY = Math.cos(frame * 0.02) * 35;
 
   return (
     <AbsoluteFill
@@ -46,106 +46,109 @@ export const RepoFlowShell: React.FC<{
         overflow: 'hidden',
       }}
     >
-      {/* Blueprint Grid System */}
-      <div
-        style={{
-          position: 'absolute',
-          inset: 0,
-          backgroundImage: `
-            linear-gradient(to right, ${t.gridLine} 1px, transparent 1px),
-            linear-gradient(to bottom, ${t.gridLine} 1px, transparent 1px)
-          `,
-          backgroundSize: '36px 36px',
-          opacity: 0.9,
-          pointerEvents: 'none',
-        }}
-      />
-      <div
-        style={{
-          position: 'absolute',
-          inset: 0,
-          backgroundImage: `
-            linear-gradient(to right, ${t.gridAccent} 1.5px, transparent 1.5px),
-            linear-gradient(to bottom, ${t.gridAccent} 1.5px, transparent 1.5px)
-          `,
-          backgroundSize: '180px 180px',
-          opacity: 0.7,
-          pointerEvents: 'none',
-        }}
-      />
-
-      {/* Atmospheric Radial Glow Orb */}
+      {/* Cinematic Studio Ambient Radial Illumination (Zero Blueprint Grid!) */}
       {mode === 'dark' ? (
-        <div
-          style={{
-            position: 'absolute',
-            top: 240 + glowY,
-            left: 140 + glowX,
-            width: 700,
-            height: 700,
-            borderRadius: '50%',
-            background: 'radial-gradient(circle, rgba(14, 165, 233, 0.16) 0%, transparent 68%)',
-            filter: 'blur(70px)',
-            pointerEvents: 'none',
-            transform: `scale(${pulse})`,
-          }}
-        />
+        <>
+          <div
+            style={{
+              position: 'absolute',
+              top: 180 + glowY,
+              left: 120 + glowX,
+              width: 800,
+              height: 800,
+              borderRadius: '50%',
+              background: 'radial-gradient(circle, rgba(14, 165, 233, 0.16) 0%, transparent 68%)',
+              filter: 'blur(100px)',
+              pointerEvents: 'none',
+              transform: `scale(${pulse})`,
+            }}
+          />
+          <div
+            style={{
+              position: 'absolute',
+              bottom: 200,
+              right: 60,
+              width: 500,
+              height: 500,
+              borderRadius: '50%',
+              background: 'radial-gradient(circle, rgba(16, 185, 129, 0.08) 0%, transparent 70%)',
+              filter: 'blur(90px)',
+              pointerEvents: 'none',
+            }}
+          />
+        </>
       ) : (
-        <div
-          style={{
-            position: 'absolute',
-            top: 260 + glowY,
-            right: 100 + glowX,
-            width: 600,
-            height: 600,
-            borderRadius: '50%',
-            background: 'radial-gradient(circle, rgba(2, 132, 199, 0.09) 0%, transparent 68%)',
-            filter: 'blur(60px)',
-            pointerEvents: 'none',
-          }}
-        />
+        <>
+          <div
+            style={{
+              position: 'absolute',
+              top: 160 + glowY,
+              right: 80 + glowX,
+              width: 750,
+              height: 750,
+              borderRadius: '50%',
+              background: 'radial-gradient(circle, rgba(2, 132, 199, 0.10) 0%, transparent 68%)',
+              filter: 'blur(90px)',
+              pointerEvents: 'none',
+            }}
+          />
+          <div
+            style={{
+              position: 'absolute',
+              bottom: 220,
+              left: 60,
+              width: 500,
+              height: 500,
+              borderRadius: '50%',
+              background: 'radial-gradient(circle, rgba(56, 189, 248, 0.08) 0%, transparent 70%)',
+              filter: 'blur(80px)',
+              pointerEvents: 'none',
+            }}
+          />
+        </>
       )}
 
-      {/* Safe Container Layout (4-Zone Vertical Grid) */}
+      {/* Main Container Layout */}
       <div
         style={{
           position: 'absolute',
           inset: 0,
           display: 'flex',
           flexDirection: 'column',
-          padding: '52px 48px 230px',
+          padding: '48px 44px 150px',
           boxSizing: 'border-box',
           zIndex: 10,
         }}
       >
-        {/* TOP BAR / APP HEADER */}
+        {/* MODERN KEYNOTE TOP BAR */}
         <header
           style={{
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'space-between',
-            paddingBottom: 24,
+            paddingBottom: 20,
             borderBottom: `1px solid ${t.line}`,
           }}
         >
+          {/* Brand Mark */}
           <div style={{display: 'flex', alignItems: 'center', gap: 14}}>
             <Img
               src={staticFile('assets/repoflow/icon.png')}
               style={{
-                width: 46,
-                height: 46,
-                borderRadius: 12,
-                border: `1.5px solid ${t.accentBorder}`,
-                boxShadow: `0 6px 18px ${t.accentSoft}`,
+                width: 52,
+                height: 52,
+                borderRadius: 14,
+                border: `2px solid ${t.accentBorder}`,
+                boxShadow: `0 8px 24px ${t.accentSoft}`,
               }}
             />
             <div>
-              <div style={{display: 'flex', alignItems: 'center', gap: 8}}>
+              <div style={{display: 'flex', alignItems: 'center', gap: 10}}>
                 <span
                   style={{
                     fontFamily: REPO_FONT.display,
-                    fontSize: 26,
-                    fontWeight: 700,
+                    fontSize: 30,
+                    fontWeight: 800,
                     letterSpacing: '-0.02em',
                     color: t.ink,
                   }}
@@ -154,11 +157,11 @@ export const RepoFlowShell: React.FC<{
                 </span>
                 <span
                   style={{
-                    fontSize: 12,
+                    fontSize: 14,
                     fontFamily: REPO_FONT.mono,
                     fontWeight: 700,
-                    padding: '2px 8px',
-                    borderRadius: 6,
+                    padding: '3px 10px',
+                    borderRadius: 8,
                     backgroundColor: t.accentSoft,
                     color: t.accent,
                     border: `1px solid ${t.accentBorder}`,
@@ -170,7 +173,7 @@ export const RepoFlowShell: React.FC<{
               <div
                 style={{
                   fontFamily: REPO_FONT.mono,
-                  fontSize: 13,
+                  fontSize: 14,
                   fontWeight: 600,
                   color: t.quiet,
                   letterSpacing: '0.04em',
@@ -186,286 +189,160 @@ export const RepoFlowShell: React.FC<{
             style={{
               display: 'flex',
               alignItems: 'center',
-              gap: 8,
+              gap: 10,
               backgroundColor: t.surface,
-              padding: '8px 16px',
-              borderRadius: 24,
-              border: `1px solid ${t.lineStrong}`,
-              boxShadow: mode === 'dark' ? '0 0 16px rgba(56, 189, 248, 0.12)' : 'none',
+              padding: '10px 18px',
+              borderRadius: 30,
+              border: `1.5px solid ${t.lineStrong}`,
+              boxShadow: mode === 'dark' ? '0 4px 20px rgba(0, 0, 0, 0.4)' : '0 2px 10px rgba(0,0,0,0.06)',
             }}
           >
             <div
               style={{
-                width: 8,
-                height: 8,
+                width: 10,
+                height: 10,
                 borderRadius: '50%',
                 backgroundColor: REPO_TOKENS.mint,
-                boxShadow: `0 0 8px ${REPO_TOKENS.mint}`,
+                boxShadow: `0 0 10px ${REPO_TOKENS.mint}`,
               }}
             />
             <span
               style={{
                 fontFamily: REPO_FONT.mono,
-                fontSize: 13,
+                fontSize: 14,
                 fontWeight: 700,
                 color: t.ink,
-                letterSpacing: '0.02em',
+                letterSpacing: '0.03em',
               }}
             >
-              ZERO-BACKEND SECURE
+              rhmt.biz.id
             </span>
           </div>
         </header>
 
-        {/* ZONE 2 — TIMELINE BREADCRUMB STEPPER (BENDASTEPPER) */}
+        {/* MODERN MINIMALIST SEGMENTED PROGRESS BAR (Replaces Wire Stepper) */}
         <div
           style={{
-            marginTop: 22,
-            marginBottom: 20,
+            marginTop: 18,
+            marginBottom: 26,
             display: 'flex',
             alignItems: 'center',
-            justifyContent: 'space-between',
-            position: 'relative',
+            justifyContent: 'center',
+            gap: 10,
           }}
         >
-          {/* Background Connecting Line */}
-          <div
-            style={{
-              position: 'absolute',
-              top: '50%',
-              left: 20,
-              right: 20,
-              height: 2,
-              backgroundColor: t.line,
-              transform: 'translateY(-50%)',
-              zIndex: 1,
-            }}
-          />
-          {/* Active Progress Fill Line */}
-          <div
-            style={{
-              position: 'absolute',
-              top: '50%',
-              left: 20,
-              width: `${(activeStep / (STEPS.length - 1)) * 100}%`,
-              height: 2.5,
-              backgroundColor: t.accent,
-              boxShadow: mode === 'dark' ? '0 0 10px #38bdf8' : 'none',
-              transform: 'translateY(-50%)',
-              zIndex: 2,
-              transition: 'width 0.3s ease',
-            }}
-          />
-
           {STEPS.map((step, idx) => {
             const isCompleted = idx < activeStep;
             const isActive = idx === activeStep;
             return (
               <div
-                key={step.id}
+                key={step}
                 style={{
                   display: 'flex',
-                  flexDirection: 'column',
                   alignItems: 'center',
-                  zIndex: 3,
-                  position: 'relative',
+                  gap: 8,
+                  padding: '6px 14px',
+                  borderRadius: 20,
+                  backgroundColor: isActive
+                    ? t.accentSoft
+                    : isCompleted
+                    ? 'rgba(16, 185, 129, 0.12)'
+                    : 'transparent',
+                  border: isActive
+                    ? `1.5px solid ${t.accent}`
+                    : isCompleted
+                    ? '1.5px solid rgba(16, 185, 129, 0.4)'
+                    : `1px solid ${t.line}`,
+                  transition: 'all 0.3s ease',
                 }}
               >
-                <div
+                <span
                   style={{
-                    width: isActive ? 26 : 18,
-                    height: isActive ? 26 : 18,
-                    borderRadius: '50%',
-                    backgroundColor: isActive
+                    fontFamily: REPO_FONT.mono,
+                    fontSize: 12,
+                    fontWeight: 800,
+                    color: isActive
                       ? t.accent
                       : isCompleted
                       ? REPO_TOKENS.mint
-                      : t.surface,
-                    border: isActive
-                      ? `3px solid ${t.bg}`
-                      : isCompleted
-                      ? `2px solid ${REPO_TOKENS.mint}`
-                      : `2px solid ${t.lineStrong}`,
-                    boxShadow: isActive
-                      ? `0 0 16px ${t.accent}, 0 0 0 4px ${t.accentSoft}`
-                      : isCompleted
-                      ? `0 0 10px ${REPO_TOKENS.mint}`
-                      : 'none',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    transition: 'all 0.2s ease',
+                      : t.quiet,
                   }}
                 >
-                  {isCompleted && (
-                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none">
-                      <path
-                        d="M5 13l4 4L19 7"
-                        stroke="#ffffff"
-                        strokeWidth="3.5"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
-                  )}
-                  {isActive && (
-                    <div
-                      style={{
-                        width: 8,
-                        height: 8,
-                        borderRadius: '50%',
-                        backgroundColor: '#ffffff',
-                      }}
-                    />
-                  )}
-                </div>
+                  {isCompleted ? '✓' : `0${idx + 1}`}
+                </span>
                 <span
                   style={{
-                    position: 'absolute',
-                    top: 28,
-                    fontFamily: REPO_FONT.mono,
-                    fontSize: 11,
+                    fontFamily: REPO_FONT.sans,
+                    fontSize: 13,
                     fontWeight: isActive ? 800 : 600,
-                    color: isActive ? t.accent : isCompleted ? t.ink : t.quiet,
-                    whiteSpace: 'nowrap',
-                    letterSpacing: '0.04em',
+                    color: isActive
+                      ? t.ink
+                      : isCompleted
+                      ? t.ink
+                      : t.quiet,
+                    letterSpacing: '0.02em',
                   }}
                 >
-                  {step.label}
+                  {step}
                 </span>
               </div>
             );
           })}
         </div>
 
-        {/* ZONE 3 — INTERACTIVE MAIN STAGE */}
-        <div
+        {/* EXPANSIVE MAIN STAGE */}
+        <main
           style={{
             flex: 1,
-            marginTop: 24,
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'center',
+            alignItems: 'center',
             position: 'relative',
           }}
         >
           {children}
-        </div>
-
-        {/* ZONE 4 — TELEMETRY BOTTOM BAR (Di atas area subtitle aman) */}
-        <footer
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'space-between',
-            paddingTop: 16,
-            borderTop: `1px solid ${t.line}`,
-            fontFamily: REPO_FONT.mono,
-            fontSize: 13,
-            color: t.quiet,
-          }}
-        >
-          <div style={{display: 'flex', alignItems: 'center', gap: 8}}>
-            <span style={{color: t.accent, fontWeight: 700}}>URL:</span>
-            <span>https://repoflow.web.id</span>
-          </div>
-          <div style={{display: 'flex', alignItems: 'center', gap: 10}}>
-            <span>BY RHMT OFC</span>
-            <span style={{opacity: 0.4}}>|</span>
-            <span style={{color: REPO_TOKENS.mint, fontWeight: 700}}>ATOMIC COMMIT</span>
-          </div>
-        </footer>
+        </main>
       </div>
     </AbsoluteFill>
   );
 };
 
 /**
- * Figma-style anchor selection frame for focusing viewer attention
+ * Modern High-Impact Header Box (Clean, bold, zero Figma corner tick marks!)
  */
 export const FigmaAnchorFrame: React.FC<{
   children: React.ReactNode;
   tag?: string;
   borderColor?: string;
-}> = ({children, tag = 'FOCAL TARGET', borderColor = '#38bdf8'}) => {
+}> = ({children, tag, borderColor = '#38bdf8'}) => {
   return (
     <div
       style={{
         position: 'relative',
-        border: `2px solid ${borderColor}`,
-        borderRadius: 8,
-        padding: '12px 18px',
-        display: 'inline-block',
-        boxShadow: `0 0 20px ${borderColor}26`,
+        display: 'inline-flex',
+        flexDirection: 'column',
+        alignItems: 'center',
       }}
     >
-      {/* 4 Corner Anchors */}
-      <div
-        style={{
-          position: 'absolute',
-          top: -5,
-          left: -5,
-          width: 8,
-          height: 8,
-          backgroundColor: '#ffffff',
-          border: `2px solid ${borderColor}`,
-        }}
-      />
-      <div
-        style={{
-          position: 'absolute',
-          top: -5,
-          right: -5,
-          width: 8,
-          height: 8,
-          backgroundColor: '#ffffff',
-          border: `2px solid ${borderColor}`,
-        }}
-      />
-      <div
-        style={{
-          position: 'absolute',
-          bottom: -5,
-          left: -5,
-          width: 8,
-          height: 8,
-          backgroundColor: '#ffffff',
-          border: `2px solid ${borderColor}`,
-        }}
-      />
-      <div
-        style={{
-          position: 'absolute',
-          bottom: -5,
-          right: -5,
-          width: 8,
-          height: 8,
-          backgroundColor: '#ffffff',
-          border: `2px solid ${borderColor}`,
-        }}
-      />
-
-      {/* Floating Tag */}
       {tag && (
         <span
           style={{
-            position: 'absolute',
-            top: -12,
-            right: 14,
-            backgroundColor: borderColor,
-            color: '#07090e',
+            marginBottom: 8,
+            backgroundColor: `${borderColor}22`,
+            color: borderColor,
+            border: `1px solid ${borderColor}66`,
             fontFamily: REPO_FONT.mono,
-            fontSize: 10,
+            fontSize: 13,
             fontWeight: 800,
-            padding: '2px 6px',
-            borderRadius: 4,
-            letterSpacing: '0.04em',
+            padding: '4px 12px',
+            borderRadius: 8,
+            letterSpacing: '0.06em',
           }}
         >
           {tag}
         </span>
       )}
-
       {children}
     </div>
   );
