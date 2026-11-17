@@ -1,0 +1,62 @@
+{
+  "fps": 30,
+  "estimated": false,
+  "total": 75.932,
+  "scenes": [
+    {
+      "id": "s1-hook",
+      "title": "Masalah Push ZIP ke GitHub",
+      "bg": "dark",
+      "audio": "audio/vo-repoflow/s1-hook.mp3",
+      "start": 0.0,
+      "duration": 14.132,
+      "vo_start": 0.55,
+      "vo_end": 13.582,
+      "end": 14.132
+    },
+    {
+      "id": "s2-unpack",
+      "title": "Ekstraksi Memori Klien Instan",
+      "bg": "light",
+      "audio": "audio/vo-repoflow/s2-unpack.mp3",
+      "start": 14.132,
+      "duration": 15.304,
+      "vo_start": 14.582,
+      "vo_end": 28.886,
+      "end": 29.436
+    },
+    {
+      "id": "s3-tree",
+      "title": "Atomic Git Tree & Zero Broken State",
+      "bg": "dark",
+      "audio": "audio/vo-repoflow/s3-tree.mp3",
+      "start": 29.436,
+      "duration": 15.832,
+      "vo_start": 29.886,
+      "vo_end": 44.718,
+      "end": 45.268
+    },
+    {
+      "id": "s4-vault",
+      "title": "Enkripsi Token Web Crypto AES-256",
+      "bg": "light",
+      "audio": "audio/vo-repoflow/s4-vault.mp3",
+      "start": 45.268,
+      "duration": 16.0,
+      "vo_start": 45.718,
+      "vo_end": 60.718,
+      "end": 61.268
+    },
+    {
+      "id": "s5-brand",
+      "title": "Karya Orisinal RHMT OFC",
+      "bg": "dark",
+      "audio": "audio/vo-repoflow/s5-brand.mp3",
+      "start": 61.268,
+      "duration": 14.664,
+      "vo_start": 61.718,
+      "vo_end": 74.582,
+      "end": 75.932
+    }
+  ]
+}

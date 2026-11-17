@@ -6,12 +6,14 @@ import {MascotShowcase} from './MascotShowcase';
 import {StorytellingVideo} from './StorytellingVideo';
 import {OpsFlowVideo} from './OpsFlowVideo';
 import {OpsFlowPremiumVideo} from './OpsFlowPremiumVideo';
+import {RepoFlowVideo} from './RepoFlowVideo';
 import {ERekapVideo} from './ERekapVideo';
 import {ERekapPremiumVideo} from './ERekapPremiumVideo';
 import timeline from './data/timeline.json';
 import kryptonTimeline from './data/krypton-timeline.json';
 import agenticTimeline from './data/agentic-timeline.json';
 import opsTimeline from './data/ops-timeline.json';
+import repoflowTimeline from './data/repoflow-timeline.json';
 import erekapTimeline from './data/erekap-timeline.json';
 
 export const Root: React.FC = () => (
@@ -31,6 +33,22 @@ export const Root: React.FC = () => (
       height={1920}
       fps={erekapTimeline.fps}
       durationInFrames={Math.ceil(erekapTimeline.total * erekapTimeline.fps)}
+    />
+    <Composition
+      id="RepoFlowTikTok"
+      component={RepoFlowVideo}
+      width={1080}
+      height={1920}
+      fps={repoflowTimeline.fps}
+      durationInFrames={Math.ceil(repoflowTimeline.total * repoflowTimeline.fps)}
+    />
+    <Composition
+      id="RepoFlowPremium"
+      component={RepoFlowVideo}
+      width={1080}
+      height={1920}
+      fps={repoflowTimeline.fps}
+      durationInFrames={Math.ceil(repoflowTimeline.total * repoflowTimeline.fps)}
     />
     <Composition
       id="OpsFlowPremium"

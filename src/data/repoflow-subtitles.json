@@ -1,0 +1,1149 @@
+{
+  "captions": [
+    {
+      "id": 1,
+      "scene": "s1-hook",
+      "bg": "dark",
+      "lines": [
+        "Pernah nggak ngoding",
+        "project di HP atau punya"
+      ],
+      "words": [
+        {
+          "text": "Pernah",
+          "start": 0.868,
+          "end": 1.192
+        },
+        {
+          "text": "nggak",
+          "start": 1.192,
+          "end": 1.462
+        },
+        {
+          "text": "ngoding",
+          "start": 1.462,
+          "end": 1.839
+        },
+        {
+          "text": "project",
+          "start": 1.839,
+          "end": 2.217
+        },
+        {
+          "text": "di",
+          "start": 2.217,
+          "end": 2.325
+        },
+        {
+          "text": "HP",
+          "start": 2.325,
+          "end": 2.433
+        },
+        {
+          "text": "atau",
+          "start": 2.433,
+          "end": 2.648
+        },
+        {
+          "text": "punya",
+          "start": 2.648,
+          "end": 2.918
+        }
+      ],
+      "start": 0.868,
+      "end": 2.918
+    },
+    {
+      "id": 2,
+      "scene": "s1-hook",
+      "bg": "dark",
+      "lines": [
+        "file ZIP puluhan mega,",
+        "tapi pas mau push ke"
+      ],
+      "words": [
+        {
+          "text": "file",
+          "start": 2.918,
+          "end": 3.134
+        },
+        {
+          "text": "ZIP",
+          "start": 3.134,
+          "end": 3.296
+        },
+        {
+          "text": "puluhan",
+          "start": 3.296,
+          "end": 3.673
+        },
+        {
+          "text": "mega,",
+          "start": 3.673,
+          "end": 4.051
+        },
+        {
+          "text": "tapi",
+          "start": 4.051,
+          "end": 4.267
+        },
+        {
+          "text": "pas",
+          "start": 4.267,
+          "end": 4.429
+        },
+        {
+          "text": "mau",
+          "start": 4.429,
+          "end": 4.591
+        },
+        {
+          "text": "push",
+          "start": 4.591,
+          "end": 4.806
+        },
+        {
+          "text": "ke",
+          "start": 4.806,
+          "end": 4.914
+        }
+      ],
+      "start": 2.918,
+      "end": 4.914
+    },
+    {
+      "id": 3,
+      "scene": "s1-hook",
+      "bg": "dark",
+      "lines": [
+        "GitHub malah ribet",
+        "setengah mati? Web GitHub"
+      ],
+      "words": [
+        {
+          "text": "GitHub",
+          "start": 4.914,
+          "end": 5.466
+        },
+        {
+          "text": "malah",
+          "start": 5.466,
+          "end": 5.736
+        },
+        {
+          "text": "ribet",
+          "start": 5.736,
+          "end": 6.005
+        },
+        {
+          "text": "setengah",
+          "start": 6.005,
+          "end": 6.437
+        },
+        {
+          "text": "mati?",
+          "start": 6.437,
+          "end": 6.815
+        },
+        {
+          "text": "Web",
+          "start": 6.815,
+          "end": 6.976
+        },
+        {
+          "text": "GitHub",
+          "start": 6.976,
+          "end": 7.3
+        }
+      ],
+      "start": 4.914,
+      "end": 7.3
+    },
+    {
+      "id": 4,
+      "scene": "s1-hook",
+      "bg": "dark",
+      "lines": [
+        "biasa punya batasan file",
+        "dan nggak bisa ekstrak"
+      ],
+      "words": [
+        {
+          "text": "biasa",
+          "start": 7.3,
+          "end": 7.57
+        },
+        {
+          "text": "punya",
+          "start": 7.57,
+          "end": 8.294
+        },
+        {
+          "text": "batasan",
+          "start": 8.294,
+          "end": 8.672
+        },
+        {
+          "text": "file",
+          "start": 8.672,
+          "end": 8.888
+        },
+        {
+          "text": "dan",
+          "start": 8.888,
+          "end": 9.364
+        },
+        {
+          "text": "nggak",
+          "start": 9.364,
+          "end": 9.633
+        },
+        {
+          "text": "bisa",
+          "start": 9.633,
+          "end": 9.849
+        },
+        {
+          "text": "ekstrak",
+          "start": 9.849,
+          "end": 10.227
+        }
+      ],
+      "start": 7.3,
+      "end": 10.227
+    },
+    {
+      "id": 5,
+      "scene": "s1-hook",
+      "bg": "dark",
+      "lines": [
+        "ZIP. Tapi tenang, masalah",
+        "itu tuntas lewat RepoFlow!"
+      ],
+      "words": [
+        {
+          "text": "ZIP.",
+          "start": 10.227,
+          "end": 10.551
+        },
+        {
+          "text": "Tapi",
+          "start": 10.551,
+          "end": 10.766
+        },
+        {
+          "text": "tenang,",
+          "start": 10.766,
+          "end": 11.252
+        },
+        {
+          "text": "masalah",
+          "start": 11.252,
+          "end": 11.629
+        },
+        {
+          "text": "itu",
+          "start": 11.629,
+          "end": 11.791
+        },
+        {
+          "text": "tuntas",
+          "start": 11.791,
+          "end": 12.115
+        },
+        {
+          "text": "lewat",
+          "start": 12.115,
+          "end": 12.778
+        },
+        {
+          "text": "RepoFlow!",
+          "start": 12.778,
+          "end": 13.582
+        }
+      ],
+      "start": 10.227,
+      "end": 13.582
+    },
+    {
+      "id": 6,
+      "scene": "s2-unpack",
+      "bg": "light",
+      "lines": [
+        "RepoFlow bekerja 100% di",
+        "browser tanpa perantara"
+      ],
+      "words": [
+        {
+          "text": "RepoFlow",
+          "start": 14.582,
+          "end": 15.127
+        },
+        {
+          "text": "bekerja",
+          "start": 15.127,
+          "end": 15.604
+        },
+        {
+          "text": "100%",
+          "start": 15.604,
+          "end": 15.808
+        },
+        {
+          "text": "di",
+          "start": 15.808,
+          "end": 15.944
+        },
+        {
+          "text": "browser",
+          "start": 15.944,
+          "end": 16.421
+        },
+        {
+          "text": "tanpa",
+          "start": 16.421,
+          "end": 16.761
+        },
+        {
+          "text": "perantara",
+          "start": 16.761,
+          "end": 17.374
+        }
+      ],
+      "start": 14.582,
+      "end": 17.374
+    },
+    {
+      "id": 7,
+      "scene": "s2-unpack",
+      "bg": "light",
+      "lines": [
+        "server backend. Cukup drag",
+        "& drop bundel ZIP, ratusan"
+      ],
+      "words": [
+        {
+          "text": "server",
+          "start": 17.374,
+          "end": 17.783
+        },
+        {
+          "text": "backend.",
+          "start": 17.783,
+          "end": 18.464
+        },
+        {
+          "text": "Cukup",
+          "start": 18.464,
+          "end": 18.804
+        },
+        {
+          "text": "drag",
+          "start": 18.804,
+          "end": 19.077
+        },
+        {
+          "text": "&",
+          "start": 19.077,
+          "end": 19.213
+        },
+        {
+          "text": "drop",
+          "start": 19.213,
+          "end": 19.786
+        },
+        {
+          "text": "bundel",
+          "start": 19.786,
+          "end": 20.195
+        },
+        {
+          "text": "ZIP,",
+          "start": 20.195,
+          "end": 20.603
+        },
+        {
+          "text": "ratusan",
+          "start": 20.603,
+          "end": 21.08
+        }
+      ],
+      "start": 17.374,
+      "end": 21.08
+    },
+    {
+      "id": 8,
+      "scene": "s2-unpack",
+      "bg": "light",
+      "lines": [
+        "file langsung diekstrak di",
+        "RAM browser secara instan,"
+      ],
+      "words": [
+        {
+          "text": "file",
+          "start": 21.08,
+          "end": 21.352
+        },
+        {
+          "text": "langsung",
+          "start": 21.352,
+          "end": 21.897
+        },
+        {
+          "text": "diekstrak",
+          "start": 21.897,
+          "end": 22.51
+        },
+        {
+          "text": "di",
+          "start": 22.51,
+          "end": 22.646
+        },
+        {
+          "text": "RAM",
+          "start": 22.646,
+          "end": 22.85
+        },
+        {
+          "text": "browser",
+          "start": 22.85,
+          "end": 23.327
+        },
+        {
+          "text": "secara",
+          "start": 23.327,
+          "end": 23.736
+        },
+        {
+          "text": "instan,",
+          "start": 23.736,
+          "end": 24.349
+        }
+      ],
+      "start": 21.08,
+      "end": 24.349
+    },
+    {
+      "id": 9,
+      "scene": "s2-unpack",
+      "bg": "light",
+      "lines": [
+        "lengkap dengan proteksi",
+        "traversal dan pratinjau"
+      ],
+      "words": [
+        {
+          "text": "lengkap",
+          "start": 24.349,
+          "end": 24.825
+        },
+        {
+          "text": "dengan",
+          "start": 24.825,
+          "end": 25.234
+        },
+        {
+          "text": "proteksi",
+          "start": 25.234,
+          "end": 25.779
+        },
+        {
+          "text": "traversal",
+          "start": 25.779,
+          "end": 26.392
+        },
+        {
+          "text": "dan",
+          "start": 26.392,
+          "end": 26.596
+        },
+        {
+          "text": "pratinjau",
+          "start": 26.596,
+          "end": 27.209
+        }
+      ],
+      "start": 24.349,
+      "end": 27.209
+    },
+    {
+      "id": 10,
+      "scene": "s2-unpack",
+      "bg": "light",
+      "lines": [
+        "diff sebelum di-push."
+      ],
+      "words": [
+        {
+          "text": "diff",
+          "start": 27.209,
+          "end": 27.481
+        },
+        {
+          "text": "sebelum",
+          "start": 27.481,
+          "end": 27.958
+        },
+        {
+          "text": "di-push.",
+          "start": 27.958,
+          "end": 28.571
+        }
+      ],
+      "start": 27.209,
+      "end": 28.571
+    },
+    {
+      "id": 11,
+      "scene": "s3-tree",
+      "bg": "dark",
+      "lines": [
+        "Beda sama upload biasa",
+        "yang bikin commit satu per"
+      ],
+      "words": [
+        {
+          "text": "Beda",
+          "start": 30.129,
+          "end": 30.366
+        },
+        {
+          "text": "sama",
+          "start": 30.366,
+          "end": 30.602
+        },
+        {
+          "text": "upload",
+          "start": 30.602,
+          "end": 30.957
+        },
+        {
+          "text": "biasa",
+          "start": 30.957,
+          "end": 31.253
+        },
+        {
+          "text": "yang",
+          "start": 31.253,
+          "end": 31.49
+        },
+        {
+          "text": "bikin",
+          "start": 31.49,
+          "end": 31.786
+        },
+        {
+          "text": "commit",
+          "start": 31.786,
+          "end": 32.141
+        },
+        {
+          "text": "satu",
+          "start": 32.141,
+          "end": 32.377
+        },
+        {
+          "text": "per",
+          "start": 32.377,
+          "end": 32.555
+        }
+      ],
+      "start": 30.129,
+      "end": 32.555
+    },
+    {
+      "id": 12,
+      "scene": "s3-tree",
+      "bg": "dark",
+      "lines": [
+        "satu, RepoFlow merakit git",
+        "blobs secara paralel,"
+      ],
+      "words": [
+        {
+          "text": "satu,",
+          "start": 32.555,
+          "end": 32.969
+        },
+        {
+          "text": "RepoFlow",
+          "start": 32.969,
+          "end": 33.806
+        },
+        {
+          "text": "merakit",
+          "start": 33.806,
+          "end": 34.22
+        },
+        {
+          "text": "git",
+          "start": 34.22,
+          "end": 34.397
+        },
+        {
+          "text": "blobs",
+          "start": 34.397,
+          "end": 34.693
+        },
+        {
+          "text": "secara",
+          "start": 34.693,
+          "end": 35.048
+        },
+        {
+          "text": "paralel,",
+          "start": 35.048,
+          "end": 35.64
+        }
+      ],
+      "start": 32.555,
+      "end": 35.64
+    },
+    {
+      "id": 13,
+      "scene": "s3-tree",
+      "bg": "dark",
+      "lines": [
+        "menyusun satu Git Tree",
+        "utuh, lalu menggeser"
+      ],
+      "words": [
+        {
+          "text": "menyusun",
+          "start": 35.64,
+          "end": 36.451
+        },
+        {
+          "text": "satu",
+          "start": 36.451,
+          "end": 36.688
+        },
+        {
+          "text": "Git",
+          "start": 36.688,
+          "end": 36.865
+        },
+        {
+          "text": "Tree",
+          "start": 36.865,
+          "end": 37.102
+        },
+        {
+          "text": "utuh,",
+          "start": 37.102,
+          "end": 37.516
+        },
+        {
+          "text": "lalu",
+          "start": 37.516,
+          "end": 38.107
+        },
+        {
+          "text": "menggeser",
+          "start": 38.107,
+          "end": 38.64
+        }
+      ],
+      "start": 35.64,
+      "end": 38.64
+    },
+    {
+      "id": 14,
+      "scene": "s3-tree",
+      "bg": "dark",
+      "lines": [
+        "pointer branch secara",
+        "atomik. Hasilnya? Branch"
+      ],
+      "words": [
+        {
+          "text": "pointer",
+          "start": 38.64,
+          "end": 39.054
+        },
+        {
+          "text": "branch",
+          "start": 39.054,
+          "end": 39.409
+        },
+        {
+          "text": "secara",
+          "start": 39.409,
+          "end": 39.764
+        },
+        {
+          "text": "atomik.",
+          "start": 39.764,
+          "end": 40.733
+        },
+        {
+          "text": "Hasilnya?",
+          "start": 40.733,
+          "end": 41.76
+        },
+        {
+          "text": "Branch",
+          "start": 41.76,
+          "end": 42.115
+        }
+      ],
+      "start": 38.64,
+      "end": 42.115
+    },
+    {
+      "id": 15,
+      "scene": "s3-tree",
+      "bg": "dark",
+      "lines": [
+        "selalu bersih dan 0 risiko",
+        "gagal di tengah jalan!"
+      ],
+      "words": [
+        {
+          "text": "selalu",
+          "start": 42.115,
+          "end": 42.47
+        },
+        {
+          "text": "bersih",
+          "start": 42.47,
+          "end": 42.825
+        },
+        {
+          "text": "dan",
+          "start": 42.825,
+          "end": 43.002
+        },
+        {
+          "text": "0",
+          "start": 43.002,
+          "end": 43.121
+        },
+        {
+          "text": "risiko",
+          "start": 43.121,
+          "end": 43.476
+        },
+        {
+          "text": "gagal",
+          "start": 43.476,
+          "end": 43.771
+        },
+        {
+          "text": "di",
+          "start": 43.771,
+          "end": 43.89
+        },
+        {
+          "text": "tengah",
+          "start": 43.89,
+          "end": 44.245
+        },
+        {
+          "text": "jalan!",
+          "start": 44.245,
+          "end": 44.718
+        }
+      ],
+      "start": 42.115,
+      "end": 44.718
+    },
+    {
+      "id": 16,
+      "scene": "s4-vault",
+      "bg": "light",
+      "lines": [
+        "Soal keamanan juga kelas",
+        "militer. Token akses"
+      ],
+      "words": [
+        {
+          "text": "Soal",
+          "start": 45.718,
+          "end": 46.014
+        },
+        {
+          "text": "keamanan",
+          "start": 46.014,
+          "end": 46.607
+        },
+        {
+          "text": "juga",
+          "start": 46.607,
+          "end": 46.903
+        },
+        {
+          "text": "kelas",
+          "start": 46.903,
+          "end": 47.273
+        },
+        {
+          "text": "militer.",
+          "start": 47.273,
+          "end": 48.411
+        },
+        {
+          "text": "Token",
+          "start": 48.411,
+          "end": 48.782
+        },
+        {
+          "text": "akses",
+          "start": 48.782,
+          "end": 49.152
+        }
+      ],
+      "start": 45.718,
+      "end": 49.152
+    },
+    {
+      "id": 17,
+      "scene": "s4-vault",
+      "bg": "light",
+      "lines": [
+        "GitHub Anda dienkripsi",
+        "AES-GCM 256-bit di memori"
+      ],
+      "words": [
+        {
+          "text": "GitHub",
+          "start": 49.152,
+          "end": 49.596
+        },
+        {
+          "text": "Anda",
+          "start": 49.596,
+          "end": 49.893
+        },
+        {
+          "text": "dienkripsi",
+          "start": 49.893,
+          "end": 50.633
+        },
+        {
+          "text": "AES-GCM",
+          "start": 50.633,
+          "end": 51.078
+        },
+        {
+          "text": "256-bit",
+          "start": 51.078,
+          "end": 51.522
+        },
+        {
+          "text": "di",
+          "start": 51.522,
+          "end": 51.67
+        },
+        {
+          "text": "memori",
+          "start": 51.67,
+          "end": 52.115
+        }
+      ],
+      "start": 49.152,
+      "end": 52.115
+    },
+    {
+      "id": 18,
+      "scene": "s4-vault",
+      "bg": "light",
+      "lines": [
+        "lokal. Kuncinya bersifat",
+        "non-extractable, jadi"
+      ],
+      "words": [
+        {
+          "text": "lokal.",
+          "start": 52.115,
+          "end": 52.707
+        },
+        {
+          "text": "Kuncinya",
+          "start": 52.707,
+          "end": 53.3
+        },
+        {
+          "text": "bersifat",
+          "start": 53.3,
+          "end": 53.892
+        },
+        {
+          "text": "non-extractable,",
+          "start": 53.892,
+          "end": 55.609
+        },
+        {
+          "text": "jadi",
+          "start": 55.609,
+          "end": 55.906
+        }
+      ],
+      "start": 52.115,
+      "end": 55.906
+    },
+    {
+      "id": 19,
+      "scene": "s4-vault",
+      "bg": "light",
+      "lines": [
+        "bahkan dari DevTools",
+        "browser pun token Anda"
+      ],
+      "words": [
+        {
+          "text": "bahkan",
+          "start": 55.906,
+          "end": 56.35
+        },
+        {
+          "text": "dari",
+          "start": 56.35,
+          "end": 57.015
+        },
+        {
+          "text": "DevTools",
+          "start": 57.015,
+          "end": 57.607
+        },
+        {
+          "text": "browser",
+          "start": 57.607,
+          "end": 58.126
+        },
+        {
+          "text": "pun",
+          "start": 58.126,
+          "end": 58.348
+        },
+        {
+          "text": "token",
+          "start": 58.348,
+          "end": 58.718
+        },
+        {
+          "text": "Anda",
+          "start": 58.718,
+          "end": 59.015
+        }
+      ],
+      "start": 55.906,
+      "end": 59.015
+    },
+    {
+      "id": 20,
+      "scene": "s4-vault",
+      "bg": "light",
+      "lines": [
+        "tetap aman terlindungi."
+      ],
+      "words": [
+        {
+          "text": "tetap",
+          "start": 59.015,
+          "end": 59.385
+        },
+        {
+          "text": "aman",
+          "start": 59.385,
+          "end": 59.681
+        },
+        {
+          "text": "terlindungi.",
+          "start": 59.681,
+          "end": 60.718
+        }
+      ],
+      "start": 59.015,
+      "end": 60.718
+    },
+    {
+      "id": 21,
+      "scene": "s5-brand",
+      "bg": "dark",
+      "lines": [
+        "Web manager canggih ini",
+        "dirancang mandiri oleh"
+      ],
+      "words": [
+        {
+          "text": "Web",
+          "start": 61.985,
+          "end": 62.19
+        },
+        {
+          "text": "manager",
+          "start": 62.19,
+          "end": 62.667
+        },
+        {
+          "text": "canggih",
+          "start": 62.667,
+          "end": 63.145
+        },
+        {
+          "text": "ini",
+          "start": 63.145,
+          "end": 63.349
+        },
+        {
+          "text": "dirancang",
+          "start": 63.349,
+          "end": 63.963
+        },
+        {
+          "text": "mandiri",
+          "start": 63.963,
+          "end": 64.441
+        },
+        {
+          "text": "oleh",
+          "start": 64.441,
+          "end": 64.713
+        }
+      ],
+      "start": 61.985,
+      "end": 64.713
+    },
+    {
+      "id": 22,
+      "scene": "s5-brand",
+      "bg": "dark",
+      "lines": [
+        "Rahmat, atau RHMT ofc,",
+        "kreator di balik ekosistem"
+      ],
+      "words": [
+        {
+          "text": "Rahmat,",
+          "start": 64.713,
+          "end": 65.327
+        },
+        {
+          "text": "atau",
+          "start": 65.327,
+          "end": 65.6
+        },
+        {
+          "text": "RHMT",
+          "start": 65.6,
+          "end": 65.873
+        },
+        {
+          "text": "ofc,",
+          "start": 65.873,
+          "end": 66.282
+        },
+        {
+          "text": "kreator",
+          "start": 66.282,
+          "end": 66.76
+        },
+        {
+          "text": "di",
+          "start": 66.76,
+          "end": 67.485
+        },
+        {
+          "text": "balik",
+          "start": 67.485,
+          "end": 67.826
+        },
+        {
+          "text": "ekosistem",
+          "start": 67.826,
+          "end": 68.44
+        }
+      ],
+      "start": 64.713,
+      "end": 68.44
+    },
+    {
+      "id": 23,
+      "scene": "s5-brand",
+      "bg": "dark",
+      "lines": [
+        "rhmt.biz.id. Buka",
+        "repoflow.web.id sekarang,"
+      ],
+      "words": [
+        {
+          "text": "rhmt.biz.id.",
+          "start": 68.44,
+          "end": 69.259
+        },
+        {
+          "text": "Buka",
+          "start": 69.259,
+          "end": 69.532
+        },
+        {
+          "text": "repoflow.web.id",
+          "start": 69.532,
+          "end": 70.418
+        },
+        {
+          "text": "sekarang,",
+          "start": 70.418,
+          "end": 71.513
+        }
+      ],
+      "start": 68.44,
+      "end": 71.513
+    },
+    {
+      "id": 24,
+      "scene": "s5-brand",
+      "bg": "dark",
+      "lines": [
+        "dan follow akun ini buat",
+        "bedah inovasi berikutnya!"
+      ],
+      "words": [
+        {
+          "text": "dan",
+          "start": 71.513,
+          "end": 71.717
+        },
+        {
+          "text": "follow",
+          "start": 71.717,
+          "end": 72.127
+        },
+        {
+          "text": "akun",
+          "start": 72.127,
+          "end": 72.399
+        },
+        {
+          "text": "ini",
+          "start": 72.399,
+          "end": 72.604
+        },
+        {
+          "text": "buat",
+          "start": 72.604,
+          "end": 72.877
+        },
+        {
+          "text": "bedah",
+          "start": 72.877,
+          "end": 73.218
+        },
+        {
+          "text": "inovasi",
+          "start": 73.218,
+          "end": 73.695
+        },
+        {
+          "text": "berikutnya!",
+          "start": 73.695,
+          "end": 74.582
+        }
+      ],
+      "start": 71.513,
+      "end": 74.582
+    }
+  ]
+}
