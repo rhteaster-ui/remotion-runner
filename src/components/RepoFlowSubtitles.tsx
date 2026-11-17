@@ -20,16 +20,16 @@ const STYLE = {
   dark: {
     ink: '#f8fafc',
     future: 'rgba(248, 250, 252, 0.55)',
-    activePillBg: 'rgba(56, 189, 248, 0.26)',
-    activeBorder: '1.5px solid rgba(56, 189, 248, 0.82)',
+    activePillBg: 'rgba(56, 189, 248, 0.28)',
+    activeBorder: '1.5px solid rgba(56, 189, 248, 0.9)',
     activeColor: '#38bdf8',
     shadow: '0 2px 8px rgba(0, 0, 0, 0.95), 0 0 16px rgba(14, 165, 233, 0.45)',
   },
   light: {
     ink: '#0f172a',
     future: 'rgba(15, 23, 42, 0.45)',
-    activePillBg: 'rgba(2, 132, 199, 0.16)',
-    activeBorder: '1.5px solid rgba(2, 132, 199, 0.75)',
+    activePillBg: 'rgba(2, 132, 199, 0.18)',
+    activeBorder: '1.5px solid rgba(2, 132, 199, 0.85)',
     activeColor: '#0284c7',
     shadow: '0 1px 3px rgba(255, 255, 255, 0.95), 0 0 12px rgba(255, 255, 255, 0.9)',
   },
@@ -49,7 +49,7 @@ export const RepoFlowSubtitles: React.FC<{
   if (!cap) return null;
 
   const s = STYLE[cap.bg];
-  const inP = interpolate(t, [cap.start, cap.start + 0.12], [0, 1], {
+  const inP = interpolate(t, [cap.start, cap.start + 0.1], [0, 1], {
     extrapolateLeft: 'clamp',
     extrapolateRight: 'clamp',
   });
@@ -77,9 +77,9 @@ export const RepoFlowSubtitles: React.FC<{
         flexDirection: 'column',
         alignItems: 'center',
         opacity: Math.min(inP, outP),
-        transform: `translateY(${(1 - inP) * 6}px)`,
+        transform: `translateY(${(1 - inP) * 4}px)`,
         pointerEvents: 'none',
-        zIndex: 60,
+        zIndex: 80,
       }}
     >
       {lines.map((ws, li) => (
@@ -113,7 +113,6 @@ export const RepoFlowSubtitles: React.FC<{
                   border: active ? s.activeBorder : '1.5px solid transparent',
                   textShadow: s.shadow,
                   transform: active ? 'scale(1.05)' : 'scale(1)',
-                  transition: 'transform 0.1s ease',
                   display: 'inline-block',
                 }}
               >

@@ -1,7 +1,7 @@
 {
   "fps": 30,
   "estimated": false,
-  "total": 75.932,
+  "total": 68.668,
   "scenes": [
     {
       "id": "s1-hook",
@@ -9,54 +9,54 @@
       "bg": "dark",
       "audio": "audio/vo-repoflow/s1-hook.mp3",
       "start": 0.0,
-      "duration": 14.132,
-      "vo_start": 0.55,
-      "vo_end": 13.582,
-      "end": 14.132
+      "duration": 13.002,
+      "vo_start": 0.5,
+      "vo_end": 12.452,
+      "end": 13.002
     },
     {
       "id": "s2-unpack",
       "title": "Ekstraksi Memori Klien Instan",
       "bg": "light",
       "audio": "audio/vo-repoflow/s2-unpack.mp3",
-      "start": 14.132,
-      "duration": 15.304,
-      "vo_start": 14.582,
-      "vo_end": 28.886,
-      "end": 29.436
+      "start": 13.002,
+      "duration": 13.574,
+      "vo_start": 13.402,
+      "vo_end": 26.026,
+      "end": 26.576
     },
     {
       "id": "s3-tree",
       "title": "Atomic Git Tree & Zero Broken State",
       "bg": "dark",
       "audio": "audio/vo-repoflow/s3-tree.mp3",
-      "start": 29.436,
-      "duration": 15.832,
-      "vo_start": 29.886,
-      "vo_end": 44.718,
-      "end": 45.268
+      "start": 26.576,
+      "duration": 12.254,
+      "vo_start": 26.976,
+      "vo_end": 38.28,
+      "end": 38.83
     },
     {
       "id": "s4-vault",
       "title": "Enkripsi Token Web Crypto AES-256",
       "bg": "light",
       "audio": "audio/vo-repoflow/s4-vault.mp3",
-      "start": 45.268,
-      "duration": 16.0,
-      "vo_start": 45.718,
-      "vo_end": 60.718,
-      "end": 61.268
+      "start": 38.83,
+      "duration": 15.974,
+      "vo_start": 39.23,
+      "vo_end": 54.254,
+      "end": 54.804
     },
     {
       "id": "s5-brand",
       "title": "Karya Orisinal RHMT OFC",
       "bg": "dark",
       "audio": "audio/vo-repoflow/s5-brand.mp3",
-      "start": 61.268,
-      "duration": 14.664,
-      "vo_start": 61.718,
-      "vo_end": 74.582,
-      "end": 75.932
+      "start": 54.804,
+      "duration": 13.864,
+      "vo_start": 55.204,
+      "vo_end": 67.468,
+      "end": 68.668
     }
   ]
 }

@@ -3,6 +3,7 @@ import json
 import os
 import re
 import subprocess
+import time
 import urllib.error
 import urllib.request
 
@@ -33,22 +34,23 @@ def load_gemini_keys():
 
 API_KEYS = load_gemini_keys()
 
+# Definisi 5 Scene resmi RepoFlow
 SCENES = [
     {
         "id": "s1-hook",
         "title": "Masalah Push ZIP ke GitHub",
         "bg": "dark",
         "text": (
-            "Pernah nggak ngoding project di HP atau punya file ZIP puluhan mega, "
-            "tapi pas mau push ke GitHub malah ribet setengah mati? "
-            "Web GitHub biasa punya batasan file dan nggak bisa ekstrak ZIP. "
-            "Tapi tenang, masalah itu tuntas lewat RepoFlow!"
+            "Pernah mau push folder project ke GitHub dari HP atau laptop, "
+            "tapi malas buka terminal dan ribet install Git? "
+            "Mau lewat web GitHub? Dibatasi seratus file dan sering macet! "
+            "Untung ada RepoFlow!"
         ),
         "display_text": (
-            "Pernah nggak ngoding project di HP atau punya file ZIP puluhan mega, "
-            "tapi pas mau push ke GitHub malah ribet setengah mati? "
-            "Web GitHub biasa punya batasan file dan nggak bisa ekstrak ZIP. "
-            "Tapi tenang, masalah itu tuntas lewat RepoFlow!"
+            "Pernah mau push folder project ke GitHub dari HP atau laptop, "
+            "tapi malas buka terminal dan ribet install Git? "
+            "Mau lewat web GitHub? Dibatasi 100 file dan sering macet! "
+            "Untung ada RepoFlow!"
         ),
     },
     {
@@ -56,14 +58,14 @@ SCENES = [
         "title": "Ekstraksi Memori Klien Instan",
         "bg": "light",
         "text": (
-            "RepoFlow bekerja seratus persen di browser tanpa perantara server backend. "
-            "Cukup drag dan drop bundel ZIP, ratusan file langsung diekstrak di RAM browser secara instan, "
-            "lengkap dengan proteksi traversal dan pratinjau diff sebelum di-push."
+            "RepoFlow bekerja seratus persen di browser tanpa server perantara. "
+            "Tinggal drag dan drop file ZIP, ratusan berkas langsung diekstrak di RAM browser "
+            "via web worker dalam empat puluh delapan milidetik."
         ),
         "display_text": (
-            "RepoFlow bekerja 100% di browser tanpa perantara server backend. "
-            "Cukup drag & drop bundel ZIP, ratusan file langsung diekstrak di RAM browser secara instan, "
-            "lengkap dengan proteksi traversal dan pratinjau diff sebelum di-push."
+            "RepoFlow bekerja 100% di browser tanpa server perantara. "
+            "Tinggal drag & drop file ZIP, ratusan berkas langsung diekstrak di RAM browser "
+            "via Web Worker cuma 48 milidetik!"
         ),
     },
     {
@@ -71,16 +73,14 @@ SCENES = [
         "title": "Atomic Git Tree & Zero Broken State",
         "bg": "dark",
         "text": (
-            "Beda sama upload biasa yang bikin commit satu per satu, "
-            "RepoFlow merakit git blobs secara paralel, menyusun satu Git Tree utuh, "
-            "lalu menggeser pointer branch secara atomik. "
-            "Hasilnya? Branch selalu bersih dan nol risiko gagal di tengah jalan!"
+            "Beda dari upload biasa yang bikin commit satu per satu, "
+            "RepoFlow merakit Git blobs secara paralel dan membuat satu Git Tree utuh. "
+            "Hasilnya, commit atomik instan tanpa risiko broken state di tengah jalan!"
         ),
         "display_text": (
-            "Beda sama upload biasa yang bikin commit satu per satu, "
-            "RepoFlow merakit git blobs secara paralel, menyusun satu Git Tree utuh, "
-            "lalu menggeser pointer branch secara atomik. "
-            "Hasilnya? Branch selalu bersih dan 0 risiko gagal di tengah jalan!"
+            "Beda dari upload biasa yang bikin commit satu per satu, "
+            "RepoFlow merakit Git blobs secara paralel dan membuat satu Git Tree utuh. "
+            "Hasilnya, commit atomik instan tanpa risiko broken state di tengah jalan!"
         ),
     },
     {
@@ -89,13 +89,15 @@ SCENES = [
         "bg": "light",
         "text": (
             "Soal keamanan juga kelas militer. "
-            "Token akses GitHub Anda dienkripsi AES-GCM dua ratus lima puluh enam bit di memori lokal. "
-            "Kuncinya bersifat non-extractable, jadi bahkan dari DevTools browser pun token Anda tetap aman terlindungi."
+            "Token akses GitHub kamu dienkripsi AES-GCM dua ratus lima puluh enam bit "
+            "di memori lokal dengan kunci non-extractable. "
+            "Bahkan dari DevTools browser pun tokenmu tetap aman terlindungi."
         ),
         "display_text": (
             "Soal keamanan juga kelas militer. "
-            "Token akses GitHub Anda dienkripsi AES-GCM 256-bit di memori lokal. "
-            "Kuncinya bersifat non-extractable, jadi bahkan dari DevTools browser pun token Anda tetap aman terlindungi."
+            "Token akses GitHub kamu dienkripsi AES-GCM 256-bit "
+            "di memori lokal dengan kunci non-extractable. "
+            "Bahkan dari DevTools browser pun tokenmu tetap aman terlindungi."
         ),
     },
     {
@@ -103,24 +105,27 @@ SCENES = [
         "title": "Karya Orisinal RHMT OFC",
         "bg": "dark",
         "text": (
-            "Web manager canggih ini dirancang mandiri oleh Rahmat, atau RHMT official, "
-            "kreator di balik ekosistem rhmt.biz.id. "
-            "Buka repoflow.web.id sekarang, dan follow akun ini buat bedah inovasi berikutnya!"
+            "Web client canggih ini dirancang mandiri oleh Rahmat, atau RHMT official, "
+            "kreator ekosistem rhmt.biz.id. "
+            "Buka repoflow.web.id sekarang, dan rasakan deploy instan tanpa terminal!"
         ),
         "display_text": (
-            "Web manager canggih ini dirancang mandiri oleh Rahmat, atau RHMT ofc, "
-            "kreator di balik ekosistem rhmt.biz.id. "
-            "Buka repoflow.web.id sekarang, dan follow akun ini buat bedah inovasi berikutnya!"
+            "Web client canggih ini dirancang mandiri oleh Rahmat, atau RHMT ofc, "
+            "kreator ekosistem rhmt.biz.id. "
+            "Buka repoflow.web.id sekarang, dan rasakan deploy instan tanpa terminal!"
         ),
     },
 ]
 
 
-def tts_scene(scene_id: str, text: str) -> str:
+def generate_tts(scene_id: str, text: str) -> str:
     mp3_path = os.path.join(VO_DIR, f"{scene_id}.mp3")
-    if os.path.exists(mp3_path) and os.path.getsize(mp3_path) > 1000:
-        return mp3_path
     pcm_path = os.path.join(VO_DIR, f"{scene_id}.pcm")
+    if os.path.exists(mp3_path):
+        os.remove(mp3_path)
+    if os.path.exists(pcm_path):
+        os.remove(pcm_path)
+
     payload = {
         "contents": [
             {
@@ -142,6 +147,7 @@ def tts_scene(scene_id: str, text: str) -> str:
             },
         },
     }
+
     data = None
     for key in API_KEYS:
         url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-tts:generateContent?key={key}"
@@ -160,11 +166,14 @@ def tts_scene(scene_id: str, text: str) -> str:
                 print(f"  key rotated after HTTP {e.code}")
                 continue
             raise
+
     if data is None:
         raise RuntimeError(f"All API keys exhausted for {scene_id}")
+
     b64 = data["candidates"][0]["content"]["parts"][0]["inlineData"]["data"]
     with open(pcm_path, "wb") as f:
         f.write(base64.b64decode(b64))
+
     subprocess.run(
         [
             "ffmpeg",
@@ -208,37 +217,82 @@ def probe_duration(mp3_path: str) -> float:
     return float(out)
 
 
-def detect_speech_segments(mp3_path: str, total_dur: float):
-    proc = subprocess.run(
-        ["ffmpeg", "-i", mp3_path, "-af", "silencedetect=noise=-28dB:d=0.2", "-f", "null", "-"],
-        capture_output=True,
-        text=True,
-    )
-    silences = []
-    cur_start = None
-    for line in proc.stderr.splitlines():
-        m1 = re.search(r"silence_start:\s*([0-9.]+)", line)
-        m2 = re.search(r"silence_end:\s*([0-9.]+)", line)
-        if m1:
-            cur_start = float(m1.group(1))
-        elif m2 and cur_start is not None:
-            silences.append((cur_start, float(m2.group(1))))
-            cur_start = None
-    if cur_start is not None:
-        silences.append((cur_start, total_dur))
+def align_words_with_gemini(mp3_path: str, display_text: str, vo_offset: float):
+    with open(mp3_path, "rb") as f:
+        audio_b64 = base64.b64encode(f.read()).decode("utf-8")
 
-    speech = []
-    pos = 0.0
-    for s_start, s_end in silences:
-        if s_start - pos > 0.06:
-            speech.append((pos, s_start))
-        pos = max(pos, s_end)
-    if total_dur - pos > 0.06:
-        speech.append((pos, total_dur))
-    return speech if speech else [(0.0, total_dur)]
+    prompt = f"""Listen carefully to this audio.
+Align each word of the following TARGET DISPLAY TEXT to the exact start and end timestamps (in seconds as floats, e.g. 1.25) when it is spoken in the audio.
+
+TARGET DISPLAY TEXT:
+"{display_text}"
+
+Rules:
+1. Every single word in the TARGET DISPLAY TEXT must appear in the output array in exact sequential order.
+2. If two words are pronounced as one or contracted (like "100%" or "256-bit"), provide the start and end of that vocal token.
+3. Start and end must be accurate within 0.05 seconds of the spoken audio.
+4. Output ONLY a valid JSON array of objects:
+[
+  {{"text": "<word>", "start": 0.00, "end": 0.00}},
+  ...
+]"""
+
+    payload = {
+        "contents": [
+            {
+                "parts": [
+                    {"text": prompt},
+                    {"inlineData": {"mimeType": "audio/mp3", "data": audio_b64}},
+                ]
+            }
+        ],
+        "generationConfig": {"responseMimeType": "application/json"},
+    }
+
+    data = None
+    for key in API_KEYS:
+        url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key={key}"
+        req = urllib.request.Request(
+            url,
+            data=json.dumps(payload).encode("utf-8"),
+            headers={"Content-Type": "application/json"},
+            method="POST",
+        )
+        try:
+            with urllib.request.urlopen(req, timeout=60) as resp:
+                data = json.loads(resp.read().decode("utf-8"))
+            break
+        except urllib.error.HTTPError as e:
+            if e.code in (429, 403, 401):
+                print(f"  key rotated for alignment after HTTP {e.code}")
+                continue
+            raise
+
+    if not data:
+        raise RuntimeError("Failed to align words via Gemini API")
+
+    raw_json = data["candidates"][0]["content"]["parts"][0]["text"]
+    words_data = json.loads(raw_json)
+
+    # Offset timestamps to global video timeline
+    word_timings = []
+    for item in words_data:
+        w_text = item.get("text") or item.get("word") or ""
+        s = float(item["start"])
+        e = float(item["end"])
+        if e <= s:
+            e = s + 0.15
+        word_timings.append(
+            {
+                "text": w_text,
+                "start": round(vo_offset + s, 3),
+                "end": round(vo_offset + e, 3),
+            }
+        )
+    return word_timings
 
 
-def chunk_lines(words, max_chars=26, max_lines=2):
+def chunk_lines(words, max_chars=24, max_lines=2):
     chunks = []
     cur_lines = [""]
     for w in words:
@@ -256,53 +310,6 @@ def chunk_lines(words, max_chars=26, max_lines=2):
     return chunks
 
 
-def map_words_to_speech(display_text: str, speech_segs, vo_offset: float):
-    words = display_text.split()
-    weights = [
-        max(
-            2,
-            len(re.sub(r"[^a-zA-Z0-9]", "", w))
-            + (3 if w.endswith((".", ",", "?", "!", ":")) else 0),
-        )
-        for w in words
-    ]
-    total_w = sum(weights)
-    total_speech = sum(b - a for a, b in speech_segs)
-
-    word_timings = []
-    seg_idx = 0
-    seg_pos = speech_segs[0][0]
-    for w, wt in zip(words, weights):
-        dur = (wt / total_w) * total_speech
-        w_start = None
-        rem = dur
-        while rem > 1e-6 and seg_idx < len(speech_segs):
-            s_a, s_b = speech_segs[seg_idx]
-            seg_pos = max(seg_pos, s_a)
-            avail = s_b - seg_pos
-            if w_start is None:
-                w_start = seg_pos
-            if rem <= avail + 1e-6:
-                seg_pos += rem
-                rem = 0.0
-            else:
-                rem -= avail
-                seg_idx += 1
-                if seg_idx < len(speech_segs):
-                    seg_pos = speech_segs[seg_idx][0]
-        w_end = seg_pos
-        if w_start is None:
-            w_start = w_end
-        word_timings.append(
-            {
-                "text": w,
-                "start": round(vo_offset + w_start, 3),
-                "end": round(vo_offset + max(w_start + 0.08, w_end), 3),
-            }
-        )
-    return word_timings
-
-
 def main():
     timeline_scenes = []
     captions = []
@@ -310,13 +317,13 @@ def main():
     cap_id = 1
 
     for i, sc in enumerate(SCENES):
-        print(f"Syncing scene {sc['id']}...")
-        mp3_path = tts_scene(sc["id"], sc["text"])
+        print(f"\n[*] Processing scene: {sc['id']} ({sc['title']})...")
+        mp3_path = generate_tts(sc["id"], sc["text"])
         dur = probe_duration(mp3_path)
-        speech_segs = detect_speech_segments(mp3_path, dur)
+        print(f"    TTS generated: duration = {dur:.2f}s")
 
-        lead_in = 0.55 if i == 0 else 0.45
-        tail_pad = 1.35 if i == len(SCENES) - 1 else 0.55
+        lead_in = 0.50 if i == 0 else 0.40
+        tail_pad = 1.20 if i == len(SCENES) - 1 else 0.55
         vo_start = round(cur_t + lead_in, 3)
         vo_end = round(vo_start + dur, 3)
         sc_end = round(vo_end + tail_pad, 3)
@@ -336,14 +343,21 @@ def main():
         )
 
         display_text = sc.get("display_text", sc["text"])
-        w_timings = map_words_to_speech(display_text, speech_segs, vo_start)
-        chunks = chunk_lines([w["text"] for w in w_timings], max_chars=26, max_lines=2)
+        print("    Aligning words via Gemini Flash...")
+        w_timings = align_words_with_gemini(mp3_path, display_text, vo_start)
+        print(f"    Aligned {len(w_timings)} words successfully.")
+
+        # Chunk into readable 1-2 lines
+        chunks = chunk_lines([w["text"] for w in w_timings], max_chars=24, max_lines=2)
         w_idx = 0
+        scene_caps = []
         for lines in chunks:
             n_words = sum(len(l.split()) for l in lines)
             sub_words = w_timings[w_idx : w_idx + n_words]
             w_idx += n_words
-            captions.append(
+            if not sub_words:
+                continue
+            scene_caps.append(
                 {
                     "id": cap_id,
                     "scene": sc["id"],
@@ -356,10 +370,21 @@ def main():
             )
             cap_id += 1
 
+        # Smooth chunk durations so captions don't flicker between chunks
+        for c_idx in range(len(scene_caps)):
+            if c_idx < len(scene_caps) - 1:
+                # extend end to the start of next caption
+                scene_caps[c_idx]["end"] = max(
+                    scene_caps[c_idx]["end"], scene_caps[c_idx + 1]["start"]
+                )
+            else:
+                # last chunk extends to vo_end + 0.35s
+                scene_caps[c_idx]["end"] = min(sc_end - 0.1, scene_caps[c_idx]["end"] + 0.35)
+
+        captions.extend(scene_caps)
         cur_t = sc_end
-        print(
-            f"  -> {sc['id']}: dur={dur:.2f}s, speech_segs={len(speech_segs)}, end={sc_end:.2f}s"
-        )
+        print(f"    Scene {sc['id']} total duration: {sc_end:.2f}s")
+        time.sleep(1)
 
     os.makedirs(os.path.join(ROOT, "src/data"), exist_ok=True)
     with open(os.path.join(ROOT, "src/data/repoflow-timeline.json"), "w") as f:
@@ -383,7 +408,7 @@ def main():
             indent=2,
         )
 
-    print(f"\nSynced successfully! Total duration: {cur_t:.2f}s, captions: {len(captions)}")
+    print(f"\n[+] Pipeline Complete! Total video duration: {cur_t:.2f}s, Captions: {len(captions)}")
 
 
 if __name__ == "__main__":
