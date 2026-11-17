@@ -17,27 +17,52 @@ type Caption = {
 const CAPTIONS = data.captions as Caption[];
 
 const STYLE = {
-  dark: {
-    ink: '#F4F6FA',
-    future: 'rgba(244, 246, 250, 0.56)',
-    activePillBg: 'rgba(245, 158, 11, 0.26)',
-    activeBorder: '1.5px solid rgba(245, 158, 11, 0.78)',
-    activeColor: '#FFFFFF',
-    shadow: '0 2px 6px rgba(0, 0, 0, 0.92), 0 0 18px rgba(0, 0, 0, 0.82)',
+  amber: {
+    dark: {
+      ink: '#F4F6FA',
+      future: 'rgba(244, 246, 250, 0.56)',
+      activePillBg: 'rgba(245, 158, 11, 0.26)',
+      activeBorder: '1.5px solid rgba(245, 158, 11, 0.78)',
+      activeColor: '#FFFFFF',
+      shadow: '0 2px 6px rgba(0, 0, 0, 0.92), 0 0 18px rgba(0, 0, 0, 0.82)',
+    },
+    light: {
+      ink: '#111318',
+      future: 'rgba(17, 19, 24, 0.48)',
+      activePillBg: 'rgba(217, 119, 6, 0.18)',
+      activeBorder: '1.5px solid rgba(217, 119, 6, 0.72)',
+      activeColor: '#090B0E',
+      shadow: '0 1px 3px rgba(246, 245, 240, 0.95), 0 0 12px rgba(246, 245, 240, 0.92)',
+    },
   },
-  light: {
-    ink: '#111318',
-    future: 'rgba(17, 19, 24, 0.48)',
-    activePillBg: 'rgba(217, 119, 6, 0.18)',
-    activeBorder: '1.5px solid rgba(217, 119, 6, 0.72)',
-    activeColor: '#090B0E',
-    shadow: '0 1px 3px rgba(246, 245, 240, 0.95), 0 0 12px rgba(246, 245, 240, 0.92)',
+  portfolio: {
+    dark: {
+      ink: '#f1f3f6',
+      future: 'rgba(169, 177, 190, 0.62)',
+      activePillBg: 'rgba(197, 162, 117, 0.24)',
+      activeBorder: '1.5px solid rgba(197, 162, 117, 0.85)',
+      activeColor: '#dfc198',
+      shadow: '0 2px 6px rgba(8, 11, 16, 0.95), 0 0 18px rgba(8, 11, 16, 0.85)',
+    },
+    light: {
+      ink: '#181e28',
+      future: 'rgba(77, 88, 104, 0.56)',
+      activePillBg: 'rgba(53, 68, 90, 0.14)',
+      activeBorder: '1.5px solid rgba(53, 68, 90, 0.68)',
+      activeColor: '#181e28',
+      shadow: '0 1px 3px rgba(238, 240, 242, 0.95), 0 0 12px rgba(238, 240, 242, 0.92)',
+    },
   },
 };
 
-export const OpsSubtitles: React.FC<{bottom?: number; fontSize?: number}> = ({
+export const OpsSubtitles: React.FC<{
+  bottom?: number;
+  fontSize?: number;
+  palette?: 'amber' | 'portfolio';
+}> = ({
   bottom = 82,
   fontSize = 42,
+  palette = 'amber',
 }) => {
   const frame = useCurrentFrame();
   const {fps} = useVideoConfig();
@@ -45,7 +70,7 @@ export const OpsSubtitles: React.FC<{bottom?: number; fontSize?: number}> = ({
   const cap = CAPTIONS.find((c) => t >= c.start && t < c.end);
   if (!cap) return null;
 
-  const s = STYLE[cap.bg];
+  const s = STYLE[palette][cap.bg];
   const inP = interpolate(t, [cap.start, cap.start + 0.12], [0, 1], {
     extrapolateLeft: 'clamp',
     extrapolateRight: 'clamp',

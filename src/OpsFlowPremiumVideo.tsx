@@ -44,7 +44,7 @@ export const OpsFlowPremiumVideo: React.FC = () => {
   });
 
   return (
-    <AbsoluteFill style={{backgroundColor: '#072919'}}>
+    <AbsoluteFill style={{backgroundColor: '#080b10'}}>
       <OpsAudioMix music={0.2} vo={1.0} duckDb={-8} />
       <OpsPremiumAudio master={0.8} />
 
@@ -70,10 +70,10 @@ export const OpsFlowPremiumVideo: React.FC = () => {
         />
       ))}
 
-      <OpsSubtitles bottom={78} fontSize={42} />
+      <OpsSubtitles bottom={78} fontSize={42} palette="portfolio" />
       <AbsoluteFill
         style={{
-          backgroundColor: '#02100A',
+          backgroundColor: '#080b10',
           opacity: Math.max(fadeOut, fadeIn),
           pointerEvents: 'none',
           zIndex: 100,

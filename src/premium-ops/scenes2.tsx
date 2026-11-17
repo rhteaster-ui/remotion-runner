@@ -1,27 +1,20 @@
 import React from 'react';
 import {Img, interpolate, staticFile} from 'remotion';
-import {EREKAP_FONT, EREKAP_TOKENS as T} from '../lib/erekapTokens';
 import {
-  ActivitySvg,
-  AgentCoreSvg,
-  CodeSvg,
-  GitBranchSvg,
-  GlobeSvg,
   OpsKicker,
   OpsPremiumShell,
   OpsTactileCard,
   Reveal,
-  SearchSvg,
   Shine,
   Sparks,
   Tap,
-  TerminalSvg,
   WordReveal,
   useProg,
 } from './shell';
+import {PORTFOLIO_FONT, PORTFOLIO_TOKENS as P} from './tokens';
 
 /* ============================================================================
-   SCENE 3: WORKER & MULTI-AKUN (Dark Canopy) — Edit Kode, Riset, Bash, Sub-Agen
+   SCENE 3: WORKER & MULTI-AKUN (Darkroom Slate)
    ============================================================================ */
 export const OpsPremiumAgentScene: React.FC = () => {
   const {now, prog} = useProg();
@@ -33,28 +26,28 @@ export const OpsPremiumAgentScene: React.FC = () => {
       title: 'Edit Kode',
       metric: 'src/App.tsx +42 -8',
       at: 2.9,
-      icon: <CodeSvg color={T.lime} size={24} />,
+      icon: 'assets/portfolio/tools/typescript.svg',
       bar: prog(3.0, 1.0),
     },
     {
       title: 'Riset Web',
       metric: '14 sumber terverifikasi',
       at: 4.3,
-      icon: <SearchSvg color={T.lime} size={24} />,
+      icon: 'assets/portfolio/tools/playwright.svg',
       bar: prog(4.4, 1.0),
     },
     {
       title: 'Perintah Bash',
       metric: 'npm run build · 0 err',
       at: 5.7,
-      icon: <TerminalSvg color={T.lime} size={24} />,
+      icon: 'assets/portfolio/tools/bash.svg',
       bar: prog(5.8, 1.0),
     },
     {
       title: 'Sub-Agen Paralel',
       metric: '3 worker aktif serentak',
       at: 7.0,
-      icon: <GitBranchSvg color={T.lime} size={24} />,
+      icon: 'assets/portfolio/tools/antigravity.svg',
       bar: prog(7.1, 1.0),
     },
   ];
@@ -71,7 +64,7 @@ export const OpsPremiumAgentScene: React.FC = () => {
       from="bridge"
       moves={[{t: 0.7, tab: 'worker'}]}
       statusLabel="WORKER AKTIF"
-      activeStatusLabel="MULTI-AKUN ROTATE"
+      activeStatusLabel="9ROUTER ROTATE"
       statusActiveMix={rotHot}
     >
       <div style={{display: 'flex', flexDirection: 'column', gap: 14}}>
@@ -85,10 +78,12 @@ export const OpsPremiumAgentScene: React.FC = () => {
             {t: 'Multi-Agen', at: 6.4, accent: true},
             {t: 'Paralel.', at: 6.85, accent: true},
           ]}
+          accentColor={P.goldBright}
           style={{
+            fontFamily: PORTFOLIO_FONT.display,
             fontSize: 60,
-            fontWeight: 800,
-            lineHeight: 1.08,
+            fontWeight: 700,
+            lineHeight: 1.06,
             letterSpacing: '-0.03em',
           }}
         />
@@ -102,40 +97,41 @@ export const OpsPremiumAgentScene: React.FC = () => {
               <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 12}}>
                 <div
                   style={{
-                    width: 44,
-                    height: 44,
-                    borderRadius: 14,
-                    backgroundColor: 'rgba(163,230,53,0.14)',
-                    border: '1px solid rgba(163,230,53,0.35)',
+                    width: 46,
+                    height: 46,
+                    borderRadius: 12,
+                    backgroundColor: P.dark.bg,
+                    border: `1px solid ${P.dark.lineStrong}`,
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
+                    padding: 8,
                   }}
                 >
-                  {tool.icon}
+                  <Img src={staticFile(tool.icon)} style={{width: '100%', height: '100%', objectFit: 'contain'}} />
                 </div>
                 <span
                   style={{
-                    fontFamily: EREKAP_FONT.mono,
+                    fontFamily: PORTFOLIO_FONT.mono,
                     fontSize: 13,
                     fontWeight: 800,
-                    color: tool.bar > 0.85 ? T.lime : 'rgba(220,252,231,0.75)',
+                    color: tool.bar > 0.85 ? P.goldBright : P.dark.muted,
                   }}
                 >
                   {tool.bar > 0.85 ? 'DONE' : 'EXEC'}
                 </span>
               </div>
-              <div style={{fontSize: 22, fontWeight: 800, color: '#FFFFFF', marginBottom: 4}}>
+              <div style={{fontFamily: PORTFOLIO_FONT.display, fontSize: 22, fontWeight: 700, color: P.dark.ink, marginBottom: 4}}>
                 {tool.title}
               </div>
-              <div style={{fontFamily: EREKAP_FONT.mono, fontSize: 14, color: 'rgba(220,252,231,0.76)', marginBottom: 12}}>
+              <div style={{fontFamily: PORTFOLIO_FONT.mono, fontSize: 14, color: P.dark.muted, marginBottom: 12}}>
                 {tool.metric}
               </div>
               <div
                 style={{
                   height: 6,
                   borderRadius: 999,
-                  backgroundColor: 'rgba(255,255,255,0.1)',
+                  backgroundColor: P.dark.bg,
                   overflow: 'hidden',
                 }}
               >
@@ -144,7 +140,7 @@ export const OpsPremiumAgentScene: React.FC = () => {
                     height: '100%',
                     width: `${Math.round(tool.bar * 100)}%`,
                     borderRadius: 999,
-                    backgroundColor: T.lime,
+                    backgroundColor: P.gold,
                   }}
                 />
               </div>
@@ -153,17 +149,20 @@ export const OpsPremiumAgentScene: React.FC = () => {
         ))}
       </div>
 
-      {/* Multi-Account Pro & Free Rotation Strip */}
+      {/* Multi-Account Pro & Free Rotation Strip (9Router + Gemini) */}
       <Reveal at={8.1}>
         <OpsTactileCard dark accentBorder style={{padding: 22}}>
           <Shine at={11.4} />
-          <Sparks at={11.45} count={14} radius={130} />
+          <Sparks at={11.45} count={14} radius={130} color={P.goldBright} />
           <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 14}}>
-            <span style={{fontFamily: EREKAP_FONT.mono, fontSize: 14, fontWeight: 800, color: T.lime}}>
-              AUTO-ROTATE // PRO & FREE POOL
-            </span>
-            <span style={{fontFamily: EREKAP_FONT.mono, fontSize: 13, color: 'rgba(220,252,231,0.8)'}}>
-              ZERO RATE-LIMIT
+            <div style={{display: 'flex', alignItems: 'center', gap: 10}}>
+              <Img src={staticFile('assets/portfolio/tools/9router.png')} style={{width: 24, height: 24, borderRadius: 6, objectFit: 'contain'}} />
+              <span style={{fontFamily: PORTFOLIO_FONT.mono, fontSize: 14, fontWeight: 800, color: P.goldBright}}>
+                9ROUTER // PRO & FREE POOL
+              </span>
+            </div>
+            <span style={{fontFamily: PORTFOLIO_FONT.mono, fontSize: 13, color: P.dark.muted}}>
+              AUTO-ROTATE
             </span>
           </div>
           <div style={{display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 12}}>
@@ -175,36 +174,36 @@ export const OpsPremiumAgentScene: React.FC = () => {
                   key={acc.id}
                   style={{
                     padding: '14px 14px',
-                    borderRadius: 18,
-                    backgroundColor: isActive ? 'rgba(163,230,53,0.18)' : 'rgba(255,255,255,0.05)',
+                    borderRadius: 16,
+                    backgroundColor: isActive ? P.dark.surface2 : P.dark.bg,
                     border: isActive
-                      ? `1.5px solid ${T.lime}`
-                      : '1px solid rgba(255,255,255,0.1)',
+                      ? `1.5px solid ${P.gold}`
+                      : `1px solid ${P.dark.line}`,
                   }}
                 >
                   <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 6}}>
-                    <span style={{fontFamily: EREKAP_FONT.mono, fontSize: 14, fontWeight: 800, color: '#FFFFFF'}}>
+                    <span style={{fontFamily: PORTFOLIO_FONT.mono, fontSize: 14, fontWeight: 800, color: P.dark.ink}}>
                       {acc.id}
                     </span>
                     <span
                       style={{
                         padding: '2px 8px',
                         borderRadius: 999,
-                        fontFamily: EREKAP_FONT.mono,
+                        fontFamily: PORTFOLIO_FONT.mono,
                         fontSize: 12,
                         fontWeight: 800,
-                        backgroundColor: acc.tier === 'PRO' ? T.lime : 'rgba(255,255,255,0.16)',
-                        color: acc.tier === 'PRO' ? T.limeInk : '#FFFFFF',
+                        backgroundColor: acc.tier === 'PRO' ? P.gold : P.dark.surface2,
+                        color: acc.tier === 'PRO' ? '#111720' : P.dark.ink,
                       }}
                     >
                       {acc.tier}
                     </span>
                   </div>
-                  <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between', fontFamily: EREKAP_FONT.mono, fontSize: 14}}>
-                    <span style={{color: isActive ? T.lime : 'rgba(220,252,231,0.72)'}}>
+                  <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between', fontFamily: PORTFOLIO_FONT.mono, fontSize: 14}}>
+                    <span style={{color: isActive ? P.goldBright : P.dark.muted}}>
                       {isActive ? 'ACTIVE' : 'STANDBY'}
                     </span>
-                    <span style={{color: '#FFFFFF', opacity: isActive ? pulse : 0.75}}>{acc.quota}</span>
+                    <span style={{color: P.dark.ink, opacity: isActive ? pulse : 0.75}}>{acc.quota}</span>
                   </div>
                 </div>
               );
@@ -217,7 +216,7 @@ export const OpsPremiumAgentScene: React.FC = () => {
 };
 
 /* ============================================================================
-   SCENE 4: WEB OPS DECK & TASK MAP (Crisp Light) — Workflow, CPU, Kuota
+   SCENE 4: WEB OPS DECK & TASK MAP (Daylight Paper)
    ============================================================================ */
 export const OpsPremiumWebScene: React.FC = () => {
   const {now, prog} = useProg();
@@ -226,10 +225,10 @@ export const OpsPremiumWebScene: React.FC = () => {
   const chartDraw = prog(1.6, 1.4);
 
   const nodes = [
-    {label: 'Trigger', sub: 'Bot', activeAt: 1.4},
-    {label: 'Router', sub: 'SSH', activeAt: 2.4},
-    {label: 'Worker', sub: 'Agent', activeAt: 3.4},
-    {label: 'Verify', sub: '200 OK', activeAt: 4.5},
+    {label: 'Trigger', sub: 'Bot', icon: 'assets/portfolio/tools/telegram.svg', activeAt: 1.4},
+    {label: 'Router', sub: 'SSH', icon: 'assets/portfolio/relay.svg', activeAt: 2.4},
+    {label: 'Worker', sub: 'AGY', icon: 'assets/portfolio/tools/antigravity.svg', activeAt: 3.4},
+    {label: 'Verify', sub: 'CI/CD', icon: 'assets/portfolio/tools/githubactions.svg', activeAt: 4.5},
   ];
 
   return (
@@ -254,13 +253,14 @@ export const OpsPremiumWebScene: React.FC = () => {
             {t: 'Ops', at: 2.45, accent: true},
             {t: 'Deck.', at: 2.8, accent: true},
           ]}
-          accentColor={T.canopyMid}
+          accentColor={P.light.accent}
           style={{
+            fontFamily: PORTFOLIO_FONT.display,
             fontSize: 58,
-            fontWeight: 800,
-            lineHeight: 1.08,
+            fontWeight: 700,
+            lineHeight: 1.06,
             letterSpacing: '-0.03em',
-            color: T.ink,
+            color: P.light.ink,
           }}
         />
       </div>
@@ -268,21 +268,22 @@ export const OpsPremiumWebScene: React.FC = () => {
       {/* Workflow Task Map Card */}
       <Reveal at={1.0}>
         <OpsTactileCard dark={false} raised accentBorder style={{padding: 24}}>
-          <Tap at={5.5} from={{x: 180, y: 110}} ripple={T.canopyMid} />
+          <Tap at={5.5} from={{x: 180, y: 110}} ripple={P.light.accent} />
           <Shine at={5.65} alpha={0.6} />
           <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 18}}>
-            <span style={{fontFamily: EREKAP_FONT.mono, fontSize: 14, fontWeight: 800, color: T.canopy}}>
+            <span style={{fontFamily: PORTFOLIO_FONT.mono, fontSize: 14, fontWeight: 800, color: P.light.accent}}>
               TASK MAP // LIVE WORKFLOW
             </span>
             <span
               style={{
                 padding: '5px 12px',
                 borderRadius: 999,
-                fontFamily: EREKAP_FONT.mono,
+                fontFamily: PORTFOLIO_FONT.mono,
                 fontSize: 13,
                 fontWeight: 800,
-                backgroundColor: verifyHot > 0.5 ? T.lime : T.surfaceMint,
-                color: T.canopyDeep,
+                backgroundColor: verifyHot > 0.5 ? P.dark.surface : P.light.surface,
+                color: verifyHot > 0.5 ? P.goldBright : P.light.ink,
+                border: `1px solid ${P.light.lineStrong}`,
               }}
             >
               {verifyHot > 0.5 ? 'ALL NOMINAL' : 'STREAMING'}
@@ -300,7 +301,7 @@ export const OpsPremiumWebScene: React.FC = () => {
                 y1="6"
                 x2="400"
                 y2="6"
-                stroke={T.canopyMid}
+                stroke={P.light.accent}
                 strokeWidth="3.5"
                 strokeDasharray="10 6"
                 strokeDashoffset={dashOffset}
@@ -315,17 +316,22 @@ export const OpsPremiumWebScene: React.FC = () => {
                   style={{
                     position: 'relative',
                     zIndex: 2,
-                    padding: '16px 10px',
-                    borderRadius: 18,
+                    padding: '14px 10px',
+                    borderRadius: 16,
                     textAlign: 'center',
-                    backgroundColor: on ? T.canopyDeep : T.surface,
-                    color: on ? '#FFFFFF' : T.ink,
-                    border: on ? `1.5px solid ${T.lime}` : `1px solid ${T.borderStrong}`,
-                    boxShadow: T.shadowCard,
+                    backgroundColor: on ? P.dark.surface : P.light.surface,
+                    color: on ? P.dark.ink : P.light.ink,
+                    border: on ? `1.5px solid ${P.gold}` : `1px solid ${P.light.lineStrong}`,
+                    boxShadow: P.light.shadow,
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'center',
+                    gap: 6,
                   }}
                 >
-                  <div style={{fontSize: 18, fontWeight: 800}}>{n.label}</div>
-                  <div style={{fontFamily: EREKAP_FONT.mono, fontSize: 13, color: on ? T.lime : T.inkMuted, marginTop: 4}}>
+                  <Img src={staticFile(n.icon)} style={{width: 28, height: 28, objectFit: 'contain'}} />
+                  <div style={{fontSize: 17, fontWeight: 800}}>{n.label}</div>
+                  <div style={{fontFamily: PORTFOLIO_FONT.mono, fontSize: 12, color: on ? P.goldBright : P.light.muted}}>
                     {n.sub}
                   </div>
                 </div>
@@ -340,32 +346,29 @@ export const OpsPremiumWebScene: React.FC = () => {
         <Reveal at={2.8}>
           <OpsTactileCard dark={false} style={{padding: 22}}>
             <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 10}}>
-              <div style={{display: 'flex', alignItems: 'center', gap: 8}}>
-                <ActivitySvg color={T.canopy} size={20} />
-                <span style={{fontFamily: EREKAP_FONT.mono, fontSize: 14, fontWeight: 800, color: T.canopy}}>
-                  CPU & RAM
-                </span>
-              </div>
-              <span style={{fontFamily: EREKAP_FONT.mono, fontSize: 16, fontWeight: 800, color: T.ink}}>
+              <span style={{fontFamily: PORTFOLIO_FONT.mono, fontSize: 14, fontWeight: 800, color: P.light.accent}}>
+                CPU & RAM
+              </span>
+              <span style={{fontFamily: PORTFOLIO_FONT.mono, fontSize: 16, fontWeight: 800, color: P.light.ink}}>
                 34%
               </span>
             </div>
             <svg width="100%" height="96" viewBox="0 0 260 96">
               <defs>
-                <linearGradient id="cpuArea" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0%" stopColor={T.canopyMid} stopOpacity="0.32" />
-                  <stop offset="100%" stopColor={T.canopyMid} stopOpacity="0.02" />
+                <linearGradient id="cpuAreaSlate" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stopColor={P.light.accent} stopOpacity="0.28" />
+                  <stop offset="100%" stopColor={P.light.accent} stopOpacity="0.02" />
                 </linearGradient>
               </defs>
               <path
                 d="M0 72 L36 60 L72 64 L108 42 L144 48 L180 28 L216 36 L260 22 L260 96 L0 96 Z"
-                fill="url(#cpuArea)"
+                fill="url(#cpuAreaSlate)"
                 opacity={chartDraw}
               />
               <path
                 d="M0 72 L36 60 L72 64 L108 42 L144 48 L180 28 L216 36 L260 22"
                 fill="none"
-                stroke={T.canopy}
+                stroke={P.light.accent}
                 strokeWidth="3.5"
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -373,7 +376,7 @@ export const OpsPremiumWebScene: React.FC = () => {
                 strokeDashoffset={340 * (1 - chartDraw)}
               />
             </svg>
-            <div style={{fontFamily: EREKAP_FONT.mono, fontSize: 13, color: T.inkMuted, marginTop: 6}}>
+            <div style={{fontFamily: PORTFOLIO_FONT.mono, fontSize: 13, color: P.light.muted, marginTop: 6}}>
               1.2 GB / 2.0 GB RAM · STABLE
             </div>
           </OpsTactileCard>
@@ -381,8 +384,11 @@ export const OpsPremiumWebScene: React.FC = () => {
 
         <Reveal at={3.8}>
           <OpsTactileCard dark={false} style={{padding: 22}}>
-            <div style={{fontFamily: EREKAP_FONT.mono, fontSize: 14, fontWeight: 800, color: T.canopy, marginBottom: 14}}>
-              KUOTA TIAP AKUN
+            <div style={{display: 'flex', alignItems: 'center', gap: 8, marginBottom: 14}}>
+              <Img src={staticFile('assets/portfolio/tools/9router.png')} style={{width: 20, height: 20, borderRadius: 4, objectFit: 'contain'}} />
+              <span style={{fontFamily: PORTFOLIO_FONT.mono, fontSize: 14, fontWeight: 800, color: P.light.accent}}>
+                KUOTA AKUN
+              </span>
             </div>
             <div style={{display: 'flex', flexDirection: 'column', gap: 12}}>
               {[
@@ -393,12 +399,12 @@ export const OpsPremiumWebScene: React.FC = () => {
                 const w = interpolate(prog(4.2, 0.9), [0, 1], [0, q.pct]);
                 return (
                   <div key={q.label}>
-                    <div style={{display: 'flex', justifyContent: 'space-between', fontFamily: EREKAP_FONT.mono, fontSize: 14, fontWeight: 700, marginBottom: 5}}>
-                      <span style={{color: T.ink}}>{q.label}</span>
-                      <span style={{color: T.canopyMid}}>{Math.round(w)}%</span>
+                    <div style={{display: 'flex', justifyContent: 'space-between', fontFamily: PORTFOLIO_FONT.mono, fontSize: 14, fontWeight: 700, marginBottom: 5}}>
+                      <span style={{color: P.light.ink}}>{q.label}</span>
+                      <span style={{color: P.light.accent}}>{Math.round(w)}%</span>
                     </div>
-                    <div style={{height: 8, borderRadius: 999, backgroundColor: T.surfaceMint, overflow: 'hidden'}}>
-                      <div style={{height: '100%', width: `${w}%`, borderRadius: 999, backgroundColor: T.canopyMid}} />
+                    <div style={{height: 8, borderRadius: 999, backgroundColor: P.light.surface2, overflow: 'hidden'}}>
+                      <div style={{height: '100%', width: `${w}%`, borderRadius: 999, backgroundColor: P.light.accent}} />
                     </div>
                   </div>
                 );
@@ -412,12 +418,18 @@ export const OpsPremiumWebScene: React.FC = () => {
 };
 
 /* ============================================================================
-   SCENE 5: PERSONAL BRANDING (Dark Canopy) — Rahmat / RHMT OFC & rhmt.biz.id
+   SCENE 5: PERSONAL BRANDING (Darkroom Slate) — Rahmat / RHMT OFC & rhmt.biz.id
    ============================================================================ */
 export const OpsPremiumBrandScene: React.FC = () => {
   const {prog} = useProg();
   const brandHot = prog(2.3, 0.45);
   const ctaHot = prog(11.4, 0.45);
+
+  const stacks = [
+    {name: 'Fullstack Web', icon: 'assets/portfolio/tools/react.svg'},
+    {name: 'DevOps Linux', icon: 'assets/portfolio/tools/ubuntu.svg'},
+    {name: 'Otomasi AI', icon: 'assets/portfolio/tools/gemini.svg'},
+  ];
 
   return (
     <OpsPremiumShell
@@ -425,7 +437,7 @@ export const OpsPremiumBrandScene: React.FC = () => {
       from="opsdeck"
       moves={[{t: 0.7, tab: 'trigger'}]}
       statusLabel="CREATOR"
-      activeStatusLabel="RHMT OFC"
+      activeStatusLabel="R_HMT OFC"
       statusActiveMix={brandHot}
     >
       <div style={{display: 'flex', flexDirection: 'column', gap: 14}}>
@@ -439,10 +451,12 @@ export const OpsPremiumBrandScene: React.FC = () => {
             {t: 'oleh', at: 1.55},
             {t: 'Rahmat.', at: 2.25, accent: true},
           ]}
+          accentColor={P.goldBright}
           style={{
+            fontFamily: PORTFOLIO_FONT.display,
             fontSize: 64,
-            fontWeight: 800,
-            lineHeight: 1.08,
+            fontWeight: 700,
+            lineHeight: 1.06,
             letterSpacing: '-0.03em',
           }}
         />
@@ -452,66 +466,70 @@ export const OpsPremiumBrandScene: React.FC = () => {
       <Reveal at={1.8}>
         <OpsTactileCard dark raised accentBorder style={{padding: 28}}>
           <Shine at={2.4} />
-          <Sparks at={2.35} count={20} radius={175} />
+          <Sparks at={2.35} count={20} radius={175} color={P.goldBright} />
           <div style={{display: 'flex', alignItems: 'center', gap: 22}}>
             <div
               style={{
                 width: 108,
                 height: 108,
-                borderRadius: 28,
+                borderRadius: 24,
                 overflow: 'hidden',
-                border: `2.5px solid ${T.lime}`,
-                boxShadow: '0 0 28px rgba(163,230,53,0.35)',
+                border: `2px solid ${P.gold}`,
+                boxShadow: '0 0 28px rgba(197, 162, 117, 0.3)',
                 flexShrink: 0,
               }}
             >
               <Img
-                src={staticFile('assets/ops/pp-dev.png')}
+                src={staticFile('assets/portfolio/pp-dev.png')}
                 style={{width: '100%', height: '100%', objectFit: 'cover'}}
               />
             </div>
             <div>
               <div style={{display: 'flex', alignItems: 'center', gap: 10, marginBottom: 6}}>
-                <span style={{fontSize: 36, fontWeight: 800, letterSpacing: '-0.02em', color: '#FFFFFF'}}>
+                <span style={{fontFamily: PORTFOLIO_FONT.display, fontSize: 36, fontWeight: 700, letterSpacing: '-0.02em', color: P.dark.ink}}>
                   Rahmat
                 </span>
                 <span
                   style={{
                     padding: '4px 12px',
                     borderRadius: 999,
-                    fontFamily: EREKAP_FONT.mono,
+                    fontFamily: PORTFOLIO_FONT.mono,
                     fontSize: 14,
                     fontWeight: 800,
-                    backgroundColor: T.lime,
-                    color: T.limeInk,
+                    backgroundColor: P.gold,
+                    color: '#111720',
                   }}
                 >
                   RHMT OFC
                 </span>
               </div>
-              <div style={{fontSize: 19, color: 'rgba(220,252,231,0.85)', lineHeight: 1.4}}>
+              <div style={{fontSize: 19, color: P.dark.muted, lineHeight: 1.45}}>
                 Pelajar yang ngulik Fullstack, DevOps Linux, dan Otomasi AI.
               </div>
             </div>
           </div>
 
           <div style={{display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 12, marginTop: 22}}>
-            {['Fullstack Web', 'DevOps Linux', 'Otomasi AI'].map((stack, i) => (
-              <Reveal key={stack} at={4.6 + i * 1.1}>
+            {stacks.map((s, i) => (
+              <Reveal key={s.name} at={4.6 + i * 1.1}>
                 <div
                   style={{
-                    padding: '12px 14px',
-                    borderRadius: 16,
-                    backgroundColor: 'rgba(7,41,25,0.72)',
-                    border: '1px solid rgba(163,230,53,0.32)',
-                    textAlign: 'center',
-                    fontFamily: EREKAP_FONT.mono,
-                    fontSize: 15,
+                    padding: '12px 12px',
+                    borderRadius: 14,
+                    backgroundColor: P.dark.bg,
+                    border: `1px solid ${P.dark.accentBorder}`,
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    gap: 8,
+                    fontFamily: PORTFOLIO_FONT.mono,
+                    fontSize: 14,
                     fontWeight: 700,
-                    color: T.lime,
+                    color: P.goldBright,
                   }}
                 >
-                  {stack}
+                  <Img src={staticFile(s.icon)} style={{width: 20, height: 20, objectFit: 'contain'}} />
+                  <span>{s.name}</span>
                 </div>
               </Reveal>
             ))}
@@ -522,29 +540,26 @@ export const OpsPremiumBrandScene: React.FC = () => {
       {/* Portfolio CTA Card */}
       <Reveal at={10.2}>
         <OpsTactileCard dark style={{padding: 24}}>
-          <Tap at={11.4} from={{x: 150, y: 110}} />
+          <Tap at={11.4} from={{x: 150, y: 110}} ripple={P.goldBright} />
           <Shine at={11.55} />
           <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between'}}>
             <div style={{display: 'flex', alignItems: 'center', gap: 16}}>
-              <div
+              <Img
+                src={staticFile('assets/portfolio/rhmt-mark.svg')}
                 style={{
                   width: 54,
                   height: 54,
-                  borderRadius: 16,
-                  backgroundColor: T.lime,
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
+                  borderRadius: 14,
+                  objectFit: 'contain',
+                  border: `1px solid ${P.dark.accentBorder}`,
                 }}
-              >
-                <GlobeSvg color={T.limeInk} size={28} />
-              </div>
+              />
               <div>
-                <div style={{fontFamily: EREKAP_FONT.mono, fontSize: 24, fontWeight: 800, color: '#FFFFFF'}}>
+                <div style={{fontFamily: PORTFOLIO_FONT.mono, fontSize: 24, fontWeight: 800, color: P.dark.ink}}>
                   rhmt.biz.id
                 </div>
-                <div style={{fontSize: 17, color: 'rgba(220,252,231,0.78)'}}>
-                  Follow @rhmtofc · Bedah arsitektur berikutnya
+                <div style={{fontSize: 17, color: P.dark.muted}}>
+                  github.com/rhmt-ofc · @rhmtofc
                 </div>
               </div>
             </div>
@@ -552,20 +567,20 @@ export const OpsPremiumBrandScene: React.FC = () => {
             <div
               style={{
                 padding: '12px 20px',
-                borderRadius: 16,
-                backgroundColor: ctaHot > 0.5 ? T.lime : 'rgba(163,230,53,0.16)',
-                color: ctaHot > 0.5 ? T.limeInk : T.lime,
-                fontFamily: EREKAP_FONT.mono,
+                borderRadius: 14,
+                backgroundColor: ctaHot > 0.5 ? P.gold : P.dark.surface2,
+                color: ctaHot > 0.5 ? '#111720' : P.goldBright,
+                fontFamily: PORTFOLIO_FONT.mono,
                 fontSize: 16,
                 fontWeight: 800,
-                border: `1px solid ${T.lime}`,
+                border: `1px solid ${P.gold}`,
                 display: 'inline-flex',
                 alignItems: 'center',
                 gap: 8,
               }}
             >
-              <AgentCoreSvg color={ctaHot > 0.5 ? T.limeInk : T.lime} size={20} />
-              VISIT
+              <Img src={staticFile('assets/portfolio/tools/github.svg')} style={{width: 20, height: 20, objectFit: 'contain'}} />
+              EXPLORE
             </div>
           </div>
         </OpsTactileCard>

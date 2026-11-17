@@ -2,15 +2,14 @@ import React from 'react';
 import {
   AbsoluteFill,
   Easing,
+  Img,
   interpolate,
+  random,
+  staticFile,
   useCurrentFrame,
 } from 'remotion';
-import {EREKAP_FONT, EREKAP_TOKENS as T} from '../lib/erekapTokens';
-import {
-  Ambient,
-  Vignette,
-  useProg,
-} from '../premium/fx';
+import {useProg} from '../premium/fx';
+import {PORTFOLIO_FONT, PORTFOLIO_TOKENS as P} from './tokens';
 
 export {
   Reveal,
@@ -27,219 +26,138 @@ export type OpsTab = 'trigger' | 'bridge' | 'worker' | 'opsdeck';
 
 const TAB_ORDER: OpsTab[] = ['trigger', 'bridge', 'worker', 'opsdeck'];
 
-/* ───────── Crisp Vector SVG Icons (Zero Emoji) ───────── */
-export const AgentCoreSvg: React.FC<{color?: string; size?: number}> = ({
-  color = T.lime,
-  size = 28,
-}) => (
-  <svg width={size} height={size} viewBox="0 0 24 24" fill="none">
-    <path
-      d="M12 2L14.8 9.2L22 12L14.8 14.8L12 22L9.2 14.8L2 12L9.2 9.2L12 2Z"
-      fill={color}
-    />
-    <circle cx="12" cy="12" r="2.2" fill={T.canopyDeep} />
-  </svg>
-);
-
-export const TerminalSvg: React.FC<{color?: string; size?: number}> = ({
+/* ───────── Minimal UI Chrome Icons (Lucide-aligned) ───────── */
+export const TerminalIcon: React.FC<{color?: string; size?: number}> = ({
   color = 'currentColor',
-  size = 22,
+  size = 20,
 }) => (
-  <svg
-    width={size}
-    height={size}
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke={color}
-    strokeWidth="2.2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2.1" strokeLinecap="round" strokeLinejoin="round">
     <polyline points="4 17 10 11 4 5" />
     <line x1="12" y1="19" x2="20" y2="19" />
   </svg>
 );
 
-export const BridgeSvg: React.FC<{color?: string; size?: number}> = ({
+export const WorkflowIcon: React.FC<{color?: string; size?: number}> = ({
   color = 'currentColor',
-  size = 22,
+  size = 20,
 }) => (
-  <svg
-    width={size}
-    height={size}
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke={color}
-    strokeWidth="2.2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <circle cx="5" cy="12" r="3" />
-    <circle cx="19" cy="12" r="3" />
-    <path d="M8 12h8" />
-    <path d="M13 9l3 3-3 3" />
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2.1" strokeLinecap="round" strokeLinejoin="round">
+    <rect x="3" y="3" width="6" height="6" rx="1.5" />
+    <rect x="15" y="15" width="6" height="6" rx="1.5" />
+    <path d="M9 6h4a2 2 0 0 1 2 2v7" />
   </svg>
 );
 
-export const CpuSvg: React.FC<{color?: string; size?: number}> = ({
+export const CpuIcon: React.FC<{color?: string; size?: number}> = ({
   color = 'currentColor',
-  size = 22,
+  size = 20,
 }) => (
-  <svg
-    width={size}
-    height={size}
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke={color}
-    strokeWidth="2.2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2.1" strokeLinecap="round" strokeLinejoin="round">
     <rect x="6" y="6" width="12" height="12" rx="2" />
     <rect x="9.5" y="9.5" width="5" height="5" rx="1" />
     <path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4" />
   </svg>
 );
 
-export const ActivitySvg: React.FC<{color?: string; size?: number}> = ({
+export const ActivityIcon: React.FC<{color?: string; size?: number}> = ({
   color = 'currentColor',
-  size = 22,
+  size = 20,
 }) => (
-  <svg
-    width={size}
-    height={size}
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke={color}
-    strokeWidth="2.2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2.1" strokeLinecap="round" strokeLinejoin="round">
     <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
   </svg>
 );
 
-export const CodeSvg: React.FC<{color?: string; size?: number}> = ({
-  color = 'currentColor',
-  size = 24,
-}) => (
-  <svg
-    width={size}
-    height={size}
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke={color}
-    strokeWidth="2.2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <polyline points="16 18 22 12 16 6" />
-    <polyline points="8 6 2 12 8 18" />
-  </svg>
+/* ───────── Portfolio Technical Ambient & Vignette ───────── */
+export const OpsAmbient: React.FC<{dark: boolean}> = ({dark}) => {
+  const frame = useCurrentFrame();
+  const t = frame / 30;
+  const orbs = [
+    {
+      x: 84,
+      y: 10,
+      r: 720,
+      c: dark ? 'rgba(197, 162, 117, 0.14)' : 'rgba(53, 68, 90, 0.08)',
+      sp: 0.28,
+      ph: 0,
+    },
+    {
+      x: 10,
+      y: 78,
+      r: 820,
+      c: dark ? 'rgba(53, 68, 90, 0.26)' : 'rgba(197, 162, 117, 0.12)',
+      sp: 0.2,
+      ph: 2,
+    },
+  ];
+  return (
+    <AbsoluteFill style={{pointerEvents: 'none', overflow: 'hidden'}}>
+      {orbs.map((o, i) => (
+        <div
+          key={i}
+          style={{
+            position: 'absolute',
+            left: `${o.x + Math.sin(t * o.sp + o.ph) * 7}%`,
+            top: `${o.y + Math.cos(t * o.sp * 1.15 + o.ph) * 4}%`,
+            width: o.r,
+            height: o.r,
+            marginLeft: -o.r / 2,
+            marginTop: -o.r / 2,
+            borderRadius: 999,
+            background: `radial-gradient(circle, ${o.c} 0%, transparent 66%)`,
+          }}
+        />
+      ))}
+      <div
+        style={{
+          position: 'absolute',
+          inset: 0,
+          opacity: dark ? 0.055 : 0.045,
+          backgroundImage: `linear-gradient(to right, ${dark ? P.steelIce : P.light.accent} 1px, transparent 1px), linear-gradient(to bottom, ${dark ? P.steelIce : P.light.accent} 1px, transparent 1px)`,
+          backgroundSize: '48px 48px',
+          backgroundPosition: `0px ${(t * 8) % 48}px`,
+          maskImage: 'radial-gradient(circle at 50% 42%, black 0%, transparent 74%)',
+          WebkitMaskImage: 'radial-gradient(circle at 50% 42%, black 0%, transparent 74%)',
+        }}
+      />
+      {Array.from({length: 18}).map((_, i) => {
+        const x = random(`opx${i}`) * 1080 + Math.sin(t * 0.55 + i) * 14;
+        const sp = 14 + random(`ops${i}`) * 30;
+        const y = (((random(`opy${i}`) * 1920 - t * sp) % 1920) + 1920) % 1920;
+        const s = 2.5 + random(`opz${i}`) * 5;
+        const tw = 0.5 + 0.5 * Math.sin(t * 1.4 + i * 1.9);
+        return (
+          <div
+            key={i}
+            style={{
+              position: 'absolute',
+              left: x,
+              top: y,
+              width: s,
+              height: s,
+              borderRadius: 999,
+              background: dark ? P.gold : P.light.accent,
+              opacity: (dark ? 0.38 : 0.14) * tw,
+            }}
+          />
+        );
+      })}
+    </AbsoluteFill>
+  );
+};
+
+export const OpsVignette: React.FC<{dark: boolean}> = ({dark}) => (
+  <AbsoluteFill
+    style={{
+      pointerEvents: 'none',
+      background: dark
+        ? 'radial-gradient(ellipse at 50% 45%, transparent 56%, rgba(4, 6, 10, 0.58) 100%)'
+        : 'radial-gradient(ellipse at 50% 45%, transparent 62%, rgba(24, 30, 40, 0.09) 100%)',
+    }}
+  />
 );
 
-export const SearchSvg: React.FC<{color?: string; size?: number}> = ({
-  color = 'currentColor',
-  size = 24,
-}) => (
-  <svg
-    width={size}
-    height={size}
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke={color}
-    strokeWidth="2.2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <circle cx="11" cy="11" r="7" />
-    <line x1="20" y1="20" x2="16.2" y2="16.2" />
-  </svg>
-);
-
-export const ServerSvg: React.FC<{color?: string; size?: number}> = ({
-  color = 'currentColor',
-  size = 24,
-}) => (
-  <svg
-    width={size}
-    height={size}
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke={color}
-    strokeWidth="2.2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <rect x="3" y="4" width="18" height="6" rx="2" />
-    <rect x="3" y="14" width="18" height="6" rx="2" />
-    <circle cx="7" cy="7" r="1.1" fill={color} />
-    <circle cx="7" cy="17" r="1.1" fill={color} />
-  </svg>
-);
-
-export const ShieldCheckSvg: React.FC<{color?: string; size?: number}> = ({
-  color = 'currentColor',
-  size = 24,
-}) => (
-  <svg
-    width={size}
-    height={size}
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke={color}
-    strokeWidth="2.2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-    <polyline points="9 12 11 14 15 10" />
-  </svg>
-);
-
-export const GitBranchSvg: React.FC<{color?: string; size?: number}> = ({
-  color = 'currentColor',
-  size = 24,
-}) => (
-  <svg
-    width={size}
-    height={size}
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke={color}
-    strokeWidth="2.2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <circle cx="6" cy="6" r="2.5" />
-    <circle cx="18" cy="6" r="2.5" />
-    <circle cx="6" cy="18" r="2.5" />
-    <path d="M6 8.5v7" />
-    <path d="M18 8.5c0 4-12 2-12 7" />
-  </svg>
-);
-
-export const GlobeSvg: React.FC<{color?: string; size?: number}> = ({
-  color = 'currentColor',
-  size = 24,
-}) => (
-  <svg
-    width={size}
-    height={size}
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke={color}
-    strokeWidth="2.1"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <circle cx="12" cy="12" r="9" />
-    <line x1="3" y1="12" x2="21" y2="12" />
-    <path d="M12 3a14 14 0 0 1 0 18a14 14 0 0 1 0-18z" />
-  </svg>
-);
-
-/* ───────── Transition Sweep (Tirai diagonal dua lapis + AgentCore Emblem) ───────── */
+/* ───────── Transition Sweep (Darkroom Slate + Warm Gold + RHMT Mark) ───────── */
 export const OpsTransitionSweep: React.FC<{atFrame: number; half?: number}> = ({
   atFrame,
   half = 12,
@@ -272,14 +190,14 @@ export const OpsTransitionSweep: React.FC<{atFrame: number; half?: number}> = ({
       <div
         style={panel(
           xLag,
-          `linear-gradient(160deg, ${T.canopy} 0%, ${T.canopyDeep} 100%)`,
+          `linear-gradient(160deg, ${P.dark.surface2} 0%, ${P.dark.bg} 100%)`,
           1
         )}
       />
       <div
         style={panel(
           xLead,
-          `linear-gradient(160deg, ${T.limeHover} 0%, ${T.lime} 100%)`,
+          `linear-gradient(160deg, ${P.goldBright} 0%, ${P.gold} 100%)`,
           2
         )}
       >
@@ -289,9 +207,9 @@ export const OpsTransitionSweep: React.FC<{atFrame: number; half?: number}> = ({
             right: 0,
             top: 0,
             bottom: 0,
-            width: 10,
-            background: 'rgba(255,255,255,0.85)',
-            boxShadow: '0 0 40px rgba(255,255,255,0.9)',
+            width: 8,
+            background: 'rgba(255,255,255,0.75)',
+            boxShadow: '0 0 32px rgba(255,255,255,0.7)',
           }}
         />
       </div>
@@ -308,98 +226,93 @@ export const OpsTransitionSweep: React.FC<{atFrame: number; half?: number}> = ({
       >
         <div
           style={{
-            width: 184,
-            height: 184,
-            borderRadius: 46,
-            background: T.canopyDeep,
-            border: '2px solid rgba(163,230,53,0.45)',
+            width: 180,
+            height: 180,
+            borderRadius: 42,
+            background: '#17191c',
+            border: `2px solid ${P.gold}`,
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            transform: `scale(${0.7 + 0.4 * iconP}) rotate(${(u - 0.5) * 24}deg)`,
-            boxShadow: '0 30px 70px rgba(7,41,25,0.6)',
+            transform: `scale(${0.7 + 0.4 * iconP}) rotate(${(u - 0.5) * 20}deg)`,
+            boxShadow: '0 30px 70px rgba(0, 0, 0, 0.65)',
           }}
         >
-          <AgentCoreSvg color={T.lime} size={96} />
+          <Img
+            src={staticFile('assets/portfolio/rhmt-mark.svg')}
+            style={{width: 120, height: 120, objectFit: 'contain'}}
+          />
         </div>
       </div>
     </AbsoluteFill>
   );
 };
 
-/* ───────── Shared Tactile Card & Kicker Badge ───────── */
+/* ───────── Shared Tactile Card & Kicker (Max 2 Elevation Depths) ───────── */
 export const OpsTactileCard: React.FC<{
   dark: boolean;
   raised?: boolean;
   accentBorder?: boolean;
   style?: React.CSSProperties;
   children: React.ReactNode;
-}> = ({dark, raised = false, accentBorder = false, style, children}) => (
-  <div
-    style={{
-      position: 'relative',
-      borderRadius: 26,
-      backgroundColor: dark
-        ? raised
-          ? 'rgba(17, 87, 55, 0.44)'
-          : 'rgba(255, 255, 255, 0.06)'
-        : raised
-        ? T.surfaceRaised
-        : T.surface,
-      border: accentBorder
-        ? `1.5px solid ${dark ? 'rgba(163, 230, 53, 0.55)' : T.canopy}`
-        : dark
-        ? '1px solid rgba(255, 255, 255, 0.13)'
-        : `1px solid ${T.borderStrong}`,
-      boxShadow: dark
-        ? accentBorder
-          ? '0 20px 44px -14px rgba(0,0,0,0.55), 0 0 32px rgba(163,230,53,0.14)'
-          : '0 18px 40px -14px rgba(0,0,0,0.45)'
-        : T.shadowSheet,
-      ...style,
-    }}
-  >
-    {children}
-  </div>
-);
+}> = ({dark, raised = false, accentBorder = false, style, children}) => {
+  const th = dark ? P.dark : P.light;
+  return (
+    <div
+      style={{
+        position: 'relative',
+        borderRadius: 22,
+        backgroundColor: raised ? th.surface2 : th.surface,
+        border: accentBorder
+          ? `1.5px solid ${th.accentBorder}`
+          : `1px solid ${th.lineStrong}`,
+        boxShadow: th.shadow,
+        ...style,
+      }}
+    >
+      {children}
+    </div>
+  );
+};
 
 export const OpsKicker: React.FC<{dark: boolean; text: string}> = ({
   dark,
   text,
-}) => (
-  <div
-    style={{
-      display: 'inline-flex',
-      alignItems: 'center',
-      gap: 8,
-      padding: '7px 14px',
-      borderRadius: 999,
-      fontFamily: EREKAP_FONT.mono,
-      fontSize: 15,
-      fontWeight: 700,
-      letterSpacing: '0.06em',
-      textTransform: 'uppercase',
-      backgroundColor: dark ? 'rgba(163, 230, 53, 0.14)' : T.surfaceMint,
-      color: dark ? T.lime : T.canopy,
-      border: dark
-        ? '1px solid rgba(163, 230, 53, 0.35)'
-        : `1px solid ${T.borderStrong}`,
-      alignSelf: 'flex-start',
-    }}
-  >
-    <span
+}) => {
+  const th = dark ? P.dark : P.light;
+  return (
+    <div
       style={{
-        width: 7,
-        height: 7,
+        display: 'inline-flex',
+        alignItems: 'center',
+        gap: 9,
+        padding: '7px 14px',
         borderRadius: 999,
-        backgroundColor: dark ? T.lime : T.canopyMid,
+        fontFamily: PORTFOLIO_FONT.mono,
+        fontSize: 15,
+        fontWeight: 700,
+        letterSpacing: '0.06em',
+        textTransform: 'uppercase',
+        backgroundColor: th.accentSoft,
+        color: dark ? P.goldBright : th.accent,
+        border: `1px solid ${th.accentBorder}`,
+        alignSelf: 'flex-start',
       }}
-    />
-    {text}
-  </div>
-);
+    >
+      <span
+        style={{
+          width: 7,
+          height: 7,
+          borderRadius: 999,
+          backgroundColor: dark ? P.gold : th.accent,
+        }}
+      />
+      {text}
+    </div>
+  );
+};
 
-/* ───────── Unified App Shell (OpsPremiumShell) ───────── */
+/* ───────── Unified Portfolio App Shell (OpsPremiumShell) ───────── */
 const DOCK_ITEMS: {
   id: OpsTab;
   label: string;
@@ -409,28 +322,28 @@ const DOCK_ITEMS: {
     id: 'trigger',
     label: 'Trigger',
     renderIcon: (a) => (
-      <TerminalSvg color={a ? T.lime : 'rgba(255,255,255,0.62)'} size={20} />
+      <TerminalIcon color={a ? P.goldBright : 'rgba(241,243,246,0.58)'} size={20} />
     ),
   },
   {
     id: 'bridge',
     label: 'Bridge',
     renderIcon: (a) => (
-      <BridgeSvg color={a ? T.lime : 'rgba(255,255,255,0.62)'} size={20} />
+      <WorkflowIcon color={a ? P.goldBright : 'rgba(241,243,246,0.58)'} size={20} />
     ),
   },
   {
     id: 'worker',
     label: 'Worker',
     renderIcon: (a) => (
-      <CpuSvg color={a ? T.lime : 'rgba(255,255,255,0.62)'} size={20} />
+      <CpuIcon color={a ? P.goldBright : 'rgba(241,243,246,0.58)'} size={20} />
     ),
   },
   {
     id: 'opsdeck',
     label: 'Ops Deck',
     renderIcon: (a) => (
-      <ActivitySvg color={a ? T.lime : 'rgba(255,255,255,0.62)'} size={20} />
+      <ActivityIcon color={a ? P.goldBright : 'rgba(241,243,246,0.58)'} size={20} />
     ),
   },
 ];
@@ -454,6 +367,7 @@ export const OpsPremiumShell: React.FC<{
 }) => {
   const {frame, now, prog} = useProg();
   const dark = mode === 'dark';
+  const th = dark ? P.dark : P.light;
   const topP = prog(0.08, 0.65);
   const dockP = prog(0.16, 0.72);
   const idxF = moves.reduce(
@@ -469,15 +383,12 @@ export const OpsPremiumShell: React.FC<{
   return (
     <AbsoluteFill
       style={{
-        backgroundColor: dark ? T.canopyDeep : T.bg,
-        backgroundImage: dark
-          ? `linear-gradient(165deg, ${T.canopy} 0%, ${T.canopyDeep} 100%)`
-          : undefined,
-        fontFamily: EREKAP_FONT.sans,
-        color: dark ? '#FFFFFF' : T.ink,
+        backgroundColor: th.bg,
+        fontFamily: PORTFOLIO_FONT.sans,
+        color: th.ink,
       }}
     >
-      <Ambient dark={dark} />
+      <OpsAmbient dark={dark} />
 
       <div
         style={{
@@ -491,59 +402,52 @@ export const OpsPremiumShell: React.FC<{
           transformOrigin: '50% 42%',
         }}
       >
-        {/* Top App Bar */}
+        {/* Top Header Bar (Precision Technical Glass) */}
         <div
           style={{
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'space-between',
             padding: '14px 20px',
-            borderRadius: 24,
-            backgroundColor: dark
-              ? 'rgba(255,255,255,0.07)'
-              : 'rgba(255,255,255,0.94)',
-            border: dark
-              ? '1px solid rgba(255,255,255,0.12)'
-              : `1px solid ${T.border}`,
-            boxShadow: dark ? 'none' : T.shadowCard,
+            borderRadius: 22,
+            backgroundColor: th.glass,
+            border: `1px solid ${th.lineStrong}`,
+            boxShadow: th.shadow,
             opacity: topP,
             transform: `translateY(${(1 - topP) * -24}px)`,
           }}
         >
           <div style={{display: 'flex', alignItems: 'center', gap: 14}}>
-            <div
+            <Img
+              src={staticFile('assets/portfolio/rhmt-mark.svg')}
               style={{
                 width: 44,
                 height: 44,
-                borderRadius: 13,
-                backgroundColor: T.canopyDeep,
-                border: '1px solid rgba(163,230,53,0.4)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
+                borderRadius: 12,
+                objectFit: 'contain',
+                border: `1px solid ${P.dark.accentBorder}`,
               }}
-            >
-              <AgentCoreSvg color={T.lime} size={26} />
-            </div>
+            />
             <div>
               <div
                 style={{
+                  fontFamily: PORTFOLIO_FONT.display,
                   fontSize: 22,
-                  fontWeight: 800,
+                  fontWeight: 700,
                   letterSpacing: '-0.02em',
                   lineHeight: 1.1,
                 }}
               >
-                RHMT OPS
+                R_HMT OFC
               </div>
               <div
                 style={{
                   fontSize: 15,
                   fontWeight: 600,
-                  color: dark ? 'rgba(220,252,231,0.78)' : T.inkMuted,
+                  color: th.muted,
                 }}
               >
-                Dual-VPS Agentic Engine
+                rhmt.biz.id · Agentic Engine
               </div>
             </div>
           </div>
@@ -555,19 +459,25 @@ export const OpsPremiumShell: React.FC<{
               gap: 8,
               padding: '8px 16px',
               borderRadius: 999,
-              fontFamily: EREKAP_FONT.mono,
+              fontFamily: PORTFOLIO_FONT.mono,
               backgroundColor: isHot
-                ? T.lime
-                : dark
-                ? 'rgba(255,255,255,0.12)'
-                : T.surfaceMint,
-              color: isHot ? T.limeInk : dark ? '#FFFFFF' : T.canopy,
+                ? dark
+                  ? P.gold
+                  : P.light.accent
+                : th.surface2,
+              color: isHot
+                ? dark
+                  ? '#111720'
+                  : '#ffffff'
+                : th.ink,
               fontSize: 15,
               fontWeight: 800,
-              border: dark
-                ? '1px solid rgba(255,255,255,0.14)'
-                : `1px solid ${T.borderStrong}`,
-              boxShadow: isHot ? '0 0 24px rgba(163,230,53,0.55)' : 'none',
+              border: `1px solid ${isHot ? 'transparent' : th.lineStrong}`,
+              boxShadow: isHot
+                ? dark
+                  ? '0 0 22px rgba(197, 162, 117, 0.45)'
+                  : '0 0 20px rgba(53, 68, 90, 0.28)'
+                : 'none',
             }}
           >
             <span
@@ -575,8 +485,12 @@ export const OpsPremiumShell: React.FC<{
                 width: 9,
                 height: 9,
                 borderRadius: 999,
-                backgroundColor: isHot ? T.canopyDeep : T.lime,
-                boxShadow: `0 0 ${6 + pulse * 8}px ${T.lime}`,
+                backgroundColor: isHot
+                  ? dark
+                    ? '#111720'
+                    : P.goldBright
+                  : P.gold,
+                boxShadow: `0 0 ${6 + pulse * 8}px ${P.gold}`,
               }}
             />
             <span>{pillText}</span>
@@ -598,20 +512,18 @@ export const OpsPremiumShell: React.FC<{
           {children}
         </div>
 
-        {/* Bottom Floating Dock */}
+        {/* Bottom Floating Dock (Industrial Slate) */}
         <div
           style={{
             alignSelf: 'center',
             width: '100%',
             maxWidth: 780,
             position: 'relative',
-            backgroundColor: dark
-              ? 'rgba(6, 28, 17, 0.94)'
-              : 'rgba(11, 20, 16, 0.94)',
-            borderRadius: 30,
+            backgroundColor: 'rgba(16, 22, 30, 0.95)',
+            borderRadius: 28,
             padding: '10px 14px',
-            border: '1px solid rgba(255,255,255,0.12)',
-            boxShadow: T.shadowDock,
+            border: `1px solid ${P.dark.lineStrong}`,
+            boxShadow: '0 18px 36px -8px rgba(0, 0, 0, 0.55)',
             opacity: dockP,
             transform: `translateY(${(1 - dockP) * 40}px)`,
           }}
@@ -631,10 +543,10 @@ export const OpsPremiumShell: React.FC<{
                 bottom: 0,
                 width: 'calc((100% - 24px) / 4)',
                 left: `calc(${idxF} * ((100% - 24px) / 4 + 8px))`,
-                borderRadius: 22,
-                backgroundColor: T.canopy,
-                border: '1px solid rgba(163,230,53,0.42)',
-                boxShadow: '0 0 22px rgba(163,230,53,0.25)',
+                borderRadius: 20,
+                backgroundColor: P.dark.surface2,
+                border: `1px solid ${P.dark.accentBorder}`,
+                boxShadow: '0 0 20px rgba(197, 162, 117, 0.18)',
               }}
             />
             {DOCK_ITEMS.map((item, i) => {
@@ -649,7 +561,7 @@ export const OpsPremiumShell: React.FC<{
                     justifyContent: 'center',
                     gap: 8,
                     padding: '12px 8px',
-                    color: active ? T.lime : 'rgba(255,255,255,0.62)',
+                    color: active ? P.goldBright : 'rgba(241,243,246,0.58)',
                     fontWeight: active ? 800 : 600,
                     fontSize: 17,
                   }}
@@ -663,7 +575,7 @@ export const OpsPremiumShell: React.FC<{
         </div>
       </div>
 
-      <Vignette dark={dark} />
+      <OpsVignette dark={dark} />
     </AbsoluteFill>
   );
 };

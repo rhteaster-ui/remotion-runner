@@ -1,25 +1,20 @@
 import React from 'react';
 import {Img, interpolate, staticFile} from 'remotion';
-import {EREKAP_FONT, EREKAP_TOKENS as T} from '../lib/erekapTokens';
 import {
-  BridgeSvg,
-  CpuSvg,
   OpsKicker,
   OpsPremiumShell,
   OpsTactileCard,
   Reveal,
-  ServerSvg,
-  ShieldCheckSvg,
   Shine,
   Sparks,
   Tap,
-  TerminalSvg,
   WordReveal,
   useProg,
 } from './shell';
+import {PORTFOLIO_FONT, PORTFOLIO_TOKENS as P} from './tokens';
 
 /* ============================================================================
-   SCENE 1: HOOK (Dark Canopy) — Chat 1-Arah vs Sistem Agentic Rahmat
+   SCENE 1: HOOK (Darkroom Slate) — Chat 1-Arah vs Sistem Agentic Rahmat
    ============================================================================ */
 export const OpsPremiumHookScene: React.FC = () => {
   const {now, prog} = useProg();
@@ -30,9 +25,24 @@ export const OpsPremiumHookScene: React.FC = () => {
   const step3 = prog(8.75, 0.35);
 
   const steps = [
-    {num: '01', label: 'Parse Intent & Context', p: step1},
-    {num: '02', label: 'SSH Bridge VPS-1 -> VPS-2', p: step2},
-    {num: '03', label: 'Run Bash, Code & Verify', p: step3},
+    {
+      num: '01',
+      label: 'Parse Intent & Context',
+      icon: 'assets/portfolio/tools/gemini.svg',
+      p: step1,
+    },
+    {
+      num: '02',
+      label: 'SSH Bridge VPS-1 -> VPS-2',
+      icon: 'assets/portfolio/relay.svg',
+      p: step2,
+    },
+    {
+      num: '03',
+      label: 'Run Bash, Code & PM2',
+      icon: 'assets/portfolio/tools/pm2.svg',
+      p: step3,
+    },
   ];
 
   return (
@@ -56,10 +66,12 @@ export const OpsPremiumHookScene: React.FC = () => {
             {t: 'Sistem', at: 3.45, accent: true},
             {t: 'Agentic.', at: 3.8, accent: true},
           ]}
+          accentColor={P.goldBright}
           style={{
+            fontFamily: PORTFOLIO_FONT.display,
             fontSize: 64,
-            fontWeight: 800,
-            lineHeight: 1.08,
+            fontWeight: 700,
+            lineHeight: 1.06,
             letterSpacing: '-0.03em',
           }}
         />
@@ -85,21 +97,29 @@ export const OpsPremiumHookScene: React.FC = () => {
                   display: 'inline-block',
                   padding: '5px 12px',
                   borderRadius: 999,
-                  fontFamily: EREKAP_FONT.mono,
+                  fontFamily: PORTFOLIO_FONT.mono,
                   fontSize: 13,
                   fontWeight: 700,
-                  backgroundColor: 'rgba(239,68,68,0.18)',
+                  backgroundColor: 'rgba(239, 68, 68, 0.16)',
                   color: '#FCA5A5',
-                  border: '1px solid rgba(239,68,68,0.4)',
+                  border: '1px solid rgba(239, 68, 68, 0.36)',
                   marginBottom: 14,
                 }}
               >
                 1-ARAH
               </div>
-              <div style={{fontSize: 27, fontWeight: 800, lineHeight: 1.2, marginBottom: 10}}>
+              <div
+                style={{
+                  fontFamily: PORTFOLIO_FONT.display,
+                  fontSize: 27,
+                  fontWeight: 700,
+                  lineHeight: 1.2,
+                  marginBottom: 10,
+                }}
+              >
                 Chat AI Biasa
               </div>
-              <div style={{fontSize: 18, color: 'rgba(220,252,231,0.72)', lineHeight: 1.4}}>
+              <div style={{fontSize: 18, color: P.dark.muted, lineHeight: 1.45}}>
                 Hanya jawab teks di layar. Tidak bisa sentuh server.
               </div>
             </div>
@@ -107,9 +127,10 @@ export const OpsPremiumHookScene: React.FC = () => {
               style={{
                 marginTop: 18,
                 padding: '10px 14px',
-                borderRadius: 14,
-                backgroundColor: 'rgba(0,0,0,0.28)',
-                fontFamily: EREKAP_FONT.mono,
+                borderRadius: 12,
+                backgroundColor: P.dark.bg,
+                border: `1px solid ${P.dark.line}`,
+                fontFamily: PORTFOLIO_FONT.mono,
                 fontSize: 15,
                 color: '#FCA5A5',
               }}
@@ -133,31 +154,40 @@ export const OpsPremiumHookScene: React.FC = () => {
             }}
           >
             <Shine at={3.9} />
-            <Sparks at={3.85} count={18} radius={165} />
+            <Sparks at={3.85} count={18} radius={165} color={P.goldBright} />
             <div>
               <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 14}}>
                 <span
                   style={{
                     padding: '5px 12px',
                     borderRadius: 999,
-                    fontFamily: EREKAP_FONT.mono,
+                    fontFamily: PORTFOLIO_FONT.mono,
                     fontSize: 13,
                     fontWeight: 800,
-                    backgroundColor: T.lime,
-                    color: T.limeInk,
+                    backgroundColor: P.gold,
+                    color: '#111720',
                   }}
                 >
                   RACIKAN RAHMAT
                 </span>
                 <Img
-                  src={staticFile('assets/ops/agy-official.png')}
-                  style={{width: 34, height: 34, borderRadius: 8, objectFit: 'contain'}}
+                  src={staticFile('assets/portfolio/tools/antigravity.svg')}
+                  style={{width: 34, height: 34, objectFit: 'contain'}}
                 />
               </div>
-              <div style={{fontSize: 30, fontWeight: 800, lineHeight: 1.16, color: '#FFFFFF', marginBottom: 10}}>
+              <div
+                style={{
+                  fontFamily: PORTFOLIO_FONT.display,
+                  fontSize: 30,
+                  fontWeight: 700,
+                  lineHeight: 1.15,
+                  color: P.dark.ink,
+                  marginBottom: 10,
+                }}
+              >
                 Sistem Agentic
               </div>
-              <div style={{fontSize: 19, color: 'rgba(220,252,231,0.9)', lineHeight: 1.4}}>
+              <div style={{fontSize: 19, color: P.steelIce, lineHeight: 1.45}}>
                 Kirim 1 perintah, seluruh worker langsung eksekusi.
               </div>
             </div>
@@ -165,13 +195,13 @@ export const OpsPremiumHookScene: React.FC = () => {
               style={{
                 marginTop: 18,
                 padding: '10px 14px',
-                borderRadius: 14,
-                backgroundColor: 'rgba(7,41,25,0.72)',
-                border: '1px solid rgba(163,230,53,0.35)',
-                fontFamily: EREKAP_FONT.mono,
+                borderRadius: 12,
+                backgroundColor: P.dark.bg,
+                border: `1px solid ${P.dark.accentBorder}`,
+                fontFamily: PORTFOLIO_FONT.mono,
                 fontSize: 15,
                 fontWeight: 700,
-                color: T.lime,
+                color: P.goldBright,
               }}
             >
               STATUS: AUTONOMOUS
@@ -183,11 +213,14 @@ export const OpsPremiumHookScene: React.FC = () => {
       {/* Live Command Dispatch Stage */}
       <Reveal at={5.6}>
         <OpsTactileCard dark style={{padding: 26}}>
-          <Tap at={6.45} from={{x: 160, y: 120}} />
+          <Tap at={6.45} from={{x: 160, y: 120}} ripple={P.goldBright} />
           <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 16}}>
             <div style={{display: 'flex', alignItems: 'center', gap: 12}}>
-              <TerminalSvg color={T.lime} size={24} />
-              <span style={{fontFamily: EREKAP_FONT.mono, fontSize: 18, fontWeight: 700, color: '#FFFFFF'}}>
+              <Img
+                src={staticFile('assets/portfolio/tools/bash.svg')}
+                style={{width: 28, height: 28, objectFit: 'contain'}}
+              />
+              <span style={{fontFamily: PORTFOLIO_FONT.mono, fontSize: 18, fontWeight: 700, color: P.dark.ink}}>
                 /audit-server --auto
               </span>
             </div>
@@ -195,11 +228,12 @@ export const OpsPremiumHookScene: React.FC = () => {
               style={{
                 padding: '6px 14px',
                 borderRadius: 999,
-                fontFamily: EREKAP_FONT.mono,
+                fontFamily: PORTFOLIO_FONT.mono,
                 fontSize: 14,
                 fontWeight: 800,
-                backgroundColor: cmdSent > 0.5 ? T.lime : 'rgba(255,255,255,0.12)',
-                color: cmdSent > 0.5 ? T.limeInk : 'rgba(255,255,255,0.75)',
+                backgroundColor: cmdSent > 0.5 ? P.gold : P.dark.surface2,
+                color: cmdSent > 0.5 ? '#111720' : P.dark.muted,
+                border: `1px solid ${cmdSent > 0.5 ? 'transparent' : P.dark.lineStrong}`,
               }}
             >
               {step3 > 0.8 ? '200 OK' : cmdSent > 0.5 ? 'RUNNING' : 'QUEUED'}
@@ -217,28 +251,32 @@ export const OpsPremiumHookScene: React.FC = () => {
                     alignItems: 'center',
                     justifyContent: 'space-between',
                     padding: '12px 16px',
-                    borderRadius: 16,
-                    backgroundColor: active ? 'rgba(163,230,53,0.14)' : 'rgba(255,255,255,0.04)',
+                    borderRadius: 14,
+                    backgroundColor: active ? P.dark.surface2 : P.dark.bg,
                     border: active
-                      ? '1px solid rgba(163,230,53,0.45)'
-                      : '1px solid rgba(255,255,255,0.08)',
+                      ? `1px solid ${P.dark.accentBorder}`
+                      : `1px solid ${P.dark.line}`,
                     opacity: 0.45 + 0.55 * s.p,
                     transform: `translateX(${(1 - s.p) * 14}px)`,
                   }}
                 >
                   <div style={{display: 'flex', alignItems: 'center', gap: 12}}>
-                    <span style={{fontFamily: EREKAP_FONT.mono, fontSize: 15, fontWeight: 800, color: T.lime}}>
+                    <Img
+                      src={staticFile(s.icon)}
+                      style={{width: 24, height: 24, objectFit: 'contain'}}
+                    />
+                    <span style={{fontFamily: PORTFOLIO_FONT.mono, fontSize: 15, fontWeight: 800, color: P.goldBright}}>
                       {s.num}
                     </span>
-                    <span style={{fontSize: 19, fontWeight: 700, color: '#FFFFFF'}}>{s.label}</span>
+                    <span style={{fontSize: 19, fontWeight: 700, color: P.dark.ink}}>{s.label}</span>
                   </div>
                   <div
                     style={{
                       width: 10,
                       height: 10,
                       borderRadius: 999,
-                      backgroundColor: active ? T.lime : 'rgba(255,255,255,0.22)',
-                      boxShadow: active ? `0 0 ${8 + Math.sin(now * 6) * 4}px ${T.lime}` : 'none',
+                      backgroundColor: active ? P.gold : P.dark.quiet,
+                      boxShadow: active ? `0 0 ${8 + Math.sin(now * 6) * 4}px ${P.gold}` : 'none',
                     }}
                   />
                 </div>
@@ -252,12 +290,12 @@ export const OpsPremiumHookScene: React.FC = () => {
 };
 
 /* ============================================================================
-   SCENE 2: BRIDGE (Crisp Light) — HP Bot -> Terminal -> SSH Dual-VPS
+   SCENE 2: BRIDGE (Daylight Paper) — HP Bot -> Terminal -> SSH Dual-VPS
    ============================================================================ */
 export const OpsPremiumBridgeScene: React.FC = () => {
   const {now, prog} = useProg();
   const bridgeHot = prog(4.3, 0.5);
-  const packet = ((now * 0.75) % 1);
+  const packet = (now * 0.75) % 1;
 
   return (
     <OpsPremiumShell
@@ -280,13 +318,14 @@ export const OpsPremiumBridgeScene: React.FC = () => {
             {t: 'tembus', at: 1.6},
             {t: 'Dual-VPS.', at: 3.8, accent: true},
           ]}
-          accentColor={T.canopyMid}
+          accentColor={P.light.accent}
           style={{
+            fontFamily: PORTFOLIO_FONT.display,
             fontSize: 60,
-            fontWeight: 800,
-            lineHeight: 1.08,
+            fontWeight: 700,
+            lineHeight: 1.06,
             letterSpacing: '-0.03em',
-            color: T.ink,
+            color: P.light.ink,
           }}
         />
       </div>
@@ -294,14 +333,14 @@ export const OpsPremiumBridgeScene: React.FC = () => {
       {/* Gateway Bot Input Strip */}
       <Reveal at={1.0}>
         <OpsTactileCard dark={false} style={{padding: 22}}>
-          <Tap at={1.45} from={{x: -100, y: 90}} ripple={T.canopyMid} />
-          <div style={{fontFamily: EREKAP_FONT.mono, fontSize: 14, fontWeight: 700, color: T.inkMuted, marginBottom: 12}}>
+          <Tap at={1.45} from={{x: -100, y: 90}} ripple={P.light.accent} />
+          <div style={{fontFamily: PORTFOLIO_FONT.mono, fontSize: 14, fontWeight: 700, color: P.light.quiet, marginBottom: 12}}>
             GATEWAY INPUT // MOBILE CLIENT
           </div>
           <div style={{display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 14}}>
             {[
-              {name: 'Telegram Bot', sub: '@rhmt_ops_bot', icon: 'assets/ops/tg-official.svg'},
-              {name: 'WhatsApp', sub: 'Baileys Socket', icon: 'assets/ops/wa-official.svg'},
+              {name: 'Telegram Bot', sub: '@agency_rdev_bot', icon: 'assets/portfolio/tools/telegram.svg'},
+              {name: 'WhatsApp', sub: 'Baileys Socket', icon: 'assets/portfolio/tools/whatsapp.svg'},
             ].map((ch) => (
               <div
                 key={ch.name}
@@ -310,15 +349,15 @@ export const OpsPremiumBridgeScene: React.FC = () => {
                   alignItems: 'center',
                   gap: 14,
                   padding: '14px 16px',
-                  borderRadius: 18,
-                  backgroundColor: T.surfaceMint,
-                  border: `1px solid ${T.borderStrong}`,
+                  borderRadius: 16,
+                  backgroundColor: P.light.surface2,
+                  border: `1px solid ${P.light.lineStrong}`,
                 }}
               >
                 <Img src={staticFile(ch.icon)} style={{width: 34, height: 34, objectFit: 'contain'}} />
                 <div>
-                  <div style={{fontSize: 19, fontWeight: 800, color: T.ink}}>{ch.name}</div>
-                  <div style={{fontFamily: EREKAP_FONT.mono, fontSize: 14, color: T.canopyMid}}>{ch.sub}</div>
+                  <div style={{fontSize: 19, fontWeight: 800, color: P.light.ink}}>{ch.name}</div>
+                  <div style={{fontFamily: PORTFOLIO_FONT.mono, fontSize: 14, color: P.light.muted}}>{ch.sub}</div>
                 </div>
               </div>
             ))}
@@ -335,20 +374,22 @@ export const OpsPremiumBridgeScene: React.FC = () => {
             <div
               style={{
                 padding: 20,
-                borderRadius: 20,
-                backgroundColor: T.surface,
-                border: `1.5px solid ${T.borderStrong}`,
-                boxShadow: T.shadowCard,
+                borderRadius: 18,
+                backgroundColor: P.light.surface,
+                border: `1.5px solid ${P.light.lineStrong}`,
+                boxShadow: P.light.shadow,
               }}
             >
               <div style={{display: 'flex', alignItems: 'center', gap: 10, marginBottom: 10}}>
-                <ServerSvg color={T.canopy} size={24} />
-                <span style={{fontFamily: EREKAP_FONT.mono, fontSize: 15, fontWeight: 800, color: T.canopy}}>
+                <Img src={staticFile('assets/portfolio/tools/ubuntu.svg')} style={{width: 26, height: 26, objectFit: 'contain'}} />
+                <span style={{fontFamily: PORTFOLIO_FONT.mono, fontSize: 15, fontWeight: 800, color: P.light.accent}}>
                   VPS-1
                 </span>
               </div>
-              <div style={{fontSize: 22, fontWeight: 800, color: T.ink}}>Gateway</div>
-              <div style={{fontSize: 16, color: T.inkMuted, marginTop: 4}}>Auth & Router</div>
+              <div style={{fontFamily: PORTFOLIO_FONT.display, fontSize: 22, fontWeight: 700, color: P.light.ink}}>
+                Gateway
+              </div>
+              <div style={{fontSize: 16, color: P.light.muted, marginTop: 4}}>Auth & Router</div>
             </div>
 
             {/* Encrypted SSH Conduit */}
@@ -357,9 +398,9 @@ export const OpsPremiumBridgeScene: React.FC = () => {
                 style={{
                   padding: '5px 10px',
                   borderRadius: 999,
-                  backgroundColor: T.canopyDeep,
-                  color: T.lime,
-                  fontFamily: EREKAP_FONT.mono,
+                  backgroundColor: P.dark.surface,
+                  color: P.goldBright,
+                  fontFamily: PORTFOLIO_FONT.mono,
                   fontSize: 13,
                   fontWeight: 800,
                 }}
@@ -372,8 +413,8 @@ export const OpsPremiumBridgeScene: React.FC = () => {
                   width: '100%',
                   height: 6,
                   borderRadius: 999,
-                  backgroundColor: T.surfaceMint,
-                  border: `1px solid ${T.borderStrong}`,
+                  backgroundColor: P.light.surface,
+                  border: `1px solid ${P.light.lineStrong}`,
                   overflow: 'hidden',
                 }}
               >
@@ -385,33 +426,34 @@ export const OpsPremiumBridgeScene: React.FC = () => {
                     width: 28,
                     height: 8,
                     borderRadius: 999,
-                    backgroundColor: T.canopyMid,
-                    boxShadow: `0 0 12px ${T.lime}`,
+                    backgroundColor: P.light.accent,
                   }}
                 />
               </div>
-              <BridgeSvg color={T.canopyMid} size={22} />
+              <Img src={staticFile('assets/portfolio/relay.svg')} style={{width: 24, height: 24, objectFit: 'contain'}} />
             </div>
 
             {/* VPS 2 */}
             <div
               style={{
                 padding: 20,
-                borderRadius: 20,
-                backgroundColor: T.canopyDeep,
-                border: '1.5px solid rgba(163,230,53,0.55)',
-                color: '#FFFFFF',
-                boxShadow: '0 16px 32px -12px rgba(7,41,25,0.45)',
+                borderRadius: 18,
+                backgroundColor: P.dark.surface,
+                border: `1.5px solid ${P.dark.accentBorder}`,
+                color: P.dark.ink,
+                boxShadow: P.dark.shadow,
               }}
             >
               <div style={{display: 'flex', alignItems: 'center', gap: 10, marginBottom: 10}}>
-                <CpuSvg color={T.lime} size={24} />
-                <span style={{fontFamily: EREKAP_FONT.mono, fontSize: 15, fontWeight: 800, color: T.lime}}>
+                <Img src={staticFile('assets/portfolio/tools/antigravity.svg')} style={{width: 26, height: 26, objectFit: 'contain'}} />
+                <span style={{fontFamily: PORTFOLIO_FONT.mono, fontSize: 15, fontWeight: 800, color: P.goldBright}}>
                   VPS-2
                 </span>
               </div>
-              <div style={{fontSize: 22, fontWeight: 800}}>Worker</div>
-              <div style={{fontSize: 16, color: 'rgba(220,252,231,0.78)', marginTop: 4}}>Agent Runtime</div>
+              <div style={{fontFamily: PORTFOLIO_FONT.display, fontSize: 22, fontWeight: 700}}>
+                Worker
+              </div>
+              <div style={{fontSize: 16, color: P.dark.muted, marginTop: 4}}>Agent Runtime</div>
             </div>
           </div>
 
@@ -420,21 +462,21 @@ export const OpsPremiumBridgeScene: React.FC = () => {
             style={{
               marginTop: 18,
               padding: '14px 18px',
-              borderRadius: 16,
-              backgroundColor: T.canopyDeep,
-              fontFamily: EREKAP_FONT.mono,
+              borderRadius: 14,
+              backgroundColor: P.dark.bg,
+              border: `1px solid ${P.dark.lineStrong}`,
+              fontFamily: PORTFOLIO_FONT.mono,
               fontSize: 15,
-              color: '#DCFCE7',
+              color: P.dark.ink,
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'space-between',
             }}
           >
             <span>
-              <span style={{color: T.lime}}>$</span> ssh -J vps1 vps2 &quot;ag-run --sync&quot;
+              <span style={{color: P.goldBright}}>$</span> ssh -J vps1 vps2 &quot;ag-run --sync&quot;
             </span>
-            <span style={{display: 'inline-flex', alignItems: 'center', gap: 6, color: T.lime, fontWeight: 800}}>
-              <ShieldCheckSvg color={T.lime} size={18} />
+            <span style={{color: P.goldBright, fontWeight: 800}}>
               REAL-TIME
             </span>
           </div>
