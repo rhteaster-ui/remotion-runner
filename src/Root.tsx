@@ -5,6 +5,7 @@ import {KryptonVideo} from './KryptonVideo';
 import {MascotShowcase} from './MascotShowcase';
 import {StorytellingVideo} from './StorytellingVideo';
 import {OpsFlowVideo} from './OpsFlowVideo';
+import {OpsFlowPremiumVideo} from './OpsFlowPremiumVideo';
 import {ERekapVideo} from './ERekapVideo';
 import {ERekapPremiumVideo} from './ERekapPremiumVideo';
 import timeline from './data/timeline.json';
@@ -30,6 +31,14 @@ export const Root: React.FC = () => (
       height={1920}
       fps={erekapTimeline.fps}
       durationInFrames={Math.ceil(erekapTimeline.total * erekapTimeline.fps)}
+    />
+    <Composition
+      id="OpsFlowPremium"
+      component={OpsFlowPremiumVideo}
+      width={1080}
+      height={1920}
+      fps={opsTimeline.fps}
+      durationInFrames={Math.ceil(opsTimeline.total * opsTimeline.fps)}
     />
     <Composition
       id="OpsFlowTikTok"

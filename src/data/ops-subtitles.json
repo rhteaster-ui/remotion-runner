@@ -11,52 +11,52 @@
    "words": [
     {
      "text": "Kebanyakan",
-     "start": 0.842,
-     "end": 1.475
+     "start": 0.81,
+     "end": 1.382
     },
     {
      "text": "orang",
-     "start": 1.475,
-     "end": 1.792
+     "start": 1.382,
+     "end": 1.668
     },
     {
      "text": "pakai",
-     "start": 1.792,
-     "end": 2.108
+     "start": 1.668,
+     "end": 1.954
     },
     {
      "text": "AI",
-     "start": 2.108,
-     "end": 2.235
+     "start": 1.954,
+     "end": 2.068
     },
     {
      "text": "cuma",
-     "start": 2.235,
-     "end": 2.489
+     "start": 2.068,
+     "end": 2.297
     },
     {
      "text": "buat",
-     "start": 2.489,
-     "end": 2.742
+     "start": 2.297,
+     "end": 2.526
     },
     {
      "text": "chat",
-     "start": 2.742,
-     "end": 2.995
+     "start": 2.526,
+     "end": 2.755
     },
     {
      "text": "satu",
-     "start": 2.995,
-     "end": 3.249
+     "start": 2.755,
+     "end": 2.983
     },
     {
      "text": "arah.",
-     "start": 3.249,
-     "end": 3.692
+     "start": 2.983,
+     "end": 3.384
     }
    ],
-   "start": 0.842,
-   "end": 3.692
+   "start": 0.81,
+   "end": 3.384
   },
   {
    "id": 2,
@@ -64,52 +64,47 @@
    "bg": "dark",
    "lines": [
     "Beda sama sistem agentic",
-    "yang dibangun Tuan Rahmat."
+    "yang dibangun Rahmat."
    ],
    "words": [
     {
      "text": "Beda",
-     "start": 3.692,
-     "end": 4.37
+     "start": 3.384,
+     "end": 3.613
     },
     {
      "text": "sama",
-     "start": 4.37,
-     "end": 4.624
+     "start": 3.613,
+     "end": 4.213
     },
     {
      "text": "sistem",
-     "start": 4.624,
-     "end": 5.004
+     "start": 4.213,
+     "end": 4.556
     },
     {
      "text": "agentic",
-     "start": 5.004,
-     "end": 5.447
+     "start": 4.556,
+     "end": 4.956
     },
     {
      "text": "yang",
-     "start": 5.447,
-     "end": 5.7
+     "start": 4.956,
+     "end": 5.185
     },
     {
      "text": "dibangun",
-     "start": 5.7,
-     "end": 6.207
-    },
-    {
-     "text": "Tuan",
-     "start": 6.207,
-     "end": 6.461
+     "start": 5.185,
+     "end": 5.643
     },
     {
      "text": "Rahmat.",
-     "start": 6.461,
-     "end": 7.553
+     "start": 5.643,
+     "end": 6.158
     }
    ],
-   "start": 3.692,
-   "end": 7.553
+   "start": 3.384,
+   "end": 6.158
   },
   {
    "id": 3,
@@ -122,42 +117,42 @@
    "words": [
     {
      "text": "Cukup",
-     "start": 7.553,
-     "end": 7.869
+     "start": 6.158,
+     "end": 6.996
     },
     {
      "text": "kirim",
-     "start": 7.869,
-     "end": 8.186
+     "start": 6.996,
+     "end": 7.282
     },
     {
      "text": "satu",
-     "start": 8.186,
-     "end": 8.439
+     "start": 7.282,
+     "end": 7.511
     },
     {
      "text": "perintah,",
-     "start": 8.439,
-     "end": 9.359
+     "start": 7.511,
+     "end": 8.14
     },
     {
      "text": "seluruh",
-     "start": 9.359,
-     "end": 9.803
+     "start": 8.14,
+     "end": 8.541
     },
     {
      "text": "server",
-     "start": 9.803,
-     "end": 10.183
+     "start": 8.541,
+     "end": 8.884
     },
     {
      "text": "langsung",
-     "start": 10.183,
-     "end": 10.69
+     "start": 8.884,
+     "end": 9.341
     }
    ],
-   "start": 7.553,
-   "end": 10.69
+   "start": 6.158,
+   "end": 9.341
   },
   {
    "id": 4,
@@ -169,17 +164,17 @@
    "words": [
     {
      "text": "bekerja",
-     "start": 10.69,
-     "end": 11.133
+     "start": 9.341,
+     "end": 9.742
     },
     {
      "text": "otomatis.",
-     "start": 11.133,
-     "end": 11.83
+     "start": 9.742,
+     "end": 10.582
     }
    ],
-   "start": 10.69,
-   "end": 11.83
+   "start": 9.341,
+   "end": 10.582
   },
   {
    "id": 5,
@@ -192,47 +187,47 @@
    "words": [
     {
      "text": "Alurnya",
-     "start": 13.107,
-     "end": 13.588
+     "start": 11.859,
+     "end": 12.34
     },
     {
      "text": "dimulai",
-     "start": 13.588,
-     "end": 14.068
+     "start": 12.34,
+     "end": 12.82
     },
     {
      "text": "dari",
-     "start": 14.068,
-     "end": 14.343
+     "start": 12.82,
+     "end": 13.095
     },
     {
      "text": "bot",
-     "start": 14.343,
-     "end": 14.549
+     "start": 13.095,
+     "end": 13.301
     },
     {
      "text": "Telegram",
-     "start": 14.549,
-     "end": 15.098
+     "start": 13.301,
+     "end": 13.85
     },
     {
      "text": "atau",
-     "start": 15.098,
-     "end": 15.373
+     "start": 13.85,
+     "end": 14.125
     },
     {
      "text": "WhatsApp",
-     "start": 15.373,
-     "end": 15.922
+     "start": 14.125,
+     "end": 14.674
     },
     {
      "text": "di",
-     "start": 15.922,
-     "end": 16.059
+     "start": 14.674,
+     "end": 14.811
     }
    ],
-   "start": 13.107,
-   "end": 16.059
+   "start": 11.859,
+   "end": 14.811
   },
   {
    "id": 6,
@@ -245,42 +240,42 @@
    "words": [
     {
      "text": "HP.",
-     "start": 16.059,
-     "end": 16.402
+     "start": 14.811,
+     "end": 15.154
     },
     {
      "text": "Prompt",
-     "start": 16.402,
-     "end": 17.276
+     "start": 15.154,
+     "end": 16.028
     },
     {
      "text": "langsung",
-     "start": 17.276,
-     "end": 17.825
+     "start": 16.028,
+     "end": 16.577
     },
     {
      "text": "masuk",
-     "start": 17.825,
-     "end": 18.168
+     "start": 16.577,
+     "end": 16.92
     },
     {
      "text": "ke",
-     "start": 18.168,
-     "end": 18.305
+     "start": 16.92,
+     "end": 17.057
     },
     {
      "text": "terminal,",
-     "start": 18.305,
-     "end": 19.376
+     "start": 17.057,
+     "end": 18.128
     },
     {
      "text": "bercabang",
-     "start": 19.376,
-     "end": 19.994
+     "start": 18.128,
+     "end": 18.746
     }
    ],
-   "start": 16.059,
-   "end": 19.994
+   "start": 14.811,
+   "end": 18.746
   },
   {
    "id": 7,
@@ -293,52 +288,52 @@
    "words": [
     {
      "text": "lewat",
-     "start": 19.994,
-     "end": 20.337
+     "start": 18.746,
+     "end": 19.089
     },
     {
      "text": "jembatan",
-     "start": 20.337,
-     "end": 20.886
+     "start": 19.089,
+     "end": 19.638
     },
     {
      "text": "SSH",
-     "start": 20.886,
-     "end": 21.092
+     "start": 19.638,
+     "end": 19.844
     },
     {
      "text": "antara",
-     "start": 21.092,
-     "end": 21.504
+     "start": 19.844,
+     "end": 20.256
     },
     {
      "text": "VPS",
-     "start": 21.504,
-     "end": 21.71
+     "start": 20.256,
+     "end": 20.462
     },
     {
      "text": "satu",
-     "start": 21.71,
-     "end": 21.985
+     "start": 20.462,
+     "end": 20.737
     },
     {
      "text": "gateway",
-     "start": 21.985,
-     "end": 22.465
+     "start": 20.737,
+     "end": 21.217
     },
     {
      "text": "dan",
-     "start": 22.465,
-     "end": 22.671
+     "start": 21.217,
+     "end": 21.423
     },
     {
      "text": "VPS",
-     "start": 22.671,
-     "end": 22.877
+     "start": 21.423,
+     "end": 21.629
     }
    ],
-   "start": 19.994,
-   "end": 22.877
+   "start": 18.746,
+   "end": 21.629
   },
   {
    "id": 8,
@@ -351,27 +346,27 @@
    "words": [
     {
      "text": "dua",
-     "start": 22.877,
-     "end": 23.083
+     "start": 21.629,
+     "end": 21.835
     },
     {
      "text": "worker",
-     "start": 23.083,
-     "end": 23.495
+     "start": 21.835,
+     "end": 22.247
     },
     {
      "text": "secara",
-     "start": 23.495,
-     "end": 23.907
+     "start": 22.247,
+     "end": 22.659
     },
     {
      "text": "real-time.",
-     "start": 23.907,
-     "end": 24.662
+     "start": 22.659,
+     "end": 23.414
     }
    ],
-   "start": 22.877,
-   "end": 24.662
+   "start": 21.629,
+   "end": 23.414
   },
   {
    "id": 9,
@@ -384,42 +379,42 @@
    "words": [
     {
      "text": "Di",
-     "start": 25.975,
-     "end": 26.101
+     "start": 24.727,
+     "end": 24.853
     },
     {
      "text": "dalam",
-     "start": 26.101,
-     "end": 26.416
+     "start": 24.853,
+     "end": 25.168
     },
     {
      "text": "worker,",
-     "start": 26.416,
-     "end": 27.349
+     "start": 25.168,
+     "end": 26.101
     },
     {
      "text": "agen",
-     "start": 27.349,
-     "end": 27.601
+     "start": 26.101,
+     "end": 26.353
     },
     {
      "text": "AI",
-     "start": 27.601,
-     "end": 27.727
+     "start": 26.353,
+     "end": 26.479
     },
     {
      "text": "langsung",
-     "start": 27.727,
-     "end": 28.231
+     "start": 26.479,
+     "end": 26.983
     },
     {
      "text": "mengeksekusi",
-     "start": 28.231,
-     "end": 28.988
+     "start": 26.983,
+     "end": 27.74
     }
    ],
-   "start": 25.975,
-   "end": 28.988
+   "start": 24.727,
+   "end": 27.74
   },
   {
    "id": 10,
@@ -432,37 +427,37 @@
    "words": [
     {
      "text": "tugas",
-     "start": 28.988,
-     "end": 29.303
+     "start": 27.74,
+     "end": 28.055
     },
     {
      "text": "nyata:",
-     "start": 29.303,
-     "end": 30.251
+     "start": 28.055,
+     "end": 29.003
     },
     {
      "text": "mengedit",
-     "start": 30.251,
-     "end": 30.755
+     "start": 29.003,
+     "end": 29.507
     },
     {
      "text": "kode,",
-     "start": 30.755,
-     "end": 31.53
+     "start": 29.507,
+     "end": 30.282
     },
     {
      "text": "riset",
-     "start": 31.53,
-     "end": 31.845
+     "start": 30.282,
+     "end": 30.597
     },
     {
      "text": "web,",
-     "start": 31.845,
-     "end": 32.638
+     "start": 30.597,
+     "end": 31.39
     }
    ],
-   "start": 28.988,
-   "end": 32.638
+   "start": 27.74,
+   "end": 31.39
   },
   {
    "id": 11,
@@ -475,37 +470,37 @@
    "words": [
     {
      "text": "menjalankan",
-     "start": 32.638,
-     "end": 33.332
+     "start": 31.39,
+     "end": 32.084
     },
     {
      "text": "perintah",
-     "start": 33.332,
-     "end": 34.191
+     "start": 32.084,
+     "end": 32.943
     },
     {
      "text": "bash,",
-     "start": 34.191,
-     "end": 34.632
+     "start": 32.943,
+     "end": 33.384
     },
     {
      "text": "sampai",
-     "start": 34.632,
-     "end": 35.011
+     "start": 33.384,
+     "end": 33.763
     },
     {
      "text": "memanggil",
-     "start": 35.011,
-     "end": 35.578
+     "start": 33.763,
+     "end": 34.33
     },
     {
      "text": "sub-agen",
-     "start": 35.578,
-     "end": 36.019
+     "start": 34.33,
+     "end": 34.771
     }
    ],
-   "start": 32.638,
-   "end": 36.019
+   "start": 31.39,
+   "end": 34.771
   },
   {
    "id": 12,
@@ -518,47 +513,47 @@
    "words": [
     {
      "text": "paralel",
-     "start": 36.019,
-     "end": 36.461
+     "start": 34.771,
+     "end": 35.213
     },
     {
      "text": "dengan",
-     "start": 36.461,
-     "end": 36.839
+     "start": 35.213,
+     "end": 35.591
     },
     {
      "text": "rotasi",
-     "start": 36.839,
-     "end": 37.217
+     "start": 35.591,
+     "end": 35.969
     },
     {
      "text": "akun",
-     "start": 37.217,
-     "end": 37.469
+     "start": 35.969,
+     "end": 36.221
     },
     {
      "text": "AI",
-     "start": 37.469,
-     "end": 37.595
+     "start": 36.221,
+     "end": 36.347
     },
     {
      "text": "Pro",
-     "start": 37.595,
-     "end": 38.016
+     "start": 36.347,
+     "end": 36.768
     },
     {
      "text": "dan",
-     "start": 38.016,
-     "end": 38.205
+     "start": 36.768,
+     "end": 36.957
     },
     {
      "text": "Free.",
-     "start": 38.205,
-     "end": 38.646
+     "start": 36.957,
+     "end": 37.398
     }
    ],
-   "start": 36.019,
-   "end": 38.646
+   "start": 34.771,
+   "end": 37.398
   },
   {
    "id": 13,
@@ -571,42 +566,42 @@
    "words": [
     {
      "text": "Semua",
-     "start": 39.873,
-     "end": 40.194
+     "start": 38.625,
+     "end": 38.946
     },
     {
      "text": "aktivitas",
-     "start": 40.194,
-     "end": 40.771
+     "start": 38.946,
+     "end": 39.523
     },
     {
      "text": "tadi",
-     "start": 40.771,
-     "end": 41.027
+     "start": 39.523,
+     "end": 39.779
     },
     {
      "text": "terpantau",
-     "start": 41.027,
-     "end": 41.604
+     "start": 39.779,
+     "end": 40.356
     },
     {
      "text": "langsung",
-     "start": 41.604,
-     "end": 42.116
+     "start": 40.356,
+     "end": 40.868
     },
     {
      "text": "di",
-     "start": 42.116,
-     "end": 42.245
+     "start": 40.868,
+     "end": 40.997
     },
     {
      "text": "web",
-     "start": 42.245,
-     "end": 42.437
+     "start": 40.997,
+     "end": 41.189
     }
    ],
-   "start": 39.873,
-   "end": 42.437
+   "start": 38.625,
+   "end": 41.189
   },
   {
    "id": 14,
@@ -619,47 +614,47 @@
    "words": [
     {
      "text": "Ops",
-     "start": 42.437,
-     "end": 42.629
+     "start": 41.189,
+     "end": 41.381
     },
     {
      "text": "Deck",
-     "start": 42.629,
-     "end": 42.885
+     "start": 41.381,
+     "end": 41.637
     },
     {
      "text": "dan",
-     "start": 42.885,
-     "end": 43.078
+     "start": 41.637,
+     "end": 41.83
     },
     {
      "text": "Task",
-     "start": 43.078,
-     "end": 43.334
+     "start": 41.83,
+     "end": 42.086
     },
     {
      "text": "Map",
-     "start": 43.334,
-     "end": 43.526
+     "start": 42.086,
+     "end": 42.278
     },
     {
      "text": "bergaya",
-     "start": 43.526,
-     "end": 43.975
+     "start": 42.278,
+     "end": 42.727
     },
     {
      "text": "workflow.",
-     "start": 43.975,
-     "end": 44.68
+     "start": 42.727,
+     "end": 43.432
     },
     {
      "text": "Mulai",
-     "start": 44.68,
-     "end": 45.409
+     "start": 43.432,
+     "end": 44.161
     }
    ],
-   "start": 42.437,
-   "end": 45.409
+   "start": 41.189,
+   "end": 44.161
   },
   {
    "id": 15,
@@ -672,47 +667,47 @@
    "words": [
     {
      "text": "dari",
-     "start": 45.409,
-     "end": 45.665
+     "start": 44.161,
+     "end": 44.417
     },
     {
      "text": "alur",
-     "start": 45.665,
-     "end": 45.922
+     "start": 44.417,
+     "end": 44.674
     },
     {
      "text": "panah",
-     "start": 45.922,
-     "end": 46.242
+     "start": 44.674,
+     "end": 44.994
     },
     {
      "text": "agen",
-     "start": 46.242,
-     "end": 46.499
+     "start": 44.994,
+     "end": 45.251
     },
     {
      "text": "yang",
-     "start": 46.499,
-     "end": 46.755
+     "start": 45.251,
+     "end": 45.507
     },
     {
      "text": "menyala,",
-     "start": 46.755,
-     "end": 47.729
+     "start": 45.507,
+     "end": 46.481
     },
     {
      "text": "grafik",
-     "start": 47.729,
-     "end": 48.113
+     "start": 46.481,
+     "end": 46.865
     },
     {
      "text": "CPU,",
-     "start": 48.113,
-     "end": 48.498
+     "start": 46.865,
+     "end": 47.25
     }
    ],
-   "start": 45.409,
-   "end": 48.498
+   "start": 44.161,
+   "end": 47.25
   },
   {
    "id": 16,
@@ -725,32 +720,32 @@
    "words": [
     {
      "text": "sampai",
-     "start": 48.498,
-     "end": 48.883
+     "start": 47.25,
+     "end": 47.635
     },
     {
      "text": "status",
-     "start": 48.883,
-     "end": 49.267
+     "start": 47.635,
+     "end": 48.019
     },
     {
      "text": "kuota",
-     "start": 49.267,
-     "end": 49.587
+     "start": 48.019,
+     "end": 48.339
     },
     {
      "text": "tiap",
-     "start": 49.587,
-     "end": 49.844
+     "start": 48.339,
+     "end": 48.596
     },
     {
      "text": "akun.",
-     "start": 49.844,
-     "end": 50.566
+     "start": 48.596,
+     "end": 49.318
     }
    ],
-   "start": 48.498,
-   "end": 50.566
+   "start": 47.25,
+   "end": 49.318
   },
   {
    "id": 17,
@@ -758,47 +753,42 @@
    "bg": "dark",
    "lines": [
     "Semua ekosistem ini",
-    "diracik mandiri oleh Tuan"
+    "diracik mandiri oleh"
    ],
    "words": [
     {
      "text": "Semua",
-     "start": 51.566,
-     "end": 51.964
+     "start": 50.682,
+     "end": 51.065
     },
     {
      "text": "ekosistem",
-     "start": 51.964,
-     "end": 52.68
+     "start": 51.065,
+     "end": 51.755
     },
     {
      "text": "ini",
-     "start": 52.68,
-     "end": 52.918
+     "start": 51.755,
+     "end": 51.985
     },
     {
      "text": "diracik",
-     "start": 52.918,
-     "end": 53.475
+     "start": 51.985,
+     "end": 52.521
     },
     {
      "text": "mandiri",
-     "start": 53.475,
-     "end": 54.032
+     "start": 52.521,
+     "end": 53.058
     },
     {
      "text": "oleh",
-     "start": 54.032,
-     "end": 54.35
-    },
-    {
-     "text": "Tuan",
-     "start": 54.35,
-     "end": 54.668
+     "start": 53.058,
+     "end": 53.364
     }
    ],
-   "start": 51.566,
-   "end": 54.668
+   "start": 50.682,
+   "end": 53.364
   },
   {
    "id": 18,
@@ -811,42 +801,42 @@
    "words": [
     {
      "text": "Rahmat,",
-     "start": 54.668,
-     "end": 55.694
+     "start": 53.364,
+     "end": 54.054
     },
     {
      "text": "atau",
-     "start": 55.694,
-     "end": 56.012
+     "start": 54.054,
+     "end": 54.663
     },
     {
      "text": "RHMT",
-     "start": 56.012,
-     "end": 56.33
+     "start": 54.663,
+     "end": 54.97
     },
     {
      "text": "OFC,",
-     "start": 56.33,
-     "end": 56.808
+     "start": 54.97,
+     "end": 55.43
     },
     {
      "text": "pelajar",
-     "start": 56.808,
-     "end": 57.364
+     "start": 55.43,
+     "end": 55.966
     },
     {
      "text": "yang",
-     "start": 57.364,
-     "end": 58.107
+     "start": 55.966,
+     "end": 56.799
     },
     {
      "text": "ngulik",
-     "start": 58.107,
-     "end": 58.585
+     "start": 56.799,
+     "end": 57.258
     }
    ],
-   "start": 54.668,
-   "end": 58.585
+   "start": 53.364,
+   "end": 57.258
   },
   {
    "id": 19,
@@ -859,42 +849,42 @@
    "words": [
     {
      "text": "fullstack,",
-     "start": 58.585,
-     "end": 59.847
+     "start": 57.258,
+     "end": 58.178
     },
     {
      "text": "DevOps",
-     "start": 59.847,
-     "end": 60.325
+     "start": 58.178,
+     "end": 58.94
     },
     {
      "text": "Linux,",
-     "start": 60.325,
-     "end": 61.179
+     "start": 58.94,
+     "end": 59.553
     },
     {
      "text": "dan",
-     "start": 61.179,
-     "end": 61.418
+     "start": 59.553,
+     "end": 59.783
     },
     {
      "text": "otomasi",
-     "start": 61.418,
-     "end": 61.975
+     "start": 59.783,
+     "end": 60.319
     },
     {
      "text": "AI.",
-     "start": 61.975,
-     "end": 62.904
+     "start": 60.319,
+     "end": 60.702
     },
     {
      "text": "Cek",
-     "start": 62.904,
-     "end": 63.143
+     "start": 60.702,
+     "end": 61.656
     }
    ],
-   "start": 58.585,
-   "end": 63.143
+   "start": 57.258,
+   "end": 61.656
   },
   {
    "id": 20,
@@ -907,47 +897,47 @@
    "words": [
     {
      "text": "portofolio",
-     "start": 63.143,
-     "end": 63.938
+     "start": 61.656,
+     "end": 62.422
     },
     {
      "text": "rhmt.biz.id",
-     "start": 63.938,
-     "end": 64.654
+     "start": 62.422,
+     "end": 63.111
     },
     {
      "text": "dan",
-     "start": 64.654,
-     "end": 64.893
+     "start": 63.111,
+     "end": 63.341
     },
     {
      "text": "follow",
-     "start": 64.893,
-     "end": 65.37
+     "start": 63.341,
+     "end": 63.801
     },
     {
      "text": "akun",
-     "start": 65.37,
-     "end": 65.966
+     "start": 63.801,
+     "end": 64.51
     },
     {
      "text": "ini",
-     "start": 65.966,
-     "end": 66.205
+     "start": 64.51,
+     "end": 64.74
     },
     {
      "text": "buat",
-     "start": 66.205,
-     "end": 66.523
+     "start": 64.74,
+     "end": 65.046
     },
     {
      "text": "bedah",
-     "start": 66.523,
-     "end": 66.92
+     "start": 65.046,
+     "end": 65.43
     }
    ],
-   "start": 63.143,
-   "end": 66.92
+   "start": 61.656,
+   "end": 65.43
   },
   {
    "id": 21,
@@ -959,17 +949,17 @@
    "words": [
     {
      "text": "arsitektur",
-     "start": 66.92,
-     "end": 67.716
+     "start": 65.43,
+     "end": 66.196
     },
     {
      "text": "berikutnya.",
-     "start": 67.716,
-     "end": 68.75
+     "start": 66.196,
+     "end": 67.43
     }
    ],
-   "start": 66.92,
-   "end": 68.75
+   "start": 65.43,
+   "end": 67.43
   }
  ]
 }
