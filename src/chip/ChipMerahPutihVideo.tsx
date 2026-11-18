@@ -73,8 +73,8 @@ export const ChipMerahPutihVideo: React.FC = () => {
 
   return (
     <AbsoluteFill style={{backgroundColor: chipTokens.cream, overflow: 'hidden'}}>
-      {/* 1. Single-Take Normalized Voiceover (100% consistent speaker) */}
-      <Audio src={staticFile('audio/vo/chip-vo-norm.wav')} volume={1.0} />
+      {/* 1. Single-Take Normalized Voiceover (100% consistent speaker — Boosted Gain) */}
+      <Audio src={staticFile('audio/vo/chip-vo-norm.wav')} volume={1.2} />
 
       {/* 2. Custom Upbeat Tech Music Bed with Word-Level Ducking */}
       <Audio src={staticFile('audio/chip-music-bed.mp3')} volume={musicVol} loop />

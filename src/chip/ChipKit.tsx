@@ -1,5 +1,5 @@
 import React from 'react';
-import {interpolate, spring, useCurrentFrame, useVideoConfig} from 'remotion';
+import {Img, interpolate, spring, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
 import {chipTokens} from './tokens';
 import {FONT} from '../theme-tokens';
 
@@ -94,6 +94,150 @@ export const ZineCard: React.FC<{
       }}
     >
       {children}
+    </div>
+  );
+};
+
+/**
+ * Authentic News Article / Poster Card with Real Photograph from Media Outlets.
+ */
+export const RealNewsPosterCard: React.FC<{
+  imageSrc: string;
+  portalName: string;
+  headline: string;
+  captionText: string;
+  badgeText?: string;
+  enter?: number;
+  rotate?: number;
+}> = ({
+  imageSrc,
+  portalName,
+  headline,
+  captionText,
+  badgeText = 'KSTI 2026 SURABAYA',
+  enter = 1,
+  rotate = -0.5,
+}) => {
+  const scale = interpolate(enter, [0, 1], [0.88, 1]);
+  const ty = interpolate(enter, [0, 1], [36, 0]);
+
+  return (
+    <div
+      style={{
+        backgroundColor: chipTokens.white,
+        border: `4px solid ${chipTokens.ink}`,
+        borderRadius: 24,
+        boxShadow: `10px 10px 0px ${chipTokens.ink}`,
+        padding: '20px 22px',
+        transform: `translateY(${ty}px) scale(${scale}) rotate(${rotate}deg)`,
+        opacity: Math.min(1, enter * 1.4),
+        display: 'flex',
+        flexDirection: 'column',
+        gap: 14,
+        width: '100%',
+      }}
+    >
+      {/* News Portal Header */}
+      <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between'}}>
+        <div style={{display: 'flex', alignItems: 'center', gap: 10}}>
+          <span
+            style={{
+              width: 14,
+              height: 14,
+              borderRadius: '50%',
+              backgroundColor: chipTokens.crimson,
+              display: 'inline-block',
+            }}
+          />
+          <span
+            style={{
+              fontFamily: FONT.space,
+              fontSize: 22,
+              fontWeight: 900,
+              color: chipTokens.crimson,
+              letterSpacing: '0.04em',
+            }}
+          >
+            {portalName}
+          </span>
+        </div>
+        <span
+          style={{
+            fontFamily: FONT.mono,
+            fontSize: 16,
+            fontWeight: 800,
+            backgroundColor: chipTokens.gold,
+            color: chipTokens.ink,
+            padding: '3px 12px',
+            borderRadius: 8,
+            border: `2px solid ${chipTokens.ink}`,
+          }}
+        >
+          {badgeText}
+        </span>
+      </div>
+
+      {/* Real News Photo with Border & Caption Tag */}
+      <div style={{position: 'relative', width: '100%', overflow: 'hidden', borderRadius: 16, border: `3.5px solid ${chipTokens.ink}`}}>
+        <Img
+          src={imageSrc}
+          style={{
+            width: '100%',
+            height: 380,
+            objectFit: 'cover',
+            display: 'block',
+          }}
+        />
+        <div
+          style={{
+            position: 'absolute',
+            bottom: 0,
+            left: 0,
+            right: 0,
+            padding: '8px 16px',
+            backgroundColor: 'rgba(17, 16, 29, 0.88)',
+            borderTop: '2px solid rgba(255,255,255,0.2)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+          }}
+        >
+          <span
+            style={{
+              fontFamily: FONT.mono,
+              fontSize: 15,
+              fontWeight: 700,
+              color: '#F8FAFC',
+            }}
+          >
+            {captionText}
+          </span>
+          <span
+            style={{
+              fontFamily: FONT.mono,
+              fontSize: 14,
+              fontWeight: 800,
+              color: chipTokens.gold,
+            }}
+          >
+            DOKUMEN ASLI
+          </span>
+        </div>
+      </div>
+
+      {/* Headline Text */}
+      <div
+        style={{
+          fontFamily: FONT.space,
+          fontSize: 34,
+          fontWeight: 900,
+          color: chipTokens.ink,
+          lineHeight: 1.15,
+          letterSpacing: '-0.02em',
+        }}
+      >
+        {headline}
+      </div>
     </div>
   );
 };
@@ -234,13 +378,12 @@ export const StampBadge: React.FC<{
 
 /**
  * Animated Central Silicon Wafer Blueprint Hero Component.
- * Features rotating scanning beam, wafer die grid, and central Merah Putih chip core.
  */
 export const SiliconWaferHero: React.FC<{
   pulseFrame: number;
   size?: number;
   activeLabel?: string;
-}> = ({pulseFrame, size = 420, activeLabel = 'PROTOTIPE RI-01'}) => {
+}> = ({pulseFrame, size = 380, activeLabel = 'PROTOTIPE RI-01'}) => {
   const scanAngle = (pulseFrame * 2.8) % 360;
   const glow = 0.5 + 0.5 * Math.sin(pulseFrame * 0.18);
 
@@ -305,7 +448,7 @@ export const SiliconWaferHero: React.FC<{
           <line x1="0" y1="0" x2="175" y2="0" stroke={chipTokens.gold} strokeWidth="3" />
         </g>
 
-        {/* Microchip Contact Pins (Surrounding Center Die) */}
+        {/* Microchip Contact Pins */}
         {[-48, -24, 0, 24, 48].map((d) => (
           <React.Fragment key={`pin-${d}`}>
             <rect x={200 + d - 4} y="112" width="8" height="18" rx="2" fill={chipTokens.gold} stroke={chipTokens.ink} strokeWidth="2" />
@@ -318,7 +461,7 @@ export const SiliconWaferHero: React.FC<{
         {/* Center Silicon Die Package */}
         <rect x="135" y="135" width="130" height="130" rx="16" fill="#0F172A" stroke={chipTokens.ink} strokeWidth="6" />
 
-        {/* Indonesian Flag Split Silicon Core (Merah - Putih) */}
+        {/* Indonesian Flag Split Silicon Core */}
         <rect x="145" y="145" width="110" height="55" rx="8" fill={chipTokens.crimson} />
         <rect x="145" y="200" width="110" height="55" rx="8" fill={chipTokens.white} />
         <rect x="145" y="145" width="110" height="110" rx="8" fill="none" stroke={chipTokens.ink} strokeWidth="3" />
@@ -328,19 +471,12 @@ export const SiliconWaferHero: React.FC<{
         <path d="M192 198 v-6 a8 8 0 0 1 16 0 v6" fill="none" stroke={chipTokens.ink} strokeWidth="3" strokeLinecap="round" />
         <rect x="189" y="198" width="22" height="16" rx="4" fill={chipTokens.ink} />
         <circle cx="200" cy="206" r="2.5" fill={chipTokens.gold} />
-
-        {/* Die Corner Gold Pads */}
-        <circle cx="152" cy="152" r="4" fill={chipTokens.gold} />
-        <circle cx="248" cy="152" r="4" fill={chipTokens.gold} />
-        <circle cx="152" cy="248" r="4" fill={chipTokens.gold} />
-        <circle cx="248" cy="248" r="4" fill={chipTokens.gold} />
       </svg>
 
-      {/* Floating Center Badge */}
       <div
         style={{
           position: 'absolute',
-          bottom: -16,
+          bottom: -14,
           padding: '6px 20px',
           backgroundColor: chipTokens.ink,
           border: `3px solid ${chipTokens.gold}`,
