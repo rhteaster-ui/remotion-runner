@@ -1,0 +1,17 @@
+export const chipTokens = {
+  ink: '#11101D',
+  cream: '#FAF6EE',
+  paper: '#F4EDE0',
+  crimson: '#E11D48',
+  crimsonDark: '#9F1239',
+  obsidian: '#0A0D16',
+  cobalt: '#0E1A38',
+  cobaltLight: '#3B82F6',
+  gold: '#FBBF24',
+  goldDeep: '#D97706',
+  emerald: '#10B981',
+  emeraldDark: '#064E3B',
+  amberBg: '#FFF3D6',
+  slateMuted: '#64748B',
+  white: '#FFFFFF',
+};
