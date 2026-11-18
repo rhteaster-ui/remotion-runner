@@ -1,0 +1,77 @@
+{
+  "fps": 30,
+  "scenes": [
+    {
+      "id": "js1-hook",
+      "title": "Bahasa Paling Janggal Sedunia",
+      "theme": "dark",
+      "audioFile": "audio/vo-js/js1-hook.mp3",
+      "audioDuration": 11.664,
+      "voOffset": 0.08,
+      "duration": 11.994,
+      "start": 0.0,
+      "end": 11.994,
+      "durationFrames": 360,
+      "startFrame": 0,
+      "endFrame": 360
+    },
+    {
+      "id": "js2-angka-teks",
+      "title": "Satu Tambah Satu Sebelas",
+      "theme": "light",
+      "audioFile": "audio/vo-js/js2-angka-teks.mp3",
+      "audioDuration": 20.136,
+      "voOffset": 0.15,
+      "duration": 20.536,
+      "start": 11.994,
+      "end": 32.53,
+      "durationFrames": 616,
+      "startFrame": 360,
+      "endFrame": 976
+    },
+    {
+      "id": "js3-nan",
+      "title": "Logika NaN: Bukan Angka Tapi Angka",
+      "theme": "dark",
+      "audioFile": "audio/vo-js/js3-nan.mp3",
+      "audioDuration": 37.344,
+      "voOffset": 0.15,
+      "duration": 37.744,
+      "start": 32.53,
+      "end": 70.274,
+      "durationFrames": 1132,
+      "startFrame": 976,
+      "endFrame": 2108
+    },
+    {
+      "id": "js4-array-objek",
+      "title": "Array vs Objek & Semen Tiga Roda",
+      "theme": "light",
+      "audioFile": "audio/vo-js/js4-array-objek.mp3",
+      "audioDuration": 23.616,
+      "voOffset": 0.15,
+      "duration": 24.016,
+      "start": 70.274,
+      "end": 94.29,
+      "durationFrames": 720,
+      "startFrame": 2108,
+      "endFrame": 2828
+    },
+    {
+      "id": "js5-typescript-outro",
+      "title": "Tombol Geser 1 Pixel & Solusi TypeScript",
+      "theme": "dark",
+      "audioFile": "audio/vo-js/js5-typescript-outro.mp3",
+      "audioDuration": 22.608,
+      "voOffset": 0.15,
+      "duration": 23.258,
+      "start": 94.29,
+      "end": 117.548,
+      "durationFrames": 698,
+      "startFrame": 2829,
+      "endFrame": 3527
+    }
+  ],
+  "totalDuration": 117.548,
+  "totalFrames": 3526
+}

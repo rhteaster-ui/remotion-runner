@@ -1,0 +1,2943 @@
+{
+  "cues": [
+    {
+      "id": "js1-hook-cue-1",
+      "sceneId": "js1-hook",
+      "start": 0.08,
+      "end": 3.402,
+      "lines": [
+        "Bahasa pemrograman paling",
+        "janggal sedunia itu"
+      ],
+      "words": [
+        {
+          "word": "Bahasa",
+          "start": 0.08,
+          "end": 0.551
+        },
+        {
+          "word": "pemrograman",
+          "start": 0.551,
+          "end": 1.415
+        },
+        {
+          "word": "paling",
+          "start": 1.415,
+          "end": 1.887
+        },
+        {
+          "word": "janggal",
+          "start": 1.887,
+          "end": 2.436
+        },
+        {
+          "word": "sedunia",
+          "start": 2.436,
+          "end": 2.986
+        },
+        {
+          "word": "itu",
+          "start": 2.986,
+          "end": 3.222
+        }
+      ]
+    },
+    {
+      "id": "js1-hook-cue-2",
+      "sceneId": "js1-hook",
+      "start": 3.222,
+      "end": 7.339,
+      "lines": [
+        "JavaScript. Karena",
+        "ternyata bahasa yang"
+      ],
+      "words": [
+        {
+          "word": "JavaScript.",
+          "start": 3.222,
+          "end": 4.526
+        },
+        {
+          "word": "Karena",
+          "start": 4.526,
+          "end": 5.453
+        },
+        {
+          "word": "ternyata",
+          "start": 5.453,
+          "end": 6.081
+        },
+        {
+          "word": "bahasa",
+          "start": 6.081,
+          "end": 6.845
+        },
+        {
+          "word": "yang",
+          "start": 6.845,
+          "end": 7.159
+        }
+      ]
+    },
+    {
+      "id": "js1-hook-cue-3",
+      "sceneId": "js1-hook",
+      "start": 7.159,
+      "end": 10.511,
+      "lines": [
+        "dipakai 90% website di",
+        "bumi ini lebih aneh dari"
+      ],
+      "words": [
+        {
+          "word": "dipakai",
+          "start": 7.159,
+          "end": 7.709
+        },
+        {
+          "word": "90%",
+          "start": 7.709,
+          "end": 7.866
+        },
+        {
+          "word": "website",
+          "start": 7.866,
+          "end": 8.416
+        },
+        {
+          "word": "di",
+          "start": 8.416,
+          "end": 8.573
+        },
+        {
+          "word": "bumi",
+          "start": 8.573,
+          "end": 8.887
+        },
+        {
+          "word": "ini",
+          "start": 8.887,
+          "end": 9.123
+        },
+        {
+          "word": "lebih",
+          "start": 9.123,
+          "end": 9.515
+        },
+        {
+          "word": "aneh",
+          "start": 9.515,
+          "end": 10.017
+        },
+        {
+          "word": "dari",
+          "start": 10.017,
+          "end": 10.331
+        }
+      ]
+    },
+    {
+      "id": "js1-hook-cue-4",
+      "sceneId": "js1-hook",
+      "start": 10.331,
+      "end": 11.924,
+      "lines": [
+        "yang kita kira."
+      ],
+      "words": [
+        {
+          "word": "yang",
+          "start": 10.331,
+          "end": 10.645
+        },
+        {
+          "word": "kita",
+          "start": 10.645,
+          "end": 10.959
+        },
+        {
+          "word": "kira.",
+          "start": 10.959,
+          "end": 11.744
+        }
+      ]
+    },
+    {
+      "id": "js2-angka-teks-cue-1",
+      "sceneId": "js2-angka-teks",
+      "start": 12.144,
+      "end": 15.467,
+      "lines": [
+        "Pertama, di JavaScript,",
+        "kalau lu nambahin angka"
+      ],
+      "words": [
+        {
+          "word": "Pertama,",
+          "start": 12.144,
+          "end": 12.739
+        },
+        {
+          "word": "di",
+          "start": 12.739,
+          "end": 12.858
+        },
+        {
+          "word": "JavaScript,",
+          "start": 12.858,
+          "end": 13.887
+        },
+        {
+          "word": "kalau",
+          "start": 13.887,
+          "end": 14.394
+        },
+        {
+          "word": "lu",
+          "start": 14.394,
+          "end": 14.513
+        },
+        {
+          "word": "nambahin",
+          "start": 14.513,
+          "end": 14.989
+        },
+        {
+          "word": "angka",
+          "start": 14.989,
+          "end": 15.287
+        }
+      ]
+    },
+    {
+      "id": "js2-angka-teks-cue-2",
+      "sceneId": "js2-angka-teks",
+      "start": 15.287,
+      "end": 18.451,
+      "lines": [
+        "sama teks... Satu ditambah",
+        "satu itu bukan dua. Tapi"
+      ],
+      "words": [
+        {
+          "word": "sama",
+          "start": 15.287,
+          "end": 15.525
+        },
+        {
+          "word": "teks...",
+          "start": 15.525,
+          "end": 15.942
+        },
+        {
+          "word": "Satu",
+          "start": 15.942,
+          "end": 16.18
+        },
+        {
+          "word": "ditambah",
+          "start": 16.18,
+          "end": 16.962
+        },
+        {
+          "word": "satu",
+          "start": 16.962,
+          "end": 17.2
+        },
+        {
+          "word": "itu",
+          "start": 17.2,
+          "end": 17.378
+        },
+        {
+          "word": "bukan",
+          "start": 17.378,
+          "end": 17.676
+        },
+        {
+          "word": "dua.",
+          "start": 17.676,
+          "end": 18.033
+        },
+        {
+          "word": "Tapi",
+          "start": 18.033,
+          "end": 18.271
+        }
+      ]
+    },
+    {
+      "id": "js2-angka-teks-cue-3",
+      "sceneId": "js2-angka-teks",
+      "start": 18.271,
+      "end": 22.108,
+      "lines": [
+        "sebelas. Lu bayangin,",
+        "kalau kasir minimarket"
+      ],
+      "words": [
+        {
+          "word": "sebelas.",
+          "start": 18.271,
+          "end": 19.313
+        },
+        {
+          "word": "Lu",
+          "start": 19.313,
+          "end": 19.432
+        },
+        {
+          "word": "bayangin,",
+          "start": 19.432,
+          "end": 20.087
+        },
+        {
+          "word": "kalau",
+          "start": 20.087,
+          "end": 20.767
+        },
+        {
+          "word": "kasir",
+          "start": 20.767,
+          "end": 21.065
+        },
+        {
+          "word": "minimarket",
+          "start": 21.065,
+          "end": 21.928
+        }
+      ]
+    },
+    {
+      "id": "js2-angka-teks-cue-4",
+      "sceneId": "js2-angka-teks",
+      "start": 21.928,
+      "end": 25.588,
+      "lines": [
+        "pakai JavaScript: Total",
+        "belanjaan Mas seribu,"
+      ],
+      "words": [
+        {
+          "word": "pakai",
+          "start": 21.928,
+          "end": 22.225
+        },
+        {
+          "word": "JavaScript:",
+          "start": 22.225,
+          "end": 22.999
+        },
+        {
+          "word": "Total",
+          "start": 22.999,
+          "end": 23.296
+        },
+        {
+          "word": "belanjaan",
+          "start": 23.296,
+          "end": 24.694
+        },
+        {
+          "word": "Mas",
+          "start": 24.694,
+          "end": 24.872
+        },
+        {
+          "word": "seribu,",
+          "start": 24.872,
+          "end": 25.408
+        }
+      ]
+    },
+    {
+      "id": "js2-angka-teks-cue-5",
+      "sceneId": "js2-angka-teks",
+      "start": 25.408,
+      "end": 28.829,
+      "lines": [
+        "terus bayar parkir seribu,",
+        "jadinya sejuta seribu ya"
+      ],
+      "words": [
+        {
+          "word": "terus",
+          "start": 25.408,
+          "end": 25.706
+        },
+        {
+          "word": "bayar",
+          "start": 25.706,
+          "end": 26.221
+        },
+        {
+          "word": "parkir",
+          "start": 26.221,
+          "end": 26.578
+        },
+        {
+          "word": "seribu,",
+          "start": 26.578,
+          "end": 27.114
+        },
+        {
+          "word": "jadinya",
+          "start": 27.114,
+          "end": 27.815
+        },
+        {
+          "word": "sejuta",
+          "start": 27.815,
+          "end": 28.173
+        },
+        {
+          "word": "seribu",
+          "start": 28.173,
+          "end": 28.53
+        },
+        {
+          "word": "ya",
+          "start": 28.53,
+          "end": 28.649
+        }
+      ]
+    },
+    {
+      "id": "js2-angka-teks-cue-6",
+      "sceneId": "js2-angka-teks",
+      "start": 28.649,
+      "end": 32.46,
+      "lines": [
+        "Mas. Rugi bandar lu. Tahu",
+        "dia cara bikin miskin."
+      ],
+      "words": [
+        {
+          "word": "Mas.",
+          "start": 28.649,
+          "end": 29.498
+        },
+        {
+          "word": "Rugi",
+          "start": 29.498,
+          "end": 29.736
+        },
+        {
+          "word": "bandar",
+          "start": 29.736,
+          "end": 30.093
+        },
+        {
+          "word": "lu.",
+          "start": 30.093,
+          "end": 30.391
+        },
+        {
+          "word": "Tahu",
+          "start": 30.391,
+          "end": 31.03
+        },
+        {
+          "word": "dia",
+          "start": 31.03,
+          "end": 31.209
+        },
+        {
+          "word": "cara",
+          "start": 31.209,
+          "end": 31.447
+        },
+        {
+          "word": "bikin",
+          "start": 31.447,
+          "end": 31.744
+        },
+        {
+          "word": "miskin.",
+          "start": 31.744,
+          "end": 32.28
+        }
+      ]
+    },
+    {
+      "id": "js3-nan-cue-1",
+      "sceneId": "js3-nan",
+      "start": 32.68,
+      "end": 36.448,
+      "lines": [
+        "Sekarang kita ke logika",
+        "nilainya. Di bahasa"
+      ],
+      "words": [
+        {
+          "word": "Sekarang",
+          "start": 32.68,
+          "end": 33.334
+        },
+        {
+          "word": "kita",
+          "start": 33.334,
+          "end": 33.661
+        },
+        {
+          "word": "ke",
+          "start": 33.661,
+          "end": 33.824
+        },
+        {
+          "word": "logika",
+          "start": 33.824,
+          "end": 34.315
+        },
+        {
+          "word": "nilainya.",
+          "start": 34.315,
+          "end": 35.214
+        },
+        {
+          "word": "Di",
+          "start": 35.214,
+          "end": 35.377
+        },
+        {
+          "word": "bahasa",
+          "start": 35.377,
+          "end": 36.268
+        }
+      ]
+    },
+    {
+      "id": "js3-nan-cue-2",
+      "sceneId": "js3-nan",
+      "start": 36.268,
+      "end": 41.109,
+      "lines": [
+        "normal, kosong ya kosong,",
+        "nol ya nol. Di JavaScript,"
+      ],
+      "words": [
+        {
+          "word": "normal,",
+          "start": 36.268,
+          "end": 37.004
+        },
+        {
+          "word": "kosong",
+          "start": 37.004,
+          "end": 37.494
+        },
+        {
+          "word": "ya",
+          "start": 37.494,
+          "end": 37.658
+        },
+        {
+          "word": "kosong,",
+          "start": 37.658,
+          "end": 38.393
+        },
+        {
+          "word": "nol",
+          "start": 38.393,
+          "end": 38.639
+        },
+        {
+          "word": "ya",
+          "start": 38.639,
+          "end": 38.802
+        },
+        {
+          "word": "nol.",
+          "start": 38.802,
+          "end": 39.292
+        },
+        {
+          "word": "Di",
+          "start": 39.292,
+          "end": 39.456
+        },
+        {
+          "word": "JavaScript,",
+          "start": 39.456,
+          "end": 40.929
+        }
+      ]
+    },
+    {
+      "id": "js3-nan-cue-3",
+      "sceneId": "js3-nan",
+      "start": 40.929,
+      "end": 45.284,
+      "lines": [
+        "ada yang namanya NaN alias",
+        "Not a Number, artinya"
+      ],
+      "words": [
+        {
+          "word": "ada",
+          "start": 40.929,
+          "end": 41.174
+        },
+        {
+          "word": "yang",
+          "start": 41.174,
+          "end": 41.501
+        },
+        {
+          "word": "namanya",
+          "start": 41.501,
+          "end": 42.43
+        },
+        {
+          "word": "NaN",
+          "start": 42.43,
+          "end": 42.675
+        },
+        {
+          "word": "alias",
+          "start": 42.675,
+          "end": 43.084
+        },
+        {
+          "word": "Not",
+          "start": 43.084,
+          "end": 43.329
+        },
+        {
+          "word": "a",
+          "start": 43.329,
+          "end": 43.493
+        },
+        {
+          "word": "Number,",
+          "start": 43.493,
+          "end": 44.532
+        },
+        {
+          "word": "artinya",
+          "start": 44.532,
+          "end": 45.104
+        }
+      ]
+    },
+    {
+      "id": "js3-nan-cue-4",
+      "sceneId": "js3-nan",
+      "start": 45.104,
+      "end": 49.504,
+      "lines": [
+        "Bukan Angka. Tapi pas lu",
+        "cek tipe datanya pakai"
+      ],
+      "words": [
+        {
+          "word": "Bukan",
+          "start": 45.104,
+          "end": 45.513
+        },
+        {
+          "word": "Angka.",
+          "start": 45.513,
+          "end": 46.472
+        },
+        {
+          "word": "Tapi",
+          "start": 46.472,
+          "end": 46.799
+        },
+        {
+          "word": "pas",
+          "start": 46.799,
+          "end": 47.045
+        },
+        {
+          "word": "lu",
+          "start": 47.045,
+          "end": 47.208
+        },
+        {
+          "word": "cek",
+          "start": 47.208,
+          "end": 47.453
+        },
+        {
+          "word": "tipe",
+          "start": 47.453,
+          "end": 47.78
+        },
+        {
+          "word": "datanya",
+          "start": 47.78,
+          "end": 48.915
+        },
+        {
+          "word": "pakai",
+          "start": 48.915,
+          "end": 49.324
+        }
+      ]
+    },
+    {
+      "id": "js3-nan-cue-5",
+      "sceneId": "js3-nan",
+      "start": 49.324,
+      "end": 54.923,
+      "lines": [
+        "typeof NaN... Jawabannya:",
+        "Number. Bukan angka, tapi"
+      ],
+      "words": [
+        {
+          "word": "typeof",
+          "start": 49.324,
+          "end": 49.814
+        },
+        {
+          "word": "NaN...",
+          "start": 49.814,
+          "end": 50.305
+        },
+        {
+          "word": "Jawabannya:",
+          "start": 50.305,
+          "end": 51.367
+        },
+        {
+          "word": "Number.",
+          "start": 51.367,
+          "end": 52.446
+        },
+        {
+          "word": "Bukan",
+          "start": 52.446,
+          "end": 53.192
+        },
+        {
+          "word": "angka,",
+          "start": 53.192,
+          "end": 54.416
+        },
+        {
+          "word": "tapi",
+          "start": 54.416,
+          "end": 54.743
+        }
+      ]
+    },
+    {
+      "id": "js3-nan-cue-6",
+      "sceneId": "js3-nan",
+      "start": 54.743,
+      "end": 59.45,
+      "lines": [
+        "tipenya angka! Bete banget",
+        "gak tuh? Itu ibarat lu"
+      ],
+      "words": [
+        {
+          "word": "tipenya",
+          "start": 54.743,
+          "end": 55.315
+        },
+        {
+          "word": "angka!",
+          "start": 55.315,
+          "end": 56.265
+        },
+        {
+          "word": "Bete",
+          "start": 56.265,
+          "end": 56.592
+        },
+        {
+          "word": "banget",
+          "start": 56.592,
+          "end": 57.083
+        },
+        {
+          "word": "gak",
+          "start": 57.083,
+          "end": 57.328
+        },
+        {
+          "word": "tuh?",
+          "start": 57.328,
+          "end": 58.371
+        },
+        {
+          "word": "Itu",
+          "start": 58.371,
+          "end": 58.616
+        },
+        {
+          "word": "ibarat",
+          "start": 58.616,
+          "end": 59.106
+        },
+        {
+          "word": "lu",
+          "start": 59.106,
+          "end": 59.27
+        }
+      ]
+    },
+    {
+      "id": "js3-nan-cue-7",
+      "sceneId": "js3-nan",
+      "start": 59.27,
+      "end": 64.822,
+      "lines": [
+        "mesen es teh manis, pas",
+        "dateng dikasih tahu: Mas,"
+      ],
+      "words": [
+        {
+          "word": "mesen",
+          "start": 59.27,
+          "end": 60.341
+        },
+        {
+          "word": "es",
+          "start": 60.341,
+          "end": 60.504
+        },
+        {
+          "word": "teh",
+          "start": 60.504,
+          "end": 60.749
+        },
+        {
+          "word": "manis,",
+          "start": 60.749,
+          "end": 61.403
+        },
+        {
+          "word": "pas",
+          "start": 61.403,
+          "end": 61.648
+        },
+        {
+          "word": "dateng",
+          "start": 61.648,
+          "end": 62.139
+        },
+        {
+          "word": "dikasih",
+          "start": 62.139,
+          "end": 63.053
+        },
+        {
+          "word": "tahu:",
+          "start": 63.053,
+          "end": 63.626
+        },
+        {
+          "word": "Mas,",
+          "start": 63.626,
+          "end": 64.642
+        }
+      ]
+    },
+    {
+      "id": "js3-nan-cue-8",
+      "sceneId": "js3-nan",
+      "start": 64.642,
+      "end": 69.248,
+      "lines": [
+        "ini bukan es teh ya, tapi",
+        "tipenya es teh. Janggal"
+      ],
+      "words": [
+        {
+          "word": "ini",
+          "start": 64.642,
+          "end": 64.888
+        },
+        {
+          "word": "bukan",
+          "start": 64.888,
+          "end": 65.507
+        },
+        {
+          "word": "es",
+          "start": 65.507,
+          "end": 65.671
+        },
+        {
+          "word": "teh",
+          "start": 65.671,
+          "end": 65.916
+        },
+        {
+          "word": "ya,",
+          "start": 65.916,
+          "end": 66.325
+        },
+        {
+          "word": "tapi",
+          "start": 66.325,
+          "end": 66.859
+        },
+        {
+          "word": "tipenya",
+          "start": 66.859,
+          "end": 67.431
+        },
+        {
+          "word": "es",
+          "start": 67.431,
+          "end": 67.595
+        },
+        {
+          "word": "teh.",
+          "start": 67.595,
+          "end": 68.085
+        },
+        {
+          "word": "Janggal",
+          "start": 68.085,
+          "end": 69.068
+        }
+      ]
+    },
+    {
+      "id": "js3-nan-cue-9",
+      "sceneId": "js3-nan",
+      "start": 69.068,
+      "end": 70.204,
+      "lines": [
+        "banget."
+      ],
+      "words": [
+        {
+          "word": "banget.",
+          "start": 69.068,
+          "end": 70.024
+        }
+      ]
+    },
+    {
+      "id": "js4-array-objek-cue-1",
+      "sceneId": "js4-array-objek",
+      "start": 70.424,
+      "end": 73.316,
+      "lines": [
+        "Dan yang paling bikin",
+        "geleng-geleng kepala..."
+      ],
+      "words": [
+        {
+          "word": "Dan",
+          "start": 70.424,
+          "end": 70.598
+        },
+        {
+          "word": "yang",
+          "start": 70.598,
+          "end": 70.83
+        },
+        {
+          "word": "paling",
+          "start": 70.83,
+          "end": 71.178
+        },
+        {
+          "word": "bikin",
+          "start": 71.178,
+          "end": 71.467
+        },
+        {
+          "word": "geleng-geleng",
+          "start": 71.467,
+          "end": 72.163
+        },
+        {
+          "word": "kepala...",
+          "start": 72.163,
+          "end": 73.136
+        }
+      ]
+    },
+    {
+      "id": "js4-array-objek-cue-2",
+      "sceneId": "js4-array-objek",
+      "start": 73.136,
+      "end": 75.96,
+      "lines": [
+        "Array kosong ditambah",
+        "objek kosong, hasilnya"
+      ],
+      "words": [
+        {
+          "word": "Array",
+          "start": 73.136,
+          "end": 73.426
+        },
+        {
+          "word": "kosong",
+          "start": 73.426,
+          "end": 73.774
+        },
+        {
+          "word": "ditambah",
+          "start": 73.774,
+          "end": 74.238
+        },
+        {
+          "word": "objek",
+          "start": 74.238,
+          "end": 74.527
+        },
+        {
+          "word": "kosong,",
+          "start": 74.527,
+          "end": 75.049
+        },
+        {
+          "word": "hasilnya",
+          "start": 75.049,
+          "end": 75.78
+        }
+      ]
+    },
+    {
+      "id": "js4-array-objek-cue-3",
+      "sceneId": "js4-array-objek",
+      "start": 75.78,
+      "end": 79.128,
+      "lines": [
+        "objek kosong. Tapi objek",
+        "kosong ditambah array"
+      ],
+      "words": [
+        {
+          "word": "objek",
+          "start": 75.78,
+          "end": 76.07
+        },
+        {
+          "word": "kosong.",
+          "start": 76.07,
+          "end": 76.592
+        },
+        {
+          "word": "Tapi",
+          "start": 76.592,
+          "end": 77.287
+        },
+        {
+          "word": "objek",
+          "start": 77.287,
+          "end": 77.576
+        },
+        {
+          "word": "kosong",
+          "start": 77.576,
+          "end": 78.195
+        },
+        {
+          "word": "ditambah",
+          "start": 78.195,
+          "end": 78.658
+        },
+        {
+          "word": "array",
+          "start": 78.658,
+          "end": 78.948
+        }
+      ]
+    },
+    {
+      "id": "js4-array-objek-cue-4",
+      "sceneId": "js4-array-objek",
+      "start": 78.948,
+      "end": 82.448,
+      "lines": [
+        "kosong, hasilnya nol!",
+        "Bolak-balik beda hasil."
+      ],
+      "words": [
+        {
+          "word": "kosong,",
+          "start": 78.948,
+          "end": 79.47
+        },
+        {
+          "word": "hasilnya",
+          "start": 79.47,
+          "end": 80.189
+        },
+        {
+          "word": "nol!",
+          "start": 80.189,
+          "end": 80.536
+        },
+        {
+          "word": "Bolak-balik",
+          "start": 80.536,
+          "end": 81.572
+        },
+        {
+          "word": "beda",
+          "start": 81.572,
+          "end": 81.804
+        },
+        {
+          "word": "hasil.",
+          "start": 81.804,
+          "end": 82.268
+        }
+      ]
+    },
+    {
+      "id": "js4-array-objek-cue-5",
+      "sceneId": "js4-array-objek",
+      "start": 82.268,
+      "end": 86.384,
+      "lines": [
+        "Curang banget. Lu bayangin",
+        "kalau resep martabak kayak"
+      ],
+      "words": [
+        {
+          "word": "Curang",
+          "start": 82.268,
+          "end": 82.977
+        },
+        {
+          "word": "banget.",
+          "start": 82.977,
+          "end": 83.499
+        },
+        {
+          "word": "Lu",
+          "start": 83.499,
+          "end": 84.158
+        },
+        {
+          "word": "bayangin",
+          "start": 84.158,
+          "end": 84.622
+        },
+        {
+          "word": "kalau",
+          "start": 84.622,
+          "end": 85.161
+        },
+        {
+          "word": "resep",
+          "start": 85.161,
+          "end": 85.451
+        },
+        {
+          "word": "martabak",
+          "start": 85.451,
+          "end": 85.914
+        },
+        {
+          "word": "kayak",
+          "start": 85.914,
+          "end": 86.204
+        }
+      ]
+    },
+    {
+      "id": "js4-array-objek-cue-6",
+      "sceneId": "js4-array-objek",
+      "start": 86.204,
+      "end": 90.433,
+      "lines": [
+        "gitu: Telor campur terigu",
+        "jadi martabak. Tapi terigu"
+      ],
+      "words": [
+        {
+          "word": "gitu:",
+          "start": 86.204,
+          "end": 87.163
+        },
+        {
+          "word": "Telor",
+          "start": 87.163,
+          "end": 87.453
+        },
+        {
+          "word": "campur",
+          "start": 87.453,
+          "end": 87.8
+        },
+        {
+          "word": "terigu",
+          "start": 87.8,
+          "end": 88.148
+        },
+        {
+          "word": "jadi",
+          "start": 88.148,
+          "end": 88.38
+        },
+        {
+          "word": "martabak.",
+          "start": 88.38,
+          "end": 89.397
+        },
+        {
+          "word": "Tapi",
+          "start": 89.397,
+          "end": 89.629
+        },
+        {
+          "word": "terigu",
+          "start": 89.629,
+          "end": 90.253
+        }
+      ]
+    },
+    {
+      "id": "js4-array-objek-cue-7",
+      "sceneId": "js4-array-objek",
+      "start": 90.253,
+      "end": 93.081,
+      "lines": [
+        "campur telor jadi semen",
+        "tiga roda. Stres"
+      ],
+      "words": [
+        {
+          "word": "campur",
+          "start": 90.253,
+          "end": 90.601
+        },
+        {
+          "word": "telor",
+          "start": 90.601,
+          "end": 90.891
+        },
+        {
+          "word": "jadi",
+          "start": 90.891,
+          "end": 91.328
+        },
+        {
+          "word": "semen",
+          "start": 91.328,
+          "end": 91.618
+        },
+        {
+          "word": "tiga",
+          "start": 91.618,
+          "end": 91.85
+        },
+        {
+          "word": "roda.",
+          "start": 91.85,
+          "end": 92.255
+        },
+        {
+          "word": "Stres",
+          "start": 92.255,
+          "end": 92.901
+        }
+      ]
+    },
+    {
+      "id": "js4-array-objek-cue-8",
+      "sceneId": "js4-array-objek",
+      "start": 92.901,
+      "end": 94.22,
+      "lines": [
+        "programmernya."
+      ],
+      "words": [
+        {
+          "word": "programmernya.",
+          "start": 92.901,
+          "end": 94.04
+        }
+      ]
+    },
+    {
+      "id": "js5-typescript-outro-cue-1",
+      "sceneId": "js5-typescript-outro",
+      "start": 94.44,
+      "end": 97.32,
+      "lines": [
+        "Belum lagi masalah tombol.",
+        "Lu bikin tombol geser ke"
+      ],
+      "words": [
+        {
+          "word": "Belum",
+          "start": 94.44,
+          "end": 94.707
+        },
+        {
+          "word": "lagi",
+          "start": 94.707,
+          "end": 94.921
+        },
+        {
+          "word": "masalah",
+          "start": 94.921,
+          "end": 95.295
+        },
+        {
+          "word": "tombol.",
+          "start": 95.295,
+          "end": 95.775
+        },
+        {
+          "word": "Lu",
+          "start": 95.775,
+          "end": 95.882
+        },
+        {
+          "word": "bikin",
+          "start": 95.882,
+          "end": 96.445
+        },
+        {
+          "word": "tombol",
+          "start": 96.445,
+          "end": 96.766
+        },
+        {
+          "word": "geser",
+          "start": 96.766,
+          "end": 97.033
+        },
+        {
+          "word": "ke",
+          "start": 97.033,
+          "end": 97.14
+        }
+      ]
+    },
+    {
+      "id": "js5-typescript-outro-cue-2",
+      "sceneId": "js5-typescript-outro",
+      "start": 97.14,
+      "end": 99.736,
+      "lines": [
+        "kanan satu pixel, eh",
+        "navbar di atas terbang ke"
+      ],
+      "words": [
+        {
+          "word": "kanan",
+          "start": 97.14,
+          "end": 97.407
+        },
+        {
+          "word": "satu",
+          "start": 97.407,
+          "end": 97.62
+        },
+        {
+          "word": "pixel,",
+          "start": 97.62,
+          "end": 98.048
+        },
+        {
+          "word": "eh",
+          "start": 98.048,
+          "end": 98.434
+        },
+        {
+          "word": "navbar",
+          "start": 98.434,
+          "end": 98.754
+        },
+        {
+          "word": "di",
+          "start": 98.754,
+          "end": 98.861
+        },
+        {
+          "word": "atas",
+          "start": 98.861,
+          "end": 99.075
+        },
+        {
+          "word": "terbang",
+          "start": 99.075,
+          "end": 99.449
+        },
+        {
+          "word": "ke",
+          "start": 99.449,
+          "end": 99.556
+        }
+      ]
+    },
+    {
+      "id": "js5-typescript-outro-cue-3",
+      "sceneId": "js5-typescript-outro",
+      "start": 99.556,
+      "end": 102.709,
+      "lines": [
+        "luar angkasa, footer-nya",
+        "tenggelam ke dasar palung"
+      ],
+      "words": [
+        {
+          "word": "luar",
+          "start": 99.556,
+          "end": 99.769
+        },
+        {
+          "word": "angkasa,",
+          "start": 99.769,
+          "end": 100.55
+        },
+        {
+          "word": "footer-nya",
+          "start": 100.55,
+          "end": 101.031
+        },
+        {
+          "word": "tenggelam",
+          "start": 101.031,
+          "end": 101.511
+        },
+        {
+          "word": "ke",
+          "start": 101.511,
+          "end": 101.618
+        },
+        {
+          "word": "dasar",
+          "start": 101.618,
+          "end": 101.885
+        },
+        {
+          "word": "palung",
+          "start": 101.885,
+          "end": 102.529
+        }
+      ]
+    },
+    {
+      "id": "js5-typescript-outro-cue-4",
+      "sceneId": "js5-typescript-outro",
+      "start": 102.529,
+      "end": 105.848,
+      "lines": [
+        "laut. Takut kan lu? Tenang",
+        "aja, sekarang udah ada"
+      ],
+      "words": [
+        {
+          "word": "laut.",
+          "start": 102.529,
+          "end": 102.902
+        },
+        {
+          "word": "Takut",
+          "start": 102.902,
+          "end": 103.548
+        },
+        {
+          "word": "kan",
+          "start": 103.548,
+          "end": 103.708
+        },
+        {
+          "word": "lu?",
+          "start": 103.708,
+          "end": 103.975
+        },
+        {
+          "word": "Tenang",
+          "start": 103.975,
+          "end": 104.547
+        },
+        {
+          "word": "aja,",
+          "start": 104.547,
+          "end": 104.867
+        },
+        {
+          "word": "sekarang",
+          "start": 104.867,
+          "end": 105.295
+        },
+        {
+          "word": "udah",
+          "start": 105.295,
+          "end": 105.508
+        },
+        {
+          "word": "ada",
+          "start": 105.508,
+          "end": 105.668
+        }
+      ]
+    },
+    {
+      "id": "js5-typescript-outro-cue-5",
+      "sceneId": "js5-typescript-outro",
+      "start": 105.668,
+      "end": 109.2,
+      "lines": [
+        "TypeScript kok. Bisa bikin",
+        "aman gak, Bang? Enggak,"
+      ],
+      "words": [
+        {
+          "word": "TypeScript",
+          "start": 105.668,
+          "end": 106.546
+        },
+        {
+          "word": "kok.",
+          "start": 106.546,
+          "end": 106.867
+        },
+        {
+          "word": "Bisa",
+          "start": 106.867,
+          "end": 107.08
+        },
+        {
+          "word": "bikin",
+          "start": 107.08,
+          "end": 107.631
+        },
+        {
+          "word": "aman",
+          "start": 107.631,
+          "end": 107.845
+        },
+        {
+          "word": "gak,",
+          "start": 107.845,
+          "end": 108.165
+        },
+        {
+          "word": "Bang?",
+          "start": 108.165,
+          "end": 108.539
+        },
+        {
+          "word": "Enggak,",
+          "start": 108.539,
+          "end": 109.02
+        }
+      ]
+    },
+    {
+      "id": "js5-typescript-outro-cue-6",
+      "sceneId": "js5-typescript-outro",
+      "start": 109.02,
+      "end": 111.534,
+      "lines": [
+        "itu cuma bikin lu",
+        "dimarahin komputer sebelum"
+      ],
+      "words": [
+        {
+          "word": "itu",
+          "start": 109.02,
+          "end": 109.18
+        },
+        {
+          "word": "cuma",
+          "start": 109.18,
+          "end": 109.394
+        },
+        {
+          "word": "bikin",
+          "start": 109.394,
+          "end": 109.661
+        },
+        {
+          "word": "lu",
+          "start": 109.661,
+          "end": 109.768
+        },
+        {
+          "word": "dimarahin",
+          "start": 109.768,
+          "end": 110.248
+        },
+        {
+          "word": "komputer",
+          "start": 110.248,
+          "end": 110.98
+        },
+        {
+          "word": "sebelum",
+          "start": 110.98,
+          "end": 111.354
+        }
+      ]
+    },
+    {
+      "id": "js5-typescript-outro-cue-7",
+      "sceneId": "js5-typescript-outro",
+      "start": 111.354,
+      "end": 114.439,
+      "lines": [
+        "kodingannya jalan. Tetap",
+        "aja janggal. Cek komedi"
+      ],
+      "words": [
+        {
+          "word": "kodingannya",
+          "start": 111.354,
+          "end": 112.389
+        },
+        {
+          "word": "jalan.",
+          "start": 112.389,
+          "end": 112.817
+        },
+        {
+          "word": "Tetap",
+          "start": 112.817,
+          "end": 113.084
+        },
+        {
+          "word": "aja",
+          "start": 113.084,
+          "end": 113.244
+        },
+        {
+          "word": "janggal.",
+          "start": 113.244,
+          "end": 113.778
+        },
+        {
+          "word": "Cek",
+          "start": 113.778,
+          "end": 113.938
+        },
+        {
+          "word": "komedi",
+          "start": 113.938,
+          "end": 114.259
+        }
+      ]
+    },
+    {
+      "id": "js5-typescript-outro-cue-8",
+      "sceneId": "js5-typescript-outro",
+      "start": 114.259,
+      "end": 117.228,
+      "lines": [
+        "tech lainnya bareng Elaina",
+        "di rhmt ofc \u2014 rhmt.biz.id."
+      ],
+      "words": [
+        {
+          "word": "tech",
+          "start": 114.259,
+          "end": 114.472
+        },
+        {
+          "word": "lainnya",
+          "start": 114.472,
+          "end": 115.179
+        },
+        {
+          "word": "bareng",
+          "start": 115.179,
+          "end": 115.499
+        },
+        {
+          "word": "Elaina",
+          "start": 115.499,
+          "end": 115.82
+        },
+        {
+          "word": "di",
+          "start": 115.82,
+          "end": 115.926
+        },
+        {
+          "word": "rhmt",
+          "start": 115.926,
+          "end": 116.14
+        },
+        {
+          "word": "ofc",
+          "start": 116.14,
+          "end": 116.3
+        },
+        {
+          "word": "\u2014",
+          "start": 116.3,
+          "end": 116.407
+        },
+        {
+          "word": "rhmt.biz.id.",
+          "start": 116.407,
+          "end": 117.048
+        }
+      ]
+    }
+  ],
+  "words": [
+    {
+      "word": "Bahasa",
+      "start": 0.08,
+      "end": 0.551
+    },
+    {
+      "word": "pemrograman",
+      "start": 0.551,
+      "end": 1.415
+    },
+    {
+      "word": "paling",
+      "start": 1.415,
+      "end": 1.887
+    },
+    {
+      "word": "janggal",
+      "start": 1.887,
+      "end": 2.436
+    },
+    {
+      "word": "sedunia",
+      "start": 2.436,
+      "end": 2.986
+    },
+    {
+      "word": "itu",
+      "start": 2.986,
+      "end": 3.222
+    },
+    {
+      "word": "JavaScript.",
+      "start": 3.222,
+      "end": 4.526
+    },
+    {
+      "word": "Karena",
+      "start": 4.526,
+      "end": 5.453
+    },
+    {
+      "word": "ternyata",
+      "start": 5.453,
+      "end": 6.081
+    },
+    {
+      "word": "bahasa",
+      "start": 6.081,
+      "end": 6.845
+    },
+    {
+      "word": "yang",
+      "start": 6.845,
+      "end": 7.159
+    },
+    {
+      "word": "dipakai",
+      "start": 7.159,
+      "end": 7.709
+    },
+    {
+      "word": "90%",
+      "start": 7.709,
+      "end": 7.866
+    },
+    {
+      "word": "website",
+      "start": 7.866,
+      "end": 8.416
+    },
+    {
+      "word": "di",
+      "start": 8.416,
+      "end": 8.573
+    },
+    {
+      "word": "bumi",
+      "start": 8.573,
+      "end": 8.887
+    },
+    {
+      "word": "ini",
+      "start": 8.887,
+      "end": 9.123
+    },
+    {
+      "word": "lebih",
+      "start": 9.123,
+      "end": 9.515
+    },
+    {
+      "word": "aneh",
+      "start": 9.515,
+      "end": 10.017
+    },
+    {
+      "word": "dari",
+      "start": 10.017,
+      "end": 10.331
+    },
+    {
+      "word": "yang",
+      "start": 10.331,
+      "end": 10.645
+    },
+    {
+      "word": "kita",
+      "start": 10.645,
+      "end": 10.959
+    },
+    {
+      "word": "kira.",
+      "start": 10.959,
+      "end": 11.744
+    },
+    {
+      "word": "Pertama,",
+      "start": 12.144,
+      "end": 12.739
+    },
+    {
+      "word": "di",
+      "start": 12.739,
+      "end": 12.858
+    },
+    {
+      "word": "JavaScript,",
+      "start": 12.858,
+      "end": 13.887
+    },
+    {
+      "word": "kalau",
+      "start": 13.887,
+      "end": 14.394
+    },
+    {
+      "word": "lu",
+      "start": 14.394,
+      "end": 14.513
+    },
+    {
+      "word": "nambahin",
+      "start": 14.513,
+      "end": 14.989
+    },
+    {
+      "word": "angka",
+      "start": 14.989,
+      "end": 15.287
+    },
+    {
+      "word": "sama",
+      "start": 15.287,
+      "end": 15.525
+    },
+    {
+      "word": "teks...",
+      "start": 15.525,
+      "end": 15.942
+    },
+    {
+      "word": "Satu",
+      "start": 15.942,
+      "end": 16.18
+    },
+    {
+      "word": "ditambah",
+      "start": 16.18,
+      "end": 16.962
+    },
+    {
+      "word": "satu",
+      "start": 16.962,
+      "end": 17.2
+    },
+    {
+      "word": "itu",
+      "start": 17.2,
+      "end": 17.378
+    },
+    {
+      "word": "bukan",
+      "start": 17.378,
+      "end": 17.676
+    },
+    {
+      "word": "dua.",
+      "start": 17.676,
+      "end": 18.033
+    },
+    {
+      "word": "Tapi",
+      "start": 18.033,
+      "end": 18.271
+    },
+    {
+      "word": "sebelas.",
+      "start": 18.271,
+      "end": 19.313
+    },
+    {
+      "word": "Lu",
+      "start": 19.313,
+      "end": 19.432
+    },
+    {
+      "word": "bayangin,",
+      "start": 19.432,
+      "end": 20.087
+    },
+    {
+      "word": "kalau",
+      "start": 20.087,
+      "end": 20.767
+    },
+    {
+      "word": "kasir",
+      "start": 20.767,
+      "end": 21.065
+    },
+    {
+      "word": "minimarket",
+      "start": 21.065,
+      "end": 21.928
+    },
+    {
+      "word": "pakai",
+      "start": 21.928,
+      "end": 22.225
+    },
+    {
+      "word": "JavaScript:",
+      "start": 22.225,
+      "end": 22.999
+    },
+    {
+      "word": "Total",
+      "start": 22.999,
+      "end": 23.296
+    },
+    {
+      "word": "belanjaan",
+      "start": 23.296,
+      "end": 24.694
+    },
+    {
+      "word": "Mas",
+      "start": 24.694,
+      "end": 24.872
+    },
+    {
+      "word": "seribu,",
+      "start": 24.872,
+      "end": 25.408
+    },
+    {
+      "word": "terus",
+      "start": 25.408,
+      "end": 25.706
+    },
+    {
+      "word": "bayar",
+      "start": 25.706,
+      "end": 26.221
+    },
+    {
+      "word": "parkir",
+      "start": 26.221,
+      "end": 26.578
+    },
+    {
+      "word": "seribu,",
+      "start": 26.578,
+      "end": 27.114
+    },
+    {
+      "word": "jadinya",
+      "start": 27.114,
+      "end": 27.815
+    },
+    {
+      "word": "sejuta",
+      "start": 27.815,
+      "end": 28.173
+    },
+    {
+      "word": "seribu",
+      "start": 28.173,
+      "end": 28.53
+    },
+    {
+      "word": "ya",
+      "start": 28.53,
+      "end": 28.649
+    },
+    {
+      "word": "Mas.",
+      "start": 28.649,
+      "end": 29.498
+    },
+    {
+      "word": "Rugi",
+      "start": 29.498,
+      "end": 29.736
+    },
+    {
+      "word": "bandar",
+      "start": 29.736,
+      "end": 30.093
+    },
+    {
+      "word": "lu.",
+      "start": 30.093,
+      "end": 30.391
+    },
+    {
+      "word": "Tahu",
+      "start": 30.391,
+      "end": 31.03
+    },
+    {
+      "word": "dia",
+      "start": 31.03,
+      "end": 31.209
+    },
+    {
+      "word": "cara",
+      "start": 31.209,
+      "end": 31.447
+    },
+    {
+      "word": "bikin",
+      "start": 31.447,
+      "end": 31.744
+    },
+    {
+      "word": "miskin.",
+      "start": 31.744,
+      "end": 32.28
+    },
+    {
+      "word": "Sekarang",
+      "start": 32.68,
+      "end": 33.334
+    },
+    {
+      "word": "kita",
+      "start": 33.334,
+      "end": 33.661
+    },
+    {
+      "word": "ke",
+      "start": 33.661,
+      "end": 33.824
+    },
+    {
+      "word": "logika",
+      "start": 33.824,
+      "end": 34.315
+    },
+    {
+      "word": "nilainya.",
+      "start": 34.315,
+      "end": 35.214
+    },
+    {
+      "word": "Di",
+      "start": 35.214,
+      "end": 35.377
+    },
+    {
+      "word": "bahasa",
+      "start": 35.377,
+      "end": 36.268
+    },
+    {
+      "word": "normal,",
+      "start": 36.268,
+      "end": 37.004
+    },
+    {
+      "word": "kosong",
+      "start": 37.004,
+      "end": 37.494
+    },
+    {
+      "word": "ya",
+      "start": 37.494,
+      "end": 37.658
+    },
+    {
+      "word": "kosong,",
+      "start": 37.658,
+      "end": 38.393
+    },
+    {
+      "word": "nol",
+      "start": 38.393,
+      "end": 38.639
+    },
+    {
+      "word": "ya",
+      "start": 38.639,
+      "end": 38.802
+    },
+    {
+      "word": "nol.",
+      "start": 38.802,
+      "end": 39.292
+    },
+    {
+      "word": "Di",
+      "start": 39.292,
+      "end": 39.456
+    },
+    {
+      "word": "JavaScript,",
+      "start": 39.456,
+      "end": 40.929
+    },
+    {
+      "word": "ada",
+      "start": 40.929,
+      "end": 41.174
+    },
+    {
+      "word": "yang",
+      "start": 41.174,
+      "end": 41.501
+    },
+    {
+      "word": "namanya",
+      "start": 41.501,
+      "end": 42.43
+    },
+    {
+      "word": "NaN",
+      "start": 42.43,
+      "end": 42.675
+    },
+    {
+      "word": "alias",
+      "start": 42.675,
+      "end": 43.084
+    },
+    {
+      "word": "Not",
+      "start": 43.084,
+      "end": 43.329
+    },
+    {
+      "word": "a",
+      "start": 43.329,
+      "end": 43.493
+    },
+    {
+      "word": "Number,",
+      "start": 43.493,
+      "end": 44.532
+    },
+    {
+      "word": "artinya",
+      "start": 44.532,
+      "end": 45.104
+    },
+    {
+      "word": "Bukan",
+      "start": 45.104,
+      "end": 45.513
+    },
+    {
+      "word": "Angka.",
+      "start": 45.513,
+      "end": 46.472
+    },
+    {
+      "word": "Tapi",
+      "start": 46.472,
+      "end": 46.799
+    },
+    {
+      "word": "pas",
+      "start": 46.799,
+      "end": 47.045
+    },
+    {
+      "word": "lu",
+      "start": 47.045,
+      "end": 47.208
+    },
+    {
+      "word": "cek",
+      "start": 47.208,
+      "end": 47.453
+    },
+    {
+      "word": "tipe",
+      "start": 47.453,
+      "end": 47.78
+    },
+    {
+      "word": "datanya",
+      "start": 47.78,
+      "end": 48.915
+    },
+    {
+      "word": "pakai",
+      "start": 48.915,
+      "end": 49.324
+    },
+    {
+      "word": "typeof",
+      "start": 49.324,
+      "end": 49.814
+    },
+    {
+      "word": "NaN...",
+      "start": 49.814,
+      "end": 50.305
+    },
+    {
+      "word": "Jawabannya:",
+      "start": 50.305,
+      "end": 51.367
+    },
+    {
+      "word": "Number.",
+      "start": 51.367,
+      "end": 52.446
+    },
+    {
+      "word": "Bukan",
+      "start": 52.446,
+      "end": 53.192
+    },
+    {
+      "word": "angka,",
+      "start": 53.192,
+      "end": 54.416
+    },
+    {
+      "word": "tapi",
+      "start": 54.416,
+      "end": 54.743
+    },
+    {
+      "word": "tipenya",
+      "start": 54.743,
+      "end": 55.315
+    },
+    {
+      "word": "angka!",
+      "start": 55.315,
+      "end": 56.265
+    },
+    {
+      "word": "Bete",
+      "start": 56.265,
+      "end": 56.592
+    },
+    {
+      "word": "banget",
+      "start": 56.592,
+      "end": 57.083
+    },
+    {
+      "word": "gak",
+      "start": 57.083,
+      "end": 57.328
+    },
+    {
+      "word": "tuh?",
+      "start": 57.328,
+      "end": 58.371
+    },
+    {
+      "word": "Itu",
+      "start": 58.371,
+      "end": 58.616
+    },
+    {
+      "word": "ibarat",
+      "start": 58.616,
+      "end": 59.106
+    },
+    {
+      "word": "lu",
+      "start": 59.106,
+      "end": 59.27
+    },
+    {
+      "word": "mesen",
+      "start": 59.27,
+      "end": 60.341
+    },
+    {
+      "word": "es",
+      "start": 60.341,
+      "end": 60.504
+    },
+    {
+      "word": "teh",
+      "start": 60.504,
+      "end": 60.749
+    },
+    {
+      "word": "manis,",
+      "start": 60.749,
+      "end": 61.403
+    },
+    {
+      "word": "pas",
+      "start": 61.403,
+      "end": 61.648
+    },
+    {
+      "word": "dateng",
+      "start": 61.648,
+      "end": 62.139
+    },
+    {
+      "word": "dikasih",
+      "start": 62.139,
+      "end": 63.053
+    },
+    {
+      "word": "tahu:",
+      "start": 63.053,
+      "end": 63.626
+    },
+    {
+      "word": "Mas,",
+      "start": 63.626,
+      "end": 64.642
+    },
+    {
+      "word": "ini",
+      "start": 64.642,
+      "end": 64.888
+    },
+    {
+      "word": "bukan",
+      "start": 64.888,
+      "end": 65.507
+    },
+    {
+      "word": "es",
+      "start": 65.507,
+      "end": 65.671
+    },
+    {
+      "word": "teh",
+      "start": 65.671,
+      "end": 65.916
+    },
+    {
+      "word": "ya,",
+      "start": 65.916,
+      "end": 66.325
+    },
+    {
+      "word": "tapi",
+      "start": 66.325,
+      "end": 66.859
+    },
+    {
+      "word": "tipenya",
+      "start": 66.859,
+      "end": 67.431
+    },
+    {
+      "word": "es",
+      "start": 67.431,
+      "end": 67.595
+    },
+    {
+      "word": "teh.",
+      "start": 67.595,
+      "end": 68.085
+    },
+    {
+      "word": "Janggal",
+      "start": 68.085,
+      "end": 69.068
+    },
+    {
+      "word": "banget.",
+      "start": 69.068,
+      "end": 70.024
+    },
+    {
+      "word": "Dan",
+      "start": 70.424,
+      "end": 70.598
+    },
+    {
+      "word": "yang",
+      "start": 70.598,
+      "end": 70.83
+    },
+    {
+      "word": "paling",
+      "start": 70.83,
+      "end": 71.178
+    },
+    {
+      "word": "bikin",
+      "start": 71.178,
+      "end": 71.467
+    },
+    {
+      "word": "geleng-geleng",
+      "start": 71.467,
+      "end": 72.163
+    },
+    {
+      "word": "kepala...",
+      "start": 72.163,
+      "end": 73.136
+    },
+    {
+      "word": "Array",
+      "start": 73.136,
+      "end": 73.426
+    },
+    {
+      "word": "kosong",
+      "start": 73.426,
+      "end": 73.774
+    },
+    {
+      "word": "ditambah",
+      "start": 73.774,
+      "end": 74.238
+    },
+    {
+      "word": "objek",
+      "start": 74.238,
+      "end": 74.527
+    },
+    {
+      "word": "kosong,",
+      "start": 74.527,
+      "end": 75.049
+    },
+    {
+      "word": "hasilnya",
+      "start": 75.049,
+      "end": 75.78
+    },
+    {
+      "word": "objek",
+      "start": 75.78,
+      "end": 76.07
+    },
+    {
+      "word": "kosong.",
+      "start": 76.07,
+      "end": 76.592
+    },
+    {
+      "word": "Tapi",
+      "start": 76.592,
+      "end": 77.287
+    },
+    {
+      "word": "objek",
+      "start": 77.287,
+      "end": 77.576
+    },
+    {
+      "word": "kosong",
+      "start": 77.576,
+      "end": 78.195
+    },
+    {
+      "word": "ditambah",
+      "start": 78.195,
+      "end": 78.658
+    },
+    {
+      "word": "array",
+      "start": 78.658,
+      "end": 78.948
+    },
+    {
+      "word": "kosong,",
+      "start": 78.948,
+      "end": 79.47
+    },
+    {
+      "word": "hasilnya",
+      "start": 79.47,
+      "end": 80.189
+    },
+    {
+      "word": "nol!",
+      "start": 80.189,
+      "end": 80.536
+    },
+    {
+      "word": "Bolak-balik",
+      "start": 80.536,
+      "end": 81.572
+    },
+    {
+      "word": "beda",
+      "start": 81.572,
+      "end": 81.804
+    },
+    {
+      "word": "hasil.",
+      "start": 81.804,
+      "end": 82.268
+    },
+    {
+      "word": "Curang",
+      "start": 82.268,
+      "end": 82.977
+    },
+    {
+      "word": "banget.",
+      "start": 82.977,
+      "end": 83.499
+    },
+    {
+      "word": "Lu",
+      "start": 83.499,
+      "end": 84.158
+    },
+    {
+      "word": "bayangin",
+      "start": 84.158,
+      "end": 84.622
+    },
+    {
+      "word": "kalau",
+      "start": 84.622,
+      "end": 85.161
+    },
+    {
+      "word": "resep",
+      "start": 85.161,
+      "end": 85.451
+    },
+    {
+      "word": "martabak",
+      "start": 85.451,
+      "end": 85.914
+    },
+    {
+      "word": "kayak",
+      "start": 85.914,
+      "end": 86.204
+    },
+    {
+      "word": "gitu:",
+      "start": 86.204,
+      "end": 87.163
+    },
+    {
+      "word": "Telor",
+      "start": 87.163,
+      "end": 87.453
+    },
+    {
+      "word": "campur",
+      "start": 87.453,
+      "end": 87.8
+    },
+    {
+      "word": "terigu",
+      "start": 87.8,
+      "end": 88.148
+    },
+    {
+      "word": "jadi",
+      "start": 88.148,
+      "end": 88.38
+    },
+    {
+      "word": "martabak.",
+      "start": 88.38,
+      "end": 89.397
+    },
+    {
+      "word": "Tapi",
+      "start": 89.397,
+      "end": 89.629
+    },
+    {
+      "word": "terigu",
+      "start": 89.629,
+      "end": 90.253
+    },
+    {
+      "word": "campur",
+      "start": 90.253,
+      "end": 90.601
+    },
+    {
+      "word": "telor",
+      "start": 90.601,
+      "end": 90.891
+    },
+    {
+      "word": "jadi",
+      "start": 90.891,
+      "end": 91.328
+    },
+    {
+      "word": "semen",
+      "start": 91.328,
+      "end": 91.618
+    },
+    {
+      "word": "tiga",
+      "start": 91.618,
+      "end": 91.85
+    },
+    {
+      "word": "roda.",
+      "start": 91.85,
+      "end": 92.255
+    },
+    {
+      "word": "Stres",
+      "start": 92.255,
+      "end": 92.901
+    },
+    {
+      "word": "programmernya.",
+      "start": 92.901,
+      "end": 94.04
+    },
+    {
+      "word": "Belum",
+      "start": 94.44,
+      "end": 94.707
+    },
+    {
+      "word": "lagi",
+      "start": 94.707,
+      "end": 94.921
+    },
+    {
+      "word": "masalah",
+      "start": 94.921,
+      "end": 95.295
+    },
+    {
+      "word": "tombol.",
+      "start": 95.295,
+      "end": 95.775
+    },
+    {
+      "word": "Lu",
+      "start": 95.775,
+      "end": 95.882
+    },
+    {
+      "word": "bikin",
+      "start": 95.882,
+      "end": 96.445
+    },
+    {
+      "word": "tombol",
+      "start": 96.445,
+      "end": 96.766
+    },
+    {
+      "word": "geser",
+      "start": 96.766,
+      "end": 97.033
+    },
+    {
+      "word": "ke",
+      "start": 97.033,
+      "end": 97.14
+    },
+    {
+      "word": "kanan",
+      "start": 97.14,
+      "end": 97.407
+    },
+    {
+      "word": "satu",
+      "start": 97.407,
+      "end": 97.62
+    },
+    {
+      "word": "pixel,",
+      "start": 97.62,
+      "end": 98.048
+    },
+    {
+      "word": "eh",
+      "start": 98.048,
+      "end": 98.434
+    },
+    {
+      "word": "navbar",
+      "start": 98.434,
+      "end": 98.754
+    },
+    {
+      "word": "di",
+      "start": 98.754,
+      "end": 98.861
+    },
+    {
+      "word": "atas",
+      "start": 98.861,
+      "end": 99.075
+    },
+    {
+      "word": "terbang",
+      "start": 99.075,
+      "end": 99.449
+    },
+    {
+      "word": "ke",
+      "start": 99.449,
+      "end": 99.556
+    },
+    {
+      "word": "luar",
+      "start": 99.556,
+      "end": 99.769
+    },
+    {
+      "word": "angkasa,",
+      "start": 99.769,
+      "end": 100.55
+    },
+    {
+      "word": "footer-nya",
+      "start": 100.55,
+      "end": 101.031
+    },
+    {
+      "word": "tenggelam",
+      "start": 101.031,
+      "end": 101.511
+    },
+    {
+      "word": "ke",
+      "start": 101.511,
+      "end": 101.618
+    },
+    {
+      "word": "dasar",
+      "start": 101.618,
+      "end": 101.885
+    },
+    {
+      "word": "palung",
+      "start": 101.885,
+      "end": 102.529
+    },
+    {
+      "word": "laut.",
+      "start": 102.529,
+      "end": 102.902
+    },
+    {
+      "word": "Takut",
+      "start": 102.902,
+      "end": 103.548
+    },
+    {
+      "word": "kan",
+      "start": 103.548,
+      "end": 103.708
+    },
+    {
+      "word": "lu?",
+      "start": 103.708,
+      "end": 103.975
+    },
+    {
+      "word": "Tenang",
+      "start": 103.975,
+      "end": 104.547
+    },
+    {
+      "word": "aja,",
+      "start": 104.547,
+      "end": 104.867
+    },
+    {
+      "word": "sekarang",
+      "start": 104.867,
+      "end": 105.295
+    },
+    {
+      "word": "udah",
+      "start": 105.295,
+      "end": 105.508
+    },
+    {
+      "word": "ada",
+      "start": 105.508,
+      "end": 105.668
+    },
+    {
+      "word": "TypeScript",
+      "start": 105.668,
+      "end": 106.546
+    },
+    {
+      "word": "kok.",
+      "start": 106.546,
+      "end": 106.867
+    },
+    {
+      "word": "Bisa",
+      "start": 106.867,
+      "end": 107.08
+    },
+    {
+      "word": "bikin",
+      "start": 107.08,
+      "end": 107.631
+    },
+    {
+      "word": "aman",
+      "start": 107.631,
+      "end": 107.845
+    },
+    {
+      "word": "gak,",
+      "start": 107.845,
+      "end": 108.165
+    },
+    {
+      "word": "Bang?",
+      "start": 108.165,
+      "end": 108.539
+    },
+    {
+      "word": "Enggak,",
+      "start": 108.539,
+      "end": 109.02
+    },
+    {
+      "word": "itu",
+      "start": 109.02,
+      "end": 109.18
+    },
+    {
+      "word": "cuma",
+      "start": 109.18,
+      "end": 109.394
+    },
+    {
+      "word": "bikin",
+      "start": 109.394,
+      "end": 109.661
+    },
+    {
+      "word": "lu",
+      "start": 109.661,
+      "end": 109.768
+    },
+    {
+      "word": "dimarahin",
+      "start": 109.768,
+      "end": 110.248
+    },
+    {
+      "word": "komputer",
+      "start": 110.248,
+      "end": 110.98
+    },
+    {
+      "word": "sebelum",
+      "start": 110.98,
+      "end": 111.354
+    },
+    {
+      "word": "kodingannya",
+      "start": 111.354,
+      "end": 112.389
+    },
+    {
+      "word": "jalan.",
+      "start": 112.389,
+      "end": 112.817
+    },
+    {
+      "word": "Tetap",
+      "start": 112.817,
+      "end": 113.084
+    },
+    {
+      "word": "aja",
+      "start": 113.084,
+      "end": 113.244
+    },
+    {
+      "word": "janggal.",
+      "start": 113.244,
+      "end": 113.778
+    },
+    {
+      "word": "Cek",
+      "start": 113.778,
+      "end": 113.938
+    },
+    {
+      "word": "komedi",
+      "start": 113.938,
+      "end": 114.259
+    },
+    {
+      "word": "tech",
+      "start": 114.259,
+      "end": 114.472
+    },
+    {
+      "word": "lainnya",
+      "start": 114.472,
+      "end": 115.179
+    },
+    {
+      "word": "bareng",
+      "start": 115.179,
+      "end": 115.499
+    },
+    {
+      "word": "Elaina",
+      "start": 115.499,
+      "end": 115.82
+    },
+    {
+      "word": "di",
+      "start": 115.82,
+      "end": 115.926
+    },
+    {
+      "word": "rhmt",
+      "start": 115.926,
+      "end": 116.14
+    },
+    {
+      "word": "ofc",
+      "start": 116.14,
+      "end": 116.3
+    },
+    {
+      "word": "\u2014",
+      "start": 116.3,
+      "end": 116.407
+    },
+    {
+      "word": "rhmt.biz.id.",
+      "start": 116.407,
+      "end": 117.048
+    }
+  ]
+}
