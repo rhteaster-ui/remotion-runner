@@ -116,7 +116,7 @@ def send_telegram_document(video_path, thumb_path, caption):
     url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendDocument"
     with open(video_path, "rb") as f_doc:
         files = {
-            "document": ("JavaScript-Wat-v2-Final.mp4", f_doc, "video/mp4"),
+            "document": ("JS-Wat-Elaina-Final.mp4", f_doc, "video/mp4"),
         }
         if thumb_path and os.path.exists(thumb_path):
             files["thumbnail"] = ("thumb.jpg", open(thumb_path, "rb"), "image/jpeg")
@@ -134,7 +134,7 @@ def send_telegram_document(video_path, thumb_path, caption):
 
 
 def main():
-    print("[*] Dispatching GitHub Actions Cloud Runner for JSWat (1080p CRF 18)...")
+    print("[*] Dispatching GitHub Actions Cloud Runner for JSWat...")
     dispatch_workflow(composition="JSWat", scale="1", crf="18")
 
     time.sleep(8)
@@ -153,7 +153,7 @@ def main():
                 sys.exit(1)
             print("[+] Cloud Runner sukses menyelesaikan render video!")
             break
-        time.sleep(15)
+        time.sleep(12)
 
     art_id, size = get_artifact_id(run_id)
     if not art_id:
@@ -161,8 +161,8 @@ def main():
         sys.exit(1)
     print(f"[+] Artifact ditemukan: ID={art_id}, Ukuran={size / (1024 * 1024):.2f} MB")
 
-    zip_path = os.path.join(OUT_DIR, "wat_artifact.zip")
-    extract_dir = os.path.join(OUT_DIR, "wat_rendered")
+    zip_path = os.path.join(OUT_DIR, "wat_elaina_artifact.zip")
+    extract_dir = os.path.join(OUT_DIR, "wat_elaina_rendered")
     os.makedirs(extract_dir, exist_ok=True)
 
     print("[*] Mengunduh artifact video dari GitHub Actions...")
@@ -173,8 +173,8 @@ def main():
 
     video_source = os.path.join(extract_dir, "video.mp4")
     thumb_source = os.path.join(extract_dir, "thumb.jpg")
-    final_video = os.path.join(OUT_DIR, "JavaScript-Wat-v2-Final.mp4")
-    final_thumb = os.path.join(OUT_DIR, "JavaScript-Wat-v2-Final-thumb.jpg")
+    final_video = os.path.join(OUT_DIR, "JS-Wat-Elaina-Final.mp4")
+    final_thumb = os.path.join(OUT_DIR, "JS-Wat-Elaina-Final-thumb.jpg")
 
     if os.path.exists(video_source):
         os.replace(video_source, final_video)
@@ -209,18 +209,16 @@ def main():
     print(f"    - Ukuran: {fsize:.2f} MB")
 
     caption = (
-        f"<b>REMOTION VIDEO DELIVERY · JAVASCRIPT NGGAK PERNAH BILANG ERROR (v2 REBUILD)</b>\n"
+        f"<b>REMOTION VIDEO DELIVERY · JAVASCRIPT WAT (ELAINA EDITION v2)</b>\n"
         f"━━━━━━━━━━━━━━━━━━━━━━━━━━\n"
         f"<b>Kreator:</b> rhmt ofc (rhmt.biz.id)\n"
         f"<b>Komposisi:</b> <code>JSWat</code> (9:16 Vertical 1080x1920)\n"
         f"<b>Durasi:</b> {dur:.1f} detik | <b>Ukuran:</b> {fsize:.2f} MB | <b>Codec:</b> {w}x{h} {codec}\n\n"
-        f"<b>Pembaruan &amp; Standard Craft Sesuai Instruksi:</b>\n"
-        f"• <b>Full-Take TTS Voice:</b> 1-take suara utuh konsisten, deadpan-smug Elaina roast JS.\n"
-        f"• <b>Forced Alignment Presisi:</b> 202 kata tersinkron 100% via Stable Whisper alignment.\n"
-        f"• <b>Sticker Comedy Design:</b> Border tegas 4px, hard offset shadow, token warna datar per scene, tanpa template generik.\n"
-        f"• <b>Elaina Die-Cut Sticker:</b> Bebas tepi bergerigi hitam, die-cut 14px + ink stroke crisp.\n"
-        f"• <b>Zero External Watermark:</b> Bebas dari logo/watermark Gemini, branding murni <code>rhmt ofc</code> &amp; <code>rhmt.biz.id</code>.\n"
-        f"• <b>Subtitle Karaoke Dinamis:</b> Ukuran 44px di zona bawah (offset 84px) dengan dynamic word highlight tanpa kotak hitam statis.\n"
+        f"<b>Upgrade Craft &amp; Produksi:</b>\n"
+        f"• <b>Full 1-Take TTS:</b> Suara karakter Elaina konsisten dari awal hingga akhir via Google AI Studio TTS (voice Puck).\n"
+        f"• <b>Forced Alignment Presisi:</b> Subtitle &amp; cue marker disinkronkan langsung dari audio nyata per kata (bukan estimasi huruf).\n"
+        f"• <b>Sticker Comedy &amp; Die-Cut Elaina:</b> Visual stiker hard-shadow, outline putih die-cut 14px anti-fringe, transisi magic-circle runes.\n"
+        f"• <b>Anti-AI Slop &amp; Clean Branding:</b> Bersih dari logo luar / Gemini, wordmark resmi <code>rhmt ofc</code> &amp; <code>rhmt.biz.id</code>.\n"
         f"━━━━━━━━━━━━━━━━━━━━━━━━━━\n"
         f"<i>Dirender via GitHub Actions Cloud Runner &amp; dikirim utuh tanpa kompresi</i>"
     )
@@ -230,7 +228,7 @@ def main():
     if res.get("ok"):
         print("[+] Dokumen Video BERHASIL dikirimkan ke Telegram Tuan Rahmat!")
     else:
-        print(f"[!] Gagal kirim Telegram: {res}")
+        print(f"[!] Gagal mengirim ke Telegram: {res}")
 
 
 if __name__ == "__main__":
