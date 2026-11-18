@@ -26,9 +26,19 @@ import platypusTimeline from './data/platypus-timeline.json';
 import jsTimeline from './data/js-timeline.json';
 import watCues from './data/wat-cues.json';
 import {JSWat} from './wat/JSWat';
+import chipCues from './data/chip-cues.json';
+import {ChipMerahPutihVideo} from './chip/ChipMerahPutihVideo';
 
 export const Root: React.FC = () => (
   <>
+    <Composition
+      id="ChipMerahPutih"
+      component={ChipMerahPutihVideo}
+      width={1080}
+      height={1920}
+      fps={chipCues.fps}
+      durationInFrames={chipCues.totalFrames}
+    />
     <Composition
       id="JSWat"
       component={JSWat}
