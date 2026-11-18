@@ -23,7 +23,7 @@ OUT_DIR = "/root/remotion-krypton/out"
 os.makedirs(OUT_DIR, exist_ok=True)
 
 
-def dispatch_workflow(composition="PlatypusElaina", scale="1", crf="22"):
+def dispatch_workflow(composition="PlatypusCreative", scale="1", crf="20"):
     url = f"https://api.github.com/repos/{REPO}/actions/workflows/{WORKFLOW_FILE}/dispatches"
     payload = {
         "ref": "main",
@@ -173,8 +173,8 @@ def main():
 
     video_source = os.path.join(extract_dir, "video.mp4")
     thumb_source = os.path.join(extract_dir, "thumb.jpg")
-    final_video = os.path.join(OUT_DIR, "Platypus-Elaina-Final.mp4")
-    final_thumb = os.path.join(OUT_DIR, "Platypus-Elaina-Final-thumb.jpg")
+    final_video = os.path.join(OUT_DIR, "Platypus-Creative-Final.mp4")
+    final_thumb = os.path.join(OUT_DIR, "Platypus-Creative-Final-thumb.jpg")
 
     if os.path.exists(video_source):
         os.replace(video_source, final_video)
@@ -209,18 +209,19 @@ def main():
     print(f"    - Ukuran: {fsize:.2f} MB")
 
     caption = (
-        f"<b>REMOTION VIDEO DELIVERY · PLATYPUS ITU JANGGAL BANGET (ELAINA EDITION)</b>\n"
+        f"<b>REMOTION VIDEO DELIVERY · PLATYPUS ITU JANGGAL BANGET (CREATIVE FULL-STAGE EDITION)</b>\n"
         f"━━━━━━━━━━━━━━━━━━━━━━━━━━\n"
         f"<b>Kreator:</b> rhmt ofc (rhmt.biz.id)\n"
-        f"<b>Komposisi:</b> <code>PlatypusElaina</code> (9:16 Vertical 1080x1920)\n"
+        f"<b>Komposisi:</b> <code>PlatypusCreative</code> (9:16 Vertical 1080x1920)\n"
         f"<b>Durasi:</b> {dur:.1f} detik | <b>Ukuran:</b> {fsize:.2f} MB | <b>Codec:</b> {w}x{h} {codec}\n\n"
-        f"<b>Upgrade Craft &amp; Produksi:</b>\n"
-        f"• <b>Elaina Presenter Engine:</b> Switching pose otomatis (bust, wink_point, point_up, alert) dengan micro-bounce &amp; head-tilt reaktif mengikuti amplitudo vokal per frame.\n"
-        f"• <b>Custom Non-Generic SFX &amp; Music Bed:</b> 13 SFX tematik hasil sintesis Python (water-splash, duck-quack, rubber-stretch, egg-crack, sweat-drops, tube-zip-bloop, gerd-honk, venom-sting, seblak-rimshot, wand-chime) + musik marimba komedi kustom.\n"
-        f"• <b>Foto &amp; Vektor Asli:</b> Foto asli Wikimedia Commons (Platypus, arsip 1799, taji beracun, telur monotremata, seblak) + simulasi anatomi SVG interaktif.\n"
-        f"• <b>Subtitle Karaoke 42px:</b> Sinkron jeda hening riil (silencedetect) tanpa drifting.\n"
+        f"<b>Upgrade Craft &amp; Desain Kreatif:</b>\n"
+        f"• <b>Full-Stage Creative Visuals:</b> 100% tanpa karakter/maskot kecil, panggung visual hero diperbesar masif memenuhi layar 1080x1920.\n"
+        f"• <b>Biometric Scanner &amp; 3-in-1 Dissection:</b> Visual dinamis reticle bidik laser Australia, anatomi 3 donor organ (bebek, berang, katak), dan arsip 1799 Shaw &amp; Nodder.\n"
+        f"• <b>Digestive Blueprint &amp; Chat Comedy:</b> Skema pencernaan tembus usus tanpa lambung + mockup chat WhatsApp penolakan cuti GERD.\n"
+        f"• <b>High-Res Calcaneal Spur &amp; Seblak:</b> Macro close-up taji beracun peptida defensin + outro seblak pengkolan khas creator tech.\n"
+        f"• <b>Subtitle Karaoke Presisi 44px:</b> Bersih, kontras tinggi di bottom safe-zone tanpa menutupi visual.\n"
         f"━━━━━━━━━━━━━━━━━━━━━━━━━━\n"
-        f"<i>Dirender via GitHub Actions Cloud &amp; dikirim utuh tanpa kompresi via sendDocument</i>"
+        f"<i>Dirender via GitHub Actions Cloud &amp; dikirim langsung ke WhatsApp dan Telegram</i>"
     )
 
     print("\n[*] Mengirim dokumen video final ke Telegram Tuan Rahmat...")

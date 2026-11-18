@@ -90,7 +90,7 @@ export const BendaWatermark: React.FC<{mode: Mode; index: number; total: number}
       }}
     >
       <div style={{display: 'flex', alignItems: 'center', gap: 10}}>
-        <Img src={staticFile('assets/gemini.svg')} style={{width: 22, height: 22, opacity: 0.85}} />
+        <Img src={staticFile('assets/portfolio/rhmt-mark.svg')} style={{width: 22, height: 22}} />
         <span style={{fontFamily: FONT.mono, fontWeight: 700, fontSize: 18, color: ink, letterSpacing: '0.06em'}}>
           rhmt ofc
         </span>

@@ -55,7 +55,7 @@ export const Header: React.FC<{index: number; total: number; label: string; mode
             }}
           />
           <div style={{display: 'flex', alignItems: 'center', gap: 8, padding: '8px 14px', borderRadius: 20, backgroundColor: mode === 'dark' ? 'rgba(255,255,255,0.05)' : 'rgba(255,255,255,0.85)', border: `1px solid ${p.line}`}}>
-            <Img src={staticFile('assets/gemini.svg')} style={{width: 24, height: 24}} />
+            <Img src={staticFile('assets/portfolio/rhmt-mark.svg')} style={{width: 24, height: 24}} />
             <span style={{fontFamily: FONT.mono, fontWeight: 700, fontSize: 18, color: p.ink, letterSpacing: '0.04em'}}>GOOGLE AI</span>
           </div>
         </div>

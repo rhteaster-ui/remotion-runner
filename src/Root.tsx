@@ -6,6 +6,7 @@ import {MascotShowcase} from './MascotShowcase';
 import {ElainaShowcase} from './ElainaShowcase';
 import {JavaScriptVideo} from './JavaScriptVideo';
 import {PlatypusElainaVideo} from './PlatypusElainaVideo';
+import {PlatypusCreativeVideo} from './PlatypusCreativeVideo';
 import {StorytellingVideo} from './StorytellingVideo';
 import {OpsFlowVideo} from './OpsFlowVideo';
 import {OpsFlowPremiumVideo} from './OpsFlowPremiumVideo';
@@ -43,6 +44,22 @@ export const Root: React.FC = () => (
       height={1920}
       fps={jsTimeline.fps}
       durationInFrames={jsTimeline.totalFrames}
+    />
+    <Composition
+      id="PlatypusCreative"
+      component={PlatypusCreativeVideo}
+      width={1080}
+      height={1920}
+      fps={platypusTimeline.fps}
+      durationInFrames={Math.ceil(platypusTimeline.total * platypusTimeline.fps)}
+    />
+    <Composition
+      id="Platypus"
+      component={PlatypusCreativeVideo}
+      width={1080}
+      height={1920}
+      fps={platypusTimeline.fps}
+      durationInFrames={Math.ceil(platypusTimeline.total * platypusTimeline.fps)}
     />
     <Composition
       id="PlatypusElaina"

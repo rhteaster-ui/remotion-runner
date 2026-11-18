@@ -134,12 +134,15 @@ def send_telegram_document(video_path, thumb_path, caption):
 
 
 def main():
-    print("[*] Dispatching GitHub Actions Cloud Runner for JSWat...")
-    dispatch_workflow(composition="JSWat", scale="1", crf="18")
-
-    time.sleep(8)
-    run_id = get_latest_run_id()
-    print(f"[+] Active GitHub Run ID: {run_id}")
+    if len(sys.argv) > 1 and sys.argv[1].isdigit():
+        run_id = int(sys.argv[1])
+        print(f"[+] Attaching to existing GitHub Run ID: {run_id}")
+    else:
+        print("[*] Dispatching GitHub Actions Cloud Runner for JSWat...")
+        dispatch_workflow(composition="JSWat", scale="1", crf="18")
+        time.sleep(8)
+        run_id = get_latest_run_id()
+        print(f"[+] Active GitHub Run ID: {run_id}")
 
     print("[*] Menunggu GitHub Actions Cloud Runner menyelesaikan rendering...")
     start_time = time.time()

@@ -52,7 +52,7 @@ export const ElementTile: React.FC<{
         <div style={{fontFamily: FONT.mono, fontWeight: 700, fontSize: 18, color: model.accent, letterSpacing: '0.06em'}}>
           {meta.tier}
         </div>
-        <Img src={staticFile('assets/gemini.svg')} style={{width: 24, height: 24, opacity: 0.9}} />
+        <Img src={staticFile('assets/portfolio/rhmt-mark.svg')} style={{width: 24, height: 24}} />
       </div>
 
       <div style={{position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
