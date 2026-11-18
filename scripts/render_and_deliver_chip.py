@@ -100,7 +100,7 @@ def main():
     ext_dir = os.path.join(OUT_DIR, "chip_extracted")
     os.makedirs(ext_dir, exist_ok=True)
     subprocess.run(["unzip", "-o", zip_path, "-d", ext_dir], check=True)
-    final_mp4 = os.path.join(OUT_DIR, "Chip-Merah-Putih-Elaina.mp4")
+    final_mp4 = os.path.join(OUT_DIR, "Chip-Merah-Putih-Creative.mp4")
     subprocess.run(["mv", "-f", os.path.join(ext_dir, "video.mp4"), final_mp4], check=True)
 
     probe = subprocess.check_output(
@@ -119,14 +119,16 @@ def main():
             check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
         )
     print(f"[+] QA frames saved in {QA_DIR}")
+    if "--skip-wa" in sys.argv:
+        return
 
     print("=== [4/4] Queueing WhatsApp delivery via wa2shell outbox ===")
     caption = (
         "*Chip Merah Putih Indonesia — Tech Satire*\n"
         "Karya: rhmt ofc (rhmt.biz.id)\n\n"
-        "• *Voiceover 1-Take:* Suara tunggal konsisten Puck dari awal sampai akhir\n"
-        "• *Konsep Visual:* Hardware Zine & Die-Cut Sticker (bukan template generik, bebas logo Gemini)\n"
-        "• *Alur:* Komentar TikTok -> Snapdragon vs e-Paspor -> Fakta Fabless -> Private Key -> CTA Follow -> rhmt ofc"
+        "• *Desain Baru:* 100% Bebas Karakter / Maskot, Murni Hardware Architecture Satire\n"
+        "• *Visual:* Rotating Silicon Wafer RI-01, Mitos Snapdragon vs Fakta e-Paspor, Flowchart Fabless Apple/Nvidia, Cyber Defense Shield Kedaulatan Kripto\n"
+        "• *Voiceover 1-Take:* Narasi tunggal konsisten Puck, word-level audio ducking & dynamic karaoke highlight"
     )
     outbox_file = os.path.join(WA_OUTBOX_DIR, "chip_merah_putih.json")
     with open(outbox_file, "w", encoding="utf-8") as f:
