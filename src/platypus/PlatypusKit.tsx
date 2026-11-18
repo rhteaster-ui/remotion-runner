@@ -30,8 +30,8 @@ export const ElainaStageAnchor: React.FC<{
   gestureFrame,
   side = 'right',
   theme,
-  size = 400,
-  bottomOffset = 180,
+  size = 390,
+  bottomOffset = 210,
   glowColor,
   badgeText = 'ELAINA · ANALISIS FAKTA',
 }) => {
