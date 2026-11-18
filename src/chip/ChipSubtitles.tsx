@@ -87,21 +87,21 @@ export const ChipSubtitles: React.FC<{bottomOffset?: number}> = ({
           flexWrap: 'wrap',
           justifyContent: 'center',
           alignItems: 'center',
-          gap: '8px 18px',
+          gap: '12px 24px',
           maxWidth: 968,
           textAlign: 'center',
         }}
       >
         {activeCue.words.map((item, idx) => {
-          const isActive = currentSec >= item.s && currentSec <= item.e + 0.05;
-          const isPast = currentSec > item.e + 0.05;
+          const isActive = currentSec >= item.s && currentSec < item.e;
+          const isPast = currentSec >= item.e;
 
           const wordFrame = Math.max(0, Math.round((currentSec - item.s) * fps));
           const popSpring = isActive
             ? spring({
                 frame: wordFrame,
                 fps,
-                config: {damping: 10, mass: 0.45, stiffness: 210},
+                config: {damping: 12, mass: 0.45, stiffness: 220},
               })
             : 1;
 
@@ -109,25 +109,25 @@ export const ChipSubtitles: React.FC<{bottomOffset?: number}> = ({
             <span
               key={`${activeCue.id}-${idx}-${item.w}`}
               style={{
-                fontFamily: FONT.sans,
+                fontFamily: FONT.space,
                 fontSize: 44,
-                fontWeight: 800,
-                letterSpacing: '0.8px',
+                fontWeight: 700,
+                letterSpacing: '0.4px',
                 lineHeight: 1.32,
                 display: 'inline-block',
                 position: 'relative',
-                transform: isActive ? `scale(${1 + 0.08 * popSpring})` : 'scale(1)',
-                opacity: isActive ? 1 : isPast ? 0.96 : 0.62,
+                transform: isActive ? `scale(${1 + 0.06 * popSpring})` : 'scale(1)',
+                opacity: isActive ? 1 : isPast ? 0.96 : 0.65,
               }}
             >
               {isActive && (
                 <span
                   style={{
                     position: 'absolute',
-                    inset: '-4px -12px',
+                    inset: '-2px -10px',
                     backgroundColor: chipTokens.gold,
                     borderRadius: 12,
-                    border: `3.5px solid ${chipTokens.ink}`,
+                    border: `3px solid ${chipTokens.ink}`,
                     boxShadow: `4px 4px 0px ${chipTokens.ink}`,
                     zIndex: -1,
                   }}
@@ -136,7 +136,7 @@ export const ChipSubtitles: React.FC<{bottomOffset?: number}> = ({
               <span
                 style={{
                   color: isActive ? chipTokens.ink : chipTokens.white,
-                  WebkitTextStroke: isActive ? 'none' : `8px ${chipTokens.ink}`,
+                  WebkitTextStroke: isActive ? '0px transparent' : `8px ${chipTokens.ink}`,
                   paintOrder: 'stroke fill',
                   filter: isActive ? 'none' : `drop-shadow(3px 3px 0px ${chipTokens.ink})`,
                 }}

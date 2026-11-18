@@ -80,20 +80,22 @@ def main():
         raise RuntimeError("Artifact remotion-video not found!")
 
     zip_path = os.path.join(OUT_DIR, "chip_merah_putih.zip")
-    req = urllib.request.Request(
+    import requests
+    r = requests.get(
         f"https://api.github.com/repos/{REPO}/actions/artifacts/{art_id}/zip",
         headers={
             "Authorization": f"token {GITHUB_TOKEN}",
             "Accept": "application/vnd.github.v3+json",
             "User-Agent": "Agency-DevOps",
         },
+        stream=True,
+        timeout=180,
     )
-    with urllib.request.urlopen(req, timeout=180) as resp, open(zip_path, "wb") as f:
-        while True:
-            chunk = resp.read(65536)
-            if not chunk:
-                break
-            f.write(chunk)
+    r.raise_for_status()
+    with open(zip_path, "wb") as f:
+        for chunk in r.iter_content(65536):
+            if chunk:
+                f.write(chunk)
 
     ext_dir = os.path.join(OUT_DIR, "chip_extracted")
     os.makedirs(ext_dir, exist_ok=True)
