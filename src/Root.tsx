@@ -63,7 +63,7 @@ export const Root: React.FC = () => (
     />
     <Composition
       id="PlatypusElaina"
-      component={PlatypusElainaVideo}
+      component={PlatypusCreativeVideo}
       width={1080}
       height={1920}
       fps={platypusTimeline.fps}

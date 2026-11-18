@@ -134,8 +134,8 @@ def send_telegram_document(video_path, thumb_path, caption):
 
 
 def main():
-    print("[*] Dispatching GitHub Actions Cloud Runner for PlatypusElaina...")
-    dispatch_workflow(composition="PlatypusElaina", scale="1", crf="22")
+    print("[*] Dispatching GitHub Actions Cloud Runner for PlatypusCreative...")
+    dispatch_workflow(composition="PlatypusCreative", scale="1", crf="20")
 
     time.sleep(6)
     run_id = get_latest_run_id()
