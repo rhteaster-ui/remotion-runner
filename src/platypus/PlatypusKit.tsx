@@ -30,8 +30,8 @@ export const ElainaStageAnchor: React.FC<{
   gestureFrame,
   side = 'right',
   theme,
-  size = 360,
-  bottomOffset = 205,
+  size = 400,
+  bottomOffset = 180,
   glowColor,
   badgeText = 'ELAINA · ANALISIS FAKTA',
 }) => {
@@ -61,7 +61,7 @@ export const ElainaStageAnchor: React.FC<{
         bottomOffset={bottomOffset}
         side={side}
         theme={theme}
-        mode="bust"
+        mode="full"
         showMagicParticles={true}
         enableBlink={false}
         audioAmplitude={audioAmplitude}
@@ -294,7 +294,7 @@ export const PlatypusTransitionSweep: React.FC<{atFrame: number; half?: number}>
             boxShadow: '0 24px 60px rgba(0,0,0,0.45)',
           }}
         >
-          <Img src={staticFile('assets/gemini.svg')} style={{width: 60, height: 60}} />
+          <Img src={staticFile('assets/portfolio/rhmt-mark.svg')} style={{width: 60, height: 60}} />
         </div>
       </div>
     </AbsoluteFill>

@@ -624,7 +624,7 @@ export const P6OutroSeblakScene: React.FC = () => {
                     boxShadow: '0 16px 36px rgba(15, 23, 42, 0.22)',
                   }}
                 >
-                  <Img src={staticFile('assets/gemini.svg')} style={{width: 28, height: 28}} />
+                  <Img src={staticFile('assets/portfolio/rhmt-mark.svg')} style={{width: 28, height: 28}} />
                   <span style={{fontFamily: FONT.mono, fontWeight: 800, fontSize: 22, color: '#f8fafc'}}>
                     rhmt ofc
                   </span>
