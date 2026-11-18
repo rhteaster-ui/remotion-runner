@@ -1,5 +1,5 @@
 import React from 'react';
-import {Img, interpolate, staticFile, useCurrentFrame} from 'remotion';
+import {Img, interpolate, spring, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
 import {chipTokens} from './tokens';
 import {FONT} from '../theme-tokens';
 import {useHit, useSince} from './clock';
@@ -8,16 +8,18 @@ import {
   PcbBackground,
   RealNewsPosterCard,
   SecureChipSvg,
-  StampBadge,
+  TactileStamp,
   TikTokCommentCard,
   ZineCard,
 } from './ChipKit';
 
 /* ============================================================================
-   S1: HOOK — POSTER BERITA ASLI PERURI & KOMENTAR SKEPTIS (Editorial Cream)
+   S1: HOOK — POSTER BERITA ASLI PERURI & SKEPTISISME NETIZEN (Editorial Cream)
+   Zero Dead Space: 3 Structured Tiers filling Y: 168 to Y: 1720 (1550px)
    ============================================================================ */
 export const S1NetizenHook: React.FC = () => {
   const frame = useCurrentFrame();
+  const {fps} = useVideoConfig();
 
   const hRame = useHit('rame');
   const hChip = useHit('chip1');
@@ -53,10 +55,10 @@ export const S1NetizenHook: React.FC = () => {
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
-          gap: 18,
+          gap: 20,
         }}
       >
-        {/* Real Official News Poster Card (Bukan AI Saja — Foto & Berita Asli Media) */}
+        {/* TIER 1: Massive Real News Poster Card (Height ~640px) */}
         <RealNewsPosterCard
           imageSrc={staticFile('news_assets/peruri_chip_merah_putih_official.jpg')}
           portalName="ANTARA NEWS"
@@ -67,15 +69,14 @@ export const S1NetizenHook: React.FC = () => {
           rotate={-0.4}
         />
 
-        {/* Skeptical Netizen Comments Overlaid / Stacked Underneath */}
+        {/* TIER 2: Viral TikTok Skepticism Stream (Height ~440px) */}
         {hNetizen > 0.02 && (
           <div
             style={{
               width: '100%',
               display: 'flex',
               flexDirection: 'column',
-              gap: 14,
-              marginTop: 2,
+              gap: 16,
             }}
           >
             <TikTokCommentCard
@@ -99,43 +100,70 @@ export const S1NetizenHook: React.FC = () => {
           </div>
         )}
 
-        {/* Climactic Stamp on 'aslinya' */}
-        <div style={{marginTop: 4, textAlign: 'center'}}>
+        {/* TIER 3: The Reality Slam & Strategic Dossier (Height ~380px) */}
+        <div style={{width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 14, marginTop: 4}}>
           {hAslinya > 0.02 ? (
-            <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 10}}>
-              <StampBadge
+            <>
+              <TactileStamp
                 text="NGGAK SEBERCANDA ITU!"
+                subText="BUKAN REBRAND STIKER · PROYEK RISET RESMI"
                 color={chipTokens.crimson}
                 enter={hAslinya}
-                rotate={-2.5}
+                tilt={-2.5}
                 fontSize={42}
               />
-              <div
+              <ZineCard
+                bg={chipTokens.gold}
+                enter={hAslinya}
+                rotate={0.4}
                 style={{
-                  fontFamily: FONT.mono,
-                  fontSize: 20,
-                  fontWeight: 900,
-                  color: chipTokens.ink,
-                  backgroundColor: chipTokens.gold,
-                  padding: '6px 22px',
-                  borderRadius: 10,
-                  border: `3px solid ${chipTokens.ink}`,
-                  boxShadow: `4px 4px 0px ${chipTokens.ink}`,
+                  width: '100%',
+                  padding: '18px 24px',
+                  border: `4px solid ${chipTokens.ink}`,
+                  boxShadow: `8px 8px 0px ${chipTokens.ink}`,
                 }}
               >
-                PROYEK RESMI CHIP ENKRIPSI DOKUMEN NEGARA
-              </div>
-            </div>
+                <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between'}}>
+                  <div>
+                    <div style={{fontFamily: FONT.mono, fontSize: 16, fontWeight: 800, color: chipTokens.ink}}>
+                      STATUS RESMI KONSORSIUM NASIONAL
+                    </div>
+                    <div style={{fontFamily: FONT.space, fontSize: 26, fontWeight: 900, color: chipTokens.ink, marginTop: 2}}>
+                      Riset Mandiri: PERURI × STEI ITB
+                    </div>
+                  </div>
+                  <div
+                    style={{
+                      padding: '8px 18px',
+                      backgroundColor: chipTokens.ink,
+                      color: chipTokens.white,
+                      borderRadius: 10,
+                      fontFamily: FONT.mono,
+                      fontSize: 16,
+                      fontWeight: 900,
+                    }}
+                  >
+                    TERVERIFIKASI
+                  </div>
+                </div>
+              </ZineCard>
+            </>
           ) : (
             <div
               style={{
+                width: '100%',
+                padding: '16px 20px',
+                borderRadius: 16,
+                backgroundColor: 'rgba(255,255,255,0.7)',
+                border: `2px dashed ${chipTokens.ink}`,
+                textAlign: 'center',
                 fontFamily: FONT.mono,
                 fontSize: 18,
                 fontWeight: 700,
                 color: chipTokens.slateMuted,
               }}
             >
-              [Verifikasi fakta dokumentasi resmi PERURI &amp; ITB]
+              [Verifikasi fakta dokumentasi resmi peluncuran KSTI 2026]
             </div>
           )}
         </div>
@@ -146,6 +174,7 @@ export const S1NetizenHook: React.FC = () => {
 
 /* ============================================================================
    S2: EKSPEKTASI VS REALITA — SNAPDRAGON VS E-PASPOR (Dark Cyber Maroon)
+   Zero Dead Space: 2 Massive Hardware Workbenches (Height ~1550px)
    ============================================================================ */
 export const S2SnapdragonVsPaspor: React.FC = () => {
   const frame = useCurrentFrame();
@@ -156,17 +185,19 @@ export const S2SnapdragonVsPaspor: React.FC = () => {
   const hMikro = useHit('mikrokontroler');
   const hNegara = useHit('negara');
 
-  const fanSpin = (frame * 24) % 360;
+  // Motion graphics variables
+  const fanSpin1 = (frame * 28) % 360;
+  const fanSpin2 = (frame * -36) % 360;
   const nfcWave = (frame % 36) / 36;
-  const chipSlide = interpolate(hMikro, [0, 1], [-60, 0]);
+  const heatPulse = 0.8 + 0.2 * Math.sin(frame * 0.3);
 
   const sBukan = useSince('bukan');
-  const shakeX = sBukan >= 0 && sBukan < 8 ? Math.sin(sBukan * 2.6) * (10 - sBukan) * 2 : 0;
+  const shakeX = sBukan >= 0 && sBukan < 10 ? Math.sin(sBukan * 2.8) * (12 - sBukan) * 2 : 0;
 
   return (
     <PcbBackground
       bgColor="#140C18"
-      traceColor="rgba(225, 29, 72, 0.16)"
+      traceColor="rgba(225, 29, 72, 0.18)"
       dotColor="rgba(255, 255, 255, 0.1)"
     >
       <ChipHUD
@@ -174,93 +205,152 @@ export const S2SnapdragonVsPaspor: React.FC = () => {
         label="EKSPEKTASI VS REALITA"
         stepIndex={1}
         dark={true}
-        metricTag="SECURE IC // 90NM"
+        metricTag="SECURE IC // 130NM"
       />
 
       <div
         style={{
           position: 'absolute',
-          top: 170,
+          top: 168,
           left: 56,
           right: 56,
           transform: `translateX(${shakeX}px)`,
           display: 'flex',
           flexDirection: 'column',
-          gap: 22,
+          gap: 24,
         }}
       >
-        {/* Top Card: Expectation (Gaming Snapdragon Phone) */}
+        {/* ==================================================================
+            TIER 1: EXPECTATION — OVERHEATED GAMING SOC (Height ~660px)
+            ================================================================== */}
         <ZineCard
           bg={hBukan > 0.1 ? '#271729' : '#1E1B2E'}
           enter={Math.max(0.4, hSnap)}
           rotate={hBukan > 0.1 ? -1.2 : 0}
+          borderColor={hBukan > 0.1 ? chipTokens.crimson : chipTokens.gold}
+          shadowColor={hBukan > 0.1 ? chipTokens.crimson : '#000000'}
           style={{
-            opacity: hBukan > 0.1 ? 0.6 : 1,
+            opacity: hBukan > 0.1 ? 0.65 : 1,
             position: 'relative',
-            padding: '22px 28px',
-            border: `4px solid ${hBukan > 0.1 ? chipTokens.crimson : chipTokens.gold}`,
+            padding: '24px 28px',
           }}
         >
-          <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 20}}>
-            <svg width="130" height="130" viewBox="0 0 140 140" style={{flexShrink: 0}}>
-              <rect x="14" y="24" width="112" height="92" rx="16" fill="#0F172A" stroke={chipTokens.gold} strokeWidth="4" />
-              <rect x="24" y="34" width="92" height="72" rx="8" fill="#1E293B" />
-              <g transform={`translate(70, 70) rotate(${fanSpin})`}>
-                <circle cx="0" cy="0" r="24" fill="none" stroke={chipTokens.crimson} strokeWidth="3" />
-                <path d="M0,-20 C10,-12 10,-4 0,0 C-10,4 -10,12 0,20" fill={chipTokens.crimson} />
-                <path d="M-20,0 C-12,-10 -4,-10 0,0 C4,10 12,10 20,0" fill={chipTokens.gold} />
+          {/* Header Identifier */}
+          <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 14}}>
+            <span
+              style={{
+                fontFamily: FONT.mono,
+                fontSize: 18,
+                fontWeight: 900,
+                color: chipTokens.gold,
+                backgroundColor: 'rgba(251, 191, 36, 0.15)',
+                padding: '4px 14px',
+                borderRadius: 8,
+                border: `2px solid ${chipTokens.gold}`,
+              }}
+            >
+              ANGGAPAN PUBLIK // MITOS GAMING
+            </span>
+            <span
+              style={{
+                fontFamily: FONT.mono,
+                fontSize: 16,
+                fontWeight: 800,
+                color: hGame > 0.1 ? chipTokens.crimson : '#94A3B8',
+              }}
+            >
+              STATUS: {hGame > 0.1 ? '98.6°C OVERHEAT' : 'STABLE'}
+            </span>
+          </div>
+
+          <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 24}}>
+            {/* Dual Fan High-Speed Cooling Cooler Graphic */}
+            <svg width="180" height="180" viewBox="0 0 180 180" style={{flexShrink: 0}}>
+              <rect x="10" y="10" width="160" height="160" rx="24" fill="#0F172A" stroke={chipTokens.gold} strokeWidth="4.5" />
+              <rect x="20" y="20" width="140" height="140" rx="16" fill="#1E293B" />
+
+              {/* Fan 1 */}
+              <g transform={`translate(60, 90) rotate(${fanSpin1})`}>
+                <circle cx="0" cy="0" r="32" fill="none" stroke={chipTokens.crimson} strokeWidth="3" opacity={heatPulse} />
+                <path d="M0,-26 C12,-16 12,-6 0,0 C-12,6 -12,16 0,26" fill={chipTokens.crimson} />
+                <path d="M-26,0 C-16,-12 -6,-12 0,0 C6,12 16,12 26,0" fill={chipTokens.gold} />
               </g>
-              <circle cx="70" cy="70" r="6" fill={chipTokens.white} />
+
+              {/* Fan 2 */}
+              <g transform={`translate(120, 90) rotate(${fanSpin2})`}>
+                <circle cx="0" cy="0" r="32" fill="none" stroke={chipTokens.crimson} strokeWidth="3" opacity={heatPulse} />
+                <path d="M0,-26 C12,-16 12,-6 0,0 C-12,6 -12,16 0,26" fill={chipTokens.crimson} />
+                <path d="M-26,0 C-16,-12 -6,-12 0,0 C6,12 16,12 26,0" fill={chipTokens.gold} />
+              </g>
+
+              <circle cx="60" cy="90" r="8" fill={chipTokens.white} />
+              <circle cx="120" cy="90" r="8" fill={chipTokens.white} />
             </svg>
 
+            {/* Spec readout */}
             <div style={{flex: 1}}>
-              <div style={{fontFamily: FONT.mono, fontSize: 18, fontWeight: 800, color: chipTokens.gold}}>
-                ANGGAPAN NETIZEN
-              </div>
-              <div style={{fontFamily: FONT.space, fontSize: 38, fontWeight: 900, color: chipTokens.white, lineHeight: 1.15}}>
+              <div style={{fontFamily: FONT.space, fontSize: 44, fontWeight: 900, color: chipTokens.white, lineHeight: 1.1}}>
                 Chipset Snapdragon
+              </div>
+              <div style={{fontFamily: FONT.mono, fontSize: 18, color: chipTokens.gold, marginTop: 6}}>
+                3nm Octa-Core Flagship Architecture
               </div>
               <div
                 style={{
-                  marginTop: 8,
-                  display: 'inline-block',
-                  padding: '5px 14px',
-                  borderRadius: 8,
+                  marginTop: 14,
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: 8,
+                  padding: '8px 18px',
+                  borderRadius: 10,
                   backgroundColor: hGame > 0.1 ? chipTokens.crimson : '#334155',
                   fontFamily: FONT.mono,
-                  fontSize: 18,
-                  fontWeight: 800,
+                  fontSize: 20,
+                  fontWeight: 900,
                   color: chipTokens.white,
+                  boxShadow: `4px 4px 0px ${chipTokens.ink}`,
                 }}
               >
-                MAEN GAME 120 FPS RATA KANAN
+                <span>🎮</span> MAEN GAME 120 FPS RATA KANAN
               </div>
             </div>
           </div>
 
+          {/* Stamp Slamming over Snapdragon */}
           {hBukan > 0.02 && (
             <div
               style={{
                 position: 'absolute',
-                right: 32,
+                right: 28,
                 top: '50%',
                 transform: 'translateY(-50%)',
               }}
             >
-              <StampBadge text="BUKAN, BRO! ❌" color={chipTokens.crimson} enter={hBukan} rotate={-10} fontSize={42} />
+              <TactileStamp
+                text="BUKAN, BRO! ❌"
+                subText="SALAH PAHAM TOTAL"
+                color={chipTokens.crimson}
+                enter={hBukan}
+                tilt={-12}
+                fontSize={44}
+              />
             </div>
           )}
         </ZineCard>
 
-        {/* Bottom Card: Reality (Secure Chip + e-Paspor RI) */}
+        {/* ==================================================================
+            TIER 2: REALITY — SECURE ELEMENT IC & E-PASPOR RI (Height ~780px)
+            ================================================================== */}
         {hMikro > 0.02 && (
           <ZineCard
             bg={chipTokens.cream}
             enter={hMikro}
-            rotate={0.5}
-            style={{padding: '24px 28px', border: `4px solid ${chipTokens.emerald}`}}
+            rotate={0.4}
+            borderColor={chipTokens.emerald}
+            shadowColor={chipTokens.emerald}
+            style={{padding: '26px 28px'}}
           >
-            <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 14}}>
+            <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 16}}>
               <span
                 style={{
                   fontFamily: FONT.mono,
@@ -268,37 +358,49 @@ export const S2SnapdragonVsPaspor: React.FC = () => {
                   fontWeight: 900,
                   backgroundColor: chipTokens.emerald,
                   color: chipTokens.ink,
-                  padding: '5px 16px',
+                  padding: '6px 18px',
                   borderRadius: 10,
                   border: `3px solid ${chipTokens.ink}`,
                 }}
               >
                 FAKTA SEBENARNYA
               </span>
-              <span style={{fontFamily: FONT.mono, fontSize: 18, fontWeight: 800, color: chipTokens.ink}}>
-                SECURE ELEMENT IC (130nm)
+              <span style={{fontFamily: FONT.mono, fontSize: 18, fontWeight: 900, color: chipTokens.ink}}>
+                SECURE ELEMENT IC (130nm 32-bit)
               </span>
             </div>
 
-            <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-around', gap: 14, padding: '8px 0'}}>
-              <div style={{transform: `translateX(${chipSlide}px)`}}>
-                <SecureChipSvg pulseFrame={frame} size={180} />
+            {/* Hardware Interactive Arena */}
+            <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-around', gap: 16, padding: '12px 0'}}>
+              <div style={{transform: 'scale(1.08)'}}>
+                <SecureChipSvg pulseFrame={frame} size={200} />
               </div>
 
-              {/* NFC Wireless Transmission Arrow */}
-              <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 4}}>
-                <svg width="68" height="38" viewBox="0 0 64 36">
-                  <path d="M4 18 H50" stroke={chipTokens.ink} strokeWidth="5" strokeDasharray="8 6" />
-                  <path d="M44 8 L58 18 L44 28" fill="none" stroke={chipTokens.crimson} strokeWidth="5" strokeLinecap="round" strokeLinejoin="round" />
+              {/* NFC Wireless Transmission Pulse */}
+              <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 6}}>
+                <svg width="84" height="42" viewBox="0 0 84 42">
+                  <path d="M6 21 H66" stroke={chipTokens.ink} strokeWidth="6" strokeDasharray="10 8" />
+                  <path d="M58 9 L76 21 L58 33" fill="none" stroke={chipTokens.crimson} strokeWidth="6" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
-                <span style={{fontFamily: FONT.mono, fontSize: 14, fontWeight: 800, color: chipTokens.crimson}}>
+                <span
+                  style={{
+                    fontFamily: FONT.mono,
+                    fontSize: 15,
+                    fontWeight: 900,
+                    color: chipTokens.crimson,
+                    backgroundColor: chipTokens.gold,
+                    padding: '2px 10px',
+                    borderRadius: 6,
+                    border: `2px solid ${chipTokens.ink}`,
+                  }}
+                >
                   NFC FIELD
                 </span>
               </div>
 
               {/* 3D-styled Indonesian e-Passport Booklet */}
               <div style={{position: 'relative'}}>
-                <svg width="175" height="224" viewBox="0 0 166 214">
+                <svg width="200" height="256" viewBox="0 0 166 214">
                   <rect x="6" y="6" width="154" height="202" rx="16" fill="#0B3B2E" stroke={chipTokens.ink} strokeWidth="5" />
                   <rect x="18" y="18" width="130" height="178" rx="10" fill="none" stroke={chipTokens.gold} strokeWidth="2.5" strokeOpacity="0.65" />
                   <text x="83" y="46" textAnchor="middle" fill={chipTokens.gold} fontFamily="sans-serif" fontWeight="900" fontSize="13">
@@ -314,10 +416,10 @@ export const S2SnapdragonVsPaspor: React.FC = () => {
 
                 {hNegara > 0.05 && (
                   <svg
-                    width="96"
-                    height="96"
+                    width="110"
+                    height="110"
                     viewBox="0 0 80 80"
-                    style={{position: 'absolute', top: -20, right: -20, pointerEvents: 'none'}}
+                    style={{position: 'absolute', top: -24, right: -24, pointerEvents: 'none'}}
                   >
                     {[0.25, 0.6, 0.95].map((r, i) => {
                       const p = (nfcWave + i * 0.33) % 1;
@@ -326,10 +428,10 @@ export const S2SnapdragonVsPaspor: React.FC = () => {
                           key={r}
                           cx="40"
                           cy="40"
-                          r={10 + p * 28}
+                          r={10 + p * 30}
                           fill="none"
                           stroke={chipTokens.emerald}
-                          strokeWidth="4"
+                          strokeWidth="4.5"
                           opacity={1 - p}
                         />
                       );
@@ -341,9 +443,9 @@ export const S2SnapdragonVsPaspor: React.FC = () => {
 
             <div
               style={{
-                marginTop: 12,
+                marginTop: 14,
                 fontFamily: FONT.space,
-                fontSize: 30,
+                fontSize: 34,
                 fontWeight: 900,
                 color: chipTokens.ink,
                 textAlign: 'center',
@@ -351,38 +453,40 @@ export const S2SnapdragonVsPaspor: React.FC = () => {
             >
               Chip Mikrokontroler Enkripsi Negara
             </div>
-          </ZineCard>
-        )}
 
-        {/* Detailed Hardware Spec Pill Bar */}
-        {hNegara > 0.05 && (
-          <ZineCard
-            bg="#1E1B2E"
-            enter={hNegara}
-            rotate={-0.6}
-            style={{border: `3.5px solid ${chipTokens.gold}`, padding: '18px 24px'}}
-          >
-            <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between'}}>
+            {/* Bottom Target Tag */}
+            <div
+              style={{
+                marginTop: 16,
+                padding: '14px 20px',
+                backgroundColor: '#0F172A',
+                borderRadius: 14,
+                border: `3px solid ${chipTokens.gold}`,
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+              }}
+            >
               <div>
-                <div style={{fontFamily: FONT.mono, fontSize: 16, color: chipTokens.gold, fontWeight: 800}}>
-                  TARGET PENGGUNAAN
+                <div style={{fontFamily: FONT.mono, fontSize: 15, color: chipTokens.gold, fontWeight: 800}}>
+                  TUJUAN PRODUKSI
                 </div>
-                <div style={{fontFamily: FONT.space, fontSize: 26, color: chipTokens.white, fontWeight: 900, marginTop: 4}}>
-                  Keamanan Dokumen Negara &amp; e-Paspor
+                <div style={{fontFamily: FONT.space, fontSize: 24, color: chipTokens.white, fontWeight: 900, marginTop: 2}}>
+                  Proteksi Identitas Nasional &amp; e-Paspor WNI
                 </div>
               </div>
               <div
                 style={{
-                  padding: '8px 16px',
+                  padding: '6px 14px',
                   backgroundColor: chipTokens.emerald,
                   color: chipTokens.ink,
-                  borderRadius: 10,
+                  borderRadius: 8,
                   fontFamily: FONT.mono,
-                  fontSize: 16,
+                  fontSize: 15,
                   fontWeight: 900,
                 }}
               >
-                ANTI-TAMPER IC
+                ANTI-TAMPER
               </div>
             </div>
           </ZineCard>
@@ -394,6 +498,7 @@ export const S2SnapdragonVsPaspor: React.FC = () => {
 
 /* ============================================================================
    S3: BEDAH FAKTA "FABLESS" — APPLE & NVIDIA JUGA 0 PABRIK (Cobalt Blueprint)
+   Zero Dead Space: 3 Structured Pipeline Tiers (Height ~1550px)
    ============================================================================ */
 export const S3FablessTruth: React.FC = () => {
   const frame = useCurrentFrame();
@@ -404,54 +509,57 @@ export const S3FablessTruth: React.FC = () => {
   const hPeruri = useHit('peruri');
   const hKripto = useHit('kripto');
 
-  const dashOffset = -(frame * 4) % 36;
+  const dashOffset = -(frame * 4.5) % 36;
+  const pulseWave = 0.5 + 0.5 * Math.sin(frame * 0.25);
 
   return (
     <PcbBackground
       bgColor={chipTokens.cobalt}
-      traceColor="rgba(59, 130, 246, 0.24)"
-      dotColor="rgba(147, 197, 253, 0.16)"
+      traceColor="rgba(59, 130, 246, 0.26)"
+      dotColor="rgba(147, 197, 253, 0.18)"
     >
       <ChipHUD
         index="03/06"
         label="SISTEM FABLESS"
         stepIndex={2}
         dark={true}
-        metricTag="GLOBAL SUPPLY CHAIN"
+        metricTag="SUPPLY CHAIN GLOBAL"
       />
 
       <div
         style={{
           position: 'absolute',
-          top: 170,
+          top: 168,
           left: 56,
           right: 56,
           display: 'flex',
           flexDirection: 'column',
-          gap: 20,
+          gap: 22,
         }}
       >
-        {/* Skeptical Quote Bubble */}
+        {/* ==================================================================
+            TIER 1: SKEPTICAL BUBBLE & GLOBAL TECH REALITY (Height ~560px)
+            ================================================================== */}
         <div
           style={{
             alignSelf: 'center',
-            padding: '12px 30px',
+            padding: '14px 34px',
             backgroundColor: '#1E293B',
-            border: `3.5px solid ${chipTokens.white}`,
+            border: `4px solid ${chipTokens.white}`,
             borderRadius: 999,
-            boxShadow: `6px 6px 0px ${chipTokens.ink}`,
-            transform: `scale(${0.88 + 0.12 * Math.max(0.3, hPabrik)})`,
+            boxShadow: `8px 8px 0px ${chipTokens.ink}`,
+            transform: `scale(${0.9 + 0.1 * Math.max(0.3, hPabrik)})`,
           }}
         >
-          <span style={{fontFamily: FONT.space, fontSize: 32, fontWeight: 900, color: chipTokens.gold}}>
+          <span style={{fontFamily: FONT.space, fontSize: 34, fontWeight: 900, color: chipTokens.gold}}>
             "Pabriknya di mana nih?! Halu!"
           </span>
         </div>
 
-        {/* The 3 Global Giants: Apple, Nvidia, Qualcomm */}
+        {/* 3 Semiconductor Giants Card */}
         {hApple > 0.02 && (
-          <ZineCard bg={chipTokens.cream} enter={hApple} rotate={-0.6} style={{padding: '22px 26px'}}>
-            <div style={{fontFamily: FONT.mono, fontSize: 18, fontWeight: 900, color: chipTokens.crimson, marginBottom: 12}}>
+          <ZineCard bg={chipTokens.cream} enter={hApple} rotate={-0.6} style={{padding: '24px 26px'}}>
+            <div style={{fontFamily: FONT.mono, fontSize: 18, fontWeight: 900, color: chipTokens.crimson, marginBottom: 14}}>
               FAKTA INDUSTRI SEMIKONDUKTOR GLOBAL
             </div>
             <div style={{display: 'flex', justifyContent: 'space-between', gap: 14}}>
@@ -465,17 +573,17 @@ export const S3FablessTruth: React.FC = () => {
                   style={{
                     flex: 1,
                     backgroundColor: chipTokens.ink,
-                    borderRadius: 16,
-                    padding: '14px 10px',
+                    borderRadius: 18,
+                    padding: '16px 10px',
                     textAlign: 'center',
                     border: `3px solid ${chipTokens.ink}`,
                     boxShadow: `5px 5px 0px ${chipTokens.cobaltLight}`,
                   }}
                 >
-                  <div style={{fontFamily: FONT.space, fontSize: 26, fontWeight: 900, color: chipTokens.white}}>
+                  <div style={{fontFamily: FONT.space, fontSize: 28, fontWeight: 900, color: chipTokens.white}}>
                     {b.name}
                   </div>
-                  <div style={{fontFamily: FONT.mono, fontSize: 14, color: chipTokens.gold, marginTop: 4}}>
+                  <div style={{fontFamily: FONT.mono, fontSize: 15, color: chipTokens.gold, marginTop: 4}}>
                     {b.sub}
                   </div>
                 </div>
@@ -483,14 +591,14 @@ export const S3FablessTruth: React.FC = () => {
             </div>
             <div
               style={{
-                marginTop: 12,
-                padding: '10px 16px',
+                marginTop: 14,
+                padding: '12px 18px',
                 backgroundColor: chipTokens.gold,
-                border: `3px solid ${chipTokens.ink}`,
+                border: `3.5px solid ${chipTokens.ink}`,
                 borderRadius: 12,
                 textAlign: 'center',
                 fontFamily: FONT.space,
-                fontSize: 26,
+                fontSize: 28,
                 fontWeight: 900,
                 color: chipTokens.ink,
               }}
@@ -500,15 +608,19 @@ export const S3FablessTruth: React.FC = () => {
           </ZineCard>
         )}
 
-        {/* Hero Semiconductor Architecture Diagram (Fabless Supply Chain) */}
+        {/* ==================================================================
+            TIER 2: THE FABLESS SUPPLY CHAIN PIPELINE (Height ~520px)
+            ================================================================== */}
         {hFabless > 0.02 && (
           <ZineCard
             bg="#0B1224"
             enter={hFabless}
             rotate={0.5}
-            style={{border: `4px solid ${chipTokens.gold}`, padding: '24px 26px'}}
+            borderColor={chipTokens.gold}
+            shadowColor={chipTokens.gold}
+            style={{padding: '26px 26px'}}
           >
-            <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 16}}>
+            <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 18}}>
               <span
                 style={{
                   fontFamily: FONT.mono,
@@ -532,7 +644,7 @@ export const S3FablessTruth: React.FC = () => {
               <div
                 style={{
                   flex: 1.3,
-                  padding: '18px 16px',
+                  padding: '20px 16px',
                   borderRadius: 18,
                   backgroundColor: chipTokens.crimson,
                   border: `3px solid ${chipTokens.white}`,
@@ -542,7 +654,7 @@ export const S3FablessTruth: React.FC = () => {
                 <div style={{fontFamily: FONT.mono, fontSize: 16, fontWeight: 800, color: chipTokens.gold}}>
                   OTAK &amp; ARSITEKTUR
                 </div>
-                <div style={{fontFamily: FONT.space, fontSize: 30, fontWeight: 900, color: chipTokens.white, marginTop: 4}}>
+                <div style={{fontFamily: FONT.space, fontSize: 32, fontWeight: 900, color: chipTokens.white, marginTop: 4}}>
                   ITB × PERURI
                 </div>
                 <div style={{fontFamily: FONT.mono, fontSize: 15, color: chipTokens.white, opacity: 0.95, marginTop: 6}}>
@@ -552,18 +664,18 @@ export const S3FablessTruth: React.FC = () => {
 
               {/* Data conduit / stream */}
               <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 4}}>
-                <svg width="74" height="40" viewBox="0 0 68 40" style={{flexShrink: 0}}>
+                <svg width="78" height="42" viewBox="0 0 78 42" style={{flexShrink: 0}}>
                   <line
                     x1="4"
-                    y1="20"
-                    x2="54"
-                    y2="20"
+                    y1="21"
+                    x2="60"
+                    y2="21"
                     stroke={chipTokens.gold}
-                    strokeWidth="5"
+                    strokeWidth="6"
                     strokeDasharray="10 8"
                     strokeDashoffset={dashOffset}
                   />
-                  <polygon points="50,10 66,20 50,30" fill={chipTokens.gold} />
+                  <polygon points="56,10 74,21 56,32" fill={chipTokens.gold} />
                 </svg>
                 <span style={{fontFamily: FONT.mono, fontSize: 13, color: chipTokens.gold, fontWeight: 800}}>
                   GDSII DATA
@@ -574,7 +686,7 @@ export const S3FablessTruth: React.FC = () => {
               <div
                 style={{
                   flex: 1,
-                  padding: '18px 16px',
+                  padding: '20px 16px',
                   borderRadius: 18,
                   backgroundColor: '#1E293B',
                   border: `3px solid ${chipTokens.cobaltLight}`,
@@ -583,7 +695,7 @@ export const S3FablessTruth: React.FC = () => {
                 <div style={{fontFamily: FONT.mono, fontSize: 16, fontWeight: 800, color: chipTokens.cobaltLight}}>
                   MANUFAKTUR
                 </div>
-                <div style={{fontFamily: FONT.space, fontSize: 26, fontWeight: 900, color: chipTokens.white, marginTop: 4}}>
+                <div style={{fontFamily: FONT.space, fontSize: 28, fontWeight: 900, color: chipTokens.white, marginTop: 4}}>
                   FOUNDRY
                 </div>
                 <div style={{fontFamily: FONT.mono, fontSize: 14, color: '#CBD5E1', marginTop: 6}}>
@@ -594,23 +706,27 @@ export const S3FablessTruth: React.FC = () => {
           </ZineCard>
         )}
 
-        {/* Real Sandbox Poster Evidence Card */}
+        {/* ==================================================================
+            TIER 3: REAL EVIDENCE CARD — PERURI SANDBOX (Height ~400px)
+            ================================================================== */}
         {hKripto > 0.05 && (
           <ZineCard
             bg="#0B1224"
             enter={hKripto}
             rotate={-0.6}
-            style={{border: `3.5px solid ${chipTokens.emerald}`, padding: '16px 22px'}}
+            borderColor={chipTokens.emerald}
+            shadowColor={chipTokens.emerald}
+            style={{padding: '18px 24px'}}
           >
-            <div style={{display: 'flex', alignItems: 'center', gap: 16}}>
+            <div style={{display: 'flex', alignItems: 'center', gap: 18}}>
               <Img
                 src={staticFile('news_assets/peruri_sandbox_chip_official.jpg')}
                 style={{
-                  width: 140,
-                  height: 90,
+                  width: 170,
+                  height: 110,
                   objectFit: 'cover',
-                  borderRadius: 10,
-                  border: `2px solid ${chipTokens.emerald}`,
+                  borderRadius: 12,
+                  border: `3px solid ${chipTokens.emerald}`,
                   flexShrink: 0,
                 }}
               />
@@ -618,11 +734,11 @@ export const S3FablessTruth: React.FC = () => {
                 <div style={{fontFamily: FONT.mono, fontSize: 15, color: chipTokens.emerald, fontWeight: 800}}>
                   BUKTI NYATA EKOSISTEM NASIONAL
                 </div>
-                <div style={{fontFamily: FONT.space, fontSize: 22, color: chipTokens.white, fontWeight: 900, marginTop: 2}}>
+                <div style={{fontFamily: FONT.space, fontSize: 24, color: chipTokens.white, fontWeight: 900, marginTop: 2}}>
                   Sandbox Desain Chip Merah Putih PERURI
                 </div>
-                <div style={{fontFamily: FONT.mono, fontSize: 14, color: '#94A3B8', marginTop: 4}}>
-                  Pelatihan &amp; perancangan arsitektur sirkuit terbuka di universitas RI
+                <div style={{fontFamily: FONT.mono, fontSize: 15, color: '#94A3B8', marginTop: 6}}>
+                  Desain sirkuit &amp; algoritma enkripsi 100% dikendalikan talenta dalam negeri!
                 </div>
               </div>
             </div>

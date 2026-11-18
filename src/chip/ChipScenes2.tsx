@@ -7,12 +7,14 @@ import {ChipHUD} from './ChipHUD';
 import {
   PcbBackground,
   SecureChipSvg,
+  TactileStamp,
   TapCursor,
   ZineCard,
 } from './ChipKit';
 
 /* ============================================================================
    S4: KEDAULATAN DATA — 100% IMPOR VS PRIVATE KEY SENDIRI (Obsidian Dark)
+   Zero Dead Space: 3 Tactical Cyber Defense Tiers (Height ~1550px)
    ============================================================================ */
 export const S4SovereignKey: React.FC = () => {
   const frame = useCurrentFrame();
@@ -23,10 +25,10 @@ export const S4SovereignKey: React.FC = () => {
   const hDiintip = useHit('diintip');
 
   const shieldActive = hSendiri > 0.15;
-  const laserDash = -(frame * 4) % 24;
+  const laserDash = -(frame * 5) % 24;
 
-  const hexTick = Math.floor(frame / 4);
-  const hexBytes = ['4F', 'A9', 'E2', '1C', '7B', 'D0', '8E', '3A'].map(
+  const hexTick = Math.floor(frame / 3);
+  const hexBytes = ['4F', 'A9', 'E2', '1C', '7B', 'D0', '8E', '3A', '9C', 'F1'].map(
     (b, i) =>
       ((parseInt(b, 16) + hexTick * (i + 3)) % 255)
         .toString(16)
@@ -37,7 +39,7 @@ export const S4SovereignKey: React.FC = () => {
   return (
     <PcbBackground
       bgColor={chipTokens.obsidian}
-      traceColor="rgba(16, 185, 129, 0.16)"
+      traceColor="rgba(16, 185, 129, 0.18)"
       dotColor="rgba(255, 255, 255, 0.08)"
     >
       <ChipHUD
@@ -51,7 +53,7 @@ export const S4SovereignKey: React.FC = () => {
       <div
         style={{
           position: 'absolute',
-          top: 172,
+          top: 168,
           left: 56,
           right: 56,
           display: 'flex',
@@ -59,11 +61,14 @@ export const S4SovereignKey: React.FC = () => {
           gap: 22,
         }}
       >
-        <div style={{textAlign: 'center', transform: `scale(${0.9 + 0.1 * Math.max(0.4, hPenting)})`}}>
+        {/* ==================================================================
+            TIER 1: STRATEGIC HEADLINE (Height ~180px)
+            ================================================================== */}
+        <div style={{textAlign: 'center', transform: `scale(${0.92 + 0.08 * Math.max(0.4, hPenting)})`}}>
           <span
             style={{
               fontFamily: FONT.space,
-              fontSize: 52,
+              fontSize: 54,
               fontWeight: 900,
               color: chipTokens.white,
               letterSpacing: '-0.02em',
@@ -71,18 +76,31 @@ export const S4SovereignKey: React.FC = () => {
           >
             KENAPA INI <span style={{color: chipTokens.emerald}}>PENTING?</span>
           </span>
+          <div
+            style={{
+              fontFamily: FONT.mono,
+              fontSize: 18,
+              fontWeight: 800,
+              color: chipTokens.gold,
+              marginTop: 6,
+              letterSpacing: '0.04em',
+            }}
+          >
+            KEDAULATAN KRIPTOGRAFI DOKUMEN NEGARA
+          </div>
         </div>
 
-        {/* Main Interactive Cybersecurity Stage */}
+        {/* ==================================================================
+            TIER 2: CYBER DEFENSE BATTLEFIELD STAGE (Height ~780px)
+            ================================================================== */}
         <ZineCard
           bg="#111827"
           enter={Math.max(0.5, hImpor)}
-          style={{
-            padding: '26px 28px',
-            border: `4px solid ${shieldActive ? chipTokens.emerald : chipTokens.crimson}`,
-            boxShadow: `10px 10px 0px ${shieldActive ? chipTokens.emerald : chipTokens.crimson}`,
-          }}
+          borderColor={shieldActive ? chipTokens.emerald : chipTokens.crimson}
+          shadowColor={shieldActive ? chipTokens.emerald : chipTokens.crimson}
+          style={{padding: '24px 28px'}}
         >
+          {/* Top Identifier */}
           <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 16}}>
             <span
               style={{
@@ -97,29 +115,30 @@ export const S4SovereignKey: React.FC = () => {
             >
               {shieldActive ? 'PRIVATE KEY: MILIK SENDIRI' : 'RISIKO: 100% CHIP IMPOR'}
             </span>
-            <span style={{fontFamily: FONT.mono, fontSize: 18, fontWeight: 800, color: '#94A3B8'}}>
-              {shieldActive ? 'PROTECTED // ENCLAVE' : 'VULNERABLE // RAWAN BACKDOOR'}
+            <span style={{fontFamily: FONT.mono, fontSize: 18, fontWeight: 900, color: '#94A3B8'}}>
+              {shieldActive ? 'ENCLAVE ACTIVE' : 'RAWAN BACKDOOR'}
             </span>
           </div>
 
-          <div style={{display: 'flex', justifyContent: 'center', padding: '12px 0'}}>
-            <svg width="860" height="270" viewBox="0 0 780 250">
+          {/* Defense Grid SVG */}
+          <div style={{display: 'flex', justifyContent: 'center', padding: '10px 0'}}>
+            <svg width="860" height="320" viewBox="0 0 780 290">
               {/* Left Attacker Node */}
-              <rect x="20" y="65" width="175" height="120" rx="18" fill="#1F2937" stroke={chipTokens.crimson} strokeWidth="4.5" />
-              <path d="M55 125 Q108 80 160 125 Q108 170 55 125 Z" fill="none" stroke={chipTokens.crimson} strokeWidth="4.5" />
-              <circle cx="108" cy="125" r="15" fill={chipTokens.crimson} />
-              <text x="108" y="212" textAnchor="middle" fill={chipTokens.crimson} fontFamily="monospace" fontWeight="900" fontSize="18">
+              <rect x="20" y="80" width="180" height="130" rx="20" fill="#1F2937" stroke={chipTokens.crimson} strokeWidth="5" />
+              <path d="M55 145 Q110 95 165 145 Q110 195 55 145 Z" fill="none" stroke={chipTokens.crimson} strokeWidth="4.5" />
+              <circle cx="110" cy="145" r="16" fill={chipTokens.crimson} />
+              <text x="110" y="240" textAnchor="middle" fill={chipTokens.crimson} fontFamily="monospace" fontWeight="900" fontSize="19">
                 PIHAK ASING
               </text>
 
-              {/* Scanning Laser Beam */}
+              {/* Laser Attack Conduit */}
               <line
-                x1="202"
-                y1="125"
-                x2={shieldActive ? '445' : '575'}
-                y2="125"
+                x1="206"
+                y1="145"
+                x2={shieldActive ? '440' : '575'}
+                y2="145"
                 stroke={chipTokens.crimson}
-                strokeWidth="7"
+                strokeWidth="8"
                 strokeDasharray="14 10"
                 strokeDashoffset={laserDash}
               />
@@ -127,34 +146,34 @@ export const S4SovereignKey: React.FC = () => {
               {/* Deflection Sparks when Shield is Active */}
               {shieldActive && (
                 <g>
-                  <line x1="445" y1="125" x2="390" y2="58" stroke={chipTokens.gold} strokeWidth="6" strokeLinecap="round" />
-                  <line x1="445" y1="125" x2="390" y2="192" stroke={chipTokens.gold} strokeWidth="6" strokeLinecap="round" />
-                  <circle cx="445" cy="125" r={11 + 4 * Math.sin(frame * 0.4)} fill={chipTokens.gold} />
+                  <line x1="440" y1="145" x2="380" y2="70" stroke={chipTokens.gold} strokeWidth="7" strokeLinecap="round" />
+                  <line x1="440" y1="145" x2="380" y2="220" stroke={chipTokens.gold} strokeWidth="7" strokeLinecap="round" />
+                  <circle cx="440" cy="145" r={12 + 5 * Math.sin(frame * 0.4)} fill={chipTokens.gold} />
                 </g>
               )}
 
-              {/* Center Cryptographic Shield (Aegis RI) */}
+              {/* Center Cryptographic Shield (Aegis Merah Putih) */}
               {shieldActive && (
-                <g transform={`translate(455, 45) scale(${0.86 + 0.14 * hSendiri})`}>
+                <g transform={`translate(450, 55) scale(${0.88 + 0.12 * hSendiri})`}>
                   <path
-                    d="M48 0 L96 20 V82 C96 126 48 160 48 160 C48 160 0 126 0 82 V20 Z"
+                    d="M52 0 L104 22 V90 C104 138 52 176 52 176 C52 176 0 138 0 90 V22 Z"
                     fill={chipTokens.emerald}
                     stroke={chipTokens.white}
-                    strokeWidth="4.5"
+                    strokeWidth="5"
                   />
-                  <circle cx="48" cy="64" r="15" fill={chipTokens.ink} />
-                  <rect x="42" y="75" width="12" height="26" rx="4" fill={chipTokens.ink} />
-                  <circle cx="48" cy="88" r="3" fill={chipTokens.gold} />
+                  <circle cx="52" cy="70" r="16" fill={chipTokens.ink} />
+                  <rect x="45" y="82" width="14" height="28" rx="4" fill={chipTokens.ink} />
+                  <circle cx="52" cy="96" r="3" fill={chipTokens.gold} />
                 </g>
               )}
 
               {/* Right Sovereign Vault Node */}
-              <g transform="translate(592, 50)">
-                <rect x="0" y="0" width="150" height="150" rx="24" fill="#0F172A" stroke={shieldActive ? chipTokens.emerald : chipTokens.crimson} strokeWidth="5" />
-                <rect x="26" y="26" width="98" height="98" rx="14" fill={chipTokens.crimson} />
-                <rect x="26" y="75" width="98" height="49" fill={chipTokens.white} />
-                <rect x="26" y="26" width="98" height="98" rx="14" fill="none" stroke={chipTokens.ink} strokeWidth="3.5" />
-                <text x="75" y="180" textAnchor="middle" fill={chipTokens.white} fontFamily="monospace" fontWeight="900" fontSize="18">
+              <g transform="translate(590, 65)">
+                <rect x="0" y="0" width="160" height="160" rx="26" fill="#0F172A" stroke={shieldActive ? chipTokens.emerald : chipTokens.crimson} strokeWidth="5.5" />
+                <rect x="28" y="28" width="104" height="104" rx="16" fill={chipTokens.crimson} />
+                <rect x="28" y="80" width="104" height="52" fill={chipTokens.white} />
+                <rect x="28" y="28" width="104" height="104" rx="16" fill="none" stroke={chipTokens.ink} strokeWidth="4" />
+                <text x="80" y="196" textAnchor="middle" fill={chipTokens.white} fontFamily="monospace" fontWeight="900" fontSize="19">
                   DATA NEGARA
                 </text>
               </g>
@@ -174,7 +193,7 @@ export const S4SovereignKey: React.FC = () => {
               justifyContent: 'space-between',
             }}
           >
-            <span style={{fontFamily: FONT.mono, fontSize: 20, fontWeight: 700, color: chipTokens.gold}}>
+            <span style={{fontFamily: FONT.mono, fontSize: 19, fontWeight: 700, color: chipTokens.gold}}>
               KEY STREAM: {hexBytes.join(' ')}
             </span>
             <span
@@ -190,23 +209,24 @@ export const S4SovereignKey: React.FC = () => {
           </div>
         </ZineCard>
 
-        {/* Bottom Detailed Insight Card */}
+        {/* ==================================================================
+            TIER 3: STRATEGIC COMPARISON DOSSIER (Height ~440px)
+            ================================================================== */}
         <ZineCard
           bg={shieldActive ? '#064E3B' : '#3B0D16'}
           enter={Math.max(0.5, hImpor)}
           rotate={0.4}
-          style={{
-            border: `3.5px solid ${shieldActive ? chipTokens.emerald : chipTokens.crimson}`,
-            padding: '20px 28px',
-          }}
+          borderColor={shieldActive ? chipTokens.emerald : chipTokens.crimson}
+          shadowColor={shieldActive ? chipTokens.emerald : chipTokens.crimson}
+          style={{padding: '22px 28px'}}
         >
           <div style={{fontFamily: FONT.mono, fontSize: 18, color: chipTokens.gold, fontWeight: 800}}>
             {shieldActive ? 'KEDAULATAN KRIPTOGRAFI LOKAL' : 'KETIDAKPASTIAN SUPLAY CHIP IMPOR'}
           </div>
-          <div style={{fontFamily: FONT.space, fontSize: 28, color: chipTokens.white, fontWeight: 900, marginTop: 4}}>
+          <div style={{fontFamily: FONT.space, fontSize: 30, color: chipTokens.white, fontWeight: 900, marginTop: 4, lineHeight: 1.2}}>
             {shieldActive
-              ? 'Kunci enkripsi & private key sepenuhnya dipegang Indonesia'
-              : 'Risiko disusupi celah keamanan backdoor pihak luar'}
+              ? 'Kunci privat & arsitektur enkripsi sepenuhnya dipegang Indonesia'
+              : 'Risiko celah keamanan backdoor pihak luar pada dokumen penting negara'}
           </div>
         </ZineCard>
       </div>
@@ -215,7 +235,8 @@ export const S4SovereignKey: React.FC = () => {
 };
 
 /* ============================================================================
-   S5: REALISTIS & CTA INTERAKTIF (Warm Light Studio)
+   S5: REALISTIS & CTA INTERAKTIF (Warm Slate & Light Studio)
+   Zero Dead Space: 2 Dense Roadmap & Debate Tiers (Height ~1550px)
    ============================================================================ */
 export const S5RealistisCta: React.FC = () => {
   const globalFrame = useGlobalFrame();
@@ -249,15 +270,17 @@ export const S5RealistisCta: React.FC = () => {
       <div
         style={{
           position: 'absolute',
-          top: 172,
+          top: 168,
           left: 56,
           right: 56,
           display: 'flex',
           flexDirection: 'column',
-          gap: 22,
+          gap: 24,
         }}
       >
-        {/* Step-by-Step Realistic Strategy Card */}
+        {/* ==================================================================
+            TIER 1: STEP-BY-STEP REALISTIC STRATEGY (Height ~540px)
+            ================================================================== */}
         <ZineCard bg={chipTokens.white} enter={Math.max(0.4, hRealistis)} rotate={-0.6} style={{padding: '24px 28px'}}>
           <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 16}}>
             <span
@@ -291,16 +314,16 @@ export const S5RealistisCta: React.FC = () => {
 
           <div style={{display: 'flex', alignItems: 'center', gap: 14}}>
             {[
-              {step: '01', label: 'DESAIN IC', desc: 'Rancang sirkuit', active: true},
-              {step: '02', label: 'EKOSISTEM', desc: 'SDM & riset ITB', active: true},
-              {step: '03', label: 'MANDIRI', desc: 'Keamanan data', active: hRealistis > 0.5},
+              {step: '01', label: 'DESAIN IC', desc: 'Rancang sirkuit & enkripsi', active: true},
+              {step: '02', label: 'EKOSISTEM', desc: 'Riset ITB & talenta', active: true},
+              {step: '03', label: 'MANDIRI', desc: 'Bebas celah asing', active: hRealistis > 0.5},
             ].map((item) => (
               <div
                 key={item.step}
                 style={{
                   flex: 1,
-                  padding: '18px 12px',
-                  borderRadius: 16,
+                  padding: '20px 14px',
+                  borderRadius: 18,
                   backgroundColor: item.active ? chipTokens.ink : '#E2E8F0',
                   border: `3.5px solid ${chipTokens.ink}`,
                   textAlign: 'center',
@@ -309,10 +332,10 @@ export const S5RealistisCta: React.FC = () => {
                 <div style={{fontFamily: FONT.mono, fontSize: 16, fontWeight: 800, color: chipTokens.gold}}>
                   STEP {item.step}
                 </div>
-                <div style={{fontFamily: FONT.space, fontSize: 24, fontWeight: 900, color: chipTokens.white, marginTop: 4}}>
+                <div style={{fontFamily: FONT.space, fontSize: 26, fontWeight: 900, color: chipTokens.white, marginTop: 4}}>
                   {item.label}
                 </div>
-                <div style={{fontFamily: FONT.mono, fontSize: 13, color: '#CBD5E1', marginTop: 4}}>
+                <div style={{fontFamily: FONT.mono, fontSize: 14, color: '#CBD5E1', marginTop: 4}}>
                   {item.desc}
                 </div>
               </div>
@@ -320,24 +343,26 @@ export const S5RealistisCta: React.FC = () => {
           </div>
         </ZineCard>
 
-        {/* Community Polling & CTA Interactive Arena */}
+        {/* ==================================================================
+            TIER 2: COMMUNITY POLLING & CTA ARENA (Height ~920px)
+            ================================================================== */}
         {hKalian > 0.02 && (
           <ZineCard
             bg={chipTokens.ink}
             enter={hKalian}
             rotate={0.6}
+            borderColor={chipTokens.ink}
+            shadowColor={chipTokens.crimson}
             style={{
-              border: `4px solid ${chipTokens.ink}`,
-              boxShadow: `12px 12px 0px ${chipTokens.crimson}`,
               textAlign: 'center',
               position: 'relative',
-              padding: '30px 26px',
+              padding: '34px 28px',
             }}
           >
             <div
               style={{
                 fontFamily: FONT.space,
-                fontSize: 46,
+                fontSize: 48,
                 fontWeight: 900,
                 color: chipTokens.white,
                 lineHeight: 1.15,
@@ -347,40 +372,40 @@ export const S5RealistisCta: React.FC = () => {
               <span style={{color: chipTokens.gold}}>GIMANA?</span>
             </div>
 
-            {/* Interactive Poll Bars */}
+            {/* Interactive Polling Bars */}
             <div
               style={{
-                marginTop: 20,
+                marginTop: 24,
                 display: 'flex',
                 flexDirection: 'column',
-                gap: 12,
+                gap: 16,
                 textAlign: 'left',
               }}
             >
               <div>
-                <div style={{display: 'flex', justifyContent: 'space-between', marginBottom: 4}}>
-                  <span style={{fontFamily: FONT.mono, fontSize: 18, fontWeight: 800, color: chipTokens.emerald}}>
-                    Kubu Realistis (Dukung Desain Fabless)
+                <div style={{display: 'flex', justifyContent: 'space-between', marginBottom: 6}}>
+                  <span style={{fontFamily: FONT.mono, fontSize: 19, fontWeight: 800, color: chipTokens.emerald}}>
+                    Kubu Realistis (Dukung Desain Fabless Dulu)
                   </span>
-                  <span style={{fontFamily: FONT.mono, fontSize: 18, fontWeight: 900, color: chipTokens.emerald}}>
+                  <span style={{fontFamily: FONT.mono, fontSize: 19, fontWeight: 900, color: chipTokens.emerald}}>
                     84%
                   </span>
                 </div>
-                <div style={{height: 12, borderRadius: 999, backgroundColor: '#334155', overflow: 'hidden'}}>
+                <div style={{height: 16, borderRadius: 999, backgroundColor: '#334155', overflow: 'hidden'}}>
                   <div style={{width: '84%', height: '100%', backgroundColor: chipTokens.emerald, borderRadius: 999}} />
                 </div>
               </div>
 
               <div>
-                <div style={{display: 'flex', justifyContent: 'space-between', marginBottom: 4}}>
-                  <span style={{fontFamily: FONT.mono, fontSize: 18, fontWeight: 800, color: chipTokens.crimson}}>
+                <div style={{display: 'flex', justifyContent: 'space-between', marginBottom: 6}}>
+                  <span style={{fontFamily: FONT.mono, fontSize: 19, fontWeight: 800, color: chipTokens.crimson}}>
                     Kubu Skeptis (Mau Langsung Pabrik Fisik)
                   </span>
-                  <span style={{fontFamily: FONT.mono, fontSize: 18, fontWeight: 900, color: chipTokens.crimson}}>
+                  <span style={{fontFamily: FONT.mono, fontSize: 19, fontWeight: 900, color: chipTokens.crimson}}>
                     16%
                   </span>
                 </div>
-                <div style={{height: 12, borderRadius: 999, backgroundColor: '#334155', overflow: 'hidden'}}>
+                <div style={{height: 16, borderRadius: 999, backgroundColor: '#334155', overflow: 'hidden'}}>
                   <div style={{width: '16%', height: '100%', backgroundColor: chipTokens.crimson, borderRadius: 999}} />
                 </div>
               </div>
@@ -388,21 +413,21 @@ export const S5RealistisCta: React.FC = () => {
 
             {/* Tactile Follow Button with TapCursor */}
             {hFollow > 0.02 && (
-              <div style={{marginTop: 24, position: 'relative', display: 'inline-block'}}>
+              <div style={{marginTop: 28, position: 'relative', display: 'inline-block'}}>
                 <div
                   style={{
-                    padding: '16px 48px',
+                    padding: '18px 52px',
                     borderRadius: 999,
                     backgroundColor: isFollowed ? chipTokens.emerald : chipTokens.crimson,
-                    border: `4px solid ${chipTokens.white}`,
-                    boxShadow: `6px 6px 0px ${chipTokens.gold}`,
+                    border: `4.5px solid ${chipTokens.white}`,
+                    boxShadow: `7px 7px 0px ${chipTokens.gold}`,
                     transform: `scale(${btnPress})`,
                     display: 'inline-flex',
                     alignItems: 'center',
                     gap: 14,
                   }}
                 >
-                  <svg width="28" height="28" viewBox="0 0 24 24">
+                  <svg width="30" height="30" viewBox="0 0 24 24">
                     {isFollowed ? (
                       <path
                         d="M5 13l4 4L19 7"
@@ -425,7 +450,7 @@ export const S5RealistisCta: React.FC = () => {
                   <span
                     style={{
                       fontFamily: FONT.space,
-                      fontSize: 32,
+                      fontSize: 34,
                       fontWeight: 900,
                       color: isFollowed ? chipTokens.ink : chipTokens.white,
                       letterSpacing: '0.04em',
@@ -435,7 +460,7 @@ export const S5RealistisCta: React.FC = () => {
                   </span>
                 </div>
 
-                <TapCursor atFrame={followLocal} x={270} y={52} />
+                <TapCursor atFrame={followLocal} x={280} y={54} />
               </div>
             )}
           </ZineCard>
@@ -447,6 +472,7 @@ export const S5RealistisCta: React.FC = () => {
 
 /* ============================================================================
    S6: OUTRO & PERSONAL BRANDING RESMI — rhmt ofc (rhmt.biz.id)
+   Zero Dead Space: 3 Majestic Brand & Topic Tiers (Height ~1550px)
    ============================================================================ */
 export const S6OutroBrand: React.FC = () => {
   const frame = useCurrentFrame();
@@ -461,7 +487,7 @@ export const S6OutroBrand: React.FC = () => {
   return (
     <PcbBackground
       bgColor="#0B0C10"
-      traceColor="rgba(251, 191, 36, 0.18)"
+      traceColor="rgba(251, 191, 36, 0.2)"
       dotColor="rgba(255, 255, 255, 0.12)"
     >
       <ChipHUD
@@ -475,28 +501,30 @@ export const S6OutroBrand: React.FC = () => {
       <div
         style={{
           position: 'absolute',
-          top: 172,
+          top: 168,
           left: 56,
           right: 56,
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
-          gap: 22,
-          transform: `scale(${0.88 + 0.12 * enter})`,
+          gap: 24,
+          transform: `scale(${0.9 + 0.1 * enter})`,
         }}
       >
-        <SecureChipSvg pulseFrame={frame} size={210} />
+        {/* TIER 1: Chip Die Hero (Height ~440px) */}
+        <SecureChipSvg pulseFrame={frame} size={230} />
 
-        {/* Clean Personal Brand Wordmark Card (Zero Gemini Logo, Zero Anime Character) */}
+        {/* TIER 2: Grand Brand Showcase Card (Height ~600px) */}
         <ZineCard
           bg={chipTokens.cream}
           enter={enter}
           rotate={-0.6}
+          borderColor={chipTokens.ink}
+          shadowColor={chipTokens.crimson}
           style={{
             width: '100%',
             textAlign: 'center',
-            padding: '32px 26px',
-            boxShadow: `12px 12px 0px ${chipTokens.crimson}`,
+            padding: '34px 26px',
           }}
         >
           <div style={{fontFamily: FONT.mono, fontSize: 20, fontWeight: 900, color: chipTokens.crimson}}>
@@ -505,7 +533,7 @@ export const S6OutroBrand: React.FC = () => {
           <div
             style={{
               fontFamily: FONT.space,
-              fontSize: 84,
+              fontSize: 88,
               fontWeight: 900,
               color: chipTokens.ink,
               letterSpacing: '-0.03em',
@@ -517,31 +545,31 @@ export const S6OutroBrand: React.FC = () => {
           </div>
           <div
             style={{
-              marginTop: 18,
+              marginTop: 20,
               display: 'inline-flex',
               alignItems: 'center',
               gap: 12,
-              padding: '12px 36px',
+              padding: '14px 40px',
               backgroundColor: chipTokens.gold,
               border: `3.5px solid ${chipTokens.ink}`,
               borderRadius: 999,
-              boxShadow: `5px 5px 0px ${chipTokens.ink}`,
+              boxShadow: `6px 6px 0px ${chipTokens.ink}`,
             }}
           >
             <span
               style={{
-                width: 12,
-                height: 12,
+                width: 14,
+                height: 14,
                 borderRadius: '50%',
                 backgroundColor: chipTokens.emerald,
-                boxShadow: `0 0 8px ${chipTokens.emerald}`,
+                boxShadow: `0 0 10px ${chipTokens.emerald}`,
                 display: 'inline-block',
               }}
             />
             <span
               style={{
                 fontFamily: FONT.mono,
-                fontSize: 28,
+                fontSize: 30,
                 fontWeight: 900,
                 color: chipTokens.ink,
               }}
@@ -551,26 +579,28 @@ export const S6OutroBrand: React.FC = () => {
           </div>
         </ZineCard>
 
-        {/* Topic Highlights Chips */}
+        {/* TIER 3: Research Roadmap Badges (Height ~400px) */}
         <div style={{width: '100%'}}>
           <ZineCard
             bg="#1E1B2E"
             enter={enter}
             rotate={0.8}
-            style={{border: `3.5px solid ${chipTokens.gold}`, padding: '18px 24px'}}
+            borderColor={chipTokens.gold}
+            shadowColor={chipTokens.gold}
+            style={{padding: '20px 24px'}}
           >
             <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between'}}>
               <div>
                 <div style={{fontFamily: FONT.mono, fontSize: 16, color: chipTokens.gold, fontWeight: 800}}>
                   KONTEN &amp; RISET SELANJUTNYA
                 </div>
-                <div style={{fontFamily: FONT.space, fontSize: 26, color: chipTokens.white, fontWeight: 900, marginTop: 4}}>
+                <div style={{fontFamily: FONT.space, fontSize: 28, color: chipTokens.white, fontWeight: 900, marginTop: 4}}>
                   Bedah Arsitektur Chip &amp; DevOps Indonesia
                 </div>
               </div>
               <div
                 style={{
-                  padding: '6px 16px',
+                  padding: '8px 18px',
                   backgroundColor: chipTokens.gold,
                   color: chipTokens.ink,
                   borderRadius: 10,
