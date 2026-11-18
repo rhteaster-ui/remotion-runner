@@ -10,12 +10,12 @@ export type ElainaGptGesture =
   | 'chin_rest';
 
 const ELAINA_GPT_ASSETS: Record<ElainaGptGesture, string> = {
-  open_hand: 'assets/elaina_gpt/06_open_hand.png',
-  finger_gun: 'assets/elaina_gpt/01_finger_gun.png',
-  arms_crossed: 'assets/elaina_gpt/02_arms_crossed.png',
-  excited: 'assets/elaina_gpt/03_excited.png',
-  double_peace: 'assets/elaina_gpt/04_double_peace.png',
-  chin_rest: 'assets/elaina_gpt/05_chin_rest.png',
+  open_hand: 'assets/elaina_v3/intro.png',
+  finger_gun: 'assets/elaina_v3/pointing.png',
+  arms_crossed: 'assets/elaina_v3/shocked.png',
+  excited: 'assets/elaina_v3/pointing.png',
+  double_peace: 'assets/elaina_v3/pointing.png',
+  chin_rest: 'assets/elaina_v3/shocked.png',
 };
 
 export interface ElainaGptAnchorProps {

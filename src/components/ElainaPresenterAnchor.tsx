@@ -35,14 +35,14 @@ export interface ElainaPresenterAnchorProps {
 // ELAINA ASSET MAP — Gesture-aware image switching
 // ---------------------------------------------------------------------------
 const ELAINA_ASSETS: Record<string, {bust: string; full: string}> = {
-  idle:       {bust: 'assets/elaina/elaina-bust.png',          full: 'assets/elaina/elaina-default.png'},
-  smug:       {bust: 'assets/elaina/elaina-wink-point.png',    full: 'assets/elaina/elaina-wink-point.png'},
-  wink_point: {bust: 'assets/elaina/elaina-wink-point.png',    full: 'assets/elaina/elaina-wink-point.png'},
-  thinking:   {bust: 'assets/elaina/elaina-bust.png',          full: 'assets/elaina/elaina-default.png'},
-  idea:       {bust: 'assets/elaina/elaina-wink-point.png',    full: 'assets/elaina/elaina-wink-point.png'},
-  point_up:   {bust: 'assets/elaina/elaina-pointing.png',      full: 'assets/elaina/elaina-pointing.png'},
-  alert:      {bust: 'assets/elaina/elaina-alert.png',         full: 'assets/elaina/elaina-alert.png'},
-  thumbs_up:  {bust: 'assets/elaina/elaina-wink-point.png',    full: 'assets/elaina/elaina-wink-point.png'},
+  idle:       {bust: 'assets/elaina_v3/intro.png',    full: 'assets/elaina_v3/intro.png'},
+  smug:       {bust: 'assets/elaina_v3/pointing.png', full: 'assets/elaina_v3/pointing.png'},
+  wink_point: {bust: 'assets/elaina_v3/pointing.png', full: 'assets/elaina_v3/pointing.png'},
+  thinking:   {bust: 'assets/elaina_v3/intro.png',    full: 'assets/elaina_v3/intro.png'},
+  idea:       {bust: 'assets/elaina_v3/pointing.png', full: 'assets/elaina_v3/pointing.png'},
+  point_up:   {bust: 'assets/elaina_v3/pointing.png', full: 'assets/elaina_v3/pointing.png'},
+  alert:      {bust: 'assets/elaina_v3/shocked.png',  full: 'assets/elaina_v3/shocked.png'},
+  thumbs_up:  {bust: 'assets/elaina_v3/pointing.png', full: 'assets/elaina_v3/pointing.png'},
 };
 
 // ---------------------------------------------------------------------------
@@ -241,7 +241,7 @@ export const ElainaPresenterAnchor: React.FC<ElainaPresenterAnchorProps> = ({
 
   const isDark = theme === 'dark';
   const width = size;
-  const height = mode === 'full' ? Math.round(size * 1.7) : Math.round(size * 1.25);
+  const height = Math.round(size * 1.34);
 
   // Which particles to show
   const showBurstParticles = isIdea || isSmug || isAlert;
