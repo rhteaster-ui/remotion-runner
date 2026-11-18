@@ -23,9 +23,19 @@ import repoflowTimeline from './data/repoflow-timeline.json';
 import erekapTimeline from './data/erekap-timeline.json';
 import platypusTimeline from './data/platypus-timeline.json';
 import jsTimeline from './data/js-timeline.json';
+import watCues from './data/wat-cues.json';
+import {JSWat} from './wat/JSWat';
 
 export const Root: React.FC = () => (
   <>
+    <Composition
+      id="JSWat"
+      component={JSWat}
+      width={1080}
+      height={1920}
+      fps={watCues.fps}
+      durationInFrames={watCues.totalFrames}
+    />
     <Composition
       id="JavaScriptAbsurd"
       component={JavaScriptVideo}

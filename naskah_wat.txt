@@ -1,0 +1,45 @@
+# NASKAH v2 — "JavaScript Nggak Pernah Bilang Error"  (Elaina)
+# SUMBER KEBENARAN tunggal untuk: TTS, subtitle, DAN timing visual.
+#
+# SINTAKS
+#   @nama=kata        -> penanda cue. Visual WAJIB "nge-hit" tepat di kata ini.
+#   {tampil|ucap}     -> subtitle menampilkan `tampil`, TTS mengucapkan `ucap`.
+#   1 baris = 1 napas. Tanda "…" = jeda dramatis (~0.4 detik).
+#   Baris berawalan # diabaikan. "## Sx" = awal scene.
+
+## S1
+Satu tambah satu… @sebelas=sebelas.
+Kamu nggak salah dengar, @js=ini JavaScript.
+Dibikin cuma @sepuluh=sepuluh hari, tapi dipakai @semua=hampir semua website di bumi.
+Masalahnya, dia nggak pernah mau @error=bilang error.
+
+## S2
+@contoh=Contoh. Angka ketemu @teks=teks, @plus=plus berubah jadi @tempel=tempel.
+Satu plus teks satu, @sebelas2=sebelas.
+Tapi @minus=minus? Lima teks kurang tiga, @dua=dua.
+Plus tempel, minus hitung. @konsisten=Konsisten? Enggak. @percaya=Percaya diri? Banget.
+@kasir=Bayangin kasir minimarket pakai JavaScript: belanja @seribu1=seribu, parkir @seribu2=seribu, totalnya… @total=sepuluh juta seribu, Mas.
+
+## S3
+@nan=Berikutnya, {NaN|Nan}, artinya @bukan=bukan angka.
+Cek tipenya… @number=number.
+Bukan angka, tapi tipenya angka.
+Ini kayak @esteh=pesan es teh, terus pelayannya bilang: Mas, ini bukan es teh, tapi @tipenya=tipenya es teh.
+
+## S4
+@yang=Yang lebih gila, tuker posisi aja beda hasil.
+Di {console|konsol}, @array=array kosong tambah @objek=objek kosong, hasilnya tulisan @obj=object.
+@tukar=Dibalik? Hasilnya @nol=nol.
+Kayak @resep=resep martabak: @telor=telor campur terigu, jadi @martabak=martabak.
+@terigu=Terigu campur telor… @semen=semen tiga roda.
+
+## S5
+@masih=Masih ada. @urutin=Urutin sepuluh, sembilan, satu? Hasilnya: @satu=satu, sepuluh, sembilan.
+Soalnya @abjad=diurutin kayak abjad.
+@bplus=Terus b, a, plus plus a, a? Hasilnya… @banana=banana.
+
+## S6
+@terus=Terus datang @ts=TypeScript. Katanya bikin @aman=aman.
+Aman? @enggak=Enggak. Dia cuma @marahin=marahin kamu duluan, sebelum kodenya jalan.
+Bahasa lain bilang: @lain=error. JavaScript bilang: @tebak=ya udah, aku tebak aja.
+@cta=Komedi tech lainnya ada di {rhmt ofc|Rahmat official}. {rhmt.biz.id|R H M T titik biz titik I D}.
