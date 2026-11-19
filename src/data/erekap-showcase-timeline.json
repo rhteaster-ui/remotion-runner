@@ -1,0 +1,62 @@
+{
+ "fps": 30,
+ "estimated": false,
+ "total": 59.976,
+ "scenes": [
+  {
+   "id": "s1-hook",
+   "title": "Hook & Preview Multi-Perangkat",
+   "bg": "dark",
+   "audio": "audio/vo-erekap-showcase/s1-hook.mp3",
+   "start": 0.0,
+   "duration": 12.14,
+   "vo_start": 0.55,
+   "vo_end": 11.59,
+   "end": 12.14
+  },
+  {
+   "id": "s2-dashboard",
+   "title": "Rolling Counter & Grafik Donat",
+   "bg": "light",
+   "audio": "audio/vo-erekap-showcase/s2-dashboard.mp3",
+   "start": 12.14,
+   "duration": 12.52,
+   "vo_start": 12.59,
+   "vo_end": 24.11,
+   "end": 24.66
+  },
+  {
+   "id": "s3-excel",
+   "title": "Mode Full Excel & Freeze Column",
+   "bg": "dark",
+   "audio": "audio/vo-erekap-showcase/s3-excel.mp3",
+   "start": 24.66,
+   "duration": 10.312,
+   "vo_start": 25.11,
+   "vo_end": 34.422,
+   "end": 34.972
+  },
+  {
+   "id": "s4-export",
+   "title": "Panel Admin, Ekspor XLSX & Cetak A4",
+   "bg": "light",
+   "audio": "audio/vo-erekap-showcase/s4-export.mp3",
+   "start": 34.972,
+   "duration": 13.12,
+   "vo_start": 35.422,
+   "vo_end": 47.542,
+   "end": 48.092
+  },
+  {
+   "id": "s5-brand",
+   "title": "Penutup & Personal Branding RHMT OFC",
+   "bg": "dark",
+   "audio": "audio/vo-erekap-showcase/s5-brand.mp3",
+   "start": 48.092,
+   "duration": 11.884,
+   "vo_start": 48.542,
+   "vo_end": 58.526,
+   "end": 59.976
+  }
+ ]
+}

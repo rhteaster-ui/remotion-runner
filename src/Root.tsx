@@ -14,6 +14,7 @@ import {RepoFlowVideo} from './RepoFlowVideo';
 import {RepoFlowPremiumVideo} from './RepoFlowPremiumVideo';
 import {ERekapVideo} from './ERekapVideo';
 import {ERekapPremiumVideo} from './ERekapPremiumVideo';
+import {ERekapShowcaseVideo} from './ERekapShowcaseVideo';
 import {N8nOpsVideo} from './N8nOpsVideo';
 import timeline from './data/timeline.json';
 import kryptonTimeline from './data/krypton-timeline.json';
@@ -22,6 +23,7 @@ import opsTimeline from './data/ops-timeline.json';
 import n8nTimeline from './data/n8n-timeline.json';
 import repoflowTimeline from './data/repoflow-timeline.json';
 import erekapTimeline from './data/erekap-timeline.json';
+import erekapShowcaseTimeline from './data/erekap-showcase-timeline.json';
 import platypusTimeline from './data/platypus-timeline.json';
 import jsTimeline from './data/js-timeline.json';
 import watCues from './data/wat-cues.json';
@@ -86,6 +88,14 @@ export const Root: React.FC = () => (
       height={1920}
       fps={n8nTimeline.fps}
       durationInFrames={Math.ceil(n8nTimeline.total * n8nTimeline.fps)}
+    />
+    <Composition
+      id="ERekapShowcase"
+      component={ERekapShowcaseVideo}
+      width={1080}
+      height={1920}
+      fps={erekapShowcaseTimeline.fps}
+      durationInFrames={Math.ceil(erekapShowcaseTimeline.total * erekapShowcaseTimeline.fps)}
     />
     <Composition
       id="ERekapPremium"
