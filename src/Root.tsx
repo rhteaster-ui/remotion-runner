@@ -30,9 +30,18 @@ import watCues from './data/wat-cues.json';
 import {JSWat} from './wat/JSWat';
 import chipCues from './data/chip-cues.json';
 import {ChipMerahPutihVideo} from './chip/ChipMerahPutihVideo';
+import {ERekapHorizontalVideo} from './horizontal/ERekapHorizontalVideo';
 
 export const Root: React.FC = () => (
   <>
+    <Composition
+      id="ERekapHorizontal"
+      component={ERekapHorizontalVideo}
+      width={1920}
+      height={1080}
+      fps={erekapShowcaseTimeline.fps}
+      durationInFrames={Math.ceil(erekapShowcaseTimeline.total * erekapShowcaseTimeline.fps)}
+    />
     <Composition
       id="ChipMerahPutih"
       component={ChipMerahPutihVideo}
