@@ -1,7 +1,7 @@
 {
  "fps": 30,
  "estimated": false,
- "total": 59.976,
+ "total": 61.152,
  "scenes": [
   {
    "id": "s1-hook",
@@ -9,54 +9,54 @@
    "bg": "dark",
    "audio": "audio/vo-erekap-showcase/s1-hook.mp3",
    "start": 0.0,
-   "duration": 12.14,
-   "vo_start": 0.55,
-   "vo_end": 11.59,
-   "end": 12.14
+   "duration": 11.96,
+   "vo_start": 0.6,
+   "vo_end": 11.16,
+   "end": 11.96
   },
   {
    "id": "s2-dashboard",
    "title": "Rolling Counter & Grafik Donat",
    "bg": "light",
    "audio": "audio/vo-erekap-showcase/s2-dashboard.mp3",
-   "start": 12.14,
-   "duration": 12.52,
-   "vo_start": 12.59,
-   "vo_end": 24.11,
-   "end": 24.66
+   "start": 11.96,
+   "duration": 13.06,
+   "vo_start": 12.46,
+   "vo_end": 24.22,
+   "end": 25.02
   },
   {
    "id": "s3-excel",
    "title": "Mode Full Excel & Freeze Column",
    "bg": "dark",
    "audio": "audio/vo-erekap-showcase/s3-excel.mp3",
-   "start": 24.66,
-   "duration": 10.312,
-   "vo_start": 25.11,
-   "vo_end": 34.422,
-   "end": 34.972
+   "start": 25.02,
+   "duration": 12.364,
+   "vo_start": 25.52,
+   "vo_end": 36.584,
+   "end": 37.384
   },
   {
    "id": "s4-export",
    "title": "Panel Admin, Ekspor XLSX & Cetak A4",
    "bg": "light",
    "audio": "audio/vo-erekap-showcase/s4-export.mp3",
-   "start": 34.972,
-   "duration": 13.12,
-   "vo_start": 35.422,
-   "vo_end": 47.542,
-   "end": 48.092
+   "start": 37.384,
+   "duration": 10.324,
+   "vo_start": 37.884,
+   "vo_end": 46.908,
+   "end": 47.708
   },
   {
    "id": "s5-brand",
    "title": "Penutup & Personal Branding RHMT OFC",
    "bg": "dark",
    "audio": "audio/vo-erekap-showcase/s5-brand.mp3",
-   "start": 48.092,
-   "duration": 11.884,
-   "vo_start": 48.542,
-   "vo_end": 58.526,
-   "end": 59.976
+   "start": 47.708,
+   "duration": 13.444,
+   "vo_start": 48.208,
+   "vo_end": 59.152,
+   "end": 61.152
   }
  ]
 }

@@ -19,7 +19,7 @@ def load_gemini_keys():
     keys = [
         line.strip().split()[-1]
         for line in raw.splitlines()
-        if line.strip().startswith("akun ")
+        if line.strip().startswith("akun ") and not line.endswith("J0p-x0")
     ]
     if not keys:
         raise RuntimeError("No Gemini API keys found in /home/rdev/gemini.txt")
@@ -34,9 +34,9 @@ SCENES = [
         "title": "Hook & Preview Multi-Perangkat",
         "bg": "dark",
         "text": (
-            "Bikin rekap absen kelas masih manual dan rawan selisih angka? "
-            "Kenalin E-Rekap! Aplikasi absensi web yang ringan, transparan, "
-            "dan tampil mulus di laptop maupun HP."
+            "Masih rekap absen kelas manual dan rawan salah hitung? "
+            "Beralih ke E-Rekap! Platform absensi modern yang ringan, transparan, "
+            "dan tampil sangat mulus di laptop maupun smartphone."
         ),
     },
     {
@@ -44,9 +44,14 @@ SCENES = [
         "title": "Rolling Counter & Grafik Donat",
         "bg": "light",
         "text": (
-            "Begitu masuk lewat transisi tirai hijau madrasah, "
-            "persentase kehadiran langsung berputar naik dengan animasi rolling counter, "
-            "lengkap dengan grafik donat interaktif per kelas."
+            "Sekali masuk lewat tirai hijau madrasah, "
+            "angka kehadiran berputar naik seketika dengan rolling counter 60 FPS, "
+            "didukung grafik donat interaktif di setiap rombel."
+        ),
+        "tts_text": (
+            "Sekali masuk lewat tirai hijau madrasah, "
+            "angka kehadiran berputar naik seketika dengan rolling counter enam puluh FPS, "
+            "didukung grafik donat interaktif di setiap rombel."
         ),
     },
     {
@@ -54,9 +59,9 @@ SCENES = [
         "title": "Mode Full Excel & Freeze Column",
         "bg": "dark",
         "text": (
-            "Butuh cek seluruh data siswa sekaligus? "
-            "Tinggal satu klik ke Tampilan Full Excel, lengkap dengan kolom paten "
-            "yang tetap terkunci rapi saat digeser."
+            "Butuh audit presensi menyeluruh? "
+            "Aktifkan Mode Full Excel! Kolom nomor absen dan nama siswa otomatis terkunci beku, "
+            "navigasi bebas tanpa takut kehilangan baris."
         ),
     },
     {
@@ -64,8 +69,8 @@ SCENES = [
         "title": "Panel Admin, Ekspor XLSX & Cetak A4",
         "bg": "light",
         "text": (
-            "Siswa dan guru bebas memantau rekap, tapi edit data tetap terkunci aman di Panel Admin. "
-            "Mau arsip? Ekspor file Excel asli atau cetak format A4 lengkap dengan kop surat resmi."
+            "Transparansi penuh untuk siswa, kendali mutlak di Panel Admin terenkripsi. "
+            "Ekspor berkas Excel instan atau cetak format A4 resmi berstempel Kop Madrasah."
         ),
     },
     {
@@ -73,13 +78,13 @@ SCENES = [
         "title": "Penutup & Personal Branding RHMT OFC",
         "bg": "dark",
         "text": (
-            "Semua tersimpan rapi dan instan dalam satu genggaman. "
-            "E-Rekap, karya Rahmat dari rhmt ofc. Cek detailnya di rhmt.biz.id!"
+            "Cepat, presisi, dan siap pakai untuk madrasah modern. "
+            "E-Rekap, karya orisinal Rahmat dari rhmt ofc. Kunjungi rhmt.biz.id!"
         ),
         "tts_text": (
-            "Semua tersimpan rapi dan instan dalam satu genggaman. "
-            "E-Rekap, karya Rahmat dari r h m t official. "
-            "Cek detailnya di r h m t dot biz dot id!"
+            "Cepat, presisi, dan siap pakai untuk madrasah modern. "
+            "E-Rekap, karya orisinal Rahmat dari r h m t official. "
+            "Kunjungi r h m t dot biz dot id!"
         ),
     },
 ]
@@ -87,8 +92,7 @@ SCENES = [
 
 def tts_scene(scene_id: str, text: str) -> str:
     mp3_path = os.path.join(VO_DIR, f"{scene_id}.mp3")
-    if os.path.exists(mp3_path) and os.path.getsize(mp3_path) > 1000:
-        return mp3_path
+    # Always regenerate with new energetic voice
     pcm_path = os.path.join(VO_DIR, f"{scene_id}.pcm")
     payload = {
         "contents": [
@@ -96,8 +100,8 @@ def tts_scene(scene_id: str, text: str) -> str:
                 "parts": [
                     {
                         "text": (
-                            "Bacakan dengan gaya narator tech creator Indonesia "
-                            "yang antusias, jernih, tegas, lincah, natural, dan berenergi: "
+                            "Gaya narator komersial teknologi kelas dunia: sangat berenergi tinggi, "
+                            "berwibawa, tegas, cepat, antusias, dan percaya diri: "
                             f"{text}"
                         )
                     }
@@ -107,7 +111,7 @@ def tts_scene(scene_id: str, text: str) -> str:
         "generationConfig": {
             "responseModalities": ["AUDIO"],
             "speechConfig": {
-                "voiceConfig": {"prebuiltVoiceConfig": {"voiceName": "Puck"}}
+                "voiceConfig": {"prebuiltVoiceConfig": {"voiceName": "Fenrir"}}
             },
         },
     }
@@ -284,8 +288,8 @@ def main():
         dur = probe_duration(mp3_path)
         speech_segs = detect_speech_segments(mp3_path, dur)
 
-        lead_in = 0.55 if i == 0 else 0.45
-        tail_pad = 1.45 if i == len(SCENES) - 1 else 0.55
+        lead_in = 0.6 if i == 0 else 0.5
+        tail_pad = 2.0 if i == len(SCENES) - 1 else 0.8
         vo_start = round(cur_t + lead_in, 3)
         vo_end = round(vo_start + dur, 3)
         sc_end = round(vo_end + tail_pad, 3)

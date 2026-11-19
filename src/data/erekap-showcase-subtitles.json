@@ -5,851 +5,786 @@
    "scene": "s1-hook",
    "bg": "dark",
    "lines": [
-    "Bikin rekap absen kelas",
-    "masih manual dan rawan"
+    "Masih rekap absen kelas",
+    "manual dan rawan salah"
    ],
    "words": [
     {
-     "text": "Bikin",
-     "start": 0.982,
-     "end": 1.285
+     "text": "Masih",
+     "start": 0.832,
+     "end": 1.116
     },
     {
      "text": "rekap",
-     "start": 1.285,
-     "end": 1.588
+     "start": 1.116,
+     "end": 1.401
     },
     {
      "text": "absen",
-     "start": 1.588,
-     "end": 1.891
+     "start": 1.401,
+     "end": 1.685
     },
     {
      "text": "kelas",
-     "start": 1.891,
-     "end": 2.194
-    },
-    {
-     "text": "masih",
-     "start": 2.194,
-     "end": 2.497
+     "start": 1.685,
+     "end": 1.969
     },
     {
      "text": "manual",
-     "start": 2.497,
-     "end": 2.86
+     "start": 1.969,
+     "end": 2.31
     },
     {
      "text": "dan",
-     "start": 2.86,
-     "end": 3.042
+     "start": 2.31,
+     "end": 2.481
     },
     {
      "text": "rawan",
-     "start": 3.042,
-     "end": 3.345
+     "start": 2.481,
+     "end": 2.765
+    },
+    {
+     "text": "salah",
+     "start": 2.765,
+     "end": 3.049
     }
    ],
-   "start": 0.982,
-   "end": 3.345
+   "start": 0.832,
+   "end": 3.049
   },
   {
    "id": 2,
    "scene": "s1-hook",
    "bg": "dark",
    "lines": [
-    "selisih angka? Kenalin",
-    "E-Rekap! Aplikasi absensi"
+    "hitung? Beralih ke",
+    "E-Rekap! Platform absensi"
    ],
    "words": [
     {
-     "text": "selisih",
-     "start": 3.345,
-     "end": 3.769
+     "text": "hitung?",
+     "start": 3.049,
+     "end": 3.859
     },
     {
-     "text": "angka?",
-     "start": 3.769,
-     "end": 4.253
+     "text": "Beralih",
+     "start": 3.859,
+     "end": 4.257
     },
     {
-     "text": "Kenalin",
-     "start": 4.253,
-     "end": 5.15
+     "text": "ke",
+     "start": 4.257,
+     "end": 4.371
     },
     {
      "text": "E-Rekap!",
-     "start": 5.15,
-     "end": 6.404
+     "start": 4.371,
+     "end": 4.883
     },
     {
-     "text": "Aplikasi",
-     "start": 6.404,
-     "end": 6.889
+     "text": "Platform",
+     "start": 4.883,
+     "end": 5.757
     },
     {
      "text": "absensi",
-     "start": 6.889,
-     "end": 7.313
+     "start": 5.757,
+     "end": 6.155
     }
    ],
-   "start": 3.345,
-   "end": 7.313
+   "start": 3.049,
+   "end": 6.155
   },
   {
    "id": 3,
    "scene": "s1-hook",
    "bg": "dark",
    "lines": [
-    "web yang ringan,",
+    "modern yang ringan,",
     "transparan, dan tampil"
    ],
    "words": [
     {
-     "text": "web",
-     "start": 7.313,
-     "end": 7.494
+     "text": "modern",
+     "start": 6.155,
+     "end": 6.496
     },
     {
      "text": "yang",
-     "start": 7.494,
-     "end": 7.737
+     "start": 6.496,
+     "end": 6.723
     },
     {
      "text": "ringan,",
-     "start": 7.737,
-     "end": 8.532
+     "start": 6.723,
+     "end": 7.235
     },
     {
      "text": "transparan,",
-     "start": 8.532,
-     "end": 9.32
+     "start": 7.235,
+     "end": 8.176
     },
     {
      "text": "dan",
-     "start": 9.32,
-     "end": 9.501
+     "start": 8.176,
+     "end": 8.347
     },
     {
      "text": "tampil",
-     "start": 9.501,
-     "end": 9.865
+     "start": 8.347,
+     "end": 8.688
     }
    ],
-   "start": 7.313,
-   "end": 9.865
+   "start": 6.155,
+   "end": 8.688
   },
   {
    "id": 4,
    "scene": "s1-hook",
    "bg": "dark",
    "lines": [
-    "mulus di laptop maupun HP."
+    "sangat mulus di laptop",
+    "maupun smartphone."
    ],
    "words": [
     {
+     "text": "sangat",
+     "start": 8.688,
+     "end": 9.029
+    },
+    {
      "text": "mulus",
-     "start": 9.865,
-     "end": 10.168
+     "start": 9.029,
+     "end": 9.313
     },
     {
      "text": "di",
-     "start": 10.168,
-     "end": 10.289
+     "start": 9.313,
+     "end": 9.427
     },
     {
      "text": "laptop",
-     "start": 10.289,
-     "end": 10.652
+     "start": 9.427,
+     "end": 9.768
     },
     {
      "text": "maupun",
-     "start": 10.652,
-     "end": 11.016
+     "start": 9.768,
+     "end": 10.109
     },
     {
-     "text": "HP.",
-     "start": 11.016,
-     "end": 11.59
+     "text": "smartphone.",
+     "start": 10.109,
+     "end": 11.16
     }
    ],
-   "start": 9.865,
-   "end": 11.59
+   "start": 8.688,
+   "end": 11.16
   },
   {
    "id": 5,
    "scene": "s2-dashboard",
    "bg": "light",
    "lines": [
-    "Begitu masuk lewat",
-    "transisi tirai hijau"
+    "Sekali masuk lewat tirai",
+    "hijau madrasah, angka"
    ],
    "words": [
     {
-     "text": "Begitu",
-     "start": 12.59,
-     "end": 12.999
+     "text": "Sekali",
+     "start": 12.705,
+     "end": 13.133
     },
     {
      "text": "masuk",
-     "start": 12.999,
-     "end": 13.339
+     "start": 13.133,
+     "end": 13.489
     },
     {
      "text": "lewat",
-     "start": 13.339,
-     "end": 13.679
-    },
-    {
-     "text": "transisi",
-     "start": 13.679,
-     "end": 14.224
+     "start": 13.489,
+     "end": 13.845
     },
     {
      "text": "tirai",
-     "start": 14.224,
-     "end": 14.565
+     "start": 13.845,
+     "end": 14.202
     },
     {
      "text": "hijau",
-     "start": 14.565,
-     "end": 14.905
+     "start": 14.202,
+     "end": 14.558
+    },
+    {
+     "text": "madrasah,",
+     "start": 14.558,
+     "end": 15.674
+    },
+    {
+     "text": "angka",
+     "start": 15.674,
+     "end": 16.03
     }
    ],
-   "start": 12.59,
-   "end": 14.905
+   "start": 12.705,
+   "end": 16.03
   },
   {
    "id": 6,
    "scene": "s2-dashboard",
    "bg": "light",
    "lines": [
-    "madrasah, persentase",
-    "kehadiran langsung"
+    "kehadiran berputar naik",
+    "seketika dengan rolling"
    ],
    "words": [
     {
-     "text": "madrasah,",
-     "start": 14.905,
-     "end": 15.654
-    },
-    {
-     "text": "persentase",
-     "start": 15.654,
-     "end": 16.617
-    },
-    {
      "text": "kehadiran",
-     "start": 16.617,
-     "end": 17.23
+     "start": 16.03,
+     "end": 16.672
     },
     {
-     "text": "langsung",
-     "start": 17.23,
-     "end": 17.775
+     "text": "berputar",
+     "start": 16.672,
+     "end": 17.242
+    },
+    {
+     "text": "naik",
+     "start": 17.242,
+     "end": 17.528
+    },
+    {
+     "text": "seketika",
+     "start": 17.528,
+     "end": 18.382
+    },
+    {
+     "text": "dengan",
+     "start": 18.382,
+     "end": 18.81
+    },
+    {
+     "text": "rolling",
+     "start": 18.81,
+     "end": 19.309
     }
    ],
-   "start": 14.905,
-   "end": 17.775
+   "start": 16.03,
+   "end": 19.309
   },
   {
    "id": 7,
    "scene": "s2-dashboard",
    "bg": "light",
    "lines": [
-    "berputar naik dengan",
-    "animasi rolling counter,"
+    "counter 60 FPS, didukung",
+    "grafik donat interaktif di"
    ],
    "words": [
     {
-     "text": "berputar",
-     "start": 17.775,
-     "end": 18.32
+     "text": "counter",
+     "start": 19.309,
+     "end": 19.808
     },
     {
-     "text": "naik",
-     "start": 18.32,
-     "end": 18.592
+     "text": "60",
+     "start": 19.808,
+     "end": 19.951
     },
     {
-     "text": "dengan",
-     "start": 18.592,
-     "end": 19.0
+     "text": "FPS,",
+     "start": 19.951,
+     "end": 20.378
     },
     {
-     "text": "animasi",
-     "start": 19.0,
-     "end": 19.477
+     "text": "didukung",
+     "start": 20.378,
+     "end": 21.226
     },
     {
-     "text": "rolling",
-     "start": 19.477,
-     "end": 19.954
+     "text": "grafik",
+     "start": 21.226,
+     "end": 21.654
     },
     {
-     "text": "counter,",
-     "start": 19.954,
-     "end": 21.046
+     "text": "donat",
+     "start": 21.654,
+     "end": 22.01
+    },
+    {
+     "text": "interaktif",
+     "start": 22.01,
+     "end": 22.723
+    },
+    {
+     "text": "di",
+     "start": 22.723,
+     "end": 22.866
     }
    ],
-   "start": 17.775,
-   "end": 21.046
+   "start": 19.309,
+   "end": 22.866
   },
   {
    "id": 8,
    "scene": "s2-dashboard",
    "bg": "light",
    "lines": [
-    "lengkap dengan grafik",
-    "donat interaktif per"
+    "setiap rombel."
    ],
    "words": [
     {
-     "text": "lengkap",
-     "start": 21.046,
-     "end": 21.522
+     "text": "setiap",
+     "start": 22.866,
+     "end": 23.294
     },
     {
-     "text": "dengan",
-     "start": 21.522,
-     "end": 21.931
-    },
-    {
-     "text": "grafik",
-     "start": 21.931,
-     "end": 22.34
-    },
-    {
-     "text": "donat",
-     "start": 22.34,
-     "end": 22.68
-    },
-    {
-     "text": "interaktif",
-     "start": 22.68,
-     "end": 23.361
-    },
-    {
-     "text": "per",
-     "start": 23.361,
-     "end": 23.565
+     "text": "rombel.",
+     "start": 23.294,
+     "end": 24.22
     }
    ],
-   "start": 21.046,
-   "end": 23.565
+   "start": 22.866,
+   "end": 24.22
   },
   {
    "id": 9,
-   "scene": "s2-dashboard",
-   "bg": "light",
+   "scene": "s3-excel",
+   "bg": "dark",
    "lines": [
-    "kelas."
+    "Butuh audit presensi",
+    "menyeluruh? Aktifkan Mode"
    ],
    "words": [
     {
-     "text": "kelas.",
-     "start": 23.565,
-     "end": 24.11
+     "text": "Butuh",
+     "start": 25.792,
+     "end": 26.124
+    },
+    {
+     "text": "audit",
+     "start": 26.124,
+     "end": 26.456
+    },
+    {
+     "text": "presensi",
+     "start": 26.456,
+     "end": 26.988
+    },
+    {
+     "text": "menyeluruh?",
+     "start": 26.988,
+     "end": 28.228
+    },
+    {
+     "text": "Aktifkan",
+     "start": 28.228,
+     "end": 28.759
+    },
+    {
+     "text": "Mode",
+     "start": 28.759,
+     "end": 29.025
     }
    ],
-   "start": 23.565,
-   "end": 24.11
+   "start": 25.792,
+   "end": 29.025
   },
   {
    "id": 10,
    "scene": "s3-excel",
    "bg": "dark",
    "lines": [
-    "Butuh cek seluruh data",
-    "siswa sekaligus? Tinggal"
+    "Full Excel! Kolom nomor",
+    "absen dan nama siswa"
    ],
    "words": [
     {
-     "text": "Butuh",
-     "start": 25.11,
-     "end": 25.433
+     "text": "Full",
+     "start": 29.025,
+     "end": 29.291
     },
     {
-     "text": "cek",
-     "start": 25.433,
-     "end": 25.628
+     "text": "Excel!",
+     "start": 29.291,
+     "end": 30.274
     },
     {
-     "text": "seluruh",
-     "start": 25.628,
-     "end": 26.08
+     "text": "Kolom",
+     "start": 30.274,
+     "end": 30.606
     },
     {
-     "text": "data",
-     "start": 26.08,
-     "end": 26.339
+     "text": "nomor",
+     "start": 30.606,
+     "end": 30.938
+    },
+    {
+     "text": "absen",
+     "start": 30.938,
+     "end": 31.27
+    },
+    {
+     "text": "dan",
+     "start": 31.27,
+     "end": 31.47
+    },
+    {
+     "text": "nama",
+     "start": 31.47,
+     "end": 31.735
     },
     {
      "text": "siswa",
-     "start": 26.339,
-     "end": 26.663
-    },
-    {
-     "text": "sekaligus?",
-     "start": 26.663,
-     "end": 27.439
-    },
-    {
-     "text": "Tinggal",
-     "start": 27.439,
-     "end": 28.352
+     "start": 31.735,
+     "end": 32.067
     }
    ],
-   "start": 25.11,
-   "end": 28.352
+   "start": 29.025,
+   "end": 32.067
   },
   {
    "id": 11,
    "scene": "s3-excel",
    "bg": "dark",
    "lines": [
-    "satu klik ke Tampilan Full",
-    "Excel, lengkap dengan"
+    "otomatis terkunci beku,",
+    "navigasi bebas tanpa takut"
    ],
    "words": [
     {
-     "text": "satu",
-     "start": 28.352,
-     "end": 28.611
+     "text": "otomatis",
+     "start": 32.067,
+     "end": 32.599
     },
     {
-     "text": "klik",
-     "start": 28.611,
-     "end": 28.87
+     "text": "terkunci",
+     "start": 32.599,
+     "end": 33.13
     },
     {
-     "text": "ke",
-     "start": 28.87,
-     "end": 28.999
+     "text": "beku,",
+     "start": 33.13,
+     "end": 33.861
     },
     {
-     "text": "Tampilan",
-     "start": 28.999,
-     "end": 29.516
+     "text": "navigasi",
+     "start": 33.861,
+     "end": 34.393
     },
     {
-     "text": "Full",
-     "start": 29.516,
-     "end": 29.775
+     "text": "bebas",
+     "start": 34.393,
+     "end": 34.725
     },
     {
-     "text": "Excel,",
-     "start": 29.775,
-     "end": 30.67
+     "text": "tanpa",
+     "start": 34.725,
+     "end": 35.057
     },
     {
-     "text": "lengkap",
-     "start": 30.67,
-     "end": 31.123
-    },
-    {
-     "text": "dengan",
-     "start": 31.123,
-     "end": 31.511
+     "text": "takut",
+     "start": 35.057,
+     "end": 35.389
     }
    ],
-   "start": 28.352,
-   "end": 31.511
+   "start": 32.067,
+   "end": 35.389
   },
   {
    "id": 12,
    "scene": "s3-excel",
    "bg": "dark",
    "lines": [
-    "kolom paten yang tetap",
-    "terkunci rapi saat"
+    "kehilangan baris."
    ],
    "words": [
     {
-     "text": "kolom",
-     "start": 31.511,
-     "end": 31.834
+     "text": "kehilangan",
+     "start": 35.389,
+     "end": 36.053
     },
     {
-     "text": "paten",
-     "start": 31.834,
-     "end": 32.158
-    },
-    {
-     "text": "yang",
-     "start": 32.158,
-     "end": 32.417
-    },
-    {
-     "text": "tetap",
-     "start": 32.417,
-     "end": 32.74
-    },
-    {
-     "text": "terkunci",
-     "start": 32.74,
-     "end": 33.258
-    },
-    {
-     "text": "rapi",
-     "start": 33.258,
-     "end": 33.516
-    },
-    {
-     "text": "saat",
-     "start": 33.516,
-     "end": 33.775
+     "text": "baris.",
+     "start": 36.053,
+     "end": 36.584
     }
    ],
-   "start": 31.511,
-   "end": 33.775
+   "start": 35.389,
+   "end": 36.584
   },
   {
    "id": 13,
-   "scene": "s3-excel",
-   "bg": "dark",
+   "scene": "s4-export",
+   "bg": "light",
    "lines": [
-    "digeser."
+    "Transparansi penuh untuk",
+    "siswa, kendali mutlak di"
    ],
    "words": [
     {
-     "text": "digeser.",
-     "start": 33.775,
-     "end": 34.422
+     "text": "Transparansi",
+     "start": 37.884,
+     "end": 38.643
+    },
+    {
+     "text": "penuh",
+     "start": 38.643,
+     "end": 38.959
+    },
+    {
+     "text": "untuk",
+     "start": 38.959,
+     "end": 39.275
+    },
+    {
+     "text": "siswa,",
+     "start": 39.275,
+     "end": 39.781
+    },
+    {
+     "text": "kendali",
+     "start": 39.781,
+     "end": 40.223
+    },
+    {
+     "text": "mutlak",
+     "start": 40.223,
+     "end": 40.603
+    },
+    {
+     "text": "di",
+     "start": 40.603,
+     "end": 40.729
     }
    ],
-   "start": 33.775,
-   "end": 34.422
+   "start": 37.884,
+   "end": 40.729
   },
   {
    "id": 14,
    "scene": "s4-export",
    "bg": "light",
    "lines": [
-    "Siswa dan guru bebas",
-    "memantau rekap, tapi edit"
+    "Panel Admin terenkripsi.",
+    "Ekspor berkas Excel instan"
    ],
    "words": [
     {
-     "text": "Siswa",
-     "start": 35.422,
-     "end": 35.765
+     "text": "Panel",
+     "start": 40.729,
+     "end": 41.045
     },
     {
-     "text": "dan",
-     "start": 35.765,
-     "end": 35.971
+     "text": "Admin",
+     "start": 41.045,
+     "end": 41.361
     },
     {
-     "text": "guru",
-     "start": 35.971,
-     "end": 36.245
+     "text": "terenkripsi.",
+     "start": 41.361,
+     "end": 42.546
     },
     {
-     "text": "bebas",
-     "start": 36.245,
-     "end": 36.588
+     "text": "Ekspor",
+     "start": 42.546,
+     "end": 42.925
     },
     {
-     "text": "memantau",
-     "start": 36.588,
-     "end": 37.137
+     "text": "berkas",
+     "start": 42.925,
+     "end": 43.304
     },
     {
-     "text": "rekap,",
-     "start": 37.137,
-     "end": 37.686
+     "text": "Excel",
+     "start": 43.304,
+     "end": 43.62
     },
     {
-     "text": "tapi",
-     "start": 37.686,
-     "end": 38.384
-    },
-    {
-     "text": "edit",
-     "start": 38.384,
-     "end": 38.659
+     "text": "instan",
+     "start": 43.62,
+     "end": 44.0
     }
    ],
-   "start": 35.422,
-   "end": 38.659
+   "start": 40.729,
+   "end": 44.0
   },
   {
    "id": 15,
    "scene": "s4-export",
    "bg": "light",
    "lines": [
-    "data tetap terkunci aman",
-    "di Panel Admin. Mau arsip?"
+    "atau cetak format A4 resmi",
+    "berstempel Kop Madrasah."
    ],
    "words": [
-    {
-     "text": "data",
-     "start": 38.659,
-     "end": 38.933
-    },
-    {
-     "text": "tetap",
-     "start": 38.933,
-     "end": 39.276
-    },
-    {
-     "text": "terkunci",
-     "start": 39.276,
-     "end": 39.825
-    },
-    {
-     "text": "aman",
-     "start": 39.825,
-     "end": 40.099
-    },
-    {
-     "text": "di",
-     "start": 40.099,
-     "end": 40.237
-    },
-    {
-     "text": "Panel",
-     "start": 40.237,
-     "end": 40.58
-    },
-    {
-     "text": "Admin.",
-     "start": 40.58,
-     "end": 41.129
-    },
-    {
-     "text": "Mau",
-     "start": 41.129,
-     "end": 41.334
-    },
-    {
-     "text": "arsip?",
-     "start": 41.334,
-     "end": 42.333
-    }
-   ],
-   "start": 38.659,
-   "end": 42.333
-  },
-  {
-   "id": 16,
-   "scene": "s4-export",
-   "bg": "light",
-   "lines": [
-    "Ekspor file Excel asli",
-    "atau cetak format A4"
-   ],
-   "words": [
-    {
-     "text": "Ekspor",
-     "start": 42.333,
-     "end": 43.22
-    },
-    {
-     "text": "file",
-     "start": 43.22,
-     "end": 43.494
-    },
-    {
-     "text": "Excel",
-     "start": 43.494,
-     "end": 43.837
-    },
-    {
-     "text": "asli",
-     "start": 43.837,
-     "end": 44.112
-    },
     {
      "text": "atau",
-     "start": 44.112,
-     "end": 44.386
+     "start": 44.0,
+     "end": 44.253
     },
     {
      "text": "cetak",
-     "start": 44.386,
-     "end": 44.729
+     "start": 44.253,
+     "end": 44.569
     },
     {
      "text": "format",
-     "start": 44.729,
-     "end": 45.141
+     "start": 44.569,
+     "end": 44.948
     },
     {
      "text": "A4",
-     "start": 45.141,
-     "end": 45.278
+     "start": 44.948,
+     "end": 45.075
+    },
+    {
+     "text": "resmi",
+     "start": 45.075,
+     "end": 45.391
+    },
+    {
+     "text": "berstempel",
+     "start": 45.391,
+     "end": 46.023
+    },
+    {
+     "text": "Kop",
+     "start": 46.023,
+     "end": 46.213
+    },
+    {
+     "text": "Madrasah.",
+     "start": 46.213,
+     "end": 46.908
     }
    ],
-   "start": 42.333,
-   "end": 45.278
+   "start": 44.0,
+   "end": 46.908
   },
   {
-   "id": 17,
-   "scene": "s4-export",
-   "bg": "light",
+   "id": 16,
+   "scene": "s5-brand",
+   "bg": "dark",
    "lines": [
-    "lengkap dengan kop surat",
-    "resmi."
+    "Cepat, presisi, dan siap",
+    "pakai untuk madrasah"
    ],
    "words": [
     {
-     "text": "lengkap",
-     "start": 45.278,
-     "end": 45.758
+     "text": "Cepat,",
+     "start": 48.52,
+     "end": 49.364
     },
     {
-     "text": "dengan",
-     "start": 45.758,
-     "end": 46.17
+     "text": "presisi,",
+     "start": 49.364,
+     "end": 50.158
     },
     {
-     "text": "kop",
-     "start": 46.17,
-     "end": 46.376
+     "text": "dan",
+     "start": 50.158,
+     "end": 50.396
     },
     {
-     "text": "surat",
-     "start": 46.376,
-     "end": 46.719
+     "text": "siap",
+     "start": 50.396,
+     "end": 50.714
     },
     {
-     "text": "resmi.",
-     "start": 46.719,
-     "end": 47.542
+     "text": "pakai",
+     "start": 50.714,
+     "end": 51.11
+    },
+    {
+     "text": "untuk",
+     "start": 51.11,
+     "end": 51.507
+    },
+    {
+     "text": "madrasah",
+     "start": 51.507,
+     "end": 52.5
     }
    ],
-   "start": 45.278,
-   "end": 47.542
+   "start": 48.52,
+   "end": 52.5
+  },
+  {
+   "id": 17,
+   "scene": "s5-brand",
+   "bg": "dark",
+   "lines": [
+    "modern. E-Rekap, karya",
+    "orisinal Rahmat dari rhmt"
+   ],
+   "words": [
+    {
+     "text": "modern.",
+     "start": 52.5,
+     "end": 53.586
+    },
+    {
+     "text": "E-Rekap,",
+     "start": 53.586,
+     "end": 54.301
+    },
+    {
+     "text": "karya",
+     "start": 54.301,
+     "end": 54.698
+    },
+    {
+     "text": "orisinal",
+     "start": 54.698,
+     "end": 55.332
+    },
+    {
+     "text": "Rahmat",
+     "start": 55.332,
+     "end": 55.809
+    },
+    {
+     "text": "dari",
+     "start": 55.809,
+     "end": 56.496
+    },
+    {
+     "text": "rhmt",
+     "start": 56.496,
+     "end": 56.813
+    }
+   ],
+   "start": 52.5,
+   "end": 56.813
   },
   {
    "id": 18,
    "scene": "s5-brand",
    "bg": "dark",
    "lines": [
-    "Semua tersimpan rapi dan",
-    "instan dalam satu"
+    "ofc. Kunjungi rhmt.biz.id!"
    ],
    "words": [
-    {
-     "text": "Semua",
-     "start": 48.76,
-     "end": 49.148
-    },
-    {
-     "text": "tersimpan",
-     "start": 49.148,
-     "end": 49.846
-    },
-    {
-     "text": "rapi",
-     "start": 49.846,
-     "end": 50.156
-    },
-    {
-     "text": "dan",
-     "start": 50.156,
-     "end": 50.389
-    },
-    {
-     "text": "instan",
-     "start": 50.389,
-     "end": 50.855
-    },
-    {
-     "text": "dalam",
-     "start": 50.855,
-     "end": 51.243
-    },
-    {
-     "text": "satu",
-     "start": 51.243,
-     "end": 51.553
-    }
-   ],
-   "start": 48.76,
-   "end": 51.553
-  },
-  {
-   "id": 19,
-   "scene": "s5-brand",
-   "bg": "dark",
-   "lines": [
-    "genggaman. E-Rekap, karya",
-    "Rahmat dari rhmt ofc. Cek"
-   ],
-   "words": [
-    {
-     "text": "genggaman.",
-     "start": 51.553,
-     "end": 52.898
-    },
-    {
-     "text": "E-Rekap,",
-     "start": 52.898,
-     "end": 53.925
-    },
-    {
-     "text": "karya",
-     "start": 53.925,
-     "end": 54.313
-    },
-    {
-     "text": "Rahmat",
-     "start": 54.313,
-     "end": 54.779
-    },
-    {
-     "text": "dari",
-     "start": 54.779,
-     "end": 55.089
-    },
-    {
-     "text": "rhmt",
-     "start": 55.089,
-     "end": 55.4
-    },
     {
      "text": "ofc.",
-     "start": 55.4,
-     "end": 56.232
+     "start": 56.813,
+     "end": 57.289
     },
     {
-     "text": "Cek",
-     "start": 56.232,
-     "end": 56.465
-    }
-   ],
-   "start": 51.553,
-   "end": 56.465
-  },
-  {
-   "id": 20,
-   "scene": "s5-brand",
-   "bg": "dark",
-   "lines": [
-    "detailnya di rhmt.biz.id!"
-   ],
-   "words": [
-    {
-     "text": "detailnya",
-     "start": 56.465,
-     "end": 57.163
-    },
-    {
-     "text": "di",
-     "start": 57.163,
-     "end": 57.318
+     "text": "Kunjungi",
+     "start": 57.289,
+     "end": 57.924
     },
     {
      "text": "rhmt.biz.id!",
-     "start": 57.318,
-     "end": 58.249
+     "start": 57.924,
+     "end": 58.877
     }
    ],
-   "start": 56.465,
-   "end": 58.249
+   "start": 56.813,
+   "end": 58.877
   }
  ]
 }
