@@ -181,6 +181,16 @@ def main():
     if os.path.exists(thumb_source):
         os.replace(thumb_source, final_thumb)
 
+    # Also sync to /root/rekap-absen/public for web application showcase
+    web_public = "/root/rekap-absen/public"
+    if os.path.exists(web_public):
+        import shutil
+        web_video = os.path.join(web_public, "erekap-horizontal-upgraded.mp4")
+        shutil.copy2(final_video, web_video)
+        if os.path.exists(final_thumb):
+            shutil.copy2(final_thumb, os.path.join(web_public, "erekap-horizontal-poster.jpg"))
+        print(f"[+] Asset video dan poster berhasil disinkronkan ke {web_public}")
+
     probe_cmd = [
         "ffprobe", "-v", "error",
         "-show_entries", "format=duration,size,bit_rate:stream=width,height,codec_name",
@@ -205,21 +215,21 @@ def main():
     print(f"    - Ukuran: {fsize:.2f} MB")
 
     caption = (
-        f"🎬 <b>REMOTION VIDEO SHOWCASE (1 MENIT) · E-REKAP UPGRADED</b>\n"
+        f"🎬 <b>REMOTION SHOWCASE (1 MENIT) · E-REKAP UPGRADED</b>\n"
         f"━━━━━━━━━━━━━━━━━━━━━━━━━━\n"
         f"<b>Karya Orisinal:</b> rhmt ofc (rhmt.biz.id)\n"
-        f"<b>Komposisi:</b> <code>ERekapHorizontal</code> (1920x1080 Full HD · 60 FPS Motion)\n"
+        f"<b>Komposisi:</b> <code>ERekapHorizontal</code> (1920x1080 · 60s)\n"
         f"<b>Voiceover:</b> Google AI Studio (Puck · Cheeky Sidekick)\n"
         f"<b>Durasi:</b> {dur:.1f}s (1800 Frames) | <b>Ukuran:</b> {fsize:.2f} MB\n\n"
-        f"<b>Upgrade Motion Graphics & Badar-Style Dynamics:</b>\n"
-        f"• <b>Typographic Contrast:</b> Heavy Display Grotesk (Syne 900) berpadu anggun dengan Serif Italic (Playfair Display).\n"
-        f"• <b>Fluid Organic Cursor:</b> Kursor bergerak melengkung (bezier arc), decelerate saat hover, dan squash-bounce saat klik interaktif.\n"
-        f"• <b>Pill Bounding Mask & Ball:</b> Efek teks berkapsul elastis dengan bola pantul squash-and-stretch.\n"
-        f"• <b>Isometric Spreadsheet 3D:</b> Mode Full Excel miring dinamis dengan garis laser scanner aktif.\n"
-        f"• <b>Stempel A4 Slam & Shake:</b> Stempel formal madrasah membanting bertenaga dengan getaran micro camera shake.\n"
-        f"• <b>Bento Grid Outro Climax:</b> Panggung 3 kolom sinkron (Hero Card, Terminal Prompt, Code Editor, dan Profil rhmt ofc).\n"
+        f"<b>Upgrade Motion Graphics:</b>\n"
+        f"• <b>Typographic Contrast:</b> Heavy Grotesk (Syne 900) + Serif Italic (Playfair).\n"
+        f"• <b>Fluid Organic Cursor:</b> Akselerasi bezier nyata, deceleration, & click bounce.\n"
+        f"• <b>Pill Bounding Mask:</b> Teks berkapsul elastis & bola pantul squash-stretch.\n"
+        f"• <b>Isometric Spreadsheet 3D:</b> Mode Full Excel miring & garis laser scanner.\n"
+        f"• <b>Stempel A4 Slam:</b> Benturan stempel resmi bertenaga & micro camera shake.\n"
+        f"• <b>Bento Grid Climax:</b> 3 kolom sinkron (Hero, Terminal, Editor, & rhmt ofc).\n"
         f"━━━━━━━━━━━━━━━━━━━━━━━━━━\n"
-        f"<i>Dirender via GitHub Actions Cloud Runner · Dikirim via Agency DevOps</i>"
+        f"<i>Dirender via GitHub Actions Cloud Runner</i>"
     )
 
     print("\n[*] Mengirim video final ke Telegram Tuan Rahmat...")
