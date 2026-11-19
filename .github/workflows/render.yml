@@ -1,0 +1,100 @@
+name: Remotion Cloud Render Engine
+
+on:
+  workflow_dispatch:
+    inputs:
+      composition:
+        description: 'Composition ID (kosongkan untuk auto-detect)'
+        required: false
+        default: ''
+      scale:
+        description: 'Scale (1 = 1080p, 0.5 = 540p fast)'
+        required: false
+        default: '1'
+      crf:
+        description: 'Constant Rate Factor (crf 18-28)'
+        required: false
+        default: '22'
+      zip_url:
+        description: 'Optional URL payload zip'
+        required: false
+        default: ''
+
+jobs:
+  render:
+    name: 🎬 Render Remotion Video
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: 📥 Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: ⚙️ Setup Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: 📦 Download & Unpack Zip Payload (Jika ada)
+        if: ${{ github.event.inputs.zip_url != '' }}
+        run: |
+          curl -sL "${{ github.event.inputs.zip_url }}" -o payload.zip
+          unzip -o -q payload.zip -d .
+          rm -f payload.zip
+
+      - name: 🛠️ Install Linux Chromium & FFmpeg Dependencies
+        run: |
+          export DEBIAN_FRONTEND=noninteractive
+          sudo timeout 45 apt-get update -qq || true
+          sudo timeout 60 apt-get install -y -qq --no-install-recommends ffmpeg libnss3 libatk1.0-0 libatk-bridge2.0-0 libcups2 libdrm2 libxkbcommon0 libxcomposite1 libxdamage1 libxfixes3 libxrandr2 libgbm1 2>/dev/null || true
+
+      - name: 📦 Install NPM Dependencies
+        run: |
+          npm ci --legacy-peer-deps || npm install --legacy-peer-deps
+
+      - name: 🌐 Tarik Aset Eksternal (Jika ada script)
+        run: |
+          if [ -f scripts/pull-assets.sh ]; then
+            bash scripts/pull-assets.sh || true
+          fi
+
+      - name: 🎥 Render Remotion Video
+        id: remotion-render
+        run: |
+          mkdir -p out
+          COMP="${{ github.event.inputs.composition }}"
+          if [ -z "$COMP" ]; then
+            COMP=$(node -e "
+              try {
+                const pkg = require('./package.json');
+                const m = pkg.scripts?.render?.match(/render\s+([A-Za-z0-9_-]+)/);
+                if (m) { console.log(m[1]); process.exit(0); }
+              } catch(e) {}
+              try {
+                const fs = require('fs');
+                const root = fs.readFileSync('src/Root.tsx', 'utf8');
+                const m = root.match(/<Composition[^>]*id=[\"']([^\"']+)[\"']/i);
+                if (m) { console.log(m[1]); process.exit(0); }
+              } catch(e) {}
+              console.log('RhmtReview');
+            ")
+          fi
+          SCALE="${{ github.event.inputs.scale || '1' }}"
+          CRF="${{ github.event.inputs.crf || '22' }}"
+          echo "Rendering composition: $COMP with scale $SCALE and crf $CRF"
+          
+          npx remotion render "$COMP" out/video.mp4 --scale="$SCALE" --crf="$CRF" --gl=angle --concurrency=4 --overwrite
+          
+          # Hasilkan juga thumbnail frame tengah
+          npx remotion still "$COMP" out/thumb.jpg --frame=150 --overwrite || true
+          
+          ls -lh out/
+
+      - name: 📤 Upload Artifact Video
+        uses: actions/upload-artifact@v4
+        with:
+          name: remotion-video
+          path: |
+            out/video.mp4
+            out/thumb.jpg
+          retention-days: 1
