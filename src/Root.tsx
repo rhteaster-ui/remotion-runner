@@ -32,10 +32,19 @@ import chipCues from './data/chip-cues.json';
 import {ChipMerahPutihVideo} from './chip/ChipMerahPutihVideo';
 import {ERekapHorizontalVideo} from './horizontal/ERekapHorizontalVideo';
 import {ERekapKineticTeaser, TEASER_TOTAL_FRAMES} from './kinetic/ERekapKineticTeaser';
+import {ERekapShowreel, SHOWREEL_TOTAL_FRAMES} from './showreel/ERekapShowreel';
 import {ERekapKineticTypography, KINETIC_TOTAL_FRAMES} from './typography/ERekapKineticTypography';
 
 export const Root: React.FC = () => (
   <>
+    <Composition
+      id="ERekapShowreel"
+      component={ERekapShowreel}
+      width={1920}
+      height={1080}
+      fps={30}
+      durationInFrames={SHOWREEL_TOTAL_FRAMES}
+    />
     <Composition
       id="ERekapKineticTypography"
       component={ERekapKineticTypography}
