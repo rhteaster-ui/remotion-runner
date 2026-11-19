@@ -10,10 +10,10 @@ type Props = {
 };
 
 export const NeonAudioMix: React.FC<Props> = ({
-  music = 0.55,
-  sfx = 0.75,
-  vo = 1.15,
-  duckDb = -8,
+  music = 0.45,
+  sfx = 0.85,
+  vo = 1.25,
+  duckDb = -10,
 }) => {
   const {fps, durationInFrames} = useVideoConfig();
   const duck = Math.pow(10, duckDb / 20);
@@ -35,12 +35,61 @@ export const NeonAudioMix: React.FC<Props> = ({
     return music * (1 - depth * (1 - duck)) * fade;
   };
 
+  const s2Start = Math.round(timeline.scenes[1].start * fps);
+  const s3Start = Math.round(timeline.scenes[2].start * fps);
+  const s4Start = Math.round(timeline.scenes[3].start * fps);
+  const s5Start = Math.round(timeline.scenes[4].start * fps);
+
+  const SFX_CUES: {from: number; name: string; vol?: number}[] = [
+    // Scene 1: Reveal & Neon Hook
+    {from: 6, name: 'whoosh-soft.wav', vol: 0.6},
+    {from: 40, name: 'riser.wav', vol: 0.75},
+    {from: 50, name: 'impact.wav', vol: 0.95},
+    {from: 56, name: 'shimmer.wav', vol: 0.7},
+
+    // Scene 2: Tier Comparison
+    {from: s2Start + 4, name: 'whoosh-wipe.wav', vol: 0.8},
+    {from: s2Start + 30, name: 'lock-click.wav', vol: 0.7},
+    {from: s2Start + 55, name: 'impact.wav', vol: 0.85},
+    {from: s2Start + 60, name: 'shimmer.wav', vol: 0.65},
+    {from: s2Start + 85, name: 'lock-click.wav', vol: 0.7},
+
+    // Scene 3: Thinking Levels & 1M Context
+    {from: s3Start + 4, name: 'whoosh-soft.wav', vol: 0.6},
+    {from: s3Start + 35, name: 'tick.wav', vol: 0.7},
+    {from: s3Start + 65, name: 'tick.wav', vol: 0.7},
+    {from: s3Start + 95, name: 'tick.wav', vol: 0.7},
+    {from: s3Start + 125, name: 'pop-soft.wav', vol: 0.8},
+    {from: s3Start + 150, name: 'shimmer.wav', vol: 0.75},
+
+    // Scene 4: Benchmark Battle Slam
+    {from: s4Start + 4, name: 'whoosh-wipe.wav', vol: 0.8},
+    {from: s4Start + 32, name: 'impact.wav', vol: 1.0},
+    {from: s4Start + 42, name: 'stamp.wav', vol: 0.85},
+    {from: s4Start + 70, name: 'success-arp.wav', vol: 0.8},
+
+    // Scene 5: Outro rhmt ofc
+    {from: s5Start + 4, name: 'whoosh-soft.wav', vol: 0.65},
+    {from: s5Start + 30, name: 'ding.wav', vol: 0.85},
+    {from: s5Start + 60, name: 'shimmer.wav', vol: 0.7},
+  ];
+
   return (
     <>
+      {/* Background Music with Auto Ducking */}
       <Audio src={staticFile('audio/music-bed.mp3')} volume={musicVolume} loop />
+
+      {/* Voiceover Sequences */}
       {timeline.scenes.map((s) => (
         <Sequence key={s.id} from={Math.round(s.vo_start * fps)}>
           <Audio src={staticFile(`audio/vo-neon/${s.id}.mp3`)} volume={vo} />
+        </Sequence>
+      ))}
+
+      {/* Synchronized Micro-SFX */}
+      {SFX_CUES.map((cue, idx) => (
+        <Sequence key={`${cue.name}-${cue.from}-${idx}`} from={cue.from}>
+          <Audio src={staticFile(`audio/sfx-erekap/${cue.name}`)} volume={(cue.vol ?? 1.0) * sfx} />
         </Sequence>
       ))}
     </>

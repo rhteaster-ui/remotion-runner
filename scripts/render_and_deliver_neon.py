@@ -231,12 +231,14 @@ def main():
 
     # Telegram Caption
     tg_caption = (
-        "<b>Gemini 4 Neon · The Balanced Workhorse (Official Release Nov 2026)</b>\n\n"
-        "Motion Graphics Tech Explainer (1080x1920 9:16 Vertikal · 62s @ 30 FPS):\n"
-        "• <b>Hook &amp; Reveal:</b> Rilis resmi Google DeepMind varian mid-tier Gemini 4.\n"
-        "• <b>Spektrum Tiga Elemen:</b> Carbon (Riset Berat), Neon (Workhorse Seimbang), Hydrogen (Eksekusi Cepat).\n"
-        "• <b>Scalable Thinking:</b> Mode low, medium, high, hingga xhigh + 1M Context Window.\n"
-        "• <b>Adu Otak Resmi:</b> Skor 61.4 menempel ketat Claude Opus 5.5 &amp; GPT-6.2 Sol dengan kecepatan 142 tok/s.\n"
+        "<b>Gemini 4 Neon · Kinetic Motion Graphics Edition (Official Nov 2026)</b>\n\n"
+        "Upgraded Tech Explainer (1080x1920 9:16 Vertikal · 62s @ 30 FPS):\n"
+        "• <b>3D Kinetic Camera:</b> Smooth 3D tilt, continuous Bezier zoom, &amp; camera slam shake.\n"
+        "• <b>Aset Resmi Original:</b> Vektor asli Google Gemini 4-color Spark, Anthropic Claude, &amp; OpenAI.\n"
+        "• <b>Zero Periodic Slop:</b> Arsitektur 3 Tier Google AI (Carbon Frontier, Neon Workhorse, Hydrogen Edge).\n"
+        "• <b>Interactive Thinking Selector:</b> Low → Medium → High → X-High + 1 Juta Token Context.\n"
+        "• <b>Benchmark Battle:</b> Skor 61.4 menempel ketat Claude Opus 5.5 &amp; GPT-6.2 Sol dengan kecepatan 142 tok/s.\n"
+        "• <b>Sound Design &amp; Ducking:</b> 22 frame-locked micro-SFX (whoosh, lock, impact, stamp) + BGM auto-ducking.\n"
         "• <b>Subtitle Karaoke:</b> Safe-zone bawah 80px, font 42px, sinkron suara Puck.\n\n"
         f"Ukuran: {final_size_mb:.2f} MB | Codec: H.264 / AAC (+faststart)\n"
         "<i>Dikembangkan oleh <b>rhmt ofc</b> · rhmt.biz.id</i>"
@@ -251,11 +253,14 @@ def main():
 
     # Queue to WhatsApp
     wa_caption = (
-        "*Gemini 4 Neon · The Balanced Workhorse (Official Nov 2026)*\n\n"
-        "Video Motion Graphics (1080x1920 9:16 Vertikal · 62 Detik):\n"
-        "• *Peta Elemen:* Carbon (Frontier Riset) vs Neon (Workhorse Seimbang) vs Hydrogen (Eksekutor Kilat)\n"
-        "• *Fitur Kunci:* Scalable Thinking Level (Low -> xhigh) & 1 Juta Token Context\n"
-        "• *Grafik Benchmark Resmi:* Skor 61.4 unggul kecepatan 142 tok/s menempel Claude Opus 5.5 & GPT-6.2 Sol\n"
+        "*Gemini 4 Neon · Kinetic Motion Graphics Edition (Nov 2026)*\n\n"
+        "Video Motion Graphics Standar Tinggi (1080x1920 Vertikal · 62 Detik):\n"
+        "• *3D Kinetic Camera:* Pergerakan kamera 3D perspektif, tilt dinamis, dan slam shake\n"
+        "• *Aset Vektor Asli:* Vektor resmi Google Gemini Spark, Claude, dan OpenAI (Zero CSS polos)\n"
+        "• *Arsitektur 3 Tier AI:* Carbon (Riset Berat) vs Neon (Workhorse Seimbang) vs Hydrogen (Eksekutor Kilat)\n"
+        "• *Scalable Thinking & 1M Context:* Mode bertingkat hingga xhigh & context window masif 1 juta token\n"
+        "• *Adu Otak Resmi:* Skor 61.4 menempel Claude Opus 5.5 & GPT-6.2 Sol, kecepatan hampir 3x lipat lebih ngebut (142 tok/s)\n"
+        "• *Audio Mix Presisi:* Micro-SFX tersinkron frame + auto-ducking musik latar\n"
         f"• *Ukuran Berkas:* {final_size_mb:.2f} MB (+faststart streaming)\n\n"
         "_Dikembangkan oleh *rhmt ofc* (rhmt.biz.id)_"
     )
