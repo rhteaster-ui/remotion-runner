@@ -16,6 +16,8 @@ import {ERekapVideo} from './ERekapVideo';
 import {ERekapPremiumVideo} from './ERekapPremiumVideo';
 import {ERekapShowcaseVideo} from './ERekapShowcaseVideo';
 import {N8nOpsVideo} from './N8nOpsVideo';
+import neonTimeline from './data/neon-timeline.json';
+import {NeonVideo} from './NeonVideo';
 import timeline from './data/timeline.json';
 import kryptonTimeline from './data/krypton-timeline.json';
 import agenticTimeline from './data/agentic-timeline.json';
@@ -37,6 +39,14 @@ import {ERekapKineticTypography, KINETIC_TOTAL_FRAMES} from './typography/ERekap
 
 export const Root: React.FC = () => (
   <>
+    <Composition
+      id="Gemini4Neon"
+      component={NeonVideo}
+      width={1080}
+      height={1920}
+      fps={neonTimeline.fps}
+      durationInFrames={Math.ceil(neonTimeline.total * neonTimeline.fps)}
+    />
     <Composition
       id="ERekapShowreel"
       component={ERekapShowreel}

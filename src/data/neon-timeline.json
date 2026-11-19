@@ -1,0 +1,62 @@
+{
+  "fps": 30,
+  "estimated": false,
+  "total": 61.78,
+  "scenes": [
+    {
+      "id": "s1-hook",
+      "title": "Hook & Reveal Gemini 4 Neon",
+      "bg": "dark",
+      "audio": "audio/vo-neon/s1-hook.mp3",
+      "start": 0.0,
+      "duration": 9.312,
+      "vo_start": 0.5,
+      "vo_end": 8.612,
+      "end": 9.312
+    },
+    {
+      "id": "s2-posisi",
+      "title": "Anatomi Tiga Elemen",
+      "bg": "dark",
+      "audio": "audio/vo-neon/s2-posisi.mp3",
+      "start": 9.312,
+      "duration": 13.364,
+      "vo_start": 9.712,
+      "vo_end": 21.976,
+      "end": 22.676
+    },
+    {
+      "id": "s3-thinking",
+      "title": "Scalable Thinking Levels & 1M Context",
+      "bg": "dark",
+      "audio": "audio/vo-neon/s3-thinking.mp3",
+      "start": 22.676,
+      "duration": 12.212,
+      "vo_start": 23.076,
+      "vo_end": 34.188,
+      "end": 34.888
+    },
+    {
+      "id": "s4-benchmark",
+      "title": "Benchmark Resmi vs Claude & GPT",
+      "bg": "dark",
+      "audio": "audio/vo-neon/s4-benchmark.mp3",
+      "start": 34.888,
+      "duration": 14.3,
+      "vo_start": 35.288,
+      "vo_end": 48.488,
+      "end": 49.188
+    },
+    {
+      "id": "s5-outro",
+      "title": "Outro Resmi rhmt ofc",
+      "bg": "dark",
+      "audio": "audio/vo-neon/s5-outro.mp3",
+      "start": 49.188,
+      "duration": 12.592,
+      "vo_start": 49.588,
+      "vo_end": 59.98,
+      "end": 61.78
+    }
+  ]
+}

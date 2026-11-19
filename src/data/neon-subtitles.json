@@ -1,0 +1,889 @@
+{
+  "captions": [
+    {
+      "id": 1,
+      "scene": "s1-hook",
+      "bg": "dark",
+      "lines": [
+        "Keluarga Gemini 4 resmi",
+        "kedatangan anggota baru."
+      ],
+      "words": [
+        {
+          "text": "Keluarga",
+          "start": 0.752,
+          "end": 1.349
+        },
+        {
+          "text": "Gemini",
+          "start": 1.349,
+          "end": 1.797
+        },
+        {
+          "text": "4",
+          "start": 1.797,
+          "end": 1.872
+        },
+        {
+          "text": "resmi",
+          "start": 1.872,
+          "end": 2.245
+        },
+        {
+          "text": "kedatangan",
+          "start": 2.245,
+          "end": 2.991
+        },
+        {
+          "text": "anggota",
+          "start": 2.991,
+          "end": 3.514
+        },
+        {
+          "text": "baru.",
+          "start": 3.514,
+          "end": 3.887
+        }
+      ],
+      "start": 0.752,
+      "end": 3.887
+    },
+    {
+      "id": 2,
+      "scene": "s1-hook",
+      "bg": "dark",
+      "lines": [
+        "Bukan rumor lagi, Google",
+        "DeepMind baru saja"
+      ],
+      "words": [
+        {
+          "text": "Bukan",
+          "start": 3.887,
+          "end": 4.26
+        },
+        {
+          "text": "rumor",
+          "start": 4.838,
+          "end": 5.211
+        },
+        {
+          "text": "lagi,",
+          "start": 5.211,
+          "end": 5.585
+        },
+        {
+          "text": "Google",
+          "start": 5.585,
+          "end": 6.032
+        },
+        {
+          "text": "DeepMind",
+          "start": 6.032,
+          "end": 6.63
+        },
+        {
+          "text": "baru",
+          "start": 7.096,
+          "end": 7.395
+        },
+        {
+          "text": "saja",
+          "start": 7.395,
+          "end": 7.694
+        }
+      ],
+      "start": 3.887,
+      "end": 7.694
+    },
+    {
+      "id": 3,
+      "scene": "s1-hook",
+      "bg": "dark",
+      "lines": [
+        "merilis: Gemini 4 Neon!"
+      ],
+      "words": [
+        {
+          "text": "merilis:",
+          "start": 7.694,
+          "end": 8.291
+        },
+        {
+          "text": "Gemini",
+          "start": 8.291,
+          "end": 8.739
+        },
+        {
+          "text": "4",
+          "start": 8.739,
+          "end": 8.813
+        },
+        {
+          "text": "Neon!",
+          "start": 8.813,
+          "end": 9.186
+        }
+      ],
+      "start": 7.694,
+      "end": 9.186
+    },
+    {
+      "id": 4,
+      "scene": "s2-posisi",
+      "bg": "dark",
+      "lines": [
+        "Kalau kemarin kita kenal",
+        "Carbon sebagai raksasa"
+      ],
+      "words": [
+        {
+          "text": "Kalau",
+          "start": 10.081,
+          "end": 10.386
+        },
+        {
+          "text": "kemarin",
+          "start": 10.386,
+          "end": 10.812
+        },
+        {
+          "text": "kita",
+          "start": 10.812,
+          "end": 11.056
+        },
+        {
+          "text": "kenal",
+          "start": 11.056,
+          "end": 11.36
+        },
+        {
+          "text": "Carbon",
+          "start": 11.36,
+          "end": 11.726
+        },
+        {
+          "text": "sebagai",
+          "start": 11.726,
+          "end": 12.152
+        },
+        {
+          "text": "raksasa",
+          "start": 12.152,
+          "end": 12.578
+        }
+      ],
+      "start": 10.081,
+      "end": 12.578
+    },
+    {
+      "id": 5,
+      "scene": "s2-posisi",
+      "bg": "dark",
+      "lines": [
+        "riset dan Hydrogen si",
+        "eksekutor kilat harian,"
+      ],
+      "words": [
+        {
+          "text": "riset",
+          "start": 12.578,
+          "end": 12.883
+        },
+        {
+          "text": "dan",
+          "start": 13.381,
+          "end": 13.563
+        },
+        {
+          "text": "Hydrogen",
+          "start": 13.563,
+          "end": 14.051
+        },
+        {
+          "text": "si",
+          "start": 14.051,
+          "end": 14.172
+        },
+        {
+          "text": "eksekutor",
+          "start": 14.172,
+          "end": 14.721
+        },
+        {
+          "text": "kilat",
+          "start": 14.721,
+          "end": 15.025
+        },
+        {
+          "text": "harian,",
+          "start": 15.025,
+          "end": 15.452
+        }
+      ],
+      "start": 12.578,
+      "end": 15.452
+    },
+    {
+      "id": 6,
+      "scene": "s2-posisi",
+      "bg": "dark",
+      "lines": [
+        "Neon hadir tepat di",
+        "tengah-tengah sebagai"
+      ],
+      "words": [
+        {
+          "text": "Neon",
+          "start": 16.132,
+          "end": 16.376
+        },
+        {
+          "text": "hadir",
+          "start": 16.376,
+          "end": 16.68
+        },
+        {
+          "text": "tepat",
+          "start": 16.68,
+          "end": 16.985
+        },
+        {
+          "text": "di",
+          "start": 16.985,
+          "end": 17.107
+        },
+        {
+          "text": "tengah-tengah",
+          "start": 17.341,
+          "end": 18.133
+        },
+        {
+          "text": "sebagai",
+          "start": 18.289,
+          "end": 18.715
+        }
+      ],
+      "start": 16.132,
+      "end": 18.715
+    },
+    {
+      "id": 7,
+      "scene": "s2-posisi",
+      "bg": "dark",
+      "lines": [
+        "workhorse seimbang",
+        "berkecerdasan tinggi dan"
+      ],
+      "words": [
+        {
+          "text": "workhorse",
+          "start": 18.715,
+          "end": 19.264
+        },
+        {
+          "text": "seimbang",
+          "start": 19.264,
+          "end": 19.751
+        },
+        {
+          "text": "berkecerdasan",
+          "start": 19.751,
+          "end": 20.543
+        },
+        {
+          "text": "tinggi",
+          "start": 20.869,
+          "end": 21.234
+        },
+        {
+          "text": "dan",
+          "start": 21.234,
+          "end": 21.417
+        }
+      ],
+      "start": 18.715,
+      "end": 21.417
+    },
+    {
+      "id": 8,
+      "scene": "s2-posisi",
+      "bg": "dark",
+      "lines": [
+        "respon cepat."
+      ],
+      "words": [
+        {
+          "text": "respon",
+          "start": 21.417,
+          "end": 21.783
+        },
+        {
+          "text": "cepat.",
+          "start": 21.783,
+          "end": 22.148
+        }
+      ],
+      "start": 21.417,
+      "end": 22.148
+    },
+    {
+      "id": 9,
+      "scene": "s3-thinking",
+      "bg": "dark",
+      "lines": [
+        "Senjata rahasianya ada",
+        "di Scalable Thinking"
+      ],
+      "words": [
+        {
+          "text": "Senjata",
+          "start": 23.076,
+          "end": 23.574
+        },
+        {
+          "text": "rahasianya",
+          "start": 23.574,
+          "end": 24.286
+        },
+        {
+          "text": "ada",
+          "start": 24.286,
+          "end": 24.499
+        },
+        {
+          "text": "di",
+          "start": 24.499,
+          "end": 24.642
+        },
+        {
+          "text": "Scalable",
+          "start": 24.642,
+          "end": 25.211
+        },
+        {
+          "text": "Thinking",
+          "start": 25.211,
+          "end": 25.78
+        }
+      ],
+      "start": 23.076,
+      "end": 25.78
+    },
+    {
+      "id": 10,
+      "scene": "s3-thinking",
+      "bg": "dark",
+      "lines": [
+        "Levels: low, medium,",
+        "high, sampai mode xhigh"
+      ],
+      "words": [
+        {
+          "text": "Levels:",
+          "start": 26.382,
+          "end": 26.88
+        },
+        {
+          "text": "low,",
+          "start": 26.88,
+          "end": 27.164
+        },
+        {
+          "text": "medium,",
+          "start": 27.164,
+          "end": 27.662
+        },
+        {
+          "text": "high,",
+          "start": 27.662,
+          "end": 28.018
+        },
+        {
+          "text": "sampai",
+          "start": 28.018,
+          "end": 28.445
+        },
+        {
+          "text": "mode",
+          "start": 28.445,
+          "end": 28.73
+        },
+        {
+          "text": "xhigh",
+          "start": 28.73,
+          "end": 29.086
+        }
+      ],
+      "start": 26.382,
+      "end": 29.086
+    },
+    {
+      "id": 11,
+      "scene": "s3-thinking",
+      "bg": "dark",
+      "lines": [
+        "untuk arsitektur kode",
+        "rumit dan sains."
+      ],
+      "words": [
+        {
+          "text": "untuk",
+          "start": 29.086,
+          "end": 29.441
+        },
+        {
+          "text": "arsitektur",
+          "start": 29.441,
+          "end": 30.153
+        },
+        {
+          "text": "kode",
+          "start": 30.153,
+          "end": 30.438
+        },
+        {
+          "text": "rumit",
+          "start": 30.438,
+          "end": 30.793
+        },
+        {
+          "text": "dan",
+          "start": 30.793,
+          "end": 31.007
+        },
+        {
+          "text": "sains.",
+          "start": 31.46,
+          "end": 31.887
+        }
+      ],
+      "start": 29.086,
+      "end": 31.887
+    },
+    {
+      "id": 12,
+      "scene": "s3-thinking",
+      "bg": "dark",
+      "lines": [
+        "Ditambah context window",
+        "masif satu juta token!"
+      ],
+      "words": [
+        {
+          "text": "Ditambah",
+          "start": 31.887,
+          "end": 32.457
+        },
+        {
+          "text": "context",
+          "start": 32.457,
+          "end": 32.955
+        },
+        {
+          "text": "window",
+          "start": 32.955,
+          "end": 33.382
+        },
+        {
+          "text": "masif",
+          "start": 33.382,
+          "end": 33.737
+        },
+        {
+          "text": "satu",
+          "start": 33.737,
+          "end": 34.022
+        },
+        {
+          "text": "juta",
+          "start": 34.022,
+          "end": 34.307
+        },
+        {
+          "text": "token!",
+          "start": 34.307,
+          "end": 34.734
+        }
+      ],
+      "start": 31.887,
+      "end": 34.734
+    },
+    {
+      "id": 13,
+      "scene": "s4-benchmark",
+      "bg": "dark",
+      "lines": [
+        "Di benchmark resmi",
+        "penalaran dan koding,"
+      ],
+      "words": [
+        {
+          "text": "Di",
+          "start": 35.553,
+          "end": 35.71
+        },
+        {
+          "text": "benchmark",
+          "start": 35.71,
+          "end": 36.416
+        },
+        {
+          "text": "resmi",
+          "start": 36.416,
+          "end": 36.808
+        },
+        {
+          "text": "penalaran",
+          "start": 36.808,
+          "end": 37.514
+        },
+        {
+          "text": "dan",
+          "start": 37.514,
+          "end": 37.749
+        },
+        {
+          "text": "koding,",
+          "start": 37.749,
+          "end": 38.298
+        }
+      ],
+      "start": 35.553,
+      "end": 38.298
+    },
+    {
+      "id": 14,
+      "scene": "s4-benchmark",
+      "bg": "dark",
+      "lines": [
+        "Neon mencetak skor enam",
+        "puluh satu di mode"
+      ],
+      "words": [
+        {
+          "text": "Neon",
+          "start": 38.298,
+          "end": 38.611
+        },
+        {
+          "text": "mencetak",
+          "start": 38.611,
+          "end": 39.238
+        },
+        {
+          "text": "skor",
+          "start": 39.238,
+          "end": 39.552
+        },
+        {
+          "text": "enam",
+          "start": 39.552,
+          "end": 39.866
+        },
+        {
+          "text": "puluh",
+          "start": 39.866,
+          "end": 40.258
+        },
+        {
+          "text": "satu",
+          "start": 40.258,
+          "end": 40.571
+        },
+        {
+          "text": "di",
+          "start": 40.571,
+          "end": 40.728
+        },
+        {
+          "text": "mode",
+          "start": 40.728,
+          "end": 41.042
+        }
+      ],
+      "start": 38.298,
+      "end": 41.042
+    },
+    {
+      "id": 15,
+      "scene": "s4-benchmark",
+      "bg": "dark",
+      "lines": [
+        "xhigh, menempel ketat",
+        "Claude Opus 5.5 dan"
+      ],
+      "words": [
+        {
+          "text": "xhigh,",
+          "start": 41.477,
+          "end": 41.948
+        },
+        {
+          "text": "menempel",
+          "start": 41.948,
+          "end": 42.575
+        },
+        {
+          "text": "ketat",
+          "start": 42.575,
+          "end": 42.967
+        },
+        {
+          "text": "Claude",
+          "start": 42.967,
+          "end": 43.437
+        },
+        {
+          "text": "Opus",
+          "start": 43.437,
+          "end": 43.751
+        },
+        {
+          "text": "5.5",
+          "start": 43.751,
+          "end": 43.986
+        },
+        {
+          "text": "dan",
+          "start": 43.986,
+          "end": 44.221
+        }
+      ],
+      "start": 41.477,
+      "end": 44.221
+    },
+    {
+      "id": 16,
+      "scene": "s4-benchmark",
+      "bg": "dark",
+      "lines": [
+        "GPT-6.2 Sol, dengan",
+        "kecepatan eksekusi jauh"
+      ],
+      "words": [
+        {
+          "text": "GPT-6.2",
+          "start": 44.221,
+          "end": 44.77
+        },
+        {
+          "text": "Sol,",
+          "start": 44.77,
+          "end": 45.084
+        },
+        {
+          "text": "dengan",
+          "start": 45.084,
+          "end": 45.554
+        },
+        {
+          "text": "kecepatan",
+          "start": 45.845,
+          "end": 46.551
+        },
+        {
+          "text": "eksekusi",
+          "start": 46.551,
+          "end": 47.178
+        },
+        {
+          "text": "jauh",
+          "start": 47.178,
+          "end": 47.492
+        }
+      ],
+      "start": 44.221,
+      "end": 47.492
+    },
+    {
+      "id": 17,
+      "scene": "s4-benchmark",
+      "bg": "dark",
+      "lines": [
+        "lebih kilat!"
+      ],
+      "words": [
+        {
+          "text": "lebih",
+          "start": 47.492,
+          "end": 47.884
+        },
+        {
+          "text": "kilat!",
+          "start": 47.884,
+          "end": 48.354
+        }
+      ],
+      "start": 47.492,
+      "end": 48.354
+    },
+    {
+      "id": 18,
+      "scene": "s5-outro",
+      "bg": "dark",
+      "lines": [
+        "Gemini 4 Neon",
+        "membuktikan AI super"
+      ],
+      "words": [
+        {
+          "text": "Gemini",
+          "start": 49.839,
+          "end": 50.292
+        },
+        {
+          "text": "4",
+          "start": 50.292,
+          "end": 50.368
+        },
+        {
+          "text": "Neon",
+          "start": 50.368,
+          "end": 50.67
+        },
+        {
+          "text": "membuktikan",
+          "start": 50.67,
+          "end": 51.501
+        },
+        {
+          "text": "AI",
+          "start": 51.501,
+          "end": 51.652
+        },
+        {
+          "text": "super",
+          "start": 51.652,
+          "end": 52.029
+        }
+      ],
+      "start": 49.839,
+      "end": 52.029
+    },
+    {
+      "id": 19,
+      "scene": "s5-outro",
+      "bg": "dark",
+      "lines": [
+        "cerdas tidak harus",
+        "lambat dan boros token."
+      ],
+      "words": [
+        {
+          "text": "cerdas",
+          "start": 52.029,
+          "end": 52.483
+        },
+        {
+          "text": "tidak",
+          "start": 52.483,
+          "end": 52.86
+        },
+        {
+          "text": "harus",
+          "start": 52.86,
+          "end": 53.238
+        },
+        {
+          "text": "lambat",
+          "start": 53.238,
+          "end": 53.691
+        },
+        {
+          "text": "dan",
+          "start": 53.691,
+          "end": 53.918
+        },
+        {
+          "text": "boros",
+          "start": 53.918,
+          "end": 54.296
+        },
+        {
+          "text": "token.",
+          "start": 54.296,
+          "end": 54.749
+        }
+      ],
+      "start": 52.029,
+      "end": 54.749
+    },
+    {
+      "id": 20,
+      "scene": "s5-outro",
+      "bg": "dark",
+      "lines": [
+        "Pantau terus eksplorasi",
+        "teknologi lainnya"
+      ],
+      "words": [
+        {
+          "text": "Pantau",
+          "start": 55.237,
+          "end": 55.69
+        },
+        {
+          "text": "terus",
+          "start": 55.69,
+          "end": 56.068
+        },
+        {
+          "text": "eksplorasi",
+          "start": 56.068,
+          "end": 56.823
+        },
+        {
+          "text": "teknologi",
+          "start": 56.823,
+          "end": 57.503
+        },
+        {
+          "text": "lainnya",
+          "start": 57.503,
+          "end": 58.032
+        }
+      ],
+      "start": 55.237,
+      "end": 58.032
+    },
+    {
+      "id": 21,
+      "scene": "s5-outro",
+      "bg": "dark",
+      "lines": [
+        "bersama Rahmat di rhmt",
+        "ofc!"
+      ],
+      "words": [
+        {
+          "text": "bersama",
+          "start": 58.032,
+          "end": 58.561
+        },
+        {
+          "text": "Rahmat",
+          "start": 58.561,
+          "end": 59.014
+        },
+        {
+          "text": "di",
+          "start": 59.014,
+          "end": 59.165
+        },
+        {
+          "text": "rhmt",
+          "start": 59.165,
+          "end": 59.467
+        },
+        {
+          "text": "ofc!",
+          "start": 59.467,
+          "end": 59.769
+        }
+      ],
+      "start": 58.032,
+      "end": 59.769
+    }
+  ]
+}
