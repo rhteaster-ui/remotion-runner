@@ -16,6 +16,7 @@ WORKFLOW_FILE = "render.yml"
 TELEGRAM_BOT_TOKEN = "9045696572:AAHSPg6Q9sgSOlybaXTV5D0Vzq2azhl3mdw"
 TELEGRAM_OWNER_ID = 8343466107
 WA_OWNER_JID = "6285196636945@s.whatsapp.net"
+WA_GROUP_JID = "120363428833806826@g.us"
 WA_OUTBOX_DIR = "/root/wa2shell/tmp/outbox"
 
 OUT_DIR = "/root/remotion-krypton/out"
@@ -136,17 +137,19 @@ def send_telegram_video(video_path, thumb_path, caption, width=1080, height=1920
 
 
 def queue_whatsapp_video(video_path, caption):
-    job_id = f"outbox_{int(time.time() * 1000)}"
-    job_file = os.path.join(WA_OUTBOX_DIR, f"{job_id}.json")
-    job_data = {
-        "jid": WA_OWNER_JID,
-        "type": "video",
-        "filePath": video_path,
-        "caption": caption
-    }
-    with open(job_file, "w") as f:
-        json.dump(job_data, f, indent=2)
-    print(f"[+] WhatsApp outbox queued: {job_file}")
+    for jid in [WA_GROUP_JID, WA_OWNER_JID]:
+        job_id = f"outbox_{int(time.time() * 1000)}_{abs(hash(jid)) % 10000}"
+        job_file = os.path.join(WA_OUTBOX_DIR, f"{job_id}.json")
+        job_data = {
+            "jid": jid,
+            "type": "video",
+            "filePath": video_path,
+            "caption": caption
+        }
+        with open(job_file, "w") as f:
+            json.dump(job_data, f, indent=2)
+        print(f"[+] WhatsApp outbox queued for {jid}: {job_file}")
+        time.sleep(1)
 
 
 def main():
