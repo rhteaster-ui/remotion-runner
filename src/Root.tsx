@@ -31,9 +31,18 @@ import {JSWat} from './wat/JSWat';
 import chipCues from './data/chip-cues.json';
 import {ChipMerahPutihVideo} from './chip/ChipMerahPutihVideo';
 import {ERekapHorizontalVideo} from './horizontal/ERekapHorizontalVideo';
+import {ERekapKineticTeaser, TEASER_TOTAL_FRAMES} from './kinetic/ERekapKineticTeaser';
 
 export const Root: React.FC = () => (
   <>
+    <Composition
+      id="ERekapKineticTeaser"
+      component={ERekapKineticTeaser}
+      width={1920}
+      height={1080}
+      fps={30}
+      durationInFrames={TEASER_TOTAL_FRAMES}
+    />
     <Composition
       id="ERekapHorizontal"
       component={ERekapHorizontalVideo}
