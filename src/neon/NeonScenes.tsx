@@ -7,14 +7,7 @@ import {
   staticFile,
   useCurrentFrame,
 } from 'remotion';
-import {
-  ClaudeOfficialLogo,
-  DeepMindOfficialLogo,
-  GeminiOfficialLogo,
-  GoogleAIStudioBadge,
-  NeonSparkle,
-  OpenAIOfficialLogo,
-} from './Logos';
+import {CleanPoster, NEON_POSTERS} from './NeonCleanPoster';
 import {E, focusCam, p, shake} from './motion';
 import {NeonHeaderHUD, SpecPillStrip, TelemetryCard} from './NeonPrimitives';
 import {NEON_FONT, NEON_TOKENS as T} from './neonTokens';
@@ -122,7 +115,7 @@ export const NeonBg: React.FC = () => {
 };
 
 /* ══════════════════════════════════════════════════════════════════════════
-   SCENE 1: HOOK & REVEAL (DeepMind Dispatch -> Quantum Spark Core)
+   SCENE 1: HOOK & REVEAL (Official Key Art Banner 16:9 + Telemetry)
    ══════════════════════════════════════════════════════════════════════════ */
 export const S1Hook: React.FC = () => {
   const f = useCurrentFrame();
@@ -134,8 +127,6 @@ export const S1Hook: React.FC = () => {
   ]);
 
   const enter = p(f, 4, 24, E.out);
-  const ring = p(f, 18, 52, E.out);
-  const blast = p(f, 46, 68, E.back);
   const sh = shake(f, 50, 12, 10);
 
   return (
@@ -201,109 +192,33 @@ export const S1Hook: React.FC = () => {
           </div>
         </div>
 
-        {/* Hero Core Card */}
+        {/* Center Stage: Clean Cinema 16:9 Official Poster */}
         <div
           style={{
             position: 'absolute',
-            top: 410,
-            left: '50%',
-            transform: 'translateX(-50%)',
-            width: 580,
-            height: 540,
-            borderRadius: 44,
-            backgroundColor: 'rgba(15, 23, 42, 0.92)',
-            border: `2.5px solid ${T.neon}`,
-            boxShadow: `${T.neonGlow}, inset 0 0 50px rgba(255, 94, 30, 0.25)`,
+            top: 390,
+            left: LEFT_M,
+            width: CW,
             display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
             justifyContent: 'center',
-            transformOrigin: '50% 50%',
-            transform: `translateX(-50%) scale(${0.86 + 0.14 * blast})`,
-            padding: 34,
-            backdropFilter: 'blur(20px)',
-            zIndex: 30,
+            zIndex: 35,
           }}
         >
-          {/* Orbital Rings */}
-          {[1, 2, 3].map((r) => (
-            <div
-              key={r}
-              style={{
-                position: 'absolute',
-                top: 270,
-                left: 290,
-                width: 320 + r * 140 * ring,
-                height: 320 + r * 140 * ring,
-                marginLeft: -(160 + r * 70 * ring),
-                marginTop: -(160 + r * 70 * ring),
-                borderRadius: 999,
-                border: `2px solid rgba(255, 94, 30, ${0.7 - r * 0.2})`,
-                opacity: (1 - ring) * 0.85,
-                pointerEvents: 'none',
-              }}
-            />
-          ))}
-
-          {/* Core Sparkle */}
-          <div
-            style={{
-              position: 'relative',
-              width: 150,
-              height: 150,
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              marginBottom: 12,
-            }}
-          >
-            <div
-              style={{
-                position: 'absolute',
-                width: 140,
-                height: 140,
-                borderRadius: 999,
-                background:
-                  'radial-gradient(circle, rgba(255, 94, 30, 0.5) 0%, transparent 70%)',
-                filter: 'blur(25px)',
-              }}
-            />
-            <GeminiOfficialLogo size={130} />
-          </div>
-
-          <div
-            style={{
-              fontFamily: NEON_FONT.sans,
-              fontSize: 56,
-              fontWeight: 800,
-              color: '#FFFFFF',
-              letterSpacing: '-0.03em',
-              lineHeight: 1,
-              textAlign: 'center',
-            }}
-          >
-            Gemini 4 <span style={{color: T.neon}}>Neon</span>
-          </div>
-
-          <div
-            style={{
-              fontFamily: NEON_FONT.mono,
-              fontSize: 16,
-              fontWeight: 800,
-              color: T.inkMuted,
-              letterSpacing: '0.24em',
-              marginTop: 12,
-              textAlign: 'center',
-            }}
-          >
-            THE BALANCED WORKHORSE
-          </div>
+          <CleanPoster
+            poster={NEON_POSTERS.hero}
+            enterAt={12}
+            width={920}
+            height={518}
+            tiltDeg={-1}
+            zoomFrom={1.0}
+            zoomTo={1.05}
+          />
         </div>
 
-        {/* Left & Right Telemetry Widgets (Filling Side Whitespace) */}
+        {/* Left & Right Telemetry Cards (Filling Side Whitespace) */}
         <TelemetryCard
           side="left"
-          top={520}
+          top={480}
           delay={24}
           label="LATENCY"
           value="142ms"
@@ -312,7 +227,7 @@ export const S1Hook: React.FC = () => {
         />
         <TelemetryCard
           side="right"
-          top={520}
+          top={480}
           delay={32}
           label="CONTEXT"
           value="1,000,000"
@@ -320,11 +235,11 @@ export const S1Hook: React.FC = () => {
           accent="#00E5FF"
         />
 
-        {/* Lower Stage: 3 Key Metrics Cards (Filling y: 990 - 1500) */}
+        {/* Lower Stage: 3 Key Metrics Cards (Filling y: 1010 - 1500) */}
         <div
           style={{
             position: 'absolute',
-            top: 1000,
+            top: 1010,
             left: LEFT_M,
             width: CW,
             display: 'grid',
@@ -427,7 +342,7 @@ export const S1Hook: React.FC = () => {
 };
 
 /* ══════════════════════════════════════════════════════════════════════════
-   SCENE 2: ANATOMI TIGA ARSITEKTUR (Carbon vs Neon vs Hydrogen)
+   SCENE 2: ANATOMI TIGA ARSITEKTUR (Official Lineup Banner 16:9)
    ══════════════════════════════════════════════════════════════════════════ */
 export const S2Posisi: React.FC = () => {
   const f = useCurrentFrame();
@@ -439,36 +354,6 @@ export const S2Posisi: React.FC = () => {
   ]);
 
   const enter = p(f, 4, 22, E.out);
-
-  const tiers = [
-    {
-      id: 'carbon',
-      name: 'Gemini 4 Carbon',
-      tag: 'HEAVYWEIGHT FRONTIER',
-      spec: 'Heavy Multi-Step Reasoning · Ultra Deep Compute',
-      badge: 'Tier 1 · Maximum Depth',
-      col: '#3B82F6',
-      active: false,
-    },
-    {
-      id: 'neon',
-      name: 'Gemini 4 Neon',
-      tag: 'THE BALANCED WORKHORSE',
-      spec: 'Sweet Spot Reasoning · Efisiensi Biaya & Kecepatan Optimal',
-      badge: 'Varian Baru November 2026',
-      col: '#FF5E1E',
-      active: true,
-    },
-    {
-      id: 'hydrogen',
-      name: 'Gemini 4 Hydrogen',
-      tag: 'FAST DAILY RUNNER',
-      spec: 'Low-Latency Lightweight · High-Volume Tasks',
-      badge: 'Tier 3 · Ultra Speed',
-      col: '#10B981',
-      active: false,
-    },
-  ];
 
   return (
     <AbsoluteFill style={{overflow: 'hidden'}}>
@@ -524,7 +409,7 @@ export const S2Posisi: React.FC = () => {
           </div>
         </div>
 
-        {/* 3 Tier Comparative Stack (y: 380 - 1060) */}
+        {/* Center Stage: Clean Cinema Official Lineup Poster */}
         <div
           style={{
             position: 'absolute',
@@ -532,137 +417,26 @@ export const S2Posisi: React.FC = () => {
             left: LEFT_M,
             width: CW,
             display: 'flex',
-            flexDirection: 'column',
-            gap: 20,
-            zIndex: 40,
+            justifyContent: 'center',
+            zIndex: 35,
           }}
         >
-          {tiers.map((tItem, i) => {
-            const cardP = p(f, 16 + i * 14, 38 + i * 14, E.back);
-            return (
-              <div
-                key={tItem.id}
-                style={{
-                  position: 'relative',
-                  padding: tItem.active ? '32px 36px' : '26px 36px',
-                  borderRadius: 30,
-                  backgroundColor: tItem.active
-                    ? 'rgba(15, 23, 42, 0.95)'
-                    : 'rgba(15, 23, 42, 0.75)',
-                  border: tItem.active
-                    ? `2.5px solid ${tItem.col}`
-                    : `1.5px solid rgba(255, 255, 255, 0.1)`,
-                  boxShadow: tItem.active
-                    ? `${T.neonGlow}, 0 20px 40px rgba(0,0,0,0.7)`
-                    : '0 12px 28px rgba(0,0,0,0.5)',
-                  backdropFilter: 'blur(18px)',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'space-between',
-                  opacity: cardP,
-                  transform: `translateY(${(1 - cardP) * 35}px) scale(${
-                    tItem.active ? 1.02 : 1
-                  })`,
-                }}
-              >
-                <div style={{display: 'flex', alignItems: 'center', gap: 24}}>
-                  <div
-                    style={{
-                      width: 68,
-                      height: 68,
-                      borderRadius: 20,
-                      backgroundColor: `${tItem.col}22`,
-                      border: `2px solid ${tItem.col}`,
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      boxShadow: `0 0 20px ${tItem.col}44`,
-                    }}
-                  >
-                    <GeminiOfficialLogo size={42} />
-                  </div>
-
-                  <div>
-                    <div style={{display: 'flex', alignItems: 'center', gap: 12}}>
-                      <span
-                        style={{
-                          fontFamily: NEON_FONT.sans,
-                          fontSize: tItem.active ? 34 : 30,
-                          fontWeight: 800,
-                          color: '#FFFFFF',
-                          letterSpacing: '-0.02em',
-                        }}
-                      >
-                        {tItem.name}
-                      </span>
-                      <span
-                        style={{
-                          fontFamily: NEON_FONT.mono,
-                          fontSize: 12,
-                          fontWeight: 800,
-                          color: tItem.col,
-                          backgroundColor: `${tItem.col}20`,
-                          padding: '3px 10px',
-                          borderRadius: 8,
-                          border: `1px solid ${tItem.col}55`,
-                        }}
-                      >
-                        {tItem.badge}
-                      </span>
-                    </div>
-
-                    <div
-                      style={{
-                        fontFamily: NEON_FONT.mono,
-                        fontSize: 14,
-                        fontWeight: 700,
-                        color: tItem.col,
-                        letterSpacing: '0.12em',
-                        marginTop: 4,
-                      }}
-                    >
-                      {tItem.tag}
-                    </div>
-
-                    <div
-                      style={{
-                        fontFamily: NEON_FONT.sans,
-                        fontSize: 16,
-                        color: T.inkMuted,
-                        marginTop: 6,
-                      }}
-                    >
-                      {tItem.spec}
-                    </div>
-                  </div>
-                </div>
-
-                {tItem.active && (
-                  <div
-                    style={{
-                      padding: '10px 20px',
-                      borderRadius: 999,
-                      backgroundColor: '#FF5E1E',
-                      color: '#FFFFFF',
-                      fontFamily: NEON_FONT.sans,
-                      fontSize: 14,
-                      fontWeight: 800,
-                      boxShadow: '0 0 20px rgba(255, 94, 30, 0.7)',
-                    }}
-                  >
-                    FOKUS UTAMA
-                  </div>
-                )}
-              </div>
-            );
-          })}
+          <CleanPoster
+            poster={NEON_POSTERS.lineup}
+            enterAt={10}
+            width={920}
+            height={518}
+            tiltDeg={1}
+            zoomFrom={1.0}
+            zoomTo={1.05}
+          />
         </div>
 
-        {/* Lower Matrix Bar: Compute vs Latency Tradeoff (y: 1100 - 1500) */}
+        {/* Lower Matrix Bar: Compute vs Latency Tradeoff (y: 1040 - 1500) */}
         <div
           style={{
             position: 'absolute',
-            top: 1100,
+            top: 1040,
             left: LEFT_M,
             width: CW,
             padding: '30px 36px',
@@ -1066,7 +840,7 @@ export const S3Thinking: React.FC = () => {
 };
 
 /* ══════════════════════════════════════════════════════════════════════════
-   SCENE 4: BENCHMARK RESMI (Gemini 4 Neon vs Claude 3.5 Sonnet & GPT-4o)
+   SCENE 4: BENCHMARK RESMI (Official Benchmark Board Banner 16:9)
    ══════════════════════════════════════════════════════════════════════════ */
 export const S4Benchmark: React.FC = () => {
   const f = useCurrentFrame();
@@ -1078,30 +852,6 @@ export const S4Benchmark: React.FC = () => {
   ]);
 
   const enter = p(f, 4, 22, E.out);
-
-  const benchmarks = [
-    {
-      title: 'HumanEval (Coding & Python Syntax)',
-      neon: 92.4,
-      claude: 93.7,
-      gpt: 90.2,
-      note: 'Setara Claude 3.5 Sonnet dengan sepertiga biaya',
-    },
-    {
-      title: 'MATH-500 (Complex Mathematical Reasoning)',
-      neon: 91.8,
-      claude: 89.2,
-      gpt: 86.4,
-      note: 'Mengungguli Claude & GPT berkat thinking level',
-    },
-    {
-      title: 'MMLU-Pro (Multi-discipline Academic QA)',
-      neon: 88.6,
-      claude: 87.9,
-      gpt: 85.2,
-      note: 'Akurasi tertinggi di kelas model mid-tier',
-    },
-  ];
 
   return (
     <AbsoluteFill style={{overflow: 'hidden'}}>
@@ -1157,227 +907,37 @@ export const S4Benchmark: React.FC = () => {
           </div>
         </div>
 
-        {/* 3 Benchmark Metric Cards (y: 370 - 1100) */}
+        {/* Center Stage: Clean Cinema Official Benchmark Board Poster */}
         <div
           style={{
             position: 'absolute',
-            top: 370,
+            top: 380,
             left: LEFT_M,
             width: CW,
             display: 'flex',
-            flexDirection: 'column',
-            gap: 20,
-            zIndex: 40,
+            justifyContent: 'center',
+            zIndex: 35,
           }}
         >
-          {benchmarks.map((bm, i) => {
-            const barP = p(f, 20 + i * 16, 50 + i * 16, E.out);
-            return (
-              <div
-                key={bm.title}
-                style={{
-                  padding: '24px 32px',
-                  borderRadius: 28,
-                  backgroundColor: 'rgba(15, 23, 42, 0.94)',
-                  border: '1.5px solid rgba(255, 255, 255, 0.12)',
-                  boxShadow: '0 16px 36px -10px rgba(0,0,0,0.7)',
-                  backdropFilter: 'blur(16px)',
-                }}
-              >
-                <div
-                  style={{
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                    alignItems: 'baseline',
-                    marginBottom: 16,
-                  }}
-                >
-                  <span
-                    style={{
-                      fontFamily: NEON_FONT.sans,
-                      fontSize: 22,
-                      fontWeight: 800,
-                      color: '#FFFFFF',
-                      letterSpacing: '-0.02em',
-                    }}
-                  >
-                    {bm.title}
-                  </span>
-                  <span
-                    style={{
-                      fontFamily: NEON_FONT.mono,
-                      fontSize: 13,
-                      fontWeight: 700,
-                      color: T.neon,
-                    }}
-                  >
-                    {bm.note}
-                  </span>
-                </div>
-
-                {/* 3 Comparison Bars */}
-                <div style={{display: 'flex', flexDirection: 'column', gap: 10}}>
-                  {/* Gemini 4 Neon */}
-                  <div style={{display: 'flex', alignItems: 'center', gap: 16}}>
-                    <div
-                      style={{
-                        width: 170,
-                        display: 'flex',
-                        alignItems: 'center',
-                        gap: 8,
-                        fontFamily: NEON_FONT.sans,
-                        fontSize: 15,
-                        fontWeight: 800,
-                        color: T.neon,
-                      }}
-                    >
-                      <GeminiOfficialLogo size={20} />
-                      Gemini 4 Neon
-                    </div>
-                    <div
-                      style={{
-                        flex: 1,
-                        height: 14,
-                        borderRadius: 7,
-                        backgroundColor: 'rgba(255, 255, 255, 0.08)',
-                        overflow: 'hidden',
-                      }}
-                    >
-                      <div
-                        style={{
-                          height: '100%',
-                          width: `${bm.neon * barP}%`,
-                          backgroundColor: '#FF5E1E',
-                          borderRadius: 7,
-                          boxShadow: '0 0 14px #FF5E1E',
-                        }}
-                      />
-                    </div>
-                    <div
-                      style={{
-                        width: 70,
-                        textAlign: 'right',
-                        fontFamily: NEON_FONT.mono,
-                        fontSize: 16,
-                        fontWeight: 800,
-                        color: '#FFFFFF',
-                      }}
-                    >
-                      {(bm.neon * barP).toFixed(1)}%
-                    </div>
-                  </div>
-
-                  {/* Claude 3.5 Sonnet */}
-                  <div style={{display: 'flex', alignItems: 'center', gap: 16}}>
-                    <div
-                      style={{
-                        width: 170,
-                        display: 'flex',
-                        alignItems: 'center',
-                        gap: 8,
-                        fontFamily: NEON_FONT.sans,
-                        fontSize: 15,
-                        fontWeight: 700,
-                        color: '#F59E0B',
-                      }}
-                    >
-                      <ClaudeOfficialLogo size={18} />
-                      Claude 3.5 Sonnet
-                    </div>
-                    <div
-                      style={{
-                        flex: 1,
-                        height: 12,
-                        borderRadius: 6,
-                        backgroundColor: 'rgba(255, 255, 255, 0.06)',
-                        overflow: 'hidden',
-                      }}
-                    >
-                      <div
-                        style={{
-                          height: '100%',
-                          width: `${bm.claude * barP}%`,
-                          backgroundColor: '#F59E0B',
-                          borderRadius: 6,
-                        }}
-                      />
-                    </div>
-                    <div
-                      style={{
-                        width: 70,
-                        textAlign: 'right',
-                        fontFamily: NEON_FONT.mono,
-                        fontSize: 15,
-                        fontWeight: 700,
-                        color: '#94A3B8',
-                      }}
-                    >
-                      {(bm.claude * barP).toFixed(1)}%
-                    </div>
-                  </div>
-
-                  {/* GPT-4o */}
-                  <div style={{display: 'flex', alignItems: 'center', gap: 16}}>
-                    <div
-                      style={{
-                        width: 170,
-                        display: 'flex',
-                        alignItems: 'center',
-                        gap: 8,
-                        fontFamily: NEON_FONT.sans,
-                        fontSize: 15,
-                        fontWeight: 700,
-                        color: '#14B8A6',
-                      }}
-                    >
-                      <OpenAIOfficialLogo size={18} />
-                      GPT-4o
-                    </div>
-                    <div
-                      style={{
-                        flex: 1,
-                        height: 12,
-                        borderRadius: 6,
-                        backgroundColor: 'rgba(255, 255, 255, 0.06)',
-                        overflow: 'hidden',
-                      }}
-                    >
-                      <div
-                        style={{
-                          height: '100%',
-                          width: `${bm.gpt * barP}%`,
-                          backgroundColor: '#14B8A6',
-                          borderRadius: 6,
-                        }}
-                      />
-                    </div>
-                    <div
-                      style={{
-                        width: 70,
-                        textAlign: 'right',
-                        fontFamily: NEON_FONT.mono,
-                        fontSize: 15,
-                        fontWeight: 700,
-                        color: '#94A3B8',
-                      }}
-                    >
-                      {(bm.gpt * barP).toFixed(1)}%
-                    </div>
-                  </div>
-                </div>
-              </div>
-            );
-          })}
+          <CleanPoster
+            poster={NEON_POSTERS.benchmark}
+            enterAt={10}
+            width={920}
+            height={518}
+            tiltDeg={-1}
+            zoomFrom={1.0}
+            zoomTo={1.05}
+          />
         </div>
 
-        {/* Lower Stage: Pricing & Efficiency Box (y: 1140 - 1500) */}
+        {/* Lower Stage: Pricing & Efficiency Box (y: 1040 - 1500) */}
         <div
           style={{
             position: 'absolute',
-            top: 1140,
+            top: 1040,
             left: LEFT_M,
             width: CW,
-            padding: '26px 36px',
+            padding: '30px 36px',
             borderRadius: 28,
             backgroundColor: 'rgba(15, 23, 42, 0.92)',
             border: '2px solid rgba(255, 94, 30, 0.45)',
@@ -1427,7 +987,7 @@ export const S4Benchmark: React.FC = () => {
 
           <div
             style={{
-              padding: '12px 24px',
+              padding: '14px 24px',
               borderRadius: 20,
               backgroundColor: 'rgba(16, 185, 129, 0.15)',
               border: '1.5px solid #10B981',
