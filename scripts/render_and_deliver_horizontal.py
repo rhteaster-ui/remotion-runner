@@ -13,7 +13,7 @@ GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN") or (open("/root/.runner_token").re
 REPO = "rhteaster-ui/remotion-runner"
 WORKFLOW_FILE = "render.yml"
 
-TELEGRAM_BOT_TOKEN = "9045696572:AAHSPg6Q9sgSOlybaXTV5D0Vzq2azhl3mdw"
+TELEGRAM_BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "")
 TELEGRAM_OWNER_ID = 8343466107
 
 OUT_DIR = "/root/remotion-krypton/out"

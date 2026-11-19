@@ -1,7 +1,8 @@
+import os
 import json
 import requests
 
-bot_token = "9045696572:AAHSPg6Q9sgSOlybaXTV5D0Vzq2azhl3mdw"
+bot_token = os.environ.get("TELEGRAM_BOT_TOKEN", "")
 chat_id = 8343466107
 video_path = "/root/remotion-krypton/out/RepoFlow-v2-Final.mp4"
 thumb_path = "/root/remotion-krypton/out/RepoFlow-v2-Final-thumb.jpg"

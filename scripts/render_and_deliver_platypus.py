@@ -16,7 +16,7 @@ GITHUB_TOKEN = (
 REPO = "rhteaster-ui/remotion-runner"
 WORKFLOW_FILE = "render.yml"
 
-TELEGRAM_BOT_TOKEN = "9045696572:AAHSPg6Q9sgSOlybaXTV5D0Vzq2azhl3mdw"
+TELEGRAM_BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "")
 TELEGRAM_OWNER_ID = 8343466107
 
 OUT_DIR = "/root/remotion-krypton/out"
@@ -209,19 +209,22 @@ def main():
     print(f"    - Ukuran: {fsize:.2f} MB")
 
     caption = (
-        f"<b>REMOTION VIDEO DELIVERY · PLATYPUS ITU JANGGAL BANGET (CREATIVE FULL-STAGE EDITION)</b>\n"
+        f"🎬 <b>REMOTION VIDEO: PLATYPUS ITU JANGGAL BANGET (FULL-STAGE V2)</b>\n"
         f"━━━━━━━━━━━━━━━━━━━━━━━━━━\n"
         f"<b>Kreator:</b> rhmt ofc (rhmt.biz.id)\n"
-        f"<b>Komposisi:</b> <code>PlatypusCreative</code> (9:16 Vertical 1080x1920)\n"
-        f"<b>Durasi:</b> {dur:.1f} detik | <b>Ukuran:</b> {fsize:.2f} MB | <b>Codec:</b> {w}x{h} {codec}\n\n"
-        f"<b>Upgrade Craft &amp; Desain Kreatif:</b>\n"
-        f"• <b>Full-Stage Creative Visuals:</b> 100% tanpa karakter/maskot kecil, panggung visual hero diperbesar masif memenuhi layar 1080x1920.\n"
-        f"• <b>Biometric Scanner &amp; 3-in-1 Dissection:</b> Visual dinamis reticle bidik laser Australia, anatomi 3 donor organ (bebek, berang, katak), dan arsip 1799 Shaw &amp; Nodder.\n"
-        f"• <b>Digestive Blueprint &amp; Chat Comedy:</b> Skema pencernaan tembus usus tanpa lambung + mockup chat WhatsApp penolakan cuti GERD.\n"
-        f"• <b>High-Res Calcaneal Spur &amp; Seblak:</b> Macro close-up taji beracun peptida defensin + outro seblak pengkolan khas creator tech.\n"
-        f"• <b>Subtitle Karaoke Presisi 44px:</b> Bersih, kontras tinggi di bottom safe-zone tanpa menutupi visual.\n"
+        f"<b>Komposisi:</b> <code>PlatypusCreative</code> (1080x1920 9:16)\n"
+        f"<b>Durasi:</b> {dur:.1f}s | <b>Ukuran:</b> {fsize:.2f} MB | <b>Codec:</b> {w}x{h} {codec}\n\n"
+        f"<b>Fitur Redesign Tactile Neobrutalism (Zero Dead Space):</b>\n"
+        f"• 100% Bebas Karakter, Panggung Visual Padat Mengisi Penuh Layar\n"
+        f"• Biometrik Laser + 3 Pin Callout + Anomaly Meter &amp; Stamp\n"
+        f"• 3 Donor Cards + Formula Anatomi + Arsip 1799 Dr. George Shaw\n"
+        f"• Arena Telur Monotremata + Simulasi Pori Kelenjar Susu Perut\n"
+        f"• Blueprint Pipa Cerna + WhatsApp Chat Komedi Penolakan GERD\n"
+        f"• Macro Taji Beracun + Dossier Defensin Peptides (Nyeri 10/10)\n"
+        f"• Split Habitat Australia vs Seblak + Kartu Kreator Resmi rhmt ofc\n"
+        f"• Subtitle Karaoke Presisi 44px di Bottom Safe-Zone\n"
         f"━━━━━━━━━━━━━━━━━━━━━━━━━━\n"
-        f"<i>Dirender via GitHub Actions Cloud &amp; dikirim langsung ke WhatsApp dan Telegram</i>"
+        f"<i>Dirender via GitHub Actions Cloud Runner</i>"
     )
 
     print("\n[*] Mengirim dokumen video final ke Telegram Tuan Rahmat...")

@@ -3,7 +3,7 @@ import sys
 import json
 import subprocess
 
-TELEGRAM_BOT_TOKEN = "9045696572:AAHSPg6Q9sgSOlybaXTV5D0Vzq2azhl3mdw"
+TELEGRAM_BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "")
 TELEGRAM_OWNER_ID = 8343466107
 
 HD_VIDEO_PATH = "/root/remotion-krypton/hd_out/RepoFlow-v2-HD.mp4"
