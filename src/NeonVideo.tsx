@@ -1,10 +1,11 @@
 import React from 'react';
-import {AbsoluteFill, interpolate, Sequence, useCurrentFrame, useVideoConfig} from 'remotion';
+import {AbsoluteFill, Sequence, useVideoConfig} from 'remotion';
 import timeline from './data/neon-timeline.json';
+import {Wipe} from './components/Chrome';
 import {NeonAudioMix} from './neon/NeonAudioMix';
 import {S1Hook, S2Posisi, S3Thinking, S4Benchmark, S5Outro} from './neon/NeonScenes';
 import {NeonSubtitles} from './neon/NeonSubtitles';
-import {NEON_TOKENS as T} from './neon/neonTokens';
+import type {Mode} from './lib/theme';
 
 const SCENES: Record<string, React.FC> = {
   's1-hook': S1Hook,
@@ -14,30 +15,11 @@ const SCENES: Record<string, React.FC> = {
   's5-outro': S5Outro,
 };
 
-const SceneTransition: React.FC<{boundary: number}> = ({boundary}) => {
-  const f = useCurrentFrame();
-  if (f < boundary - 10 || f > boundary + 10) return null;
-  const p = interpolate(f, [boundary - 10, boundary, boundary + 10], [0, 1, 0], {
-    extrapolateLeft: 'clamp',
-    extrapolateRight: 'clamp',
-  });
-  return (
-    <AbsoluteFill
-      style={{
-        backgroundColor: '#080B12',
-        opacity: p * 0.95,
-        pointerEvents: 'none',
-        zIndex: 80,
-      }}
-    />
-  );
-};
-
 export const NeonVideo: React.FC = () => {
   const {fps} = useVideoConfig();
 
   return (
-    <AbsoluteFill style={{backgroundColor: T.bg}}>
+    <AbsoluteFill style={{backgroundColor: '#080b10'}}>
       {timeline.scenes.map((s) => {
         const C = SCENES[s.id];
         const fromFrame = Math.round(s.start * fps);
@@ -49,15 +31,19 @@ export const NeonVideo: React.FC = () => {
         );
       })}
 
-      {/* Transition cuts */}
+      {/* Transition cuts (Wipe with accent bar) */}
       {timeline.scenes.slice(1).map((s) => (
-        <SceneTransition key={`trans-${s.id}`} boundary={Math.round(s.start * fps)} />
+        <Wipe
+          key={`trans-${s.id}`}
+          boundary={Math.round(s.start * fps)}
+          mode={(s.bg || 'dark') as Mode}
+        />
       ))}
 
-      {/* Dynamic Subtitles */}
+      {/* Subtitles at bottom 80px */}
       <NeonSubtitles bottom={80} fontSize={42} />
 
-      {/* Audio Mix with dynamic ducking */}
+      {/* Audio Mix with dynamic ducking & SFX */}
       <NeonAudioMix />
     </AbsoluteFill>
   );

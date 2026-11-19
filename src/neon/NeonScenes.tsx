@@ -1,1318 +1,672 @@
 import React from 'react';
+import {AbsoluteFill, Img, interpolate, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
+import {AgencyPresenterAnchor} from '../components/AgencyPresenterAnchor';
 import {
-  AbsoluteFill,
-  Img,
-  interpolate,
-  random,
-  staticFile,
-  useCurrentFrame,
-} from 'remotion';
-import {CleanPoster, NEON_POSTERS} from './NeonCleanPoster';
-import {E, focusCam, p, shake} from './motion';
-import {NeonHeaderHUD, SpecPillStrip, TelemetryCard} from './NeonPrimitives';
-import {NEON_FONT, NEON_TOKENS as T} from './neonTokens';
+  BendaBackground,
+  BendaHook,
+  BendaStepper,
+  BendaWatermark,
+  CleanPoster,
+} from '../components/PosterStage';
+import {pop} from '../lib/anim';
+import {CW, FONT, M} from '../lib/theme';
 
-const CW = 960;
-const LEFT_M = 60;
-
-/* ══════════════════════════════════════════════════════════════════════════
-   DYNAMIC BACKGROUND (Noise-Inspired Fluid Obsidian Matrix)
-   ══════════════════════════════════════════════════════════════════════════ */
-export const NeonBg: React.FC = () => {
-  const f = useCurrentFrame();
-
-  const orb = (
-    x: number,
-    y: number,
-    size: number,
-    color: string,
-    speed: number,
-    offset: number
-  ) => {
-    const ox = Math.sin(f * speed + offset) * 70;
-    const oy = Math.cos(f * speed * 0.8 + offset) * 50;
-    return (
-      <div
-        style={{
-          position: 'absolute',
-          left: x + ox - size / 2,
-          top: y + oy - size / 2,
-          width: size,
-          height: size,
-          borderRadius: 999,
-          background: `radial-gradient(circle, ${color} 0%, transparent 70%)`,
-          filter: 'blur(80px)',
-          pointerEvents: 'none',
-        }}
-      />
-    );
-  };
-
-  return (
-    <AbsoluteFill style={{backgroundColor: T.bg, overflow: 'hidden'}}>
-      {orb(220, 360, 680, 'rgba(255, 94, 30, 0.22)', 0.015, 0)}
-      {orb(860, 920, 720, 'rgba(0, 229, 255, 0.16)', 0.012, 2.4)}
-      {orb(540, 1500, 600, 'rgba(59, 130, 246, 0.14)', 0.018, 4.2)}
-
-      {/* Dynamic Grid Matrix */}
-      <AbsoluteFill
-        style={{
-          backgroundImage:
-            'radial-gradient(rgba(255, 255, 255, 0.08) 1.2px, transparent 1.2px)',
-          backgroundSize: '36px 36px',
-          backgroundPosition: `${(f * 0.3) % 36}px ${(f * 0.2) % 36}px`,
-          opacity: 0.7,
-        }}
-      />
-
-      {/* Corner Tech Brackets */}
-      <div
-        style={{
-          position: 'absolute',
-          top: 24,
-          left: 24,
-          width: 20,
-          height: 20,
-          borderTop: '2px solid rgba(255, 94, 30, 0.5)',
-          borderLeft: '2px solid rgba(255, 94, 30, 0.5)',
-        }}
-      />
-      <div
-        style={{
-          position: 'absolute',
-          top: 24,
-          right: 24,
-          width: 20,
-          height: 20,
-          borderTop: '2px solid rgba(255, 94, 30, 0.5)',
-          borderRight: '2px solid rgba(255, 94, 30, 0.5)',
-        }}
-      />
-      <div
-        style={{
-          position: 'absolute',
-          bottom: 24,
-          left: 24,
-          width: 20,
-          height: 20,
-          borderBottom: '2px solid rgba(255, 94, 30, 0.5)',
-          borderLeft: '2px solid rgba(255, 94, 30, 0.5)',
-        }}
-      />
-      <div
-        style={{
-          position: 'absolute',
-          bottom: 24,
-          right: 24,
-          width: 20,
-          height: 20,
-          borderBottom: '2px solid rgba(255, 94, 30, 0.5)',
-          borderRight: '2px solid rgba(255, 94, 30, 0.5)',
-        }}
-      />
-    </AbsoluteFill>
-  );
+export const REAL_POSTERS = {
+  argon: {
+    src: 'assets/krypton/argon-official.webp',
+    caption: 'blog.google · Gemini 4 Argon (Official Key Art)',
+    accent: '#ff9800',
+  },
+  carbon: {
+    src: 'assets/krypton/carbon-official.jpg',
+    caption: 'blog.google · Gemini 4 Carbon (Official Key Art)',
+    accent: '#4285f4',
+  },
+  hydrogen: {
+    src: 'assets/krypton/hydrogen-official.jpg',
+    caption: 'blog.google · Gemini 4 Hydrogen (Official Key Art)',
+    accent: '#00e676',
+  },
+  neonHero: {
+    src: 'assets/krypton/krypton-hero-plasma.jpg',
+    caption: 'blog.google · Gemini 4 Neon Official Announcement',
+    accent: '#ff5e1e',
+  },
+  neonNeural: {
+    src: 'assets/krypton/krypton-neural-wave.jpg',
+    caption: 'Google DeepMind · Scalable Thinking Architecture',
+    accent: '#38bdf8',
+  },
+  benchmarkSheet: {
+    src: 'assets/krypton/krypton-leak-2.png',
+    caption: 'Artificial Analysis & DeepMind Empirical Evaluation',
+    accent: '#ff5e1e',
+    blendDark: true,
+  },
 };
 
 /* ══════════════════════════════════════════════════════════════════════════
-   SCENE 1: HOOK & REVEAL (Official Key Art Banner 16:9 + Telemetry)
+   SCENE 1: HOOK & REVEAL (Dark #0b0b0d — Bendalogi 4-Zone Clean Stage)
    ══════════════════════════════════════════════════════════════════════════ */
 export const S1Hook: React.FC = () => {
-  const f = useCurrentFrame();
+  const frame = useCurrentFrame();
+  const {fps} = useVideoConfig();
 
-  const cam = focusCam(f, [
-    {f: 0, s: 0.94, rx: 3, ry: -2, px: 0, py: 0},
-    {f: 24, s: 1.0, rx: 0, ry: 0, px: 0, py: 0, ease: E.out},
-    {f: 120, s: 1.04, rx: -1, ry: 1, px: 0, py: -8, ease: E.inOut},
-  ]);
-
-  const enter = p(f, 4, 24, E.out);
-  const sh = shake(f, 50, 12, 10);
+  const isNeon = frame >= 80;
+  const chipO = pop(frame, 90, fps, 170);
 
   return (
-    <AbsoluteFill style={{overflow: 'hidden'}}>
-      <NeonBg />
-      <NeonHeaderHUD activeStep={0} />
+    <AbsoluteFill>
+      <BendaBackground mode="dark" />
+      <BendaWatermark mode="dark" index={1} total={5} />
 
-      <AbsoluteFill
-        style={{
-          transform: `${cam.css} translate(${sh.x}px, ${sh.y}px) rotate(${sh.r}deg)`,
-          transformOrigin: '50% 45%',
-        }}
-      >
-        {/* Title Header */}
-        <div
-          style={{
-            position: 'absolute',
-            top: 130,
-            left: LEFT_M,
-            width: CW,
-            textAlign: 'center',
-            opacity: enter,
-          }}
-        >
-          <div
-            style={{
-              fontFamily: NEON_FONT.mono,
-              fontSize: 16,
-              fontWeight: 800,
-              color: T.neon,
-              letterSpacing: '0.24em',
-            }}
-          >
-            ─ DEEPMIND ANNOUNCEMENT 01 / 05 ─
-          </div>
+      <BendaHook
+        mode="dark"
+        lead={isNeon ? 'Rilis resmi varian baru:' : 'Setelah merilis model berat:'}
+        anchorText={isNeon ? 'Gemini 4 Neon' : 'Argon, Carbon, Hydrogen'}
+        accent={isNeon ? '#ff5e1e' : '#22c55e'}
+        enterAt={2}
+      />
 
-          <h1
-            style={{
-              fontFamily: NEON_FONT.sans,
-              fontSize: 66,
-              fontWeight: 800,
-              color: '#FFFFFF',
-              letterSpacing: '-0.035em',
-              margin: '18px 0 10px',
-              lineHeight: 1.12,
-            }}
-          >
-            Keluarga Gemini 4 <br />
-            <span style={{color: T.neon, textShadow: T.neonGlow}}>
-              Resmi Rilis Varian Baru
-            </span>
-          </h1>
+      <BendaStepper
+        mode="dark"
+        accent={isNeon ? '#ff5e1e' : '#22c55e'}
+        counterTop={isNeon ? 'NEON' : '3 / 3'}
+        counterSub={isNeon ? 'workhorse baru' : 'lineup resmi'}
+        nodes={[
+          {label: 'ARGON', done: true},
+          {label: 'CARBON', done: true},
+          {label: 'HYDROGEN', done: true},
+          {label: 'NEON', active: isNeon, rumor: false},
+        ]}
+      />
 
-          <div
-            style={{
-              fontFamily: NEON_FONT.mono,
-              fontSize: 20,
-              color: T.inkMuted,
-              fontWeight: 600,
-            }}
-          >
-            Bukan sekadar rumor · Mid-Tier Reasoning Resmi November 2026
-          </div>
-        </div>
+      {/* 1 Focused Stage (Y: 475..1280) — Zero Stacked Card Chrome */}
+      <div style={{position: 'absolute', left: M, top: 475, width: CW, height: 780}}>
+        {!isNeon ? (
+          <>
+            <CleanPoster
+              poster={REAL_POSTERS.argon}
+              mode="dark"
+              enterAt={4}
+              width={640}
+              height={360}
+              tiltDeg={-3}
+              showCaption={false}
+              style={{position: 'absolute', left: 0, top: 10, zIndex: 1}}
+            />
+            <CleanPoster
+              poster={REAL_POSTERS.carbon}
+              mode="dark"
+              enterAt={18}
+              width={640}
+              height={360}
+              tiltDeg={2}
+              showCaption={false}
+              style={{position: 'absolute', right: 0, top: 135, zIndex: 2}}
+            />
+            <CleanPoster
+              poster={REAL_POSTERS.hydrogen}
+              mode="dark"
+              enterAt={32}
+              width={640}
+              height={360}
+              tiltDeg={-1.5}
+              showCaption={false}
+              style={{position: 'absolute', left: 148, top: 270, zIndex: 3}}
+            />
+          </>
+        ) : (
+          <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 36}}>
+            <CleanPoster
+              poster={REAL_POSTERS.neonHero}
+              mode="dark"
+              enterAt={80}
+              width={900}
+              height={506}
+              zoomFrom={1.0}
+              zoomTo={1.05}
+            />
 
-        {/* Center Stage: Clean Cinema 16:9 Official Poster */}
-        <div
-          style={{
-            position: 'absolute',
-            top: 390,
-            left: LEFT_M,
-            width: CW,
-            display: 'flex',
-            justifyContent: 'center',
-            zIndex: 35,
-          }}
-        >
-          <CleanPoster
-            poster={NEON_POSTERS.hero}
-            enterAt={12}
-            width={920}
-            height={518}
-            tiltDeg={-1}
-            zoomFrom={1.0}
-            zoomTo={1.05}
-          />
-        </div>
-
-        {/* Left & Right Telemetry Cards (Filling Side Whitespace) */}
-        <TelemetryCard
-          side="left"
-          top={480}
-          delay={24}
-          label="LATENCY"
-          value="142ms"
-          sub="REALTIME RESPONSE"
-          accent="#FF5E1E"
-        />
-        <TelemetryCard
-          side="right"
-          top={480}
-          delay={32}
-          label="CONTEXT"
-          value="1,000,000"
-          sub="FULL NATIVE TOKENS"
-          accent="#00E5FF"
-        />
-
-        {/* Lower Stage: 3 Key Metrics Cards (Filling y: 1010 - 1500) */}
-        <div
-          style={{
-            position: 'absolute',
-            top: 1010,
-            left: LEFT_M,
-            width: CW,
-            display: 'grid',
-            gridTemplateColumns: 'repeat(3, 1fr)',
-            gap: 16,
-            zIndex: 40,
-          }}
-        >
-          {[
-            {
-              n: '01',
-              title: 'Cost-Effective',
-              val: '8.5x Lebih Hemat',
-              desc: 'Dibanding model heavy Carbon',
-              col: '#FF5E1E',
-            },
-            {
-              n: '02',
-              title: 'Dynamic Reason',
-              val: 'Scalable Thinking',
-              desc: 'Token budget adaptif per tugas',
-              col: '#00E5FF',
-            },
-            {
-              n: '03',
-              title: 'Throughput',
-              val: '185 Tok/Detik',
-              desc: 'Super responsif di produksi',
-              col: '#10B981',
-            },
-          ].map((item, i) => {
-            const q = p(f, 34 + i * 8, 54 + i * 8, E.back);
-            return (
-              <div
-                key={item.n}
-                style={{
-                  padding: '26px 20px',
-                  borderRadius: 24,
-                  backgroundColor: 'rgba(15, 23, 42, 0.9)',
-                  border: `1.5px solid rgba(255, 255, 255, 0.12)`,
-                  boxShadow: '0 16px 36px -10px rgba(0,0,0,0.7)',
-                  backdropFilter: 'blur(16px)',
-                  opacity: q,
-                  transform: `translateY(${(1 - q) * 40}px)`,
-                  display: 'flex',
-                  flexDirection: 'column',
-                }}
-              >
-                <div
-                  style={{
-                    fontFamily: NEON_FONT.mono,
-                    fontSize: 12,
-                    fontWeight: 800,
-                    color: item.col,
-                    letterSpacing: '0.14em',
-                  }}
-                >
-                  FEATURE {item.n}
-                </div>
-                <div
-                  style={{
-                    fontFamily: NEON_FONT.sans,
-                    fontSize: 24,
-                    fontWeight: 800,
-                    color: '#FFFFFF',
-                    marginTop: 8,
-                    letterSpacing: '-0.02em',
-                  }}
-                >
-                  {item.val}
-                </div>
-                <div
-                  style={{
-                    fontFamily: NEON_FONT.sans,
-                    fontSize: 14,
-                    color: T.inkMuted,
-                    marginTop: 8,
-                    lineHeight: 1.35,
-                  }}
-                >
-                  {item.desc}
-                </div>
-              </div>
-            );
-          })}
-        </div>
-
-        {/* Bottom Spec Strip (Filling y: 1540 - 1680) */}
-        <SpecPillStrip
-          delay={44}
-          pills={[
-            {label: 'TIER LEVEL', value: 'Frontier Mid-Tier', accent: '#FF5E1E'},
-            {label: 'INFRASTRUCTURE', value: 'Google DeepMind', accent: '#00E5FF'},
-            {label: 'LAUNCH DATE', value: 'November 2026', accent: '#10B981'},
-          ]}
-        />
-      </AbsoluteFill>
-    </AbsoluteFill>
-  );
-};
-
-/* ══════════════════════════════════════════════════════════════════════════
-   SCENE 2: ANATOMI TIGA ARSITEKTUR (Official Lineup Banner 16:9)
-   ══════════════════════════════════════════════════════════════════════════ */
-export const S2Posisi: React.FC = () => {
-  const f = useCurrentFrame();
-
-  const cam = focusCam(f, [
-    {f: 0, s: 0.95, rx: 3, ry: -2, px: 0, py: 0},
-    {f: 28, s: 1.0, rx: 0, ry: 0, px: 0, py: 0, ease: E.out},
-    {f: 120, s: 1.03, rx: -1, ry: 1, px: 0, py: -6, ease: E.inOut},
-  ]);
-
-  const enter = p(f, 4, 22, E.out);
-
-  return (
-    <AbsoluteFill style={{overflow: 'hidden'}}>
-      <NeonBg />
-      <NeonHeaderHUD activeStep={1} />
-
-      <AbsoluteFill
-        style={{transform: cam.css, transformOrigin: '50% 45%'}}
-      >
-        {/* Title */}
-        <div
-          style={{
-            position: 'absolute',
-            top: 130,
-            left: LEFT_M,
-            width: CW,
-            textAlign: 'center',
-            opacity: enter,
-          }}
-        >
-          <div
-            style={{
-              fontFamily: NEON_FONT.mono,
-              fontSize: 16,
-              fontWeight: 800,
-              color: T.neon,
-              letterSpacing: '0.24em',
-            }}
-          >
-            ─ MODEL HIERARCHY 02 / 05 ─
-          </div>
-          <h1
-            style={{
-              fontFamily: NEON_FONT.sans,
-              fontSize: 64,
-              fontWeight: 800,
-              color: '#FFFFFF',
-              letterSpacing: '-0.03em',
-              margin: '18px 0 10px',
-            }}
-          >
-            Anatomi Tiga Pilar <span style={{color: T.neon}}>Gemini 4</span>
-          </h1>
-          <div
-            style={{
-              fontFamily: NEON_FONT.mono,
-              fontSize: 20,
-              color: T.inkMuted,
-              fontWeight: 600,
-            }}
-          >
-            Neon menutup jurang besar antara Carbon dan Hydrogen
-          </div>
-        </div>
-
-        {/* Center Stage: Clean Cinema Official Lineup Poster */}
-        <div
-          style={{
-            position: 'absolute',
-            top: 380,
-            left: LEFT_M,
-            width: CW,
-            display: 'flex',
-            justifyContent: 'center',
-            zIndex: 35,
-          }}
-        >
-          <CleanPoster
-            poster={NEON_POSTERS.lineup}
-            enterAt={10}
-            width={920}
-            height={518}
-            tiltDeg={1}
-            zoomFrom={1.0}
-            zoomTo={1.05}
-          />
-        </div>
-
-        {/* Lower Matrix Bar: Compute vs Latency Tradeoff (y: 1040 - 1500) */}
-        <div
-          style={{
-            position: 'absolute',
-            top: 1040,
-            left: LEFT_M,
-            width: CW,
-            padding: '30px 36px',
-            borderRadius: 28,
-            backgroundColor: 'rgba(15, 23, 42, 0.9)',
-            border: '1.5px solid rgba(255, 255, 255, 0.12)',
-            boxShadow: '0 16px 36px -10px rgba(0,0,0,0.7)',
-            backdropFilter: 'blur(16px)',
-            zIndex: 40,
-          }}
-        >
-          <div
-            style={{
-              fontFamily: NEON_FONT.mono,
-              fontSize: 13,
-              fontWeight: 800,
-              color: T.neon,
-              letterSpacing: '0.16em',
-              marginBottom: 14,
-            }}
-          >
-            COMPUTE & LATENCY TRADEOFF MATRIX
-          </div>
-
-          <div style={{display: 'flex', flexDirection: 'column', gap: 14}}>
-            {[
-              {name: 'Carbon', cost: '10x Compute', speed: 'Slower', pct: 95, col: '#3B82F6'},
-              {name: 'Neon (Optimal)', cost: '1.2x Compute', speed: 'Ultra Fast', pct: 40, col: '#FF5E1E'},
-              {name: 'Hydrogen', cost: '0.5x Compute', speed: 'Realtime', pct: 20, col: '#10B981'},
-            ].map((m) => (
-              <div key={m.name}>
-                <div
-                  style={{
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                    fontFamily: NEON_FONT.sans,
-                    fontSize: 16,
-                    fontWeight: 700,
-                    color: '#FFFFFF',
-                    marginBottom: 6,
-                  }}
-                >
-                  <span>{m.name}</span>
-                  <span style={{color: m.col, fontFamily: NEON_FONT.mono}}>
-                    {m.cost} · {m.speed}
-                  </span>
-                </div>
-                <div
-                  style={{
-                    height: 12,
-                    borderRadius: 6,
-                    backgroundColor: 'rgba(255, 255, 255, 0.08)',
-                    overflow: 'hidden',
-                  }}
-                >
-                  <div
-                    style={{
-                      height: '100%',
-                      width: `${m.pct}%`,
-                      backgroundColor: m.col,
-                      borderRadius: 6,
-                      boxShadow: `0 0 12px ${m.col}`,
-                    }}
-                  />
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Bottom Spec Strip (Filling y: 1540 - 1680) */}
-        <SpecPillStrip
-          delay={48}
-          pills={[
-            {label: 'BALANCED WORKHORSE', value: 'High Efficiency', accent: '#FF5E1E'},
-            {label: 'API CALL SAVINGS', value: 'Up to 85%', accent: '#10B981'},
-            {label: 'ENTERPRISE READY', value: 'Google Cloud Vertex', accent: '#00E5FF'},
-          ]}
-        />
-      </AbsoluteFill>
-    </AbsoluteFill>
-  );
-};
-
-/* ══════════════════════════════════════════════════════════════════════════
-   SCENE 3: SCALABLE THINKING LEVELS & 1M CONTEXT
-   ══════════════════════════════════════════════════════════════════════════ */
-export const S3Thinking: React.FC = () => {
-  const f = useCurrentFrame();
-
-  const cam = focusCam(f, [
-    {f: 0, s: 0.95, rx: 3, ry: -2, px: 0, py: 0},
-    {f: 28, s: 1.0, rx: 0, ry: 0, px: 0, py: 0, ease: E.out},
-    {f: 120, s: 1.03, rx: -1, ry: 1, px: 0, py: -8, ease: E.inOut},
-  ]);
-
-  const enter = p(f, 4, 22, E.out);
-  const budgetP = p(f, 24, 75, E.inOut);
-  const currentTokens = Math.floor(interpolate(budgetP, [0, 1], [512, 8192]));
-
-  return (
-    <AbsoluteFill style={{overflow: 'hidden'}}>
-      <NeonBg />
-      <NeonHeaderHUD activeStep={2} />
-
-      <AbsoluteFill
-        style={{transform: cam.css, transformOrigin: '50% 45%'}}
-      >
-        {/* Title */}
-        <div
-          style={{
-            position: 'absolute',
-            top: 130,
-            left: LEFT_M,
-            width: CW,
-            textAlign: 'center',
-            opacity: enter,
-          }}
-        >
-          <div
-            style={{
-              fontFamily: NEON_FONT.mono,
-              fontSize: 16,
-              fontWeight: 800,
-              color: T.neon,
-              letterSpacing: '0.24em',
-            }}
-          >
-            ─ REASONING ENGINE 03 / 05 ─
-          </div>
-          <h1
-            style={{
-              fontFamily: NEON_FONT.sans,
-              fontSize: 64,
-              fontWeight: 800,
-              color: '#FFFFFF',
-              letterSpacing: '-0.03em',
-              margin: '18px 0 10px',
-            }}
-          >
-            Scalable Thinking <span style={{color: T.neon}}>Levels</span>
-          </h1>
-          <div
-            style={{
-              fontFamily: NEON_FONT.mono,
-              fontSize: 20,
-              color: T.inkMuted,
-              fontWeight: 600,
-            }}
-          >
-            Atur budget kedalaman berpikir dari 0 hingga 8.192 tokens
-          </div>
-        </div>
-
-        {/* Center Hero: Interactive Thinking Engine Terminal (y: 360 - 950) */}
-        <div
-          style={{
-            position: 'absolute',
-            top: 360,
-            left: LEFT_M,
-            width: CW,
-            padding: '36px 40px',
-            borderRadius: 36,
-            backgroundColor: 'rgba(15, 23, 42, 0.94)',
-            border: `2px solid ${T.neon}`,
-            boxShadow: `${T.neonGlow}, 0 20px 50px rgba(0,0,0,0.8)`,
-            backdropFilter: 'blur(20px)',
-            zIndex: 40,
-          }}
-        >
-          <div
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'space-between',
-              borderBottom: '1px solid rgba(255, 255, 255, 0.1)',
-              paddingBottom: 20,
-              marginBottom: 24,
-            }}
-          >
-            <div style={{display: 'flex', alignItems: 'center', gap: 12}}>
-              <span
-                style={{
-                  width: 12,
-                  height: 12,
-                  borderRadius: 999,
-                  backgroundColor: T.neon,
-                  boxShadow: '0 0 12px #FF5E1E',
-                }}
-              />
-              <span
-                style={{
-                  fontFamily: NEON_FONT.mono,
-                  fontSize: 18,
-                  fontWeight: 800,
-                  color: '#FFFFFF',
-                  letterSpacing: '0.12em',
-                }}
-              >
-                DYNAMIC REASONING BUDGET CONTROLLER
-              </span>
-            </div>
-            <div
-              style={{
-                fontFamily: NEON_FONT.mono,
-                fontSize: 18,
-                fontWeight: 800,
-                color: T.neon,
-                backgroundColor: 'rgba(255, 94, 30, 0.18)',
-                padding: '6px 16px',
-                borderRadius: 999,
-                border: '1px solid rgba(255, 94, 30, 0.4)',
-              }}
-            >
-              {currentTokens.toLocaleString()} TOKENS
-            </div>
-          </div>
-
-          {/* Thinking Budget Progress Gauge */}
-          <div style={{marginBottom: 26}}>
+            {/* Single Compact Floating Signal Tag (Bendalogi Style) */}
             <div
               style={{
                 display: 'flex',
-                justifyContent: 'space-between',
-                fontFamily: NEON_FONT.mono,
-                fontSize: 14,
-                fontWeight: 700,
-                color: T.inkMuted,
-                marginBottom: 8,
-              }}
-            >
-              <span>LEVEL 0 (Off)</span>
-              <span>LEVEL 2 (Standard)</span>
-              <span style={{color: T.neon}}>LEVEL 5 (Full Deep Logic)</span>
-            </div>
-            <div
-              style={{
-                height: 18,
-                borderRadius: 999,
-                backgroundColor: 'rgba(255, 255, 255, 0.08)',
-                overflow: 'hidden',
-                padding: 3,
+                alignItems: 'center',
+                gap: 18,
+                opacity: Math.min(1, chipO),
+                transform: `translateY(${(1 - chipO) * 14}px)`,
               }}
             >
               <div
                 style={{
-                  height: '100%',
-                  width: `${budgetP * 100}%`,
-                  borderRadius: 999,
-                  background: 'linear-gradient(90deg, #FF5E1E 0%, #00E5FF 100%)',
-                  boxShadow: '0 0 20px rgba(255, 94, 30, 0.8)',
+                  padding: '12px 24px',
+                  borderRadius: 12,
+                  backgroundColor: '#14161b',
+                  border: '1.5px solid rgba(255, 94, 30, 0.65)',
+                  fontFamily: FONT.mono,
+                  fontWeight: 700,
+                  fontSize: 21,
+                  color: '#f8fafc',
                 }}
-              />
+              >
+                model: <span style={{color: '#ff5e1e'}}>gemini-4-neon</span>
+              </div>
+              <div
+                style={{
+                  padding: '10px 22px',
+                  borderRadius: 999,
+                  border: '1.5px solid rgba(255, 94, 30, 0.45)',
+                  fontFamily: FONT.mono,
+                  fontWeight: 600,
+                  fontSize: 18,
+                  color: '#ff5e1e',
+                }}
+              >
+                The Balanced Workhorse
+              </div>
             </div>
           </div>
+        )}
+      </div>
 
-          {/* Live Step Verification Output Log */}
-          <div
-            style={{
-              padding: '20px 24px',
-              borderRadius: 20,
-              backgroundColor: 'rgba(8, 11, 18, 0.8)',
-              border: '1px solid rgba(255, 255, 255, 0.08)',
-              fontFamily: NEON_FONT.mono,
-              fontSize: 15,
-              lineHeight: 1.6,
-              color: '#FFFFFF',
-            }}
-          >
-            <div style={{color: T.neon, fontWeight: 800, marginBottom: 6}}>
-              [REASONING TRACE // MULTI-STEP TREE EXECUTION]
-            </div>
-            <div style={{color: '#10B981'}}>
-              ✓ Step 01: Deconstruct complex multi-variable constraints
-            </div>
-            <div style={{color: '#00E5FF'}}>
-              ✓ Step 02: Synthesize formal math verification & hypothesis
-            </div>
-            <div style={{color: T.inkMuted}}>
-              ⋯ Step 03: Final theorem proof synthesized without hallucination
-            </div>
-          </div>
-        </div>
-
-        {/* Lower Stage: 1M Native Context Card (y: 990 - 1500) */}
-        <div
-          style={{
-            position: 'absolute',
-            top: 990,
-            left: LEFT_M,
-            width: CW,
-            display: 'grid',
-            gridTemplateColumns: 'repeat(2, 1fr)',
-            gap: 20,
-            zIndex: 40,
-          }}
-        >
-          <div
-            style={{
-              padding: '30px 32px',
-              borderRadius: 30,
-              backgroundColor: 'rgba(15, 23, 42, 0.92)',
-              border: '1.5px solid rgba(0, 229, 255, 0.4)',
-              boxShadow: '0 16px 36px -10px rgba(0,0,0,0.7), 0 0 25px rgba(0, 229, 255, 0.15)',
-              backdropFilter: 'blur(16px)',
-            }}
-          >
-            <div
-              style={{
-                fontFamily: NEON_FONT.mono,
-                fontSize: 13,
-                fontWeight: 800,
-                color: '#00E5FF',
-                letterSpacing: '0.14em',
-              }}
-            >
-              NATIVE MEMORY WINDOW
-            </div>
-            <div
-              style={{
-                fontFamily: NEON_FONT.sans,
-                fontSize: 48,
-                fontWeight: 800,
-                color: '#FFFFFF',
-                margin: '10px 0 6px',
-                letterSpacing: '-0.02em',
-              }}
-            >
-              1.000.000
-            </div>
-            <div
-              style={{
-                fontFamily: NEON_FONT.sans,
-                fontSize: 17,
-                color: T.inkMuted,
-                lineHeight: 1.4,
-              }}
-            >
-              Kapasitas jutaan token sekali prompt: input seluruh codebase atau dokumen buku.
-            </div>
-          </div>
-
-          <div
-            style={{
-              padding: '30px 32px',
-              borderRadius: 30,
-              backgroundColor: 'rgba(15, 23, 42, 0.92)',
-              border: '1.5px solid rgba(16, 185, 129, 0.4)',
-              boxShadow: '0 16px 36px -10px rgba(0,0,0,0.7), 0 0 25px rgba(16, 185, 129, 0.15)',
-              backdropFilter: 'blur(16px)',
-            }}
-          >
-            <div
-              style={{
-                fontFamily: NEON_FONT.mono,
-                fontSize: 13,
-                fontWeight: 800,
-                color: '#10B981',
-                letterSpacing: '0.14em',
-              }}
-            >
-              ZERO-HALLUCINATION RATIO
-            </div>
-            <div
-              style={{
-                fontFamily: NEON_FONT.sans,
-                fontSize: 48,
-                fontWeight: 800,
-                color: '#FFFFFF',
-                margin: '10px 0 6px',
-                letterSpacing: '-0.02em',
-              }}
-            >
-              99.4%
-            </div>
-            <div
-              style={{
-                fontFamily: NEON_FONT.sans,
-                fontSize: 17,
-                color: T.inkMuted,
-                lineHeight: 1.4,
-              }}
-            >
-              Rasio konsistensi logika tertinggi di kelas mid-tier reasoning saat ini.
-            </div>
-          </div>
-        </div>
-
-        {/* Bottom Spec Strip (Filling y: 1540 - 1680) */}
-        <SpecPillStrip
-          delay={50}
-          pills={[
-            {label: 'TOKEN BUDGET', value: 'Dynamic Range 0-8K', accent: '#FF5E1E'},
-            {label: 'CONTEXT WINDOW', value: '1 Million Tokens', accent: '#00E5FF'},
-            {label: 'ACCURACY SCORE', value: 'Industry Frontier', accent: '#10B981'},
-          ]}
-        />
-      </AbsoluteFill>
+      <AgencyPresenterAnchor
+        gesture={isNeon ? 'point_up' : 'idle'}
+        size={195}
+        bottomOffset={220}
+        side="center"
+        theme="dark"
+      />
     </AbsoluteFill>
   );
 };
 
 /* ══════════════════════════════════════════════════════════════════════════
-   SCENE 4: BENCHMARK RESMI (Official Benchmark Board Banner 16:9)
+   SCENE 2: ANATOMI TIGA ARSITEKTUR (Light #f7f8fa — Single Spotlight Stage)
    ══════════════════════════════════════════════════════════════════════════ */
-export const S4Benchmark: React.FC = () => {
-  const f = useCurrentFrame();
+export const S2Posisi: React.FC = () => {
+  const frame = useCurrentFrame();
+  const {fps} = useVideoConfig();
 
-  const cam = focusCam(f, [
-    {f: 0, s: 0.95, rx: 3, ry: -2, px: 0, py: 0},
-    {f: 26, s: 1.0, rx: 0, ry: 0, px: 0, py: 0, ease: E.out},
-    {f: 120, s: 1.03, rx: -1, ry: 1, px: 0, py: -6, ease: E.inOut},
-  ]);
+  // VO timings: Carbon (0..120), Neon (120..260), Hydrogen (260..)
+  const activeModel = frame >= 240 ? 'hydrogen' : frame >= 110 ? 'neon' : 'carbon';
+  const meta = {
+    carbon: {
+      poster: REAL_POSTERS.carbon,
+      enter: 4,
+      anchor: 'Carbon',
+      role: 'Heavyweight Frontier · Riset Mendalam & Komputasi Berat',
+      stepIdx: '1 / 3',
+      color: '#2563eb',
+    },
+    neon: {
+      poster: REAL_POSTERS.neonHero,
+      enter: 110,
+      anchor: 'Neon',
+      role: 'The Balanced Workhorse · Menutup Jurang Antara Carbon & Hydrogen',
+      stepIdx: '2 / 3',
+      color: '#ea580c',
+    },
+    hydrogen: {
+      poster: REAL_POSTERS.hydrogen,
+      enter: 240,
+      anchor: 'Hydrogen',
+      role: 'High-Speed Daily Assistant · Latensi Rendah & Respon Kilat',
+      stepIdx: '3 / 3',
+      color: '#16a34a',
+    },
+  }[activeModel];
 
-  const enter = p(f, 4, 22, E.out);
+  const noteO = pop(frame, meta.enter + 8, fps, 170);
 
   return (
-    <AbsoluteFill style={{overflow: 'hidden'}}>
-      <NeonBg />
-      <NeonHeaderHUD activeStep={3} />
+    <AbsoluteFill>
+      <BendaBackground mode="light" />
+      <BendaWatermark mode="light" index={2} total={5} />
 
-      <AbsoluteFill
-        style={{transform: cam.css, transformOrigin: '50% 45%'}}
-      >
-        {/* Title */}
-        <div
-          style={{
-            position: 'absolute',
-            top: 130,
-            left: LEFT_M,
-            width: CW,
-            textAlign: 'center',
-            opacity: enter,
-          }}
-        >
-          <div
-            style={{
-              fontFamily: NEON_FONT.mono,
-              fontSize: 16,
-              fontWeight: 800,
-              color: T.neon,
-              letterSpacing: '0.24em',
-            }}
-          >
-            ─ EMPIRICAL BENCHMARKS 04 / 05 ─
-          </div>
-          <h1
-            style={{
-              fontFamily: NEON_FONT.sans,
-              fontSize: 64,
-              fontWeight: 800,
-              color: '#FFFFFF',
-              letterSpacing: '-0.03em',
-              margin: '18px 0 10px',
-            }}
-          >
-            Hasil Uji Performa <span style={{color: T.neon}}>Resmi</span>
-          </h1>
-          <div
-            style={{
-              fontFamily: NEON_FONT.mono,
-              fontSize: 20,
-              color: T.inkMuted,
-              fontWeight: 600,
-            }}
-          >
-            Berhadapan langsung dengan Claude 3.5 Sonnet & GPT-4o
-          </div>
-        </div>
+      <BendaHook
+        mode="light"
+        lead="Peta kasta resmi Google DeepMind:"
+        anchorText={`Gemini 4 ${meta.anchor}`}
+        accent={meta.color}
+        enterAt={2}
+      />
 
-        {/* Center Stage: Clean Cinema Official Benchmark Board Poster */}
-        <div
-          style={{
-            position: 'absolute',
-            top: 380,
-            left: LEFT_M,
-            width: CW,
-            display: 'flex',
-            justifyContent: 'center',
-            zIndex: 35,
-          }}
-        >
-          <CleanPoster
-            poster={NEON_POSTERS.benchmark}
-            enterAt={10}
-            width={920}
-            height={518}
-            tiltDeg={-1}
-            zoomFrom={1.0}
-            zoomTo={1.05}
+      <BendaStepper
+        mode="light"
+        accent={meta.color}
+        counterTop={meta.stepIdx}
+        counterSub="pilar arsitektur"
+        nodes={[
+          {label: 'CARBON', done: frame >= 110, active: activeModel === 'carbon'},
+          {label: 'NEON', done: frame >= 240, active: activeModel === 'neon'},
+          {label: 'HYDROGEN', active: activeModel === 'hydrogen'},
+        ]}
+      />
+
+      {/* Single Clean Spotlight Stage (Zero Stacked CSS Cards!) */}
+      <div style={{position: 'absolute', left: M, top: 485, width: CW, display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+        <CleanPoster
+          key={activeModel}
+          poster={meta.poster}
+          mode="light"
+          enterAt={meta.enter}
+          width={900}
+          height={506}
+          zoomFrom={1.0}
+          zoomTo={1.05}
+        />
+
+        {/* Curved Dotted SVG Connector down to single annotation pill */}
+        <svg width={80} height={68} viewBox="0 0 80 68" style={{marginTop: 6, opacity: Math.min(1, noteO)}}>
+          <path
+            d="M40 4 C40 28, 40 42, 40 64"
+            fill="none"
+            stroke={meta.color}
+            strokeWidth="2.5"
+            strokeDasharray="5 6"
+            strokeLinecap="round"
           />
-        </div>
+          <circle cx="40" cy="63" r="4" fill={meta.color} />
+        </svg>
 
-        {/* Lower Stage: Pricing & Efficiency Box (y: 1040 - 1500) */}
         <div
           style={{
-            position: 'absolute',
-            top: 1040,
-            left: LEFT_M,
-            width: CW,
-            padding: '30px 36px',
-            borderRadius: 28,
-            backgroundColor: 'rgba(15, 23, 42, 0.92)',
-            border: '2px solid rgba(255, 94, 30, 0.45)',
-            boxShadow: '0 16px 36px -10px rgba(0,0,0,0.7)',
-            backdropFilter: 'blur(16px)',
+            padding: '16px 32px',
+            borderRadius: 14,
+            backgroundColor: '#ffffff',
+            border: `2px solid ${meta.color}`,
+            boxShadow: '0 14px 32px rgba(15, 23, 42, 0.09)',
+            fontFamily: FONT.sans,
+            fontWeight: 700,
+            fontSize: 26,
+            color: '#0f172a',
+            textAlign: 'center',
+            maxWidth: 820,
+            opacity: Math.min(1, noteO),
+            transform: `translateY(${(1 - noteO) * 10}px)`,
+          }}
+        >
+          {meta.role}
+        </div>
+      </div>
+
+      <AgencyPresenterAnchor
+        gesture="point_up"
+        size={195}
+        bottomOffset={220}
+        side="center"
+        theme="light"
+      />
+    </AbsoluteFill>
+  );
+};
+
+/* ══════════════════════════════════════════════════════════════════════════
+   SCENE 3: THINKING LEVELS (Dark #0b0b0d — Neural Wave Poster + Parameter Trace)
+   ══════════════════════════════════════════════════════════════════════════ */
+export const S3Thinking: React.FC = () => {
+  const frame = useCurrentFrame();
+  const {fps} = useVideoConfig();
+
+  const termO = pop(frame, 12, fps, 165);
+  const activeStep = frame >= 200 ? 2 : frame >= 90 ? 1 : 0;
+
+  const rows = [
+    {at: 6, code: 'thinking_budget: scalable (0..8192 tokens)', tag: 'Adaptive', color: '#38bdf8'},
+    {at: 90, code: 'context_window: 1,000,000 native tokens', tag: 'Full Repo', color: '#10b981'},
+    {at: 200, code: 'reasoning_mode: multi_step_tree_verification', tag: 'High Logic', color: '#ff5e1e'},
+  ];
+
+  return (
+    <AbsoluteFill>
+      <BendaBackground mode="dark" />
+      <BendaWatermark mode="dark" index={3} total={5} />
+
+      <BendaHook
+        mode="dark"
+        lead="Kemampuan berpikir adaptif:"
+        anchorText="Scalable Thinking & 1M Context"
+        accent="#38bdf8"
+        enterAt={2}
+      />
+
+      <BendaStepper
+        mode="dark"
+        accent="#38bdf8"
+        counterTop="1M TOKENS"
+        counterSub="reasoning engine"
+        nodes={[
+          {label: 'ADAPTIVE', done: activeStep > 0, active: activeStep === 0},
+          {label: '1M CONTEXT', done: activeStep > 1, active: activeStep === 1},
+          {label: 'DEEP LOGIC', active: activeStep === 2},
+        ]}
+      />
+
+      <div style={{position: 'absolute', left: M, top: 472, width: CW, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 26}}>
+        <CleanPoster
+          poster={REAL_POSTERS.neonNeural}
+          mode="dark"
+          enterAt={4}
+          width={880}
+          height={495}
+          zoomFrom={1.0}
+          zoomTo={1.04}
+        />
+
+        {/* Bendalogi Dark Inspector Window */}
+        <div
+          style={{
+            width: '100%',
+            borderRadius: 14,
+            backgroundColor: '#0f131b',
+            border: '1.5px solid rgba(255, 255, 255, 0.15)',
+            boxShadow: '0 20px 44px rgba(0, 0, 0, 0.6)',
+            overflow: 'hidden',
+            opacity: Math.min(1, termO),
+            transform: `translateY(${(1 - termO) * 16}px)`,
+          }}
+        >
+          <div
+            style={{
+              height: 38,
+              padding: '0 16px',
+              backgroundColor: '#171c26',
+              borderBottom: '1px solid rgba(255,255,255,0.08)',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'space-between',
+              fontFamily: FONT.mono,
+              fontSize: 14,
+              color: '#94a3b8',
+            }}
+          >
+            <span>aistudio.google.com · parameter_control.log</span>
+            <span style={{color: '#10b981'}}>[active]</span>
+          </div>
+          <div style={{padding: '12px 0'}}>
+            {rows.map((r, idx) => {
+              const lit = frame >= r.at;
+              const current = idx === activeStep;
+              return (
+                <div
+                  key={r.code}
+                  style={{
+                    padding: '11px 20px',
+                    backgroundColor: current ? `${r.color}26` : 'transparent',
+                    borderLeft: `4px solid ${current ? r.color : 'transparent'}`,
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'space-between',
+                    opacity: lit ? 1 : 0.35,
+                  }}
+                >
+                  <span style={{fontFamily: FONT.mono, fontWeight: 600, fontSize: 18, color: '#f8fafc'}}>
+                    {r.code}
+                  </span>
+                  <span
+                    style={{
+                      padding: '4px 10px',
+                      borderRadius: 6,
+                      backgroundColor: `${r.color}30`,
+                      fontFamily: FONT.mono,
+                      fontWeight: 700,
+                      fontSize: 14,
+                      color: '#ffffff',
+                    }}
+                  >
+                    {r.tag}
+                  </span>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+
+      <AgencyPresenterAnchor
+        gesture="thinking"
+        size={190}
+        bottomOffset={220}
+        side="center"
+        theme="dark"
+      />
+    </AbsoluteFill>
+  );
+};
+
+/* ══════════════════════════════════════════════════════════════════════════
+   SCENE 4: BENCHMARK RESMI (Light #f7f8fa — Real Sheet Poster + Cost Box)
+   ══════════════════════════════════════════════════════════════════════════ */
+export const S4Benchmark: React.FC = () => {
+  const frame = useCurrentFrame();
+  const {fps} = useVideoConfig();
+
+  const sheetO = pop(frame, 10, fps, 170);
+
+  return (
+    <AbsoluteFill>
+      <BendaBackground mode="light" />
+      <BendaWatermark mode="light" index={4} total={5} />
+
+      <BendaHook
+        mode="light"
+        lead="Hasil Uji Performa Empiris:"
+        anchorText="Tandingi Claude 3.5 & GPT-4o"
+        accent="#ff5e1e"
+        enterAt={2}
+      />
+
+      <BendaStepper
+        mode="light"
+        accent="#ff5e1e"
+        counterTop="MATH-500"
+        counterSub="91.8% WINNER"
+        nodes={[
+          {label: 'HUMANEVAL', done: true},
+          {label: 'MATH-500', active: true},
+          {label: 'MMLU-PRO', done: true},
+        ]}
+      />
+
+      <div style={{position: 'absolute', left: M, top: 472, width: CW, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 26}}>
+        {/* Real Benchmark Sheet Image */}
+        <CleanPoster
+          poster={REAL_POSTERS.benchmarkSheet}
+          mode="light"
+          enterAt={4}
+          width={880}
+          height={495}
+          zoomFrom={1.0}
+          zoomTo={1.03}
+        />
+
+        {/* Single Clean Efficiency Highlight Box */}
+        <div
+          style={{
+            width: '100%',
+            borderRadius: 14,
+            backgroundColor: '#ffffff',
+            border: '2px solid #ff5e1e',
+            boxShadow: '0 16px 36px rgba(15, 23, 42, 0.08)',
+            padding: '20px 28px',
+            boxSizing: 'border-box',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'space-between',
-            zIndex: 40,
+            opacity: Math.min(1, sheetO),
+            transform: `translateY(${(1 - sheetO) * 14}px)`,
           }}
         >
           <div>
-            <div
-              style={{
-                fontFamily: NEON_FONT.mono,
-                fontSize: 13,
-                fontWeight: 800,
-                color: T.neon,
-                letterSpacing: '0.14em',
-              }}
-            >
-              PRICING & EFFICIENCY ADVANTAGE
+            <div style={{fontFamily: FONT.mono, fontSize: 13, fontWeight: 700, color: '#ff5e1e', letterSpacing: '0.12em'}}>
+              HARGA &amp; EFISIENSI OPERASIONAL
             </div>
-            <div
-              style={{
-                fontFamily: NEON_FONT.sans,
-                fontSize: 28,
-                fontWeight: 800,
-                color: '#FFFFFF',
-                marginTop: 6,
-                letterSpacing: '-0.02em',
-              }}
-            >
-              $0.35 / 1 Juta Token Prompt
+            <div style={{fontFamily: FONT.sans, fontSize: 26, fontWeight: 800, color: '#0f172a', marginTop: 4}}>
+              $0.35 per 1 Juta Token
             </div>
-            <div
-              style={{
-                fontFamily: NEON_FONT.sans,
-                fontSize: 15,
-                color: T.inkMuted,
-                marginTop: 4,
-              }}
-            >
-              7x hingga 8x lebih hemat dibanding tarif Claude 3.5 Sonnet ($3.00) dan GPT-4o ($2.50)
+            <div style={{fontFamily: FONT.sans, fontSize: 15, color: '#64748b', marginTop: 2}}>
+              7x–8x lebih hemat dibanding Claude 3.5 Sonnet ($3.00) dan GPT-4o ($2.50)
             </div>
           </div>
 
           <div
             style={{
-              padding: '14px 24px',
-              borderRadius: 20,
-              backgroundColor: 'rgba(16, 185, 129, 0.15)',
-              border: '1.5px solid #10B981',
-              fontFamily: NEON_FONT.mono,
-              fontSize: 18,
+              padding: '10px 20px',
+              borderRadius: 999,
+              backgroundColor: '#16a34a',
+              color: '#ffffff',
+              fontFamily: FONT.mono,
               fontWeight: 800,
-              color: '#10B981',
-              boxShadow: '0 0 20px rgba(16, 185, 129, 0.3)',
+              fontSize: 18,
             }}
           >
             -85% BIAYA
           </div>
         </div>
+      </div>
 
-        {/* Bottom Spec Strip (Filling y: 1540 - 1680) */}
-        <SpecPillStrip
-          delay={52}
-          pills={[
-            {label: 'MATH-500 WINNER', value: 'Gemini 4 Neon 91.8%', accent: '#FF5E1E'},
-            {label: 'PRICE ADVANTAGE', value: '7x - 8x Cheaper', accent: '#10B981'},
-            {label: 'CONTEXT CAP', value: '1,000,000 Tok Native', accent: '#00E5FF'},
-          ]}
-        />
-      </AbsoluteFill>
+      <AgencyPresenterAnchor
+        gesture="point_up"
+        size={185}
+        bottomOffset={220}
+        side="center"
+        theme="light"
+      />
     </AbsoluteFill>
   );
 };
 
 /* ══════════════════════════════════════════════════════════════════════════
-   SCENE 5: OUTRO PROFIL TUAN RAHMAT (rhmt ofc · rhmt.biz.id)
+   SCENE 5: OUTRO PROFIL TUAN RAHMAT (Dark #0b0b0d — Clean Signature Stage)
    ══════════════════════════════════════════════════════════════════════════ */
 export const S5Outro: React.FC = () => {
-  const f = useCurrentFrame();
+  const frame = useCurrentFrame();
+  const {fps} = useVideoConfig();
 
-  const cam = focusCam(f, [
-    {f: 0, s: 0.95, rx: 3, ry: -2, px: 0, py: 0},
-    {f: 30, s: 1.0, rx: 0, ry: 0, px: 0, py: 0, ease: E.out},
-    {f: 120, s: 1.03, rx: -1, ry: 1, px: 0, py: -6, ease: E.inOut},
-  ]);
-
-  const photo = p(f, 8, 34, E.back);
-  const click = p(f, 150, 154, E.lin) * (1 - p(f, 154, 166, E.lin));
-  const stack = [
-    'Google AI Studio (Puck)',
-    'Gemini 4 Neon Architecture',
-    'Remotion 4 Studio Engine',
-    'Next.js 16 Fullstack',
-  ];
+  const photoO = pop(frame, 8, fps, 170);
+  const sigO = pop(frame, 22, fps, 165);
 
   return (
-    <AbsoluteFill style={{overflow: 'hidden'}}>
-      <NeonBg />
-      <NeonHeaderHUD activeStep={4} />
+    <AbsoluteFill>
+      <BendaBackground mode="dark" />
+      <BendaWatermark mode="dark" index={5} total={5} />
 
-      {/* Confetti Celebration Particles */}
-      {Array.from({length: 40}).map((_, i) => {
-        const t = f - 15 - random(`cd${i}`) * 35;
-        if (t < 0) return null;
-        const x = random(`cx${i}`) * 1080;
-        const y = -60 + t * (4 + random(`cs${i}`) * 6);
-        if (y > 1920) return null;
-        return (
-          <div
-            key={i}
-            style={{
-              position: 'absolute',
-              left: x + Math.sin(t * 0.1 + i) * 25,
-              top: y,
-              width: 10,
-              height: 18,
-              borderRadius: 3,
-              backgroundColor: i % 3 === 0 ? '#FF5E1E' : i % 2 === 0 ? '#00E5FF' : '#FFFFFF',
-              transform: `rotate(${t * (4 + (i % 5))}deg)`,
-              opacity: 0.85,
-              zIndex: 25,
-            }}
-          />
-        );
-      })}
+      <BendaHook
+        mode="dark"
+        lead="Riset & Produksi Sistem:"
+        anchorText="Rohmatulloh · rhmt ofc"
+        accent="#ff5e1e"
+        enterAt={2}
+      />
 
-      <AbsoluteFill
-        style={{transform: cam.css, transformOrigin: '50% 45%'}}
-      >
-        {/* Outro Master Card (y: 130 - 1680) */}
+      <BendaStepper
+        mode="dark"
+        accent="#ff5e1e"
+        counterTop="KREATOR"
+        counterSub="rhmt.biz.id"
+        nodes={[
+          {label: 'GEMINI 4', done: true},
+          {label: 'AI STUDIO', done: true},
+          {label: 'RHMT OFC', active: true},
+        ]}
+      />
+
+      <div style={{position: 'absolute', left: M, top: 480, width: CW, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 32}}>
+        {/* Creator Profile Picture Frame */}
         <div
           style={{
-            position: 'absolute',
-            top: 130,
-            left: LEFT_M,
-            width: CW,
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            zIndex: 40,
+            position: 'relative',
+            width: 320,
+            height: 320,
+            opacity: Math.min(1, photoO),
+            transform: `scale(${0.9 + 0.1 * photoO})`,
           }}
         >
-          {/* Top Dispatch Tag */}
           <div
             style={{
-              fontFamily: NEON_FONT.mono,
-              fontSize: 16,
-              fontWeight: 800,
-              color: T.neon,
-              letterSpacing: '0.24em',
-              textAlign: 'center',
-              marginBottom: 24,
-            }}
-          >
-            ─ PRODUCED & DIRECTED BY 05 / 05 ─
-          </div>
-
-          {/* Profile Photo Avatar Frame */}
-          <div
-            style={{
-              position: 'relative',
-              width: 380,
-              height: 380,
-              transform: `scale(${photo})`,
-              opacity: Math.min(1, photo * 1.5),
-              marginBottom: 32,
-            }}
-          >
-            {/* Dashed Animated Rotating Ring */}
-            <div
-              style={{
-                position: 'absolute',
-                inset: -24,
-                borderRadius: 999,
-                border: '3px dashed #FF5E1E',
-                opacity: 0.55,
-                transform: `rotate(${f * 0.8}deg)`,
-              }}
-            />
-            {/* Glowing Border */}
-            <div
-              style={{
-                position: 'absolute',
-                inset: -10,
-                borderRadius: 999,
-                border: '4px solid #FFFFFF',
-                boxShadow: '0 0 50px rgba(255, 94, 30, 0.6)',
-              }}
-            />
-            {/* Owner Profile Image */}
-            <Img
-              src={staticFile('assets/neon/pp-dev.webp')}
-              style={{
-                width: 380,
-                height: 380,
-                borderRadius: 999,
-                objectFit: 'cover',
-                boxShadow: '0 40px 80px -20px rgba(0, 0, 0, 0.8)',
-              }}
-            />
-            {/* Verified Badge */}
-            <div
-              style={{
-                position: 'absolute',
-                right: 12,
-                bottom: 12,
-                width: 76,
-                height: 76,
-                borderRadius: 999,
-                backgroundColor: '#FF5E1E',
-                border: '5px solid #FFFFFF',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                boxShadow: '0 8px 24px rgba(255, 94, 30, 0.6)',
-                transform: `scale(${p(f, 30, 44, E.back)})`,
-              }}
-            >
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
-                <path
-                  d="M5 13L9 17L19 7"
-                  stroke="#FFFFFF"
-                  strokeWidth="3.2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </div>
-          </div>
-
-          {/* Staggered Animated Creator Name: Rohmatulloh */}
-          <div
-            style={{
-              fontFamily: NEON_FONT.sans,
-              fontSize: 76,
-              fontWeight: 800,
-              color: '#FFFFFF',
-              letterSpacing: '-0.04em',
-              lineHeight: 1,
-              textAlign: 'center',
-            }}
-          >
-            {'Rohmatulloh'.split('').map((ch, i) => {
-              const q = p(f, 26 + i * 2, 42 + i * 2, E.out);
-              return (
-                <span
-                  key={i}
-                  style={{
-                    display: 'inline-block',
-                    opacity: q,
-                    transform: `translateY(${(1 - q) * 60}px)`,
-                    filter: `blur(${(1 - q) * 6}px)`,
-                  }}
-                >
-                  {ch}
-                </span>
-              );
-            })}
-          </div>
-
-          {/* Brand Identity: rhmt ofc */}
-          <div
-            style={{
-              fontFamily: NEON_FONT.sans,
-              fontSize: 42,
-              fontWeight: 800,
-              color: T.neon,
-              marginTop: 10,
-              letterSpacing: '-0.02em',
-              opacity: p(f, 48, 66),
-              transform: `translateX(${(1 - p(f, 48, 70)) * 30}px)`,
-            }}
-          >
-            · rhmt ofc
-          </div>
-
-          <div
-            style={{
-              fontFamily: NEON_FONT.mono,
-              fontSize: 22,
-              color: T.inkMuted,
-              marginTop: 12,
-              fontWeight: 600,
-              opacity: p(f, 58, 76),
-            }}
-          >
-            AI Systems Engineer · Creator of rhmt.biz.id
-          </div>
-
-          {/* Tech Stack Pills (Filling y: 980 - 1200) */}
-          <div
-            style={{
-              display: 'flex',
-              flexWrap: 'wrap',
-              gap: 14,
-              marginTop: 34,
-              justifyContent: 'center',
-              maxWidth: 820,
-            }}
-          >
-            {stack.map((s, i) => {
-              const q = p(f, 74 + i * 8, 94 + i * 8, E.back);
-              return (
-                <span
-                  key={s}
-                  style={{
-                    padding: '14px 26px',
-                    borderRadius: 18,
-                    backgroundColor: i === 0 ? '#FF5E1E' : 'rgba(15, 23, 42, 0.92)',
-                    color: i === 0 ? '#FFFFFF' : '#FFFFFF',
-                    border: '1.5px solid rgba(255, 255, 255, 0.15)',
-                    boxShadow: '0 12px 28px rgba(0,0,0,0.6)',
-                    fontFamily: NEON_FONT.sans,
-                    fontWeight: 800,
-                    fontSize: 18,
-                    opacity: Math.min(1, q * 1.5),
-                    transform: `translateY(${(1 - q) * 24}px) scale(${0.9 + 0.1 * q})`,
-                  }}
-                >
-                  {s}
-                </span>
-              );
-            })}
-          </div>
-
-          {/* Tactile CTA Button (Filling y: 1220 - 1340) */}
-          <div
-            style={{
-              marginTop: 40,
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: 16,
-              padding: '22px 50px',
+              position: 'absolute',
+              inset: -12,
               borderRadius: 999,
-              backgroundColor: '#FF5E1E',
-              color: '#FFFFFF',
-              fontFamily: NEON_FONT.sans,
-              fontWeight: 800,
-              fontSize: 26,
-              boxShadow: `0 ${16 + click * 8}px 40px -8px rgba(255, 94, 30, 0.6), 0 0 ${
-                click * 40
-              }px rgba(255, 94, 30, 0.8)`,
-              opacity: p(f, 110, 128),
-              transform: `translateY(${(1 - p(f, 110, 132, E.back)) * 30}px) scale(${
-                1 - click * 0.05
-              })`,
+              border: '3px solid #ff5e1e',
+              boxShadow: '0 0 35px rgba(255, 94, 30, 0.45)',
+            }}
+          />
+          <Img
+            src={staticFile('assets/neon/pp-dev.webp')}
+            style={{
+              width: 320,
+              height: 320,
+              borderRadius: 999,
+              objectFit: 'cover',
+              boxShadow: '0 24px 50px rgba(0, 0, 0, 0.7)',
+            }}
+          />
+          {/* Verified Badge */}
+          <div
+            style={{
+              position: 'absolute',
+              right: 8,
+              bottom: 8,
+              width: 60,
+              height: 60,
+              borderRadius: 999,
+              backgroundColor: '#ff5e1e',
+              border: '4px solid #ffffff',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
             }}
           >
-            <span>Kunjungi rhmt.biz.id</span>
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
-              <path
-                d="M5 12H19M19 12L12 5M19 12L12 19"
-                stroke="#FFFFFF"
-                strokeWidth="2.8"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+              <path d="M5 13L9 17L19 7" stroke="#ffffff" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
           </div>
         </div>
 
-        {/* Bottom Spec Strip (Filling y: 1540 - 1680) */}
-        <SpecPillStrip
-          delay={60}
-          pills={[
-            {label: 'OFFICIAL PORTFOLIO', value: 'rhmt.biz.id', accent: '#FF5E1E'},
-            {label: 'COMMUNITY', value: 'RHMT OFC', accent: '#00E5FF'},
-            {label: 'GITHUB', value: 'github.com/rhmt-ofc', accent: '#10B981'},
-          ]}
-        />
-      </AbsoluteFill>
+        {/* Creator Name & Handle */}
+        <div style={{textAlign: 'center', opacity: Math.min(1, sigO)}}>
+          <div style={{fontFamily: FONT.sans, fontWeight: 800, fontSize: 56, color: '#ffffff', letterSpacing: '-0.03em'}}>
+            Rohmatulloh
+          </div>
+          <div style={{fontFamily: FONT.sans, fontWeight: 800, fontSize: 32, color: '#ff5e1e', marginTop: 4}}>
+            · rhmt ofc
+          </div>
+          <div style={{fontFamily: FONT.mono, fontWeight: 600, fontSize: 20, color: '#94a3b8', marginTop: 8}}>
+            AI Systems Engineer · rhmt.biz.id
+          </div>
+        </div>
+
+        {/* Clean Signature CTA Pill */}
+        <div
+          style={{
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: 16,
+            padding: '16px 40px',
+            borderRadius: 999,
+            backgroundColor: '#ff5e1e',
+            boxShadow: '0 16px 36px rgba(255, 94, 30, 0.4)',
+            opacity: Math.min(1, sigO),
+            transform: `translateY(${(1 - sigO) * 12}px)`,
+          }}
+        >
+          <span style={{fontFamily: FONT.sans, fontWeight: 800, fontSize: 24, color: '#ffffff'}}>
+            Kunjungi rhmt.biz.id
+          </span>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="#ffffff" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+        </div>
+      </div>
+
+      <AgencyPresenterAnchor
+        gesture="thumbs_up"
+        size={190}
+        bottomOffset={220}
+        side="center"
+        theme="dark"
+      />
     </AbsoluteFill>
   );
 };
