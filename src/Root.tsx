@@ -20,6 +20,8 @@ import neonTimeline from './data/neon-timeline.json';
 import {NeonVideo} from './NeonVideo';
 import filosofiTimeline from './data/filosofi-timeline.json';
 import {FilosofiVideo} from './FilosofiVideo';
+import {BeyondTheNamesVideo} from './beyond/Root';
+import {TOTAL as BEYOND_TOTAL, FPS as BEYOND_FPS} from './beyond/data';
 import timeline from './data/timeline.json';
 import kryptonTimeline from './data/krypton-timeline.json';
 import agenticTimeline from './data/agentic-timeline.json';
@@ -41,6 +43,14 @@ import {ERekapKineticTypography, KINETIC_TOTAL_FRAMES} from './typography/ERekap
 
 export const Root: React.FC = () => (
   <>
+    <Composition
+      id="BeyondTheNames"
+      component={BeyondTheNamesVideo}
+      width={1080}
+      height={1920}
+      fps={BEYOND_FPS}
+      durationInFrames={BEYOND_TOTAL}
+    />
     <Composition
       id="FilosofiAI"
       component={FilosofiVideo}
