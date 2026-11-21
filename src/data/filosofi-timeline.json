@@ -1,0 +1,62 @@
+{
+  "fps": 30,
+  "estimated": false,
+  "total": 83.644,
+  "scenes": [
+    {
+      "id": "s1-hook",
+      "title": "Hook & Misteri Nama AI Frontier",
+      "bg": "dark",
+      "audio": "audio/vo-filosofi/s1-hook.mp3",
+      "start": 0.0,
+      "duration": 15.672,
+      "vo_start": 0.5,
+      "vo_end": 14.972,
+      "end": 15.672
+    },
+    {
+      "id": "s2-claude",
+      "title": "Anthropic: Metafora Sastra Klasik",
+      "bg": "dark",
+      "audio": "audio/vo-filosofi/s2-claude.mp3",
+      "start": 15.672,
+      "duration": 17.54,
+      "vo_start": 16.072,
+      "vo_end": 32.512,
+      "end": 33.212
+    },
+    {
+      "id": "s3-gemini",
+      "title": "Google DeepMind: Kosmologi & Fisika",
+      "bg": "dark",
+      "audio": "audio/vo-filosofi/s3-gemini.mp3",
+      "start": 33.212,
+      "duration": 17.06,
+      "vo_start": 33.612,
+      "vo_end": 49.572,
+      "end": 50.272
+    },
+    {
+      "id": "s4-openai",
+      "title": "OpenAI: Reset Paradigma o1",
+      "bg": "dark",
+      "audio": "audio/vo-filosofi/s4-openai.mp3",
+      "start": 50.272,
+      "duration": 16.22,
+      "vo_start": 50.672,
+      "vo_end": 65.792,
+      "end": 66.492
+    },
+    {
+      "id": "s5-outro",
+      "title": "Outro Resmi rhmt ofc",
+      "bg": "dark",
+      "audio": "audio/vo-filosofi/s5-outro.mp3",
+      "start": 66.492,
+      "duration": 17.152,
+      "vo_start": 66.892,
+      "vo_end": 81.844,
+      "end": 83.644
+    }
+  ]
+}

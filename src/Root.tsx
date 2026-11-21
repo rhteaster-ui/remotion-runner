@@ -18,6 +18,8 @@ import {ERekapShowcaseVideo} from './ERekapShowcaseVideo';
 import {N8nOpsVideo} from './N8nOpsVideo';
 import neonTimeline from './data/neon-timeline.json';
 import {NeonVideo} from './NeonVideo';
+import filosofiTimeline from './data/filosofi-timeline.json';
+import {FilosofiVideo} from './FilosofiVideo';
 import timeline from './data/timeline.json';
 import kryptonTimeline from './data/krypton-timeline.json';
 import agenticTimeline from './data/agentic-timeline.json';
@@ -39,6 +41,14 @@ import {ERekapKineticTypography, KINETIC_TOTAL_FRAMES} from './typography/ERekap
 
 export const Root: React.FC = () => (
   <>
+    <Composition
+      id="FilosofiAI"
+      component={FilosofiVideo}
+      width={1080}
+      height={1920}
+      fps={filosofiTimeline.fps}
+      durationInFrames={Math.ceil(filosofiTimeline.total * filosofiTimeline.fps)}
+    />
     <Composition
       id="Gemini4Neon"
       component={NeonVideo}

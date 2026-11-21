@@ -1,0 +1,1219 @@
+{
+  "captions": [
+    {
+      "id": 1,
+      "scene": "s1-hook",
+      "bg": "dark",
+      "lines": [
+        "Pernah gak kamu sadar,",
+        "kenapa nama-nama model"
+      ],
+      "words": [
+        {
+          "text": "Pernah",
+          "start": 0.745,
+          "end": 1.109
+        },
+        {
+          "text": "gak",
+          "start": 1.109,
+          "end": 1.291
+        },
+        {
+          "text": "kamu",
+          "start": 1.291,
+          "end": 1.534
+        },
+        {
+          "text": "sadar,",
+          "start": 1.534,
+          "end": 1.898
+        },
+        {
+          "text": "kenapa",
+          "start": 2.278,
+          "end": 2.642
+        },
+        {
+          "text": "nama-nama",
+          "start": 2.642,
+          "end": 3.189
+        },
+        {
+          "text": "model",
+          "start": 3.189,
+          "end": 3.492
+        }
+      ],
+      "start": 0.745,
+      "end": 3.492
+    },
+    {
+      "id": 2,
+      "scene": "s1-hook",
+      "bg": "dark",
+      "lines": [
+        "AI frontier sekarang",
+        "makin puitis dan"
+      ],
+      "words": [
+        {
+          "text": "AI",
+          "start": 3.492,
+          "end": 3.614
+        },
+        {
+          "text": "frontier",
+          "start": 3.614,
+          "end": 4.099
+        },
+        {
+          "text": "sekarang",
+          "start": 4.099,
+          "end": 4.585
+        },
+        {
+          "text": "makin",
+          "start": 4.585,
+          "end": 4.888
+        },
+        {
+          "text": "puitis",
+          "start": 4.888,
+          "end": 5.252
+        },
+        {
+          "text": "dan",
+          "start": 5.252,
+          "end": 5.434
+        }
+      ],
+      "start": 3.492,
+      "end": 5.434
+    },
+    {
+      "id": 3,
+      "scene": "s1-hook",
+      "bg": "dark",
+      "lines": [
+        "misterius? Ada Opus,",
+        "Sonnet, Gemini Flash,"
+      ],
+      "words": [
+        {
+          "text": "misterius?",
+          "start": 6.326,
+          "end": 6.933
+        },
+        {
+          "text": "Ada",
+          "start": 6.933,
+          "end": 7.115
+        },
+        {
+          "text": "Opus,",
+          "start": 7.115,
+          "end": 7.419
+        },
+        {
+          "text": "Sonnet,",
+          "start": 8.022,
+          "end": 8.447
+        },
+        {
+          "text": "Gemini",
+          "start": 8.447,
+          "end": 8.811
+        },
+        {
+          "text": "Flash,",
+          "start": 8.811,
+          "end": 9.175
+        }
+      ],
+      "start": 6.326,
+      "end": 9.175
+    },
+    {
+      "id": 4,
+      "scene": "s1-hook",
+      "bg": "dark",
+      "lines": [
+        "sampai Project Astra.",
+        "Ini bukan sekadar"
+      ],
+      "words": [
+        {
+          "text": "sampai",
+          "start": 9.175,
+          "end": 9.54
+        },
+        {
+          "text": "Project",
+          "start": 10.589,
+          "end": 11.013
+        },
+        {
+          "text": "Astra.",
+          "start": 11.013,
+          "end": 11.378
+        },
+        {
+          "text": "Ini",
+          "start": 11.378,
+          "end": 11.56
+        },
+        {
+          "text": "bukan",
+          "start": 11.56,
+          "end": 11.863
+        },
+        {
+          "text": "sekadar",
+          "start": 12.544,
+          "end": 12.969
+        }
+      ],
+      "start": 9.175,
+      "end": 12.969
+    },
+    {
+      "id": 5,
+      "scene": "s1-hook",
+      "bg": "dark",
+      "lines": [
+        "gimmick marketing, tapi",
+        "deklarasi filosofi"
+      ],
+      "words": [
+        {
+          "text": "gimmick",
+          "start": 12.969,
+          "end": 13.394
+        },
+        {
+          "text": "marketing,",
+          "start": 13.394,
+          "end": 14.001
+        },
+        {
+          "text": "tapi",
+          "start": 14.001,
+          "end": 14.244
+        },
+        {
+          "text": "deklarasi",
+          "start": 14.244,
+          "end": 14.79
+        },
+        {
+          "text": "filosofi",
+          "start": 14.79,
+          "end": 15.276
+        }
+      ],
+      "start": 12.969,
+      "end": 15.276
+    },
+    {
+      "id": 6,
+      "scene": "s1-hook",
+      "bg": "dark",
+      "lines": [
+        "peradaban mereka."
+      ],
+      "words": [
+        {
+          "text": "peradaban",
+          "start": 15.276,
+          "end": 15.822
+        },
+        {
+          "text": "mereka.",
+          "start": 15.822,
+          "end": 16.247
+        }
+      ],
+      "start": 15.276,
+      "end": 16.247
+    },
+    {
+      "id": 7,
+      "scene": "s2-claude",
+      "bg": "dark",
+      "lines": [
+        "Anthropic menamai Claude",
+        "dari karya sastra"
+      ],
+      "words": [
+        {
+          "text": "Anthropic",
+          "start": 16.32,
+          "end": 16.914
+        },
+        {
+          "text": "menamai",
+          "start": 16.914,
+          "end": 17.377
+        },
+        {
+          "text": "Claude",
+          "start": 17.377,
+          "end": 17.773
+        },
+        {
+          "text": "dari",
+          "start": 17.773,
+          "end": 18.038
+        },
+        {
+          "text": "karya",
+          "start": 18.038,
+          "end": 18.368
+        },
+        {
+          "text": "sastra",
+          "start": 18.368,
+          "end": 18.764
+        }
+      ],
+      "start": 16.32,
+      "end": 18.764
+    },
+    {
+      "id": 8,
+      "scene": "s2-claude",
+      "bg": "dark",
+      "lines": [
+        "klasik. Opus adalah",
+        "Magnum Opus, karya seni"
+      ],
+      "words": [
+        {
+          "text": "klasik.",
+          "start": 19.65,
+          "end": 20.112
+        },
+        {
+          "text": "Opus",
+          "start": 20.112,
+          "end": 20.377
+        },
+        {
+          "text": "adalah",
+          "start": 20.377,
+          "end": 20.773
+        },
+        {
+          "text": "Magnum",
+          "start": 20.773,
+          "end": 21.169
+        },
+        {
+          "text": "Opus,",
+          "start": 21.556,
+          "end": 21.887
+        },
+        {
+          "text": "karya",
+          "start": 21.887,
+          "end": 22.217
+        },
+        {
+          "text": "seni",
+          "start": 22.217,
+          "end": 22.481
+        }
+      ],
+      "start": 19.65,
+      "end": 22.481
+    },
+    {
+      "id": 9,
+      "scene": "s2-claude",
+      "bg": "dark",
+      "lines": [
+        "agung untuk penalaran",
+        "paling dalam. Sonnet"
+      ],
+      "words": [
+        {
+          "text": "agung",
+          "start": 22.481,
+          "end": 22.812
+        },
+        {
+          "text": "untuk",
+          "start": 22.812,
+          "end": 23.142
+        },
+        {
+          "text": "penalaran",
+          "start": 23.142,
+          "end": 23.737
+        },
+        {
+          "text": "paling",
+          "start": 24.372,
+          "end": 24.768
+        },
+        {
+          "text": "dalam.",
+          "start": 24.768,
+          "end": 25.164
+        },
+        {
+          "text": "Sonnet",
+          "start": 25.164,
+          "end": 25.561
+        }
+      ],
+      "start": 22.481,
+      "end": 25.561
+    },
+    {
+      "id": 10,
+      "scene": "s2-claude",
+      "bg": "dark",
+      "lines": [
+        "adalah puisi berirama",
+        "seimbang untuk kerja"
+      ],
+      "words": [
+        {
+          "text": "adalah",
+          "start": 25.561,
+          "end": 25.957
+        },
+        {
+          "text": "puisi",
+          "start": 25.957,
+          "end": 26.287
+        },
+        {
+          "text": "berirama",
+          "start": 26.287,
+          "end": 26.816
+        },
+        {
+          "text": "seimbang",
+          "start": 26.816,
+          "end": 27.345
+        },
+        {
+          "text": "untuk",
+          "start": 27.948,
+          "end": 28.278
+        },
+        {
+          "text": "kerja",
+          "start": 28.278,
+          "end": 28.608
+        }
+      ],
+      "start": 25.561,
+      "end": 28.608
+    },
+    {
+      "id": 11,
+      "scene": "s2-claude",
+      "bg": "dark",
+      "lines": [
+        "harian. Dan Haiku adalah",
+        "puisi tiga baris"
+      ],
+      "words": [
+        {
+          "text": "harian.",
+          "start": 28.608,
+          "end": 29.071
+        },
+        {
+          "text": "Dan",
+          "start": 29.071,
+          "end": 29.269
+        },
+        {
+          "text": "Haiku",
+          "start": 29.269,
+          "end": 29.599
+        },
+        {
+          "text": "adalah",
+          "start": 29.599,
+          "end": 29.996
+        },
+        {
+          "text": "puisi",
+          "start": 29.996,
+          "end": 30.326
+        },
+        {
+          "text": "tiga",
+          "start": 30.326,
+          "end": 30.59
+        },
+        {
+          "text": "baris",
+          "start": 30.59,
+          "end": 30.921
+        }
+      ],
+      "start": 28.608,
+      "end": 30.921
+    },
+    {
+      "id": 12,
+      "scene": "s2-claude",
+      "bg": "dark",
+      "lines": [
+        "ultra-cepat yang ringkas",
+        "dan tanpa jeda."
+      ],
+      "words": [
+        {
+          "text": "ultra-cepat",
+          "start": 30.921,
+          "end": 31.648
+        },
+        {
+          "text": "yang",
+          "start": 31.648,
+          "end": 31.912
+        },
+        {
+          "text": "ringkas",
+          "start": 31.912,
+          "end": 32.374
+        },
+        {
+          "text": "dan",
+          "start": 32.374,
+          "end": 32.572
+        },
+        {
+          "text": "tanpa",
+          "start": 32.572,
+          "end": 32.903
+        },
+        {
+          "text": "jeda.",
+          "start": 32.903,
+          "end": 33.233
+        }
+      ],
+      "start": 30.921,
+      "end": 33.233
+    },
+    {
+      "id": 13,
+      "scene": "s3-gemini",
+      "bg": "dark",
+      "lines": [
+        "Google mengambil jalur",
+        "kosmologi dan fisika."
+      ],
+      "words": [
+        {
+          "text": "Google",
+          "start": 33.82,
+          "end": 34.17
+        },
+        {
+          "text": "mengambil",
+          "start": 34.17,
+          "end": 34.694
+        },
+        {
+          "text": "jalur",
+          "start": 34.694,
+          "end": 34.986
+        },
+        {
+          "text": "kosmologi",
+          "start": 34.986,
+          "end": 35.511
+        },
+        {
+          "text": "dan",
+          "start": 35.511,
+          "end": 35.686
+        },
+        {
+          "text": "fisika.",
+          "start": 35.686,
+          "end": 36.094
+        }
+      ],
+      "start": 33.82,
+      "end": 36.094
+    },
+    {
+      "id": 14,
+      "scene": "s3-gemini",
+      "bg": "dark",
+      "lines": [
+        "Gemini melambangkan",
+        "bintang kembar, fondasi"
+      ],
+      "words": [
+        {
+          "text": "Gemini",
+          "start": 36.639,
+          "end": 36.988
+        },
+        {
+          "text": "melambangkan",
+          "start": 36.988,
+          "end": 37.688
+        },
+        {
+          "text": "bintang",
+          "start": 37.688,
+          "end": 38.096
+        },
+        {
+          "text": "kembar,",
+          "start": 38.634,
+          "end": 39.043
+        },
+        {
+          "text": "fondasi",
+          "start": 39.043,
+          "end": 39.451
+        }
+      ],
+      "start": 36.639,
+      "end": 39.451
+    },
+    {
+      "id": 15,
+      "scene": "s3-gemini",
+      "bg": "dark",
+      "lines": [
+        "multimodal native yang",
+        "melihat dan mendengar"
+      ],
+      "words": [
+        {
+          "text": "multimodal",
+          "start": 39.451,
+          "end": 40.034
+        },
+        {
+          "text": "native",
+          "start": 40.034,
+          "end": 40.383
+        },
+        {
+          "text": "yang",
+          "start": 40.383,
+          "end": 40.617
+        },
+        {
+          "text": "melihat",
+          "start": 40.617,
+          "end": 41.025
+        },
+        {
+          "text": "dan",
+          "start": 41.025,
+          "end": 41.2
+        },
+        {
+          "text": "mendengar",
+          "start": 41.2,
+          "end": 41.724
+        }
+      ],
+      "start": 39.451,
+      "end": 41.724
+    },
+    {
+      "id": 16,
+      "scene": "s3-gemini",
+      "bg": "dark",
+      "lines": [
+        "sekaligus. Lini Flash",
+        "melambangkan kecepatan"
+      ],
+      "words": [
+        {
+          "text": "sekaligus.",
+          "start": 42.351,
+          "end": 42.934
+        },
+        {
+          "text": "Lini",
+          "start": 42.934,
+          "end": 43.167
+        },
+        {
+          "text": "Flash",
+          "start": 43.167,
+          "end": 43.459
+        },
+        {
+          "text": "melambangkan",
+          "start": 43.459,
+          "end": 44.158
+        },
+        {
+          "text": "kecepatan",
+          "start": 44.979,
+          "end": 45.504
+        }
+      ],
+      "start": 42.351,
+      "end": 45.504
+    },
+    {
+      "id": 17,
+      "scene": "s3-gemini",
+      "bg": "dark",
+      "lines": [
+        "foton cahaya, sementara",
+        "Astra diambil dari"
+      ],
+      "words": [
+        {
+          "text": "foton",
+          "start": 45.504,
+          "end": 45.796
+        },
+        {
+          "text": "cahaya,",
+          "start": 45.796,
+          "end": 46.204
+        },
+        {
+          "text": "sementara",
+          "start": 46.204,
+          "end": 46.728
+        },
+        {
+          "text": "Astra",
+          "start": 46.728,
+          "end": 47.02
+        },
+        {
+          "text": "diambil",
+          "start": 47.02,
+          "end": 47.428
+        },
+        {
+          "text": "dari",
+          "start": 47.428,
+          "end": 47.661
+        }
+      ],
+      "start": 45.504,
+      "end": 47.661
+    },
+    {
+      "id": 18,
+      "scene": "s3-gemini",
+      "bg": "dark",
+      "lines": [
+        "istilah Latin Ad Astra,",
+        "menuju bintang-bintang."
+      ],
+      "words": [
+        {
+          "text": "istilah",
+          "start": 48.278,
+          "end": 48.686
+        },
+        {
+          "text": "Latin",
+          "start": 48.686,
+          "end": 48.978
+        },
+        {
+          "text": "Ad",
+          "start": 48.978,
+          "end": 49.094
+        },
+        {
+          "text": "Astra,",
+          "start": 49.094,
+          "end": 49.444
+        },
+        {
+          "text": "menuju",
+          "start": 49.444,
+          "end": 49.794
+        },
+        {
+          "text": "bintang-bintang.",
+          "start": 49.794,
+          "end": 50.727
+        }
+      ],
+      "start": 48.278,
+      "end": 50.727
+    },
+    {
+      "id": 19,
+      "scene": "s4-openai",
+      "bg": "dark",
+      "lines": [
+        "Sementara OpenAI memakai",
+        "nama Omni, merengkuh"
+      ],
+      "words": [
+        {
+          "text": "Sementara",
+          "start": 50.672,
+          "end": 51.283
+        },
+        {
+          "text": "OpenAI",
+          "start": 51.283,
+          "end": 51.69
+        },
+        {
+          "text": "memakai",
+          "start": 51.69,
+          "end": 52.164
+        },
+        {
+          "text": "nama",
+          "start": 52.164,
+          "end": 52.436
+        },
+        {
+          "text": "Omni,",
+          "start": 52.436,
+          "end": 52.775
+        },
+        {
+          "text": "merengkuh",
+          "start": 52.775,
+          "end": 53.386
+        }
+      ],
+      "start": 50.672,
+      "end": 53.386
+    },
+    {
+      "id": 20,
+      "scene": "s4-openai",
+      "bg": "dark",
+      "lines": [
+        "segalanya secara utuh.",
+        "Lalu mereka mereset"
+      ],
+      "words": [
+        {
+          "text": "segalanya",
+          "start": 53.692,
+          "end": 54.303
+        },
+        {
+          "text": "secara",
+          "start": 54.303,
+          "end": 54.71
+        },
+        {
+          "text": "utuh.",
+          "start": 54.71,
+          "end": 55.049
+        },
+        {
+          "text": "Lalu",
+          "start": 55.049,
+          "end": 55.32
+        },
+        {
+          "text": "mereka",
+          "start": 55.989,
+          "end": 56.396
+        },
+        {
+          "text": "mereset",
+          "start": 56.396,
+          "end": 56.871
+        }
+      ],
+      "start": 53.692,
+      "end": 56.871
+    },
+    {
+      "id": 21,
+      "scene": "s4-openai",
+      "bg": "dark",
+      "lines": [
+        "penomoran kembali ke",
+        "angka o-one, menandakan"
+      ],
+      "words": [
+        {
+          "text": "penomoran",
+          "start": 56.871,
+          "end": 57.481
+        },
+        {
+          "text": "kembali",
+          "start": 57.481,
+          "end": 57.956
+        },
+        {
+          "text": "ke",
+          "start": 57.956,
+          "end": 58.092
+        },
+        {
+          "text": "angka",
+          "start": 58.092,
+          "end": 58.431
+        },
+        {
+          "text": "o-one,",
+          "start": 58.431,
+          "end": 58.838
+        },
+        {
+          "text": "menandakan",
+          "start": 59.314,
+          "end": 59.992
+        }
+      ],
+      "start": 56.871,
+      "end": 59.992
+    },
+    {
+      "id": 22,
+      "scene": "s4-openai",
+      "bg": "dark",
+      "lines": [
+        "era baru di mana AI",
+        "tidak lagi sekadar"
+      ],
+      "words": [
+        {
+          "text": "era",
+          "start": 59.992,
+          "end": 60.196
+        },
+        {
+          "text": "baru",
+          "start": 60.196,
+          "end": 60.467
+        },
+        {
+          "text": "di",
+          "start": 60.467,
+          "end": 60.603
+        },
+        {
+          "text": "mana",
+          "start": 60.603,
+          "end": 60.874
+        },
+        {
+          "text": "AI",
+          "start": 60.874,
+          "end": 61.01
+        },
+        {
+          "text": "tidak",
+          "start": 61.01,
+          "end": 61.349
+        },
+        {
+          "text": "lagi",
+          "start": 61.349,
+          "end": 61.621
+        },
+        {
+          "text": "sekadar",
+          "start": 61.621,
+          "end": 62.096
+        }
+      ],
+      "start": 59.992,
+      "end": 62.096
+    },
+    {
+      "id": 23,
+      "scene": "s4-openai",
+      "bg": "dark",
+      "lines": [
+        "menebak kata, tapi",
+        "benar-benar berpikir"
+      ],
+      "words": [
+        {
+          "text": "menebak",
+          "start": 62.096,
+          "end": 62.57
+        },
+        {
+          "text": "kata,",
+          "start": 63.229,
+          "end": 63.568
+        },
+        {
+          "text": "tapi",
+          "start": 63.568,
+          "end": 63.84
+        },
+        {
+          "text": "benar-benar",
+          "start": 63.84,
+          "end": 64.586
+        },
+        {
+          "text": "berpikir",
+          "start": 64.586,
+          "end": 65.129
+        }
+      ],
+      "start": 62.096,
+      "end": 65.129
+    },
+    {
+      "id": 24,
+      "scene": "s4-openai",
+      "bg": "dark",
+      "lines": [
+        "langkah demi langkah."
+      ],
+      "words": [
+        {
+          "text": "langkah",
+          "start": 65.129,
+          "end": 65.604
+        },
+        {
+          "text": "demi",
+          "start": 65.604,
+          "end": 65.875
+        },
+        {
+          "text": "langkah.",
+          "start": 65.875,
+          "end": 66.418
+        }
+      ],
+      "start": 65.129,
+      "end": 66.418
+    },
+    {
+      "id": 25,
+      "scene": "s5-outro",
+      "bg": "dark",
+      "lines": [
+        "Bagi Anthropic, AI",
+        "adalah karya sastra"
+      ],
+      "words": [
+        {
+          "text": "Bagi",
+          "start": 67.117,
+          "end": 67.411
+        },
+        {
+          "text": "Anthropic,",
+          "start": 67.411,
+          "end": 68.146
+        },
+        {
+          "text": "AI",
+          "start": 68.146,
+          "end": 68.293
+        },
+        {
+          "text": "adalah",
+          "start": 68.293,
+          "end": 68.734
+        },
+        {
+          "text": "karya",
+          "start": 68.734,
+          "end": 69.101
+        },
+        {
+          "text": "sastra",
+          "start": 69.101,
+          "end": 69.542
+        }
+      ],
+      "start": 67.117,
+      "end": 69.542
+    },
+    {
+      "id": 26,
+      "scene": "s5-outro",
+      "bg": "dark",
+      "lines": [
+        "pikiran. Bagi Google, ia",
+        "adalah pengamat semesta."
+      ],
+      "words": [
+        {
+          "text": "pikiran.",
+          "start": 69.542,
+          "end": 70.13
+        },
+        {
+          "text": "Bagi",
+          "start": 70.13,
+          "end": 70.424
+        },
+        {
+          "text": "Google,",
+          "start": 70.827,
+          "end": 71.342
+        },
+        {
+          "text": "ia",
+          "start": 71.342,
+          "end": 71.489
+        },
+        {
+          "text": "adalah",
+          "start": 71.83,
+          "end": 72.271
+        },
+        {
+          "text": "pengamat",
+          "start": 72.271,
+          "end": 72.859
+        },
+        {
+          "text": "semesta.",
+          "start": 73.615,
+          "end": 74.203
+        }
+      ],
+      "start": 69.542,
+      "end": 74.203
+    },
+    {
+      "id": 27,
+      "scene": "s5-outro",
+      "bg": "dark",
+      "lines": [
+        "Dan bagi OpenAI, ia",
+        "adalah mesin penalaran"
+      ],
+      "words": [
+        {
+          "text": "Dan",
+          "start": 74.203,
+          "end": 74.423
+        },
+        {
+          "text": "bagi",
+          "start": 74.423,
+          "end": 74.717
+        },
+        {
+          "text": "OpenAI,",
+          "start": 75.099,
+          "end": 75.614
+        },
+        {
+          "text": "ia",
+          "start": 75.614,
+          "end": 75.761
+        },
+        {
+          "text": "adalah",
+          "start": 75.761,
+          "end": 76.202
+        },
+        {
+          "text": "mesin",
+          "start": 76.202,
+          "end": 76.569
+        },
+        {
+          "text": "penalaran",
+          "start": 77.346,
+          "end": 78.007
+        }
+      ],
+      "start": 74.203,
+      "end": 78.007
+    },
+    {
+      "id": 28,
+      "scene": "s5-outro",
+      "bg": "dark",
+      "lines": [
+        "mutlak. Simak eksplorasi",
+        "teknologi lainnya"
+      ],
+      "words": [
+        {
+          "text": "mutlak.",
+          "start": 78.007,
+          "end": 78.522
+        },
+        {
+          "text": "Simak",
+          "start": 78.522,
+          "end": 78.889
+        },
+        {
+          "text": "eksplorasi",
+          "start": 78.889,
+          "end": 79.624
+        },
+        {
+          "text": "teknologi",
+          "start": 79.624,
+          "end": 80.286
+        },
+        {
+          "text": "lainnya",
+          "start": 80.286,
+          "end": 80.8
+        }
+      ],
+      "start": 78.007,
+      "end": 80.8
+    },
+    {
+      "id": 29,
+      "scene": "s5-outro",
+      "bg": "dark",
+      "lines": [
+        "bersama Rahmat di rhmt",
+        "ofc!"
+      ],
+      "words": [
+        {
+          "text": "bersama",
+          "start": 80.8,
+          "end": 81.315
+        },
+        {
+          "text": "Rahmat",
+          "start": 81.315,
+          "end": 81.756
+        },
+        {
+          "text": "di",
+          "start": 81.756,
+          "end": 81.903
+        },
+        {
+          "text": "rhmt",
+          "start": 81.903,
+          "end": 82.197
+        },
+        {
+          "text": "ofc!",
+          "start": 82.197,
+          "end": 82.491
+        }
+      ],
+      "start": 80.8,
+      "end": 82.491
+    }
+  ]
+}
