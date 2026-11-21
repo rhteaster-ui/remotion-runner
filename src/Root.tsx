@@ -20,8 +20,7 @@ import neonTimeline from './data/neon-timeline.json';
 import {NeonVideo} from './NeonVideo';
 import filosofiTimeline from './data/filosofi-timeline.json';
 import {FilosofiVideo} from './FilosofiVideo';
-import {BeyondTheNamesVideo} from './beyond/Root';
-import {TOTAL as BEYOND_TOTAL, FPS as BEYOND_FPS} from './beyond/data';
+import {BeyondTheNamesVideo, TOTAL as BEYOND_TOTAL, FPS as BEYOND_FPS, W as BEYOND_W, H as BEYOND_H} from './beyond/Root';
 import timeline from './data/timeline.json';
 import kryptonTimeline from './data/krypton-timeline.json';
 import agenticTimeline from './data/agentic-timeline.json';
@@ -46,8 +45,8 @@ export const Root: React.FC = () => (
     <Composition
       id="BeyondTheNames"
       component={BeyondTheNamesVideo}
-      width={1080}
-      height={1920}
+      width={BEYOND_W}
+      height={BEYOND_H}
       fps={BEYOND_FPS}
       durationInFrames={BEYOND_TOTAL}
     />
