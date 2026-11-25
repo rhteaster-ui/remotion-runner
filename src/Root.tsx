@@ -39,6 +39,7 @@ import {ERekapHorizontalVideo} from './horizontal/ERekapHorizontalVideo';
 import {ERekapKineticTeaser, TEASER_TOTAL_FRAMES} from './kinetic/ERekapKineticTeaser';
 import {ERekapShowreel, SHOWREEL_TOTAL_FRAMES} from './showreel/ERekapShowreel';
 import {ERekapKineticTypography, KINETIC_TOTAL_FRAMES} from './typography/ERekapKineticTypography';
+import {TermiusTikTok, TOTAL as TERMIUS_TOTAL} from './TermiusTikTok';
 
 export const Root: React.FC = () => (
   <>
@@ -249,6 +250,14 @@ export const Root: React.FC = () => (
       height={1920}
       fps={kryptonTimeline.fps}
       durationInFrames={Math.ceil(kryptonTimeline.total * kryptonTimeline.fps)}
+    />
+    <Composition
+      id="TermiusTikTok"
+      component={TermiusTikTok}
+      width={1080}
+      height={1920}
+      fps={30}
+      durationInFrames={TERMIUS_TOTAL}
     />
   </>
 );

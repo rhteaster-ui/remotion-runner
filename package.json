@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "remotion studio",
     "render": "remotion render BeyondTheNames out/beyond-the-names.mp4 --crf=18",
+    "render:termius": "remotion render TermiusTikTok out/termius.mp4 --crf=22",
     "render:erekap": "remotion render ERekapPremium out/erekap-premium.mp4 --crf=16",
     "still:erekap": "remotion still ERekapPremium out/erekap-thumb.png --frame=150",
     "sfx": "python3 pipeline/build_sfx_erekap.py",
