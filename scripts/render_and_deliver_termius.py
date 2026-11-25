@@ -135,10 +135,10 @@ def download_artifact(art_id, target_zip):
 def send_telegram_video(video_path, thumb_path, caption):
     url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendVideo"
     cmd = [
-        "curl", "-s",
+        "curl", "-sS",
         "-F", f"chat_id={TELEGRAM_OWNER_ID}",
         "-F", f"video=@{video_path}",
-        "-F", f"caption={caption}",
+        "--form-string", f"caption={caption}",
         "-F", "parse_mode=HTML"
     ]
     if thumb_path and os.path.exists(thumb_path):
