@@ -2,51 +2,30 @@ import React from 'react';
 import {Img, staticFile, useCurrentFrame} from 'remotion';
 import {LIGHT as L, MONO, SANS} from './MacOSChrome';
 
-/** Sleek, authentic Google Antigravity geometric ribbon 'A' vector logo */
+/** 100% Real Official Google Antigravity Icon (from rhmt-dashboard/public/agy-official.png) */
 export const AntigravityLogo: React.FC<{size?: number}> = ({size = 44}) => (
-  <svg width={size} height={size} viewBox="0 0 64 64" fill="none">
-    <defs>
-      <linearGradient id="agyLeft" x1="12" y1="54" x2="34" y2="10" gradientUnits="userSpaceOnUse">
-        <stop offset="0%" stopColor="#2563EB" />
-        <stop offset="55%" stopColor="#38BDF8" />
-        <stop offset="100%" stopColor="#34A853" />
-      </linearGradient>
-      <linearGradient id="agyRight" x1="30" y1="10" x2="52" y2="54" gradientUnits="userSpaceOnUse">
-        <stop offset="0%" stopColor="#FBBC05" />
-        <stop offset="50%" stopColor="#EA4335" />
-        <stop offset="100%" stopColor="#2563EB" />
-      </linearGradient>
-    </defs>
-    {/* Left ascending wing */}
-    <path
-      d="M11 53L28.2 12.2C29.4 9.3 34.6 9.3 35.8 12.2L39.5 21L23.2 53C21.6 56 17.5 56.5 14.2 55.4C11.4 54.5 10.2 54.8 11 53Z"
-      fill="url(#agyLeft)"
-    />
-    {/* Right descending wing */}
-    <path
-      d="M35.8 12.2L53 53C53.8 54.8 51.8 56.5 48.8 55.4C45.5 54.3 43.2 52.2 41.2 47.6L32 26.2L35.8 12.2Z"
-      fill="url(#agyRight)"
-    />
-    {/* Anti-gravity floating arc */}
-    <path
-      d="M23 41C27.5 36.2 36.5 36.2 41 41"
-      stroke="#0F172A"
-      strokeWidth="4.2"
-      strokeLinecap="round"
-      strokeOpacity="0.18"
-    />
-  </svg>
+  <Img
+    src={staticFile('images/shina-pov/agy-official.png')}
+    style={{
+      width: size,
+      height: size,
+      objectFit: 'contain',
+      display: 'block',
+      flexShrink: 0,
+    }}
+  />
 );
 
-/** Crisp Hiyori Shiina Portrait Card with live speaking waveform & Antigravity badge */
+/** Official Shina .menu Banner Portrait Card (hiyori_shina_banner.jpg cropped cleanly on Hiyori Shiina) */
 export const ShinaPortraitCard: React.FC<{
   size?: number;
   statusText?: string;
   showEngine?: boolean;
   rotate?: number;
-}> = ({size = 300, statusText = 'SHINA · ONLINE', showEngine = true, rotate = -2}) => {
+  shake?: number;
+}> = ({size = 300, statusText = 'HIYORI SHIINA', showEngine = true, rotate = -2, shake = 0}) => {
   const f = useCurrentFrame();
-  const bob = Math.sin(f / 14) * 4;
+  const bob = Math.sin(f / 13) * 5;
 
   return (
     <div style={{
@@ -54,9 +33,9 @@ export const ShinaPortraitCard: React.FC<{
       background: '#FFFFFF',
       borderRadius: 26,
       padding: 14,
-      border: `1.5px solid rgba(37, 99, 235, 0.16)`,
-      boxShadow: '0 28px 70px rgba(37, 99, 235, 0.13), 0 4px 16px rgba(15, 23, 42, 0.06)',
-      transform: `translateY(${bob}px) rotate(${rotate}deg)`,
+      border: `1.5px solid rgba(37, 99, 235, 0.20)`,
+      boxShadow: '0 28px 72px rgba(37, 99, 235, 0.16), 0 4px 16px rgba(15, 23, 42, 0.07)',
+      transform: `translate(${shake}px, ${bob}px) rotate(${rotate}deg)`,
       fontFamily: SANS,
       position: 'relative',
     }}>
@@ -65,22 +44,47 @@ export const ShinaPortraitCard: React.FC<{
         height: size * 0.96,
         borderRadius: 18,
         overflow: 'hidden',
-        background: '#EEF2FA',
+        background: '#1E293B',
         position: 'relative',
       }}>
         <Img
-          src={staticFile('images/shina-pov/hiyori-shina.jpg')}
-          style={{width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center top'}}
+          src={staticFile('images/shina-pov/hiyori_shina_banner.jpg')}
+          style={{
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+            objectPosition: '74% 16%',
+            transform: 'scale(1.18)',
+          }}
         />
-        {/* Live speaking equalizer pill */}
+        {/* Live status badge */}
         <div style={{
           position: 'absolute', top: 12, left: 12,
           background: 'rgba(255,255,255,0.92)', borderRadius: 999,
           padding: '5px 12px', display: 'flex', alignItems: 'center', gap: 6,
-          boxShadow: '0 4px 12px rgba(15,23,42,0.10)',
+          boxShadow: '0 4px 12px rgba(15,23,42,0.14)',
         }}>
           <span style={{width: 8, height: 8, borderRadius: 4, background: L.green}} />
           <span style={{fontFamily: MONO, fontSize: 11, fontWeight: 800, color: L.text}}>{statusText}</span>
+        </div>
+
+        {/* Live speaking audio bars */}
+        <div style={{
+          position: 'absolute', bottom: 12, right: 12,
+          background: 'rgba(15,23,42,0.78)', borderRadius: 999,
+          padding: '6px 10px', display: 'flex', alignItems: 'flex-end', gap: 3, height: 26,
+        }}>
+          {[0, 1, 2, 3].map((i) => (
+            <span
+              key={i}
+              style={{
+                width: 3.5,
+                height: 6 + Math.abs(Math.sin(f / 4 + i * 1.4)) * 11,
+                borderRadius: 2,
+                background: '#38BDF8',
+              }}
+            />
+          ))}
         </div>
       </div>
 
@@ -89,17 +93,17 @@ export const ShinaPortraitCard: React.FC<{
         padding: '13px 6px 2px',
       }}>
         <div>
-          <div style={{fontSize: 21, fontWeight: 800, color: L.text}}>Shina</div>
+          <div style={{fontSize: 22, fontWeight: 800, color: L.text}}>Shina</div>
           <div style={{fontSize: 13, color: L.muted, fontFamily: MONO}}>Hiyori Shiina AI</div>
         </div>
         {showEngine && (
           <div style={{
             display: 'inline-flex', alignItems: 'center', gap: 6,
             padding: '6px 11px', borderRadius: 999,
-            background: '#EFF6FF', border: '1px solid rgba(37,99,235,0.2)',
+            background: '#EFF6FF', border: '1px solid rgba(37,99,235,0.22)',
             fontSize: 12, fontWeight: 800, color: L.blue, fontFamily: MONO,
           }}>
-            <AntigravityLogo size={16} />
+            <AntigravityLogo size={17} />
             <span>AGY</span>
           </div>
         )}
@@ -108,27 +112,30 @@ export const ShinaPortraitCard: React.FC<{
   );
 };
 
-/** Mini circular Shina avatar for chat/headers */
+/** Mini circular Shina avatar using official menu banner */
 export const ShinaMiniAvatar: React.FC<{size?: number}> = ({size = 54}) => (
   <div style={{
     width: size, height: size, borderRadius: Math.round(size * 0.28),
     overflow: 'hidden', border: '2px solid #2563EB', flexShrink: 0,
-    background: '#EEF2FA',
+    background: '#1E293B',
   }}>
     <Img
-      src={staticFile('images/shina-pov/hiyori-shina.jpg')}
-      style={{width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center top'}}
+      src={staticFile('images/shina-pov/hiyori_shina_banner.jpg')}
+      style={{
+        width: '100%', height: '100%', objectFit: 'cover',
+        objectPosition: '74% 16%', transform: 'scale(1.22)',
+      }}
     />
   </div>
 );
 
-/** Crisp vector macOS Dock with authentic app icons (no plain letter boxes) */
+/** Crisp vector macOS Dock with official Antigravity & Termius icons */
 export const RichMacDock: React.FC = () => (
   <div style={{
     position: 'absolute', bottom: 18, left: '50%', transform: 'translateX(-50%)',
     background: 'rgba(255,255,255,0.92)',
     border: `1px solid ${L.border}`,
-    boxShadow: '0 16px 42px rgba(15, 23, 42, 0.13)',
+    boxShadow: '0 18px 46px rgba(15, 23, 42, 0.14)',
     borderRadius: 22, padding: '10px 18px',
     display: 'flex', alignItems: 'center', gap: 16,
   }}>
@@ -139,15 +146,15 @@ export const RichMacDock: React.FC = () => (
         <polyline points="8 6 2 12 8 18" />
       </svg>
     </div>
-    {/* Termius official icon */}
+    {/* Official Termius icon */}
     <Img src={staticFile('images/termius-icon.png')} style={{width: 48, height: 48, borderRadius: 13}} />
-    {/* Antigravity Engine (Active) */}
+    {/* Official Google Antigravity Engine (Active) */}
     <div style={{
-      width: 52, height: 52, borderRadius: 14, background: '#FFFFFF',
+      width: 54, height: 54, borderRadius: 15, background: '#FFFFFF',
       border: `2.5px solid ${L.blue}`, display: 'grid', placeItems: 'center',
-      boxShadow: '0 8px 20px rgba(37,99,235,0.22)', position: 'relative',
+      boxShadow: '0 10px 24px rgba(37,99,235,0.24)', position: 'relative',
     }}>
-      <AntigravityLogo size={32} />
+      <AntigravityLogo size={36} />
       <span style={{position: 'absolute', bottom: -8, width: 6, height: 6, borderRadius: 3, background: L.blue}} />
     </div>
     {/* WhatsApp */}
