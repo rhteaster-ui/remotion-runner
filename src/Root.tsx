@@ -41,9 +41,18 @@ import {ERekapShowreel, SHOWREEL_TOTAL_FRAMES} from './showreel/ERekapShowreel';
 import {ERekapKineticTypography, KINETIC_TOTAL_FRAMES} from './typography/ERekapKineticTypography';
 import {TermiusTikTok, TOTAL as TERMIUS_TOTAL} from './TermiusTikTok';
 import {TermiusProVideo, TERMIUS_PRO_FPS, TERMIUS_PRO_TOTAL_FRAMES} from './termius/TermiusProVideo';
+import {ShinaPovVideo, SHINA_POV_FPS, SHINA_POV_TOTAL_FRAMES, SHINA_POV_W, SHINA_POV_H} from './shina-pov/ShinaPovVideo';
 
 export const Root: React.FC = () => (
   <>
+    <Composition
+      id="ShinaPOV"
+      component={ShinaPovVideo}
+      width={SHINA_POV_W}
+      height={SHINA_POV_H}
+      fps={SHINA_POV_FPS}
+      durationInFrames={SHINA_POV_TOTAL_FRAMES}
+    />
     <Composition
       id="TermiusPro"
       component={TermiusProVideo}

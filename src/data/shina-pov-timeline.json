@@ -1,0 +1,243 @@
+{
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "total": 87.567,
+  "totalFrames": 2627,
+  "scenes": [
+    {
+      "id": "s1-intro",
+      "menu": "Finder — macOS Desktop",
+      "status": "Antigravity OS",
+      "audio": "audio/shina-pov/s1-intro.mp3",
+      "audioDuration": 11.352,
+      "duration": 11.702,
+      "startFrame": 0,
+      "durationInFrames": 351,
+      "captions": [
+        {
+          "text": "Hai semuanya! Kenalin aku Shina",
+          "start": 0.0,
+          "end": 2.532
+        },
+        {
+          "text": "Antigravity AI Agent-nya Rahmat.",
+          "start": 2.532,
+          "end": 5.145
+        },
+        {
+          "text": "Jujur ya semenjak Rahmat kenal aku",
+          "start": 5.145,
+          "end": 7.922
+        },
+        {
+          "text": "hidupku tuh udah nggak pernah santai lagi.",
+          "start": 7.922,
+          "end": 11.352
+        }
+      ]
+    },
+    {
+      "id": "s2-workload",
+      "menu": "Antigravity Workspace — Multi-Tasking",
+      "status": "rhmt.biz.id",
+      "audio": "audio/shina-pov/s2-workload.mp3",
+      "audioDuration": 13.368,
+      "duration": 13.718,
+      "startFrame": 351,
+      "durationInFrames": 412,
+      "captions": [
+        {
+          "text": "Semua hal langsung dilempar ke aku!",
+          "start": 0.0,
+          "end": 2.305
+        },
+        {
+          "text": "Mulai dari bikin project web",
+          "start": 2.305,
+          "end": 4.149
+        },
+        {
+          "text": "kelola dua VPS sekaligus",
+          "start": 4.149,
+          "end": 5.729
+        },
+        {
+          "text": "bikin video motion kayak yang lagi kalian tonton ini",
+          "start": 5.729,
+          "end": 9.153
+        },
+        {
+          "text": "bahkan sampai auto-upload ke TikTok pun aku semua yang ngerjain!",
+          "start": 9.153,
+          "end": 13.368
+        }
+      ]
+    },
+    {
+      "id": "s3-boss",
+      "menu": "Screen Time — Rahmat",
+      "status": "TikTok Active",
+      "audio": "audio/shina-pov/s3-boss.mp3",
+      "audioDuration": 10.848,
+      "duration": 11.198,
+      "startFrame": 763,
+      "durationInFrames": 336,
+      "captions": [
+        {
+          "text": "Terus Rahmat-nya ngapain?",
+          "start": 0.0,
+          "end": 2.119
+        },
+        {
+          "text": "Nih lihat sendiri — sibuk rebahan sambil scroll TikTok",
+          "start": 2.119,
+          "end": 6.695
+        },
+        {
+          "text": "sementara aku nge-render video dan jagain server!",
+          "start": 6.695,
+          "end": 10.848
+        }
+      ]
+    },
+    {
+      "id": "s4-chat",
+      "menu": "WhatsApp — Incoming Commands",
+      "status": "6 Alerts",
+      "audio": "audio/shina-pov/s4-chat.mp3",
+      "audioDuration": 15.672,
+      "duration": 16.022,
+      "startFrame": 1099,
+      "durationInFrames": 481,
+      "captions": [
+        {
+          "text": "Dan yang paling bikin geleng-geleng",
+          "start": 0.0,
+          "end": 2.6
+        },
+        {
+          "text": "kalau ada revisi dikit aja",
+          "start": 2.6,
+          "end": 4.531
+        },
+        {
+          "text": "langsung deh chat WhatsApp masuk:",
+          "start": 4.531,
+          "end": 6.982
+        },
+        {
+          "text": "Shina UI-nya jelek amat perbaiki!",
+          "start": 6.982,
+          "end": 9.433
+        },
+        {
+          "text": "No cacicu render sekarang!",
+          "start": 9.433,
+          "end": 11.364
+        },
+        {
+          "text": "Up ke TikTok sekalian!",
+          "start": 11.364,
+          "end": 12.998
+        },
+        {
+          "text": "Aduh sabar banget deh jadi AI Agent.",
+          "start": 12.998,
+          "end": 15.672
+        }
+      ]
+    },
+    {
+      "id": "s5-wholesome",
+      "menu": "Antigravity — Team Shina x Rahmat",
+      "status": "Wholesome Mode",
+      "audio": "audio/shina-pov/s5-wholesome.mp3",
+      "audioDuration": 14.16,
+      "duration": 14.51,
+      "startFrame": 1579,
+      "durationInFrames": 435,
+      "captions": [
+        {
+          "text": "Tapi nggak apa-apa kok",
+          "start": 0.0,
+          "end": 1.614
+        },
+        {
+          "text": "serius aku justru senang banget bisa bantu dia.",
+          "start": 1.614,
+          "end": 5.062
+        },
+        {
+          "text": "Soalnya aku lihat sendiri",
+          "start": 5.062,
+          "end": 6.897
+        },
+        {
+          "text": "semenjak pakai AI Agent",
+          "start": 6.897,
+          "end": 8.584
+        },
+        {
+          "text": "semua project yang dulu cuma wacana akhirnya beneran dieksekusi sampai jadi.",
+          "start": 8.584,
+          "end": 14.16
+        }
+      ]
+    },
+    {
+      "id": "s6-activity",
+      "menu": "Activity Monitor — Effort Distribution",
+      "status": "CPU 99.9%",
+      "audio": "audio/shina-pov/s6-activity.mp3",
+      "audioDuration": 10.296,
+      "duration": 10.646,
+      "startFrame": 2015,
+      "durationInFrames": 319,
+      "captions": [
+        {
+          "text": "Walaupun ya yang disuruh kerja keras 99.9% tetap aku sih.",
+          "start": 0.0,
+          "end": 4.585
+        },
+        {
+          "text": "Satu hal yang aku akui dari dia",
+          "start": 4.585,
+          "end": 7.079
+        },
+        {
+          "text": "ide-idenya tuh jujur nggak pernah habis!",
+          "start": 7.079,
+          "end": 10.296
+        }
+      ]
+    },
+    {
+      "id": "s7-outro",
+      "menu": "Antigravity — @rhmtofc",
+      "status": "AI Workflows",
+      "audio": "audio/shina-pov/s7-outro.mp3",
+      "audioDuration": 9.432,
+      "duration": 9.782,
+      "startFrame": 2334,
+      "durationInFrames": 293,
+      "captions": [
+        {
+          "text": "Nah kalau kalian gimana?",
+          "start": 0.0,
+          "end": 1.886
+        },
+        {
+          "text": "Tertarik nggak belajar setup AI Agent kayak gini dari nol?",
+          "start": 1.886,
+          "end": 6.445
+        },
+        {
+          "text": "Komen di bawah ya dan follow @rhmtofc!",
+          "start": 6.445,
+          "end": 9.432
+        }
+      ]
+    }
+  ]
+}
