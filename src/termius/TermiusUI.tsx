@@ -17,6 +17,10 @@ import {
 export const FONT = 'Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif';
 export const MONO = '"JetBrains Mono", "Fira Code", Menlo, Consolas, monospace';
 
+/** Skala window Termius: spring masuk + zoom pelan sepanjang scene (dipakai juga oleh Cursor) */
+export const frameScale = (f: number, dur: number, fps: number) =>
+  interpolate(spring({frame: f, fps, config: {damping: 20, stiffness: 120}}), [0, 1], [0.97, 1]) * (1 + 0.014 * (f / Math.max(1, dur)));
+
 export interface WordTiming {
   word: string;
   start: number;
@@ -89,8 +93,8 @@ export const RealTermiusFrame: React.FC<{
   children: React.ReactNode;
 }> = ({activeNav = 'hosts', sftpActive = false, showSidebar = true, tabs = [], children}) => {
   const f = useCurrentFrame();
-  const {fps} = useVideoConfig();
-  const s = interpolate(spring({frame: f, fps, config: {damping: 20, stiffness: 120}}), [0, 1], [0.97, 1]);
+  const {fps, durationInFrames} = useVideoConfig();
+  const s = frameScale(f, durationInFrames, fps);
   const vaultActive = !sftpActive && !tabs.some((t) => t.active);
 
   return (
@@ -103,7 +107,7 @@ export const RealTermiusFrame: React.FC<{
       borderRadius: 22,
       background: T.chrome,
       border: `1.5px solid ${T.border}`,
-      boxShadow: '0 40px 100px rgba(0,0,0,0.72)',
+      boxShadow: `0 40px 100px rgba(0,0,0,0.72), 0 0 ${50 + 14 * Math.sin(f / 18)}px ${T.green}22`,
       overflow: 'hidden',
       display: 'flex',
       flexDirection: 'column',
@@ -222,10 +226,8 @@ export const RealTermiusFrame: React.FC<{
 };
 
 /** Minimalist bottom context bar (replaces generic 3-card AI footer) */
-export const ContextCalloutBar: React.FC<{
-  leftLabel: string;
-  rightContent: React.ReactNode;
-}> = ({leftLabel, rightContent}) => (
+type CalloutProps = {leftLabel: string; rightContent: React.ReactNode};
+const CalloutInner: React.FC<CalloutProps> = ({leftLabel, rightContent}) => (
   <div style={{
     position: 'absolute',
     top: 1396,
@@ -245,6 +247,17 @@ export const ContextCalloutBar: React.FC<{
     <div style={{display: 'flex', alignItems: 'center', gap: 10}}>{rightContent}</div>
   </div>
 );
+
+export const ContextCalloutBar: React.FC<CalloutProps> = (p) => {
+  const f = useCurrentFrame();
+  const {fps} = useVideoConfig();
+  const s = spring({frame: f - 14, fps, config: {damping: 16}});
+  return (
+    <div style={{position: 'absolute', inset: 0, pointerEvents: 'none', opacity: s, transform: `translateY(${(1 - s) * 34}px)`}}>
+      <CalloutInner {...p} />
+    </div>
+  );
+};
 
 /** Termius-style dark keycap (matching Broadcast Input Ctrl Alt B in official screenshot) */
 export const TermiusKeycap: React.FC<{label: string; active?: boolean}> = ({label, active}) => (
@@ -276,6 +289,8 @@ export const KaraokeSubtitle: React.FC<{words: WordTiming[]}> = ({words}) => {
   const chunk = words.slice(chunkIndex * CHUNK_SIZE, (chunkIndex + 1) * CHUNK_SIZE);
 
   return (
+    <>
+    <div style={{position: 'absolute', left: 0, right: 0, bottom: 0, height: 430, background: 'linear-gradient(to top, rgba(9,12,22,0.94) 25%, rgba(9,12,22,0))'}} />
     <div style={{
       position: 'absolute',
       bottom: 118,
@@ -296,10 +311,12 @@ export const KaraokeSubtitle: React.FC<{words: WordTiming[]}> = ({words}) => {
             key={`${chunkIndex}-${i}`}
             style={{
               padding: isCurrent ? '6px 15px' : '6px 6px',
+              transform: isCurrent ? `scale(${interpolate(t, [w.start, w.start + 0.12], [0.9, 1.07], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'})})` : 'none',
+              boxShadow: isCurrent ? `0 0 28px ${T.green}77` : 'none',
               borderRadius: 12,
               background: isCurrent ? T.green : 'transparent',
               color: isCurrent ? '#071710' : '#E2E8F0',
-              fontSize: 33,
+              fontSize: 35,
               fontWeight: isCurrent ? 800 : 700,
               lineHeight: 1.25,
               textShadow: isCurrent ? 'none' : '0 3px 12px rgba(0,0,0,0.85)',
@@ -310,5 +327,6 @@ export const KaraokeSubtitle: React.FC<{words: WordTiming[]}> = ({words}) => {
         );
       })}
     </div>
+    </>
   );
 };

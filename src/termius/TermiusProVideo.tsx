@@ -34,6 +34,28 @@ import {
   KaraokeSubtitle,
   WordTiming,
 } from './TermiusUI';
+import {AmbientBg, SceneShell, GlobalProgress, Cursor, CursorKey, cursorPos} from './Fx';
+import {Sfx, Music, SCENE_CUES} from './TermiusSfx';
+
+/* ---- Jalur kursor (koordinat canvas 1080x1920) ---- */
+const HOOK_KEYS: CursorKey[] = [
+  {f: 90, x: 1010, y: 1000}, {f: 140, x: 472, y: 805}, {f: 150, x: 472, y: 805, click: true},
+  {f: 156, x: 472, y: 805, click: true}, {f: 200, x: 472, y: 805},
+];
+const HOSTS_KEYS: CursorKey[] = [
+  {f: 20, x: 1010, y: 900}, {f: 36, x: 760, y: 480}, {f: 38, x: 760, y: 480, click: true},
+  {f: 76, x: 760, y: 480}, {f: 90, x: 760, y: 572}, {f: 92, x: 760, y: 572, click: true},
+  {f: 128, x: 760, y: 572}, {f: 140, x: 760, y: 664}, {f: 142, x: 760, y: 664, click: true},
+  {f: 178, x: 760, y: 664}, {f: 188, x: 790, y: 765}, {f: 190, x: 790, y: 765, click: true},
+  {f: 226, x: 790, y: 765}, {f: 234, x: 960, y: 380}, {f: 236, x: 960, y: 380, click: true}, {f: 300, x: 960, y: 380},
+];
+const SNIP_KEYS: CursorKey[] = [
+  {f: 90, x: 1010, y: 1050}, {f: 136, x: 970, y: 458}, {f: 140, x: 970, y: 458, click: true}, {f: 170, x: 970, y: 458},
+];
+const SFTP_KEYS: CursorKey[] = [
+  {f: 290, x: 900, y: 1000}, {f: 304, x: 200, y: 538}, {f: 308, x: 200, y: 538, click: true}, {f: 314, x: 200, y: 538},
+  {f: 334, x: 780, y: 540}, {f: 336, x: 780, y: 540, click: true}, {f: 370, x: 780, y: 540},
+];
 
 export const TERMIUS_PRO_FPS = timeline.fps;
 export const TERMIUS_PRO_TOTAL_FRAMES = timeline.totalFrames;
@@ -141,7 +163,8 @@ const SceneHook: React.FC<{words: WordTiming[]}> = ({words}) => {
               ].map((h, i) => (
                 <div key={h.name} style={{
                   opacity: fadeIn(f, 22 + i * 8),
-                  background: T.card, border: `1px solid ${T.border}`, borderRadius: 13,
+                  background: i === 0 && f >= 150 ? T.activeTabBg : T.card,
+                  border: `1px solid ${i === 0 && f >= 150 ? T.green : T.border}`, borderRadius: 13,
                   padding: '13px 15px', display: 'flex', alignItems: 'center', gap: 13,
                 }}>
                   {h.icon}
@@ -155,6 +178,8 @@ const SceneHook: React.FC<{words: WordTiming[]}> = ({words}) => {
           </div>
         </div>
       </RealTermiusFrame>
+
+      <Cursor keys={HOOK_KEYS} hideAt={230} />
 
       <ContextCalloutBar
         leftLabel="1 Klik Masuk Server"
@@ -281,6 +306,8 @@ const SceneHosts: React.FC<{words: WordTiming[]}> = ({words}) => {
           </div>
         </div>
       </RealTermiusFrame>
+
+      <Cursor keys={HOSTS_KEYS} hideAt={300} />
 
       <ContextCalloutBar
         leftLabel="Address → Username → Keychain"
@@ -541,6 +568,19 @@ const SceneSnippetsSftp: React.FC<{words: WordTiming[]}> = ({words}) => {
         )}
       </RealTermiusFrame>
 
+      <Cursor keys={SNIP_KEYS} hideAt={185} />
+      <Cursor keys={SFTP_KEYS} hideAt={380} />
+      {f >= 308 && f <= 336 && (() => {
+        const p = cursorPos(SFTP_KEYS, f);
+        return (
+          <div style={{
+            position: 'absolute', left: p.x + 16, top: p.y + 18, zIndex: 48, padding: '8px 14px', borderRadius: 9,
+            background: '#1E2942', border: `1.5px solid ${T.blue}`, fontFamily: MONO, fontSize: 17, fontWeight: 700,
+            color: '#E5E7EB', boxShadow: '0 12px 30px rgba(0,0,0,0.6)',
+          }}>build.zip</div>
+        );
+      })()}
+
       <ContextCalloutBar
         leftLabel={isSftp ? 'Built-in SFTP (Tanpa FileZilla)' : 'Snippets Vault (1-Klik Eksekusi)'}
         rightContent={<TermiusKeycap label={isSftp ? 'Drag & Drop' : '{ } Snippets'} active />}
@@ -709,6 +749,7 @@ const SceneOutro: React.FC<{words: WordTiming[]}> = ({words}) => {
         <div style={{
           background: T.green, color: '#06150E',
           borderRadius: 15, padding: '22px 28px', textAlign: 'center',
+          boxShadow: `0 0 ${26 + 20 * Math.sin(f / 7)}px ${T.green}aa`, transform: `scale(${1 + 0.018 * Math.sin(f / 7)})`,
           fontSize: 28, fontWeight: 900, letterSpacing: '-0.01em',
         }}>
           SAVE & FOLLOW @rhmtofc
@@ -723,6 +764,8 @@ const SceneOutro: React.FC<{words: WordTiming[]}> = ({words}) => {
 /* ==================== MAIN COMPOSITION ==================== */
 export const TermiusProVideo: React.FC = () => (
   <AbsoluteFill style={{backgroundColor: T.outerBg}}>
+    <AmbientBg />
+    <Music total={TERMIUS_PRO_TOTAL_FRAMES} />
     {timeline.scenes.map((scene) => {
       let Comp: React.ReactNode = null;
       if (scene.id === 's1-hook') Comp = <SceneHook words={scene.words} />;
@@ -735,9 +778,11 @@ export const TermiusProVideo: React.FC = () => (
       return (
         <Sequence key={scene.id} from={scene.startFrame} durationInFrames={scene.durationInFrames}>
           <Audio src={staticFile(scene.audio)} />
-          {Comp}
+          <Sfx cues={SCENE_CUES[scene.id] ?? []} />
+          <SceneShell>{Comp}</SceneShell>
         </Sequence>
       );
     })}
+    <GlobalProgress total={TERMIUS_PRO_TOTAL_FRAMES} />
   </AbsoluteFill>
 );
