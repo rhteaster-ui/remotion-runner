@@ -1,167 +1,191 @@
 import React from 'react';
+import {Img, staticFile} from 'remotion';
 
-export const TERMIUS_COLORS = {
-  canvas: '#090D18',
-  canvasAlt: '#0D1324',
-  chrome: '#121728',
-  sidebar: '#151B2E',
-  surface: '#1B2238',
-  surfaceHover: '#232C47',
-  terminalBg: '#0B0F1A',
-  border: 'rgba(148, 163, 184, 0.16)',
-  borderActive: 'rgba(0, 198, 137, 0.55)',
-  green: '#00C689',
-  greenSoft: 'rgba(0, 198, 137, 0.16)',
-  blue: '#3B82F6',
-  blueSoft: 'rgba(59, 130, 246, 0.16)',
+/** Exact color tokens sampled directly from official Termius Desktop screenshots */
+export const TERMIUS = {
+  outerBg: '#090C16',
+  chrome: '#141728',       // Top bar & left sidebar
+  workspace: '#0F1221',    // Main hosts/snippets background
+  terminal: '#111424',     // Terminal pane background
+  card: '#1C2034',         // Host / Group / Snippet card
+  cardHover: '#232842',
+  pill: '#1E2236',         // Inactive topbar pill & toolbar buttons
+  border: '#262B42',       // Subtle Termius divider/card border
+  activeTabBg: '#143B32',  // Authentic Termius active green tab fill
+  green: '#29D386',        // Authentic Termius emerald terminal green
+  blue: '#3B82F6',         // Terminal label blue & group icon
+  magenta: '#E11D74',      // Authentic Termius IP address magenta
+  red: '#EF4444',          // Used memory/disk bar red
+  ubuntu: '#E95420',
+  debian: '#D70A53',
   amber: '#F59E0B',
-  amberSoft: 'rgba(245, 158, 11, 0.15)',
-  purple: '#8B5CF6',
-  text: '#F1F5F9',
-  muted: '#94A3B8',
-  dim: '#64748B',
+  text: '#F3F4F6',
+  muted: '#8B92A8',
+  dim: '#5A6178',
 };
 
-/** Authentic Termius geometric app icon (deep navy squircle + emerald shield/terminal chevron) */
-export const TermiusLogo: React.FC<{size?: number}> = ({size = 64}) => (
-  <svg width={size} height={size} viewBox="0 0 120 120" fill="none">
-    <defs>
-      <linearGradient id="termiusBg" x1="0" y1="0" x2="120" y2="120" gradientUnits="userSpaceOnUse">
-        <stop offset="0%" stopColor="#1B233B" />
-        <stop offset="100%" stopColor="#0E1322" />
-      </linearGradient>
-      <linearGradient id="termiusGreen" x1="22" y1="22" x2="98" y2="98" gradientUnits="userSpaceOnUse">
-        <stop offset="0%" stopColor="#2EE8A5" />
-        <stop offset="100%" stopColor="#00A876" />
-      </linearGradient>
-    </defs>
-    <rect x="2" y="2" width="116" height="116" rx="28" fill="url(#termiusBg)" stroke="rgba(0,198,137,0.45)" strokeWidth="3" />
-    {/* Outer Termius geometric shield / frame */}
-    <path
-      d="M32 28H88C91.3 28 94 30.7 94 34V74C94 82.8 86.8 90 78 90H42C33.2 90 26 82.8 26 74V34C26 30.7 28.7 28 32 28Z"
-      fill="rgba(0, 198, 137, 0.10)"
-      stroke="url(#termiusGreen)"
-      strokeWidth="5"
-    />
-    {/* Prompt chevron > */}
-    <path
-      d="M41 48L57 60L41 72"
-      stroke="url(#termiusGreen)"
-      strokeWidth="7.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-    {/* Terminal underscore _ */}
-    <path
-      d="M62 72H79"
-      stroke="#F1F5F9"
-      strokeWidth="7.5"
-      strokeLinecap="round"
-    />
-  </svg>
+/** Official Termius App Icon (winking >_ cloud on deep navy squircle) */
+export const TermiusAppIcon: React.FC<{size?: number; radius?: number}> = ({size = 64, radius}) => (
+  <Img
+    src={staticFile('images/termius-icon.png')}
+    style={{
+      width: size,
+      height: size,
+      borderRadius: radius ?? Math.round(size * 0.22),
+      display: 'block',
+      objectFit: 'cover',
+    }}
+  />
 );
 
-export const HostsIcon: React.FC<{color?: string; size?: number}> = ({color = 'currentColor', size = 24}) => (
+/** Real Termius Vault Safe icon */
+export const VaultSafeIcon: React.FC<{color?: string; size?: number}> = ({color = '#D1D5DB', size = 20}) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <rect x="2" y="3" width="20" height="7" rx="2" />
-    <rect x="2" y="14" width="20" height="7" rx="2" />
-    <circle cx="6.5" cy="6.5" r="1" fill={color} stroke="none" />
-    <circle cx="6.5" cy="17.5" r="1" fill={color} stroke="none" />
-    <line x1="11" y1="6.5" x2="17" y2="6.5" />
-    <line x1="11" y1="17.5" x2="17" y2="17.5" />
+    <rect x="3" y="4" width="18" height="15" rx="3" />
+    <circle cx="13.5" cy="11.5" r="3.2" />
+    <line x1="7" y1="9" x2="7" y2="14" />
+    <line x1="7" y1="19" x2="7" y2="21" />
+    <line x1="17" y1="19" x2="17" y2="21" />
   </svg>
 );
 
-export const SftpIcon: React.FC<{color?: string; size?: number}> = ({color = 'currentColor', size = 24}) => (
+export const HostsRackIcon: React.FC<{color?: string; size?: number}> = ({color = 'currentColor', size = 20}) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M4 7h16M16 3l4 4-4 4" />
-    <path d="M20 17H4M8 13l-4 4 4 4" />
+    <rect x="3" y="4" width="18" height="6.5" rx="1.8" />
+    <rect x="3" y="13.5" width="18" height="6.5" rx="1.8" />
+    <circle cx="7" cy="7.25" r="1" fill={color} stroke="none" />
+    <circle cx="7" cy="16.75" r="1" fill={color} stroke="none" />
+    <line x1="11" y1="7.25" x2="17" y2="7.25" />
+    <line x1="11" y1="16.75" x2="17" y2="16.75" />
   </svg>
 );
 
-export const KeychainIcon: React.FC<{color?: string; size?: number}> = ({color = 'currentColor', size = 24}) => (
+export const KeychainKeyIcon: React.FC<{color?: string; size?: number}> = ({color = 'currentColor', size = 20}) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <circle cx="8" cy="15" r="4" />
-    <path d="M11 12l9-9" />
-    <path d="M16 7l3 3" />
-    <path d="M18 5l2 2" />
+    <circle cx="12" cy="8" r="3.5" />
+    <path d="M12 11.5V21" />
+    <path d="M12 16.5H15.5" />
+    <path d="M12 19.5H14.5" />
   </svg>
 );
 
-export const SnippetsIcon: React.FC<{color?: string; size?: number}> = ({color = 'currentColor', size = 24}) => (
+export const PortFwdArrowsIcon: React.FC<{color?: string; size?: number}> = ({color = 'currentColor', size = 20}) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <polyline points="16 18 22 12 16 6" />
-    <polyline points="8 6 2 12 8 18" />
-    <line x1="14" y1="4" x2="10" y2="20" />
+    <path d="M4 9h14l-3.5-3.5" />
+    <path d="M4 15h14l-3.5 3.5" />
   </svg>
 );
 
-export const PortFwdIcon: React.FC<{color?: string; size?: number}> = ({color = 'currentColor', size = 24}) => (
+/** Real Termius Snippets icon: curly braces { } */
+export const SnippetsBracesIcon: React.FC<{color?: string; size?: number}> = ({color = 'currentColor', size = 20}) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <circle cx="5" cy="12" r="2.5" />
-    <circle cx="19" cy="6" r="2.5" />
-    <circle cx="19" cy="18" r="2.5" />
-    <path d="M7.5 11.2L16.5 7.2M7.5 12.8L16.5 16.8" />
+    <path d="M8 4C6.5 4 6 5 6 6.5V9.5C6 11 5 12 4 12C5 12 6 13 6 14.5V17.5C6 19 6.5 20 8 20" />
+    <path d="M16 4C17.5 4 18 5 18 6.5V9.5C18 11 19 12 20 12C19 12 18 13 18 14.5V17.5C18 19 17.5 20 16 20" />
   </svg>
 );
 
-export const SettingsIcon: React.FC<{color?: string; size?: number}> = ({color = 'currentColor', size = 24}) => (
+export const KnownHostsFingerprintIcon: React.FC<{color?: string; size?: number}> = ({color = 'currentColor', size = 20}) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="1.9" strokeLinecap="round">
+    <path d="M12 11v4" />
+    <path d="M8.5 11.5a3.5 3.5 0 0 1 7 0v2.5a6 6 0 0 1-1.2 3.6" />
+    <path d="M5.5 11a6.5 6.5 0 0 1 13 0v1.5" />
+    <path d="M9.5 17.5A9 9 0 0 1 8 12" />
+  </svg>
+);
+
+export const LogsClockIcon: React.FC<{color?: string; size?: number}> = ({color = 'currentColor', size = 20}) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <circle cx="12" cy="12" r="3" />
-    <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9c.26.6.85 1 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" />
+    <circle cx="12" cy="12" r="8.5" />
+    <polyline points="12 7.5 12 12 15 14" />
   </svg>
 );
 
-export const SplitPaneIcon: React.FC<{color?: string; size?: number}> = ({color = 'currentColor', size = 22}) => (
-  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <rect x="3" y="4" width="18" height="16" rx="2" />
-    <line x1="12" y1="4" x2="12" y2="20" />
+export const FolderSolidIcon: React.FC<{color?: string; size?: number}> = ({color = '#D1D5DB', size = 19}) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill={color}>
+    <path d="M3 6a2 2 0 0 1 2-2h4.2l2 2H19a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6z" />
   </svg>
 );
 
-export const SearchIcon: React.FC<{color?: string; size?: number}> = ({color = 'currentColor', size = 20}) => (
+export const TerminalPromptIcon: React.FC<{color?: string; size?: number}> = ({color = '#29D386', size = 19}) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-    <circle cx="11" cy="11" r="7" />
-    <line x1="20" y1="20" x2="16.5" y2="16.5" />
+    <rect x="2.5" y="4" width="19" height="16" rx="3" />
+    <polyline points="7 9.5 10.5 12.5 7 15.5" />
+    <line x1="12.5" y1="15.5" x2="16.5" y2="15.5" />
   </svg>
 );
 
-export const FolderIcon: React.FC<{color?: string; size?: number}> = ({color = '#F59E0B', size = 20}) => (
-  <svg width={size} height={size} viewBox="0 0 24 24" fill={color} fillOpacity="0.2" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
-  </svg>
+/** Real Ubuntu Circle-of-Friends SVG inside orange rounded square (matching Termius Hosts UI) */
+export const UbuntuHostIcon: React.FC<{size?: number; monochrome?: string}> = ({size = 44, monochrome}) => {
+  const svg = (
+    <svg width={size * 0.56} height={size * 0.56} viewBox="0 0 24 24" fill="none">
+      <circle cx="12" cy="12" r="6.8" stroke={monochrome ?? '#fff'} strokeWidth="2.2" strokeDasharray="9 4.5" />
+      <circle cx="5.2" cy="12" r="2.2" fill={monochrome ?? '#fff'} />
+      <circle cx="16.4" cy="6.2" r="2.2" fill={monochrome ?? '#fff'} />
+      <circle cx="16.4" cy="17.8" r="2.2" fill={monochrome ?? '#fff'} />
+    </svg>
+  );
+  if (monochrome) return svg;
+  return (
+    <div style={{
+      width: size, height: size, borderRadius: 12, background: TERMIUS.ubuntu,
+      display: 'grid', placeItems: 'center', flexShrink: 0,
+    }}>
+      {svg}
+    </div>
+  );
+};
+
+/** Real Debian swirl icon inside crimson square (matching Termius Hosts UI) */
+export const DebianHostIcon: React.FC<{size?: number}> = ({size = 44}) => (
+  <div style={{
+    width: size, height: size, borderRadius: 12, background: TERMIUS.debian,
+    display: 'grid', placeItems: 'center', flexShrink: 0,
+  }}>
+    <svg width={size * 0.56} height={size * 0.56} viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2.2" strokeLinecap="round">
+      <path d="M12.8 14.5c-2.2.8-4.5-.6-4.5-3 0-2.6 2.2-4.7 4.8-4.7 3.2 0 5.4 2.5 5.4 5.7 0 4.2-3.4 7.5-7.6 7.5-3.4 0-6.2-2.2-7-5.4" />
+    </svg>
+  </div>
 );
 
-export const FileIcon: React.FC<{color?: string; size?: number}> = ({color = '#94A3B8', size = 20}) => (
+/** Real Termius Group Icon (blue rounded square with 3-node cluster squares) */
+export const GroupBadgeIcon: React.FC<{size?: number}> = ({size = 42}) => (
+  <div style={{
+    width: size, height: size, borderRadius: 12, background: '#0B5A9E',
+    display: 'grid', placeItems: 'center', flexShrink: 0,
+  }}>
+    <svg width={size * 0.52} height={size * 0.52} viewBox="0 0 24 24" fill="#fff">
+      <rect x="3" y="3" width="7.5" height="7.5" rx="1.8" />
+      <rect x="13.5" y="3" width="7.5" height="7.5" rx="1.8" fillOpacity="0.45" />
+      <rect x="3" y="13.5" width="7.5" height="7.5" rx="1.8" fillOpacity="0.45" />
+      <rect x="13.5" y="13.5" width="7.5" height="7.5" rx="1.8" />
+    </svg>
+  </div>
+);
+
+export const CloudHostIcon: React.FC<{bg?: string; size?: number}> = ({bg = '#2563EB', size = 44}) => (
+  <div style={{
+    width: size, height: size, borderRadius: 12, background: bg,
+    display: 'grid', placeItems: 'center', flexShrink: 0,
+  }}>
+    <svg width={size * 0.54} height={size * 0.54} viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M10 13a4 4 0 0 1 0-5.6l1.4-1.4a4 4 0 0 1 5.6 5.6l-.8.8" />
+      <path d="M14 11a4 4 0 0 1 0 5.6l-1.4 1.4a4 4 0 0 1-5.6-5.6l.8-.8" />
+    </svg>
+  </div>
+);
+
+export const BroadcastNodesIcon: React.FC<{color?: string; size?: number}> = ({color = '#29D386', size = 20}) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-    <polyline points="14 2 14 8 20 8" />
+    <circle cx="5" cy="12" r="2.2" />
+    <circle cx="18.5" cy="6.5" r="2.2" />
+    <circle cx="18.5" cy="12" r="2.2" />
+    <circle cx="18.5" cy="17.5" r="2.2" />
+    <path d="M7.2 11.2L16.3 7.3M7.2 12h9.1M7.2 12.8l9.1 3.9" />
   </svg>
 );
 
-export const PlayIcon: React.FC<{color?: string; size?: number}> = ({color = '#00C689', size = 18}) => (
+export const PlayTriangleIcon: React.FC<{color?: string; size?: number}> = ({color = '#29D386', size = 18}) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill={color}>
     <polygon points="6 4 20 12 6 20 6 4" />
   </svg>
-);
-
-export const UbuntuBadge: React.FC<{size?: number}> = ({size = 38}) => (
-  <div style={{
-    width: size, height: size, borderRadius: 11,
-    background: 'linear-gradient(135deg, #E95420, #C73E1D)',
-    display: 'grid', placeItems: 'center', color: '#fff', fontWeight: 900, fontSize: size * 0.44,
-    fontFamily: 'Inter, system-ui, sans-serif', boxShadow: '0 4px 12px rgba(233,84,32,0.35)',
-  }}>
-    U
-  </div>
-);
-
-export const LinuxBadge: React.FC<{label: string; bg: string; size?: number}> = ({label, bg, size = 38}) => (
-  <div style={{
-    width: size, height: size, borderRadius: 11, background: bg,
-    display: 'grid', placeItems: 'center', color: '#fff', fontWeight: 800, fontSize: size * 0.36,
-    fontFamily: '"JetBrains Mono", monospace',
-  }}>
-    {label}
-  </div>
 );

@@ -1,275 +1,21 @@
 import React from 'react';
 import {interpolate, spring, useCurrentFrame, useVideoConfig} from 'remotion';
 import {
-  TERMIUS_COLORS as C,
-  TermiusLogo,
-  HostsIcon,
-  SftpIcon,
-  PortFwdIcon,
-  SnippetsIcon,
-  KeychainIcon,
-  SettingsIcon,
-  SplitPaneIcon,
+  TERMIUS as T,
+  VaultSafeIcon,
+  FolderSolidIcon,
+  HostsRackIcon,
+  KeychainKeyIcon,
+  PortFwdArrowsIcon,
+  SnippetsBracesIcon,
+  KnownHostsFingerprintIcon,
+  LogsClockIcon,
+  UbuntuHostIcon,
+  TerminalPromptIcon,
 } from './TermiusIcons';
 
-export const FONT = 'Inter, "Segoe UI", system-ui, -apple-system, sans-serif';
+export const FONT = 'Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif';
 export const MONO = '"JetBrains Mono", "Fira Code", Menlo, Consolas, monospace';
-
-export const STEPS = ['INTRO', 'HOSTS', 'COMMAND', 'FITUR', 'SHORTCUT', 'SELESAI'] as const;
-
-export const TopHeader: React.FC<{
-  activeStep: number;
-  headline: string;
-  highlight: string;
-}> = ({activeStep, headline, highlight}) => {
-  const f = useCurrentFrame();
-  const {fps} = useVideoConfig();
-  const enter = spring({frame: f, fps, config: {damping: 16, stiffness: 140}});
-
-  return (
-    <div style={{position: 'absolute', top: 64, left: 52, right: 52, fontFamily: FONT}}>
-      {/* Top Brand Bar */}
-      <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 20}}>
-        <div style={{display: 'flex', alignItems: 'center', gap: 12}}>
-          <TermiusLogo size={42} />
-          <div>
-            <div style={{fontSize: 22, fontWeight: 800, color: C.text, letterSpacing: '-0.02em'}}>TERMIUS GUIDE</div>
-            <div style={{fontSize: 15, fontWeight: 600, color: C.green, letterSpacing: '0.06em'}}>REAL UI · COMMANDS · SHORTCUTS</div>
-          </div>
-        </div>
-        <div style={{
-          padding: '8px 18px', borderRadius: 999,
-          background: 'rgba(15,23,42,0.85)', border: `1.5px solid ${C.border}`,
-          fontSize: 18, fontWeight: 700, color: C.muted,
-        }}>
-          @rhmtofc
-        </div>
-      </div>
-
-      {/* Stepper Breadcrumb */}
-      <div style={{display: 'flex', alignItems: 'center', gap: 8, marginBottom: 22}}>
-        {STEPS.map((st, idx) => {
-          const done = idx < activeStep;
-          const active = idx === activeStep;
-          return (
-            <React.Fragment key={st}>
-              <div style={{
-                padding: '6px 13px', borderRadius: 999, fontSize: 15, fontWeight: 800,
-                letterSpacing: '0.04em',
-                background: active ? C.green : done ? 'rgba(0,198,137,0.18)' : 'rgba(30,41,59,0.7)',
-                color: active ? '#04120D' : done ? C.green : C.dim,
-                border: `1.5px solid ${active ? C.green : done ? 'rgba(0,198,137,0.4)' : C.border}`,
-              }}>
-                {st}
-              </div>
-              {idx < STEPS.length - 1 && (
-                <div style={{flex: 1, height: 2, background: done ? C.green : 'rgba(148,163,184,0.18)'}} />
-              )}
-            </React.Fragment>
-          );
-        })}
-      </div>
-
-      {/* Headline with Figma Anchor Badge */}
-      <div style={{
-        opacity: enter,
-        transform: `translateY(${(1 - enter) * 18}px)`,
-        display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: 14,
-        fontSize: 44, fontWeight: 900, color: C.text, lineHeight: 1.16, letterSpacing: '-0.025em',
-      }}>
-        <span>{headline}</span>
-        <span style={{
-          position: 'relative', display: 'inline-block',
-          padding: '4px 16px',
-          background: 'rgba(0, 198, 137, 0.14)',
-          border: `2px solid ${C.green}`,
-          color: C.green,
-          borderRadius: 6,
-        }}>
-          {highlight}
-          {/* Figma corner anchor handles */}
-          {[
-            {top: -5, left: -5},
-            {top: -5, right: -5},
-            {bottom: -5, left: -5},
-            {bottom: -5, right: -5},
-          ].map((pos, i) => (
-            <span
-              key={i}
-              style={{
-                position: 'absolute', ...pos,
-                width: 9, height: 9, background: '#fff',
-                border: `2px solid ${C.green}`, borderRadius: 2,
-              }}
-            />
-          ))}
-        </span>
-      </div>
-    </div>
-  );
-};
-
-export type SidebarKey = 'hosts' | 'sftp' | 'portfwd' | 'snippets' | 'keychain' | 'settings';
-
-const SIDEBAR_ITEMS: {key: SidebarKey; label: string; Icon: React.FC<{color?: string; size?: number}>}[] = [
-  {key: 'hosts', label: 'Hosts', Icon: HostsIcon},
-  {key: 'sftp', label: 'SFTP', Icon: SftpIcon},
-  {key: 'portfwd', label: 'Port Fwd', Icon: PortFwdIcon},
-  {key: 'snippets', label: 'Snippets', Icon: SnippetsIcon},
-  {key: 'keychain', label: 'Keychain', Icon: KeychainIcon},
-  {key: 'settings', label: 'Settings', Icon: SettingsIcon},
-];
-
-export const TermiusWindow: React.FC<{
-  activeNav: SidebarKey;
-  tabs?: {label: string; active?: boolean; connected?: boolean}[];
-  showSidebar?: boolean;
-  topRightBadge?: string;
-  children: React.ReactNode;
-}> = ({activeNav, tabs = [], showSidebar = true, topRightBadge, children}) => {
-  const f = useCurrentFrame();
-  const {fps} = useVideoConfig();
-  const scale = interpolate(spring({frame: f, fps, config: {damping: 18, stiffness: 120}}), [0, 1], [0.96, 1]);
-
-  return (
-    <div style={{
-      position: 'absolute',
-      top: 325,
-      left: 48,
-      right: 48,
-      height: 925,
-      borderRadius: 24,
-      background: C.chrome,
-      border: `1.5px solid rgba(148,163,184,0.22)`,
-      boxShadow: '0 32px 90px rgba(0,0,0,0.65), 0 0 0 1px rgba(0,198,137,0.08)',
-      overflow: 'hidden',
-      display: 'flex',
-      flexDirection: 'column',
-      fontFamily: FONT,
-      color: C.text,
-      transform: `scale(${scale})`,
-    }}>
-      {/* Real Termius Top Tab Bar */}
-      <div style={{
-        height: 58,
-        background: '#0F1322',
-        borderBottom: `1px solid ${C.border}`,
-        display: 'flex',
-        alignItems: 'center',
-        padding: '0 18px',
-        gap: 10,
-      }}>
-        {/* Window controls */}
-        <div style={{display: 'flex', gap: 8, marginRight: 10}}>
-          <div style={{width: 13, height: 13, borderRadius: 7, background: '#FF5F57'}} />
-          <div style={{width: 13, height: 13, borderRadius: 7, background: '#FEBC2E'}} />
-          <div style={{width: 13, height: 13, borderRadius: 7, background: '#28C840'}} />
-        </div>
-
-        {/* Vaults Home Tab */}
-        <div style={{
-          display: 'flex', alignItems: 'center', gap: 8,
-          padding: '8px 16px', borderRadius: 10,
-          background: tabs.some((t) => t.active) ? 'transparent' : C.surface,
-          color: tabs.some((t) => t.active) ? C.muted : C.text,
-          fontSize: 19, fontWeight: 700,
-        }}>
-          <TermiusLogo size={22} />
-          <span>Vaults</span>
-        </div>
-
-        {/* Open SSH / SFTP Tabs */}
-        {tabs.map((tab) => (
-          <div key={tab.label} style={{
-            display: 'flex', alignItems: 'center', gap: 9,
-            padding: '8px 16px', borderRadius: 10,
-            background: tab.active ? C.surface : 'rgba(255,255,255,0.03)',
-            borderBottom: tab.active ? `2.5px solid ${C.green}` : '2.5px solid transparent',
-            color: tab.active ? C.text : C.muted,
-            fontSize: 18, fontWeight: 700,
-          }}>
-            {tab.connected && (
-              <span style={{width: 9, height: 9, borderRadius: 5, background: C.green, boxShadow: `0 0 8px ${C.green}`}} />
-            )}
-            <span>{tab.label}</span>
-          </div>
-        ))}
-
-        {/* + New Tab button */}
-        <div style={{
-          width: 32, height: 32, borderRadius: 8, background: 'rgba(255,255,255,0.05)',
-          display: 'grid', placeItems: 'center', color: C.muted, fontSize: 22, fontWeight: 700,
-        }}>+</div>
-
-        <div style={{flex: 1}} />
-
-        {/* Split & Status */}
-        {topRightBadge && (
-          <div style={{
-            display: 'flex', alignItems: 'center', gap: 7,
-            padding: '6px 12px', borderRadius: 8,
-            background: C.greenSoft, border: `1px solid ${C.borderActive}`,
-            color: C.green, fontSize: 15, fontWeight: 800, fontFamily: MONO,
-          }}>
-            <SplitPaneIcon color={C.green} size={16} />
-            <span>{topRightBadge}</span>
-          </div>
-        )}
-      </div>
-
-      {/* Main App Body */}
-      <div style={{flex: 1, display: 'flex', minHeight: 0}}>
-        {showSidebar && (
-          <div style={{
-            width: 215,
-            background: C.sidebar,
-            borderRight: `1px solid ${C.border}`,
-            padding: '18px 12px',
-            display: 'flex',
-            flexDirection: 'column',
-            gap: 6,
-          }}>
-            <div style={{fontSize: 13, fontWeight: 800, color: C.dim, letterSpacing: '0.09em', padding: '4px 12px 10px'}}>
-              PERSONAL VAULT
-            </div>
-            {SIDEBAR_ITEMS.map(({key, label, Icon}) => {
-              const isAct = key === activeNav;
-              return (
-                <div key={key} style={{
-                  display: 'flex', alignItems: 'center', gap: 12,
-                  padding: '13px 14px', borderRadius: 12,
-                  background: isAct ? C.greenSoft : 'transparent',
-                  border: `1px solid ${isAct ? C.borderActive : 'transparent'}`,
-                  color: isAct ? C.green : C.muted,
-                  fontSize: 20, fontWeight: isAct ? 800 : 600,
-                }}>
-                  <Icon color={isAct ? C.green : C.muted} size={21} />
-                  <span>{label}</span>
-                </div>
-              );
-            })}
-
-            <div style={{flex: 1}} />
-            {/* Sync indicator at sidebar bottom */}
-            <div style={{
-              padding: '12px 14px', borderRadius: 12,
-              background: 'rgba(0,198,137,0.08)', border: `1px solid rgba(0,198,137,0.22)`,
-              fontSize: 14, color: C.muted, display: 'flex', alignItems: 'center', gap: 9,
-            }}>
-              <span style={{width: 8, height: 8, borderRadius: 4, background: C.green}} />
-              <span style={{fontWeight: 700, color: C.text}}>Cloud Sync</span>
-              <span style={{marginLeft: 'auto', color: C.green, fontWeight: 700}}>ON</span>
-            </div>
-          </div>
-        )}
-
-        <div style={{flex: 1, padding: 24, position: 'relative', overflow: 'hidden'}}>
-          {children}
-        </div>
-      </div>
-    </div>
-  );
-};
 
 export interface WordTiming {
   word: string;
@@ -277,15 +23,250 @@ export interface WordTiming {
   end: number;
 }
 
-/** Word-by-word dynamic pill karaoke subtitle (anti-drift, synced to real speech) */
+/** Clean Apple/Editorial Top Title (zero generic AI stepper/Figma boxes) */
+export const EditorialHeader: React.FC<{
+  index: string;
+  tag: string;
+  title: string;
+  accentWord?: string;
+}> = ({index, tag, title, accentWord}) => {
+  const f = useCurrentFrame();
+  const {fps} = useVideoConfig();
+  const s = spring({frame: f, fps, config: {damping: 18, stiffness: 130}});
+
+  return (
+    <div style={{
+      position: 'absolute', top: 76, left: 54, right: 54, fontFamily: FONT,
+      opacity: s, transform: `translateY(${(1 - s) * 16}px)`,
+    }}>
+      <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 18}}>
+        <div style={{
+          display: 'inline-flex', alignItems: 'center', gap: 10,
+          fontSize: 19, fontWeight: 700, letterSpacing: '0.08em', color: T.muted,
+          fontFamily: MONO,
+        }}>
+          <span style={{color: T.green}}>{index}</span>
+          <span>/</span>
+          <span>{tag}</span>
+        </div>
+        <div style={{fontSize: 19, fontWeight: 600, color: T.dim, fontFamily: MONO}}>@rhmtofc</div>
+      </div>
+
+      <div style={{
+        fontSize: 54, fontWeight: 800, color: T.text,
+        lineHeight: 1.12, letterSpacing: '-0.03em',
+      }}>
+        {title}{' '}
+        {accentWord && <span style={{color: T.green}}>{accentWord}</span>}
+      </div>
+    </div>
+  );
+};
+
+export type TermiusNav = 'hosts' | 'keychain' | 'portfwd' | 'snippets' | 'known' | 'logs';
+
+const NAV_LIST: {key: TermiusNav; label: string; Icon: React.FC<{color?: string; size?: number}>}[] = [
+  {key: 'hosts', label: 'Hosts', Icon: HostsRackIcon},
+  {key: 'keychain', label: 'Keychain', Icon: KeychainKeyIcon},
+  {key: 'portfwd', label: 'Port forwarding', Icon: PortFwdArrowsIcon},
+  {key: 'snippets', label: 'Snippets', Icon: SnippetsBracesIcon},
+  {key: 'known', label: 'Known Hosts', Icon: KnownHostsFingerprintIcon},
+  {key: 'logs', label: 'Logs', Icon: LogsClockIcon},
+];
+
+export interface TermiusTopTab {
+  label: string;
+  active?: boolean;
+  kind?: 'ssh' | 'split';
+}
+
+/** Authentic Termius Desktop Window matching official screenshots */
+export const RealTermiusFrame: React.FC<{
+  activeNav?: TermiusNav;
+  sftpActive?: boolean;
+  showSidebar?: boolean;
+  tabs?: TermiusTopTab[];
+  children: React.ReactNode;
+}> = ({activeNav = 'hosts', sftpActive = false, showSidebar = true, tabs = [], children}) => {
+  const f = useCurrentFrame();
+  const {fps} = useVideoConfig();
+  const s = interpolate(spring({frame: f, fps, config: {damping: 20, stiffness: 120}}), [0, 1], [0.97, 1]);
+  const vaultActive = !sftpActive && !tabs.some((t) => t.active);
+
+  return (
+    <div style={{
+      position: 'absolute',
+      top: 268,
+      left: 44,
+      right: 44,
+      height: 1090,
+      borderRadius: 22,
+      background: T.chrome,
+      border: `1.5px solid ${T.border}`,
+      boxShadow: '0 40px 100px rgba(0,0,0,0.72)',
+      overflow: 'hidden',
+      display: 'flex',
+      flexDirection: 'column',
+      fontFamily: FONT,
+      color: T.text,
+      transform: `scale(${s})`,
+    }}>
+      {/* Real Termius Top Bar: macOS dots | Vault v | SFTP | divider | Active Tab | + */}
+      <div style={{
+        height: 66,
+        background: T.chrome,
+        borderBottom: `1px solid ${T.border}`,
+        display: 'flex',
+        alignItems: 'center',
+        padding: '0 18px',
+        gap: 10,
+      }}>
+        {/* Subtle macOS window dots (muted dark gray-slate like official Termius screenshot) */}
+        <div style={{display: 'flex', gap: 8, marginRight: 8}}>
+          <div style={{width: 12, height: 12, borderRadius: 6, background: '#2C324A'}} />
+          <div style={{width: 12, height: 12, borderRadius: 6, background: '#2C324A'}} />
+          <div style={{width: 12, height: 12, borderRadius: 6, background: '#2C324A'}} />
+        </div>
+
+        {/* Vault Pill */}
+        <div style={{
+          display: 'flex', alignItems: 'center', gap: 9,
+          padding: '9px 15px', borderRadius: 11,
+          background: vaultActive ? '#222740' : T.pill,
+          border: `1px solid ${vaultActive ? '#343C5E' : 'transparent'}`,
+          color: vaultActive ? T.text : T.muted,
+          fontSize: 19, fontWeight: 600,
+        }}>
+          <VaultSafeIcon color={vaultActive ? T.text : T.muted} size={19} />
+          <span>Vault</span>
+          <span style={{fontSize: 14, opacity: 0.7, marginLeft: 4}}>⌄</span>
+        </div>
+
+        {/* SFTP Pill */}
+        <div style={{
+          display: 'flex', alignItems: 'center', gap: 8,
+          padding: '9px 15px', borderRadius: 11,
+          background: sftpActive ? T.activeTabBg : T.pill,
+          color: sftpActive ? T.green : T.muted,
+          fontSize: 19, fontWeight: 600,
+        }}>
+          <FolderSolidIcon color={sftpActive ? T.green : T.muted} size={18} />
+          <span>SFTP</span>
+        </div>
+
+        <div style={{width: 1.5, height: 24, background: T.border, margin: '0 2px'}} />
+
+        {/* SSH / Split View Tabs (Authentic #143B32 green pill when active!) */}
+        {tabs.map((tab) => (
+          <div key={tab.label} style={{
+            display: 'flex', alignItems: 'center', gap: 10,
+            padding: '9px 18px', borderRadius: 11,
+            background: tab.active ? T.activeTabBg : T.pill,
+            color: tab.active ? T.green : T.muted,
+            fontSize: 19, fontWeight: 600,
+          }}>
+            {tab.kind === 'split' ? (
+              <TerminalPromptIcon color={tab.active ? T.green : T.muted} size={18} />
+            ) : (
+              <UbuntuHostIcon size={28} monochrome={tab.active ? T.green : T.muted} />
+            )}
+            <span>{tab.label}</span>
+          </div>
+        ))}
+
+        {/* + Button */}
+        <div style={{
+          width: 34, height: 34, borderRadius: 9,
+          display: 'grid', placeItems: 'center', color: T.muted, fontSize: 24, fontWeight: 400,
+        }}>
+          +
+        </div>
+      </div>
+
+      {/* Body: Left Sidebar + Workspace */}
+      <div style={{flex: 1, display: 'flex', minHeight: 0, background: T.workspace}}>
+        {showSidebar && (
+          <div style={{
+            width: 228,
+            background: T.chrome,
+            borderRight: `1px solid ${T.border}`,
+            padding: '16px 12px',
+            display: 'flex',
+            flexDirection: 'column',
+            gap: 4,
+          }}>
+            {NAV_LIST.map(({key, label, Icon}) => {
+              const active = key === activeNav && !sftpActive;
+              return (
+                <div key={key} style={{
+                  display: 'flex', alignItems: 'center', gap: 13,
+                  padding: '13px 14px', borderRadius: 11,
+                  background: active ? '#1F243B' : 'transparent',
+                  color: active ? T.text : T.muted,
+                  fontSize: 19, fontWeight: active ? 600 : 500,
+                }}>
+                  <Icon color={active ? T.text : T.muted} size={20} />
+                  <span>{label}</span>
+                </div>
+              );
+            })}
+          </div>
+        )}
+
+        <div style={{flex: 1, position: 'relative', overflow: 'hidden', display: 'flex', flexDirection: 'column'}}>
+          {children}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+/** Minimalist bottom context bar (replaces generic 3-card AI footer) */
+export const ContextCalloutBar: React.FC<{
+  leftLabel: string;
+  rightContent: React.ReactNode;
+}> = ({leftLabel, rightContent}) => (
+  <div style={{
+    position: 'absolute',
+    top: 1396,
+    left: 44,
+    right: 44,
+    height: 86,
+    borderRadius: 16,
+    background: '#141728',
+    border: `1.5px solid ${T.border}`,
+    padding: '0 24px',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    fontFamily: FONT,
+  }}>
+    <div style={{fontSize: 22, fontWeight: 700, color: T.text}}>{leftLabel}</div>
+    <div style={{display: 'flex', alignItems: 'center', gap: 10}}>{rightContent}</div>
+  </div>
+);
+
+/** Termius-style dark keycap (matching Broadcast Input Ctrl Alt B in official screenshot) */
+export const TermiusKeycap: React.FC<{label: string; active?: boolean}> = ({label, active}) => (
+  <span style={{
+    display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
+    minWidth: 42, padding: '7px 14px', borderRadius: 9,
+    background: active ? T.activeTabBg : '#1E2338',
+    border: `1.5px solid ${active ? T.green : '#313854'}`,
+    color: active ? T.green : '#E2E8F0',
+    fontFamily: MONO, fontSize: 19, fontWeight: 700,
+  }}>
+    {label}
+  </span>
+);
+
+/** Clean word-by-word karaoke subtitle synced to real speech */
 export const KaraokeSubtitle: React.FC<{words: WordTiming[]}> = ({words}) => {
   const f = useCurrentFrame();
   const {fps} = useVideoConfig();
   const t = f / fps;
-
   if (!words.length) return null;
 
-  // Group into chunks of 6 words so it fits cleanly on 1-2 lines
   const CHUNK_SIZE = 6;
   let activeIdx = words.findIndex((w) => t >= w.start && t <= w.end + 0.12);
   if (activeIdx === -1) {
@@ -297,9 +278,9 @@ export const KaraokeSubtitle: React.FC<{words: WordTiming[]}> = ({words}) => {
   return (
     <div style={{
       position: 'absolute',
-      bottom: 112,
-      left: 56,
-      right: 56,
+      bottom: 118,
+      left: 54,
+      right: 54,
       display: 'flex',
       flexWrap: 'wrap',
       justifyContent: 'center',
@@ -310,21 +291,18 @@ export const KaraokeSubtitle: React.FC<{words: WordTiming[]}> = ({words}) => {
       {chunk.map((w, i) => {
         const globalIdx = chunkIndex * CHUNK_SIZE + i;
         const isCurrent = globalIdx === activeIdx;
-        const isPast = globalIdx < activeIdx;
         return (
           <span
             key={`${chunkIndex}-${i}`}
             style={{
-              padding: isCurrent ? '6px 16px' : '6px 8px',
-              borderRadius: 14,
-              background: isCurrent ? C.green : 'rgba(9, 13, 24, 0.72)',
-              color: isCurrent ? '#04120D' : isPast ? '#E2E8F0' : '#CBD5E1',
+              padding: isCurrent ? '6px 15px' : '6px 6px',
+              borderRadius: 12,
+              background: isCurrent ? T.green : 'transparent',
+              color: isCurrent ? '#071710' : '#E2E8F0',
               fontSize: 33,
-              fontWeight: isCurrent ? 900 : 700,
-              letterSpacing: '0.01em',
+              fontWeight: isCurrent ? 800 : 700,
               lineHeight: 1.25,
-              boxShadow: isCurrent ? '0 8px 24px rgba(0, 198, 137, 0.45)' : '0 4px 14px rgba(0,0,0,0.45)',
-              transform: isCurrent ? 'scale(1.06)' : 'scale(1)',
+              textShadow: isCurrent ? 'none' : '0 3px 12px rgba(0,0,0,0.85)',
             }}
           >
             {w.word}
@@ -334,48 +312,3 @@ export const KaraokeSubtitle: React.FC<{words: WordTiming[]}> = ({words}) => {
     </div>
   );
 };
-
-export const BottomWatermark: React.FC = () => (
-  <div style={{
-    position: 'absolute',
-    bottom: 42,
-    left: 0,
-    right: 0,
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    gap: 10,
-    fontFamily: MONO,
-    fontSize: 18,
-    fontWeight: 700,
-    color: 'rgba(148, 163, 184, 0.55)',
-    letterSpacing: '0.12em',
-  }}>
-    <span style={{width: 7, height: 7, borderRadius: 4, background: C.green}} />
-    <span>RHMT OFC</span>
-    <span>·</span>
-    <span>TERMIUS WORKFLOW</span>
-  </div>
-);
-
-export const Keycap: React.FC<{label: string; pressed?: boolean}> = ({label, pressed}) => (
-  <span style={{
-    display: 'inline-flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    minWidth: 44,
-    padding: '8px 14px',
-    borderRadius: 10,
-    background: pressed ? C.green : '#222A42',
-    color: pressed ? '#04120D' : '#F8FAFC',
-    border: `1.5px solid ${pressed ? C.green : 'rgba(148,163,184,0.35)'}`,
-    borderBottom: `4px solid ${pressed ? '#047857' : '#0F1424'}`,
-    fontFamily: MONO,
-    fontSize: 21,
-    fontWeight: 800,
-    transform: pressed ? 'translateY(2px)' : 'none',
-    boxShadow: pressed ? '0 0 18px rgba(0,198,137,0.45)' : '0 4px 10px rgba(0,0,0,0.35)',
-  }}>
-    {label}
-  </span>
-);
