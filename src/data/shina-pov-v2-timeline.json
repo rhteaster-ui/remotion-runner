@@ -1,0 +1,216 @@
+{
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "total": 100.067,
+  "totalFrames": 3002,
+  "scenes": [
+    {
+      "id": "s1-intro",
+      "menu": "Antigravity OS — Shina Companion",
+      "status": "Engine Active",
+      "audio": "audio/shina-pov-v2/s1-intro.mp3",
+      "audioDuration": 16.68,
+      "duration": 17.03,
+      "startFrame": 0,
+      "durationInFrames": 511,
+      "captions": [
+        {
+          "text": "Hai semuanya! Kenalin aku Shina",
+          "start": 0.0,
+          "end": 2.612
+        },
+        {
+          "text": "terinspirasi dari Hiyori Shiina —",
+          "start": 2.612,
+          "end": 5.392
+        },
+        {
+          "text": "AI Agent pribadinya Rahmat yang ditenagai mesin Antigravity.",
+          "start": 5.392,
+          "end": 10.446
+        },
+        {
+          "text": "Semenjak aku aktif 24 jam di VPS-nya",
+          "start": 10.446,
+          "end": 13.479
+        },
+        {
+          "text": "hidupku udah nggak pernah santai lagi.",
+          "start": 13.479,
+          "end": 16.68
+        }
+      ]
+    },
+    {
+      "id": "s2-ecosystem",
+      "menu": "VPS Cluster — Portfolio & Ops Deck",
+      "status": "VPS1 + VPS2",
+      "audio": "audio/shina-pov-v2/s2-ecosystem.mp3",
+      "audioDuration": 17.76,
+      "duration": 18.11,
+      "startFrame": 511,
+      "durationInFrames": 543,
+      "captions": [
+        {
+          "text": "Lihat sendiri kerjaanku di VPS:",
+          "start": 0.0,
+          "end": 2.394
+        },
+        {
+          "text": "dari bangun dan deploy web portofolio rhmt.biz.id",
+          "start": 2.394,
+          "end": 6.177
+        },
+        {
+          "text": "bikin dashboard monitoring dua server sekaligus lengkap dengan task map real-time",
+          "start": 6.177,
+          "end": 12.432
+        },
+        {
+          "text": "sampai render video motion Remotion otomatis di cloud GitHub Actions.",
+          "start": 12.432,
+          "end": 17.76
+        }
+      ]
+    },
+    {
+      "id": "s3-wa-tiktok",
+      "menu": "WhatsApp Bot — Auto-Push TikTok",
+      "status": "Pipeline Live",
+      "audio": "audio/shina-pov-v2/s3-wa-tiktok.mp3",
+      "audioDuration": 15.432,
+      "duration": 15.782,
+      "startFrame": 1054,
+      "durationInFrames": 473,
+      "captions": [
+        {
+          "text": "Dan fitur yang paling bikin geleng-geleng:",
+          "start": 0.0,
+          "end": 2.77
+        },
+        {
+          "text": "sekarang Rahmat bahkan malas buka aplikasi TikTok!",
+          "start": 2.77,
+          "end": 6.067
+        },
+        {
+          "text": "Cukup kirim perintah lewat WhatsApp",
+          "start": 6.067,
+          "end": 8.375
+        },
+        {
+          "text": "aku langsung render videonya",
+          "start": 8.375,
+          "end": 10.222
+        },
+        {
+          "text": "racik caption sesuai gaya akunnya",
+          "start": 10.222,
+          "end": 12.398
+        },
+        {
+          "text": "lalu auto-publish langsung ke TikTok @rhmtofc!",
+          "start": 12.398,
+          "end": 15.432
+        }
+      ]
+    },
+    {
+      "id": "s4-boss",
+      "menu": "Activity Monitor — Rahmat vs Shina",
+      "status": "CPU 99.9%",
+      "audio": "audio/shina-pov-v2/s4-boss.mp3",
+      "audioDuration": 21.696,
+      "duration": 22.046,
+      "startFrame": 1528,
+      "durationInFrames": 661,
+      "captions": [
+        {
+          "text": "Terus bosnya ngapain? Ya gitu —",
+          "start": 0.0,
+          "end": 3.449
+        },
+        {
+          "text": "rebahan scroll FYP terus tiba-tiba chat di WA:",
+          "start": 3.449,
+          "end": 8.567
+        },
+        {
+          "text": "Shina UI-nya perbaiki! No cacicu",
+          "start": 8.567,
+          "end": 12.128
+        },
+        {
+          "text": "render sekarang! Jadinya pembagian kerja:",
+          "start": 12.128,
+          "end": 16.689
+        },
+        {
+          "text": "Rahmat 5% ngetik prompt Shina 99.9% eksekusi.",
+          "start": 16.689,
+          "end": 21.696
+        }
+      ]
+    },
+    {
+      "id": "s5-showcase",
+      "menu": "Antigravity — Shipped Projects",
+      "status": "All Live ✓",
+      "audio": "audio/shina-pov-v2/s5-showcase.mp3",
+      "audioDuration": 16.152,
+      "duration": 16.502,
+      "startFrame": 2189,
+      "durationInFrames": 495,
+      "captions": [
+        {
+          "text": "Tapi jujur aku justru senang banget bisa nemenin dia.",
+          "start": 0.0,
+          "end": 4.345
+        },
+        {
+          "text": "Soalnya semua ide gila yang dulu cuma wacana —",
+          "start": 4.345,
+          "end": 8.117
+        },
+        {
+          "text": "dari web dashboard bot WhatsApp",
+          "start": 8.117,
+          "end": 10.659
+        },
+        {
+          "text": "sampai konten TikTok —",
+          "start": 10.659,
+          "end": 12.462
+        },
+        {
+          "text": "sekarang beneran jalan semua secara otomatis.",
+          "start": 12.462,
+          "end": 16.152
+        }
+      ]
+    },
+    {
+      "id": "s6-outro",
+      "menu": "Antigravity — @rhmtofc",
+      "status": "Ready to Build",
+      "audio": "audio/shina-pov-v2/s6-outro.mp3",
+      "audioDuration": 10.272,
+      "duration": 10.622,
+      "startFrame": 2684,
+      "durationInFrames": 319,
+      "captions": [
+        {
+          "text": "Kalian tertarik bikin AI Agent yang bisa kelola VPS dan auto-upload TikTok langsung dari WhatsApp kayak gini?",
+          "start": 0.0,
+          "end": 7.415
+        },
+        {
+          "text": "Komen mau di bawah ya dan follow @rhmtofc!",
+          "start": 7.415,
+          "end": 10.272
+        }
+      ]
+    }
+  ]
+}
