@@ -1,0 +1,1065 @@
+{
+  "fps": 30,
+  "voice": "Leda",
+  "total": 91.5,
+  "totalFrames": 2745,
+  "scenes": [
+    {
+      "id": "s1-hook",
+      "title": "Hook",
+      "step": "INTRO",
+      "audio": "audio/termius-pro/s1-hook.mp3",
+      "audioDuration": 11.832,
+      "duration": 12.182,
+      "startFrame": 0,
+      "durationInFrames": 365,
+      "words": [
+        {
+          "word": "Masih",
+          "start": 0.0,
+          "end": 0.42
+        },
+        {
+          "word": "ketik",
+          "start": 0.42,
+          "end": 0.841
+        },
+        {
+          "word": "SSH",
+          "start": 0.841,
+          "end": 1.093
+        },
+        {
+          "word": "manual",
+          "start": 1.093,
+          "end": 1.597
+        },
+        {
+          "word": "tiap",
+          "start": 1.597,
+          "end": 1.933
+        },
+        {
+          "word": "mau",
+          "start": 1.933,
+          "end": 2.186
+        },
+        {
+          "word": "masuk",
+          "start": 2.186,
+          "end": 2.606
+        },
+        {
+          "word": "VPS?",
+          "start": 2.606,
+          "end": 2.858
+        },
+        {
+          "word": "Kenalan",
+          "start": 2.858,
+          "end": 3.447
+        },
+        {
+          "word": "sama",
+          "start": 3.447,
+          "end": 4.194
+        },
+        {
+          "word": "Termius,",
+          "start": 4.194,
+          "end": 4.783
+        },
+        {
+          "word": "aplikasi",
+          "start": 4.783,
+          "end": 5.455
+        },
+        {
+          "word": "terminal",
+          "start": 5.455,
+          "end": 6.48
+        },
+        {
+          "word": "modern",
+          "start": 6.48,
+          "end": 6.984
+        },
+        {
+          "word": "yang",
+          "start": 6.984,
+          "end": 7.32
+        },
+        {
+          "word": "bikin",
+          "start": 7.32,
+          "end": 7.741
+        },
+        {
+          "word": "kelola",
+          "start": 7.741,
+          "end": 8.245
+        },
+        {
+          "word": "banyak",
+          "start": 8.245,
+          "end": 8.749
+        },
+        {
+          "word": "server",
+          "start": 8.749,
+          "end": 9.254
+        },
+        {
+          "word": "jadi",
+          "start": 9.254,
+          "end": 9.59
+        },
+        {
+          "word": "jauh",
+          "start": 9.59,
+          "end": 9.926
+        },
+        {
+          "word": "lebih",
+          "start": 9.926,
+          "end": 10.347
+        },
+        {
+          "word": "cepat",
+          "start": 10.347,
+          "end": 10.767
+        },
+        {
+          "word": "dan",
+          "start": 10.767,
+          "end": 11.205
+        },
+        {
+          "word": "rapi!",
+          "start": 11.205,
+          "end": 11.542
+        }
+      ]
+    },
+    {
+      "id": "s2-hosts",
+      "title": "Hosts & Keychain",
+      "step": "HOSTS",
+      "audio": "audio/termius-pro/s2-hosts.mp3",
+      "audioDuration": 16.632,
+      "duration": 16.982,
+      "startFrame": 365,
+      "durationInFrames": 509,
+      "words": [
+        {
+          "word": "Pertama,",
+          "start": 0.0,
+          "end": 0.557
+        },
+        {
+          "word": "simpan",
+          "start": 0.557,
+          "end": 1.275
+        },
+        {
+          "word": "semua",
+          "start": 1.275,
+          "end": 1.673
+        },
+        {
+          "word": "server",
+          "start": 1.673,
+          "end": 2.15
+        },
+        {
+          "word": "di",
+          "start": 2.15,
+          "end": 2.309
+        },
+        {
+          "word": "menu",
+          "start": 2.309,
+          "end": 2.627
+        },
+        {
+          "word": "Hosts.",
+          "start": 2.627,
+          "end": 3.025
+        },
+        {
+          "word": "Cukup",
+          "start": 3.025,
+          "end": 3.675
+        },
+        {
+          "word": "isi",
+          "start": 3.675,
+          "end": 3.914
+        },
+        {
+          "word": "label,",
+          "start": 3.914,
+          "end": 4.312
+        },
+        {
+          "word": "alamat",
+          "start": 4.312,
+          "end": 5.146
+        },
+        {
+          "word": "IP,",
+          "start": 5.146,
+          "end": 5.305
+        },
+        {
+          "word": "username,",
+          "start": 5.305,
+          "end": 5.942
+        },
+        {
+          "word": "dan",
+          "start": 5.942,
+          "end": 6.553
+        },
+        {
+          "word": "pilih",
+          "start": 6.553,
+          "end": 6.951
+        },
+        {
+          "word": "SSH",
+          "start": 6.951,
+          "end": 7.382
+        },
+        {
+          "word": "Key",
+          "start": 7.382,
+          "end": 7.621
+        },
+        {
+          "word": "dari",
+          "start": 7.621,
+          "end": 7.939
+        },
+        {
+          "word": "Keychain",
+          "start": 7.939,
+          "end": 8.576
+        },
+        {
+          "word": "sekali",
+          "start": 8.576,
+          "end": 9.053
+        },
+        {
+          "word": "saja.",
+          "start": 9.053,
+          "end": 9.371
+        },
+        {
+          "word": "Setelah",
+          "start": 9.371,
+          "end": 9.928
+        },
+        {
+          "word": "disimpan,",
+          "start": 9.928,
+          "end": 11.082
+        },
+        {
+          "word": "tinggal",
+          "start": 11.082,
+          "end": 11.639
+        },
+        {
+          "word": "klik",
+          "start": 11.639,
+          "end": 11.957
+        },
+        {
+          "word": "dua",
+          "start": 11.957,
+          "end": 12.498
+        },
+        {
+          "word": "kali",
+          "start": 12.498,
+          "end": 12.816
+        },
+        {
+          "word": "langsung",
+          "start": 12.816,
+          "end": 13.452
+        },
+        {
+          "word": "connect",
+          "start": 13.452,
+          "end": 14.009
+        },
+        {
+          "word": "tanpa",
+          "start": 14.009,
+          "end": 14.644
+        },
+        {
+          "word": "ribet",
+          "start": 14.644,
+          "end": 15.042
+        },
+        {
+          "word": "ketik",
+          "start": 15.042,
+          "end": 15.44
+        },
+        {
+          "word": "password",
+          "start": 15.44,
+          "end": 16.076
+        },
+        {
+          "word": "lagi.",
+          "start": 16.076,
+          "end": 16.394
+        }
+      ]
+    },
+    {
+      "id": "s3-commands",
+      "title": "Command Harian",
+      "step": "COMMAND",
+      "audio": "audio/termius-pro/s3-commands.mp3",
+      "audioDuration": 16.368,
+      "duration": 16.718,
+      "startFrame": 875,
+      "durationInFrames": 502,
+      "words": [
+        {
+          "word": "Begitu",
+          "start": 0.0,
+          "end": 0.455
+        },
+        {
+          "word": "masuk",
+          "start": 0.455,
+          "end": 0.834
+        },
+        {
+          "word": "terminal,",
+          "start": 0.834,
+          "end": 1.441
+        },
+        {
+          "word": "ini",
+          "start": 1.441,
+          "end": 1.669
+        },
+        {
+          "word": "command",
+          "start": 1.669,
+          "end": 2.2
+        },
+        {
+          "word": "wajib",
+          "start": 2.2,
+          "end": 2.579
+        },
+        {
+          "word": "buat",
+          "start": 2.579,
+          "end": 2.882
+        },
+        {
+          "word": "pantau",
+          "start": 2.882,
+          "end": 3.337
+        },
+        {
+          "word": "VPS:",
+          "start": 3.337,
+          "end": 3.952
+        },
+        {
+          "word": "cek",
+          "start": 3.952,
+          "end": 4.18
+        },
+        {
+          "word": "RAM",
+          "start": 4.18,
+          "end": 4.407
+        },
+        {
+          "word": "dan",
+          "start": 4.407,
+          "end": 4.635
+        },
+        {
+          "word": "CPU",
+          "start": 4.635,
+          "end": 4.862
+        },
+        {
+          "word": "pakai",
+          "start": 4.862,
+          "end": 5.242
+        },
+        {
+          "word": "htop,",
+          "start": 5.242,
+          "end": 5.545
+        },
+        {
+          "word": "cek",
+          "start": 5.545,
+          "end": 6.274
+        },
+        {
+          "word": "kapasitas",
+          "start": 6.274,
+          "end": 6.956
+        },
+        {
+          "word": "storage",
+          "start": 6.956,
+          "end": 7.487
+        },
+        {
+          "word": "pakai",
+          "start": 7.487,
+          "end": 7.866
+        },
+        {
+          "word": "df",
+          "start": 7.866,
+          "end": 8.018
+        },
+        {
+          "word": "-h,",
+          "start": 8.018,
+          "end": 8.17
+        },
+        {
+          "word": "pantau",
+          "start": 8.17,
+          "end": 9.109
+        },
+        {
+          "word": "aplikasi",
+          "start": 9.109,
+          "end": 9.716
+        },
+        {
+          "word": "berjalan",
+          "start": 9.716,
+          "end": 10.323
+        },
+        {
+          "word": "pakai",
+          "start": 10.323,
+          "end": 10.702
+        },
+        {
+          "word": "pm2",
+          "start": 10.702,
+          "end": 10.93
+        },
+        {
+          "word": "status,",
+          "start": 10.93,
+          "end": 11.385
+        },
+        {
+          "word": "dan",
+          "start": 11.385,
+          "end": 11.612
+        },
+        {
+          "word": "pakai",
+          "start": 11.612,
+          "end": 12.407
+        },
+        {
+          "word": "tmux",
+          "start": 12.407,
+          "end": 12.71
+        },
+        {
+          "word": "supaya",
+          "start": 12.71,
+          "end": 13.166
+        },
+        {
+          "word": "sesi",
+          "start": 13.166,
+          "end": 13.469
+        },
+        {
+          "word": "terminal",
+          "start": 13.469,
+          "end": 14.076
+        },
+        {
+          "word": "tetap",
+          "start": 14.076,
+          "end": 14.455
+        },
+        {
+          "word": "aman",
+          "start": 14.455,
+          "end": 14.758
+        },
+        {
+          "word": "meski",
+          "start": 14.758,
+          "end": 15.138
+        },
+        {
+          "word": "internet",
+          "start": 15.138,
+          "end": 15.745
+        },
+        {
+          "word": "putus.",
+          "start": 15.745,
+          "end": 16.124
+        }
+      ]
+    },
+    {
+      "id": "s4-snippets-sftp",
+      "title": "Snippets & SFTP",
+      "step": "FITUR",
+      "audio": "audio/termius-pro/s4-snippets-sftp.mp3",
+      "audioDuration": 17.76,
+      "duration": 18.11,
+      "startFrame": 1376,
+      "durationInFrames": 543,
+      "words": [
+        {
+          "word": "Biar",
+          "start": 0.0,
+          "end": 0.286
+        },
+        {
+          "word": "makin",
+          "start": 0.286,
+          "end": 0.644
+        },
+        {
+          "word": "ngebut,",
+          "start": 0.644,
+          "end": 1.074
+        },
+        {
+          "word": "simpan",
+          "start": 1.074,
+          "end": 1.872
+        },
+        {
+          "word": "command",
+          "start": 1.872,
+          "end": 2.373
+        },
+        {
+          "word": "panjang",
+          "start": 2.373,
+          "end": 2.874
+        },
+        {
+          "word": "kayak",
+          "start": 2.874,
+          "end": 3.231
+        },
+        {
+          "word": "deploy",
+          "start": 3.231,
+          "end": 3.661
+        },
+        {
+          "word": "atau",
+          "start": 3.661,
+          "end": 3.947
+        },
+        {
+          "word": "restart",
+          "start": 3.947,
+          "end": 4.448
+        },
+        {
+          "word": "server",
+          "start": 4.448,
+          "end": 4.878
+        },
+        {
+          "word": "ke",
+          "start": 4.878,
+          "end": 5.021
+        },
+        {
+          "word": "menu",
+          "start": 5.021,
+          "end": 5.636
+        },
+        {
+          "word": "Snippets,",
+          "start": 5.636,
+          "end": 6.209
+        },
+        {
+          "word": "tinggal",
+          "start": 6.209,
+          "end": 7.15
+        },
+        {
+          "word": "satu",
+          "start": 7.15,
+          "end": 7.436
+        },
+        {
+          "word": "klik",
+          "start": 7.436,
+          "end": 7.995
+        },
+        {
+          "word": "langsung",
+          "start": 7.995,
+          "end": 8.568
+        },
+        {
+          "word": "jalan!",
+          "start": 8.568,
+          "end": 9.795
+        },
+        {
+          "word": "Mau",
+          "start": 9.795,
+          "end": 10.01
+        },
+        {
+          "word": "upload",
+          "start": 10.01,
+          "end": 10.439
+        },
+        {
+          "word": "atau",
+          "start": 10.439,
+          "end": 10.726
+        },
+        {
+          "word": "download",
+          "start": 10.726,
+          "end": 11.298
+        },
+        {
+          "word": "file?",
+          "start": 11.298,
+          "end": 12.113
+        },
+        {
+          "word": "Buka",
+          "start": 12.113,
+          "end": 12.399
+        },
+        {
+          "word": "tab",
+          "start": 12.399,
+          "end": 12.614
+        },
+        {
+          "word": "SFTP",
+          "start": 12.614,
+          "end": 12.9
+        },
+        {
+          "word": "di",
+          "start": 12.9,
+          "end": 13.043
+        },
+        {
+          "word": "Termius,",
+          "start": 13.043,
+          "end": 13.544
+        },
+        {
+          "word": "tinggal",
+          "start": 13.544,
+          "end": 14.045
+        },
+        {
+          "word": "drag",
+          "start": 14.045,
+          "end": 14.699
+        },
+        {
+          "word": "and",
+          "start": 14.699,
+          "end": 14.914
+        },
+        {
+          "word": "drop",
+          "start": 14.914,
+          "end": 15.2
+        },
+        {
+          "word": "langsung",
+          "start": 15.2,
+          "end": 15.98
+        },
+        {
+          "word": "tanpa",
+          "start": 15.98,
+          "end": 16.338
+        },
+        {
+          "word": "aplikasi",
+          "start": 16.338,
+          "end": 16.91
+        },
+        {
+          "word": "tambahan.",
+          "start": 16.91,
+          "end": 17.483
+        }
+      ]
+    },
+    {
+      "id": "s5-shortcuts",
+      "title": "Shortcut Wajib",
+      "step": "SHORTCUT",
+      "audio": "audio/termius-pro/s5-shortcuts.mp3",
+      "audioDuration": 16.92,
+      "duration": 17.27,
+      "startFrame": 1920,
+      "durationInFrames": 518,
+      "words": [
+        {
+          "word": "Terakhir,",
+          "start": 0.0,
+          "end": 0.588
+        },
+        {
+          "word": "hafalin",
+          "start": 0.588,
+          "end": 1.336
+        },
+        {
+          "word": "shortcut",
+          "start": 1.336,
+          "end": 1.923
+        },
+        {
+          "word": "andalan",
+          "start": 1.923,
+          "end": 2.438
+        },
+        {
+          "word": "Termius",
+          "start": 2.438,
+          "end": 2.952
+        },
+        {
+          "word": "ini:",
+          "start": 2.952,
+          "end": 3.172
+        },
+        {
+          "word": "Control",
+          "start": 3.172,
+          "end": 4.078
+        },
+        {
+          "word": "J",
+          "start": 4.078,
+          "end": 4.225
+        },
+        {
+          "word": "buat",
+          "start": 4.225,
+          "end": 4.518
+        },
+        {
+          "word": "cari",
+          "start": 4.518,
+          "end": 4.812
+        },
+        {
+          "word": "dan",
+          "start": 4.812,
+          "end": 5.033
+        },
+        {
+          "word": "connect",
+          "start": 5.033,
+          "end": 5.547
+        },
+        {
+          "word": "server",
+          "start": 5.547,
+          "end": 5.988
+        },
+        {
+          "word": "instan,",
+          "start": 5.988,
+          "end": 6.429
+        },
+        {
+          "word": "Control",
+          "start": 6.429,
+          "end": 7.403
+        },
+        {
+          "word": "T",
+          "start": 7.403,
+          "end": 7.55
+        },
+        {
+          "word": "buat",
+          "start": 7.55,
+          "end": 7.844
+        },
+        {
+          "word": "buka",
+          "start": 7.844,
+          "end": 8.138
+        },
+        {
+          "word": "tab",
+          "start": 8.138,
+          "end": 8.358
+        },
+        {
+          "word": "baru,",
+          "start": 8.358,
+          "end": 8.652
+        },
+        {
+          "word": "Control",
+          "start": 8.652,
+          "end": 9.633
+        },
+        {
+          "word": "Shift",
+          "start": 9.633,
+          "end": 10.001
+        },
+        {
+          "word": "D",
+          "start": 10.001,
+          "end": 10.147
+        },
+        {
+          "word": "buat",
+          "start": 10.147,
+          "end": 10.441
+        },
+        {
+          "word": "split",
+          "start": 10.441,
+          "end": 10.809
+        },
+        {
+          "word": "layar",
+          "start": 10.809,
+          "end": 11.176
+        },
+        {
+          "word": "pantau",
+          "start": 11.176,
+          "end": 11.617
+        },
+        {
+          "word": "dua",
+          "start": 11.617,
+          "end": 11.837
+        },
+        {
+          "word": "server",
+          "start": 11.837,
+          "end": 12.278
+        },
+        {
+          "word": "sekaligus,",
+          "start": 12.278,
+          "end": 12.939
+        },
+        {
+          "word": "dan",
+          "start": 12.939,
+          "end": 13.511
+        },
+        {
+          "word": "Control",
+          "start": 13.511,
+          "end": 14.025
+        },
+        {
+          "word": "Tab",
+          "start": 14.025,
+          "end": 14.246
+        },
+        {
+          "word": "buat",
+          "start": 14.246,
+          "end": 14.539
+        },
+        {
+          "word": "pindah",
+          "start": 14.539,
+          "end": 14.98
+        },
+        {
+          "word": "antar",
+          "start": 14.98,
+          "end": 15.348
+        },
+        {
+          "word": "server",
+          "start": 15.348,
+          "end": 15.788
+        },
+        {
+          "word": "secepat",
+          "start": 15.788,
+          "end": 16.303
+        },
+        {
+          "word": "kilat.",
+          "start": 16.303,
+          "end": 16.67
+        }
+      ]
+    },
+    {
+      "id": "s6-outro",
+      "title": "Outro",
+      "step": "SELESAI",
+      "audio": "audio/termius-pro/s6-outro.mp3",
+      "audioDuration": 9.912,
+      "duration": 10.262,
+      "startFrame": 2438,
+      "durationInFrames": 308,
+      "words": [
+        {
+          "word": "Gampang",
+          "start": 0.0,
+          "end": 0.501
+        },
+        {
+          "word": "dan",
+          "start": 0.501,
+          "end": 0.716
+        },
+        {
+          "word": "bikin",
+          "start": 0.716,
+          "end": 1.074
+        },
+        {
+          "word": "kerjaan",
+          "start": 1.074,
+          "end": 1.576
+        },
+        {
+          "word": "server",
+          "start": 1.576,
+          "end": 2.006
+        },
+        {
+          "word": "makin",
+          "start": 2.006,
+          "end": 2.364
+        },
+        {
+          "word": "sat-set",
+          "start": 2.364,
+          "end": 2.794
+        },
+        {
+          "word": "kan?",
+          "start": 2.794,
+          "end": 3.542
+        },
+        {
+          "word": "Save",
+          "start": 3.542,
+          "end": 3.829
+        },
+        {
+          "word": "video",
+          "start": 3.829,
+          "end": 4.187
+        },
+        {
+          "word": "ini",
+          "start": 4.187,
+          "end": 4.402
+        },
+        {
+          "word": "biar",
+          "start": 4.402,
+          "end": 4.688
+        },
+        {
+          "word": "nggak",
+          "start": 4.688,
+          "end": 5.046
+        },
+        {
+          "word": "lupa",
+          "start": 5.046,
+          "end": 5.333
+        },
+        {
+          "word": "command",
+          "start": 5.333,
+          "end": 5.834
+        },
+        {
+          "word": "dan",
+          "start": 5.834,
+          "end": 6.049
+        },
+        {
+          "word": "shortcut-nya,",
+          "start": 6.049,
+          "end": 7.19
+        },
+        {
+          "word": "dan",
+          "start": 7.19,
+          "end": 7.405
+        },
+        {
+          "word": "follow",
+          "start": 7.405,
+          "end": 7.835
+        },
+        {
+          "word": "@rhmtofc",
+          "start": 7.835,
+          "end": 8.336
+        },
+        {
+          "word": "untuk",
+          "start": 8.336,
+          "end": 8.694
+        },
+        {
+          "word": "tips",
+          "start": 8.694,
+          "end": 8.981
+        },
+        {
+          "word": "server",
+          "start": 8.981,
+          "end": 9.411
+        },
+        {
+          "word": "lainnya!",
+          "start": 9.411,
+          "end": 9.912
+        }
+      ]
+    }
+  ]
+}

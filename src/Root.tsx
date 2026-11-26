@@ -40,9 +40,18 @@ import {ERekapKineticTeaser, TEASER_TOTAL_FRAMES} from './kinetic/ERekapKineticT
 import {ERekapShowreel, SHOWREEL_TOTAL_FRAMES} from './showreel/ERekapShowreel';
 import {ERekapKineticTypography, KINETIC_TOTAL_FRAMES} from './typography/ERekapKineticTypography';
 import {TermiusTikTok, TOTAL as TERMIUS_TOTAL} from './TermiusTikTok';
+import {TermiusProVideo, TERMIUS_PRO_FPS, TERMIUS_PRO_TOTAL_FRAMES} from './termius/TermiusProVideo';
 
 export const Root: React.FC = () => (
   <>
+    <Composition
+      id="TermiusPro"
+      component={TermiusProVideo}
+      width={1080}
+      height={1920}
+      fps={TERMIUS_PRO_FPS}
+      durationInFrames={TERMIUS_PRO_TOTAL_FRAMES}
+    />
     <Composition
       id="BeyondTheNames"
       component={BeyondTheNamesVideo}
