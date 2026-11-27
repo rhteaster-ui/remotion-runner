@@ -42,9 +42,18 @@ import {ERekapKineticTypography, KINETIC_TOTAL_FRAMES} from './typography/ERekap
 import {TermiusTikTok, TOTAL as TERMIUS_TOTAL} from './TermiusTikTok';
 import {TermiusProVideo, TERMIUS_PRO_FPS, TERMIUS_PRO_TOTAL_FRAMES} from './termius/TermiusProVideo';
 import {ShinaPovVideo, SHINA_POV_FPS, SHINA_POV_TOTAL_FRAMES, SHINA_POV_W, SHINA_POV_H} from './shina-pov/ShinaPovVideo';
+import {ElainaCloudPromoVideo, ELAINA_FPS, ELAINA_TOTAL_FRAMES, ELAINA_W, ELAINA_H} from './elainacloud/ElainaCloudPromoVideo';
 
 export const Root: React.FC = () => (
   <>
+    <Composition
+      id="ElainaCloudPanel"
+      component={ElainaCloudPromoVideo}
+      width={ELAINA_W}
+      height={ELAINA_H}
+      fps={ELAINA_FPS}
+      durationInFrames={ELAINA_TOTAL_FRAMES}
+    />
     <Composition
       id="ShinaPOV"
       component={ShinaPovVideo}

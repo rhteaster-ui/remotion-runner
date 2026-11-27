@@ -1,0 +1,1036 @@
+{
+  "project": "ElainaCloudPanelPromo",
+  "version": "3.1",
+  "focus": "Panel Pterodactyl (Bot WhatsApp Baileys, Discord, Node.js, Python, Java, PHP)",
+  "brand": {
+    "name": "Elaina Cloud",
+    "domain": "elainacloud.my.id",
+    "tagline": "Panel Pterodactyl Murah & Free — Aktivasi Instan < 30 Detik, Online 24/7",
+    "logoHighRes": "images/brand/logo.png",
+    "logoCompact": "images/brand/logo-72.webp"
+  },
+  "designSystem": {
+    "theme": "Clean Light Slate / macOS Cloud Aesthetic",
+    "background": "#F8FAFC",
+    "surface": "#FFFFFF",
+    "inkPrimary": "#0F172A",
+    "inkSecondary": "#334155",
+    "border": "#E2E8F0",
+    "accentBlue": "#2563EB",
+    "accentEmerald": "#10B981",
+    "fontHeading": "Plus Jakarta Sans",
+    "fontMono": "JetBrains Mono"
+  },
+  "videoSpec": {
+    "fps": 30,
+    "landscape": {
+      "width": 1920,
+      "height": 1080
+    },
+    "vertical": {
+      "width": 1080,
+      "height": 1920
+    },
+    "totalDurationSeconds": 76.367,
+    "totalFrames": 2291
+  },
+  "liveStats": [
+    {
+      "value": "1099+",
+      "label": "Pengguna Aktif Terdaftar"
+    },
+    {
+      "value": "63+",
+      "label": "Server Deployed 24/7"
+    },
+    {
+      "value": "< 30s",
+      "label": "Proses Aktivasi Instan"
+    }
+  ],
+  "pricing": {
+    "panelPterodactyl": [
+      {
+        "name": "Trial Free",
+        "price": "Gratis",
+        "period": "/ 3 hari",
+        "ram": "512 MB RAM",
+        "cpu": "18% Core",
+        "ssd": "1.5 GB SSD",
+        "badge": "TRIAL 3 HARI"
+      },
+      {
+        "name": "Elaina 1",
+        "price": "Rp 5.000",
+        "period": "/ 30 hari",
+        "ram": "1 GB RAM",
+        "cpu": "36% Core",
+        "ssd": "3 GB SSD",
+        "badge": "PALING POPULER"
+      },
+      {
+        "name": "Elaina 2",
+        "price": "Rp 10.000",
+        "period": "/ 30 hari",
+        "ram": "2 GB RAM",
+        "cpu": "60% Core",
+        "ssd": "6 GB SSD"
+      },
+      {
+        "name": "Elaina 3",
+        "price": "Rp 15.000",
+        "period": "/ 30 hari",
+        "ram": "4 GB RAM",
+        "cpu": "90% Core",
+        "ssd": "12 GB SSD"
+      },
+      {
+        "name": "Elaina 4",
+        "price": "Rp 20.000",
+        "period": "/ 30 hari",
+        "ram": "8 GB RAM",
+        "cpu": "120% Core",
+        "ssd": "24 GB SSD"
+      },
+      {
+        "name": "Elaina 5",
+        "price": "Rp 25.000",
+        "period": "/ 30 hari",
+        "ram": "10 GB RAM",
+        "cpu": "150% Core",
+        "ssd": "30 GB SSD"
+      }
+    ]
+  },
+  "nodePrimary": {
+    "region": "Frankfurt, Germany",
+    "flag": "images/brand/de.png",
+    "cpu": "Intel Xeon Skylake 8-Core",
+    "ram": "23.5 GB RAM",
+    "disk": "300 GB Virtual Disk",
+    "ping": "2–3.3 ms (Google/CF DNS)",
+    "useCase": "Node Khusus Panel Pterodactyl & Bot 24/7"
+  },
+  "scenes": [
+    {
+      "id": "s1-hook",
+      "title": "Hook — Bot Sering Mati? Kenalin Panel Elaina Cloud",
+      "sfx": [
+        "whoosh.mp3",
+        "pop.mp3"
+      ],
+      "visual": "Kinetic headline ('BOT SERING MATI?', 'GRATIS 3 HARI -> RP 5.000/BLN') + logo.png + macOS browser window menampilkan panel_desktop_top.png dengan 3D tilt.",
+      "voiceoverScript": "Bot WhatsApp atau Discord kamu sering mati karena server lemot dan mahal? Kenalin, Panel Elaina Cloud—online 24 jam nonstop mulai dari gratis 3 hari, lanjut cuma Rp 5.000 per bulan!",
+      "ttsText": "Bot WhatsApp atau Discord kamu sering mati karena server lemot dan mahal? Kenalin, Panel Elaina Cloud, online dua puluh empat jam nonstop mulai dari gratis tiga hari, lanjut cuma lima ribu rupiah per bulan!",
+      "audio": "audio/voiceover/s1-hook.mp3",
+      "audioDuration": 12.696,
+      "startSec": 0.0,
+      "endSec": 13.046,
+      "durationSec": 13.046,
+      "startFrame": 0,
+      "durationInFrames": 391,
+      "wordTimings": [
+        {
+          "word": "Bot",
+          "start": 0.0,
+          "end": 0.214
+        },
+        {
+          "word": "WhatsApp",
+          "start": 0.214,
+          "end": 0.785
+        },
+        {
+          "word": "atau",
+          "start": 0.785,
+          "end": 1.071
+        },
+        {
+          "word": "Discord",
+          "start": 1.071,
+          "end": 1.571
+        },
+        {
+          "word": "kamu",
+          "start": 1.571,
+          "end": 1.856
+        },
+        {
+          "word": "sering",
+          "start": 1.856,
+          "end": 2.284
+        },
+        {
+          "word": "mati",
+          "start": 2.284,
+          "end": 2.57
+        },
+        {
+          "word": "karena",
+          "start": 2.57,
+          "end": 2.998
+        },
+        {
+          "word": "server",
+          "start": 2.998,
+          "end": 3.427
+        },
+        {
+          "word": "lemot",
+          "start": 3.427,
+          "end": 3.784
+        },
+        {
+          "word": "dan",
+          "start": 3.784,
+          "end": 4.409
+        },
+        {
+          "word": "mahal?",
+          "start": 4.409,
+          "end": 4.838
+        },
+        {
+          "word": "Kenalin,",
+          "start": 4.838,
+          "end": 5.741
+        },
+        {
+          "word": "Panel",
+          "start": 5.741,
+          "end": 6.098
+        },
+        {
+          "word": "Elaina",
+          "start": 6.098,
+          "end": 6.905
+        },
+        {
+          "word": "Cloud—online",
+          "start": 6.905,
+          "end": 7.762
+        },
+        {
+          "word": "24",
+          "start": 7.762,
+          "end": 7.904
+        },
+        {
+          "word": "jam",
+          "start": 7.904,
+          "end": 8.119
+        },
+        {
+          "word": "nonstop",
+          "start": 8.119,
+          "end": 8.618
+        },
+        {
+          "word": "mulai",
+          "start": 8.618,
+          "end": 8.975
+        },
+        {
+          "word": "dari",
+          "start": 8.975,
+          "end": 9.261
+        },
+        {
+          "word": "gratis",
+          "start": 9.261,
+          "end": 9.689
+        },
+        {
+          "word": "3",
+          "start": 9.689,
+          "end": 9.832
+        },
+        {
+          "word": "hari,",
+          "start": 9.832,
+          "end": 10.516
+        },
+        {
+          "word": "lanjut",
+          "start": 10.516,
+          "end": 10.945
+        },
+        {
+          "word": "cuma",
+          "start": 10.945,
+          "end": 11.23
+        },
+        {
+          "word": "Rp",
+          "start": 11.23,
+          "end": 11.373
+        },
+        {
+          "word": "5.000",
+          "start": 11.373,
+          "end": 11.73
+        },
+        {
+          "word": "per",
+          "start": 11.73,
+          "end": 11.944
+        },
+        {
+          "word": "bulan!",
+          "start": 11.944,
+          "end": 12.372
+        }
+      ]
+    },
+    {
+      "id": "s2-trust-speed",
+      "title": "Social Proof & Aktivasi Instan < 30 Detik",
+      "sfx": [
+        "blip.mp3",
+        "ding.mp3"
+      ],
+      "visual": "3 kartu metrik spring-in: 1099+ Pengguna Aktif, 63+ Server Deployed 24/7, Aktivasi Otomatis < 30 Detik + home_desktop_top.png.",
+      "voiceoverScript": "Sudah dipercaya lebih dari 1.099 pengguna aktif, dengan aktivasi panel otomatis kurang dari 30 detik.",
+      "ttsText": "Sudah dipercaya lebih dari seribu sembilan puluh sembilan pengguna aktif, dengan aktivasi panel otomatis kurang dari tiga puluh detik.",
+      "audio": "audio/voiceover/s2-trust-speed.mp3",
+      "audioDuration": 7.344,
+      "startSec": 13.046,
+      "endSec": 20.74,
+      "durationSec": 7.694,
+      "startFrame": 391,
+      "durationInFrames": 231,
+      "wordTimings": [
+        {
+          "word": "Sudah",
+          "start": 0.0,
+          "end": 0.378
+        },
+        {
+          "word": "dipercaya",
+          "start": 0.378,
+          "end": 1.059
+        },
+        {
+          "word": "lebih",
+          "start": 1.059,
+          "end": 1.437
+        },
+        {
+          "word": "dari",
+          "start": 1.437,
+          "end": 1.74
+        },
+        {
+          "word": "1.099",
+          "start": 1.74,
+          "end": 2.118
+        },
+        {
+          "word": "pengguna",
+          "start": 2.118,
+          "end": 2.723
+        },
+        {
+          "word": "aktif,",
+          "start": 2.723,
+          "end": 3.177
+        },
+        {
+          "word": "dengan",
+          "start": 3.177,
+          "end": 4.065
+        },
+        {
+          "word": "aktivasi",
+          "start": 4.065,
+          "end": 4.67
+        },
+        {
+          "word": "panel",
+          "start": 4.67,
+          "end": 5.048
+        },
+        {
+          "word": "otomatis",
+          "start": 5.048,
+          "end": 5.654
+        },
+        {
+          "word": "kurang",
+          "start": 5.654,
+          "end": 6.107
+        },
+        {
+          "word": "dari",
+          "start": 6.107,
+          "end": 6.41
+        },
+        {
+          "word": "30",
+          "start": 6.41,
+          "end": 6.561
+        },
+        {
+          "word": "detik.",
+          "start": 6.561,
+          "end": 7.015
+        }
+      ]
+    },
+    {
+      "id": "s3-panel-pricing",
+      "title": "Showcase Paket Panel Pterodactyl (Trial Free s/d Elaina 5)",
+      "sfx": [
+        "whoosh_short.mp3",
+        "click.mp3",
+        "pop.mp3"
+      ],
+      "visual": "Horizontal sliding pricing cards: Trial Free (512 MB Gratis), Elaina 1 (1 GB Rp 5rb), Elaina 2 (2 GB Rp 10rb), Elaina 3 (4 GB Rp 15rb), Elaina 4 (8 GB Rp 20rb), Elaina 5 (10 GB Rp 25rb) + home_pricing_panel.png.",
+      "voiceoverScript": "Coba dulu lewat Trial Free 512 MB gratis, atau langsung pilih Elaina 1 satu giga Rp 5.000 hingga Elaina 5 sepuluh giga Rp 25.000 per bulan!",
+      "ttsText": "Coba dulu lewat Trial Free lima ratus dua belas megabyte gratis, atau langsung pilih Elaina satu, satu giga lima ribu rupiah, hingga Elaina lima, sepuluh giga dua puluh lima ribu per bulan!",
+      "audio": "audio/voiceover/s3-panel-pricing.mp3",
+      "audioDuration": 10.176,
+      "startSec": 20.74,
+      "endSec": 31.266,
+      "durationSec": 10.526,
+      "startFrame": 622,
+      "durationInFrames": 316,
+      "wordTimings": [
+        {
+          "word": "Coba",
+          "start": 0.0,
+          "end": 0.344
+        },
+        {
+          "word": "dulu",
+          "start": 0.344,
+          "end": 0.687
+        },
+        {
+          "word": "lewat",
+          "start": 0.687,
+          "end": 1.117
+        },
+        {
+          "word": "Trial",
+          "start": 1.117,
+          "end": 1.546
+        },
+        {
+          "word": "Free",
+          "start": 1.546,
+          "end": 1.89
+        },
+        {
+          "word": "512",
+          "start": 1.89,
+          "end": 2.147
+        },
+        {
+          "word": "MB",
+          "start": 2.147,
+          "end": 2.319
+        },
+        {
+          "word": "gratis,",
+          "start": 2.319,
+          "end": 2.92
+        },
+        {
+          "word": "atau",
+          "start": 2.92,
+          "end": 3.264
+        },
+        {
+          "word": "langsung",
+          "start": 3.264,
+          "end": 3.951
+        },
+        {
+          "word": "pilih",
+          "start": 3.951,
+          "end": 4.381
+        },
+        {
+          "word": "Elaina",
+          "start": 4.381,
+          "end": 4.896
+        },
+        {
+          "word": "1",
+          "start": 4.896,
+          "end": 5.068
+        },
+        {
+          "word": "satu",
+          "start": 5.068,
+          "end": 5.411
+        },
+        {
+          "word": "giga",
+          "start": 5.411,
+          "end": 5.755
+        },
+        {
+          "word": "Rp",
+          "start": 5.755,
+          "end": 5.927
+        },
+        {
+          "word": "5.000",
+          "start": 5.927,
+          "end": 6.356
+        },
+        {
+          "word": "hingga",
+          "start": 6.356,
+          "end": 7.084
+        },
+        {
+          "word": "Elaina",
+          "start": 7.084,
+          "end": 7.599
+        },
+        {
+          "word": "5",
+          "start": 7.599,
+          "end": 7.771
+        },
+        {
+          "word": "sepuluh",
+          "start": 7.771,
+          "end": 8.372
+        },
+        {
+          "word": "giga",
+          "start": 8.372,
+          "end": 8.716
+        },
+        {
+          "word": "Rp",
+          "start": 8.716,
+          "end": 8.888
+        },
+        {
+          "word": "25.000",
+          "start": 8.888,
+          "end": 9.403
+        },
+        {
+          "word": "per",
+          "start": 9.403,
+          "end": 9.661
+        },
+        {
+          "word": "bulan!",
+          "start": 9.661,
+          "end": 10.176
+        }
+      ]
+    },
+    {
+      "id": "s4-panel-features",
+      "title": "Fitur Lengkap Panel Pterodactyl (Baileys, Multi-Runtime, SFTP)",
+      "sfx": [
+        "key1.mp3",
+        "key2.mp3",
+        "enter.mp3",
+        "connect.mp3"
+      ],
+      "visual": "Mockup Web Console & File Manager SFTP + ikon whatsapp.svg + badge runtime (Node.js, Python, Java, PHP) + badge proteksi Anti-DDoS & Uptime 99.9%.",
+      "voiceoverScript": "Sudah mendukung bot Baileys, Python, Java, dan PHP—lengkap dengan Web Console, File Manager SFTP, proteksi Anti-DDoS, serta garansi uptime 99,9 persen.",
+      "ttsText": "Sudah mendukung bot Baileys, Python, Java, dan P H P, lengkap dengan Web Console, File Manager S F T P, proteksi Anti D DoS, serta garansi uptime sembilan puluh sembilan koma sembilan persen.",
+      "audio": "audio/voiceover/s4-panel-features.mp3",
+      "audioDuration": 13.368,
+      "startSec": 31.266,
+      "endSec": 44.984,
+      "durationSec": 13.718,
+      "startFrame": 938,
+      "durationInFrames": 412,
+      "wordTimings": [
+        {
+          "word": "Sudah",
+          "start": 0.0,
+          "end": 0.428
+        },
+        {
+          "word": "mendukung",
+          "start": 0.428,
+          "end": 1.198
+        },
+        {
+          "word": "bot",
+          "start": 1.198,
+          "end": 1.455
+        },
+        {
+          "word": "Baileys,",
+          "start": 1.455,
+          "end": 2.656
+        },
+        {
+          "word": "Python,",
+          "start": 2.656,
+          "end": 3.256
+        },
+        {
+          "word": "Java,",
+          "start": 3.256,
+          "end": 3.683
+        },
+        {
+          "word": "dan",
+          "start": 3.683,
+          "end": 4.311
+        },
+        {
+          "word": "PHP—lengkap",
+          "start": 4.311,
+          "end": 5.252
+        },
+        {
+          "word": "dengan",
+          "start": 5.252,
+          "end": 6.115
+        },
+        {
+          "word": "Web",
+          "start": 6.115,
+          "end": 6.372
+        },
+        {
+          "word": "Console,",
+          "start": 6.372,
+          "end": 7.057
+        },
+        {
+          "word": "File",
+          "start": 7.057,
+          "end": 7.811
+        },
+        {
+          "word": "Manager",
+          "start": 7.811,
+          "end": 8.41
+        },
+        {
+          "word": "SFTP,",
+          "start": 8.41,
+          "end": 8.838
+        },
+        {
+          "word": "proteksi",
+          "start": 8.838,
+          "end": 9.753
+        },
+        {
+          "word": "Anti-DDoS,",
+          "start": 9.753,
+          "end": 10.609
+        },
+        {
+          "word": "serta",
+          "start": 10.609,
+          "end": 11.037
+        },
+        {
+          "word": "garansi",
+          "start": 11.037,
+          "end": 11.636
+        },
+        {
+          "word": "uptime",
+          "start": 11.636,
+          "end": 12.149
+        },
+        {
+          "word": "99,9",
+          "start": 12.149,
+          "end": 12.492
+        },
+        {
+          "word": "persen.",
+          "start": 12.492,
+          "end": 13.091
+        }
+      ]
+    },
+    {
+      "id": "s5-node-frankfurt",
+      "title": "Node Khusus Panel & Bot Frankfurt",
+      "sfx": [
+        "progress.mp3",
+        "ding.mp3"
+      ],
+      "visual": "Showcase status_frankfurt_top.png + bendera de.png + badge Intel Xeon 8-Core, ping 2–3.3 ms, dan status Online 24/7.",
+      "voiceoverScript": "Seluruh panel berjalan di node khusus Frankfurt berprosesor Intel Xeon 8-Core agar bot tetap stabil dan responsif sepanjang hari.",
+      "ttsText": "Seluruh panel berjalan di node khusus Frankfurt berprosesor Intel Xeon delapan core agar bot tetap stabil dan responsif sepanjang hari.",
+      "audio": "audio/voiceover/s5-node-frankfurt.mp3",
+      "audioDuration": 9.144,
+      "startSec": 44.984,
+      "endSec": 54.478,
+      "durationSec": 9.494,
+      "startFrame": 1350,
+      "durationInFrames": 285,
+      "wordTimings": [
+        {
+          "word": "Seluruh",
+          "start": 0.0,
+          "end": 0.529
+        },
+        {
+          "word": "panel",
+          "start": 0.529,
+          "end": 0.907
+        },
+        {
+          "word": "berjalan",
+          "start": 0.907,
+          "end": 1.512
+        },
+        {
+          "word": "di",
+          "start": 1.512,
+          "end": 1.663
+        },
+        {
+          "word": "node",
+          "start": 1.663,
+          "end": 1.965
+        },
+        {
+          "word": "khusus",
+          "start": 1.965,
+          "end": 2.418
+        },
+        {
+          "word": "Frankfurt",
+          "start": 2.418,
+          "end": 3.099
+        },
+        {
+          "word": "berprosesor",
+          "start": 3.099,
+          "end": 3.93
+        },
+        {
+          "word": "Intel",
+          "start": 3.93,
+          "end": 4.308
+        },
+        {
+          "word": "Xeon",
+          "start": 4.308,
+          "end": 4.61
+        },
+        {
+          "word": "8-Core",
+          "start": 4.61,
+          "end": 5.064
+        },
+        {
+          "word": "agar",
+          "start": 5.064,
+          "end": 5.826
+        },
+        {
+          "word": "bot",
+          "start": 5.826,
+          "end": 6.053
+        },
+        {
+          "word": "tetap",
+          "start": 6.053,
+          "end": 6.431
+        },
+        {
+          "word": "stabil",
+          "start": 6.431,
+          "end": 6.884
+        },
+        {
+          "word": "dan",
+          "start": 6.884,
+          "end": 7.111
+        },
+        {
+          "word": "responsif",
+          "start": 7.111,
+          "end": 7.791
+        },
+        {
+          "word": "sepanjang",
+          "start": 7.791,
+          "end": 8.472
+        },
+        {
+          "word": "hari.",
+          "start": 8.472,
+          "end": 8.849
+        }
+      ]
+    },
+    {
+      "id": "s6-qris-deploy",
+      "title": "3 Langkah Deploy & QRIS Otomatis 24/7",
+      "sfx": [
+        "click.mp3",
+        "whoosh_short.mp3",
+        "success.mp3"
+      ],
+      "visual": "Animated 3-step stepper + traveling SVG beam: 01 Daftar Gratis -> 02 Top Up QRIS (Dana, GoPay, OVO, ShopeePay, BCA) -> 03 Deploy Panel < 30s.",
+      "voiceoverScript": "Mulainya mudah: daftar gratis, isi saldo otomatis via QRIS atau BCA kapan saja, pilih paket panelmu, dan server langsung aktif!",
+      "ttsText": "Mulainya mudah: daftar gratis, isi saldo otomatis via QRIS atau B C A kapan saja, pilih paket panelmu, dan server langsung aktif!",
+      "audio": "audio/voiceover/s6-qris-deploy.mp3",
+      "audioDuration": 10.176,
+      "startSec": 54.478,
+      "endSec": 65.004,
+      "durationSec": 10.526,
+      "startFrame": 1634,
+      "durationInFrames": 316,
+      "wordTimings": [
+        {
+          "word": "Mulainya",
+          "start": 0.0,
+          "end": 0.64
+        },
+        {
+          "word": "mudah:",
+          "start": 0.64,
+          "end": 1.119
+        },
+        {
+          "word": "daftar",
+          "start": 1.119,
+          "end": 1.948
+        },
+        {
+          "word": "gratis,",
+          "start": 1.948,
+          "end": 2.508
+        },
+        {
+          "word": "isi",
+          "start": 2.508,
+          "end": 2.95
+        },
+        {
+          "word": "saldo",
+          "start": 2.95,
+          "end": 3.35
+        },
+        {
+          "word": "otomatis",
+          "start": 3.35,
+          "end": 3.99
+        },
+        {
+          "word": "via",
+          "start": 3.99,
+          "end": 4.229
+        },
+        {
+          "word": "QRIS",
+          "start": 4.229,
+          "end": 4.549
+        },
+        {
+          "word": "atau",
+          "start": 4.549,
+          "end": 4.869
+        },
+        {
+          "word": "BCA",
+          "start": 4.869,
+          "end": 5.109
+        },
+        {
+          "word": "kapan",
+          "start": 5.109,
+          "end": 5.508
+        },
+        {
+          "word": "saja,",
+          "start": 5.508,
+          "end": 5.908
+        },
+        {
+          "word": "pilih",
+          "start": 5.908,
+          "end": 6.308
+        },
+        {
+          "word": "paket",
+          "start": 6.308,
+          "end": 7.171
+        },
+        {
+          "word": "panelmu,",
+          "start": 7.171,
+          "end": 7.81
+        },
+        {
+          "word": "dan",
+          "start": 7.81,
+          "end": 8.05
+        },
+        {
+          "word": "server",
+          "start": 8.05,
+          "end": 8.769
+        },
+        {
+          "word": "langsung",
+          "start": 8.769,
+          "end": 9.408
+        },
+        {
+          "word": "aktif!",
+          "start": 9.408,
+          "end": 9.888
+        }
+      ]
+    },
+    {
+      "id": "s7-cta",
+      "title": "Outro & CTA — elainacloud.my.id/panel",
+      "sfx": [
+        "impact.mp3",
+        "success.mp3"
+      ],
+      "visual": "Center hero lockup: logo.png + glowing URL pill `elainacloud.my.id/panel` + mobile mockup (panel_mobile_top.png) + badge 'Klaim Trial Panel Gratis 3 Hari'.",
+      "voiceoverScript": "Nggak perlu nunggu server mahal buat bikin bot jalan 24 jam. Yuk daftar gratis sekarang dan klaim trial panel 3 harimu langsung di elainacloud.my.id!",
+      "ttsText": "Nggak perlu nunggu server mahal buat bikin bot kamu jalan dua puluh empat jam. Yuk daftar gratis sekarang, dan klaim trial panel tiga harimu langsung di elainacloud dot my dot id!",
+      "audio": "audio/voiceover/s7-cta.mp3",
+      "audioDuration": 10.968,
+      "startSec": 65.004,
+      "endSec": 76.322,
+      "durationSec": 11.318,
+      "startFrame": 1950,
+      "durationInFrames": 340,
+      "wordTimings": [
+        {
+          "word": "Nggak",
+          "start": 0.266,
+          "end": 0.654
+        },
+        {
+          "word": "perlu",
+          "start": 0.654,
+          "end": 1.041
+        },
+        {
+          "word": "nunggu",
+          "start": 1.041,
+          "end": 1.506
+        },
+        {
+          "word": "server",
+          "start": 1.506,
+          "end": 1.97
+        },
+        {
+          "word": "mahal",
+          "start": 1.97,
+          "end": 2.358
+        },
+        {
+          "word": "buat",
+          "start": 2.358,
+          "end": 2.667
+        },
+        {
+          "word": "bikin",
+          "start": 2.667,
+          "end": 3.055
+        },
+        {
+          "word": "bot",
+          "start": 3.055,
+          "end": 3.287
+        },
+        {
+          "word": "jalan",
+          "start": 3.287,
+          "end": 3.674
+        },
+        {
+          "word": "24",
+          "start": 3.674,
+          "end": 3.829
+        },
+        {
+          "word": "jam.",
+          "start": 3.829,
+          "end": 4.552
+        },
+        {
+          "word": "Yuk",
+          "start": 4.552,
+          "end": 4.784
+        },
+        {
+          "word": "daftar",
+          "start": 4.784,
+          "end": 5.249
+        },
+        {
+          "word": "gratis",
+          "start": 5.249,
+          "end": 5.714
+        },
+        {
+          "word": "sekarang",
+          "start": 5.714,
+          "end": 6.333
+        },
+        {
+          "word": "dan",
+          "start": 6.333,
+          "end": 6.566
+        },
+        {
+          "word": "klaim",
+          "start": 6.566,
+          "end": 6.953
+        },
+        {
+          "word": "trial",
+          "start": 6.953,
+          "end": 7.34
+        },
+        {
+          "word": "panel",
+          "start": 7.34,
+          "end": 7.727
+        },
+        {
+          "word": "3",
+          "start": 7.727,
+          "end": 7.882
+        },
+        {
+          "word": "harimu",
+          "start": 7.882,
+          "end": 8.347
+        },
+        {
+          "word": "langsung",
+          "start": 8.347,
+          "end": 8.967
+        },
+        {
+          "word": "di",
+          "start": 8.967,
+          "end": 9.122
+        },
+        {
+          "word": "elainacloud.my.id!",
+          "start": 9.122,
+          "end": 10.516
+        }
+      ]
+    }
+  ],
+  "voice": "Leda"
+}
