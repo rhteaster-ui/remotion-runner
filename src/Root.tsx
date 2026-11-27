@@ -43,9 +43,18 @@ import {TermiusTikTok, TOTAL as TERMIUS_TOTAL} from './TermiusTikTok';
 import {TermiusProVideo, TERMIUS_PRO_FPS, TERMIUS_PRO_TOTAL_FRAMES} from './termius/TermiusProVideo';
 import {ShinaPovVideo, SHINA_POV_FPS, SHINA_POV_TOTAL_FRAMES, SHINA_POV_W, SHINA_POV_H} from './shina-pov/ShinaPovVideo';
 import {ElainaCloudPromoVideo, ELAINA_FPS, ELAINA_TOTAL_FRAMES, ELAINA_W, ELAINA_H} from './elainacloud/ElainaCloudPromoVideo';
+import {KarhutlaCinemaVideo, KARHUTLA_FPS, KARHUTLA_TOTAL_FRAMES, KARHUTLA_W, KARHUTLA_H} from './karhutla/KarhutlaCinemaVideo';
 
 export const Root: React.FC = () => (
   <>
+    <Composition
+      id="KarhutlaCinema"
+      component={KarhutlaCinemaVideo}
+      width={KARHUTLA_W}
+      height={KARHUTLA_H}
+      fps={KARHUTLA_FPS}
+      durationInFrames={KARHUTLA_TOTAL_FRAMES}
+    />
     <Composition
       id="ElainaCloudPanel"
       component={ElainaCloudPromoVideo}

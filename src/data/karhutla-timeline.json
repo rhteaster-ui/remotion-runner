@@ -1,0 +1,530 @@
+{
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "voice": "Charon",
+  "totalSec": 76.567,
+  "totalFrames": 2297,
+  "scenes": [
+    {
+      "id": "k1-canopy",
+      "title": "Di Balik Kabut Nusantara",
+      "tag": "LAPORAN LINGKUNGAN · NOVEMBER 2026",
+      "audio": "audio/karhutla/k1-canopy.mp3",
+      "audioDuration": 14.376,
+      "durationSec": 15.476,
+      "startFrame": 0,
+      "durationInFrames": 464,
+      "display": "Saat sebagian besar wilayah Indonesia mulai basah oleh hujan akhir November, di balik cakrawala timur, bara belum sepenuhnya padam.",
+      "wordTimings": [
+        {
+          "word": "Saat",
+          "start": 0.301,
+          "end": 0.698
+        },
+        {
+          "word": "sebagian",
+          "start": 0.698,
+          "end": 1.492
+        },
+        {
+          "word": "besar",
+          "start": 1.492,
+          "end": 1.988
+        },
+        {
+          "word": "wilayah",
+          "start": 1.988,
+          "end": 2.683
+        },
+        {
+          "word": "Indonesia",
+          "start": 2.683,
+          "end": 3.576
+        },
+        {
+          "word": "mulai",
+          "start": 3.576,
+          "end": 4.406
+        },
+        {
+          "word": "basah",
+          "start": 4.406,
+          "end": 4.902
+        },
+        {
+          "word": "oleh",
+          "start": 4.902,
+          "end": 5.299
+        },
+        {
+          "word": "hujan",
+          "start": 5.299,
+          "end": 5.795
+        },
+        {
+          "word": "akhir",
+          "start": 5.795,
+          "end": 6.291
+        },
+        {
+          "word": "November,",
+          "start": 6.291,
+          "end": 7.184
+        },
+        {
+          "word": "di",
+          "start": 7.184,
+          "end": 8.182
+        },
+        {
+          "word": "balik",
+          "start": 8.182,
+          "end": 8.922
+        },
+        {
+          "word": "cakrawala",
+          "start": 8.922,
+          "end": 9.815
+        },
+        {
+          "word": "timur,",
+          "start": 9.815,
+          "end": 11.017
+        },
+        {
+          "word": "bara",
+          "start": 11.017,
+          "end": 11.414
+        },
+        {
+          "word": "belum",
+          "start": 11.414,
+          "end": 12.206
+        },
+        {
+          "word": "sepenuhnya",
+          "start": 12.206,
+          "end": 13.198
+        },
+        {
+          "word": "padam.",
+          "start": 13.198,
+          "end": 13.794
+        }
+      ]
+    },
+    {
+      "id": "k2-hotspot",
+      "title": "437 Titik Panas",
+      "tag": "SIPONGI+ KEMENHUT · 27 NOV 2026",
+      "audio": "audio/karhutla/k2-hotspot.mp3",
+      "audioDuration": 13.344,
+      "durationSec": 14.444,
+      "startFrame": 464,
+      "durationInFrames": 433,
+      "display": "Data pemantauan satelit SiPongi Kemenhut per 27 November mencatat 437 titik panas masih terdeteksi di seluruh Indonesia.",
+      "wordTimings": [
+        {
+          "word": "Data",
+          "start": 0.31,
+          "end": 0.739
+        },
+        {
+          "word": "pemantauan",
+          "start": 0.739,
+          "end": 1.811
+        },
+        {
+          "word": "satelit",
+          "start": 1.811,
+          "end": 2.561
+        },
+        {
+          "word": "SiPongi",
+          "start": 2.561,
+          "end": 3.311
+        },
+        {
+          "word": "Kemenhut",
+          "start": 3.311,
+          "end": 4.169
+        },
+        {
+          "word": "per",
+          "start": 4.169,
+          "end": 4.796
+        },
+        {
+          "word": "27",
+          "start": 4.796,
+          "end": 5.011
+        },
+        {
+          "word": "November",
+          "start": 5.011,
+          "end": 5.868
+        },
+        {
+          "word": "mencatat",
+          "start": 5.868,
+          "end": 7.199
+        },
+        {
+          "word": "437",
+          "start": 7.199,
+          "end": 7.704
+        },
+        {
+          "word": "titik",
+          "start": 7.704,
+          "end": 8.24
+        },
+        {
+          "word": "panas",
+          "start": 8.24,
+          "end": 8.776
+        },
+        {
+          "word": "masih",
+          "start": 8.776,
+          "end": 9.312
+        },
+        {
+          "word": "terdeteksi",
+          "start": 9.312,
+          "end": 10.734
+        },
+        {
+          "word": "di",
+          "start": 10.734,
+          "end": 10.948
+        },
+        {
+          "word": "seluruh",
+          "start": 10.948,
+          "end": 11.699
+        },
+        {
+          "word": "Indonesia.",
+          "start": 11.699,
+          "end": 12.771
+        }
+      ]
+    },
+    {
+      "id": "k3-east",
+      "title": "Pergeseran ke Timur",
+      "tag": "CITRA SATELIT & SEBARAN HOTSPOT",
+      "audio": "audio/karhutla/k3-east.mp3",
+      "audioDuration": 14.064,
+      "durationSec": 15.164,
+      "startFrame": 898,
+      "durationInFrames": 455,
+      "display": "Titik api kini bergeser ke kawasan timur. Papua Selatan tertinggi hingga 222 titik, disusul Sulawesi Tenggara dan Maluku Utara.",
+      "wordTimings": [
+        {
+          "word": "Titik",
+          "start": 0.283,
+          "end": 0.823
+        },
+        {
+          "word": "api",
+          "start": 0.823,
+          "end": 1.147
+        },
+        {
+          "word": "kini",
+          "start": 1.147,
+          "end": 1.798
+        },
+        {
+          "word": "bergeser",
+          "start": 1.798,
+          "end": 2.662
+        },
+        {
+          "word": "ke",
+          "start": 2.662,
+          "end": 2.878
+        },
+        {
+          "word": "kawasan",
+          "start": 2.878,
+          "end": 3.634
+        },
+        {
+          "word": "timur.",
+          "start": 3.634,
+          "end": 4.282
+        },
+        {
+          "word": "Papua",
+          "start": 4.282,
+          "end": 4.822
+        },
+        {
+          "word": "Selatan",
+          "start": 4.822,
+          "end": 6.196
+        },
+        {
+          "word": "tertinggi",
+          "start": 6.196,
+          "end": 7.168
+        },
+        {
+          "word": "hingga",
+          "start": 7.168,
+          "end": 7.816
+        },
+        {
+          "word": "222",
+          "start": 7.816,
+          "end": 8.14
+        },
+        {
+          "word": "titik,",
+          "start": 8.14,
+          "end": 8.788
+        },
+        {
+          "word": "disusul",
+          "start": 8.788,
+          "end": 9.544
+        },
+        {
+          "word": "Sulawesi",
+          "start": 9.544,
+          "end": 10.855
+        },
+        {
+          "word": "Tenggara",
+          "start": 10.855,
+          "end": 11.718
+        },
+        {
+          "word": "dan",
+          "start": 11.718,
+          "end": 12.042
+        },
+        {
+          "word": "Maluku",
+          "start": 12.042,
+          "end": 12.874
+        },
+        {
+          "word": "Utara.",
+          "start": 12.874,
+          "end": 13.522
+        }
+      ]
+    },
+    {
+      "id": "k4-monsoon",
+      "title": "Ancaman Hidrometeorologi",
+      "tag": "PERINGATAN DINI BMKG & BNPB",
+      "audio": "audio/karhutla/k4-monsoon.mp3",
+      "audioDuration": 16.44,
+      "durationSec": 17.54,
+      "startFrame": 1353,
+      "durationInFrames": 526,
+      "display": "Penguatan Monsun Asia membawa peralihan musim hujan. Lahan bekas terbakar justru memicu ancaman baru: banjir bandang dan tanah longsor.",
+      "wordTimings": [
+        {
+          "word": "Penguatan",
+          "start": 0.0,
+          "end": 0.979
+        },
+        {
+          "word": "Monsun",
+          "start": 0.979,
+          "end": 2.017
+        },
+        {
+          "word": "Asia",
+          "start": 2.017,
+          "end": 2.452
+        },
+        {
+          "word": "membawa",
+          "start": 2.452,
+          "end": 3.398
+        },
+        {
+          "word": "peralihan",
+          "start": 3.398,
+          "end": 4.378
+        },
+        {
+          "word": "musim",
+          "start": 4.378,
+          "end": 4.922
+        },
+        {
+          "word": "hujan.",
+          "start": 4.922,
+          "end": 6.537
+        },
+        {
+          "word": "Lahan",
+          "start": 6.537,
+          "end": 7.407
+        },
+        {
+          "word": "bekas",
+          "start": 7.407,
+          "end": 7.951
+        },
+        {
+          "word": "terbakar",
+          "start": 7.951,
+          "end": 8.822
+        },
+        {
+          "word": "justru",
+          "start": 8.822,
+          "end": 9.475
+        },
+        {
+          "word": "memicu",
+          "start": 9.475,
+          "end": 10.128
+        },
+        {
+          "word": "ancaman",
+          "start": 10.128,
+          "end": 11.214
+        },
+        {
+          "word": "baru:",
+          "start": 11.214,
+          "end": 11.758
+        },
+        {
+          "word": "banjir",
+          "start": 11.758,
+          "end": 12.411
+        },
+        {
+          "word": "bandang",
+          "start": 12.411,
+          "end": 13.837
+        },
+        {
+          "word": "dan",
+          "start": 13.837,
+          "end": 14.163
+        },
+        {
+          "word": "tanah",
+          "start": 14.163,
+          "end": 15.041
+        },
+        {
+          "word": "longsor.",
+          "start": 15.041,
+          "end": 15.912
+        }
+      ]
+    },
+    {
+      "id": "k5-epilogue",
+      "title": "Verifikasi & Kesiapsiagaan",
+      "tag": "GROUNDCHECK LAPANGAN · 2026",
+      "audio": "audio/karhutla/k5-epilogue.mp3",
+      "audioDuration": 12.864,
+      "durationSec": 13.964,
+      "startFrame": 1879,
+      "durationInFrames": 419,
+      "display": "Setiap anomali satelit masih harus diverifikasi di lapangan—sebelum api berubah menjadi asap, atau hujan berubah menjadi bencana.",
+      "wordTimings": [
+        {
+          "word": "Setiap",
+          "start": 0.311,
+          "end": 0.87
+        },
+        {
+          "word": "anomali",
+          "start": 0.87,
+          "end": 1.522
+        },
+        {
+          "word": "satelit",
+          "start": 1.522,
+          "end": 2.175
+        },
+        {
+          "word": "masih",
+          "start": 2.175,
+          "end": 3.021
+        },
+        {
+          "word": "harus",
+          "start": 3.021,
+          "end": 3.487
+        },
+        {
+          "word": "diverifikasi",
+          "start": 3.487,
+          "end": 4.605
+        },
+        {
+          "word": "di",
+          "start": 4.605,
+          "end": 4.792
+        },
+        {
+          "word": "lapangan—sebelum",
+          "start": 4.792,
+          "end": 6.635
+        },
+        {
+          "word": "api",
+          "start": 6.635,
+          "end": 6.915
+        },
+        {
+          "word": "berubah",
+          "start": 6.915,
+          "end": 7.567
+        },
+        {
+          "word": "menjadi",
+          "start": 7.567,
+          "end": 8.219
+        },
+        {
+          "word": "asap,",
+          "start": 8.219,
+          "end": 8.685
+        },
+        {
+          "word": "atau",
+          "start": 8.685,
+          "end": 9.468
+        },
+        {
+          "word": "hujan",
+          "start": 9.468,
+          "end": 9.934
+        },
+        {
+          "word": "berubah",
+          "start": 9.934,
+          "end": 10.839
+        },
+        {
+          "word": "menjadi",
+          "start": 10.839,
+          "end": 11.491
+        },
+        {
+          "word": "bencana.",
+          "start": 11.491,
+          "end": 12.237
+        }
+      ]
+    }
+  ]
+}
