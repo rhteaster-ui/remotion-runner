@@ -83,7 +83,7 @@ export const S3: React.FC = () => {
                 </div>
                 <div style={{display: 'flex', justifyContent: 'space-between', marginTop: 16, paddingTop: 12, borderTop: `1px solid ${isPopular ? 'rgba(255,255,255,0.2)' : L.border}`, fontFamily: MONO, fontSize: 14, opacity: 0.9}}>
                   <span>CPU {tier.cpu}</span>
-                  <span>{tier.ssd} SSD</span>
+                  <span>{tier.ssd}</span>
                   <span style={{display: 'inline-flex', alignItems: 'center', gap: 4}}>
                     <Check s={14} color={isPopular ? '#6EE7B7' : L.green} /> Anti-DDoS
                   </span>
@@ -101,8 +101,8 @@ export const S3: React.FC = () => {
           style={{height: '100%', opacity: clamp(browserIn * 2), transform: `translateY(${(1 - browserIn) * 40}px)`}}
         >
           <Img
-            src={img('screenshots/home_pricing_panel.png')}
-            style={{width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 25%'}}
+            src={img('screenshots/panel_desktop_top.png')}
+            style={{width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 72%'}}
           />
         </MacWindow>
       </div>

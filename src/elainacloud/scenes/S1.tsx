@@ -52,13 +52,13 @@ export const S1: React.FC = () => {
 
         {/* 2 Hero Offer Cards (Trial Free & Rp 5.000) */}
         <div style={{display: 'flex', gap: 20, marginTop: 34}}>
-          <div style={{flex: 1, background: '#fff', borderRadius: 24, padding: '22px 24px', border: `2px solid ${L.emerald}`, boxShadow: L.shadow, opacity: clamp(pop(f, 215, 13, 150) * 2), transform: `translateY(${(1 - pop(f, 215, 13, 150)) * 28}px)`}}>
+          <div style={{flex: 1, background: '#fff', borderRadius: 24, padding: '22px 24px', border: `2px solid ${L.emerald}`, boxShadow: L.shadow, opacity: clamp(pop(f, 160, 13, 150) * 2), transform: `translateY(${(1 - pop(f, 160, 13, 150)) * 28}px)`}}>
             <div style={{fontFamily: MONO, fontSize: 13, fontWeight: 800, color: L.green, letterSpacing: '0.08em'}}>COBA DULU</div>
             <div style={{fontFamily: SANS, fontSize: 40, fontWeight: 800, color: L.text, marginTop: 4}}>Gratis 3 Hari</div>
             <div style={{fontFamily: MONO, fontSize: 15, color: L.muted, marginTop: 4}}>512 MB RAM · Trial Free</div>
           </div>
 
-          <div style={{flex: 1, background: 'linear-gradient(135deg, #2563EB, #1D4ED8)', borderRadius: 24, padding: '22px 24px', boxShadow: '0 22px 50px rgba(37,99,235,0.28)', color: '#fff', opacity: clamp(pop(f, 285, 13, 150) * 2), transform: `translateY(${(1 - pop(f, 285, 13, 150)) * 28}px)`}}>
+          <div style={{flex: 1, background: 'linear-gradient(135deg, #2563EB, #1D4ED8)', borderRadius: 24, padding: '22px 24px', boxShadow: '0 22px 50px rgba(37,99,235,0.28)', color: '#fff', opacity: clamp(pop(f, 200, 13, 150) * 2), transform: `translateY(${(1 - pop(f, 200, 13, 150)) * 28}px)`}}>
             <div style={{fontFamily: MONO, fontSize: 13, fontWeight: 800, color: '#BAE6FD', letterSpacing: '0.08em'}}>PAKET POPULER</div>
             <div style={{fontFamily: SANS, fontSize: 40, fontWeight: 800, marginTop: 4}}>Rp 5.000<span style={{fontSize: 18, fontWeight: 600, opacity: 0.85}}>/bln</span></div>
             <div style={{fontFamily: MONO, fontSize: 15, color: '#E0F2FE', marginTop: 4}}>Elaina 1 · 1 GB RAM · SSD</div>

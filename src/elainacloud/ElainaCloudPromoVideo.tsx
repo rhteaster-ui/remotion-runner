@@ -15,7 +15,7 @@ const COMPONENTS = [S1, S2, S3, S4, S5, S6, S7];
 const DOCK_ACTIVE = ['elaina', 'panel', 'panel', 'term', 'node', 'qris', 'cta'];
 const CAPTION_ACCENT = ['#7DD3FC', '#60A5FA', '#34D399', '#38BDF8', '#7DD3FC', '#34D399', '#60A5FA'];
 const MENU_LABELS = ['Panel Overview', 'Live Metrics', 'Pricing Tiers', 'Web Console', 'Frankfurt Node', 'QRIS Deploy', 'Claim Trial'];
-const MENU_STATUS = ['Gratis 3 Hari', '1.099+ Users', 'Rp 5.000/bln', 'Baileys Ready', 'Ping 2-3 ms', '< 30s Active', 'elainacloud.my.id'];
+const MENU_STATUS = ['Gratis 3 Hari', '1.099+ Users', 'Rp 5.000/bln', 'Baileys Ready', 'Ping 2-3 ms', '< 30s Active', 'Trial Ready'];
 
 const TAIL = 8;
 export const ELAINA_FPS = storyboard.videoSpec.fps;
