@@ -193,7 +193,7 @@ const Chapter1Canopy: React.FC<{dur: number}> = ({dur}) => {
   return (
     <AbsoluteFill style={{opacity: fadeOut}}>
       <div style={{position: 'absolute', inset: 0, transform: `scale(${zoom})`, filter: 'contrast(1.12) saturate(0.84) brightness(0.82)'}}>
-        <OffthreadVideo src={media('clip_mist.mp4')} loop muted style={{width: '100%', height: '100%', objectFit: 'cover'}} />
+        <OffthreadVideo src={media('clip_mist.mp4')} playbackRate={0.82} muted style={{width: '100%', height: '100%', objectFit: 'cover'}} />
       </div>
       <div style={{position: 'absolute', inset: 0, background: 'linear-gradient(180deg, rgba(5,10,16,0.45) 0%, rgba(5,10,16,0.18) 50%, rgba(5,10,16,0.62) 100%)'}} />
 
@@ -236,7 +236,7 @@ const Chapter2Hotspot: React.FC<{dur: number}> = ({dur}) => {
     <AbsoluteFill style={{opacity: inFade * outFade}}>
       {/* Real intense wildfire video clip */}
       <div style={{position: 'absolute', inset: 0, filter: 'contrast(1.16) saturate(1.18) brightness(0.88)'}}>
-        <OffthreadVideo src={media('clip_fire.mp4')} loop muted style={{width: '100%', height: '100%', objectFit: 'cover'}} />
+        <OffthreadVideo src={media('clip_fire.mp4')} muted style={{width: '100%', height: '100%', objectFit: 'cover'}} />
       </div>
 
       {/* Cross-dissolve to high-contrast flames over dark forest smoke */}
@@ -320,13 +320,13 @@ const Chapter4Monsoon: React.FC<{dur: number}> = ({dur}) => {
     <AbsoluteFill style={{opacity: inFade * outFade}}>
       {/* Shot A: Orbital Supercell Storm Clouds */}
       <div style={{position: 'absolute', inset: 0, filter: 'contrast(1.18) saturate(0.88) brightness(0.85)'}}>
-        <OffthreadVideo src={media('clip_storms.mp4')} loop muted style={{width: '100%', height: '100%', objectFit: 'cover'}} />
+        <OffthreadVideo src={media('clip_storms.mp4')} muted style={{width: '100%', height: '100%', objectFit: 'cover'}} />
       </div>
 
       {/* Shot B: Real Heavy Rain in Forest */}
       {f >= split - 26 && (
         <div style={{position: 'absolute', inset: 0, opacity: rainAlpha, filter: 'contrast(1.15) saturate(0.75) brightness(0.80)'}}>
-          <OffthreadVideo src={media('clip_rain.mp4')} loop muted style={{width: '100%', height: '100%', objectFit: 'cover'}} />
+          <OffthreadVideo src={media('clip_rain.mp4')} muted style={{width: '100%', height: '100%', objectFit: 'cover'}} />
         </div>
       )}
 
@@ -361,7 +361,7 @@ const Chapter5Epilogue: React.FC<{dur: number}> = ({dur}) => {
 
       {f >= 170 && (
         <div style={{position: 'absolute', inset: 0, opacity: mistAlpha, filter: 'contrast(1.1) saturate(0.78) brightness(0.65)'}}>
-          <OffthreadVideo src={media('clip_mist.mp4')} loop muted startFrom={60} style={{width: '100%', height: '100%', objectFit: 'cover'}} />
+          <OffthreadVideo src={media('clip_mist.mp4')} playbackRate={0.85} muted startFrom={60} style={{width: '100%', height: '100%', objectFit: 'cover'}} />
         </div>
       )}
 
